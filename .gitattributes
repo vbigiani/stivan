@@ -7,3 +7,4 @@
 *.spl -crlf -diff -merge
 *.vvc -crlf -diff -merge
 *.wav -crlf -diff -merge
+*.add -crlf -diff -merge
