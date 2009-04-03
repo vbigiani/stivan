@@ -1,0 +1,440 @@
+//////////////////////////////////////////////////////////////
+// Detect if attacked while blue-circled
+//////////////////////////////////////////////////////////////
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	!Allegiance(Myself,ENEMY)
+	!Allegiance(Myself,GOODCUTOFF)
+THEN
+	RESPONSE #100
+		Enemy()
+		ChangeAIScript("",OVERRIDE)
+		ChangeAIScript("tb#stivx",CLASS)
+		ChangeAIScript("",RACE)
+		ChangeAIScript("",GENERAL)
+		ChangeAIScript("",DEFAULT)
+		SetDialog("")
+		Continue()
+END
+
+//////////////////////////////////////////////////////////////
+// Stop searching traps if in combat.
+//////////////////////////////////////////////////////////////
+IF
+  ModalState(DETECTTRAPS)
+  OR(3)
+       See(NearestEnemyOf(Myself))
+       !CombatCounter(0)
+       See("seagull")
+THEN
+    RESPONSE #100
+    	     NoAction()
+END
+
+//////////////////////////////////////////////////////////////
+// Attack seagulls (unless specifically told not to).
+// comment: doesn't work
+//////////////////////////////////////////////////////////////
+/* IF
+  See(Nearest("seagull"))
+  !Dead("astSeenBy(Myself))")
+  !GlobalTimerNotExpired("doing_seagull","locals")
+  Global("seagull_block","Locals",0)
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("doing_seagull","locals",6)
+    	     Attack(LastSeenBy(Myself))
+END */
+
+//////////////////////////////////////////////////////////////
+// CPU cutoff.
+//////////////////////////////////////////////////////////////
+
+IF
+  !InParty(Myself)
+THEN
+    RESPONSE #100
+    	     NoAction()
+END
+
+//////////////////////////////////////////////////////////////
+// Set traps: set start work variables.
+//////////////////////////////////////////////////////////////
+
+IF
+  GlobalGT("place_traps","locals",0)
+  !Global("placing_traps","locals",1)
+THEN
+    RESPONSE #100
+    	     SetGlobal("placing_traps","locals",1)
+    	     SetGlobal("prevent_hide","locals",1)
+    	     SetGlobal("prevent_trap","locals",1)
+    	     SetGlobal("prevent_attack","locals",1)
+    	     SetGlobal("prevent_potion","locals",1)
+    	     SetGlobal("seagull_block","locals",1)
+    	     ApplySpellRES("tb#alucr",Myself)
+END
+
+//////////////////////////////////////////////////////////////
+// Hide in shadows
+//////////////////////////////////////////////////////////////
+
+IF
+  OR(2)
+       ActionListEmpty()
+       ModalState(DETECTTRAPS)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !GlobalTimerNotExpired("hide_tmr","locals")
+  Global("prevent_hide","Locals",0)
+  !See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("hide_tmr","Locals",6)
+	     Hide()
+END
+
+//////////////////////////////////////////////////////////////
+// If hurt and in battle, use potions & items to hide.
+//////////////////////////////////////////////////////////////
+
+IF
+  ActionListEmpty()
+  !StateCheck(Myself,STATE_INVISIBLE)
+  HPPercentLT(Myself,50)
+  !GlobalTimerNotExpired("cast","locals")
+  Global("prevent_hide","Locals",0)
+  Global("prevent_potions","Locals",0)
+  HasItemEquiped("potn10",Myself)
+  See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+	     UseItem("POTN10",Myself)
+	     SetGlobalTimer("cast","locals",6)
+END
+
+//////////////////////////////////////////////////////////////
+// If hurt and in battle, use potions to heal.
+//////////////////////////////////////////////////////////////
+
+IF
+  ActionListEmpty()
+  OR(2)
+       StateCheck(Myself,STATE_INVISIBLE)
+       !HasItemEquiped("potn10",Myself)
+  HPPercentLT(Myself,50)
+  !GlobalTimerNotExpired("cast","locals")
+  Global("prevent_hide","Locals",0)
+  Global("prevent_potions","Locals",0)
+  HasItemEquiped("potn52",Myself)
+  See(NearestEnemyOf(Myself))
+  InParty(Myself)
+THEN
+    RESPONSE #100
+	     UseItem("POTN52",Myself)
+	     SetGlobalTimer("cast","locals",6)
+END
+
+IF
+  ActionListEmpty()
+  OR(2)
+       StateCheck(Myself,STATE_INVISIBLE)
+       !HasItemEquiped("potn10",Myself)
+  HPPercentLT(Myself,50)
+  !GlobalTimerNotExpired("cast","locals")
+  Global("prevent_hide","Locals",0)
+  Global("prevent_potions","Locals",0)
+  HasItemEquiped("potn08",Myself)
+  See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+	     UseItem("POTN08",Myself)
+	     SetGlobalTimer("cast","locals",6)
+END
+
+//////////////////////////////////////////////////////////////
+// Search for traps.
+//////////////////////////////////////////////////////////////
+
+IF
+  ActionListEmpty()
+  !ModalState(DETECTTRAPS)
+  !See(NearestEnemyOf(Myself))
+  CombatCounter(0)
+  !See("seagull")
+  OR(2)
+       StateCheck(Myself,STATE_INVISIBLE)
+       Global("prevent_hide","locals",1)
+  Global("prevent_trap","LOCALS",0)
+THEN
+    RESPONSE #100
+       	     FindTraps()
+END
+
+//////////////////////////////////////////////////////////////
+// Detect Illusions.
+//////////////////////////////////////////////////////////////
+IF
+  ActionListEmpty()
+  !GlobalTimerNotExpired("detect_ill","Locals")
+  !GlobalTimerNotExpired("detect_ill_try","Locals")
+  Global("prevent_trap","locals",0)
+  OR(15)
+       StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(NearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(SecondNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(ThirdNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(FourthNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(FourthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(FourthNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(FifthNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(FifthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(FifthNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(SixthNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(SixthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(SixthNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(SeventhNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(SeventhNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(SeventhNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(EighthNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(EighthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(EighthNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(NinthNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(NinthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(NinthNearestEnemyOf(Myself),ILLUSIONARY)
+       StateCheck(TenthNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(TenthNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       Gender(TenthNearestEnemyOf(Myself),ILLUSIONARY)
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("detect_ill","locals",18)
+	     ReallyForceSpell(Myself,THIEF_DETECT_ILLUSION)
+	     Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("detect_ill_try","locals")
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("detect_ill_try","locals",6)
+	     Continue()
+END
+//////////////////////////////////////////////////////////////
+// Improved Targeting.
+//////////////////////////////////////////////////////////////
+IF
+  Global("prevent_attack","Locals",0)
+  !GlobalTimerNotExpired("target","locals")
+  Detect(ThirdNearestEnemyOf(Myself))
+  OR(7)
+       !CheckStat(ThirdNearestEnemyOf(Myself),0,STONESKINS)
+       !CheckStat(ThirdNearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+       !CheckStat(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       See(ThirdNearestEnemyOf(Myself))
+  Detect(SecondNearestEnemyOf(Myself))
+  OR(7)
+       !CheckStat(SecondNearestEnemyOf(Myself),0,STONESKINS)
+       !CheckStat(SecondNearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+       !CheckStat(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       See(SecondNearestEnemyOf(Myself))
+  Detect(NearestEnemyOf(Myself))
+  OR(7)
+       !CheckStat(NearestEnemyOf(Myself),0,STONESKINS)
+       !CheckStat(NearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
+       StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOf(Myself))
+  Detect(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([EVILCUTOFF.0.0.CLERIC_ALL]))
+  Detect(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([EVILCUTOFF.0.0.DRUID_ALL]))
+  Detect(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([EVILCUTOFF.0.0.BARD_ALL]))
+  Detect(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([EVILCUTOFF.0.0.MAGE_ALL]))
+  Detect(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([EVILCUTOFF.0.0.SORCERER]))
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("target","locals",3)
+    	     Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("target","locals")
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("target","locals",3) //CPU cutoff, ya know ;)
+    	     Continue()
+END
+//////////////////////////////////////////////////////////////
+// Backstab.
+//////////////////////////////////////////////////////////////
+IF
+  ActionListEmpty()
+  Delay(5)
+  StateCheck(Myself,STATE_INVISIBLE)
+  OR(2)
+       !HasItemEquiped("potn08",Myself)
+       !HPPercentLT(Myself,50)
+  OR(2)
+       !HasItemEquiped("potn52",Myself)
+       !HPPercentLT(Myself,50)
+  Global("prevent_attack","Locals",0)
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself),2)
+THEN
+    RESPONSE #100
+	     FollowObjectFormation(LastSeenBy(Myself),1,3)
+END
+IF
+  ActionListEmpty()
+  StateCheck(Myself,STATE_INVISIBLE)
+  OR(2)
+       !HasItemEquiped("potn08",Myself)
+       !HPPercentLT(Myself,50)
+  OR(2)
+       !HasItemEquiped("potn52",Myself)
+       !HPPercentLT(Myself,50)
+  Global("prevent_attack","Locals",0)
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself),2)
+THEN
+    RESPONSE #100
+	     AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+//////////////////////////////////////////////////////////////
+// Attack critters.
+//////////////////////////////////////////////////////////////
+
+IF
+  ActionListEmpty()
+  See(NearestEnemyOf(Myself))
+  Global("prevent_attack","locals",0)
+THEN
+    RESPONSE #100
+    	     AttackReevaluate(LastSeenBy,30)
+END
+
+//////////////////////////////////////////////////////////////
+// Set traps: set end work variables and re-ask orders.
+//////////////////////////////////////////////////////////////
+
+IF
+  Global("placing_traps","locals",1)
+  OR(3)
+       Global("Place_traps","Locals",0)
+       !HaveSpell(ROGUE_SET_SPIKE_TRAP)
+       See(NearestEnemyOf(Myself))
+  OR(3)
+       Global("Place_traps","Locals",0)
+       !HaveSpell(ROGUE_SET_EXPLODING_TRAP)
+        See(NearestEnemyOf(Myself))
+  OR(3)
+       Global("Place_traps","Locals",0)
+       !HaveSpell(ROGUE_SET_TIME_TRAP)
+       See(NearestEnemyOf(Myself))
+  OR(3)
+       Global("Place_traps","Locals",0)
+       !HaveSpell(SET_SNARE_TRAP)
+       See(NearestEnemyOf(Myself))
+THEN
+    RESPONSE #100
+    	     SetGlobal("done_traps","locals",1)
+    	     SetGlobal("placing_traps","locals",0)
+    	     SetGlobal("place_traps","locals",0)
+    	     StartDialogueNoSet(Myself)
+END
+
+//////////////////////////////////////////////////////////////
+// Set traps: actual work, aided by Imp Alacrity.
+//////////////////////////////////////////////////////////////
+
+IF
+  ActionListEmpty()
+  GlobalGT("place_traps","Locals",0)
+  HaveSpell(ROGUE_SET_TIME_TRAP)
+THEN
+    RESPONSE #100
+    	     Spell(Myself,ROGUE_SET_TIME_TRAP)
+    	     IncrementGlobal("place_traps","Locals",-1)
+END
+
+IF
+  ActionListEmpty()
+  GlobalGT("place_traps","Locals",0)
+  HaveSpell(ROGUE_SET_SPIKE_TRAP)
+THEN
+    RESPONSE #100
+    	     Spell(Myself,ROGUE_SET_SPIKE_TRAP)
+    	     IncrementGlobal("place_traps","Locals",-1)
+END
+
+IF
+  ActionListEmpty()
+  GlobalGT("place_traps","Locals",0)
+  HaveSpell(ROGUE_SET_EXPLODING_TRAP)
+THEN
+    RESPONSE #100
+    	     Spell(Myself,ROGUE_SET_EXPLODING_TRAP)
+    	     IncrementGlobal("place_traps","Locals",-1)
+END
+
+IF
+  ActionListEmpty()
+  GlobalGT("place_traps","Locals",0)
+  HaveSpell(SET_SNARE_TRAP)
+THEN
+    RESPONSE #100
+    	     Spell(Myself,SET_SNARE_TRAP)
+    	     IncrementGlobal("place_traps","Locals",-1)
+END
+

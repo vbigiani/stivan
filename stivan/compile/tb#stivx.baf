@@ -1,0 +1,268 @@
+// stivan is an enemy
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	HPPercentLT(Myself,50)
+	HasItem("potn52",Myself) 
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		DisplayStringHead(Myself,46150) 
+		UseItem("potn52",Myself) 
+END
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	See(NearestEnemyOf(Myself))
+	!StateCheck(Myself,STATE_HASTED)
+	HasItem("potn14",Myself) 
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		DisplayStringHead(Myself,46150) 
+		UseItem("potn14",Myself) 
+END
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	See(NearestEnemyOf(Myself))
+	!StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	HasItem("potn10",Myself)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		DisplayStringHead(Myself,46150)
+		UseItem("potn10",Myself)
+END
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	See(NearestEnemyOf(Myself))
+	CheckStatLT(Myself,18,STR)
+	HasItem("potn03",Myself) 
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		DisplayStringHead(Myself,46150) 
+		UseItem("potn03",Myself) 
+END
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	See(NearestEnemyOf(Myself))
+	CheckStatLT(Myself,18,STR)
+	HasItem("potn04",Myself) 
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		DisplayStringHead(Myself,46150) 
+		UseItem("potn04",Myself) 
+END
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	See(NearestEnemyOf(Myself))
+	CheckStatLT(Myself,18,STR)
+	HasItem("potn04",Myself)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		DisplayStringHead(Myself,46150)
+		UseItem("potn03",Myself)
+END
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	See(NearestEnemyOf(Myself))
+	CheckStatLT(Myself,18,STR)
+	HasItem("potn12",Myself) 
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		DisplayStringHead(Myself,46150) 
+		UseItem("potn12",Myself) 
+END
+
+IF
+	!GlobalTimerNotExpired("cast","locals")
+	See(NearestEnemyOf(Myself))
+	!StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	HasItem("ring05",Myself)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("cast","Locals",6)
+		UseItem("ring05",Myself)
+END
+
+IF
+  	!GlobalTimerNotExpired("hide","locals")
+	See(NearestEnemyOf(Myself))
+	!StateCheck(Myself,STATE_INVISIBLE)
+	!StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("hide","locals",6)
+		Hide()
+		Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("target","locals")
+  Detect(ThirdNearestEnemyOf(Myself))
+  OR(7)
+       !CheckStat(ThirdNearestEnemyOf(Myself),0,STONESKINS)
+       !CheckStat(ThirdNearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+       !CheckStat(ThirdNearestEnemyOf(Myself),0,SANCTUARY)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(ThirdNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       See(ThirdNearestEnemyOf(Myself))
+  Detect(SecondNearestEnemyOf(Myself))
+  OR(7)
+       !CheckStat(SecondNearestEnemyOf(Myself),0,STONESKINS)
+       !CheckStat(SecondNearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+       !CheckStat(SecondNearestEnemyOf(Myself),0,SANCTUARY)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(SecondNearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       See(SecondNearestEnemyOf(Myself))
+  Detect(NearestEnemyOf(Myself))
+  OR(7)
+       !CheckStat(NearestEnemyOf(Myself),0,STONESKINS)
+       !CheckStat(NearestEnemyOf(Myself),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOf(Myself),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
+       StateCheck(NearestEnemyOf(Myself),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOf(Myself))
+  Detect(ThirdNearestEnemyOfType([PC]))
+  OR(7)
+       !CheckStat(ThirdNearestEnemyOfType([PC]),0,STONESKINS)
+       !CheckStat(ThirdNearestEnemyOfType([PC]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(ThirdNearestEnemyOfType([PC]),STATE_MIRRORIMAGE)
+       !CheckStat(ThirdNearestEnemyOfType([PC]),0,SANCTUARY)
+       StateCheck(ThirdNearestEnemyOfType([PC]),STATE_INVISIBLE)
+       StateCheck(ThirdNearestEnemyOfType([PC]),STATE_IMPROVEDINVISIBILITY)
+       See(ThirdNearestEnemyOfType([PC]))
+  Detect(SecondNearestEnemyOfType([PC]))
+  OR(7)
+       !CheckStat(SecondNearestEnemyOfType([PC]),0,STONESKINS)
+       !CheckStat(SecondNearestEnemyOfType([PC]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(SecondNearestEnemyOfType([PC]),STATE_MIRRORIMAGE)
+       !CheckStat(SecondNearestEnemyOfType([PC]),0,SANCTUARY)
+       StateCheck(SecondNearestEnemyOfType([PC]),STATE_INVISIBLE)
+       StateCheck(SecondNearestEnemyOfType([PC]),STATE_IMPROVEDINVISIBILITY)
+       See(SecondNearestEnemyOfType([PC]))
+  Detect(NearestEnemyOfType([PC]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([PC]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([PC]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([PC]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([PC]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([PC]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([PC]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([PC]))
+  Detect(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([PC.0.0.CLERIC_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([PC.0.0.CLERIC_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([PC.0.0.CLERIC_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([PC.0.0.CLERIC_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([PC.0.0.CLERIC_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([PC.0.0.CLERIC_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([PC.0.0.CLERIC_ALL]))
+  Detect(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([PC.0.0.DRUID_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([PC.0.0.DRUID_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([PC.0.0.DRUID_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([PC.0.0.DRUID_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([PC.0.0.DRUID_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([PC.0.0.DRUID_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([PC.0.0.DRUID_ALL]))
+  Detect(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([PC.0.0.BARD_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([PC.0.0.BARD_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([PC.0.0.BARD_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([PC.0.0.BARD_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([PC.0.0.BARD_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([PC.0.0.BARD_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([PC.0.0.BARD_ALL]))
+  Detect(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([PC.0.0.MAGE_ALL]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([PC.0.0.MAGE_ALL]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([PC.0.0.MAGE_ALL]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([PC.0.0.MAGE_ALL]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([PC.0.0.MAGE_ALL]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([PC.0.0.MAGE_ALL]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([PC.0.0.MAGE_ALL]))
+  Detect(NearestEnemyOfType([PC.0.0.SORCERER]))
+  OR(7)
+       !CheckStat(NearestEnemyOfType([PC.0.0.SORCERER]),0,STONESKINS)
+       !CheckStat(NearestEnemyOfType([PC.0.0.SORCERER]),0,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+       StateCheck(NearestEnemyOfType([PC.0.0.SORCERER]),STATE_MIRRORIMAGE)
+       !CheckStat(NearestEnemyOfType([PC.0.0.SORCERER]),0,SANCTUARY)
+       StateCheck(NearestEnemyOfType([PC.0.0.SORCERER]),STATE_INVISIBLE)
+       StateCheck(NearestEnemyOfType([PC.0.0.SORCERER]),STATE_IMPROVEDINVISIBILITY)
+       See(NearestEnemyOfType([PC.0.0.SORCERER]))
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("target","locals",3)
+    	     Continue()
+END
+
+IF
+  !GlobalTimerNotExpired("target","locals")
+THEN
+    RESPONSE #100
+    	     SetGlobalTimer("target","locals",3)
+    	     Continue()
+END
+
+IF
+  	Allegiance(LastSeenBy(Myself),GOODCUTOFF)
+	OR(2)
+		StateCheck(Myself,STATE_INVISIBLE)
+		StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+   	ActionListEmpty()
+	Range(LastSeenBy(Myself),5)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	!StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+   	ActionListEmpty()
+	!Range(LastSeenBy(Myself),5)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	!StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+THEN
+	RESPONSE #100
+		EquipRanged()
+		AttackReevaluate(LastSeenBy(Myself),30)
+END
+
+IF
+   	!Detect(NearestEnemyOf(Myself))
+	CombatCounter(0)
+	Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		EscapeArea()
+END
+
+

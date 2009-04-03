@@ -1,0 +1,15 @@
+// Stivan joins the party
+
+IF
+  True()
+THEN
+    RESPONSE #100
+    	     ActionOverride("stivan",ChangeAIScript("dplayer2",DEFAULT))
+    	     ActionOverride("stivan",ChangeAIScript("tb#stiva",OVERRIDE))
+	     ActionOverride("stivan",ChangeAIScript("",AREA))
+    	     ActionOverride("stivan",ChangeAIScript("",SPECIFICS))
+	     ActionOverride("stivan",ChangeAIScript("",RACE))
+	     ActionOverride("stivan",ChangeAIScript("",GENERAL))
+	     DestroySelf()
+END
+
