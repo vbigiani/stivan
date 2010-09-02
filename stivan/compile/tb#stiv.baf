@@ -1,0 +1,153 @@
+//////////////////////////////////////////////////////////////
+// NPC death reaction
+//////////////////////////////////////////////////////////////
+
+IF
+	Dead("Keldorn")
+	InParty("Keldorn")
+	Global("tb#KeldornDead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#KeldornDead","GLOBAL",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	!Dead("Keldorn")
+	Global("tb#KeldornDead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#KeldornDead","GLOBAL",0)
+END
+
+IF
+	Dead("Aerie")
+	InParty("Aerie")
+	Global("tb#AerieDead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AerieDead","GLOBAL",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	!Dead("Aerie")
+	Global("tb#AerieDead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AerieDead","GLOBAL",0)
+END
+
+IF
+	Dead("Valygar")
+	InParty("Valygar")
+	Global("tb#ValygarDead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ValygarDead","GLOBAL",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	!Dead("Valygar")
+	Global("tb#ValygarDead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ValygarDead","GLOBAL",0)
+END
+
+IF
+	Dead("Anomen")
+	InParty("Anomen")
+	Global("tb#AnomenDead","GLOBAL",0)
+	Global("AnomenIsNotKnight","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AnomenDead","GLOBAL",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	Dead("Anomen")
+	InParty("Anomen")
+	Global("tb#AnomenDead","GLOBAL",0)
+	Global("AnomenIsNotKnight","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AnomenDead","GLOBAL",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Anomen")
+	Global("tb#AnomenDead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AnomenDead","GLOBAL",0)
+END
+
+IF
+	Dead("Nalia")
+	InParty("Nalia")
+	Global("tb#NaliaDead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#NaliaDead","GLOBAL",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Nalia")
+	Global("tb#NaliaDead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#NaliaDead","GLOBAL",0)
+END
+
+IF
+	Dead("Yoshimo")
+	InParty("Yoshimo")
+	Global("tb#YoshimoDead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#YoshimoDead","GLOBAL",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Yoshimo")
+	Global("tb#YoshimoDead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#YoshimoDead","GLOBAL",0)
+END
+
+IF
+	Dead("Viconia")
+	InParty("Viconia")
+	Global("tb#ViconiaDead","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ViconiaDead","GLOBAL",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Viconia")
+	Global("tb#ViconiaDead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ViconiaDead","GLOBAL",0)
+END
+
+//////////////////////////////////////////////////////////////
+// Quest dialogs
+//////////////////////////////////////////////////////////////
+IF
+	GlobalTimerExpired("tb#stivanEntryTimer","GLOBAL")
+	CombatCounterLT(1)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	InParty(Myself)
+	!Global("tb#stivanEntryTest","GLOBAL",3) 
+	OR(2)
+		Global("tb#UrnBroken","GLOBAL",0)
+		Global("tb#UrnBroken","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		IncrementGlobal("tb#UrnBroken","GLOBAL",1)
+		StartDialogueNoSet(Player1)
+		SetInterrupt(TRUE)
+END
