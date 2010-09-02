@@ -1,8 +1,8 @@
 BEGIN TB#STIVJ
 
-IF ~InParty("Stivan")
+IF ~InParty("tb#stiv")
 InParty(Player1)
-!StateCheck("Stivan",CD_STATE_NOTVALID)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0)
 !Global("tb#stivanEntryTest","GLOBAL",3) 
@@ -11,9 +11,9 @@ SAY ~Hey, <CHARNAME>, ti dispiace sbrigarti a trovare un posto per la mia urna?~
 IF ~~ THEN DO ~SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) IncrementGlobal("tb#UrnBroken","GLOBAL",1)~ EXIT
 END
 
-IF ~InParty("Stivan")
+IF ~InParty("tb#stiv")
 InParty(Player1)
-!StateCheck("Stivan",CD_STATE_NOTVALID)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0)
 !Global("tb#stivanEntryTest","GLOBAL",3) 

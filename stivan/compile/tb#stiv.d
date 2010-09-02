@@ -115,16 +115,16 @@ END
 CHAIN IF ~~ THEN tb#stiv StivanFirstMeet1-12
 ~Yeah! Andiamo, allora! Ci sono centinaia di gabbiani da spennare a dovere!~ 
 DO ~SetGlobal("tb#StivanJoined","GLOBAL",1) SetGlobal("tb#stivanEntryTest","GLOBAL",1) SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) JoinParty()~
-== TB#STIV IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Ehi, tu! Vieni ed unisciti a Stivan nella sua sacra crociata contro i malvagi gabbiani!! Dobbiamo DISTRUGGERLI TUTTI!! Bwahahahah!!~
+== TB#STIVJ IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Ehi, tu! Vieni ed unisciti a Stivan nella sua sacra crociata contro i malvagi gabbiani!! Dobbiamo DISTRUGGERLI TUTTI!! Bwahahahah!!~
 == MINSCJ IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Magari mi unirò alla tua caccia un'altra volta: devi sapere che Boo si sente a disagio con gli uccelli marini. E' meglio che gli risparmi una tortura del genere. Sì, è meglio per tutti!~
-== TB#STIV IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Vigliacco! Hai tremato di fronte al nemico pennuto! Non avrai una seconda possibilità!~
+== TB#STIVJ IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Vigliacco! Hai tremato di fronte al nemico pennuto! Non avrai una seconda possibilità!~
 == AERIEJ IF ~IsValidForPartyDialog("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~Faresti del male a quei poveri uccelli? Sono solo dei mangia-carogne... E sono sicura che non ti hanno fatto nulla!~
-== TB#STIV IF ~IsValidForPartyDialog("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~Sbagliato! Quei demoni hanno portato via tre dei miei fratelli, hanno... Sono una piaga mandataci dagli dei! E IO VI SPUTO ADDOSSO, DEI! PTEWW!! E ANCORA!! PTEWW!!~
+== TB#STIVJ IF ~IsValidForPartyDialog("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~Sbagliato! Quei demoni hanno portato via tre dei miei fratelli, hanno... Sono una piaga mandataci dagli dei! E IO VI SPUTO ADDOSSO, DEI! PTEWW!! E ANCORA!! PTEWW!!~
 == JAHEIRAJ IF ~IsValidForPartyDialog("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Pensi che sia saggio portarlo con noi, <CHARNAME>? Dubito che sia davvero all’altezza delle difficoltà che ci aspettano.~
 == NALIAJ IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Piacere, io sono Nalia. Come posso esserti d’aiuto?~
-== TB#STIV IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~N… Nalia? Siete forse… *Miss* Nalia De’Arnise?~
+== TB#STIVJ IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~N… Nalia? Siete forse… *Miss* Nalia De’Arnise?~
 == NALIAJ IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Non c’è bisogno di essere così formali tra compagni d’avventura. Chiamami Nalia. E’ più che sufficiente.~
-== TB#STIV IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Incredibile! Viaggerò con una nobile! E che nobile! WOW! Sarà un onore essere il vostro umile sguattero!~
+== TB#STIVJ IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Incredibile! Viaggerò con una nobile! E che nobile! WOW! Sarà un onore essere il vostro umile sguattero!~
 == NALIAJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~(Arrossisce) Non dire schiocchezze, Stivan. Mi metti in imbarazzo…~
 == EDWINJ IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Grandioso. La cerchia dei tuoi alleati, ad eccezione del sottoscritto, era già ampliamente discutibile. Adesso è diventata improponibile.~
 == HAERDAJ IF ~IsValidForPartyDialog("Haerdali") !StateCheck("Haerdali",CD_STATE_NOTVALID)~ THEN ~Ah! Complimenti per la scelta, mio corvo. Chi vive senza follia non è così savio come crede, e quest’halfling par esserne la prova vivente!~ 
@@ -132,11 +132,11 @@ DO ~SetGlobal("tb#StivanJoined","GLOBAL",1) SetGlobal("tb#stivanEntryTest","GLOB
 == VICONJ IF ~IsValidForPartyDialog("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN ~Posso sapere perché hai raccolto quella pulce dalla strada? E’ forse un modo con cui speri di risolvere qualche tuo insano problema di coscienza?~
 == VALYGARJ IF ~IsValidForPartyDialog("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Non credi che siamo già in troppi? Non vorrei che il nostro numero attirasse l’attenzione degli Incappucciati.~
 == CERNDJ IF ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Attendevo il momento in cui ci saremmo incontrati. Uccelli marini garriscono da tempo il tuo nome, riferendomi atti di estrema crudeltà nei loro confronti. Sarà mio compito educarti al rispetto delle creature di Madre Natura.~ 
-== TB#STIV IF ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~(Starnutisce) Oh, no. Io sono allergico agli adoratori di alberi!~
+== TB#STIVJ IF ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~(Starnutisce) Oh, no. Io sono allergico agli adoratori di alberi!~
 == KORGANJ IF ~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Dimmi un pò, <PRO_GIRLBOY>: da quando ci portiamo dietro dei mocciosetti? Io non faccio da balia nemmeno alla mia ascia!~
-== TB#STIV IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~(Sniff sniff) Sento puzza di perbenismo qui…~
+== TB#STIVJ IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~(Sniff sniff) Sento puzza di perbenismo qui…~
 == MAZZYJ IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Benvenuto a bordo. Io sono Mazzy Fentan, nativa di Trademeet e devota servitrice di Arvoreen.~
-== TB#STIV IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Eeekkk! Che orrore!~
+== TB#STIVJ IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Eeekkk! Che orrore!~
 == ANOMENJ IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Adesso accogli nel tuo gruppo anche i mendicanti? Per gli dei, dov’è finito il tuo buon senso? Hai bisogno di combattenti validi e devoti, non di accattoni di basso borgo!~
 == KELDORJ IF ~IsValidForPartyDialog("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Ci sono difetti che, se sfruttati bene, brillano più della stessa virtù. Che possa valere anche per quest’halfling?~
 EXIT
