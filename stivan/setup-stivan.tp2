@@ -41,7 +41,8 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#splu.itm~
 	SAY NAME2 ~Piuma~
 	SAY IDENTIFIED_DESC ~Una piuma di Gabbiano.~
 	SAY UNIDENTIFIED_DESC ~Una piuma di Gabbiano.~
-	WRITE_ASCII 0x32 ~tb#splui~ #8 // inventory icon
+	WRITE_ASCII 0x3a ~tb#splui~ #8 // inventory icon
+	WRITE_LONG 0x34  1 // price
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
 	WRITE_LONG  0x4c 0 // weight
 	WRITE_ASCII 0x58 ~tb#spluc~ #8 // description icon
@@ -53,7 +54,8 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#surn.itm~
 Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
 	SAY UNIDENTIFIED_DESC ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
 Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
-	WRITE_ASCII 0x32 ~tb#surni~ #8 // inventory icon
+	WRITE_LONG  0x18 (THIS | 1)  // make unsellable
+	WRITE_ASCII 0x3a ~tb#surni~ #8 // inventory icon
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
 	WRITE_LONG  0x4c 2 // weight
 	WRITE_ASCII 0x58 ~tb#surnc~ #8 // description icon
@@ -76,7 +78,7 @@ Lancia "Miscela esplosiva" una volta al giorno: infligge 2d4 danni da fuoco (nes
 
 Utilizzabile Da:
 Stivan~
-	WRITE_ASCII 0x32 ~tb#spooi~ #8 // inventory icon
+	WRITE_ASCII 0x3a ~tb#spooi~ #8 // inventory icon
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
 	WRITE_LONG  0x4c 1 // weight
 	WRITE_ASCII 0x58 ~tb#spooc~ #8 // description icon
@@ -92,6 +94,8 @@ COPY_EXISTING ~tooltip.2da~ ~override~
 	REPLACE ~POO_EXPLOSION~ ~Alchemical Explosion~
 	
 COPY ~stivan/cre/tb#stiv.cre~ ~override~
+	WRITE_LONG 0x14  0 // xp value
+	WRITE_LONG 0x18  161000 // current XP
 	WRITE_ASCII 0x34 ~tb#stivS~ #8  // small portrait
 	WRITE_ASCII 0x3c ~tb#stivM~ #8  // large portrait
 	WRITE_ASCII 0x248 ~tb#stiv~ #8  // override script
@@ -105,8 +109,7 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER1~
 	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER2~
 	ADD_CRE_ITEM ~bull02~ #5  #0 #0 ~IDENTIFIED~ ~QUIVER3~
-	ADD_CRE_ITEM ~tb#splu~ #1 #0 #0 ~IDENTIFIED~ ~INV1~
-	ADD_CRE_ITEM ~tb#surn~ #1 #0 #0 ~IDENTIFIED~ ~INV2~
+	ADD_CRE_ITEM ~tb#surn~ #1 #0 #0 ~IDENTIFIED~ ~INV1~
 	ADD_CRE_ITEM ~tb#spoo~ #2 #1 #0 ~IDENTIFIED~ ~QITEM1~
 	
 	SAY NAME1 ~Stivan~
