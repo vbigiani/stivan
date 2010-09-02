@@ -1,4 +1,141 @@
 //////////////////////////////////////////////////////////////
+// NPC death reaction
+//////////////////////////////////////////////////////////////
+
+IF
+	Dead("Keldorn")
+	InParty("Keldorn")
+	Global("tb#KeldornDead","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#KeldornDead","LOCALS",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	!Dead("Keldorn")
+	Global("tb#KeldornDead","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#KeldornDead","LOCALS",0)
+END
+
+IF
+	Dead("Aerie")
+	InParty("Aerie")
+	Global("tb#AerieDead","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AerieDead","LOCALS",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	!Dead("Aerie")
+	Global("tb#AerieDead","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AerieDead","LOCALS",0)
+END
+
+IF
+	Dead("Valygar")
+	InParty("Valygar")
+	Global("tb#ValygarDead","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ValygarDead","LOCALS",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	!Dead("Valygar")
+	Global("tb#ValygarDead","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ValygarDead","LOCALS",0)
+END
+
+IF
+	Dead("Anomen")
+	InParty("Anomen")
+	Global("tb#AnomenDead","LOCALS",0)
+	Global("AnomenIsNotKnight","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AnomenDead","LOCALS",0)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+END
+IF
+	Dead("Anomen")
+	InParty("Anomen")
+	Global("tb#AnomenDead","LOCALS",0)
+	Global("AnomenIsNotKnight","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AnomenDead","LOCALS",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Anomen")
+	Global("tb#AnomenDead","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#AnomenDead","LOCALS",0)
+END
+
+IF
+	Dead("Nalia")
+	InParty("Nalia")
+	Global("tb#NaliaDead","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#NaliaDead","LOCALS",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Nalia")
+	Global("tb#NaliaDead","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#NaliaDead","LOCALS",0)
+END
+
+IF
+	Dead("Yoshimo")
+	InParty("Yoshimo")
+	Global("tb#YoshimoDead","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#YoshimoDead","LOCALS",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Yoshimo")
+	Global("tb#YoshimoDead","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#YoshimoDead","LOCALS",0)
+END
+
+IF
+	Dead("Viconia")
+	InParty("Viconia")
+	Global("tb#ViconiaDead","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ViconiaDead","LOCALS",0)
+		DisplayStringHead(Myself,~nnnnNNNNOOOOOO!!!~)
+END
+IF
+	!Dead("Viconia")
+	Global("tb#ViconiaDead","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#ViconiaDead","LOCALS",0)
+END
+
+
+/* Stivan AI script - disabled until further notice.
+
+//////////////////////////////////////////////////////////////
 // Detect if attacked while blue-circled
 //////////////////////////////////////////////////////////////
 IF
@@ -45,17 +182,6 @@ THEN
     	     SetGlobalTimer("doing_seagull","locals",6)
     	     Attack(LastSeenBy(Myself))
 END */
-
-//////////////////////////////////////////////////////////////
-// CPU cutoff.
-//////////////////////////////////////////////////////////////
-
-IF
-  !InParty(Myself)
-THEN
-    RESPONSE #100
-    	     NoAction()
-END
 
 //////////////////////////////////////////////////////////////
 // Set traps: set start work variables.
@@ -437,4 +563,4 @@ THEN
     	     Spell(Myself,SET_SNARE_TRAP)
     	     IncrementGlobal("place_traps","Locals",-1)
 END
-
+*/

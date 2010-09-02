@@ -1,5 +1,5 @@
 BACKUP ~stivan/backup~
-AUTHOR ~wal.big.it@libero.it~
+AUTHOR ~thebigg@spellholdstudios.net~
 
 AUTO_TRA ~stivan/tra/%s~
 AUTO_TRA ~stivan/tra/english~
@@ -17,7 +17,7 @@ LANGUAGE ~Italian~
 
 BEGIN ~Stivan the Hunter NPC~
 ACTION_IF FILE_EXISTS ~override/tb#stiva.txt~ THEN BEGIN
-FAIL @60
+FAIL ~Il mod e' gia' installato.~
 END
 //this file will help other mods detect if component is installed.
 
@@ -28,205 +28,148 @@ APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
 COMPILE ~stivan/compile~
 COPY ~stivan/copy~ ~override~
 
-COPY_EXISTING ~ar0500.are~ ~override~
-
-//Stivan will, originally, be there only between 6am and 6pm; I edit this to be "always".
-READ_LONG 0x54 ~actors_o~ //Offset to actors
-READ_SHORT 0x58 ~actors_n~ //number of actors
-SET ~patchdone~ = 0
-WHILE ((~%actors_n%~ > 0) AND (~%patchdone%~ = 0)) BEGIN
-      READ_ASCII ~%actors_o%~ + ((0x110 * (~%actors_n%~ - 1)) + 0x80) ~cre_name~ //the .cre
-      WHILE ((NOT (~%cre_name%~ STR_CMP ~BHALF1~)) AND (~%patchdone%~ = 0)) BEGIN //if he is stivan (bhalf1.cre)
-      	    WRITE_LONG ~%actors_o%~ + ((0x110 * (~%actors_n%~ - 1)) + 0x40) 0xffffffff //always present there
-      	    SET ~patchdone~ = 1
-     END
-SET ~actors_n~ = ~%actors_n%~ - 1
-END
-
-//automap note where Stivan is.
-READ_LONG 0xc4 ~notes_o~ //offset to automap notes
-READ_LONG 0xc8 ~notes_n~ //number of automap notes
-WRITE_LONG 0xc8 ~%notes_n%~ + 1 //a new one
-INSERT_BYTES ~%notes_o%~ 0x34 //the needed space
-WRITE_SHORT ~%notes_o%~ 4845 //x position
-WRITE_SHORT ~%notes_o%~ + 2 2049 //y position
-SAY ~%notes_o%~ + 4 ~Stivan the Hunter~ //automap text
-WRITE_SHORT ~%notes_o%~ + 0xa 4 //the note is marked in red, not in gray.
-
-
-
+EXTEND_TOP ~ar0500.bcs ~stivan/baf/ar0500.baf~
 
 COPY_EXISTING ~bhalf1.cre~ ~override~
-//Appareance
-WRITE_LONG 0xc 26388 //name strref, one of them is in English and the other in Italian on my PC, I turn them both to local language
-WRITE_ASCII 0x34 ~tb#stivS~ //small portrait, done by ArchMage Silver
-WRITE_ASCII 0x3c ~tb#stivM~ //large portrait, done by ArchMage Silver
-SAY MORALE ~I… well… good luck, <CHARNAME>! I'll come round later… Help me!~ [tb#sti01]
-SAY HAPPY ~Really, I never enjoyed that much killing seagulls!~ [tb#sti02]
-SAY UNHAPPY_ANNOYED ~Hmpf. You aren't as cool as I expected.~ [tb#sti03]
-SAY UNHAPPY_SERIOUS ~Bah, you are tiring me. Do something useful NOW! Kill a seagull.~ [tb#sti04]
-SAY UNHAPPY_BREAKING ~Goodbye. It seems that I have been wasting my time with you.~ [tb#sti05]
-SAY LEADER ~Ha-Ha! Seagulls can't stand a chance now! I STAND IN COMMAND!~ [tb#sti06]
-SAY TIRED ~Killing seagulls is tiresome, ya know. Let's rest for a while.~ [tb#sti07]
-SAY BORED ~Awn, I'm going to fall on my feet from idleness if you stay so still.~ [tb#sti08]
-SAY BATTLE_CRY1 ~You don't stand a chance!~ [tb#sti09]
-SAY BATTLE_CRY2 ~Have you ever killed a seagull? NO? Then I AM STONGER!~ [tb#sti10]
-SAY BATTLE_CRY3 ~Surrender now and I might just cut your throat!~ [tb#sti11]
-SAY BATTLE_CRY4 ~DIE LIKE THE SEAGULL YOU ARE!~ [tb#sti12]
-SAY DAMAGE ~Angh!~ [tb#sti13]
-SAY DYING ~Kill some seagulls for me~ [tb#sti14]
-SAY HURT ~There is a demoniac seagull here! I'm dying!~ [tb#sti15]
-SAY AREA_FOREST ~Ah, good. Seek their nesting places and STRIKE THEM!~ [tb#sti16]
-SAY AREA_CITY ~My blade is rusty, let's buy a new one.~ [tb#sti17]
-SAY AREA_DUNGEON ~Maybe bats are akin to seagulls… Otherwise I would be wasting my time down here.~ [tb#sti18]
-SAY AREA_DAY ~Ah, daytime. This sunlight is particularly warm, even.~ [tb#sti19]
-SAY AREA_NIGHT ~Erm, since when seagulls are nighttime birds? I didn't recall so.~ [tb#sti20]
-SAY SELECT_COMMON1 ~Ready and waiting.~ [tb#sti21]
-SAY SELECT_COMMON2 ~Could you please wait two seconds?… Ok, now I am ready.~ [tb#sti22]
-SAY SELECT_COMMON3 ~What's your will~ [tb#sti23]
-SAY SELECT_COMMON4 ~OK, what are your orders?~ [tb#sti24]
-SAY SELECT_COMMON5 ~Ask, and I shall do.~ [tb#sti25]
-SAY SELECT_COMMON6 ~Just tell me where is the seagull and I shall KILL HIM.~ [tb#sti26]
-SAY SELECT_ACTION1 ~I'm at it!~ [tb#sti27]
-SAY SELECT_ACTION2 ~Easy as killing a seagull.~ [tb#sti28]
-SAY SELECT_ACTION3 ~Stivan do this, Stivan do that… What do you need next?~ [tb#sti29]
-SAY SELECT_ACTION4 ~I hope I won't have to shave you tomorrow.~ [tb#sti30]
-SAY SELECT_ACTION5 ~Ok, Ok…~ [tb#sti31]
-SAY SELECT_ACTION6 ~There's no need for such anger! You just need to ask!~ [tb#sti32]
-SAY SELECT_ACTION7 ~Your task is completed.~ [tb#sti33]
-SAY SELECT_RARE1 ~STOP POKING ME! WHATDOYOUNEEDNOW?~ [tb#sti34]
-SAY SELECT_RARE2 ~Next time you address me this way, you'll lose some teeth.~ [tb#sti35]
-SAY CRITICAL_HIT ~YEAH!~ [tb#sti36]
-SAY CRITICAL_MISS ~Next time you won't be that lucky!~ [tb#sti37]
-SAY TARGET_IMMUNE ~Its skin is more resilient than a seagull's one!~ [tb#sti38]
-SAY INVENTORY_FULL ~Hey, I'm an halfling! I don't have that much room!~ [tb#sti39]
-SAY PICKED_POCKET ~Now it's mine.~ [tb#sti40]
-SAY HIDDEN_IN_SHADOWS ~Noone can see me.~ [tb#sti41]
-SAY SPELL_DISRUPTED ~Lost a spell? How? Do I even have spells?~ [tb#sti42]
-SAY SET_A_TRAP ~Watch your steps.~ [tb#sti43]
-SAY BIO ~When asked about his past, STIVAN says that he was born fourth of a large Halfling family in the Docks. When his father broke a leg, he was forced to start working. Well, almost, he started a thief career. Unfortunately, three of his brothers were killed by some seagulls, while trying to hunt some for food. Stivan couldn't let this be, and trained himself in the art of seagull-hunting to revenge his brothers.~
+	WRITE_ASCIIT OVERRIDE_SCRIPT ~tb#stdes~
 
-//thieving
-WRITE_BYTE 0x45 90 //Hide in Shadows
-WRITE_BYTE 0x64 30 //detect illusions
-WRITE_BYTE 0x65 95 //Set Traps
-WRITE_BYTE 0x6a 0 //PickPockets, was 50
+COPY_EXISTING ~misc01.itm~ ~override/tb#splu.itm~
+	SAY NAME1 ~Piuma~
+	SAY NAME2 ~Piuma~
+	SAY IDENTIFIED_DESC ~Una piuma di Gabbiano.~
+	SAY UNIDENTIFIED_DESC ~Una piuma di Gabbiano.~
+	WRITE_ASCII 0x32 ~tb#splui~ #8 // inventory icon
+	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
+	WRITE_LONG  0x4c 0 // weight
+	WRITE_ASCII 0x58 ~tb#spluc~ #8 // description icon
 
-//stats
-WRITE_LONG 0x14 0 //XP value
-WRITE_LONG 0x18 161000 //XP points 7/8
-WRITE_SHORT 0x24 59 //max HP
-WRITE_SHORT 0x26 59 //current HP
-WRITE_BYTE 0x52 16 //thac0
-WRITE_BYTE 0x6f 0 //BG1's Small Sword Proficiency, was 5
-WRITE_BYTE 0x75 0 //BG1's Missile Weapon Proficiency, was 5
-WRITE_BYTE 0x234 7 //F level
-WRITE_BYTE 0x235 8 //T level
-WRITE_BYTE 0x23c 18 //+1 to dex
-WRITE_BYTE 0x23d 16 //+2 to constitution
-WRITE_ASCII 0x248 ~tb#stiva~ // override script
+COPY_EXISTING ~misc01.itm~ ~override/tb#surn.itm~
+	SAY NAME1 ~Urna di Stivan~
+	SAY NAME2 ~Urna di Stivan~
+	SAY IDENTIFIED_DESC ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
+Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
+	SAY UNIDENTIFIED_DESC ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
+Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
+	WRITE_ASCII 0x32 ~tb#surni~ #8 // inventory icon
+	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
+	WRITE_LONG  0x4c 2 // weight
+	WRITE_ASCII 0x58 ~tb#surnc~ #8 // description icon
+	
 
-//inventory
-READ_LONG 0x2b8 ~items_s~ //item slot
-READ_LONG 0x2bc ~items_o~ //item offset
-READ_LONG 0x2c0 ~items_n~ //item number
-READ_LONG 0x2c0 ~items_n_bak~ //item number, backup variable
-WHILE ~%items_n%~ > 0 BEGIN
-      WRITE_LONG ~%items_o%~ + ((~%items_n%~ - 1) * 0x14) + 0x10 0 //no unstealable flag or whatnot
-      READ_ASCII ~%items_o%~ + ((~%items_n%~ - 1) * 0x14) ~item~ //item source
-      WHILE NOT (~%item%~ STRING_COMPARE_CASE /*thanks, Weimer!!!!!*/ ~rndtre02~) BEGIN //a random treasure item
-      	    WRITE_ASCII ~%items_o%~ + ((~%items_n%~ - 1) * 0x14) ~potn52~ //new item: 27HP healing potion
-      	    WRITE_BYTE ~%items_o%~ + ((~%items_n%~ - 1) * 0x14) + 6 0 //terminating null
-      	    WRITE_SHORT ~%items_o%~ + ((~%items_n%~ - 1) * 0x14) + 0xa 5 //number of items in stock
-      	    SET ~item~ = 0 //to avoid loops
-      END
-      WHILE NOT (~%item%~ STRING_COMPARE_CASE ~chan04~) BEGIN //splint mail
-      	    WRITE_ASCII ~%items_o%~ + ((~%items_n%~ - 1) * 0x14) ~leat04~ //new item: studded leather
-      	    SET ~item~ = 0 //to avoid loops
-      END
-      SET ~items_n~ = ~%items_n%~ - 1
-END
-WRITE_LONG 0x2c0 ~%items_n_bak%~ + 1
-INSERT_BYTES ~%items_o%~ + (~%items_n_bak%~ * 0x14) 0x14 //adding a new item
-WRITE_ASCII ~%items_o%~ + (~%items_n_bak%~ * 0x14) ~potn10~ //potion of invisibility; no terminating null, since insert_byte inserts "0x00" as value
-WRITE_SHORT ~%items_o%~ + (~%items_n_bak%~ * 0x14) + 0xa 3 // number of items in stock
-WRITE_LONG 0x2b8 ~%items_s%~ + 0x14 //item slot information comes /after/ item general information
-SET ~items_s~ = ~%items_s%~ + 0x14
-WRITE_SHORT ~%items_s%~ + 0x26 ~%items_n_bak%~ //adding item to inventory, quick item
+COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
+	SAY NAME1 ~Cacca di gabbiano~
+	SAY NAME2 ~Cacca di gabbiano~
+	SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
+STATISTICHE:
+Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
+Lancia "Miscela esplosiva" una volta al giorno: infligge 2d4 danni da fuoco (nessun tiro salvezza).
 
-//adding weapon proficiency effects, will need to re-set also inventory flags
-READ_LONG 0x2b8 ~items_s~ //item slot
-READ_LONG 0x2bc ~items_o~ //item offset
-READ_LONG 0x2c0 ~items_n~ //item number
-WRITE_LONG 0x2b8 ~%items_s%~ + 0x318 //3 effects = 0x318 bytes
-WRITE_LONG 0x2bc ~%items_o%~ + 0x318
-WRITE_LONG 0x2c0 ~%items_n%~
-READ_LONG 0x2c4 ~eff_o~ //effect offset
-READ_LONG 0x2c8 ~eff_n~ //effect number
-WRITE_LONG 0x2c8 ~%eff_n%~ + 3 //update number of effects
-INSERT_FILE ~%eff_o%~ ~stivan/stivan_eff.add~
+Utilizzabile Da:
+Stivan~
+	SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
+STATISTICHE:
+Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
+Lancia "Miscela esplosiva" una volta al giorno: infligge 2d4 danni da fuoco (nessun tiro salvezza).
 
-/* commented: it looks like sh*t in-game, maybe it's because I suck at coding VVC  :(
+Utilizzabile Da:
+Stivan~
+	WRITE_ASCII 0x32 ~tb#spooi~ #8 // inventory icon
+	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
+	WRITE_LONG  0x4c 1 // weight
+	WRITE_ASCII 0x58 ~tb#spooc~ #8 // description icon
+	WRITE_ASCII 0x76 ~tb#spooi~ #8 // header icon
+	WRITE_ASCII 0xae ~tb#spooi~ #8 // header icon
+	
 
-COPY_EXISTING ~seagul.cre~ ~override~
-//general stuff
-WRITE_LONG 8 13714 //the name strref
-WRITE_LONG 0x14 10 //XP value
-WRITE_SHORT 0x24 8 //HP max
-WRITE_SHORT 0x26 8 //HP atm
-WRITE_SHORT 0x46 4 //AC
-WRITE_SHORT 0x48 4 //AC
-WRITE_ASCII 0x248 ~tb#seagu~ // override script
-WRITE_LONG 0x258 0x00000000 // NULL on class script (was: RANDFLY)
-WRITE_LONG 0x25c 0x00000000 // NULL on class script (was: RANDFLY)
-WRITE_ASCII 0x280 ~seagull~ // the death variable
-WRITE_BYTE 0x287 0x00 //terminating null to the death variable
+APPEND ~tooltip.2da~ ~tb#spoo POO_BLIND POO_EXPLOSION -1~
+	UNLESS ~tb#spoo~
 
-//inventory
-READ_LONG 0x2b8 ~items_s~ //item slot
-READ_LONG 0x2bc ~items_o~ //item offset
-READ_LONG 0x2c0 ~items_n~ //item number
-WRITE_LONG 0x2c0 ~%items_n%~ + 1 //adding a new item
-INSERT_BYTES ~%items_o%~ + (~%items_n%~ * 0x14) 0x14
-WRITE_ASCII ~%items_o%~ + (~%items_n%~ * 0x14) ~p1-6~ //weapon; 1d6 piercing damage
-WRITE_LONG 0x2b8 ~%items_s%~ + 0x14 //item slot information comes /after/ item general information
-SET ~items_s~ = ~%items_s%~ + 0x14
-WRITE_SHORT ~%items_s%~ + 0x12 ~%items_n%~ //adding item to inventory, quick item
-
-// animation stuff; the idea is by Galactycon, the coding bugs are mine.
-WRITE_SHORT 0x28 49920  //changes animation id, as suggested by Galactycon: to give seagulls a foot circle, give them the rat EG animation, hide it and cover it with a segulled VVC
-READ_LONG 0x2b8 ~items_s~ //item slot
-READ_LONG 0x2bc ~items_o~ //item offset
-READ_LONG 0x2c0 ~items_n~ //item number
-WRITE_LONG 0x2b8 ~%items_s%~ + 0x210 //2 effects = 0x210 bytes
-WRITE_LONG 0x2bc ~%items_o%~ + 0x210
-WRITE_LONG 0x2c0 ~%items_n%~
-READ_LONG 0x2c4 ~eff_o~ //effect offset
-READ_LONG 0x2c8 ~eff_n~ //effect number
-WRITE_LONG 0x2c8 ~%eff_n%~ + 2 //update number of effects
-INSERT_FILE ~%eff_o%~ ~stivan/seagul2.eff~
-INSERT_FILE ~%eff_o%~ ~stivan/seagul1.eff~  */
+COPY_EXISTING ~tooltip.2da~ ~override~
+	REPLACE ~POO_BLIND~ ~Blind~
+	REPLACE ~POO_EXPLOSION~ ~Alchemical Explosion~
+	
+COPY ~stivan/cre/tb#stiv.cre~ ~override~
+	WRITE_ASCII 0x34 ~tb#stivS~ #8  // small portrait
+	WRITE_ASCII 0x3c ~tb#stivM~ #8  // large portrait
+	WRITE_ASCII 0x248 ~tb#stiv~ #8  // override script
+	WRITE_ASCII 0x2cc ~tb#stiv~ #8  // pre-joining dialogue file
+	WRITE_ASCII 0x280 ~tb#stiv~ #32 // DV
+	
+	ADD_CRE_ITEM ~sw1h08~ #1  #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIPPED
+	ADD_CRE_ITEM ~slng02~ #1  #0 #0 ~IDENTIFIED~ ~WEAPON2~
+	ADD_CRE_ITEM ~shld08~ #1  #0 #0 ~IDENTIFIED~ ~SHIELD~
+	ADD_CRE_ITEM ~leat02~ #1  #0 #0 ~IDENTIFIED~ ~ARMOR~
+	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER1~
+	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER2~
+	ADD_CRE_ITEM ~bull02~ #5  #0 #0 ~IDENTIFIED~ ~QUIVER3~
+	ADD_CRE_ITEM ~tb#splu~ #1 #0 #0 ~IDENTIFIED~ ~INV1~
+	ADD_CRE_ITEM ~tb#surn~ #1 #0 #0 ~IDENTIFIED~ ~INV2~
+	ADD_CRE_ITEM ~tb#spoo~ #2 #1 #0 ~IDENTIFIED~ ~QITEM1~
+	
+	SAY NAME1 ~Stivan~
+	SAY NAME2 ~Stivan~
+	SAY MORALE ~Ahhhh! Vedo gabbiani OVUNQUE!~
+	SAY HAPPY ~Questa sì che è una compagnia di manigoldi!~
+	SAY UNHAPPY_ANNOYED ~Uhm... Mi sentivo più a mio agio quando vagabondavo per le strade di Athkatla.~
+	SAY LEADER ~Io al comando? Wow!~
+	SAY TIRED ~(Sbadiglia) Avrei un pò di sonno.~
+	SAY BATTLE_CRY1 ~Cadrete per mano di Stivan il Cacciatore!~
+	SAY BATTLE_CRY2 ~Possano i gabbiani pasteggiare con i vostri resti!~
+	SAY BATTLE_CRY3 ~Heh. Mi chiedevo quando ci saremmo dati da fare.~
+	SAY BATTLE_CRY4 ~Yahoo! All'attacco!~
+	SAY DAMAGE ~Auch!~
+	SAY DYING ~(Gemito)~
+	SAY HURT ~(Gasp!) Sto... Sto morendo...!~
+	SAY AREA_FOREST ~(Starnutisce) Fantastico. Questo sarà il primo di una lunga serie. Io ODIO la natura!~
+	SAY AREA_CITY ~Ahh... Mi sento sempre a mio agio tra queste masse brulicanti di gente.~
+	SAY AREA_DUNGEON ~Uhm... Fà piuttosto freddino qui.~
+	SAY AREA_DAY ~Per quanto luminosa, la luce del sole non eguaglia in bellezza quella delle stelle e della luna.~
+	SAY AREA_NIGHT ~Le stelle sono buchi nel cielo da cui... da cui... *Ahem* Che buio!~
+	SAY SELECT_COMMON1 ~Yeah.~
+	SAY SELECT_COMMON2 ~Cosa vuoi?~
+	SAY SELECT_COMMON3 ~Non c'è due senza tre, suppongo.~
+	SAY SELECT_COMMON4 ~Uhm?~
+	SAY SELECT_COMMON5 ~Nessuno fa qualcosa per niente.~
+	SAY SELECT_COMMON6 ~E' il mio momento!~
+	SAY SELECT_ACTION1 ~Sicuro.~
+	SAY SELECT_ACTION2 ~Vallo a prendere te!~
+	SAY SELECT_ACTION3 ~Heh. Me l'aspettavo.~
+	SAY SELECT_ACTION4 ~Vado e torno.~
+	SAY SELECT_ACTION5 ~D'accordo, d'accordo... Ci penso io.~
+	SAY SELECT_ACTION6 ~Facile come spennare un gabbiano.~
+	SAY SELECT_RARE1 ~Se devo.~
+	SAY SELECT_RARE2 ~E' tutto?~
+	SAY CRITICAL_HIT ~Haha!~
+	SAY CRITICAL_MISS ~Ops.~
+	SAY TARGET_IMMUNE ~Ci vuole qualcos'altro qui!~
+	SAY INVENTORY_FULL ~Per cosa mi hai preso, per uno sgabuzzino?~
+	SAY PICKED_POCKET ~Ho rubacchiato qualcosina.~
+	SAY HIDDEN_IN_SHADOWS ~Heh. Sfido chiunque a vedermi.~
+	SAY SPELL_DISRUPTED ~Hai fatto fallire il mio incantesimo! Possano i gabbiani perseguitarti a vita!!!~
+	SAY SET_A_TRAP ~Heh. Se aggiungessi un pò di cacca di gabbiano, questa trappola sarebbe ancora più micidiale.~
+	SAY BIO ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfing si è visto uccidere i propri genitori e i fratelli da uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
+	Costretto a vivere per le strade di Athkatla, l'halfing ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani.~
 
 
 //dialogue stuff
 APPEND ~pdialog.2da~
-~stivan     tb#stivP            tb#stivJ           tb#stivD~
-UNLESS ~stivan~
+~tb#stiv     tb#stivP            tb#stivJ           tb#stivD~
+UNLESS ~tb#stiv~
 UNLESS ~25POST~
 
 APPEND ~pdialog.2da~
-~stivan     tb#stivP            tb#stivJ           tb#stivD        tb#st25P           tb#st25J              tb#st25D              tb#stiv25~
-UNLESS ~stivan~
+~tb#stiv     tb#stivP            tb#stivJ           tb#stivD        tb#st25P           tb#st25J              tb#st25D              tb#stiv25~
+UNLESS ~tb#stiv~
 IF     ~25POST~
 
 APPEND ~interdia.2da~
-~stivan    Btb#stiv~
-UNLESS ~stivan~
+~tb#stiv    Btb#stiv~
+UNLESS ~tb#stiv~
 UNLESS ~25FILE~
 
 
 APPEND ~interdia.2da~
-~stivan    Btb#stiv       Btb#st25~
-UNLESS ~stivan~
+~tb#stiv    Btb#stiv       Btb#st25~
+UNLESS ~tb#stiv~
 IF     ~25FILE~
 

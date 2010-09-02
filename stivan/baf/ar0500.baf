@@ -1,0 +1,8 @@
+IF
+	Global("tb#stivan_init","AR0500",0)
+THEN
+RESPONSE #100
+	SetGlobal("tb#stivan_init","AR0500",1)
+	CreateCreature("tb#stiv",[4845.2049],0)
+	Continue()
+END
