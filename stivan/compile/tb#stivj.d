@@ -7,7 +7,7 @@ InParty(Player1)
 CombatCounter(0)
 !Global("tb#stivanEntryTest","GLOBAL",3) 
 Global("tb#UrnBroken","GLOBAL",1)~ THEN BEGIN WarnUrnBroken
-SAY ~Hey, <CHARNAME>, ti dispiace sbrigarti a trovare un posto per la mia urna?~
+SAY ~TO BE WRITTEN Hey, <CHARNAME>, ti dispiace sbrigarti a trovare un posto per la mia urna?~
 IF ~~ THEN DO ~SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) IncrementGlobal("tb#UrnBroken","GLOBAL",1)~ EXIT
 END
 
@@ -39,7 +39,9 @@ END
 IF ~~ THEN BEGIN UrnBroken1-2
 SAY ~(Snort!) Taci! Le tue scuse non significano nulla! La memoria dei miei familiari è per sempre compromessa, e tu ne sei responsabile!~
 = ~Io... Non ho la benchè minima intenzione di restare più a lungo con te. Addio, <CHARNAME>! Possano i gabbiani cibarsi dei tuoi putridi resti!~ 
-IF ~~ THEN DO ~SetGlobal("StivanJoined","GLOBAL",0) LeaveParty() EscapeArea()~
+IF ~~ THEN DO ~SetGlobal("StivanJoined","GLOBAL",0) LeaveParty() EscapeArea() EraseJournalEntry(%Alla ricerca di una tomba.
+
+Mentre ci aggiravamo per i Moli abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfing mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.%)~
 SOLVED_JOURNAL %Alla ricerca di una tomba.
 
 L'urna contenente le ceneri dei familiari di Stivan si è rotta prima che riuscissi a trovare un posto in cui riporla. L'halfling, infuriato, ha lasciato il gruppo.% EXIT
