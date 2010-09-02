@@ -114,7 +114,7 @@ END
 
 CHAIN IF ~~ THEN tb#stiv StivanFirstMeet1-12
 ~Yeah! Andiamo, allora! Ci sono centinaia di gabbiani da spennare a dovere!~ 
-DO ~SetGlobal("tb#StivanJoined","LOCALS",1) JoinParty() SetGlobal("tb#stivanEntryTest","GLOBAL",1) SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS)~
+DO ~SetGlobal("tb#StivanJoined","LOCALS",1) JoinParty() SetGlobal("tb#stivanEntryTest","LOCALS",1) SetGlobalTimer("tb#stivanEntryTimer","LOCALS",FOUR_DAYS)~
 == TB#STIV IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Ehi, tu! Vieni ed unisciti a Stivan nella sua sacra crociata contro i malvagi gabbiani!! Dobbiamo DISTRUGGERLI TUTTI!! Bwahahahah!!~
 == MINSCJ IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Magari mi unirò alla tua caccia un'altra volta: devi sapere che Boo si sente a disagio con gli uccelli marini. E' meglio che gli risparmi una tortura del genere. Sì, è meglio per tutti!~
 == TB#STIV IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Vigliacco! Hai tremato di fronte al nemico pennuto! Non avrai una seconda possibilità!~

@@ -132,6 +132,25 @@ THEN
 		SetGlobal("tb#ViconiaDead","LOCALS",0)
 END
 
+//////////////////////////////////////////////////////////////
+// Quest dialogs
+//////////////////////////////////////////////////////////////
+IF
+	GlobalTimerExpired("tb#stivanEntryTimer","LOCALS")
+	CombatCounterLT(1)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	InParty(Myself)
+	!Global("tb#stivanEntryTest","LOCALS",3) 
+	OR(2)
+		Global("tb#UrnBroken","LOCALS",0)
+		Global("tb#UrnBroken","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		IncrementGlobal("tb#UrnBroken","LOCALS",1)
+		StartDialogueNoSet(Player1)
+		SetInterrupt(TRUE)
+END
 
 /* Stivan AI script - disabled until further notice.
 
