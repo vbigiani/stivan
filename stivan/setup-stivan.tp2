@@ -23,4 +23,4 @@ COPY ~stivan/portraits/kivanRemix~ ~override~
 BEGIN ~Ritratto "Ghigno" (To Be Done)~
 SUBCOMPONENT ~Stivan the Hunter NPC~
 INCLUDE ~stivan/core.tpa~
-COPY ~stivan/portraits/kivanRemix~ ~override~
+COPY ~stivan/portraits/bigGrin~ ~override~
