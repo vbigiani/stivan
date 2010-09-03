@@ -771,7 +771,7 @@ CHAIN IF ~~ THEN TB#STIVJ SaerkStrikesAgain1-3
 ~Sono basita. Non ho mai visto simili soprusi neanche tra le più altolocate famiglie di Athkatla. E a che scopo? Mira forse ad una scalata sociale?~
 = ~Non importa quali siano le sue motivazioni. Dobbiamo fare il possibile per restituire alle vittime di questo mercante ciò che è stato loro sottratto!~
 == VICONIJ IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN ~Il rivvil merita di essere ripagato con la stessa moneta, sebbene non si possa negare che abbia un certo talento nel dimostrare la propria superiorità sui deboli.~
-== YOSHJ IF ~InParty("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN ~Saerk Farrahd è un uomo molto potente, e il suo seguito di guardie è noto per essere poco… amichevole. Se siamo destinati ad inimicarcelo, dovremmo agire con cautela.~
+== YOSHJ IF ~InParty("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN ~Saerk Farrahd è un uomo molto potente, e il suo seguito di guardie è noto per essere poco... amichevole. Se siamo destinati ad inimicarcelo, dovremmo agire con cautela.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~<CHARNAME> ed io abbiamo già incontrato simili sbruffoni in passato, ma questo pallone gonfiato li supera tutti. Propongo una settimana rieducativa nei sotterranei di Candlekeep. Sono sicura che gli farebbe abbassare la cresta, oh sì.~
 == MAZZYJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Dobbiamo intervenire in difesa della giustizia, ma con i mezzi appropriati. Un processo di fronte ad una corte è ciò che quell'individuo merita!~
 == JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Per la barba di zio Scratchy! I mercanti sono per definizione dei truffatori, ma il Calimshita non conosce scrupoli! Neanche in occasione della Grande Carestia di Rape del 1348 fui così disonesto. Mi limitai a spacciare per rape delle zucchine adeguatamente incantate con un banale incantesimo d'illusione. Essendo il solo a commerciarle, feci soldi a palate, ma questo attirò l'attenzione dell'esattore delle Tasse e delle Entrate di Amn, un tale di nome Trax. Sai, proprio poco tempo fa stava per mettermi nel sacco, ma sono riuscita a cavarmela grazie al provvidenziale intervento di un gruppo di avventurieri. E' un peccato non averli più rivisti.~ 
@@ -986,20 +986,17 @@ DO ~SetGlobal("tb#SStivanNobleWoman","GLOBAL",1)~
 == TB#STIVJ ~Heh. Brillano bene, per essere finte.~
 EXIT
 
-/*
-Nessuno sa perchè siamo stati attaccati... Non abbiamo fatto nulla per meritarcelo. Non siamo neppure sicuri che i druidi siano responsabili. Non hanno mai fatto una cosa simile in passato.
-INTERJECT_COPY_TRANS 
+INTERJECT_COPY_TRANS MESSEN 15 tb#StivanMessen-15
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' senz'altro opera degli adoratori di alberi! E se... E se fossero loro i responsabili di ciò che è successo alla mia famiglia anni fa? Dobbiamo indagare, <CHARNAME>!~
 END
 
-Eccellente! Invierò parola a Lord Coprith in modo che ti aspetti. Grazie per l'aiuto.
+INTERJECT_COPY_TRANS MESSEN 10 tb#StivanMessen-10
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Conosco Trademeet - ci sono stato diverse volte con la mia famiglia. Se siamo fortunati, potremmo incontrare qualche mercante con cui eravamo soliti commerciare. Sono sicuro che farebbero il possibile per aiutarci a trovare quei puzzoni di druidi!~
 END
 
-Strumento della sfera cieca! Anche tu morirai per aver disturbato il mio riposo.
-INTERJECT_COPY_TRANS BHCRYPT
+INTERJECT_COPY_TRANS BHCRYPT 0 tb#StivanBhcrypt-0
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~WOW! Questa cripta è perfetta! C'è spazio anche per gli altri membri del gruppo, nel caso in cui vogliano farci un pisolino!~
 == BHCRYPT ~Nessuno profanerà il luogo del mio riposo. Taglierò le vostre teste una ad una e le infilerò su una picca, cosicchè possano essere da monito agli intrusi!~
@@ -1007,132 +1004,119 @@ INTERJECT_COPY_TRANS BHCRYPT
 ~Eeeekkk!~
 END
 
-Ben fatto! I githyanki ora sono liberi dalla rete mentale degli illithid. Il nostro potere è di nuovo libero e ora possiamo lasciare questo luogo sulle ali della volontà.
-INTERJECT_COPY_TRANS
+INTERJECT_COPY_TRANS UDSIMYAZ 26 tb#StivanUdsimyaz-26
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Yeah! Non ne potevo più di quei cosi tentacolosi!~
 END
 
-INTERJECT_COPY_TRANS PLAYER1 33 TreeOfLifeStivan
+INTERJECT PLAYER1 33 tb#StivanTreeOfLife
 == PLAYER1 IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Stivan, l'halfling nativo di Athkatla con la fissazione per i gabbiani. Sempre pronto a ribattere, spesso sornione e a tratti infantile, ti ha seguito sin dal vostro primo incontro senza esitazione, benchè non abbia alcun trascorso con colui che ti ha rubato l'anima.~
 END
-IF ~~ THEN REPLY ~Torna ad Athkatla, Stivan. Non hai motivo di scontrarti con Irenicus.~
-IF ~!Global("EntryTest","GLOBAL",5)~ THEN EXTERN TB#STIVJ TreeOfLifeStivan1-1
-IF ~Global("EntryTest","GLOBAL",5) !Global("tb#AfterYoshiBetrayal","GLOBAL",1)~ THEN EXTERN TB#STIVJ TreeOfLifeStivan1-2
-IF ~Global("EntryTest","GLOBAL",5) Global("tb#AfterYoshiBetrayal","GLOBAL",1)~ THEN EXTERN TB#STIVJ TreeOfLifeStivan1-3
-IF ~~ THEN REPLY ~Ti sono grato per il tuo aiuto, Stivan, ma adesso è meglio che tu te ne vada. Non hai motivo di rischiare la tua vita.~
-IF ~!Global("EntryTest","GLOBAL",5)~ THEN EXTERN TB#STIVJ TreeOfLifeStivan1-1
-IF ~Global("EntryTest","GLOBAL",5)~ THEN EXTERN TB#STIVJ TreeOfLifeStivan1-2
-IF ~~ THEN REPLY ~Stivan, la battaglia che ci attende è molto pericolosa. Ho bisogno che tu dia il meglio di te.~
-IF ~!Global("EntryTest","GLOBAL",5)~ THEN EXTERN TB#STIVJ TreeOfLifeStivan1-1
-IF ~Global("EntryTest","GLOBAL",5)~ THEN EXTERN TB#STIVJ TreeOfLifeStivan1-4
+IF ~!Global("EntryTest","GLOBAL",7)~ THEN REPLY ~Torna ad Athkatla, Stivan. Non hai motivo di scontrarti con Irenicus.~ EXTERN TB#STIVJ TreeOfLifeStivan1-1
+IF ~Global("EntryTest","GLOBAL",7) !Global("tb#AfterYoshiBetrayal","GLOBAL",1)~ THEN REPLY ~Torna ad Athkatla, Stivan. Non hai motivo di scontrarti con Irenicus.~ EXTERN TB#STIVJ TreeOfLifeStivan1-2
+IF ~Global("EntryTest","GLOBAL",7) Global("tb#AfterYoshiBetrayal","GLOBAL",1)~ THEN REPLY ~Torna ad Athkatla, Stivan. Non hai motivo di scontrarti con Irenicus.~ EXTERN TB#STIVJ TreeOfLifeStivan1-3
+IF ~!Global("EntryTest","GLOBAL",7)~ THEN REPLY ~Ti sono grato per il tuo aiuto, Stivan, ma adesso è meglio che tu te ne vada. Non hai motivo di rischiare la tua vita.~ EXTERN TB#STIVJ TreeOfLifeStivan1-1
+IF ~Global("EntryTest","GLOBAL",7)~ THEN REPLY ~Ti sono grato per il tuo aiuto, Stivan, ma adesso è meglio che tu te ne vada. Non hai motivo di rischiare la tua vita.~ EXTERN TB#STIVJ TreeOfLifeStivan1-2
+IF ~!Global("EntryTest","GLOBAL",7)~ THEN REPLY ~Stivan, la battaglia che ci attende è molto pericolosa. Ho bisogno che tu dia il meglio di te.~ EXTERN TB#STIVJ TreeOfLifeStivan1-1
+IF ~Global("EntryTest","GLOBAL",7)~ THEN REPLY ~Stivan, la battaglia che ci attende è molto pericolosa. Ho bisogno che tu dia il meglio di te.~ EXTERN TB#STIVJ TreeOfLifeStivan1-4
 
 APPEND TB#STIVJ 
 IF ~~ THEN BEGIN TreeOfLifeStivan1-1 
 SAY ~*Ahem* Non ti seguirò nella battaglia suicida che ti attende, <CHARNAME>. Non correrò il rischio di morire con l'urna dei miei familiari tra le mani.~
 = ~E' stato bello viaggiare con te. Avrei continuato a seguirti volentieri, ma i miei genitori e i miei fratelli hanno la priorità. Devono riposare in pace.~
-= ~Io torno ad Athkatla. In bocca al lupo!~ 
-DO ~SetGlobal("StivanJoined","GLOBAL",0) LeaveParty() EscapeArea()~
+IF ~~ THEN DO ~SetGlobal("StivanJoined","GLOBAL",0) LeaveParty() EscapeArea()~ GOTO TreeOfLifeStivan1-1a
+END
+
+IF ~~ THEN BEGIN TreeOfLifeStivan1-1a
+SAY ~Io torno ad Athkatla. In bocca al lupo!~ 
+COPY_TRANS player1 33
 END
 
 IF ~~ THEN BEGIN TreeOfLifeStivan1-2
 SAY ~Non dire sciocchezze, <CHARNAME>. Dopo tutto quello che hai fatto per me, combattere al tuo fianco è il minimo che possa fare per sdebitarmi.~ 
+COPY_TRANS player1 33
 END
  
 IF ~~ THEN BEGIN TreeOfLifeStivan1-3
 SAY ~Ti sbagli, <CHARNAME>. Quel bruttone è responsabile della morte di Yoshimo, ed io ho giurato che l'avrei vendicata.~
 = ~Sarò al tuo fianco sino all'ultimo respiro. Insieme pianteremo la lama del nostro defunto amico nel cuore di quel mostro!~ 
+COPY_TRANS player1 33
 END
 
 IF ~~ THEN BEGIN TreeOfLifeStivan1-4
 SAY ~Puoi contare su di me. Sai quanta cacca di gabbiano ho messo da parte per questo scontro? TONNELLATE.~ 
-END
 IF ~~ THEN REPLY ~Mi raccomando: dritta in fronte.~ EXTERN TB#STIVJ TreeOfLifeStivan1-5
 IF ~~ THEN REPLY ~Ottimo. Gliela faremo mangiare sino all'ultimo boccone.~ EXTERN TB#STIVJ TreeOfLifeStivan1-5
 IF ~~ THEN REPLY ~Lascia che sia il ferro a parlare.~ EXTERN TB#STIVJ TreeOfLifeStivan1-6
+END
 
 IF ~~ THEN BEGIN TreeOfLifeStivan1-5
 SAY ~Yeah!~
+COPY_TRANS player1 33
 END
 
 IF ~~ THEN BEGIN TreeOfLifeStivan1-6
 SAY ~Heh. Gli pianterò un pugnale sulla schiena, se è questo che vuoi, ma prima mi accerterò che sia adeguatamente ricoperto di escrementi!~
+COPY_TRANS player1 33
 END
 END
 
-Dubiti che saranno felici della loro attuale condizione, quando neppure tu sai perché ti trovi qui.
-INTERJECT_COPY_TRANS PLAYER1 33 TreeOfLifeStivan
-== PLAYER1 IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS PLAYER1 25 StivanHell
+== tb#stivj IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~(Gasp!) Il... Il mio corpo! E' ancora integro, eppure... Ho sentito una forza che tirava e tirava, e ho pensato che mi avrebbe fatto a pezzi!~
 = ~*Ahem* Non capisco. Siamo vivi... O morti?~
 END
 
-Vedremo, <CHARNAME>. Vedremo!
-INTERJECT_COPY_TRANS HELLJON
+INTERJECT_COPY_TRANS HELLJON 7 tb#StivanHelljon-7
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
-La tua anima non è mai stata veramente tua, figlio di Bhaal! Dovresti permettermi di utilizzarla meglio!
-INTERJECT_COPY_TRANS HELLJON
+INTERJECT_COPY_TRANS HELLJON 8 tb#StivanHelljon-8
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone! Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
-Una strana situazione, ma non ho dubbi sul risultato!
-INTERJECT_COPY_TRANS HELLJON
+INTERJECT_COPY_TRANS HELLJON 9 tb#StivanHelljon-9
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
-Non sarai così tranquillo quando ti spedirò nella non-esistenza!
-INTERJECT_COPY_TRANS HELLJON
+INTERJECT_COPY_TRANS HELLJON 10 tb#StivanHelljon-10
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
-
-
-Allora, devi ascoltare la nostra storia. Uno dei nostri attori, Haer'Dalis, è stato rapito da uno stregone nativo di questa città... Non ha fatto alcuno sforzo per negoziare con noi.
-INTERJECT_COPY_TRANS RAELIS
+INTERJECT_COPY_TRANS RAELIS 41 tb#StivanRaelis-41
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Haer’Dalis sarebbe il nome di quell’attore magro magro coi capelli lunghi lunghi?~
 == RAELIS ~Sì, piccolino. Sei forse un amico del nostro segugio?~
 == TB#STIVJ ~Oh, no. L’ho semplicemente visto recitare qualche volta. Avete idea di dove possa essere finito?~
 END
 
-(L'uomo ti guarda senza espressione per un momento e poi parla)
-
-Servo solo il Maestro Mekrath.
-INTERJECT_COPY_TRANS HAERDA
+INTERJECT_COPY_TRANS HAERDA 109 tb#StivanHaerda-109
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !Global("RaelisJob","GLOBAL",1)~ THEN ~Ma questo, a meno che non mi sbagli, è un attore della compagnia teatrale in scena ai Cinque Boccali. Cosa ci fa qui? Soprattutto, perché ha quell’espressione inebetita?~
 END
 
-(L'uomo ti guarda senza espressione per un momento e poi parla)
-
-Servo solo il Maestro Mekrath.
-INTERJECT_COPY_TRANS HAERDA
+INTERJECT_COPY_TRANS HAERDA 109 tb#StivanHaerda-109a
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("RaelisJob","GLOBAL",1)~ THEN ~Questo è l’attore che Miss Raelis ci ha chiesto di trovare, lo riconosco. Però è strano... L’ultima volta che l’ho visto non aveva questa espressione inebetita. Che quel bruttone del mago gli abbia fatto qualcosa?~
 END
 
-Così, mio corvo... il Primo Piano Materiale sarà terreno di gioco per entrambi. Viaggeremo insieme per stupirci delle sue glorie?
-INTERJECT_COPY_TRANS HAERDA
+INTERJECT_COPY_TRANS HAERDA 103 tb#StivanHaerda-103
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Sarebbe bello se tu viaggiassi con noi, Haer’Dalis. Sai che ho assistito ad alcune delle tue ultime rappresentazioni?~
 == HAERDA ~Davvero? E dimmi, qual è quella che ti ha maggiormente colpito?~
 == TB#STIVJ ~“Via Col Cambion” mi ha commosso. La sua drammaticità non ha paragoni. E’ un peccato che Biff sia sbucato all’improvviso dalla botola del palco - il pubblico ha riso per tutto il resto dell’opera!~
 == HAERDA ~Tsk. Solo gli abitanti del Primo Piano sono capaci di versare lacrime per un gorgheggio sentimentale e nel medesimo istante di ridere sgangheratamente per un piccolo contrattempo.~ 
-== TB#STIVJ ~*Ahem* Visto che viaggeremo insieme, perché non mi insegni ad essere un buon bardo? Io ho provato, ma spesso la memoria mi abbandona a metà del racconto o della poesia…~
+== TB#STIVJ ~*Ahem* Visto che viaggeremo insieme, perché non mi insegni ad essere un buon bardo? Io ho provato, ma spesso la memoria mi abbandona a metà del racconto o della poesia...~
 == HAERDA ~Temo proprio di no, ragazzino. L’Arte è un talento innato, un dono di cui disponiamo sin dal nostro primo gemito. Non è qualcosa che si possa insegnare.~
 = ~Ebbene, <CHARNAME>, attendo l'ardita sentenza. Esploreremo fianco a fianco questa landa sconosciuta?~
 END
 
-Chi sei tu? Oh, chiunque tu sia, devi scappare da questo posto immediatamente! Lui... lui ha ucciso quasi tutti quelli che sono venuti qui! Ti prego, scappa!
-INTERJECT_COPY_TRANS AERIE
+INTERJECT_COPY_TRANS AERIE 26 tb#StivanAerie-26
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Sniff sniff) A meno che il mio olfatto non mi stia tradendo, quell’orco puzza di pennuto. Stà attento, <CHARNAME>: potrebbe trattarsi di un gabbiano travestito!~
 END
 
-Oh, sarei lieta di aiutarti, davvero... ma prima dobbiamo aiutare Zio Quayle! Dobbiamo!
-INTERJECT_COPY_TRANS AERIE
+INTERJECT_COPY_TRANS AERIE 52 tb#StivanAerie-52
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Bada a non camminare troppo vicino a me. Benchè tu non abbia più le tue ali, rimani pur sempre un’ex-pennuta.~
 = ~Ehi! Cosa stai facendo?!~
 == AERIE ~Mi-mi prendo cura di questo povero gabbiano. Guarda com’è ridotto! Ha bisogno di cure!~
@@ -1140,107 +1124,90 @@ INTERJECT_COPY_TRANS AERIE
 == AERIE ~Eeekk!~
 END
 
-Mi lasceresti... Mi lasceresti viaggiare con te? Vorrei tanto ma... Oh Quayle, mi mancheresti!
-INTERJECT_COPY_TRANS AERIE
+INTERJECT_COPY_TRANS AERIE 17 tb#StivanAerie-17
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non puoi fare una cosa simile, <CHARNAME>! Se la liberatrice di pennuti verrà con noi, i gabbiani sfuggiranno alle mie sevizie e allo spennamento che meritano!~
 END
 
-Salute! Poi via alla cripta e a ricchezze al di là della nostra comprensione!
-INTERJECT_COPY_TRANS KORGANA
+INTERJECT_COPY_TRANS KORGANA 9 tb#StivanKorgana-9
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Mia mamma diceva sempre che i nani sono i più abili forgiatori di tutta Faerun. Perché in cambio del nostro aiuto non realizzi qualche gingillo magico per noi?~
 == KORGANA ~Io non sono un maniaco del martello e dell’incudine, bamboccio. Le sole cose che brandisco sono ascia e scudo, e presto li userò per aprirmi la strada tra le carcasse ammuffite di quella cripta!~
 END
 
-Una lingua veloce, un pratico colpo di balestra e tutti i congegni illegali che riesco  inventare.
-INTERJECT_COPY_TRANS JAN
+INTERJECT_COPY_TRANS JAN 19 tb#StivanJan-19
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Anch’io commerciavo merce illegale, sai? Piume di gabbiano, per la precisione. Non era un’attività particolarmente redditizia, ma di tanto in tanto riuscivo a guadagnare una moneta d’oro per mangiare almeno una pagnotta.~
 == JAN ~Piume di gabbiano? Accidenti, mio cugino Eduardo potrebbe averne bisogno per perfezionare quel congegno che sostiene sia in grado di volare. Se soltanto sapessi che fine abbia fatto. Non vorrei che alla fine abbia spiccato davvero il volo.~
 END
 
-Qui... segnerò sulla tua mappa il punto. Dobbiamo dirigerci là immediatamente. Dobbiamo fare attenzione a non farci individuare. Spero che vada tutto bene!
-INTERJECT_COPY_TRANS NALIA
+INTERJECT_COPY_TRANS NALIA 66 tb#StivanNalia-66
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Sbaglio o queste sono le terre dei De’Arnise? La figlia dell’attuale Lord è nota in tutta Athkatla per la sua generosità.~
 = ~A ben guardarvi, le assomigliate un pochino.~
-== NALIA ~…~
+== NALIA ~...~
 == TB#STIVJ ~Che sciocco che sono! Siete *voi* la mitica Miss Nalia! Come ho fatto a non capirlo subito?~
 == NALIA ~Non ho nulla di mitico, davvero. Cerco soltanto di usare i mezzi di cui dispongo per aiutare i meno fortunati.~
 END
 
-Molto bene, ma se cambi idea, ho sempre voluto viaggiare. Aiuti gli altri molto spesso? Mi piace davvero fare qualcosa per i meno fortunati. Mi hanno detto che lavorano così duramente.
-INTERJECT_COPY_TRANS NALIA
+INTERJECT_COPY_TRANS NALIA 14 tb#StivanNalia-14
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Ma questa donna... Questa donna è Miss Nalia De'Arnise! E' nota in tutta Athkatla per la sua generosità! Perchè non le hai detto di unirsi a noi, <CHARNAME>? Hai idea del prestigio sociale che avremmo acquisito in sua compagnia?~
-== JAHEIRJ IF ~IsValidForPartyDialog("Jaheira") IsValidForPartyDialog("tb#stiv") !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Nessuno di noi viaggia con <CHARNAME> per simili banalità, Stivan. Alcuni non hanno avuto nemmeno la possibilità di scegliere.~
+BRANCH ~IsValidForPartyDialog("Jaheira") IsValidForPartyDialog("tb#stiv") !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ BEGIN
+== JAHEIRAJ ~Nessuno di noi viaggia con <CHARNAME> per simili banalità, Stivan. Alcuni non hanno avuto nemmeno la possibilità di scegliere.~
 == TB#STIVJ ~Ah no?~	
-== JAHEIRJ ~No.~
+== JAHEIRAJ ~No.~
+END
 END
 
-No, non andar via. E' passato così tanto tempo da quando ho visto il tuo volto. Così regale e... uh... un po' sporco, ora. Sei stata ancora nei bassifondi? Birichina!
-INTERJECT_COPY_TRANS ISAEA
+INTERJECT_COPY_TRANS ISAEA 1 tb#StivanIsaea-1
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Snort!) Perchè guardi nella mia direzione?~
 == ISAEA ~Nalia, non prendere troppa confidenza con i popolani, per favore. Forse tu non te ne rendi conto, ma la semplice vicinanza a quel barbone rende irriconoscibile la tua nobile discendenza.~
 == TB#STIVJ ~Popolano io?! Un tempo appartenevo ad una famiglia di mercanti rispettati in tutta Athkatla!~
 == ISAEA ~Quel tempo è ormai passato, a quanto vedo. Questo cicisbeo viene dai Bassifondi o da qualche altro quartiere degradato a cui hai fatto visita?~
 END
 
-Nalia! Ti chiedo di lasciare questi pazzi una volta per tutte e tornare ai tuoi doveri! Onora gli impegni che hai stipulato con me!
+INTERJECT_COPY_TRANS ISAEA 21 tb#StivanIsaea-21
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Ehi, tu! Perché continui ad importunare Miss Nalia?~
 == ISAEA ~Sei ancora in compagnia di quel popolano?~
 == NALIAJ ~Ti ho già detto che Stivan non è un popolano. E anche se lo fosse, non ci sarebbe nulla di cui vergognarsi.~
 == ISAEA ~Per quanto tu possa vestire un mendicante con gli abiti di un nobile, dai suoi modi si capirà sempre che non ha il sangue blu. Ma non ho tempo per simili disquisizioni. Allontanati da questa manica di orchetti, ora!~
 END
 
-Chi sei tu per deciderlo? Con quale diritto?
-INTERJECT_COPY_TRANS NALIAJ
+INTERJECT_COPY_TRANS NALIAJ 220 tb#StivanNaliaj-220
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Non preoccupatevi, Miss Nalia; quell'uomo sta chiaramente bluffando.~
 END
 
-No, non lo farà. Agisco con la piena approvazione dei militari. Anche se tu fossi il tipo da attaccare le guardie, non sopravvivresti al tentativo.
-INTERJECT_COPY_TRANS ISAEA
+INTERJECT_COPY_TRANS ISAEA 26 tb#StivanIsaea-26
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Snort!) E' ora di finirla con questa messinscena! Osa avvicinarti a Miss Nalia e dovrai vedertela con me!~
 == ISAEA ~Un solo passo falso, *popolano*, e ti ritroverai alla forca senza neanche accorgertene.~
 END
 
-Arrivederci, <CHARNAME>. Non prendertela; sono semplicemente migliore di te. Oh, ritieniti libero di sporgere un reclamo all’autorità competente. Che sarei… io.
-INTERJECT_COPY_TRANS ISAEA
+INTERJECT_COPY_TRANS ISAEA 29 tb#StivanIsaea-29
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non possiamo permettere che Miss Nalia cada nelle mani di quel manigoldo! Dobbiamo liberarla! O invocare l'ira dei gabbiani su quell'infame! <CHARNAME>, dobbiamo fare qualcosa!~
 END
 
-Questo lavoro è un semplice recupero di documenti importanti, e dovrai essere il più discreto possibile. (Come se questi goffi idioti potessero riuscirci.)
-INTERJECT_COPY_TRANS EDWIN
+INTERJECT_COPY_TRANS EDWIN 12 tb#StivanEdwin-12
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Se vuoi che mi occupi io di questo recupero, <CHARNAME>, non devi far altro che chiedere.~
 END
 
-Smettila di importunarmi, ho da condurre degli affari importanti.
-INTERJECT_COPY_TRANS MARCUS
+INTERJECT MARCUS 0 tb#StivanMarcus-0
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("#tbStivanMarcus","GLOBAL",1)~ THEN ~PIUME DI GABBIANO! Andate e colpite!~
-== MARCUS ~Ma cosa diavolo…?!~
-== TB#STIVJ ~Yeah! L’ho presa! Ecco qui la collana che cercavi, <CHARNAME>!~ DO ~GiveItem("AMUL09")~
+== MARCUS ~Ma cosa diavolo...?!~
+== TB#STIVJ ~Yeah! L’ho presa! Ecco qui la collana che cercavi, <CHARNAME>!~ DO ~GiveItemCreate("AMUL09",Player1,1,0,0)~
 END
 IF ~~ THEN REPLY ~(Sigh) Hai idea di come reagirebbe Edwin se gli portassi un gioiello al posto delle carte di cui aveva bisogno?~ EXTERN TB#STIVJ StivanMarcus1-1
 IF ~~ THEN REPLY ~Stivan, forse non mi sono spiegato bene. Mi servono i *documenti* che quell’uomo ha con sé, non articoli di bigiotteria!~ EXTERN TB#STIVJ StivanMarcus1-1
 IF ~~ THEN REPLY ~Fenomenale. Davvero. Peccato che l’oggetto del furto fosse un plico di fogli, non un pendente per il collo.~ EXTERN TB#STIVJ StivanMarcus1-1
 
-APPEND TB#STIVJ
-
-IF ~~ THEN StivanMarcus1-1
-SAY ~Ops.~
+CHAIN IF ~~ THEN tb#stivj StivanMarcus1-1
+~Ops.~
 = ~Non disperare, <CHARNAME>! Rimedio subito!~
-= ~Ehi, tu!~ EXTERN TB#STIVJ StivanMarcus1-2
-END
-
-APPEND MARCUS
-
-IF ~~ THEN StivanMarcus1-2
-SAY ~Maledizione a te, halfling! Quelle piume mi hanno quasi accecato! Si può sapere cosa --~
+= ~Ehi, tu!~
+== MARCUS ~Maledizione a te, halfling! Quelle piume mi hanno quasi accecato! Si può sapere cosa --~
 == TB#STIVJ ~CACCA DI GABBIANO! Và e colpisci!~
 == MARCUS ~Ahhh! Non vedo più nulla! Aiuto! Aiuto!!~
-== TB#STIVJ ~Presi!~ DO ~GiveItem("misc4w")~
-== MARCUS ~Dove sei, maledetto? Dove sei?! Se ti prendo…!!!~ DO ~EscapeArea()~
+== TB#STIVJ ~Presi!~ DO ~GiveItemCreate("misc4w",Player1,1,0,0)~
+== MARCUS ~Dove sei, maledetto? Dove sei?! Se ti prendo...!!!~ DO ~EscapeArea()~
 == TB#STIVJ ~Diamocela a gambe, <CHARNAME>!~
-IF ~~ THEN EXIT
-END
-END
+EXIT
 
+/*
 SAERK Cosa significa tutta questa confusione? Cosa sta succedendo qui?
 SURAYAH P-padre? Ho sentito qualche rumore...?
 ANOMEN Finalmente vedo il serpente strisciare fuori dal suo rifugio per rivelarsi! Vieni dunque, demonio, e preparati ad affrontare la giusta vendetta!
