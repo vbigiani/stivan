@@ -157,7 +157,7 @@ IF ~~ THEN TB#STIVJ FinalRest1-11
 == MAZZYJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Che nessuno disturbi il vostro eterno sonno, amici halfling.~
 == NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Apprezzo la semplicità con cui hai dato loro il tuo ultimo saluto, Stivan. Dovrebbe essere d’esempio a quei nobili che dilapidano fortune per cerimonie funebri dall’inutile lusso.~
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~ Davvero commovente. Se avessi un cuore, mi sarei sciolto in lacrime.~
-== HAERDAJ IF ~InParty("Haerdali") !StateCheck("Haerdali",CD_STATE_NOTVALID)~ THEN ~Ahh... La vita è la più monotona delle avventure. Finisce sempre allo stesso modo.~ 
+== HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID)~ THEN ~Ahh... La vita è la più monotona delle avventure. Finisce sempre allo stesso modo.~ 
 == VICONIJ IF ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN ~Ne hai ancora per molto, sakphul?~
 == VALYGARJ IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Non ho visto molte cose nella mia vita, ma la morte è uno spettacolo che pare ripresentarsi con una certa ostinazione.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Ecco... Io... Mi dispiace, Stivan. Non so cos’altro dirti...~
@@ -804,140 +804,118 @@ INTERJECT_COPY_TRANS COR 51 tb#StivanCor-51
 == ANOMENJ ~Saerk non rimarebbe in prigione per più di un giorno. Non ho dubbi che i suoi tentacoli arrivino persino al Consiglio stesso. No, vendicherò la morte di Moira con la stessa moneta.~
 END
 
-/*
-Vieni, uniamoci e cerchiamo. Mi hanno dato l'ordine di aspettare il gruppo che devo aiutare. E' mio compito servire il bene supremo.
-INTERJEC­­T_COPY_TRANS KELDOR
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS KELDOR 2 tb#StivanKeldor-2
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~"Bene supremo"? "Uniamoci e cerchiamo"? Io non voglio viaggiare con questo paladino perfettino! Sarebbe una rovina per il mio commercio illegale di piume di gabbiano!~
 END
 
-Finito il tuo lavoro qui, vieni a cercarmi all'Ordine del Cuore Radioso. In città alberga molta corruzione, e il lavoro non finisce mai, per un vecchio paladino.
-INTERJEC­­T_COPY_TRANS KELDOR
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS KELDOR 3 tb#StivanKeldor-3
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~(Sospira) ... Sono salvo!~
 END
 
-Conduci, allora...
-INTERJEC­­T_COPY_TRANS KELDOR
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS KELDOR 4 tb#StivanKeldor-4
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~L'hai fatto apposta. Dillo che l'hai fatto apposta!~
 END
 
-Bene. Ti mostrerò tutto quando varcheremo le porte. Come ti ho detto, è da troppo tempo che non vengo più da queste parti.
-INTERJEC­­T_COPY_TRANS KELDORJ
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS KELDORJ 11 tb#StivanKeldorj-11
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~WOW! Questa sì che è una casa, vecchio! Ma le ricchezze che voi paladini acquisite con le vostre crociate non dovrebbero essere distribuite tra i poveri?~
 == KELDORJ ~E' ciò che facciamo, ma una parte viene divisa tra i servitori di Torm. Anche noi abbiamo una famiglia a cui provvedere, dopotutto.~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
-~Mi chiedo a quanto ammonti questa parte. Perchè qualcosa mi dice che è decisamente più alta di quella destinata ai *veri* bisognosi?~
+== TB#STIVJ ~Mi chiedo a quanto ammonti questa parte. Perchè qualcosa mi dice che è decisamente più alta di quella destinata ai *veri* bisognosi?~
 == KELDORJ ~NON tollererò altre simili insinuazioni. Mia moglie ed io abbiamo faticato duramente per potercela permettere.~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
-~Già... Dev'essere stata una faticaccia, soprattutto per lei.~
-== KELDORJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
-~La tua mancanza di rispetto è vergognosa, halfling.~
+== TB#STIVJ ~Già... Dev'essere stata una faticaccia, soprattutto per lei.~
+== KELDORJ ~La tua mancanza di rispetto è vergognosa, halfling.~
 = ~(Sospira) Coraggio, <CHARNAME>; la mia famiglia ci attende.~
 END
 
-
-Ancora una sola offesa contro l'Ordine e non potrai raccontare i suoi segreti in nessun posto al mondo, da viva.  Mi hai capito, strega?  Non una parola contro di me.  MAI.
-INTERJEC­­T_COPY_TRANS BKELDOR
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS BKELDOR 37 tb#StivanBkeldor-37
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Attento a quel che dici, paladino. Ho tagliato la gola a non so quante guardie che volevano sbattermi in prigione soltanto perchè dormivo per le strade. Continua a minacciare Viconia e aggiungerò anche la tua alla lista.~
-== BKELDOR Gli amici dei miei nemici sono miei nemici, halfling. Tieni bene a mente il mio avvertimento.~
+== BKELDOR ~Gli amici dei miei nemici sono miei nemici, halfling. Tieni bene a mente il mio avvertimento.~
 END
 
-Che nobiltà... e che idiozia.
-INTERJEC­­T_COPY_TRANS BVICONI
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS BVICONI 111 tb#StivanBviconi-111
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Brutto energumeno, dovrai passare sul mio cadavere prima di torcerle un solo capello!~
 == BVICONI ~Fatti da parte, piccoletto. Non ho bisogno di essere difesa da nessuno, tantomeno da te. Mi sbarazzerò di questo d'nilok da sola.~
 END
 
-E che importa, Viconia? Siamo tutti sporchi. Siamo tutti sudici e stanchi e affamati. Piantala e va a parlare con qualcuno a cui interessi.
-== BVALYGA IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS BVALYGA 6 tb#StivanBvalyga-8
+== BVALYGA IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Eppure...~
 = ~Stivan, dal tuo zaino proviene un odore tremendo.~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
-~Le mie cacche di gabbiano NON si toccano!~
-== BVICONI IF ~Tsk. Gli abitanti della Superficie sono il peggior compromesso tra intelligenza e dimensioni del membro.~
-EXIT
+== TB#STIVJ ~Le mie cacche di gabbiano NON si toccano!~
+== BVICONI ~Tsk. Gli abitanti della Superficie sono il peggior compromesso tra intelligenza e dimensioni del membro.~
+END
 
-
-Non aspetterò un minuto di più! Ho studiato abbastanza! E sarà mia! Vita eterna e potere illimitato!
-INTERJEC­­T_COPY_TRANS EDWINJ
-== EDWINJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS EDWINJ 12 tb#StivanEdwinj-12
+== EDWINJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Trema, halfling! Tu sarai il primo ad assaggiare il mio nuovo e inarrestabile potere!~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Eeeekk!~
 END
 
-Saggio consiglio, e non ti dimenticherò totalmente quando sarai poco più di un insetto di fronte a me. E ora, al potere!
-INTERJEC­­T_COPY_TRANS EDWINJ
-== EDWINJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS EDWINJ 13 tb#StivanEdwinj-13
+== EDWINJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Trema, halfling! Tu sarai il primo ad assaggiare il mio nuovo e inarrestabile potere!~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Eeeekk!~
 END
 
-Codardo! Tu e la tua fragile morale sarete testimoni della mia rinascita e poi ricompenserò la tua maldicenza!
-INTERJEC­­T_COPY_TRANS EDWINJ
-== EDWINJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS EDWINJ 14 tb#StivanEdwinj-14
+== EDWINJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Trema, halfling! Tu sarai il primo ad assaggiare il mio nuovo e inarrestabile potere!~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Eeeekk!~
 END
 
 
-INTERJEC­­T_COPY_TRANS YOSHJ 145
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS YOSHJ 145 tb#StivanYoshj-145
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Yoshimo, posso sapere cosa hai fatto per irritare quest'uomo?~
-== YOSHJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== YOSHJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Un'altra volta, forse.~
 END
 
-Mi spiace, <CHARNAME>. Ci sono circostanze delle quali non sei al corrente.
-INTERJEC­­T_COPY_TRANS YOSHJ
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS YOSHJ 113 tb#StivanYoshj-113
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Stai dicendo... di averci portato nella tana del leone *apposta*? Yoshimo, questo... Questo è un tradimento!~
 END
 
-Nessuna redenzione e nessuna possibilità, vado dritto nell'inferno promesso da Irenicus! Illmater, prendi il mio cuore, non ho scelta! Facciamola finita!
-INTERJEC­­T_COPY_TRANS YOSHIMOX
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS YOSHIMOX 2 tb#StivanYoshimox-2
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Non è detta l'ultima parola, Yoshimo! Troveremo un rimedio, una cura... Si possono cambiare molte cose!~
 == YOSHIMOX ~Temo di no, mio piccolo amico. Nulla può essere cambiato.~
 == TB#STIVJ ~No! No! Devi darmi... *Esigo* che tu mi dia una spiegazione! Io... Non capisco... ~
 == YOSHIMOX ~Ho impiegato una vita intera per capire che non è necessario capire tutto. Il tempo è un grande insegnante, ma sfortunatamente uccide tutti i suoi alunni.~
 END
 
-Muoviamoci, allora.  Probabilmente gli Stregoni Incappucciati verranno a sapere dei miei spostamenti... e del fatto che viaggiamo insieme... molto presto. Dovremo essere pronti.
-INTERJEC­­T_COPY_TRANS VALYGAR
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS VALYGAR 44 tb#StivanValygar-44
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~*Ahem* Non posso fare a meno di chiedermi se il gioco ne valga la candela. Ci stiamo inimicando i più potenti incantatori dell'Amn... Per cosa?~
-== YOSHJ IF ~IsValidForPartyDialog("Yoshimo") IsValidForPartyDialog("Stivan") !StateCheck("Yoshimo",CD_STATE_NOTVALID) !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== YOSHJ IF ~IsValidForPartyDialog("Yoshimo") IsValidForPartyDialog("tb#stiv") !StateCheck("Yoshimo",CD_STATE_NOTVALID) !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~L'halfling ha ragione. Ti ricordo, <CHARNAME>, che sono stati gli Incappucciati ad imprigionare Irenicus e la tua amica... Vogliamo andare a far loro compagnia?~
 END
 
-Non mi abbasserò a questa specie di omicidio, <CHARNAME>, nonostante ciò che hai fatto per me.  Se questa donna non può darci altro da fare, me ne andrò.
-INTERJEC­­T_COPY_TRANS VALYGARJ
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS VALYGARJ 61 tb#StivanValygarj-61
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Tsk. Ipocrita E ingrato. Un singolare connubio di attributi, Valygar, che meriti come nessun altro.~
 == VALYGARJ ~Puoi dire quello che vuoi, ma non ucciderò mai un innocente per...~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Per cosa? Per una causa meritevole come quella di <CHARNAME>? Puah! Sputo su di te e sulla tua moralità da accattoni!~
 == VALYGARJ ~Pondera bene la tua prossima scelta, <CHARNAME>. La lingua velenosa di quest'halfling è già di per sè un motivo più che valido per andarmene.~
 END
 
-Non posso dire di essere a mio agio al pensiero di aver a che fare con questa... donna. Questo posto puzza di non morto.  Fai come vuoi, comunque... ti seguirò, per ora.
-INTERJEC­­T_COPY_TRANS VALYGARJ
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS VALYGARJ 59 tb#StivanValygarj-49
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~(Sniff sniff) Ranger, sei sicuro di non aver confuso l'odore di questo posto con quello delle tue ascelle?~
 == VALYGARJ ~(Sigh) <CHARNAME>, a cosa pensavi quando gli hai chiesto di seguirti?~
 END
 
-E' stato meraviglioso quello che hai fatto, <CHARNAME>. Un altro avrebbe solo lasciato quei bambini liberi di vagare per le strade, affamati e senza un soldo.
-INTERJEC­­T_COPY_TRANS NALIAJ
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS NALIAJ 226 tb#StivanNaliaj-226
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Quando mendicavo per le strade, nessuno è mai stato così generoso con me.~
 == NALIAJ ~Non c'è stato un solo nobile che ti abbia dato qualche moneta d'oro? Gli Argrim, ad esempio?~
 == TB#STIVJ ~No.~
@@ -945,101 +923,98 @@ INTERJEC­­T_COPY_TRANS NALIAJ
 == TB#STIVJ ~Nemmeno.~
 == NALIAJ ~E' una vergogna! Un'indecenza! Con appena la metà delle ricchezze che possiedono potrebbero sfamare tutti gli abitanti di Athkatla, eppure non muovono un dito!~
 == TB#STIVJ ~Miss Nalia, è giusto che sia così. Nè io nè i miei familiari ci siamo mai preoccupati di aiutare i mendicanti a suo tempo. Immagino che sia una sorta di... contrappasso.~
-*Ahem* Non che la cosa mi abbia entusiasmato. Ne avrei fatto volentieri a meno.~
+= ~*Ahem* Non che la cosa mi abbia entusiasmato. Ne avrei fatto volentieri a meno.~
 END
 
-Sì, in effeti per degli Arpisti questo è un edificio ben strano. Non ho mai sentito parlare di una base imponente come questa. La segretezza è sempre stata la parola d'ordine tra di loro.
-INTERJEC­­T_COPY_TRANS JAHEIRAJ
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS JAHEIRAJ 392 tb#StivanJaheiraj-392
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Jaheira ha ragione. Non ho mai sentito parlare di questa sede degli Arpisti.~
-== JAHEIRJ ~E perchè mai dovresti averne? I servitori dell'equilibrio non cantano ai quattro venti dove hanno stabilito le loro basi.~
+== JAHEIRAJ ~E perchè mai dovresti averne? I servitori dell'equilibrio non cantano ai quattro venti dove hanno stabilito le loro basi.~
 == TB#STIVJ ~Ma i Ladri Tenebrosi sì. Dovresti sapere che non scorre buon sangue tra le ombre dell'Amn e gli Arpisti... Se questa tenuta fosse stata adibita a tale scopo fin da quando ero piccolo, l'intera città ormai lo saprebbe.~
 END
 
-
+APPEND TB#STIVJ 
 IF ~AreaCheck("AR0502")
-Global("EnteredTanner2","AR0502",0) THEN BEGIN
-   SAY~(Tossisce) Che... Che schifo è mai questo? Nemmeno i vicoli in cui dormivo erano così ripugnanti! Do... (Tossisce) Dobbiamo proseguire per forza? Io... Spero di no...~
-   IF ~~ THEN DO ~SetGlobal("EnteredTanner2","AR0502",1)~
- EXIT
+Global("EnteredTanner2","AR0502",0)~ THEN BEGIN Stivanar0502
+SAY ~(Tossisce) Che... Che schifo è mai questo? Nemmeno i vicoli in cui dormivo erano così ripugnanti! Do... (Tossisce) Dobbiamo proseguire per forza? Io... Spero di no...~
+IF ~~ THEN DO ~SetGlobal("EnteredTanner2","AR0502",1)~ EXIT
+END
 END
 
-Potresti chiederti perché dobbiamo incontrarci qui. Ci sono molte ragioni, solo alcune delle quali devono riguardarti. Per prima cosa lascia che mi presenti. Sono Bodhi.
-INTERJEC­­T_COPY_TRANS BODHI
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS BODHI 1 tb#StivanBodhi-1
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~*Ahem* Questa donna mi mette a disagio, <CHARNAME>. Ho la pelle d'oca...~
 END
 
-Ti offro un'alternativa. Ti aiuterò a trovare la tua amica per .. uh.. Trenta mila monete d'oro? E' una grossa cifra, ma minore di quella richiesta dai Ladri Tenebrosi e, guarda caso, è proprio quanto avete in questo momento.
-INTERJEC­­T_COPY_TRANS BODHI
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS BODHI 6 tb#StivanBodhi-6
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Secondo me l'importante è riuscire nella tua missione, non mi importa grazie a chi. Comunque è impressionante il fatto che tutti siano così ansiosi di aiutarti, non trovi?~
 END
 
-Molto bene. Recati in quella casa e uccidi tutte le creature. Noi ti osserveremo, e quando avrai completato la missione lo verremo a sapere. Torna da noi una volta che avrai finito.
-INTERJEC­­T_COPY_TRANS RYLOCK
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS RYLOCK 24 tb#StivanRylock-24
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~*Ahem* Dobbiamo proprio? La gente, qui ai Moli, dice che chi entra in quella casa non ne esce più vivo...~
-== HAERDAJ IF ~IsValidForPartyDialog("Haerdali") IsValidForPartyDialog("Stivan") !StateCheck("Haerdali",CD_STATE_NOTVALID) !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== HAERDAJ IF ~IsValidForPartyDialog("haerdalis") IsValidForPartyDialog("tb#stiv") !StateCheck("haerdalis",CD_STATE_NOTVALID) !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E dov'è il problema, mio gabbiano? Se ci attende la morte, avremo il piacere di fare un viaggio senza valigie.~
-== TB#STIVJ ~...~
+== TB#STIVJ IF ~IsValidForPartyDialog("haerdalis") IsValidForPartyDialog("tb#stiv") !StateCheck("haerdalis",CD_STATE_NOTVALID) !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~...~
 END
 
-CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("Stivan")
-See("Stivan")
-!StateCheck("Stivan",CD_STATE_NOTVALID)
-Global("StivanNobleMan","GLOBAL",0) ~THEN NOBLEM1
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+Global("tb#StivanNobleMan","GLOBAL",0)~ THEN NOBLEM1 stivanNobleman
 ~Da quando fanno entrare simili lordure in un quartiere benestante come questo?~
-DO ~SetGlobal("StivanNobleMan","GLOBAL",1)~
 == TB#STIVJ ~Heh. La sola lordura che vedo, signore, è quella che avete sotto i vostri piedi.~
+DO ~SetGlobal("tb#StivanNobleMan","GLOBAL",1)~
 EXIT
 
-CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("Stivan")
-See("Stivan")
-!StateCheck("Stivan",CD_STATE_NOTVALID)
-Global("StivanFemaleChild","GLOBAL",0) ~THEN
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+Global("tb#SStivanFemaleChild","GLOBAL",0)~ THEN urchin2 StivanUrchin
 ~MIA MAMMA DICE CHE GLI HALFLING SONO TUTTI DEI PUZZONI!~
-DO ~SetGlobal("StivanFemaleChild","GLOBAL",1)~
+DO ~SetGlobal("tb#SStivanFemaleChild","GLOBAL",1)~
 == TB#STIVJ ~Non è vero! Lavo sempre i miei capelli almeno una volta ogni sei mesi!~
 EXIT
 
-CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("Stivan")
-See("Stivan")
-!StateCheck("Stivan",CD_STATE_NOTVALID)
-Global("StivanNobleWoman","GLOBAL",0) ~THEN NOBLEW1
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+Global("tb#SStivanNobleWoman","GLOBAL",0) ~THEN NOBLEW1 stivanNoblewoman
 ~Allontanati, accattone! La tua sola vicinanza offusca lo splendore delle mie perle!~
-DO ~SetGlobal("StivanNobleWoman","GLOBAL",1)~
+DO ~SetGlobal("tb#SStivanNobleWoman","GLOBAL",1)~
 == TB#STIVJ ~Heh. Brillano bene, per essere finte.~
 EXIT
 
+/*
 Nessuno sa perchè siamo stati attaccati... Non abbiamo fatto nulla per meritarcelo. Non siamo neppure sicuri che i druidi siano responsabili. Non hanno mai fatto una cosa simile in passato.
-INTERJEC­­T_COPY_TRANS 
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS 
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' senz'altro opera degli adoratori di alberi! E se... E se fossero loro i responsabili di ciò che è successo alla mia famiglia anni fa? Dobbiamo indagare, <CHARNAME>!~
 END
 
 Eccellente! Invierò parola a Lord Coprith in modo che ti aspetti. Grazie per l'aiuto.
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Conosco Trademeet - ci sono stato diverse volte con la mia famiglia. Se siamo fortunati, potremmo incontrare qualche mercante con cui eravamo soliti commerciare. Sono sicuro che farebbero il possibile per aiutarci a trovare quei puzzoni di druidi!~
 END
 
 Strumento della sfera cieca! Anche tu morirai per aver disturbato il mio riposo.
-INTERJEC­­T_COPY_TRANS BHCRYPT
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS BHCRYPT
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~WOW! Questa cripta è perfetta! C'è spazio anche per gli altri membri del gruppo, nel caso in cui vogliano farci un pisolino!~
 == BHCRYPT ~Nessuno profanerà il luogo del mio riposo. Taglierò le vostre teste una ad una e le infilerò su una picca, cosicchè possano essere da monito agli intrusi!~
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Eeeekkk!~
 END
 
 Ben fatto! I githyanki ora sono liberi dalla rete mentale degli illithid. Il nostro potere è di nuovo libero e ora possiamo lasciare questo luogo sulle ali della volontà.
-INTERJEC­­T_COPY_TRANS
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Yeah! Non ne potevo più di quei cosi tentacolosi!~
 END
 
-INTERJEC­­T_COPY_TRANS PLAYER1 33 TreeOfLifeStivan
-== PLAYER1 IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS PLAYER1 33 TreeOfLifeStivan
+== PLAYER1 IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Stivan, l'halfling nativo di Athkatla con la fissazione per i gabbiani. Sempre pronto a ribattere, spesso sornione e a tratti infantile, ti ha seguito sin dal vostro primo incontro senza esitazione, benchè non abbia alcun trascorso con colui che ti ha rubato l'anima.~
 END
 IF ~~ THEN REPLY ~Torna ad Athkatla, Stivan. Non hai motivo di scontrarti con Irenicus.~
@@ -1087,41 +1062,41 @@ END
 END
 
 Dubiti che saranno felici della loro attuale condizione, quando neppure tu sai perché ti trovi qui.
-INTERJEC­­T_COPY_TRANS PLAYER1 33 TreeOfLifeStivan
-== PLAYER1 IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS PLAYER1 33 TreeOfLifeStivan
+== PLAYER1 IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~(Gasp!) Il... Il mio corpo! E' ancora integro, eppure... Ho sentito una forza che tirava e tirava, e ho pensato che mi avrebbe fatto a pezzi!~
 = ~*Ahem* Non capisco. Siamo vivi... O morti?~
 END
 
 Vedremo, <CHARNAME>. Vedremo!
-INTERJEC­­T_COPY_TRANS HELLJON
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS HELLJON
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
 La tua anima non è mai stata veramente tua, figlio di Bhaal! Dovresti permettermi di utilizzarla meglio!
-INTERJEC­­T_COPY_TRANS HELLJON
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS HELLJON
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone! Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
 Una strana situazione, ma non ho dubbi sul risultato!
-INTERJEC­­T_COPY_TRANS HELLJON
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS HELLJON
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
 Non sarai così tranquillo quando ti spedirò nella non-esistenza!
-INTERJEC­­T_COPY_TRANS HELLJON
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS HELLJON
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
 END
 
 
 
 Allora, devi ascoltare la nostra storia. Uno dei nostri attori, Haer'Dalis, è stato rapito da uno stregone nativo di questa città... Non ha fatto alcuno sforzo per negoziare con noi.
-INTERJEC­­T_COPY_TRANS RAELIS
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Haer’Dalis sarebbe il nome di quell’attore magro magro coi capelli lunghi lunghi?~
+INTERJECT_COPY_TRANS RAELIS
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Haer’Dalis sarebbe il nome di quell’attore magro magro coi capelli lunghi lunghi?~
 == RAELIS ~Sì, piccolino. Sei forse un amico del nostro segugio?~
 == TB#STIVJ ~Oh, no. L’ho semplicemente visto recitare qualche volta. Avete idea di dove possa essere finito?~
 END
@@ -1129,20 +1104,20 @@ END
 (L'uomo ti guarda senza espressione per un momento e poi parla)
 
 Servo solo il Maestro Mekrath.
-INTERJEC­­T_COPY_TRANS HAERDA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID) !Global("RaelisJob","GLOBAL",1)~ THEN ~Ma questo, a meno che non mi sbagli, è un attore della compagnia teatrale in scena ai Cinque Boccali. Cosa ci fa qui? Soprattutto, perché ha quell’espressione inebetita?~
+INTERJECT_COPY_TRANS HAERDA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !Global("RaelisJob","GLOBAL",1)~ THEN ~Ma questo, a meno che non mi sbagli, è un attore della compagnia teatrale in scena ai Cinque Boccali. Cosa ci fa qui? Soprattutto, perché ha quell’espressione inebetita?~
 END
 
 (L'uomo ti guarda senza espressione per un momento e poi parla)
 
 Servo solo il Maestro Mekrath.
-INTERJEC­­T_COPY_TRANS HAERDA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID) Global("RaelisJob","GLOBAL",1)~ THEN ~Questo è l’attore che Miss Raelis ci ha chiesto di trovare, lo riconosco. Però è strano... L’ultima volta che l’ho visto non aveva questa espressione inebetita. Che quel bruttone del mago gli abbia fatto qualcosa?~
+INTERJECT_COPY_TRANS HAERDA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("RaelisJob","GLOBAL",1)~ THEN ~Questo è l’attore che Miss Raelis ci ha chiesto di trovare, lo riconosco. Però è strano... L’ultima volta che l’ho visto non aveva questa espressione inebetita. Che quel bruttone del mago gli abbia fatto qualcosa?~
 END
 
 Così, mio corvo... il Primo Piano Materiale sarà terreno di gioco per entrambi. Viaggeremo insieme per stupirci delle sue glorie?
-INTERJEC­­T_COPY_TRANS HAERDA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Sarebbe bello se tu viaggiassi con noi, Haer’Dalis. Sai che ho assistito ad alcune delle tue ultime rappresentazioni?~
+INTERJECT_COPY_TRANS HAERDA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Sarebbe bello se tu viaggiassi con noi, Haer’Dalis. Sai che ho assistito ad alcune delle tue ultime rappresentazioni?~
 == HAERDA ~Davvero? E dimmi, qual è quella che ti ha maggiormente colpito?~
 == TB#STIVJ ~“Via Col Cambion” mi ha commosso. La sua drammaticità non ha paragoni. E’ un peccato che Biff sia sbucato all’improvviso dalla botola del palco - il pubblico ha riso per tutto il resto dell’opera!~
 == HAERDA ~Tsk. Solo gli abitanti del Primo Piano sono capaci di versare lacrime per un gorgheggio sentimentale e nel medesimo istante di ridere sgangheratamente per un piccolo contrattempo.~ 
@@ -1152,13 +1127,13 @@ INTERJEC­­T_COPY_TRANS HAERDA
 END
 
 Chi sei tu? Oh, chiunque tu sia, devi scappare da questo posto immediatamente! Lui... lui ha ucciso quasi tutti quelli che sono venuti qui! Ti prego, scappa!
-INTERJEC­­T_COPY_TRANS AERIE
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~(Sniff sniff) A meno che il mio olfatto non mi stia tradendo, quell’orco puzza di pennuto. Stà attento, <CHARNAME>: potrebbe trattarsi di un gabbiano travestito!~
+INTERJECT_COPY_TRANS AERIE
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Sniff sniff) A meno che il mio olfatto non mi stia tradendo, quell’orco puzza di pennuto. Stà attento, <CHARNAME>: potrebbe trattarsi di un gabbiano travestito!~
 END
 
 Oh, sarei lieta di aiutarti, davvero... ma prima dobbiamo aiutare Zio Quayle! Dobbiamo!
-INTERJEC­­T_COPY_TRANS AERIE
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Bada a non camminare troppo vicino a me. Benchè tu non abbia più le tue ali, rimani pur sempre un’ex-pennuta.~
+INTERJECT_COPY_TRANS AERIE
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Bada a non camminare troppo vicino a me. Benchè tu non abbia più le tue ali, rimani pur sempre un’ex-pennuta.~
 = ~Ehi! Cosa stai facendo?!~
 == AERIE ~Mi-mi prendo cura di questo povero gabbiano. Guarda com’è ridotto! Ha bisogno di cure!~
 == TB#STIVJ ~(Urla) Come osi liberare quello schifido uccello dalla giusta prigionia che merita? Ridammelo *subito*!~
@@ -1166,25 +1141,25 @@ INTERJEC­­T_COPY_TRANS AERIE
 END
 
 Mi lasceresti... Mi lasceresti viaggiare con te? Vorrei tanto ma... Oh Quayle, mi mancheresti!
-INTERJEC­­T_COPY_TRANS AERIE
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Non puoi fare una cosa simile, <CHARNAME>! Se la liberatrice di pennuti verrà con noi, i gabbiani sfuggiranno alle mie sevizie e allo spennamento che meritano!~
+INTERJECT_COPY_TRANS AERIE
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non puoi fare una cosa simile, <CHARNAME>! Se la liberatrice di pennuti verrà con noi, i gabbiani sfuggiranno alle mie sevizie e allo spennamento che meritano!~
 END
 
 Salute! Poi via alla cripta e a ricchezze al di là della nostra comprensione!
-INTERJEC­­T_COPY_TRANS KORGANA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Mia mamma diceva sempre che i nani sono i più abili forgiatori di tutta Faerun. Perché in cambio del nostro aiuto non realizzi qualche gingillo magico per noi?~
+INTERJECT_COPY_TRANS KORGANA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Mia mamma diceva sempre che i nani sono i più abili forgiatori di tutta Faerun. Perché in cambio del nostro aiuto non realizzi qualche gingillo magico per noi?~
 == KORGANA ~Io non sono un maniaco del martello e dell’incudine, bamboccio. Le sole cose che brandisco sono ascia e scudo, e presto li userò per aprirmi la strada tra le carcasse ammuffite di quella cripta!~
 END
 
 Una lingua veloce, un pratico colpo di balestra e tutti i congegni illegali che riesco  inventare.
-INTERJEC­­T_COPY_TRANS JAN
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Anch’io commerciavo merce illegale, sai? Piume di gabbiano, per la precisione. Non era un’attività particolarmente redditizia, ma di tanto in tanto riuscivo a guadagnare una moneta d’oro per mangiare almeno una pagnotta.~
+INTERJECT_COPY_TRANS JAN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Anch’io commerciavo merce illegale, sai? Piume di gabbiano, per la precisione. Non era un’attività particolarmente redditizia, ma di tanto in tanto riuscivo a guadagnare una moneta d’oro per mangiare almeno una pagnotta.~
 == JAN ~Piume di gabbiano? Accidenti, mio cugino Eduardo potrebbe averne bisogno per perfezionare quel congegno che sostiene sia in grado di volare. Se soltanto sapessi che fine abbia fatto. Non vorrei che alla fine abbia spiccato davvero il volo.~
 END
 
 Qui... segnerò sulla tua mappa il punto. Dobbiamo dirigerci là immediatamente. Dobbiamo fare attenzione a non farci individuare. Spero che vada tutto bene!
-INTERJEC­­T_COPY_TRANS NALIA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Sbaglio o queste sono le terre dei De’Arnise? La figlia dell’attuale Lord è nota in tutta Athkatla per la sua generosità.~
+INTERJECT_COPY_TRANS NALIA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Sbaglio o queste sono le terre dei De’Arnise? La figlia dell’attuale Lord è nota in tutta Athkatla per la sua generosità.~
 = ~A ben guardarvi, le assomigliate un pochino.~
 == NALIA ~…~
 == TB#STIVJ ~Che sciocco che sono! Siete *voi* la mitica Miss Nalia! Come ho fatto a non capirlo subito?~
@@ -1192,52 +1167,52 @@ INTERJEC­­T_COPY_TRANS NALIA
 END
 
 Molto bene, ma se cambi idea, ho sempre voluto viaggiare. Aiuti gli altri molto spesso? Mi piace davvero fare qualcosa per i meno fortunati. Mi hanno detto che lavorano così duramente.
-INTERJEC­­T_COPY_TRANS NALIA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Ma questa donna... Questa donna è Miss Nalia De'Arnise! E' nota in tutta Athkatla per la sua generosità! Perchè non le hai detto di unirsi a noi, <CHARNAME>? Hai idea del prestigio sociale che avremmo acquisito in sua compagnia?~
-== JAHEIRJ IF ~IsValidForPartyDialog("Jaheira") IsValidForPartyDialog("Stivan") !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Nessuno di noi viaggia con <CHARNAME> per simili banalità, Stivan. Alcuni non hanno avuto nemmeno la possibilità di scegliere.~
+INTERJECT_COPY_TRANS NALIA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Ma questa donna... Questa donna è Miss Nalia De'Arnise! E' nota in tutta Athkatla per la sua generosità! Perchè non le hai detto di unirsi a noi, <CHARNAME>? Hai idea del prestigio sociale che avremmo acquisito in sua compagnia?~
+== JAHEIRJ IF ~IsValidForPartyDialog("Jaheira") IsValidForPartyDialog("tb#stiv") !StateCheck("Jaheira",CD_STATE_NOTVALID) !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Nessuno di noi viaggia con <CHARNAME> per simili banalità, Stivan. Alcuni non hanno avuto nemmeno la possibilità di scegliere.~
 == TB#STIVJ ~Ah no?~	
 == JAHEIRJ ~No.~
 END
 
 No, non andar via. E' passato così tanto tempo da quando ho visto il tuo volto. Così regale e... uh... un po' sporco, ora. Sei stata ancora nei bassifondi? Birichina!
-INTERJEC­­T_COPY_TRANS ISAEA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~(Snort!) Perchè guardi nella mia direzione?~
+INTERJECT_COPY_TRANS ISAEA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Snort!) Perchè guardi nella mia direzione?~
 == ISAEA ~Nalia, non prendere troppa confidenza con i popolani, per favore. Forse tu non te ne rendi conto, ma la semplice vicinanza a quel barbone rende irriconoscibile la tua nobile discendenza.~
 == TB#STIVJ ~Popolano io?! Un tempo appartenevo ad una famiglia di mercanti rispettati in tutta Athkatla!~
 == ISAEA ~Quel tempo è ormai passato, a quanto vedo. Questo cicisbeo viene dai Bassifondi o da qualche altro quartiere degradato a cui hai fatto visita?~
 END
 
 Nalia! Ti chiedo di lasciare questi pazzi una volta per tutte e tornare ai tuoi doveri! Onora gli impegni che hai stipulato con me!
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Ehi, tu! Perché continui ad importunare Miss Nalia?~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Ehi, tu! Perché continui ad importunare Miss Nalia?~
 == ISAEA ~Sei ancora in compagnia di quel popolano?~
 == NALIAJ ~Ti ho già detto che Stivan non è un popolano. E anche se lo fosse, non ci sarebbe nulla di cui vergognarsi.~
 == ISAEA ~Per quanto tu possa vestire un mendicante con gli abiti di un nobile, dai suoi modi si capirà sempre che non ha il sangue blu. Ma non ho tempo per simili disquisizioni. Allontanati da questa manica di orchetti, ora!~
 END
 
 Chi sei tu per deciderlo? Con quale diritto?
-INTERJEC­­T_COPY_TRANS NALIAJ
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Heh. Non preoccupatevi, Miss Nalia; quell'uomo sta chiaramente bluffando.~
+INTERJECT_COPY_TRANS NALIAJ
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Non preoccupatevi, Miss Nalia; quell'uomo sta chiaramente bluffando.~
 END
 
 No, non lo farà. Agisco con la piena approvazione dei militari. Anche se tu fossi il tipo da attaccare le guardie, non sopravvivresti al tentativo.
-INTERJEC­­T_COPY_TRANS ISAEA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~(Snort!) E' ora di finirla con questa messinscena! Osa avvicinarti a Miss Nalia e dovrai vedertela con me!~
+INTERJECT_COPY_TRANS ISAEA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Snort!) E' ora di finirla con questa messinscena! Osa avvicinarti a Miss Nalia e dovrai vedertela con me!~
 == ISAEA ~Un solo passo falso, *popolano*, e ti ritroverai alla forca senza neanche accorgertene.~
 END
 
 Arrivederci, <CHARNAME>. Non prendertela; sono semplicemente migliore di te. Oh, ritieniti libero di sporgere un reclamo all’autorità competente. Che sarei… io.
-INTERJEC­­T_COPY_TRANS ISAEA
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Non possiamo permettere che Miss Nalia cada nelle mani di quel manigoldo! Dobbiamo liberarla! O invocare l'ira dei gabbiani su quell'infame! <CHARNAME>, dobbiamo fare qualcosa!~
+INTERJECT_COPY_TRANS ISAEA
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non possiamo permettere che Miss Nalia cada nelle mani di quel manigoldo! Dobbiamo liberarla! O invocare l'ira dei gabbiani su quell'infame! <CHARNAME>, dobbiamo fare qualcosa!~
 END
 
 Questo lavoro è un semplice recupero di documenti importanti, e dovrai essere il più discreto possibile. (Come se questi goffi idioti potessero riuscirci.)
-INTERJEC­­T_COPY_TRANS EDWIN
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Heh. Se vuoi che mi occupi io di questo recupero, <CHARNAME>, non devi far altro che chiedere.~
+INTERJECT_COPY_TRANS EDWIN
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Se vuoi che mi occupi io di questo recupero, <CHARNAME>, non devi far altro che chiedere.~
 END
 
 Smettila di importunarmi, ho da condurre degli affari importanti.
-INTERJEC­­T_COPY_TRANS MARCUS
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID) Global("#tbStivanMarcus","GLOBAL",1)~ THEN ~PIUME DI GABBIANO! Andate e colpite!~
+INTERJECT_COPY_TRANS MARCUS
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("#tbStivanMarcus","GLOBAL",1)~ THEN ~PIUME DI GABBIANO! Andate e colpite!~
 == MARCUS ~Ma cosa diavolo…?!~
 == TB#STIVJ ~Yeah! L’ho presa! Ecco qui la collana che cercavi, <CHARNAME>!~ DO ~GiveItem("AMUL09")~
 END
@@ -1270,8 +1245,8 @@ SAERK Cosa significa tutta questa confusione? Cosa sta succedendo qui?
 SURAYAH P-padre? Ho sentito qualche rumore...?
 ANOMEN Finalmente vedo il serpente strisciare fuori dal suo rifugio per rivelarsi! Vieni dunque, demonio, e preparati ad affrontare la giusta vendetta!
 SAERK Che significa questo? Ah... Vedo che quella lucertola raggrinzita di Cor ha mandato il suo cucciolo ad occuparsi di me, eh?
-INTERJEC­­T_COPY_TRANS SAERK
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Anomen non è da solo! Ci sono anch'io, Saerk!~
+INTERJECT_COPY_TRANS SAERK
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Anomen non è da solo! Ci sono anch'io, Saerk!~
 == SAERK ~Il marmocchio dei Fristbrowfine? Cosa ci fai qui?~
 == TB#STIVJ ~Sono venuto a vendicarmi! E' giunta l'ora che tu paghi per tutti i tuoi soprusi!~
 == SAERK ~Cor è così disperato da mandarmi contro il figlio e questo poveraccio? Ha! Non fatemi ridere!~
@@ -1283,8 +1258,8 @@ ANOMEN Quindi lo ammetti! Ammetti la tua colpevolezza nell'omicidio di Moira!
 SAERK Non ammetto niente! Ho già strappato il cuore e l'anima di tuo padre rubandogli tutti gli affari che portava avanti! L'ho abbattuto e mandato in rovina come il lurido cane mukrag che è!
 SAERK Ed ecco che tu mi dai l'occasione di colpirlo ancora! Suo figlio... che irrompe nella mia casa... Avremmo tutti i diritti di difenderci, no?
 YUSUF Certissimo!
-INTERJEC­­T_COPY_TRANS SAERK
-== TB#STIVJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Non sei cambiato per nulla, mostro! Sei sempre lo stesso essere spregevole che gode nell'annichilire gli altri, proprio come hai fatto con me!~
+INTERJECT_COPY_TRANS SAERK
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non sei cambiato per nulla, mostro! Sei sempre lo stesso essere spregevole che gode nell'annichilire gli altri, proprio come hai fatto con me!~
 == SAERK ~Ancora con quella storia? Le terre di tuo padre erano troppo redditizie per lasciarle in mano ad un incompetente come te!~
 == TB#STIVJ ~(Urla) Idiota! Io stesso ti avevo detto di non esserne in grado! E' per questo che mi ero rivolto a te!~
 == SAERK ~Non importa. Non puoi *nulla* contro di me. e neanche tu, Anomen.~
@@ -1302,7 +1277,7 @@ SAERK Mia figlia! Vuoi la guerra, cucciolo? Molto bene! GUARDIE!
 APPEND TRGYP02
 
 CHAIN
-IF ~!InPartySlot(LastTalkedToBy,0) Name("Stivan",LastTalkedToBy)~THEN 
+IF ~!InPartySlot(LastTalkedToBy,0) Name("tb#stiv",LastTalkedToBy)~THEN 
 SAY ~Presto l'avvenire ti riserverà un altro lungo decennio di solitudine, giovanotto, ma non disperare: quando la Regina Bianca cadrà, vittima del complotto ordito dalla Regina Nera per mano di un assassino dal mantello oscuro, risponderai alla chiamata del Destino, e aiuterai i Reami nella ricerca della salvezza.~ EXTERN TB#STIVJ StivanKveroslava
 
 APPEND TB#STIVJ

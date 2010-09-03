@@ -238,3 +238,15 @@ THEN
 	RESPONSE #100
 		StartDIalogueNoSet(Player1)
 END
+
+//////////////////////////////////////////////////////////////
+// Misc scripted dialogues
+//////////////////////////////////////////////////////////////
+
+IF
+	AreaCheck("AR0502")
+	Global("EnteredTanner2","AR0502",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
