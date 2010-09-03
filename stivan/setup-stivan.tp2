@@ -34,6 +34,8 @@ COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2.bam~ // Yoshimo's +3 Katana
               ~cmisc22.bam~ ~override/tb#surnc.bam~ // urn
               ~imisc22.bam~ ~override/tb#splui.bam~ // plume
               ~cmisc22.bam~ ~override/tb#spluc.bam~ // plume
+              ~imisc22.bam~ ~override/tb#srpli.bam~ // red plume
+              ~cmisc22.bam~ ~override/tb#srplc.bam~ // red plume
               ~imisc22.bam~ ~override/tb#spooi.bam~ // poo
               ~cmisc22.bam~ ~override/tb#sploo.bam~ // poo
 
@@ -118,6 +120,18 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#splu.itm~
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
 	WRITE_LONG  0x4c 0 // weight
 	WRITE_ASCII 0x58 ~tb#spluc~ #8 // description icon
+
+COPY_EXISTING ~misc01.itm~ ~override/tb#srpl.itm~
+	SAY NAME1 ~Piuma Rossa~
+	SAY NAME2 ~Piuma Rossa~
+	SAY IDENTIFIED_DESC ~Questa piuma rossa è un regalo datoti da Stivan come segno della sua gratitudine. L’halfling la descrive come il suo "più prezioso tesoro", e probabilmente è per questo motivo che ad ogni sosta si accerta che sia sempre nel tuo zaino.~
+	SAY UNIDENTIFIED_DESC ~Questa piuma rossa è un regalo datoti da Stivan come segno della sua gratitudine. L’halfling la descrive come il suo "più prezioso tesoro", e probabilmente è per questo motivo che ad ogni sosta si accerta che sia sempre nel tuo zaino.~
+	WRITE_ASCII 0x3a ~tb#srpli~ #8 // inventory icon
+	WRITE_LONG 0x34  1 // price
+	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
+	WRITE_LONG  0x4c 0 // weight
+	WRITE_ASCII 0x58 ~tb#srplc~ #8 // description icon
+
 
 COPY_EXISTING ~misc01.itm~ ~override/tb#surn.itm~
 	SAY NAME1 ~Urna di Stivan~
