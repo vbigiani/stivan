@@ -154,7 +154,7 @@ IF ~~ THEN TB#STIVJ FinalRest1-11
 == ANOMENJ IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",0)~ THEN ~Che la luce di Helm guidi le loro anime verso la pace.~
 == ANOMENJ IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~In simili frangenti esprimere la propria partecipazione all’altrui dolore può sembrare un luogo comune, ma sappi che comprendo meglio di chiunque altro la tua perdita.~
 == TB#STIVJ ~*Ahem* Ci tengo a farti sapere, <CHARNAME>, che ho messo una trappola per evitare che malintenzionati frughino il contenuto del forziere. Chi fosse così sciocco da provare ad aprirlo verrà investito da una montagna di cacca di gabbiano mista a piume. Geniale, eh?~
-= ~Per ringraziarti del tuo aiuto, voglio farti un regalo. Tieni: è il mio più prezioso tesoro.~ DO ~GiveItemCreate("tb#srpl",Player1,0,0,0) SetGlobal("EntryTest","GLOBAL",6)~
+= ~Per ringraziarti del tuo aiuto, voglio farti un regalo. Tieni: è il mio più prezioso tesoro.~ DO ~GiveItemCreate("tb#srpl",Player1,0,0,0) SetGlobal("EntryTest","GLOBAL",6) AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) AddXPObject("tb#Stiv",15000)~
 = ~Si tratta di una piuma rossa. L’ho trovata tempo fa mentre spennavo un gabbiano. Una cosa insolita, visto che il loro piumaggio è unicamente color bianco con qualche sfumatura nera o grigia.~
 = ~A proposito di gabbiani, credo di averne sentito uno. Che stiano nidificando anche qui nel Quartiere del Cimitero?! Corriamo a vedere, svelti!~ 
 EXIT
@@ -166,12 +166,7 @@ Stivan: Eeeeekkkk! Non era un gabbiano!
 Non morto 1:Voi, dannati... Avete profanato la cripta del nostro Signore! 
 Non morto 2: La morte vi attende!
 
-Mi piacerebbe discutere con te dell’idea e, nel caso in cui ti piacesse, definire il numero e il tipo di mostri nonché l’esperienza che il gruppo potrebbe guadagnare una volta conclusa la missione.
-
 non-morti scheletrali (il precedente abitante della tomba era uno scheletro guerriero), per cui io propenderei per uno scheletro guerriero piu' forte 'capo' (Liv. 15), uno scheletro mago (liv. 14), uno scheletro chierico (liv. 12), tre o quattro scheletri guerrieri 'standard' e 15 scheletri 'normali'.
-
-
-Per quanto riguarda l'esperienza, direi 2000 per membro del gruppo quando consegni l'urna a Lawrence (altri 3000 a Stivan), e 5000 per membro del gruppo quando riponi l'urna nella tomba (15000 extra per Stivan). Anche qui, direi sia meglio essere stretti che larghi (in BG2 ottieni gia' abbastanza punti esperienza senza bisogno di mod che te ne regalino a quintali).
 
 Un altro problema che mi e' venuto in mente e' che entrare nel Cimitero durante il capitolo 6 comporta un'imboscata da parte di Bodhi, durante la quale ti viene anche rubato l'amante (se stai facendo una romance). Se (come faccio io) vai presto a Spellhold rischi di essere costretto ad affrontare Bodhi mentre sei ancora di livello medio/basso. Una soluzione (un po' artificiale) che mi viene in mente e', anziche' far accedere alla tomba dal Cimitero), teletrasportare il gruppo nella tomba quando esce dal palazzo governativo, e poi teletrasportarlo da li' ad un'area "imboscata" quando abbandona la tomba. E' simile a come funziona la battaglia 'chosen of cyric' di rogue rebalancing.
 */
