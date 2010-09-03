@@ -146,7 +146,8 @@ END
 //        3: Lawrence has the urn
 //        4: talked with the messenger
 //        5: party has the urn & documents
-//        6: quest completed.
+//        6: urn is safe
+//        7: killed undead, quest complete.
 //////////////////////////////////////////////////////////////
 IF
 	Global("tb#stivanEntryToggle","GLOBAL",0)
@@ -206,14 +207,4 @@ THEN
 	RESPONSE #100
 		SetGlobal("tb#stivMessage","GLOBAL",1)
 		CreateCreatureOffscreen("tb#smess",0)
-END
-
-IF
-	Global("tb#stivanEntryTest","GLOBAL",5)
-	AreaCheck("ar0806")
-	IsValidForPartyDialog(Myself)
-	!StateCheck(Myself,CD_STATE_NOTVALID)
-THEN
-	RESPONSE #100
-		StartDialogueNoSet(Player1)
 END

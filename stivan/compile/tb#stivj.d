@@ -160,7 +160,7 @@ IF ~~ THEN TB#STIVJ FinalRest1-11
 == ANOMENJ IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",0)~ THEN ~Che la luce di Helm guidi le loro anime verso la pace.~
 == ANOMENJ IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~In simili frangenti esprimere la propria partecipazione all’altrui dolore può sembrare un luogo comune, ma sappi che comprendo meglio di chiunque altro la tua perdita.~
 == TB#STIVJ ~*Ahem* Ci tengo a farti sapere, <CHARNAME>, che ho messo una trappola per evitare che malintenzionati frughino il contenuto del forziere. Chi fosse così sciocco da provare ad aprirlo verrà investito da una montagna di cacca di gabbiano mista a piume. Geniale, eh?~
-= ~Per ringraziarti del tuo aiuto, voglio farti un regalo. Tieni: è il mio più prezioso tesoro.~ DO ~GiveItemCreate("tb#srpl",Player1,0,0,0) SetGlobal("tb#stivanEntryTest","GLOBAL",6) AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) AddXPObject("tb#Stiv",15000) EraseJournalEntry(%Alla ricerca di una tomba.
+= ~Per ringraziarti del tuo aiuto, voglio farti un regalo. Tieni: è il mio più prezioso tesoro.~ DO ~GiveItemCreate("tb#srpl",Player1,0,0,0) SetGlobal("tb#stivanEntryTest","GLOBAL",6) AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) AddXPObject("tb#Stiv",15000) TakePartyItem("tb#surn") DestroyItem("tb#surn") EraseJournalEntry(%Alla ricerca di una tomba.
 
 Mentre ci aggiravamo per i Moli abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfing mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.%) EraseJournalEntry(%Alla ricerca di una tomba.
 
@@ -170,17 +170,16 @@ Un impiegato del Palazzo di Giustizia ci ha spiegato che al momento non ci sono 
  
 Un messaggero ci ha informato che i documenti per l’acquisizione della cripta sono stati ultimati. Posso andare a ritirarli a qualsiasi ora dall’impiegato Lawrence nel Palazzo di Giustizia.%)~
 = ~Si tratta di una piuma rossa. L’ho trovata tempo fa mentre spennavo un gabbiano. Una cosa insolita, visto che il loro piumaggio è unicamente color bianco con qualche sfumatura nera o grigia.~
-= ~A proposito di gabbiani, credo di averne sentito uno. Che stiano nidificando anche qui nel Quartiere del Cimitero?! Corriamo a vedere, svelti!~ 
+= ~A proposito di gabbiani, credo di averne sentito uno. Che stiano nidificando anche qui nel Quartiere del Cimitero?! Corriamo a vedere, svelti!~
+DO ~ StartCutSceneMode() StartCutScene("tb#surn1")~
 EXIT
 
-/*
-All’uscita dalla tomba darei vita ad un scontro con dei non morti servitori del re della cripta ucciso dal gruppo. Le battute che mi vengono in mente sono queste:
+BEGIN TB#SSKF
+BEGIN TB#SSKM
 
-Stivan: Eeeeekkkk! Non era un gabbiano!
-Non morto 1:Voi, dannati... Avete profanato la cripta del nostro Signore! 
-Non morto 2: La morte vi attende!
-
-non-morti scheletrali (il precedente abitante della tomba era uno scheletro guerriero), per cui io propenderei per uno scheletro guerriero piu' forte 'capo' (Liv. 15), uno scheletro mago (liv. 14), uno scheletro chierico (liv. 12), tre o quattro scheletri guerrieri 'standard' e 15 scheletri 'normali'.
-
-Un altro problema che mi e' venuto in mente e' che entrare nel Cimitero durante il capitolo 6 comporta un'imboscata da parte di Bodhi, durante la quale ti viene anche rubato l'amante (se stai facendo una romance). Se (come faccio io) vai presto a Spellhold rischi di essere costretto ad affrontare Bodhi mentre sei ancora di livello medio/basso. Una soluzione (un po' artificiale) che mi viene in mente e', anziche' far accedere alla tomba dal Cimitero), teletrasportare il gruppo nella tomba quando esce dal palazzo governativo, e poi teletrasportarlo da li' ad un'area "imboscata" quando abbandona la tomba. E' simile a come funziona la battaglia 'chosen of cyric' di rogue rebalancing.
-*/
+CHAIN IF ~Global("tb#stivanEntryTest","GLOBAL",6) AreaCheck("AR0041")~ THEN TB#STIVJ QuestFinish
+~Eeeeekkkk! Non era un gabbiano!~
+== TB#SSKF ~Voi, dannati... Avete profanato la cripta del nostro Signore!~
+== TB#SSKM ~La morte vi attende!~
+DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",7)~
+EXIT

@@ -1,0 +1,9 @@
+IF
+	Global("tb#stivanEntryTest","GLOBAL",5)
+THEN
+	RESPONSE #100
+		ClearAllActions()
+		MultiplayerSync()
+		StartCutSceneMode()
+		StartCutScene("tb#surn")
+END

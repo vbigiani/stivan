@@ -40,6 +40,7 @@ COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2.bam~ // Yoshimo's +3 Katana
               ~cmisc22.bam~ ~override/tb#sploo.bam~ // poo
 
 EXTEND_TOP ~ar0500.bcs~ ~stivan/baf/ar0500.baf~
+EXTEND_TOP ~ar1000.bcs~ ~stivan/baf/ar1000.baf~
 EXTEND_TOP ~ar1002.bcs~ ~stivan/baf/ar1002.baf~
 
 COPY_EXISTING ~ar0500.are~ ~override~
@@ -62,6 +63,21 @@ COPY_EXISTING ~naliames.cre~ ~override/tb#smess.cre~
 	WRITE_ASCII 0x280 ~tb#stivmess~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#smess~ #8 // dialogue
 	
+COPY_EXISTING ~skelwa.cre~ ~override/tb#sskm.cre~
+	SAY NAME1 ~Scheletro Mago~
+	SAY NAME2 ~Scheletro Mago~
+	WRITE_ASCII 0x2cc ~tb#sskm~ #8
+	
+COPY_EXISTING ~skelwa.cre~ ~override/tb#sskc.cre~
+	SAY NAME1 ~Scheletro Chierico~
+	SAY NAME2 ~Scheletro Chierico~
+	WRITE_ASCII 0x2cc ~tb#sskc~ #8
+
+COPY_EXISTING ~skelwa.cre~ ~override/tb#sskf.cre~
+	SAY NAME1 ~Scheletro Sergente~
+	SAY NAME2 ~Scheletro Sergente~
+	WRITE_ASCII 0x2cc ~tb#sskf~ #8
+
 COPY_EXISTING ~npsw02.itm~ ~override/tb#syk1.itm~
 	SAY NAME1 ~Vendetta di Yoshimo +1~
 	SAY NAME2 ~Vendetta di Yoshimo +1~
@@ -141,7 +157,7 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#surn.itm~
 Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
 	SAY UNIDENTIFIED_DESC ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
 Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
-	WRITE_LONG  0x18 (THIS | 1 & 4)  // make unsellable and undroppable
+	WRITE_LONG  0x18 ((THIS | 1) & 0xfffffffb)  // make unsellable and undroppable
 	WRITE_ASCII 0x3a ~tb#surni~ #8 // inventory icon
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
 	WRITE_LONG  0x4c 2 // weight
