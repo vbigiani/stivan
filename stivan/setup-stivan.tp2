@@ -40,6 +40,7 @@ COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2.bam~ // Yoshimo's +3 Katana
               ~cmisc22.bam~ ~override/tb#sploo.bam~ // poo
 
 EXTEND_TOP ~ar0500.bcs~ ~stivan/baf/ar0500.baf~
+EXTEND_TOP ~ar1002.bcs~ ~stivan/baf/ar1002.baf~
 
 COPY_EXISTING ~ar0500.are~ ~override~
 	ADD_MAP_NOTE #4845 #2049 gray ~Stivan, il Cacciatore~
