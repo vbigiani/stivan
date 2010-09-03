@@ -56,7 +56,7 @@ COPY_EXISTING ~skelwa.cre~ ~override/tb#sskc.cre~
 	SAY NAME2 ~Scheletro Chierico~
 	WRITE_ASCII 0x2cc ~tb#sskc~ #8
 
-COPY_EXISTING ~skelwa.cre~ ~override/tb#sskf.cre~
+COPY_EXISTING ~skelwa03.cre~ ~override/tb#sskf.cre~
 	SAY NAME1 ~Scheletro Sergente~
 	SAY NAME2 ~Scheletro Sergente~
 	WRITE_ASCII 0x2cc ~tb#sskf~ #8
