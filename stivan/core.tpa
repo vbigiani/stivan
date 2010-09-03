@@ -12,7 +12,7 @@ COMPILE ~stivan/d/pid.d~ // must be last
 COPY ~stivan/copy~ ~override~
 
 // instant BAMs
-COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2.bam~ // Yoshimo's +3 Katana
+COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2i.bam~ // Yoshimo's +3 Katana
               ~imisc22.bam~ ~override/tb#surni.bam~ // urn
               ~cmisc22.bam~ ~override/tb#surnc.bam~ // urn
               ~imisc22.bam~ ~override/tb#splui.bam~ // plume
@@ -20,7 +20,7 @@ COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2.bam~ // Yoshimo's +3 Katana
               ~imisc22.bam~ ~override/tb#srpli.bam~ // red plume
               ~cmisc22.bam~ ~override/tb#srplc.bam~ // red plume
               ~imisc22.bam~ ~override/tb#spooi.bam~ // poo
-              ~cmisc22.bam~ ~override/tb#sploo.bam~ // poo
+              ~cmisc22.bam~ ~override/tb#spooc.bam~ // poo
 
 EXTEND_TOP ~ar0500.bcs~ ~stivan/baf/ar0500.baf~
 EXTEND_TOP ~ar1000.bcs~ ~stivan/baf/ar1000.baf~
@@ -94,7 +94,7 @@ STATISTICHE:
 
 Abilità in Combattimento:
 10% di possibilità che il bersaglio venga accecato per due round ad ogni colpo messo a segno (a meno che non superi un tiro salvezza contro soffio con penalità -2);
-5% di possibilità che il bersaglio venga investito da un'Esplosione Alchemica (2d4 danni da fuoco addizionali, nessun tiro salvezza).
+5% di possibilità che il bersaglio venga investito da un'Esplosione Alchemica (4d4 danni da fuoco addizionali, nessun tiro salvezza).
 
 THAC0: Bonus +3
 Danno: 1D10 +3
@@ -108,7 +108,6 @@ Utilizzabile Da:
 Stivan~
 	WRITE_ASCII 0x3a tb#syk2i #8
 	WRITE_ASCII 0x76 tb#syk2i #8
-	SAY 0x1fe ~Esplosione Alchemica~
 
 COPY_EXISTING ~misc01.itm~ ~override/tb#splu.itm~
 	SAY NAME1 ~Piuma~
@@ -158,14 +157,14 @@ COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
 	SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
 STATISTICHE:
 Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
-Lancia "Miscela esplosiva" una volta al giorno: infligge 2d4 danni da fuoco (nessun tiro salvezza).
+Lancia "Miscela esplosiva" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
 
 Utilizzabile Da:
 Stivan~
 	SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
 STATISTICHE:
 Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
-Lancia "Miscela esplosiva" una volta al giorno: infligge 2d4 danni da fuoco (nessun tiro salvezza).
+Lancia "Miscela esplosiva" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
 
 Utilizzabile Da:
 Stivan~
@@ -176,6 +175,15 @@ Stivan~
 	WRITE_ASCII 0x76 ~spwi106b~ #8 // header icon
 	WRITE_ASCII 0xae ~spwi304b~ #8 // header icon
 	
+COPY_EXISTING ~smllarea.pro~ ~override/tb#salc.pro~
+	WRITE_BYTE 0x200 (THIS | 64) // make it area-friendly
+
+ADD_PROJECTILE ~override/tb#salc.pro~	
+COPY ~stivan/spl/tb#sbli.spl~ ~override~
+
+COPY ~stivan/spl/tb#salc.spl~ ~override~
+	SAY 0x9e ~Esplosione Alchemica~
+	WRITE_SHORT   0x098 ~tb#salc~
 
 APPEND ~tooltip.2da~ ~tb#spoo POO_BLIND POO_EXPLOSION -1~
 	UNLESS ~tb#spoo~
@@ -237,7 +245,7 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	SAY SELECT_RARE1 ~Se devo.~
 	SAY SELECT_RARE2 ~E' tutto?~
 	SAY CRITICAL_HIT ~Haha!~
-	SAY CRITICAL_MISS ~Opos.~
+	SAY CRITICAL_MISS ~Oops.~
 	SAY TARGET_IMMUNE ~Ci vuole qualcos'altro qui!~
 	SAY INVENTORY_FULL ~Per cosa mi hai preso, per uno sgabuzzino?~
 	SAY PICKED_POCKET ~Ho rubacchiato qualcosina.~
@@ -270,3 +278,13 @@ APPEND ~interdia.2da~
 UNLESS ~tb#stiv~
 IF     ~25FILE~
 
+ACTION_IF GAME_IS ~BGT ToB~ THEN BEGIN
+	COPY_EXISTING ~fireball.pro~ ~override/tb#sal2.pro~
+		WRITE_BYTE 0x200 (THIS | 64) // make it area-friendly
+
+	ADD_PROJECTILE ~override/tb#sal2.pro~	
+
+	COPY ~stivan/spl/tb#sal2.spl~ ~override~
+		SAY 0x9e ~Esplosione Alchemica~
+		WRITE_SHORT   0x09c ~tb#sal2~
+END

@@ -1,5 +1,9 @@
 BEGIN TB#STIVJ
 
+///////////////////////////////////////////
+// Quest related dialog
+///////////////////////////////////////////
+
 IF ~InParty("tb#stiv")
 InParty(Player1)
 !StateCheck("tb#stiv",CD_STATE_NOTVALID)
@@ -55,7 +59,7 @@ END
 
 IF ~ InParty("tb#stiv")
 InParty(Player1)
-!StateCheck("Stivan",CD_STATE_NOTVALID)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#stivanEntryTest","GLOBAL",5)
@@ -183,3 +187,151 @@ CHAIN IF ~Global("tb#stivanEntryTest","GLOBAL",6) AreaCheck("AR0041")~ THEN TB#S
 == TB#SSKM ~La morte vi attende!~
 DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",7)~
 EXIT
+
+
+
+
+///////////////////////////////////////////
+// Yoshimo's Katana related dialog
+///////////////////////////////////////////
+
+EXTEND_BOTTOM SLILMAT 13
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) PartyHasItem("NPSW02")~ THEN EXTERN tb#stivj YoshiKatana1
+END
+
+EXTEND_BOTTOM SLILMAT 0
+IF ~PartyHasItem("NPSW02") PartyGoldGT(999) Global("tb#YoshiKatanaIsNotUsable","GLOBAL",1)~ THEN  REPLY ~Vorrei che rendessi utilizzabile la katana di Yoshimo. Ecco le mille monete d'oro.~ EXTERN TB#STIVJ YoshiKatana1-3
+END
+
+CHAIN IF ~~ THEN TB#STIVJ YoshiKatana1
+~*Ahem* Ci sarebbe un'altra richiesta, se possibile.~
+== SLILMAT ~Ti ascolto, fratello. Di cosa hai bisogno?~
+== TB#STIVJ ~Questa katana apparteneva all'uomo di cui ti è appena stato dato il cuore. Io... Vorrei usarla, ma non posso. Soltanto lui era in grado di farlo.~
+== SLILMAT ~Per quale motivo vorresti servirtene?~
+== TB#STIVJ ~Boh.~
+== SLILMAT ~Guarda nel tuo cuore e chiediti il perchè. Ascolta la tua coscienza, figliolo, e interrogati sulle tue motivazioni.~
+== TB#STIVJ ~...~
+= ~... Yoshimo mi ricordava uno dei miei fratelli scomparsi, d'accordo. Immagino che fosse questo il motivo per cui gli ero affezionato.~
+= ~Non ho potuto salvare nè l'uno nè l'altro, ma in entrambi i casi ho la possibilità di vendicarmi. Quel bruttone di un mago pagherà per aver trattato Yoshi come carne al macello!~
+== SLILMAT ~Se le cose stanno così, allora le tue motivazioni sono giuste e meritevoli. In cambio di una donazione di mille monete d'oro, rimuoverò l'incantesimo dell'arma.~
+== TB#STIVJ ~Aspetta un attimo, devo chiedere il permesso a <CHARNAME>.~
+= ~*Ahem* <CHARNAME>, mi daresti mille monete d'oro per poter utilizzare la katana di Yoshimo? Sai bene quanto mi piacerebbe riuscire ad usarla, ma se non volessi, non insisterò più del necessario.~
+= ~Perfavoreperfavoreperfavoreperfavore!~
+END
+IF ~~ THEN REPLY ~Mille monete d'oro per una lama che ne vale trenta? E' fuori discussione.~ EXTERN TB#STIVJ YoshiKatana1-1
+IF ~PartyGoldLT(1000)~ THEN REPLY ~Mi piacerebbe, ma non ho abbastanza denaro.~ EXTERN TB#STIVJ YoshiKatana1-2
+IF ~PartyGoldGT(999)~ THEN REPLY ~Immagino che Yoshimo sarebbe contento di sapere che la sua lama è passata nelle tue mani. Ecco, prendi il denaro che ti serve.~ EXTERN TB#STIVJ YoshiKatana1-3
+IF ~PartyGoldGT(999)~ THEN REPLY ~Te le darò, ma ad una condizione: *non* usarla per uccidere i gabbiani. Inteso?~ EXTERN TB#STIVJ YoshiKatana1-4
+
+APPEND TB#STIVJ
+
+IF ~~ THEN BEGIN YoshiKatana1-1
+SAY ~(Snort!) In cattiveria potresti battere persino uno stormo inferocito di gabbiani!~ 
+IF ~~ THEN DO ~SetGlobal("tb#YoshiKatanaIsNotUsable","GLOBAL",1)~ EXTERN SLILMAT YoshiKatana1-1a
+END
+
+IF ~~ THEN YoshiKatana1-2
+SAY ~Non preoccuparti, ci penso io! Svuoterò le tasche di tutti gli abitanti di Athkatla, se necessario!~
+= ~Ehi, tu! Vedi di non scappare! Torneremo con la somma che ci hai chiesto, okay?~
+IF ~~ THEN DO ~SetGlobal("tb#YoshiKatanaIsNotUsable","GLOBAL",1)~ EXTERN SLILMAT YoshiKatana1-2a
+END
+
+IF ~~ THEN YoshiKatana1-3
+SAY ~Yeah! Sei un grande, <CHARNAME>! L'ho sempre detto che sei un vero amico! Grazie, grazie!~
+IF ~~ THEN DO ~TakePartyGold(1000)~ EXTERN SLILMAT YoshiKatana1-3a
+END
+
+IF ~~ THEN YoshiKatana1-4
+SAY ~Heh. Come vuoi. Siamo armati fino ai denti, quindi non credo che avrò problemi a trovare un'altra arma con cui sgozzare quei pennuti!~ 
+= ~Ad ogni modo, grazie, <CHARNAME>. Sei un grande! L'ho sempre detto che sei mitico!~
+IF ~~ THEN DO ~TakePartyGold(1000)~ EXTERN SLILMAT YoshiKatana1-3a
+END
+END
+
+APPEND SLILMAT
+
+IF ~~ THEN YoshiKatana1-1a
+SAY ~Se dovessi cambiare idea, <PRO_BROTHERSISTER>, potrai trovarmi qui. Nel frattempo, tornerò ad alleviare le sofferenze altrui nel nome del Dio Piangente.~
+IF ~~ THEN EXIT
+COPY_TRANS SLILMAT 13
+END
+
+IF ~~ THEN YoshiKatana1-2a
+SAY ~Sarò qui ad attendervi. Nel frattempo, tornerò ad alleviare le sofferenze altrui nel nome del Dio Piangente.~
+IF ~~ THEN EXIT
+COPY_TRANS SLILMAT 13
+END
+
+IF ~~ THEN YoshiKatana1-3a
+SAY ~L'animo gentile e il buon cuore di Ilmater fanno sì che Egli non sia incline alla collera, ma dinnanzi agli autori di gravi sofferenze non risparmia la sua ira. Possa questa lama vendicare l'ingiusto dolore del tuo amico.~
+IF ~~ THEN DO ~SetGlobal("tb#YoshiKatanaIsUsable","GLOBAL",1) StartCutSceneMode() ActionOverride("SLILMAT",StartCutScene("tb#syk1"))~ EXIT
+END
+END
+
+CHAIN
+IF WEIGHT #-1 ~Global("tb#YoshiKatanaIsUsable","GLOBAL",1) PartyHasItem("NPSW02")~ THEN SLILMAT YoshiKatanaIsUsable1
+~Ecco a voi. Sarete sempre i benvenuti nella casa del Dio Piangente.~
+DO ~GiveItemCreate("tb#syk1","tb#stiv",1,0,0) TakePartyItem("NPSW02") DestroyItem("NPSW02")~ 
+== TB#STIVJ ~YEAH! <CHARNAME>, non so come ringraziarti! Finalmente la posso usare! Finalmente la posso usare!!~
+= ~Ooohhhhooohhhaaah!~
+== TB#STIVJ IF ~Global("tb#stivanCrom","GLOBAL",1)~ THEN ~Heh. Il potenziale di questa lama è incredibile. Sono sicuro che quel nano ai Moli da cui siamo già stati potrebbe addirittura migliorarla. In qualsiasi caso, sono al settimo cielo!~
+== TB#STIVJ IF ~Global("tb#stivanCrom","GLOBAL",0)~ THEN ~Heh. Il potenziale di questa lama è incredibile. Se non ricordo male, ai Moli c'è un fabbro molto abile. magari potrebbe addirittura migliorarla! In qualsiasi caso, sono al settimo cielo!~
+EXIT
+
+
+EXTEND_BOTTOM WSMITH01 13
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) PartyHasItem("npsw02") PartyHasItem("miscbu") Global("tb#stivanCrom","GLOBAL",0)~ THEN DO ~SetGlobal("tb#stivanCrom","GLOBAL",1)~ EXTERN tb#stivj YoshiKatana0
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) PartyHasItem("tb#syk1") GlobalLT("tb#stivanCrom","GLOBAL",2)~ THEN DO ~SetGlobal("tb#stivanCrom","GLOBAL",2)~ EXTERN tb#stivj CromwellUpgradeKatana1
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) PartyHasItem("tb#syk1") Global("tb#stivanCrom","GLOBAL",2)~ THEN EXTERN WSMITH01 CromwellUpgradeKatana2
+END
+
+CHAIN IF ~~ THEN TB#STIVJ YoshiKatana0
+~Ehi, nano, ho una domanda per te.~
+== WSMITH01 ~Cosa aspetti a farla?~
+== TB#STIVJ ~Vedi questa lama? Era di una persona a cui tenevo molto. Mi piacerebbe usarla, ma è stata incantata in modo che solo il suo precedente possessore potesse impugnarla. Puoi fare qualcosa a riguardo?~
+== WSMITH01 ~Hai chiesto alla persona sbagliata. Io sono un forgiatore, non un mago; per rimuovere l'incantesimo di cui parli dovrai rivolgerti a qualcun altro.~
+== TB#STIVJ ~(Snort!) Grazie... di nulla.~
+== WSMITH01 ~E tu invece cosa vuoi? Hai qualche richiesta assurda come quella del tuo amico?~
+COPY_TRANS WSMITH01 13
+
+CHAIN IF ~~ THEN TB#STIVJ CromwellUpgradeKatana1
+~Abbiamo un lavoro per te, nano.~
+== WSMITH01 ~Di che si tratta?~
+== TB#STIVJ ~Potresti potenziare questa katana?~
+== WSMITH01 ~Non è il genere di cose di cui mi occupo, ragazzino. Preferisco impiegare le mie abilità da fabbro per forgiare antichi artefatti o oggetti esotici, non banali armi.~
+== TB#STIVJ ~Ascoltami. Ho promesso di servirmi di questa lama per vendicare la morte di un mio amico, ma ho bisogno che venga potenziata. Il nemico che ci attende è potente, e in queste condizioni non mi sarebbe di grande aiuto.~
+== WSMITH01 ~Uhmmm...~
+= ~Non ho mai provato una cosa simile in passato, ma penso che si possa fare senza grossi problemi.~
+= ~Se vuoi che la lama del tuo defunto amico diventi uno strumento di vendetta, ho bisogno che tu mi dia qualcosa di tuo. Qualcosa che ti rappresenti. Qualcosa da cui non ti separeresti mai.~
+== TB#STIVJ ~Heh. Credo di avere ciò che ti serve. Prendi; questo dovrebbe andar bene.~
+== WSMITH01 ~Uhm? Cosa diavolo è questa strana poltiglia biancastra?~
+== TB#STIVJ ~*Ahem* Mia mamma diceva sempre che quando i segreti vengono svelati, non sono più tali, quindi... Non chiedermelo.~
+== WSMITH01 ~Va bene, va bene, da qua. Posso potenziare questa katana, se vuoi.~
+END
+IF ~~ THEN REPLY #59761 EXTERN WSMITH01 CromwellUpgradeKatana1-1
+IF ~~ THEN REPLY #59762 EXTERN WSMITH01 CromwellUpgradeKatana1-3
+
+APPEND WSMITH01
+IF ~~ THEN CromwellUpgradeKatana1-1
+SAY ~Due cose, amico. Ti costerà 15.000 monete d'oro, non di meno, e senza un apprendista, dovrai restare tu qui con me un giorno intero e aiutarmi con la forgia.~
+IF ~PartyGoldGT(14999)~ THEN REPLY #59785 DO ~TakePartyGold(15000) DestroyGold(15000) TakePartyItem("tb#syk1") DestroyItem("tb#syk1") GiveItemCreate("tb#syk2","tb#stiv",1,0,0)~ GOTO CromwellUpgradeKatana1-2
+IF ~~ THEN REPLY #59786 GOTO CromwellUpgradeKatana1-3
+IF ~~ THEN REPLY #59791 GOTO 12
+END
+
+IF ~~ THEN CromwellUpgradeKatana1-2
+SAY ~Come desideri. Per una simile commissione, cominciamo subito. Perdere tempo non ha senso, quindi... Meglio sbrigarsi.~ 
+IF ~~ THEN DO ~StartCutSceneMode() StartCutScene("cromwell")~ EXIT
+END
+
+IF ~~ THEN CromwellUpgradeKatana1-3
+SAY #59796
+COPY_TRANS WSMITH01 13
+END
+
+IF ~~ THEN CromwellUpgradeKatana2
+SAY ~Allora, vuoi potenziare l'arma del tuo amichetto o no?~
+IF ~~ THEN REPLY #59761 EXTERN WSMITH01 CromwellUpgradeKatana1-1
+IF ~~ THEN REPLY #59762 EXTERN WSMITH01 CromwellUpgradeKatana1-3
+END
+END

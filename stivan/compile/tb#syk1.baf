@@ -1,0 +1,10 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		MultiPlayerSync()
+		Wait(1)
+		ActionOverride("slilmat",ReallyForceSpell("slilmat",HOLY_PILLAR_VISUAL))
+		Wait(3)
+		ActionOverride("slilmat",StartDialogueNoSet(Player1))
+END

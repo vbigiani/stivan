@@ -17,6 +17,7 @@ LANGUAGE ~Italian~
 
 BEGIN ~Ritratto "Kivan remix" (Archmage Silver)~
 SUBCOMPONENT ~Stivan the Hunter NPC~
+REQUIRE_PREDICATE GAME_IS ~SoA ToB BGT~ ~Mod pensato unicamente per BG2 (con o senza ToB)~
 INCLUDE ~stivan/core.tpa~
 COPY ~stivan/portraits/kivanRemix~ ~override~
 
