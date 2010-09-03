@@ -23,6 +23,7 @@ IF ~Global("SpawnBarg","GLOBAL",1) Global("RoenalConvict","GLOBAL",0)~ THEN REPL
 IF ~~ THEN REPLY ~Ho bisogno di accertarmi che tu non sia un dopplegenger. Qual è la cosa che Stivan odia di più al mondo?~ GOTO PD15
 IF ~Global("tb#EdwinComplainsOfStivan","GLOBAL",1)~ THEN REPLY ~Stivan, Edwin sostiene che tu sia inquieto di notte.~ DO ~SetGlobal("tb#EdwinComplainsOfStivan","GLOBAL",2)~ GOTO PD16
 IF ~~ THEN REPLY ~E’ tutto a posto. Proseguiamo.~ EXIT
+IF ~~ THEN REPLY ~Stivan, la tua voce sembra il garrito di un gabbiano.~ GOTO PD17
 END
 
 
@@ -401,6 +402,12 @@ END
 IF ~~ THEN BEGIN PD16-5
 SAY ~In ogni caso, il nostro caro stregone può mettersi a dormire lontano da me, visto che gli arreco così tanto fastidio. Non vedo altra soluzione.~
 IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN PD17
+SAY ~Oh, no!~
+= ~Va... Va meglio adesso?~
+IF ~~ THEN DO ~StartCutScene("tb#sfix")~ EXIT
 END
 
 END

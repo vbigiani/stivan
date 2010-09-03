@@ -11,7 +11,9 @@ InParty(Player1)
 CombatCounter(0)
 !Global("tb#stivanEntryTest","GLOBAL",3) 
 Global("tb#UrnBroken","GLOBAL",1)~ THEN BEGIN WarnUrnBroken
-SAY ~Hey, <CHARNAME>, ti dispiace sbrigarti a trovare un posto per la mia urna?~
+SAY ~(Gasp!)~
+= ~Salva... per un soffio!~
+= ~<CHARNAME>, l'urna dei miei familiari stava per scivolare fuori dal mio zaino! Hai promesso di aiutarmi a trovare un posto in cui metterla al sicuro, pertanto... Troviamolo, per favore!~
 IF ~~ THEN DO ~SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) IncrementGlobal("tb#UrnBroken","GLOBAL",1)~ EXIT
 END
 
