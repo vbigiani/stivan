@@ -3,7 +3,6 @@ IF
 THEN
 	RESPONSE #100
 		ActionOverride("tb#stiv",SetName(~Stivan~))
-		ActionOverride("tb#stiv",SetName(~Stivan~))
 		ActionOverride("tb#stiv",SetPlayerSound("tb#stiv",~Ahhhh! Vedo gabbiani OVUNQUE!~,MORALE))
 		ActionOverride("tb#stiv",SetPlayerSound("tb#stiv",~Questa sì che è una compagnia di manigoldi!~,HAPPY))
 		ActionOverride("tb#stiv",SetPlayerSound("tb#stiv",~Uhm... Mi sentivo più a mio agio quando vagabondavo per le strade di Athkatla.~,UNHAPPY_ANNOYED))

@@ -55,7 +55,7 @@ END
 IF ~~ THEN BEGIN PD3-1
 SAY ~... Sì?~
 IF ~InParty("Edwin") !Gender("Edwin",FEMALE) !Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY ~Edwin?~ GOTO PD3-2 
-IF ~InParty("Edwin") Gender("Edwin",FEMALE)~ THEN REPLY ~Edwin?~ GOTO PD3-3
+IF ~InParty("Edwin") Gender("Edwin",FEMALE) !Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY ~Edwin?~ GOTO PD3-3
 IF ~InParty("Edwin") Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY ~Edwin?~ GOTO PD3-4
 IF ~InParty("Jan")~ THEN REPLY ~Jan?~ GOTO PD3-5
 IF ~InParty("Haerdalis")~ THEN REPLY ~Haer'Dalis?~ GOTO PD3-6
@@ -79,6 +79,7 @@ IF ~InParty("Mazzy")~ THEN REPLY ~Mazzy?~ GOTO PD3-23
 IF ~InParty("Korgan")~ THEN REPLY ~Korgan?~ GOTO PD3-24
 IF ~InParty("Imoen2")~ THEN REPLY ~Imoen?~ GOTO PD3-26
 IF ~InParty("Minsc")~ THEN REPLY ~Minsc?~ GOTO PD3-27
+IF ~~ THE REPLY ~Fa lo stesso.~ EXIT
 END
 
 IF ~~ THEN BEGIN PD3-2
