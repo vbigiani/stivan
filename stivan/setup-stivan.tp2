@@ -26,6 +26,7 @@ COPY_EXISTING ~sw1h01.itm~ ~override/tb#stiva.txt~
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
 
 COMPILE ~stivan/compile~
+COMPILE ~stivan/d/pid.d~ // must be last
 COPY ~stivan/copy~ ~override~
 
 // instant BAMs
