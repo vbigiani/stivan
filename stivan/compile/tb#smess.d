@@ -1,6 +1,6 @@
 BEGIN TB#SMESS
 
-IF ~Global("EntryTest","GLOBAL",3)~ THEN BEGIN DocumentsAreReady
+IF ~Global("tb#stivanEntryTest","GLOBAL",3)~ THEN BEGIN DocumentsAreReady
 SAY ~Perdonatemi per il disturbo, <PRO_SIRMAAM>. E’ forse questo il gruppo in cui viaggia l’halfling Stivan?~
 IF ~~ THEN REPLY ~Esatto. Si vede dalle nostre facce stravolte, eh?~ EXTERN TB#STIVJ DocumentsAreReady1-1
 IF ~~ THEN REPLY ~Stivan, quest’uomo chiede di te.~ EXTERN TB#STIVJ DocumentsAreReady1-2
@@ -35,14 +35,15 @@ END
 
 IF ~~ THEN BEGIN DocumentsAreReady1-5
 SAY ~Yeah! Andiamo!~
-IF ~~ THEN DO ~SetGlobal("EntryTest","GLOBAL",4)~ UNSOLVED_JOURNAL %Alla ricerca di una tomba.
+IF ~~ THEN DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",4) ActionOverride("tb#smess",DestroySelf())~
+UNSOLVED_JOURNAL %Alla ricerca di una tomba.
  
 Un messaggero ci ha informato che i documenti per l’acquisizione della cripta sono stati ultimati. Posso andare a ritirarli a qualsiasi ora dall’impiegato Lawrence nel Palazzo di Giustizia.% EXIT
 END
 
 IF ~~ THEN BEGIN DocumentsAreReady1-6
 SAY ~(Snort!) Stivan il Cacciatore è più che sufficiente per abbattere quella sgualdrina! Ad ogni modo, se proprio vuoi cercare qualcuno che ci aiuti, cerca di fare in fretta.~
-IF ~~ THEN DO ~SetGlobal("EntryTest","GLOBAL",4)~ DO ~SetGlobal("EntryTest","GLOBAL",4)~ 
+IF ~~ THEN DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",4) ActionOverride("tb#smess",DestroySelf())~
 UNSOLVED_JOURNAL %Alla ricerca di una tomba.
  
 Un messaggero ci ha informato che i documenti per l’acquisizione della cripta sono stati ultimati. Posso andare a ritirarli a qualsiasi ora dall’impiegato Lawrence nel Palazzo di Giustizia.% EXIT
@@ -50,7 +51,7 @@ END
 
 IF ~~ THEN BEGIN DocumentsAreReady1-7
 SAY ~Preferisco che tu venga con me, <CHARNAME>. In tua assenza potrei mettere le mani al collo a quell’impiegato...~
-IF ~~ THEN DO ~SetGlobal("EntryTest","GLOBAL",4)~ DO ~SetGlobal("EntryTest","GLOBAL",4)~ 
+IF ~~ THEN DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",4) ActionOverride("tb#smess",DestroySelf())~
 UNSOLVED_JOURNAL %Alla ricerca di una tomba.
  
 Un messaggero ci ha informato che i documenti per l’acquisizione della cripta sono stati ultimati. Posso andare a ritirarli a qualsiasi ora dall’impiegato Lawrence nel Palazzo di Giustizia.% EXIT

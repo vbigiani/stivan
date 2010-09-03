@@ -21,7 +21,7 @@ SAY ~Sono desolato, ma giungete in un brutto momento. Attualmente siamo a corto 
 IF ~~ THEN REPLY ~Prego? Mi state forse dicendo di non avere più spazio per seppellire i morti?~ GOTO FirstDialogueClerk3
 IF ~~ THEN REPLY ~Ma io ne ho bisogno. Cosa possiamo fare?~ GOTO FirstDialogueClerk3
 IF ~~ THEN REPLY ~Capisco. Ritornerò tra qualche giorno, allora.~ GOTO FirstDialogueClerk4
-IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN REPLY ~Sentito, Stivan? Temo che dovrai fare a meno della tua tomba. La faccenda è chiusa.~ EXTERN TB#STIVJ FirstDialogueClerk5
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN REPLY ~Sentito, Stivan? Temo che dovrai fare a meno della tua tomba. La faccenda è chiusa.~ EXTERN TB#STIVJ FirstDialogueClerk5
 END
 
 IF ~~ THEN BEGIN FirstDialogueClerk3
@@ -31,7 +31,7 @@ END
 
 IF ~~ THEN BEGIN FirstDialogueClerk4
 SAY ~Dubito che la situazione cambierà tra qualche giorno. Il Consiglio dei Sei avrebbe dovuto approvare un piano di ampliamento del Cimitero, ma le recenti insurrezioni di Matzica stanno ritardando il tutto. Non vi resta nient'altro da fare che attendere come gli altri.~
-IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN REPLY ~Sentito, Stivan? Temo che dovrai fare a meno della tua tomba. La faccenda è chiusa.~ EXTERN TB#STIVJ FirstDialogueClerk5
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN REPLY ~Sentito, Stivan? Temo che dovrai fare a meno della tua tomba. La faccenda è chiusa.~ EXTERN TB#STIVJ FirstDialogueClerk5
 IF ~~ THEN REPLY ~E' possibile che non ci sia nemmeno una piccola nicchia, un buco dove infilare questa dannata urna?~ GOTO FirstDialogueClerk6
 IF ~~ THEN REPLY ~Siete proprio sicuro di non potermi aiutare in nessun modo?~ GOTO FirstDialogueClerk6
 END
@@ -53,7 +53,7 @@ IF ~~ THEN DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",2)~ UNSOLVED_JOURNAL %All
 Un impiegato del Palazzo di Giustizia ci ha spiegato che al momento non ci sono tombe disponibili. Pare, tuttavia, che ve ne sia una in cui nessuno osa mettere piede a causa di sinistre leggende sull'essere che vi dimorerebbe. Per nulla impressionato da queste storie, ho deciso di andare ad esplorarla: eliminati gli eventuali pericoli, infatti, saremo liberi di deporvi l'urna di Stivan.% EXIT
 END
 
-IF ~GlobalGT("tb#StivanEntryTest","GLOBAL",2)~ THEN BEGIN SecondDialogueClerk
+IF ~Global("tb#StivanEntryTest","GLOBAL",2)~ THEN BEGIN SecondDialogueClerk
 SAY ~E' sempre un piacere rivedervi, mio <PRO_LADYLORD>. Ci sono novità?~
 IF ~~ THEN REPLY ~Non ancora.~ GOTO SecondDialogueClerk1
 IF ~Dead("bhcrypt")~ THEN REPLY ~Sì. Ho eliminato il precedente occupante della cripta.~ GOTO SecondDialogueClerk6
@@ -95,11 +95,11 @@ END
 
 IF ~~ THEN BEGIN SecondDialogueClerk6
 SAY ~Quindi le voci di cui vi avevo parlato erano fondate. Molto bene... Ora dovrò semplicemente occuparmi delle pratiche burocratiche del caso. Nel giro di qualche settimana diventerete legittimi proprietari della tomba e ne potrete liberamente usufruire.~ 
-IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 UNSOLVED_JOURNAL %Alla ricerca di una tomba.
 
 L'impiegato nel Palazzo di Giustizia ha avviato le pratiche necessarie per far acquisire legalmente a Stivan la proprietà della cripta. Ha promesso di inviarci un messaggero non appena saranno ultimate e, nel frattempo, si è offerto di custodire al sicuro l'urna dell'halfling.% EXTERN TB#STIVJ SecondDialogueClerk8
-IF ~OR(2) !IsValidForPartyDialog("tb#stiv") StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO SecondDialogueClerk7
+IF ~OR(2) !InParty("tb#stiv") StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO SecondDialogueClerk7
 END
 
 IF ~~ THEN BEGIN SecondDialogueClerk7
@@ -107,10 +107,10 @@ SAY ~Ma vedo che il vostro amico non è qui con voi. Se non sbaglio, aveva parlat
 IF ~~ THEN EXIT
 END
 
-IF ~Global("EntryTest","GLOBAL",4)~ THEN BEGIN ThirdDialogueClerk
+IF ~Global("tb#stivanEntryTest","GLOBAL",4)~ THEN BEGIN ThirdDialogueClerk
 SAY ~Aspettavo con ansia di rivedervi, mio <PRO_LADYLORD>!~
-IF ~OR(2) !IsValidForPartyDialog("tb#stiv") StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO ThirdDialogueClerk1-1
-IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO ThirdDialogueClerk1-2
+IF ~OR(2) !InParty("tb#stiv") StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO ThirdDialogueClerk1-1
+IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO ThirdDialogueClerk1-2
 END 
 
 IF ~~ THEN BEGIN ThirdDialogueClerk1-1
@@ -158,7 +158,7 @@ CHAIN IF ~~ THEN tb#stivj SecondDialogueClerk8
 == TB#STIVJ ~(Snort!) E sia. Tieni. Ma trattala con il dovuto riguardo, capito?~
 == TB#SCLER ~Uhm... Decisamente di pessimo gusto...~
 == TB#STIVJ ~A nessuno interessa il tuo parere!~
-== TB#SCLER ~Allora a presto, mio <PRO_LADYLORD>. Sarete avvisato da un messaggero quando i documenti saranno pronti. Ricordatevi di passare dal sottoscritto per ritirare l'urna del vostro... ehm... "amico".~ DO ~SetGlobal("EntryTest","GLOBAL",3) TakePartyItem("tb#surn") AddXPObject(Player1,2000) AddXPObject(Player2,2000) AddXPObject(Player3,2000) AddXPObject(Player4,2000) AddXPObject(Player5,2000) AddXPObject(Player6,2000) AddXPObject("tb#Stiv",3000)~ 
+== TB#SCLER ~Allora a presto, mio <PRO_LADYLORD>. Sarete avvisato da un messaggero quando i documenti saranno pronti. Ricordatevi di passare dal sottoscritto per ritirare l'urna del vostro... ehm... "amico".~ DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",3) TakePartyItem("tb#surn") AddXPObject(Player1,2000) AddXPObject(Player2,2000) AddXPObject(Player3,2000) AddXPObject(Player4,2000) AddXPObject(Player5,2000) AddXPObject(Player6,2000) AddXPObject("tb#Stiv",3000)~ 
 EXIT
 
 CHAIN IF ~~ THEN TB#SCLER ThirdDialogueClerk1-2
@@ -171,7 +171,7 @@ CHAIN IF ~~ THEN TB#SCLER ThirdDialogueClerk1-2
 == TB#SCLER ~Tsk. Che brutta calligrafia. Avreste fatto meglio a spacciarvi per analfabeta e a mettere una X.~
 = ~Ed ecco a voi l’urna. Se volete accettare il mio consiglio, cambiatela: è un affronto al decoro e al gusto. Assomiglia ad un vaso da notte!~
 == TB#STIVJ ~ (Snort!) Dà qui!~
-DO ~GiveItemCreate("tb#sdocu","tb#stiv",0,0,0) GiveItemCreate("tb#surn","tb#stiv",0,0,0) SetGlobal("EntryTest","GLOBAL",5)~
+DO ~GiveItemCreate("tb#sdocu","tb#stiv",0,0,0) GiveItemCreate("tb#surn","tb#stiv",0,0,0) SetGlobal("tb#stivanEntryTest","GLOBAL",5)~
 == TB#SCLER ~(Wink wink) Mio <PRO_LADYLORD>, se la qualità del mio lavoro vi soddisfa, non esitate a votarmi quando verrà nominato il miglior impiegato di Athkatla del <YEAR>.~
 END 
 IF ~~ THEN REPLY ~Ehm... Certo, potete contarci.~ EXTERN TB#SCLER ThirdDialogueClerk1-3

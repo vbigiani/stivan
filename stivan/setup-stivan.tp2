@@ -141,7 +141,7 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#surn.itm~
 Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
 	SAY UNIDENTIFIED_DESC ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
 Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
-	WRITE_LONG  0x18 (THIS | 1)  // make unsellable
+	WRITE_LONG  0x18 (THIS | 1 & 4)  // make unsellable and undroppable
 	WRITE_ASCII 0x3a ~tb#surni~ #8 // inventory icon
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
 	WRITE_LONG  0x4c 2 // weight

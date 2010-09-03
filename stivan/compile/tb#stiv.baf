@@ -184,7 +184,7 @@ THEN
 END
 
 IF
-	GlobalTimerNotExpired("tb#stivanMessageTimer","GLOBAL")
+	!GlobalTimerExpired("tb#stivanMessageTimer","GLOBAL")
 	Global("tb#stivanEntryTest","GLOBAL",3)
 	GlobalGT("Chapter","GLOBAL",5)
 	IsValidForPartyDialog(Myself)
@@ -209,7 +209,7 @@ THEN
 END
 
 IF
-	Global("EntryTest","GLOBAL",5)
+	Global("tb#stivanEntryTest","GLOBAL",5)
 	AreaCheck("ar0806")
 	IsValidForPartyDialog(Myself)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
