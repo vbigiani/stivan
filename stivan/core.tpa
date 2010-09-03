@@ -268,13 +268,13 @@ UNLESS ~tb#stiv~
 IF     ~25POST~
 
 APPEND ~interdia.2da~
-~tb#stiv    Btb#stiv~
+~tb#stiv    tb#stivb~
 UNLESS ~tb#stiv~
 UNLESS ~25FILE~
 
 
 APPEND ~interdia.2da~
-~tb#stiv    Btb#stiv       Btb#st25~
+~tb#stiv    tb#stivb       tb#st25b~
 UNLESS ~tb#stiv~
 IF     ~25FILE~
 

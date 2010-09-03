@@ -79,7 +79,7 @@ IF ~InParty("Mazzy")~ THEN REPLY ~Mazzy?~ GOTO PD3-23
 IF ~InParty("Korgan")~ THEN REPLY ~Korgan?~ GOTO PD3-24
 IF ~InParty("Imoen2")~ THEN REPLY ~Imoen?~ GOTO PD3-26
 IF ~InParty("Minsc")~ THEN REPLY ~Minsc?~ GOTO PD3-27
-IF ~~ THE REPLY ~Fa lo stesso.~ EXIT
+IF ~~ THEN REPLY ~Fa lo stesso.~ EXIT
 END
 
 IF ~~ THEN BEGIN PD3-2

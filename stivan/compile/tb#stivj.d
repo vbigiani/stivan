@@ -337,3 +337,160 @@ IF ~~ THEN REPLY #59761 EXTERN WSMITH01 CromwellUpgradeKatana1-1
 IF ~~ THEN REPLY #59762 EXTERN WSMITH01 CromwellUpgradeKatana1-3
 END
 END
+
+
+
+
+///////////////////////////////////////////
+// Yoshimo's betrayal related dialog
+///////////////////////////////////////////
+
+APPEND TB#STIVJ
+IF ~InParty("tb#stiv")
+InParty("Yoshimo")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck("Yoshimo",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+Global("Chapter","GLOBAL",4)
+CombatCounter(0)
+Global("tb#BeforeYoshiBetrayal","GLOBAL",0)~ BeforeYoshiBetrayal1
+SAY ~<CHARNAME>, non ti sembra che ultimamente Yoshimo sia un pò nervoso?~
+IF ~~ THEN REPLY ~Nervoso? Io credo che sia prudente e accorto come al solito.~ DO ~SetGlobal("tb#BeforeYoshiBetrayal","GLOBAL",1)~ GOTO BeforeYoshiBetrayal1-1
+IF ~~ THEN REPLY ~Sì, l'ho notato anch'io. Magari l'idea di trovarsi faccia a faccia con Irenicus lo preoccupa.~ DO ~SetGlobal("tb#BeforeYoshiBetrayal","GLOBAL",1)~ GOTO BeforeYoshiBetrayal1-2
+IF ~~ THEN REPLY ~No, non direi. Cosa ti spinge a pensarlo?~ DO ~SetGlobal("tb#BeforeYoshiBetrayal","GLOBAL",1)~ GOTO BeforeYoshiBetrayal1-1
+END
+
+IF ~~ THEN BeforeYoshiBetrayal1-1
+SAY ~Non lo so. Yoshi è sempre stato così calmo e sicuro di sè; ultimamente, invece, lo trovo agitato.~
+IF ~~ THEN REPLY ~Imoen ed io non siamo i soli ad essere stati imprigionati da Irenicus. Anche Yoshimo ha subito la stessa sorte, ma ancora ne ignoriamo il motivo.~ GOTO BeforeYoshiBetrayal1-3
+IF ~~ THEN REPLY ~Conosci Yoshimo... Diventa sempre titubante quando si avvicina il pericolo.~ GOTO BeforeYoshiBetrayal1-4
+IF ~~ THEN REPLY ~Anch'io non sono del tutto tranquillo. Temo per la sorte di Imoen. Spero che non sia in pericolo.~ GOTO BeforeYoshiBetrayal1-4
+END
+
+IF ~~ THEN BeforeYoshiBetrayal1-2
+SAY ~Perchè dovrebbe preoccuparlo?~
+IF ~~ THEN REPLY ~Imoen ed io non siamo i soli ad essere stati imprigionati da Irenicus. Anche Yoshimo ha subito la stessa sorte, ma ancora ne ignoriamo il motivo.~ GOTO BeforeYoshiBetrayal1-3
+IF ~~ THEN REPLY ~Il mago che ci attende è un individuo pericoloso. *Molto* pericoloso. I suoi incantesimi sono decisamente micidiali - li ho sperimentati sulla mia pelle.~ GOTO BeforeYoshiBetrayal1-4
+IF ~~ THEN REPLY ~Il pericolo è dietro l'angolo, Stivan. Credi che gli Incappucciati ci accoglieranno a braccia aperte?~ GOTO BeforeYoshiBetrayal1-4
+END
+
+IF ~~ THEN BeforeYoshiBetrayal1-3
+SAY ~Davvero? Non me l'aveva detto.~
+= ~E se fosse... Se fosse anche lui un figlio di Bhaal? Questo spiegherebbe tutto, no?~ 
+IF ~~ THEN REPLY ~In effetti, non hai tutti i torti. La sua prigionia acquisterebbe un senso.~ GOTO BeforeYoshiBetrayal1-5
+IF ~~ THEN REPLY ~Ne dubito. Anche Minsc e Jaheira sono stati catturati, pur non avendo il mio retaggio divino.~ GOTO BeforeYoshiBetrayal1-6
+IF ~~ THEN REPLY ~Non credo che mio padre si sia spinto sino a Kara-Tur, anche se non è da escludere che vi abbia fatto una visita per assaggiare le specialità del posto.~ GOTO BeforeYoshiBetrayal1-6
+END
+
+IF ~~ THEN BeforeYoshiBetrayal1-5
+SAY ~Heh. Come puoi vedere, dare la caccia ai gabbiani ha aumentato il mio acume. Presto scopriremo se ho ragione!~
+IF ~~ THEN EXTERN YOSHJ  BeforeYoshiBetrayal1-7
+END
+
+IF ~~ THEN BeforeYoshiBetrayal1-6
+SAY ~Mah... Non mi ci raccapezzo proprio. Ammazzerò qualche gabbiano per schiarirmi le idee.~
+IF ~~ THEN EXTERN YOSHJ  BeforeYoshiBetrayal1-7
+END 
+
+IF ~~ THEN BeforeYoshiBetrayal1-4
+SAY ~Eeeekkkk! Non mi avevi detto che avremmo corso dei pericoli! Io ci tengo alla mia pellaccia, sai?~
+= ~Yoshimo! Yoshimo!! Non voglio essere ridotto in un mucchietto di ceneri! Devi... Devi ancora insegnarmi ad usare la katana come si deve!~
+IF ~~ THEN EXTERN YOSHJ  BeforeYoshiBetrayal1-7
+END
+END
+
+APPEND YOSHJ 
+
+IF ~~ THEN BEGIN BeforeYoshiBetrayal1-7
+SAY ~Rilassati, Stivan. Non sono preoccupato. Sono sicuro che <CHARNAME> sarà all'altezza di qualsiasi inconveniente ci attenda. Non è così?~
+IF ~~ THEN REPLY ~Puoi dirlo forte, amico mio.~ EXTERN YOSHJ  BeforeYoshiBetrayal1-8
+IF ~~ THEN REPLY ~Esatto. Insieme supereremo anche questo ostacolo.~ EXTERN YOSHJ  BeforeYoshiBetrayal1-8
+IF ~~ THEN REPLY ~Ehm... Non esageriamo. Io farò il possibile, ma rimango sempre un <RACE>.~ EXTERN YOSHJ  BeforeYoshiBetrayal1-9
+END
+
+IF ~~ THEN BEGIN BeforeYoshiBetrayal1-8
+SAY ~Direi di proseguire, allora. Perdere tempo non ha senso.~
+IF ~~ THEN EXIT
+END
+END
+
+CHAIN
+IF ~~ THEN YOSHJ BeforeYoshiBetrayal1-9
+~La paura è per gli smidollati, e tu non rientri tra questi. Non credo che tu abbia esistato quando...~
+== TB#STIVJ ~EEEEEKKKKK!~
+== YOSHJ  ~... E' meglio che tranquillizzi il nostro piccolo halfling, prima che le sue urla richiamino troppo l'attenzione. Facci strada, <CHARNAME>.~
+EXIT
+
+ADD_TRANS_ACTION YOSHIMOX BEGIN 0 END BEGIN END ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",1)~
+
+APPEND tb#stivj
+IF ~InParty("tb#stiv")
+InParty(Player1)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#AfterYoshiBetrayal","GLOBAL",1)~ THEN afterYoshiBetrayal1
+SAY ~*SOB!* <CHARNAME>... <CHARNAME>, perchè Yoshimo ha fatto questo? Perchè ci ha traditi?~
+IF ~~ THEN DO ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",2)~ REPLY ~Non ne ho la più pallida idea. Eppure è successo.~ GOTO AfterYoshiBetrayal1-1
+IF ~~ THEN DO ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",2)~ REPLY ~Dannato traditore! Che bruci tra le fiamme dell'inferno!~ GOTO AfterYoshiBetrayal1-1
+IF ~~ THEN DO ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",2)~ REPLY ~Forse è meglio che non lo sappia. A causa sua ho perso la mia anima e ho rischiato di perdere voi tutti!~ GOTO AfterYoshiBetrayal1-1
+IF ~~ THEN DO ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",2)~ REPLY ~Ci deve essere una spiegazione più che valida, anche se al momento mi sfugge. E' stato al mio fianco per tutto questo tempo...~ GOTO AfterYoshiBetrayal1-1
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-1
+SAY ~Io... Non so cosa pensare. Possibile che fosse tutto calcolato? Possibile che ogni nostra conversazione, ogni battaglia affrontata insieme, ogni congegno disattivato... servisse a questo? A metterci nel sacco?~
+= ~No. Secondo me... Secondo me è tutta opera di quell'Irenicus. E' stato lui a costringerlo!~  
+IF ~~ THEN REPLY ~Ciascuno di noi ha la possibilità di scegliere, Stivan. Yoshimo ha deciso di sua spontanea volontà da quale parte schierarsi, pertanto non ha scusanti.~ GOTO AfterYoshiBetrayal1-2
+IF ~~ THEN REPLY ~Se mi avesse detto di essere vincolato ad una costrizione, *forse* avremmo potuto aiutarlo, non credi?!~ GOTO AfterYoshiBetrayal1-3
+IF ~~ THEN REPLY ~Perchè lo difendi? Devo forse pensare che anche tu sia in combutta con quel mostro?~ GOTO AfterYoshiBetrayal1-4
+IF ~~ THEN REPLY ~Tutto questo non ha più importanza. Yoshimo è morto, e le sue motivazioni con lui.~ GOTO AfterYoshiBetrayal1-5
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-2
+SAY ~...~
+= ~... Accidenti, non so dove sbattere la testa. Tenevo molto a Yoshimo e mi dispiace che sia morto, soprattutto perchè mi è sembrato pentito. Però quel che dici è vero. La sua scelta è stata quasi fatale per noi tutti. Abbiamo seriamente rischiato di rimetterci la pelle.~
+IF ~~ THEN GOTO AfterYoshiBetrayal1-5
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-3
+SAY ~*Forse* dovresti chiederti perchè non l'abbia fatto.~
+IF ~~ THEN GOTO AfterYoshiBetrayal1-5
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-4
+SAY ~(Snort!) Non essere paranoico, <CHARNAME>! Non ho nulla a che fare con quel mago!~
+IF ~~ THEN GOTO AfterYoshiBetrayal1-5
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-5
+SAY ~Voglio... Voglio tenere la lama di Yoshi.~
+IF ~~ THEN REPLY ~Perchè? Sarebbe inutile. Soltanto lui poteva usarla.~ GOTO AfterYoshiBetrayal1-6
+IF ~~ THEN REPLY ~Scordatelo. Non voglio avere nulla tra le mani che mi ricordi quel traditore.~ GOTO AfterYoshiBetrayal1-7
+IF ~~ THEN REPLY ~Come vuoi. Prendila, è tua.~ GOTO AfterYoshiBetrayal1-8
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-6
+SAY ~Non chiedermi spiegazioni, <CHARNAME>. Non lo so neanch'io.~
+IF ~~ THEN GOTO AfterYoshiBetrayal1-8
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-7
+SAY ~Ma infatti la sua katana starà tra le mie, di mani.~
+IF ~~ THEN GOTO AfterYoshiBetrayal1-8
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-8
+SAY ~Ti ho visto mentre prendevi il suo... Il suo cuore. *SOB!* Cosa hai intenzione di farci?~
+IF ~~ THEN REPLY ~Cercherò di far rimuovere la costrizione che aveva stretto con Irenicus, in modo che possa riposare in pace.~ GOTO AfterYoshiBetrayal1-9
+IF ~~ THEN REPLY ~Non lo so. Al momento sono confuso, ma qualcosa dentro di me mi ha spinto a farlo.~ GOTO AfterYoshiBetrayal1-9
+IF ~~ THEN REPLY ~Ha invocato Ilmater prima di lanciarsi all'attacco. Forse un sacerdote del Dio Piangente potrà dirmi qualcosa... Qualcosa su coloro che cadono in battaglia dopo essersi raccomandati alla loro divinità.~ GOTO AfterYoshiBetrayal1-9
+IF ~~ THEN REPLY ~Il tempo mi dirà cosa farne. Adesso voglio soltanto lasciare questo posto, Stivan. L'aria è staura di morte, qui.~ GOTO AfterYoshiBetrayal1-9
+END
+
+IF ~~ THEN AfterYoshiBetrayal1-9
+SAY ~Diversamente da te, io non avevo alcun motivo per odiare Irenicus. Ti ho aiutato a combatterlo perchè tu hai fatto molto per me. Mi hai accolto nel tuo gruppo strappandomi dalla povertà della strada, un debito che posso saldare solo aiutandoti con tutto me stesso.~
+= ~(Snort!) Adesso però anch'io ho una buona ragione per stanare quel maledetto. Io... Vendicherò la morte di Yoshimo!~
+= ~Mi senti, Irenicus? Oggi ti sei fatto un nuovo nemico! Stivan il Cacciatore ti troverà, ovunque tu sia! Possa l'ira dei gabbiani ricadere sulla tua testa!!~
+IF ~~ THEN EXIT
+END
+END

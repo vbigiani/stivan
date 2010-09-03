@@ -203,8 +203,38 @@ IF
 	IsValidForPartyDialog(Myself)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	Global("tb#stivMessage","GLOBAL",0)
+	AreaType(OUTDOOR)
 THEN
 	RESPONSE #100
 		SetGlobal("tb#stivMessage","GLOBAL",1)
 		CreateCreatureOffscreen("tb#smess",0)
+END
+
+//////////////////////////////////////////////////////////////
+// Yoshimo betrayal dialoogue
+//////////////////////////////////////////////////////////////
+
+IF
+	InParty("tb#stiv")
+	InParty("Yoshimo")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	!StateCheck("Yoshimo",CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	Global("Chapter","GLOBAL",4)
+	CombatCounter(0)
+	Global("tb#BeforeYoshiBetrayal","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDIalogueNoSet(Player1)
+END
+
+IF
+	InParty("Stivan")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#AfterYoshiBetrayal","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartDIalogueNoSet(Player1)
 END
