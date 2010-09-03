@@ -1207,51 +1207,22 @@ CHAIN IF ~~ THEN tb#stivj StivanMarcus1-1
 == TB#STIVJ ~Diamocela a gambe, <CHARNAME>!~
 EXIT
 
-/*
-SAERK Cosa significa tutta questa confusione? Cosa sta succedendo qui?
-SURAYAH P-padre? Ho sentito qualche rumore...?
-ANOMEN Finalmente vedo il serpente strisciare fuori dal suo rifugio per rivelarsi! Vieni dunque, demonio, e preparati ad affrontare la giusta vendetta!
-SAERK Che significa questo? Ah... Vedo che quella lucertola raggrinzita di Cor ha mandato il suo cucciolo ad occuparsi di me, eh?
-INTERJECT_COPY_TRANS SAERK
+INTERJECT_COPY_TRANS SAERK 1 tb#StivanSaerk-1
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Anomen non è da solo! Ci sono anch'io, Saerk!~
 == SAERK ~Il marmocchio dei Fristbrowfine? Cosa ci fai qui?~
 == TB#STIVJ ~Sono venuto a vendicarmi! E' giunta l'ora che tu paghi per tutti i tuoi soprusi!~
 == SAERK ~Cor è così disperato da mandarmi contro il figlio e questo poveraccio? Ha! Non fatemi ridere!~
 END
-ANOMEN Tu non pronuncerai il nome di mio padre!
-YUSUF Questo è Anomen? Oh, posso ucciderlo, papà? Per favore?
-SAERK Certo che puoi, Yusef. Sfrutterei qualunque occasione si presentasse pur di colpire duramente Cor, e questa arriva proprio al momento giusto.
-ANOMEN Quindi lo ammetti! Ammetti la tua colpevolezza nell'omicidio di Moira!
-SAERK Non ammetto niente! Ho già strappato il cuore e l'anima di tuo padre rubandogli tutti gli affari che portava avanti! L'ho abbattuto e mandato in rovina come il lurido cane mukrag che è!
-SAERK Ed ecco che tu mi dai l'occasione di colpirlo ancora! Suo figlio... che irrompe nella mia casa... Avremmo tutti i diritti di difenderci, no?
-YUSUF Certissimo!
-INTERJECT_COPY_TRANS SAERK
+
+INTERJECT_COPY_TRANS SAERK 4 tb#StivanSaerk-4
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non sei cambiato per nulla, mostro! Sei sempre lo stesso essere spregevole che gode nell'annichilire gli altri, proprio come hai fatto con me!~
 == SAERK ~Ancora con quella storia? Le terre di tuo padre erano troppo redditizie per lasciarle in mano ad un incompetente come te!~
 == TB#STIVJ ~(Urla) Idiota! Io stesso ti avevo detto di non esserne in grado! E' per questo che mi ero rivolto a te!~
 == SAERK ~Non importa. Non puoi *nulla* contro di me. e neanche tu, Anomen.~
 END
-ANOMEN Demone Calimshita! So che hai assassinato la mia povera e innocente sorella! Ti vedrò morire e marcire per ciò che hai fatto, lo giuro!
-SAERK Ah, sì, sappiamo bene qual è il prezzo del giuramento di un Delryn. Spero che la giovane marcisca nella sua tomba, ragazzo. E' quello che tu e la tua famiglia vi meritate!
-ANOMEN Sputi sulla sua memoria? Molto bene, demone... Ti insegnerò il dolore di una simile perdita!
-SAERK No! Fermo! M-molto bene, Delryn... Hai vinto! Io... Ti prego di non fare del male a questo innocente fiore del mio casato!
-ANOMEN E Moira ti ha supplicato per la sua vita, prima che le venisse tolta? Era forse meno innocente di questa ragazza? Anche lei faceva parte della tua diatriba con mio padre? Penso di no!
-Pagherai per questo crimine in egual misura!
-SURAYAH AAAIUUUUTOOOOO!!!
-YUSUF Nooo!! Cane bastardo! Ti strapperò il tuo cuore malvagio per questo!
-SAERK Mia figlia! Vuoi la guerra, cucciolo? Molto bene! GUARDIE!
 
-APPEND TRGYP02
+INTERJECT trgyp02 2 tb#StivanTrgyp02-2
+== TRGYP02 IF ~!InPartySlot(LastTalkedToBy,0) Name("tb#Stiv",LastTalkedToBy)~ THEN  ~Presto l'avvenire ti riserverà un altro lungo decennio di solitudine, giovanotto, ma non disperare: quando la Regina Bianca cadrà, vittima del complotto ordito dalla Regina Nera per mano di un assassino dal mantello oscuro, risponderai alla chiamata del Destino, e aiuterai i Reami nella ricerca della salvezza.~ 
+== tb#stivj ~Oh, no! Non voglio restare di nuovo solo e senza amici! Sei sicura di aver visto bene tra i peli della mia mano?~
+EXIT
 
-CHAIN
-IF ~!InPartySlot(LastTalkedToBy,0) Name("tb#stiv",LastTalkedToBy)~THEN 
-SAY ~Presto l'avvenire ti riserverà un altro lungo decennio di solitudine, giovanotto, ma non disperare: quando la Regina Bianca cadrà, vittima del complotto ordito dalla Regina Nera per mano di un assassino dal mantello oscuro, risponderai alla chiamata del Destino, e aiuterai i Reami nella ricerca della salvezza.~ EXTERN TB#STIVJ StivanKveroslava
-
-APPEND TB#STIVJ
-
-IF ~~ THEN StivanKveroslava
-SAY ~Oh, no! Non voglio restare di nuovo solo e senza amici! Sei sicura di aver visto bene tra i peli della mia mano?~
-IF ~~ THEN EXIT
-END
-END
-*/
