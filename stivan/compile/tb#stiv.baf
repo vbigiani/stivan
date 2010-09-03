@@ -133,7 +133,20 @@ THEN
 END
 
 //////////////////////////////////////////////////////////////
-// Urn breaking
+// Urn quest
+// Variables:
+//   tb#stivanEntryToggle, 1 if the party has the urn, 0 otherwise
+//   tb#stivanEntrytimer, quest timer, only works if the party has the urn
+//   tb#stivanMessageTimer \ to make a messenger appear
+//   tb#stivanMessage      /
+//   tb#stivanEntryTest, state tracker:
+//        0: Stivan never joined
+//        1: quest started
+//        2: talked to Lawrence
+//        3: Lawrence has the urn
+//        4: talked with the messenger
+//        5: party has the urn & documents
+//        6: quest completed.
 //////////////////////////////////////////////////////////////
 IF
 	Global("tb#stivanEntryToggle","GLOBAL",0)
@@ -157,7 +170,7 @@ IF
 	GlobalTimerExpired("tb#stivanEntryTimer","GLOBAL")
 	CombatCounterLT(1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
-	InPartyAllowDead(Myself)
+	IsValidForPartyDialog(Myself)
 	PartyHasItem("tb#surn")
 	OR(2)
 		Global("tb#UrnBroken","GLOBAL",0)
@@ -170,9 +183,6 @@ THEN
 		SetInterrupt(TRUE)
 END
 
-//////////////////////////////////////////////////////////////
-// Urn messenger
-//////////////////////////////////////////////////////////////
 IF
 	GlobalTimerNotExpired("tb#stivanMessageTimer","GLOBAL")
 	Global("tb#stivanEntryTest","GLOBAL",3)
@@ -196,4 +206,14 @@ THEN
 	RESPONSE #100
 		SetGlobal("tb#stivMessage","GLOBAL",1)
 		CreateCreatureOffscreen("tb#smess",0)
+END
+
+IF
+	Global("EntryTest","GLOBAL",5)
+	AreaCheck("ar0806")
+	IsValidForPartyDialog(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
 END
