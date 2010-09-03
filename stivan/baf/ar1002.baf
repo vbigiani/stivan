@@ -1,0 +1,8 @@
+IF
+	Global("tb#stivaninit","AR1002",0)
+THEN
+	RESPONSE #100
+		CreateCreature("tb#scler",[1250.750],0)
+		SetGlobal("tb#stivaninit","AR1002",1)
+		Continue()
+END

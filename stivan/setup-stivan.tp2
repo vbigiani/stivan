@@ -45,12 +45,19 @@ COPY_EXISTING ~ar0500.are~ ~override~
 COPY_EXISTING ~bhalf1.cre~ ~override~
 	WRITE_ASCIIT 0x248 ~tb#stdes~
 
-COPY_EXISTING ~naliames.cre~ ~override/tb#scler.cre~
+COPY_EXISTING ~nobl4.cre~ ~override/tb#scler.cre~
 	SAY NAME1 ~Lawrence Cutterwere~
 	SAY NAME2 ~Lawrence Cutterwere~
 	WRITE_ASCII 0x248 ~NONE~ #8 // override script
 	WRITE_ASCII 0x280 ~tb#stivclerk~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#scler~ #8 // dialogue
+
+COPY_EXISTING ~naliames.cre~ ~override/tb#smess.cre~
+	SAY NAME1 ~Messaggero~
+	SAY NAME2 ~Messaggero~
+	WRITE_ASCII 0x248 ~tb#smess~ #8 // override script
+	WRITE_ASCII 0x280 ~tb#stivmess~ #32 // name
+	WRITE_ASCII 0x2cc ~tb#smess~ #8 // dialogue
 	
 COPY_EXISTING ~npsw02.itm~ ~override/tb#syk1.itm~
 	SAY NAME1 ~Vendetta di Yoshimo +1~
@@ -125,7 +132,12 @@ Temendo che possa rompersi nel corso di un combattimento, l'halfing ti ha chiest
 	WRITE_LONG  0x4c 2 // weight
 	WRITE_ASCII 0x58 ~tb#surnc~ #8 // description icon
 	
-
+COPY_EXISTING ~misc4w.itm~ ~override/tb#sdocu.itm~
+	SAY NAME1 ~Documenti~
+	SAY NAME2 ~Documenti~
+	SAY IDENTIFIED_DESC ~Non immaginavi che per legittimare l’acquisizione della cripta da parte di Stivan fossero necessari così tanti documenti. Non puoi fare a meno di chiederti se questa mole di atti, firme e sigilli dipendano dall’apparato burocratico di Athkatla o dall’eccessiva minuziosità dell’impiegato Lawrence.~
+	SAY UNIDENTIFIED_DESC ~Non immaginavi che per legittimare l’acquisizione della cripta da parte di Stivan fossero necessari così tanti documenti. Non puoi fare a meno di chiederti se questa mole di atti, firme e sigilli dipendano dall’apparato burocratico di Athkatla o dall’eccessiva minuziosità dell’impiegato Lawrence.~
+	
 COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
 	SAY NAME1 ~Cacca di gabbiano~
 	SAY NAME2 ~Cacca di gabbiano~

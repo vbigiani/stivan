@@ -1,15 +1,5 @@
 BEGIN tb#scler
 
-IF ~NumTimesTalkedTo(0) !GlobalGT("tb#StivanEntryTest","GLOBAL",1)~ THEN BEGIN pre_quest1
-SAY ~Perdonatemi, <PRO_LADYLORD>, ma sono terribilmente indaffarato. Vi pregherei di tornare in un altro momento.~
-IF ~~ THEN EXIT
-END
-
-IF ~NumTimesTalkedToGT(0) !GlobalGT("tb#StivanEntryTest","GLOBAL",1)~ THEN BEGIN pre_quest2
-SAY ~Uff... Anche questo è sistemato. Adesso mi restano soltanto altri trecentoquaranta cadaveri a cui trovare una collocazione!~
-IF ~~ THEN EXIT
-END
-
 IF ~Global("tb#StivanEntryTest","GLOBAL",1)~ THEN BEGIN FirstDialogueClerk
 SAY ~Salute a voi, <PRO_LADYLORD>. Come posso esservi d'aiuto?~
 IF ~~ THEN REPLY ~Io... Ecco... Avrei bisogno di una tomba.~ GOTO FirstDialogueClerk1
@@ -63,6 +53,88 @@ IF ~~ THEN DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",2)~ UNSOLVED_JOURNAL %All
 Un impiegato del Palazzo di Giustizia ci ha spiegato che al momento non ci sono tombe disponibili. Pare, tuttavia, che ve ne sia una in cui nessuno osa mettere piede a causa di sinistre leggende sull'essere che vi dimorerebbe. Per nulla impressionato da queste storie, ho deciso di andare ad esplorarla: eliminati gli eventuali pericoli, infatti, saremo liberi di deporvi l'urna di Stivan.% EXIT
 END
 
+IF ~GlobalGT("tb#StivanEntryTest","GLOBAL",2)~ THEN BEGIN SecondDialogueClerk
+SAY ~E' sempre un piacere rivedervi, mio <PRO_LADYLORD>. Ci sono novità?~
+IF ~~ THEN REPLY ~Non ancora.~ GOTO SecondDialogueClerk1
+IF ~~ THEN REPLY ~Sì. Ho eliminato il precedente occupante della cripta.~ GOTO SecondDialogueClerk6
+IF ~~ THEN REPLY ~Mi stavo chiedendo se posso rivolgerti qualche domanda.~ GOTO SecondDialogueClerk2
+END
+
+IF ~~ THEN BEGIN SecondDialogueClerk1
+SAY ~Capisco. Tornerò al mio lavoro, allora.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN SecondDialogueClerk2
+SAY ~Ma certo. Non esitate a chiedere.~
+IF ~~ THEN REPLY ~Cosa sai dei Ladri Tenebrosi?~ GOTO SecondDialogueClerk3
+IF ~~ THEN REPLY ~A chi devo rivolgermi per poter ricorrere alla magia?~ GOTO SecondDialogueClerk4
+IF ~~ THEN REPLY ~Una mia amica è stata rapita dagli Stregoni Incappucciati. Hai idea di dove tengano i loro prigionieri?~ GOTO SecondDialogueClerk5
+END
+
+IF ~~ THEN BEGIN SecondDialogueClerk3
+SAY ~Brutta gente. Spero che non abbiate mai a che fare con quegli individui.~
+IF ~~ THEN REPLY ~A chi devo rivolgermi per poter ricorrere alla magia?~ GOTO SecondDialogueClerk4
+IF ~~ THEN REPLY ~Una mia amica è stata rapita dagli Stregoni Incappucciati. Hai idea di dove tengano i loro prigionieri?~ GOTO SecondDialogueClerk5
+IF ~~ THEN REPLY ~Ora devo andare.~ GOTO SecondDialogueClerk1
+END
+
+IF ~~ THEN BEGIN SecondDialogueClerk4
+SAY ~Parlate con Corneil. E' lui ad occuparsi di queste pratiche, anche se meriterebbe di andare a zappare la terra per la sua arroganza.~
+IF ~~ THEN REPLY ~Cosa sai dei Ladri Tenebrosi?~ GOTO SecondDialogueClerk3
+IF ~~ THEN REPLY ~Una mia amica è stata rapita dagli Stregoni Incappucciati. Hai idea di dove tengano i loro prigionieri?~ GOTO SecondDialogueClerk5
+IF ~~ THEN REPLY ~Ora devo andare.~ GOTO SecondDialogueClerk1
+END
+
+IF ~~ THEN BEGIN SecondDialogueClerk5
+SAY ~Temo di non poter esservi d'aiuto su questo. Io mi occupo unicamente di tombe.~
+IF ~~ THEN REPLY ~Cosa sai dei Ladri Tenebrosi?~ GOTO SecondDialogueClerk3
+IF ~~ THEN REPLY ~A chi devo rivolgermi per poter ricorrere alla magia?~ GOTO SecondDialogueClerk4
+IF ~~ THEN REPLY ~Ora devo andare.~ GOTO SecondDialogueClerk1
+END
+
+IF ~~ THEN BEGIN SecondDialogueClerk6
+SAY ~Quindi le voci di cui vi avevo parlato erano fondate. Molto bene... Ora dovrò semplicemente occuparmi delle pratiche burocratiche del caso. Nel giro di qualche settimana diventerete legittimi proprietari della tomba e ne potrete liberamente usufruire.~ 
+IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
+UNSOLVED_JOURNAL %Alla ricerca di una tomba.
+
+L'impiegato nel Palazzo di Giustizia ha avviato le pratiche necessarie per far acquisire legalmente a Stivan la proprietà della cripta. Ha promesso di inviarci un messaggero non appena saranno ultimate e, nel frattempo, si è offerto di custodire al sicuro l'urna dell'halfling.% EXTERN TB#STIVJ SecondDialogueClerk8
+IF ~!IsValidForPartyDialog("tb#stiv") StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO SecondDialogueClerk7
+END
+
+IF ~~ THEN BEGIN SecondDialogueClerk7
+SAY ~Ma vedo che il vostro amico non è qui con voi. Se non sbaglio, aveva parlato di un'urna che voleva riporre al suo interno. Tornate in sua compagnia, mio <PRO_LADYLORD>: potrei avere una soluzione al suo... ehm... "dilemma" in attesa che i documenti del caso siano ultimati.~
+IF ~~ THEN EXIT
+END
+
+IF ~Global("EntryTest","GLOBAL",4)~ THEN BEGIN ThirdDialogueClerk
+SAY ~Aspettavo con ansia di rivedervi, mio <PRO_LADYLORD>!~
+IF ~!IsValidForPartyDialog("tb#stiv") StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO ThirdDialogueClerk1-1
+IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN GOTO ThirdDialogueClerk1-2
+END 
+
+IF ~~ THEN BEGIN ThirdDialogueClerk1-1
+SAY ~I documenti per l’acquisizione della cripta sono stati ultimati, ma ho bisogno che il vostro amico li firmi. Tornate in sua compagnia.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN ThirdDialogueClerk1-3
+SAY ~Scrivete Lawrence! Lawrence Cutterwere!~
+IF ~~ THEN EXIT
+END
+
+
+IF ~GlobalLT("tb#StivanEntryTest","GLOBAL",4)~ THEN BEGIN pre_quest1
+SAY ~Perdonatemi, <PRO_LADYLORD>, ma sono terribilmente indaffarato. Vi pregherei di tornare in un altro momento.~
+IF ~~ THEN EXIT
+END
+
+IF ~GlobalGT("tb#StivanEntryTest","GLOBAL",4)~ THEN BEGIN pre_quest2
+SAY ~Uff... Anche questo è sistemato. Adesso mi restano soltanto altri trecentoquaranta cadaveri a cui trovare una collocazione!~
+IF ~~ THEN EXIT
+END
+
+
 APPEND TB#STIVJ
 IF ~~ THEN BEGIN FirstDialogueClerk5
 SAY ~Pensavo che ti saresti sforzato di più per aiutarmi, <CHARNAME>! Invece getti la spugna di fronte alla prima difficoltà! Puah! Non ho nulla da spartire con uno come te! Me ne vado!~
@@ -73,3 +145,29 @@ Mentre ci aggiravamo per i Moli abbiamo incontrato Stivan, un halfling nativo di
 Non essendo riuscito a trovare una tomba in cui Stivan potesse riporre le ceneri dei suoi familiari, gli ho consigliato di rinunciarci. L’halfling ha quindi lasciato il gruppo infuriato, sostenendo che avrei potuto fare di più per aiutarlo.% EXIT
 END
 END
+
+CHAIN IF ~~ THEN tb#stivj SecondDialogueClerk8
+~Cosa?! Non posso aspettare così tanto tempo! La mia urna ha già corso il rischio di andare in frantumi non so quante volte!~
+== TB#SCLER ~(Tossisce) In via del tutto eccezionale, signorino, potrei riporla nel magazzino dove gli Stregoni Incappucciati conservano i manufatti magici confiscati. Lì sarebbe indubbiamente al sicuro.~ 
+== TB#STIVJ ~(Snort!) E sia. Tieni. Ma trattala con il dovuto riguardo, capito?~
+== TB#SCLER ~Uhm... Decisamente di pessimo gusto...~
+== TB#STIVJ ~A nessuno interessa il tuo parere!~
+== TB#SCLER ~Allora a presto, mio <PRO_LADYLORD>. Sarete avvisato da un messaggero quando i documenti saranno pronti. Ricordatevi di passare dal sottoscritto per ritirare l'urna del vostro... ehm... "amico".~ DO ~SetGlobal("EntryTest","GLOBAL",3) TakePartyItem("tb#surn")~ 
+EXIT
+
+CHAIN IF ~~ THEN TB#SCLER ThirdDialogueClerk1-2
+~I documenti per l’acquisizione della cripta sono stati ultimati. Ho soltanto bisogno di qualche firma del vostro amico.~
+= ~Ehm… Siete capace di scrivere, mezzo uomo?~
+== TB#STIVJ ~Certo! Dove devo firmare?~
+== TB#SCLER ~Qui, qui e… Anche qui, prego.~
+== TB#STIVJ ~…~
+= ~… Fatto.~ 
+== TB#SCLER ~Tsk. Che brutta calligrafia. Avreste fatto meglio a spacciarvi per analfabeta e a mettere una X.~
+= ~Ed ecco a voi l’urna. Se volete accettare il mio consiglio, cambiatela: è un affronto al decoro e al gusto. Assomiglia ad un vaso da notte!~
+== TB#STIVJ ~ (Snort!) Dà qui!~
+DO ~GiveItemCreate("tb#sdocu","tb#stiv",0,0,0) GiveItemCreate("tb#surn","tb#stiv",0,0,0)~
+== TB#SCLER ~(Wink wink) Mio <PRO_LADYLORD>, se la qualità del mio lavoro vi soddisfa, non esitate a votarmi quando verrà nominato il miglior impiegato di Athkatla del <YEAR>.~
+END 
+IF ~~ THEN REPLY ~Ehm… Certo, potete contarci.~ EXTERN TB#SCLER ThirdDialogueClerk1-3
+IF ~~ THEN REPLY ~Hai semplicemente fatto il tuo dovere.~ EXTERN TB#SCLER ThirdDialogueClerk1-3
+IF ~~ THEN REPLY ~Andiamocene da questo posto *immediatamente*. Rischio di morire soffocato dalla burocrazia che aleggia in queste sale!~ EXTERN TB#SCLER ThirdDialogueClerk1-3

@@ -133,14 +133,32 @@ THEN
 END
 
 //////////////////////////////////////////////////////////////
-// Quest dialogs
+// Urn breaking
 //////////////////////////////////////////////////////////////
 IF
+	Global("tb#stivanEntryToggle","GLOBAL",0)
+	!PartyHasItem("tb#surn")
+THEN
+	RESPONSE #100
+		SetGlobal("tb#stivanEntryToggle","GLOBAL",1)
+END
+
+IF
+	Global("tb#stivanEntryToggle","GLOBAL",1)
+	PartyHasItem("tb#surn")
+THEN
+	RESPONSE #100
+		SetGlobal("tb#stivanEntryToggle","GLOBAL",0)
+		SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS)
+END
+
+IF
+	Global("tb#stivanEntryToggle","GLOBAL",0)
 	GlobalTimerExpired("tb#stivanEntryTimer","GLOBAL")
 	CombatCounterLT(1)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	InPartyAllowDead(Myself)
-	!Global("tb#stivanEntryTest","GLOBAL",3) 
+	PartyHasItem("tb#surn")
 	OR(2)
 		Global("tb#UrnBroken","GLOBAL",0)
 		Global("tb#UrnBroken","GLOBAL",2)
@@ -150,4 +168,32 @@ THEN
 		IncrementGlobal("tb#UrnBroken","GLOBAL",1)
 		StartDialogueNoSet(Player1)
 		SetInterrupt(TRUE)
+END
+
+//////////////////////////////////////////////////////////////
+// Urn messenger
+//////////////////////////////////////////////////////////////
+IF
+	GlobalTimerNotExpired("tb#stivanMessageTimer","GLOBAL")
+	Global("tb#stivanEntryTest","GLOBAL",3)
+	GlobalGT("Chapter","GLOBAL",5)
+	IsValidForPartyDialog(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	Global("tb#stivMessage","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("tb#stivanMessageTimer","GLOBAL",TWO_DAYS)
+END
+
+IF
+	GlobalTimerExpired("tb#stivanMessageTimer","GLOBAL")
+	Global("tb#stivanEntryTest","GLOBAL",3)
+	GlobalGT("Chapter","GLOBAL",5)
+	IsValidForPartyDialog(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	Global("tb#stivMessage","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#stivMessage","GLOBAL",1)
+		CreateCreatureOffscreen("tb#smess",0)
 END

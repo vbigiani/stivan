@@ -1,0 +1,24 @@
+IF
+	Global("tb#stivMessage","GLOBAL",1)
+	!Detect("tb#stiv")
+	InParty("tb#stiv")
+THEN
+	RESPONSE #100
+		MoveToObject("tb#stiv")
+END
+
+IF
+	Global("tb#stivMessage","GLOBAL",1)
+	Detect("tb#stiv")
+	InParty("tb#stiv")
+THEN
+	RESPONSE #100
+		Dialogue("tb#stiv")
+END
+
+IF
+	!InParty("tb#stiv")
+THEN
+	RESPONSE #100
+		EscapeArea()
+END
