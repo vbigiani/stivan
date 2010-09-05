@@ -1,0 +1,11 @@
+IF
+	InParty("tb#Stiv")
+	See("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	CheckStatGT("Aerie",5,FATIGUE)
+	CombatCounter(0)
+	Global("tb#StivanAerie","GLOBAL",0)
+THEN
+RESPONSE #100
+	StartDialogueNoSet("tb#stiv")
+END

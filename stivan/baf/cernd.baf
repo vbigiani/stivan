@@ -1,0 +1,24 @@
+IF
+	InParty("tb#Stiv")
+	See("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	AreaType(OUTDOOR)
+	Dead("cefald01")
+	Global("tb#StivanCernd","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("tb#Stiv")
+END
+
+IF
+	InParty("Stivan")
+	See("Stivan")
+	!StateCheck("Stivan",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanCernd","GLOBAL",2)
+	GlobalGT("Chapter","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("tb#stiv")
+END

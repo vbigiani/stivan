@@ -1,0 +1,10 @@
+IF
+	InParty("tb#Stiv")
+	See("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanMazzyAboutKram","GLOBAL",0)
+THEN
+		RESPONSE #100
+			StartDialogueNoSet("tb#stiv")
+END

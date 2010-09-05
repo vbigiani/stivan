@@ -1,0 +1,8 @@
+IF
+	Global("tb#stivanspawnelf","AR2500",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#stivanspawnelf","AR2500",1)
+		CreateCreature("tb#self",[500.1100],0)
+		Continue()
+END

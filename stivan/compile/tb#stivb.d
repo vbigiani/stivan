@@ -59,15 +59,15 @@ IF ~~ THEN GOTO StivanPC1-9
 END
 
 IF ~~ THEN StivanPC1-9
-SAY ~La nostra vita era scandita da un calendario di eventi che mi hanno sempre rassicurato. Tutto si ripeteva secondo una certa ciclicità… Almeno sino a quando non vennero i gabbiani.~
+SAY ~La nostra vita era scandita da un calendario di eventi che mi hanno sempre rassicurato. Tutto si ripeteva secondo una certa ciclicità... Almeno sino a quando non vennero i gabbiani.~
 = ~(Snort!) Maledetti uccellacci! Mi sale la bile al sol pronunciare il loro nome! Porto ancora oggi i segni di quell’incontro!~
 = ~A giudicare dalle tue cicatrici, anche tu devi aver avuto qualche esperienza turbolenta in passato. Sei forse stato assalito da uno stormo di gabbiani?~ 
 IF ~~ THEN REPLY ~Non cambiare discorso, Stivan. Cosa successe?~ GOTO StivanPC1-10
 IF ~~ THEN REPLY ~Com’è possibile che dei gabbiani abbiano aggredito la tua famiglia? Non è nella loro natura essere così aggressivi.~ GOTO StivanPC1-11
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-12
 IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-13
-IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo… Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
-IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo… Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-12
 IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-13 
 END
@@ -77,8 +77,8 @@ SAY ~(Stivan estrae l’urna con le ceneri dei suoi familiari dallo zaino). Succes
 = ~Stavo dicendo: come ti sei procurato quelle cicatrici? Sono forse opera di gabbiani?~
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-12
 IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-13
-IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo… Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
-IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo… Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-12
 IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-13 
 END
@@ -88,8 +88,8 @@ SAY ~Poco importa quale sia la loro natura, il risultato è sempre lo stesso!~
 = ~Se l’occhio non mi inganna, le tue cicatrici sembrerebbero proprio opera di gabbiani. Non è forse così?~
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-12
 IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-13
-IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo… Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
-IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo… Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-12
 IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-13 
 END
@@ -104,7 +104,7 @@ IF ~~ THEN StivanPC1-13
 SAY ~Cosa?! Stai scherzando, vero? Mia mamma mi ripeteva sempre che le signorine non si toccano neanche con un fiore!~
 IF ~~ THEN REPLY ~E’ quello che dico anch’io.~ GOTO StivanPC1-14
 IF ~~ THEN REPLY ~Temo che i genitori di Irenicus non abbiano fatto altrettanto.~ GOTO StivanPC1-14
-IF ~~ THEN REPLY ~Ehm… Non credo che Irenicus conosca la cavalleria…~ GOTO StivanPC1-14
+IF ~~ THEN REPLY ~Ehm... Non credo che Irenicus conosca la cavalleria...~ GOTO StivanPC1-14
 END
 
 IF ~~ THEN StivanPC1-14
@@ -114,10 +114,10 @@ IF ~~ THEN REPLY ~E’ quello che sto cercando di scoprire. Imoen, la ragazza che 
 END
 
 IF ~~ THEN StivanPC1-16
-SAY ~Bhaal? Ho già sentito questo nome…~
+SAY ~Bhaal? Ho già sentito questo nome...~
 = ~Ma certo! E’ quel dongiovanni che durante il Periodo dei Disordini seduceva tutte le donne che incontrava sulla sua strada, giusto?~
 IF ~~ THEN REPLY ~Come fai a conoscere quel periodo?~ GOTO StivanPC1-17
-IF ~~ THEN REPLY ~Ehm… Non proprio. Bhaal era una divinità malvagia che, conscia della sua futura caduta, ha lasciato una prole che sperava alimentasse la sua rinascita.~ GOTO StivanPC1-18
+IF ~~ THEN REPLY ~Ehm... Non proprio. Bhaal era una divinità malvagia che, conscia della sua futura caduta, ha lasciato una prole che sperava alimentasse la sua rinascita.~ GOTO StivanPC1-18
 IF ~~ THEN REPLY ~Io lo chiamerei “Bhaal: dongiovanni nel tempo libero, Signore dell’Omicidio di professione”.~ GOTO StivanPC1-18
 END
 
@@ -130,7 +130,7 @@ END
 IF ~~ THEN StivanPC1-18
 SAY ~Questo significa che non tu sei un comune <RACE> come gli altri! Vali qualcosa, sotto sotto!~ 
 = ~E cosa mi dici di tua madre?~
-IF ~~ THEN REPLY ~Non l’ho mai conosciuta. Non so nulla di lei. Né il nome, né l’aspetto… Nulla.~ GOTO StivanPC1-19
+IF ~~ THEN REPLY ~Non l’ho mai conosciuta. Non so nulla di lei. Né il nome, né l’aspetto... Nulla.~ GOTO StivanPC1-19
 IF ~~ THEN REPLY ~Non ho idea di chi sia. Gorion, il mio patrigno, ha sempre evitato l’argomento.~ GOTO StivanPC1-19
 IF ~~ THEN REPLY ~Merita solo il mio più profondo disprezzo. Mi ha abbandonato dopo avermi dato alla luce.~ GOTO StivanPC1-19
 END
@@ -205,11 +205,11 @@ IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanViconia","GLOBAL",3)~ THEN BVICONI stivan-viconia-5
+Global("tb#StivanViconia","GLOBAL",4)~ THEN BVICONI stivan-viconia-5
 ~... E così, giunto all'apice del piacere, ha avuto un infarto. Le sue guardie erano convinte che lo avessi ucciso di proposito, così fui costretta a fuggire. Un imprevisto decisamente fastidioso, ma mi ha insegnato quanto poco resistenti siano a letto i rivvil.~
 == BVICONI IF ~Race(Player1,HUMAN) Global("SleptViconia","GLOBAL",1)~ THEN ~Vero, <CHARNAME>?~
 == TB#STIVB ~Ehm... Complimenti, Viconia. Davvero notevole.~
-DO ~SetGlobal("tb#StivanViconia", "GLOBAL",4)~
+DO ~SetGlobal("tb#StivanViconia", "GLOBAL",5)~
 == BVICONI ~Suppongo che a questo punto tu voglia una dimostrazione di quanto ti ho raccontato, hmmm? Magari su di te...?~
 == TB#STIVB ~(Gasp!) Veramente io...~
 == BVICONI ~Vuoi che le mie abili mani scivolino lungo il tuo corpo, facendolo ardere di un desiderio incontenibile?~
@@ -233,9 +233,9 @@ IF ~InParty("Viconia")
 See("Viconia")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanViconia","GLOBAL",4)~ THEN TB#STIVB stivan-viconia-6
+Global("tb#StivanViconia","GLOBAL",5)~ THEN TB#STIVB stivan-viconia-6
 ~A giudicare dalle occhiate furtive che continui a lanciarmi, Viconia, suppongo che tu non abbia il coraggio di scusarti per il modo vergognoso in cui mi hai trattato.~
-DO ~SetGlobal("tb#StivanViconia","GLOBAL",5)~
+DO ~SetGlobal("tb#StivanViconia","GLOBAL",6)~
 == BVICONI ~Io non ho la benchè minima intenzione di scusarmi, illuso. E per cosa, poi? Per essere stata franca?~
 == TB#STIVB ~Allora potresti spiegarmi perchè continui ad avvicinarti a me come se volessi dirmi qualcosa?~
 == BVICONI ~Il fatto che talvolta sia costretta a camminare vicino a te non significa che voglia conversare, stupido idiota.~
@@ -249,9 +249,9 @@ IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanViconia","GLOBAL",5)~ THEN BVICONI stivan-viconia-7
+Global("tb#StivanViconia","GLOBAL",7)~ THEN BVICONI stivan-viconia-7
 ~Credo... Credo che dovrei scusarmi per ciò che ti ho detto la scorsa volta, Stivan.~
-DO ~SetGlobal("tb#StivanViconia","GLOBAL",6)~
+DO ~SetGlobal("tb#StivanViconia","GLOBAL",8)~
 == TB#STIVB ~Umpf. Sarei tentato di risponderti con un bel "Era ora!" ma, conoscendoti, è meglio che lo tenga per me.~
 == BVICONI ~L'hai appena detto, imbecille.~
 == TB#STIVB ~Ops... Chiedo scusa. Amici come prima?~
@@ -462,7 +462,7 @@ IF ~~ THEN DO ~SetGlobal("EdwinComplainsOfStivan","GLOBAL",1)~ REPLY ~(Yawn) Cos
 IF ~~ THEN DO ~SetGlobal("EdwinComplainsOfStivan","GLOBAL",1)~ REPLY ~Spero che tu mi abbia svegliato per un valido motivo, stregone.~ GOTO EdwinComplainsOfStivan3
 IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN DO ~SetGlobal("EdwinComplainsOfStivan","GLOBAL",1)~ REPLY ~Quando vuoi passare una notte in mia compagnia, Edwin, è sufficiente che tu me lo dica prima che mi metta a dormire. Adesso sono assonnata...~ GOTO EdwinComplainsOfStivan2
 IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN DO ~SetGlobal("EdwinComplainsOfStivan","GLOBAL",1)~ REPLY ~Finalmente! Ho atteso tutto questo tempo per farti arrivare al culmine della passione! Adesso lascia che esploda e che ci travolga!!~ GOTO EdwinComplainsOfStivan2
-IF ~~ THEN REPLY ~Stà zitto e dormi…~ GOTO EdwinComplainsOfStivan3
+IF ~~ THEN REPLY ~Stà zitto e dormi...~ GOTO EdwinComplainsOfStivan3
 END
 
 IF ~~ THEN EdwinComplainsOfStivan1
@@ -657,24 +657,6 @@ DO ~SetGlobal("tb#StivanMinscUB","GLOBAL",1)~
 == BMINSC ~Ben fatto, Boo! Hai dato al male una lezione che non dimenticherà facilmente! Adesso torna da Minsc... Ti sei meritato due belle noci!~
 EXIT
 
-BEGIN TB#SLIL
-CHAIN 
-IF ~Global("tb#StivanLarry","GLOBAL",2)~ THEN TB#SLIL StivanLarry
-~Testa di latta, è da ben *due* ore che non mi lustri! Cosa stai aspettando?!~
-== MINSCJ ~Abbi un attimo di pazienza, Larry: Minsc sta dando da mangiare a Boo. Tra poco si prenderà cura anche di te.~
-== TB#SLIL ~Ora! Mi devi lucidare ORA, prima che la ruggine mi intacchi!~
-== MINSCJ ~E va bene. Boo, finisci di mangiare le noci da solo; Minsc deve dare una pulitina alla sua spada.~
-== TB#STIVJ ~Devi essere proprio stupido, ranger, per soddisfare i capricci di quella lama. Se si fosse rivolta a me in questo modo, l'avrei rigirata in una pila di letame fino ad insegnarle un pò di rispetto.~
-== MINSCJ ~Minsc non è stupido! Si prende cura del suo criceto e della sua spada per essere sempre pronto alla battaglia!~
-== TB#SLIL ~Ora basta! Se non posso ricevere la dovuta pulizia, allora assaggerò un pò di sangue!~
-== TB#STIVJ ~Ahh! Minsc, sei impazzito?!?~
-== MINSCJ ~Minsc non ha fatto nulla! E' stato Larry! Vero, Boo?~
-== TB#STIVJ ~Nulla? Stavi per tagliarmi in due e hai il coraggio di dire che non hai fatto nulla?! Stai brandendo TU quella dannata spada! Ti è forse sfuggito?~
-== MINSCJ ~Ma Larry ogni tanto fa quel che vuole! Minsc non ha colpa se la sua spada sferra colpi da sola!~
-== TB#SLIL ~(Ghigna)~ DO ~DestroySelf()~
-== TB#STIVJ ~Osa solo colpirmi un'altra volta, spada, e ti rispedisco nelle fogne da cui provieni!~
-EXIT
-
 CHAIN 
 IF ~InParty("Haerdalis")
 See("Haerdalis")
@@ -739,66 +721,6 @@ DO ~SetGlobal("tb#StivanHaerdalisAerie","GLOBAL",1)~
 == BHAERDA ~Ciò che non è allettante per uno può essere fonte di grande interesse per un altro. Detto in parole povere, mio gabbiano, fatti gli affari tuoi.~
 EXIT
 
-CHAIN 
-IF ~InParty("Haerdalis")
-See("Haerdalis")
-!StateCheck("Haerdalis",CD_STATE_NOTVALID)
-AreaType(OUTDOOR)
-CombatCounter(0)
-Global("tb#StivanHaerdalisBesamen","GLOBAL",0)
-OR(2)
-Global("BesamenDead","GLOBAL",1)
-Global("BesamenDead","GLOBAL",2)~ THEN TB#STIVB stivan-dalis-qp
-~Wow. Sono senza parole. Non pensavo che l'amore potesse vincere anche la morte.~
-DO ~SetGlobal("tb#StivanHaerdalisBesamen","GLOBAL",1)~
-== BHAERDA ~Conosco una poesia decisamente adatta alla vicenda di quei due. Vuoi sentirla, mio uccello di mare?~
-== TB#STIVB ~Ti ascolto.~
-== BHAERDA ~"Quando bacio il tuo labbro profumato,
-cara fanciulla, non posso obliare
-che un bianco teschio vi è sotto celato".~
-= ~"Quando a me stringo il tuo corpo vezzoso,
-obliar non poss'io, cara fanciulla, 
-che vi è sotto uno scheletro celato".~
-= ~"E nell'orrenda visione assorto, 
-dovunque o tocchi, o baci, o la man posi,
-sento sporgere le fredde ossa di un morto".~
-= ~Ebbene? Che cosa ne pensi?~
-== TB#STIVB ~Beh, i tuoi versi rappresentano l'amore con una gelida oggettività, lo svuotano di tutto il suo calore. Sono... freddi.~
-== BHAERDA ~Al contrario, trovo che siano una commistione di erotismo e di necrofilia, di sensualità e di decadenza. Amore e morte formano un binomio inscindibile, un nodo che nessuna forza può allentare.~
-= IF~IsValidForPartyDialog("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) Global("HaerDalisRomanceActive","GLOBAL",2)~ THEN ~Non è così, mia colomba?~
-== BAERIE IF~IsValidForPartyDialog("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) Global("HaerDalisRomanceActive","GLOBAL",2)~ THEN ~(Arrossisce)~
-== TB#STIVB ~Se lo dici tu, Haer'Dalis...~
-EXIT
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CheckStatGT("Aerie",5,FATIGUE)
-CombatCounter(0)
-Global("tb#StivanAerie","GLOBAL",0)~ THEN BAERIE stivan-aerie-1
-~Sono stanca... Stiamo cammiando e lottando da tutta la giornata! Possiamo... Possiamo riposarci?~
-DO ~SetGlobal("tb#StivanAerie","GLOBAL",1)~
-== TB#STIVB
-~Smettila di lamentarti, Aerie! Anch'io sono esausto, ma non passo il tempo a bofonchiare frasi del tipo "Le gambe mi fanno male" o "Non ho mai camminato così tanto in tutta la mia vita"!~
-== BAERIE ~Ma... Ma io...~
-== TB#STIVB ~Hai pure il coraggio di ribattere?~
-== BAERIE ~M-ma insomma! Credo di avere il diritto di lamentarmi se sono stanca! E poi mi stavo rivolgendo a <CHARNAME>, non a te!~
-== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Aerie! Stivan! Cosa sta succedendo?~
-== TB#STIVB ~Tsk. Riesci a malapena ad articolare una frase di senso compiuto. Ma dove hai vissuto fin'ora? Il mondo ha posto e porrà ostacoli a ciascuno di noi, ma questo non è un motivo sufficiente per lamentarsi in continuazione!~
-== BAERIE ~C-cosa ne sai te delle difficoltà che ho dovuto affrontare in passato? Io ho perso le mie ali! Tu non hai idea di che cosa si provi a vedersi strappare ciò che si ha di più caro!~
-== TB#STIVB ~Oh, sono commosso. La nostra piccola elfa ha perso le ali... Poverina!~
-== BAERIE ~N-non... Non prendermi in giro!~
-== TB#STIVB ~Anch'io ho perso ciò che avevo di più caro, ma non mi abbandono a lamentele e a piagnistei pubblici. Il dolore è un'esperienza che si vive privatamente; declamare la propria afflizione mostra solo quanto una persona possa essere così egocentrica da voler attirare l'attenzione degli altri su di sè.~
-== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Per quanto difficile possa essere stata la tua vita, questo non ti autorizza a sputare veleno sugli altri!~
-== TB#STIVB IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Tu fatti gli affari tuoi!~
-= ~...~
-= ~... Heh. Stavo scherzando, Mazzy. Non guardarmi in quel modo...~
-== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Spero di essere stata chiara, Stivan.~
-== TB#STIVB IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Ehm... Certo. Chiarissima.~
-EXIT
-
-/*
 CHAIN
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
@@ -806,7 +728,7 @@ See("tb#Stiv")
 TimeOfDay(Night)
 AreaType(OUTDOOR)
 CombatCounter(0)
-Global("tb#StivanAerie","GLOBAL",1)~ THEN BEGIN BAERIE
+Global("tb#StivanAerie","GLOBAL",1)~ THEN BAERIE AerieScared
 ~Uh? Mi è sembrato di sentire un rumore...~
 DO ~SetGlobal("tb#StivanAerie","GLOBAL",2)~
 = ~...~
@@ -816,56 +738,61 @@ DO ~SetGlobal("tb#StivanAerie","GLOBAL",2)~
 == BAERIE ~Ahhhh!~
 == TB#STIVB ~Heh. Fin troppo facile.~
 == BAERIE ~B-basta, Stivan! Io... Io non ti sopporto più! Sono stufa delle tue frecciatine acide, sono stufa dei tuoi scherzi, sono stufa di te! <CHARNAME>... <CHARNAME>, ti prego, digli qualcosa!~
+END
 IF ~~ THEN REPLY ~Shhh... Vieni qui, Aerie. Non dargli retta.~ EXTERN BAERIE AerieScared1
 IF ~~ THEN REPLY ~Mi aspetto che tu sia più coraggiosa. Non puoi spaventarti per così poco.~ EXTERN BAERIE AerieScared1
-IF ~~ THEN REPLY ~Il tuo comportamento è a dir poco infantile, Stivan.~ EXTERN TB#STIVBAerieScared2
-IF ~~ THEN REPLY ~Halfing, osa importunare ancora una volta Aerie e ti gonfio la faccia!~ EXTERN TB#STIVBAerieScared2
-IF ~~ THEN REPLY ~Presto avrò una crisi di nervi. Non vi sopporto più...~ EXTERN BAERIEAerieScared2
+IF ~~ THEN REPLY ~Il tuo comportamento è a dir poco infantile, Stivan.~ EXTERN TB#STIVB AerieScared2
+IF ~~ THEN REPLY ~Halfing, osa importunare ancora una volta Aerie e ti gonfio la faccia!~ EXTERN TB#STIVB AerieScared2
+IF ~~ THEN REPLY ~Presto avrò una crisi di nervi. Non vi sopporto più...~ EXTERN TB#STIVB AerieScared2
 
-APPEND BAERIE
-   IF ~~ AerieScared1
-     SAY ~Io... Non vorrei sembrarti sciocca, ma lui continua ad insultarmi, a rendermi nervosa... Non... Non so se riuscirò a mantenere la calma ancora per molto. Io... Ho bisogno di un pò di riposo adesso...~
-       IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN EXTERN BMAZZY AerieScared3
-       IF ~!IsValidForPartyDialog("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN EXIT
-     END
-
-APPEND TB#STIVB
-   IF ~~ AerieScared2
-     SAY ~(Ghigna) Scusami, <CHARNAME>. Resisto a tutto, ma non alle tentazioni.~
-       IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN EXTERN BMAZZY AerieScared3
-       IF ~!IsValidForPartyDialog("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN EXIT
-     END
-
-APPEND BMAZZY
-    IF ~~ AerieScared3
-     SAY ~Mi chiedo fino a quando resisterò alla tentazione di riempirti di schiaffi!~
+CHAIN IF ~~ THEN BAERIE AerieScared1
+~Io... Non vorrei sembrarti sciocca, ma lui continua ad insultarmi, a rendermi nervosa... Non... Non so se riuscirò a mantenere la calma ancora per molto. Io... Ho bisogno di un pò di riposo adesso...~
+BRANCH ~InParty("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ BEGIN
+== BMAZZY IF ~~ THEN ~Mi chiedo fino a quando resisterò alla tentazione di riempirti di schiaffi!~
 == TB#STIVB ~Heh. La pazienza è la virtù dei forti, Mazzy.~
 == BMAZZY ~Sappi che io la sto esaurendo!~
-       IF ~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN EXTERN BKORGAN AerieScared4
-       IF ~!IsValidForPartyDialog("Korgan") StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN EXIT
-     END
-
-APPEND BKORGAN
-    IF ~~ AerieScared4
-     SAY ~Ben fatto, ragazzino! Io stesso non avrei saputo fare di meglio!~
+END
+BRANCH ~InParty("Korgan") StateCheck("Korgan",CD_STATE_NOTVALID)~ BEGIN
+== BKORGAN ~Ben fatto, ragazzino! Io stesso non avrei saputo fare di meglio!~
+BRANCH ~InParty("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ BEGIN
 == BMAZZY ~E' proprio vero che uno sciocco trova sempre uno più sciocco che lo ammira.~
 == BKORGAN ~Andiamo, Mazzy... Non ha fatto nulla di male!~
 == BMAZZY ~(Sospira) Il buon senso, dunque, non avrà mai degli eroi.~
-     END
-    END
+END
+END
+EXIT
+
+CHAIN IF ~~ THEN TB#STIVB AerieScared2
+~(Ghigna) Scusami, <CHARNAME>. Resisto a tutto, ma non alle tentazioni.~
+BRANCH ~InParty("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ BEGIN
+== BMAZZY IF ~~ THEN ~Mi chiedo fino a quando resisterò alla tentazione di riempirti di schiaffi!~
+== TB#STIVB ~Heh. La pazienza è la virtù dei forti, Mazzy.~
+== BMAZZY ~Sappi che io la sto esaurendo!~
+END
+BRANCH ~InParty("Korgan") StateCheck("Korgan",CD_STATE_NOTVALID)~ BEGIN
+== BKORGAN ~Ben fatto, ragazzino! Io stesso non avrei saputo fare di meglio!~
+BRANCH ~InParty("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ BEGIN
+== BMAZZY ~E' proprio vero che uno sciocco trova sempre uno più sciocco che lo ammira.~
+== BKORGAN ~Andiamo, Mazzy... Non ha fatto nulla di male!~
+== BMAZZY ~(Sospira) Il buon senso, dunque, non avrà mai degli eroi.~
+END
+END
+EXIT
 
 CHAIN 
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJan","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanJan","GLOBAL",0)~ THEN TB#STIVB stivanjan1
 ~Ti ho mai detto, Jan, che aspiravo a diventare un bardo?~
 DO ~SetGlobal("tb#StivanJan","GLOBAL",1)~               
 == BJAN ~Davvero? Anch'io avevo la tua stessa ambizione! Tutto questo mi ricorda gli anni in cui la mia altezza era ancora lontana dal raggiungere il metro e una rapa di adesso...~
 == TB#STIVB ~"Un metro e una rapa"? Che unità di misura è mai questa?~
 == BJAN ~Cosa?! Non sapevi che gli gnomi misurano la loro statura con il rapometro? Zio Scratchy potrebbe seppellirti in un campo di fave per questo!~
-== TB#STIVB ~Allora illuminami, Jan. Non desidero diventare fertilizzante per il terreno.~                                                                                                                                                                                                   == BJAN ~Prima devo finire di raccontarti la mia storia. Dunque, stavo dicendo..~                                                                                        = ~Uh...~
+== TB#STIVB ~Allora illuminami, Jan. Non desidero diventare fertilizzante per il terreno.~
+== BJAN ~Prima devo finire di raccontarti la mia storia. Dunque, stavo dicendo..~
+= ~Uh...~
 = ~Ehm...~
 = ~L'ho dimenticato...~
 == TB#STIVB ~Me lo dirai non appena ti verrà in mente.~
@@ -873,13 +800,37 @@ DO ~SetGlobal("tb#StivanJan","GLOBAL",1)~
 == TB#STIVB ~(Sigh)~
 EXIT
 
-Anche nel caso di Jan mi manca un dialogo… 
+CHAIN
+IF ~InParty("Jan")
+See("Jan")
+!StateCheck("Jan",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanJan","GLOBAL",1)~ THEN TB#STIVB stivanjan2
+~Jan, mi sono appena ricordato quello che volevi dirmi la volta scorsa.~
+DO ~SetGlobal("tb#StivanJan","GLOBAL",2)~
+== BJAN ~Sul serio? Questo è un bene, Stivan, perchè da poco tempo a questa parte tendo a scordarmi le cose. A proposito di smemoratezza, ti ho mai detto che zio Scratchy dimenticava persino il suo nome?~
+== TB#STIVB ~No, non me ne hai mai parlato. Ciò di cui volevi discutere...~
+== BJAN ~Visto che ci siamo, perchè accantonare il discorso? Stavo dicendo, povero zietto! Era un vero malandrino. Rubava rape e gioielli qua e là, ma poi non si ricordava più dove avesse nascosto la sua refurtiva, ortaggi o monili che fossero.~
+= ~In famiglia si vocifera che abbia accumulato una quantità così grande di ricchezze da far gola a qualsiasi avventuriero! La mia cara zia Petunia sta progettando da diverso tempo di mettersi alla ricerca di questo tesoro con l'aiuto del suo draghetto d'ombra. E' una simpatica bestiola, sai?~
+== TB#STIVB ~... Ti riferisci al drago, vero?~
+== BJAN ~No, a mia zia.~
+== TB#STIVB ~Ah.~
+= ~Se mai dovessi incontrarla, eviterò di metterle i bastoni tra le ruote.~
+== BJAN ~Ora, cosa mi stavi dicendo?~
+== TB#STIVB ~Finalmente arriviamo al punto. Dunque, la volta scorsa avevi iniziato la conversazione dicendomi che...~
+= ~Dicendomi che...~
+= ~...~
+= ~Jan... Temo di essermene dimenticato...~
+== BJAN ~Lascia che te lo dica, Stivan: sei proprio uno smemorato! A confronto lo zio Scratchy aveva una memoria invidiabile. Secondo me dovresti bere un pò di succo di rapa. Lascia che te ne elenchi le proprietà benefiche!~
+== TB#STIVB ~...~
+EXIT
+
 CHAIN 
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJan","GLOBAL",2)~ THEN BJAN
+Global("tb#StivanJan","GLOBAL",2)~ THEN BJAN stivanjan3
 ~Un bardo! Volevo diventare un bardo! Ecco cosa continuavo a dimenticarmi di dirti!~
 DO ~SetGlobal("tb#StivanJan","GLOBAL",3)~
 == TB#STIVB ~Tu... un bardo?~
@@ -891,17 +842,15 @@ DO ~SetGlobal("tb#StivanJan","GLOBAL",3)~
 == TB#STIVB ~(Sigh) Smussare il tuo entusiasmo è un'impresa a dir poco impossibile. E va bene, Jan. Alla prima occasione ti insegnerò quello che so.~
 EXIT
 
-In questo dialogo bisognerà aggiungere una conditions – è necessario che abbia avuto luogo un dialogo con Anomen che devo ancora ultimare.
 CHAIN
 IF ~InParty("Jan")
-InParty("Anomen")
 See("Jan")
 !StateCheck("Jan",CD_STATE_NOTVALID)
-!StateCheck("Anomen",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("StivanFeelsStrange","GLOBAL",0)~ THEN TB#STIVB
+GlobalGT("tb#StivanAnomen","GLOBAL",2)
+Global("tb#StivanFeelsStrange","GLOBAL",0)~ THEN TB#STIVB stivanjanstrange
 ~Jan...~
-DO ~SetGlobal("StivanFeelsStrange","GLOBAL",1)~
+DO ~SetGlobal("tb#StivanFeelsStrange","GLOBAL",1)~
 == BJAN ~Sì, mio buon amico?~
 == TB#STIVB ~Jan, mi sento un pò... strano.~
 == BJAN ~Eh, ti capisco! Anch'io tempo fa, dopo aver mangiato una zuppa di rape avariata, non mi sentivo in me. Accadde nel lontano 1348, quando zia Petunia si convinse che il nome Petunia non era poi così male. Fu un anno terribile, quello. Le rape appassivano nel momento stesso in cui venivano dissotterrate, senza un perchè. Poi scoprimmo che la causa erano le flatulenze emesse da cugino Jowen. L'intero clan decise quindi di sigillargli, mentre dormiva, l'orifizio da cui provenivano quelle terribili esalazioni. Povero cugino! Il giorno seguente, quando cercò di rilasciare l'aria pestilenziale del suo stomaco, morì soffocato dal suo stesso tanfo. Una storia triste, questa.~
@@ -920,7 +869,7 @@ See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 AreaType(OUTDOOR)
 CombatCounter(0)
-Global("tb#StivanJaheira","GLOBAL",0)~ THEN TB#STIVB 
+Global("tb#StivanJaheira","GLOBAL",0)~ THEN TB#STIVB stivanjaheira1
 ~Yeah! Colpito! E con questo siamo a quota centodieci e mezzo!~
 DO ~SetGlobal("tb#StivanJaheira","GLOBAL",1)~
 == BJAHEIR ~Sto iniziando a stancarmi di vederti uccidere tutti gli uccelli che vedi, Stivan. Non hai ancora capito che così facendo non riporterai in vita i tuoi genitori?~
@@ -935,7 +884,7 @@ IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJaheira","GLOBAL",1)~ THEN TB#STIVB 
+Global("tb#StivanJaheira","GLOBAL",1)~ THEN TB#STIVB stivanjaheira2
 ~Jaheira, posso chiederti perchè hai deciso di seguire <CHARNAME>? Sebbene all'epoca non potessi immaginartelo, questa scelta ha avuto delle notevoli ripercussioni sulla tua vita.~
 DO ~SetGlobal("tb#StivanJaheira","GLOBAL",2)~
 == BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
@@ -951,14 +900,13 @@ DO ~SetGlobal("tb#StivanJaheira","GLOBAL",2)~
 == BJAHEIR ~No. Non voglio essere consolata.~
 EXIT
 
-Questo dialogo dovrebbe aver luogo una volta terminata la missione di Xzar.
-
 CHAIN 
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJaheiraBalance","GLOBAL",0)~ THEN BEGIN BJAHEIR
+Global("tb#StivanJaheiraBalance","GLOBAL",0)
+Global("lyrosjob","global",3)~ THEN BJAHEIR stivanjaheirabalance
 ~Stivan, ti sei mai chiesto se le tue azioni hanno contribuito a mantenere l'Equilibrio?~
 DO ~SetGlobal("tb#StivanJaheiraBalance","GLOBAL",1)~
 == TB#STIVB ~L'Equilibrio? Io non penso che esista una via di mezzo, Jaheira. Se il compito di un sovrano è quello di governare, adempirà al suo dovere con il pugno di ferro o nel più generoso dei modi. Non vedo altre alternative.~
@@ -973,49 +921,13 @@ DO ~SetGlobal("tb#StivanJaheiraBalance","GLOBAL",1)~
 == BJAHEIR ~E' normale che sia così. Io stessa penso di dover imparare ancora molto sull'Equilibrio.~
 EXIT
 
-
-Questo dialogo dovrebbe aver luogo una volta giunti a Trademeet dopo lo scontro con gli animali.
-
-CHAIN 
-IF ~InParty("Jaheira")
-See("Jaheira")
-!StateCheck("Jaheira",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanJaheira","GLOBAL",0)~ THEN TB#STIVB
-~Toglimi una curiosità, Jaheira: i tuoi amici druidi hanno forse deciso di trastullarsi con gli abitanti del luogo?~
-DO ~SetGlobal("tb#StivanJaheira","GLOBAL",1)~
-== BJAHEIR ~Sarebbe bene evitare giudizi affrettati, Stivan. Preferirei che non ci pronunciassimo su una situazione di cui sappiamo poco o nulla.~
-== TB#STIVB ~Le cose non si considerano mai per quel che sono, ma per quel che appaiono.~
-== BJAHEIR ~Piantala, halfing! Questo non è il momento adatto per una delle tue disquisizioni! Qualcuno o qualcosa minaccia di sconvolgere l'equilibrio di questo posto ed io sono più che intenzionata a fermarlo!~
-EXIT
-
-CHAIN 
-IF ~InParty("Jaheira")
-See("Jaheira")
-!StateCheck("Jaheira",CD_STATE_NOTVALID)
-Global("JaheiraCursed","GLOBAL",3)
-CombatCounter(0)
-Global("tb#StivanJaheiraCursed","GLOBAL",0)~ THEN TB#STIVB
-~Jaheira, stai bene?~
-DO ~SetGlobal("tb#StivanJaheiraCursed","GLOBAL",1)~
-== BJAHEIR ~Sono stata meglio, grazie. Essere maledetta non è certamente un'esperienza piacevole, ma preferirei morire piuttosto che dare a quel lurido schiavista la soddisfazione di sentirmi lamentare.~
-== TB#STIVB ~Hai proprio una brutta cera, sai?~
-== BJAHEIR ~Non sono... (Tossisce) ... Non sono dell'umore adatto per ascoltare i tuoi commenti sardonici, Stivan.~
-== TB#STIVB ~Stavo scherzando, druida. Sai bene quanto ci tenga a te.~
-== BJAHEIR ~Vuoi che ti seppellisca insieme a Ployer o preferisci una fossa a parte?~
-== TB#STIVB ~Ehi, stavo parlando sul serio!~
-== BJAHEIR ~Non... Non volevo essere così brusca. Questa maledizione sta avendo un brutto effetto sul mio carattere.~
-== TB#STIVB ~Davvero? Io non noto alcuna differenza.~
-== BJAHEIR ~... Quando perderò la pazienza, Stivan, farai bene a trovarti a miglia di distanza.~
-EXIT
-
 CHAIN 
 IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("JaheiraCursed","GLOBAL",10)
 CombatCounter(0)
-Global("tb#StivanJaheiraCursed","GLOBAL",1)~ THEN TB#STIVB
+Global("tb#StivanJaheiraCursed","GLOBAL",1)~ THEN TB#STIVB stivanjaheirapostcurse
 ~Allora, Jaheira, come ti senti adesso?~
 DO ~SetGlobal("tb#StivanJaheiraCursed","GLOBAL",2)~
 == BJAHEIR ~Per la barba di Silvanus, Stivan! Vuoi lasciarmi in pace?~
@@ -1041,10 +953,10 @@ IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanYoshimo","GLOBAL",0)~ THEN BEGIN BYOSHIM Athkatla
+Global("tb#StivanYoshimo","GLOBAL",0)~ THEN BYOSHIM Athkatla
 ~Se ho capito bene, Stivan, Athkatla è la tua città natale.~
-DO ~SetGlobal("tb#StivanYoshimo","GLOBAL",1)~ EXTERN TB#STIVB Athkatla
-~Esattamente. Vivo nella capitale dell'Amn da quasi trent'anni ormai e nessuno conosce le sue strade meglio di me.~
+DO ~SetGlobal("tb#StivanYoshimo","GLOBAL",1)~ 
+== TB#STIVB ~Esattamente. Vivo nella capitale dell'Amn da quasi trent'anni ormai e nessuno conosce le sue strade meglio di me.~
 == BYOSHIM ~E cosa ne pensi della Città della Moneta? Noti qualche differenza rispetto al passato?~
 == TB#STIVB ~Uhm... Devo essere sincero?~
 == BYOSHIM ~La sincerità è un concetto piuttosto complesso, amico. Limitati a dire quello che pensi.~
@@ -1061,7 +973,7 @@ IF ~InParty("Yoshimo")
 See("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanYoshimo","GLOBAL",1)~ THEN TB#STIVB
+Global("tb#StivanYoshimo","GLOBAL",1)~ THEN TB#STIVB yoshimo1
 ~La tua abilità con la katana è davvero sorprendente, Yoshi. Sbaglio o è un'arma che a Kara-Tur viene preferita a molte altre?~
 DO ~SetGlobal("tb#StivanYoshimo","GLOBAL",2)~
 == BYOSHIM ~Non proprio, mio piccolo amico. Innanzitutto, quella spada a lama curva e taglio singolo che tu chiami katana in realtà porta il nome di uchigatana. Viene brandita unicamente dai samurai o da altri membri della classe guerriera, mentre a tutti gli altri è vietato l'utilizzo.~
@@ -1081,7 +993,7 @@ IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanYoshimo","GLOBAL",2)~ THEN BEGIN BYOSHIM
+Global("tb#StivanYoshimo","GLOBAL",2)~ THEN BYOSHIM yoshimo2
 ~Vedo che continui a fissare la mia lama, Stivan. Hai forse notato qualche macchia sfuggita alla mia attenzione?~
 DO ~SetGlobal("tb#StivanYoshimo","GLOBAL",3)~
 == TB#STIVB ~No, anzi. La tua katana brilla come se fosse stata appena forgiata. E' magica, vero?~
@@ -1121,10 +1033,8 @@ CHAIN
 IF ~InParty("Korgan")
 See("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-Global("ShadDead","LOCALS",1)
-Global("KorganNoKillShag","GLOBAL",1)
 CombatCounter(0)
-Global("tb#StivanKorgan","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanKorgan","GLOBAL",0)~ THEN TB#STIVB stivankorgan1
 ~Sai, Korgan, oggi è l'anniversario della morte dei miei familiari. Sono trascorsi ben otto anni dal giorno della loro scomparsa.~
 DO ~SetGlobal("tb#StivanKorgan","GLOBAL",1)~
 == BKORGAN ~Ringrazia il cielo di non aver avuto come fautori dei tuoi giorni dei gambelunghe. In tal caso, ti assicuro che non avrei esitato a lanciarti un'ascia in faccia.~
@@ -1140,10 +1050,8 @@ CHAIN
 IF ~InParty("Korgan")
 See("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-Global("ShadDead","LOCALS",1)
-Global("KorganNoKillShag","GLOBAL",1)
 CombatCounter(0)
-Global("tb#StivanKorgan","GLOBAL",1)~ THEN TB#STIVB
+Global("tb#StivanKorgan","GLOBAL",1)~ THEN TB#STIVB stivankorgan2
 ~Korgan, hai mai perso la testa per una donna?~
 DO ~SetGlobal("tb#StivanKorgan","GLOBAL",2)~
 == BKORGAN ~Sono le donne a perdere la testa per me! Sotto i colpi della mia ascia, ovviamente! Har har!~
@@ -1166,7 +1074,7 @@ IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanValygar","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanValygar","GLOBAL",0)~ THEN TB#STIVB stivanvalygar1
 ~Valygar, per quale motivo hai deciso di diventare un ranger? La tua famiglia è di nobile origine; avresti potuto servirti del tuo buon nome e delle tue ricchezze per condurre una vita agiata.~
 DO ~SetGlobal("tb#StivanValygar","GLOBAL",1)~
 == BVALYGA ~Avrei potuto, ma non l'ho fatto per diversi motivi. In primo luogo, i Corthala non godono di grande considerazione: quale nobile si avvicinerebbe ad una famiglia maledetta da generazioni?~
@@ -1180,7 +1088,7 @@ IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanValygar", "GLOBAL",1)~ THEN TB#STIVB
+Global("tb#StivanValygar", "GLOBAL",1)~ THEN TB#STIVB stivanvalygar2
 ~Valygar, mi hai spiegato perchè non eri attratto dalla vita mondana, ma... Cosa ti ha spinto a diventare un ranger?~
 DO ~SetGlobal("tb#StivanValygar", "GLOBAL",2)~
 == BVALYGA ~Sarebbe più corretto chiamarmi esploratore anzichè ranger: quest'ultimo, infatti, è un titolo che viene conferito soltanto a coloro che si sono distinti nella difesa della natura.~
@@ -1198,36 +1106,19 @@ DO ~SetGlobal("tb#StivanValygar", "GLOBAL",2)~
 == BVALYGA ~Basta così. Gli stolti non capiscono mai quando è il momento di tacere, quindi è meglio che sia io ad interrompere questa conversazione. Tu ed io non abbiamo più nulla da dirci, almeno finchè non avrai imparato a pensare prima di parlare.~
 EXIT
 
-Queso dialogo lo farei attivare dopo lo scontro con gli halfing nella sfera planare che si trovano ad ovest dei paladini di Solamnia.
-
-CHAIN 
-IF ~InParty("Valygar")
-See("Valygar")
-!StateCheck("Valygar",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanValygarSphere","GLOBAL",0)~ THEN TB#STIVB
-~Dannazione! Vorrei uscire integro da questo posto! Stavo per perdere le braccia sotto i morsi di quelle bestiacce!~
-DO ~SetGlobal("tb#StivanValygarSphere","GLOBAL",1)~
-== BVALYGA ~Calmati, Stivan, o attirerai l'attenzione. Ci sono insidie ad ogni angolo qui, ed urlare in questo modo potrebbe essere pericoloso.~
-== TB#STIVB ~E' troppo chiedere di tornare ad Athkatla con tutti gli arti attaccati?!~
-== BVALYGA ~E' troppo chiederti di non rivelare la nostra presenza ad ogni creaura che si trova in questo posto?~
-== TB#STIVB ~Tu e il tuo dannato antenato! Finiremo per essere uccisi tutti!~
-== BVALYGA ~No, Stivan. Sarà Lavok ad essere ucciso una volta per tutte.~
-EXIT
-
 CHAIN 
 IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 Dead("Lavok02")
 CombatCounter(0)
-Global("tb#StivanValygar","GLOBAL",2)~ THEN TB#STIVB
+Global("tb#StivanValygar","GLOBAL",2)~ THEN TB#STIVB stivanvalygar2
 ~Valygar, è da diverso tempo che medito su una cosetta...~
 DO ~SetGlobal("tb#StivanValygar","GLOBAL",3)~
 == BVALYGA ~Sarebbe?~
 == TB#STIVB ~Ehm... Hai presente la sfera del tuo antenato?~
 == BVALYGA ~Difficilmente potrei dimenticarmene.~
-== TB#STIVB ~Ecco, vedi... Il punto è che... Insomma, non pensi sia un peccato lasciarla inutilizzata? Lì, in mezzo ai rifiuti dei Bassifondi, tutta sola soletta...
+== TB#STIVB ~Ecco, vedi... Il punto è che... Insomma, non pensi sia un peccato lasciarla inutilizzata? Lì, in mezzo ai rifiuti dei Bassifondi, tutta sola soletta...~
 == BVALYGA ~Utilizzarla a che scopo, scusa?~
 == TB#STIVB ~Beh, questi sono dettagli.~
 == BVALYGA ~Dettagli, eh? Spiacente, ma non voglio avere più nulla a che fare con quella sfera. Nella mia mente è ancora vivido il ricordo della distruzione e della sofferenza che ha causato, e nelle mani di persone incaute potrebbe ritornare ad essere pericolosa.~
@@ -1237,89 +1128,14 @@ DO ~SetGlobal("tb#StivanValygar","GLOBAL",3)~
 == BVALYGA ~... Per oggi ne hai dette fin troppe, Stivan. Il mio no è definitivo.~
 EXIT
 
-Questo dialogo lo farei partire dopo la morte di Suna Seni (se è stato installata la componente “La relazione tra Valygar/Suna Seni del mod UB)
-
-CHAIN
-IF ~InParty("Valygar")
-See("Valygar")
-!StateCheck("Valygar",CD_STATE_NOTVALID)
-AreaCheck("AR1514")
-CombatCounter(0)
-Global("tb#StivanValygarAboutSuna","GLOBAL",0)~ THEN TB#STIVB
-~(Urla) Basta! Non ne posso più di tutti questi mostri! Le mani mi stanno sanguinando per la fatica! La testa è sul punto di scoppiarmi! Come se non bastasse, ho addirittura finito la mia scorta di piume! Tutto per colpa della tua donna, ranger!~
-DO ~SetGlobal("tb#StivanValygarAboutSuna","GLOBAL",1)~
-== BVALYGA ~Cosa?! Stai accusando Suna Seni della situazione in cui ci troviamo? E' stato quel mostro di Irenicus a costringerla a lavorare per lui!~
-== TB#STIVB ~*Ahem* A me non sembra che sia stata costretta. Ha accettato in cambio di una cospicua somma, giusto?~
-== BVALYGA ~Nessuno di noi è innocente, Stivan. In questa storia siamo tutti colpevoli. Tutti. Ognuno a modo suo.~
-== TB#STIVB ~Ma io non ho fatto niente!~
-== BVALYGA ~Allora chi non ha peccato scagli la prima pietra.~
-== TB#STIVB ~... Eh?~
-== BVALYGA ~(Sigh) Lascia stare. Torniamo alla ricerca di una fuga da questo posto.~
-EXIT
-
-
-Questo dialogo lo farei partire dopo lo sconto con gli halfing che si trovano nella stanza con le fornaci da cui escono gli elementali del fuoco.
-
-CHAIN 
-IF ~InParty("Mazzy")
-See("Mazzy")
-!StateCheck("Mazzy",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanMazzy","GLOBAL",0)~ THEN TB#STIVB
-~M-Mazzy, li hai sentiti? Quei mostri volevano cibarsi delle nostre carni! Volevano banchettare con le *mie* e con le *tue* membra!~
-DO ~SetGlobal("tb#StivanMazzy","GLOBAL",1)~
-== BMAZZY ~Questo incontro mi ha lasciata confusa, Stivan, e anche un pò spaventata. Non avevo mai visto degli halfing... cannibali.~
-== TB#STIVB ~Come possono voler mangiare dei loro simili?~
-== BMAZZY ~La fame è una brutta bestia. Suppongo che, se non li avessimo mai incontrati, alla fine si sarebbero divorati tra di loro.~
-== TB#STIVB ~In effetti, credo che anch'io avrei rosicchiato qualche tuo arto piuttosto che morire d'inedia.~
-== BMAZZY ~Non posso dire lo stesso, Stivan. Cinico e pungente come sei, dubito che saresti commestibile.~
-EXIT
-
-Questo dialogo dovrebbe aver luogo una volta risolta la missione di Kram.
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanMazzyAboutKram","GLOBAL",0)~ THEN BEGIN BMAZZY
-~Sono contenta che Kram sia riuscito a trovare un lavoro onesto. Con un pò di costanza e di buona volontà, potrà finalmente costruirsi un futuro.~
-DO ~SetGlobal("tb#StivanMazzyAboutMazzy","GLOBAL",1)~ EXTEND TB#STIVB 
-~Altre agili dita sottratte alla raffinata arte del borseggio... Dove andremo a finire?~
-== BMAZZY ~Con simili osservazioni, Stivan, non c'è da stupirsi se la maggior parte delle persone etichetta gli halfing come un popolo di ladri. Grazie ad Arvoreen, vicende come quella di riescono a smussare questo genere di pregiudizi.~
-== TB#STIVB ~Beh, con un pò d'impegno dovrei riuscire a traviarlo...~
-== BMAZZY ~Sono convinta che non cederebbe a nessuna tentazione.~
-== TB#STIVB ~E se sgrafignassi qualcosa a Galoomp sotto i suoi occhi? Questo potrebbe risvegliare l'antica abitudine...~
-== BMAZZY ~Quando ti comporti in questo modo, Stivan, sarei tentata di prenderti a schiaffi.~
-== TB#STIVB ~Dici sul serio, venditrice di patat-- *AHIA*!~
-== BMAZZY ~Umpf. Stavolta te la sei cercata.~
-EXIT
-
-
-CHAIN 
-IF ~InParty("Keldorn")
-See("Keldorn")
-!StateCheck("Keldorn",CD_STATE_NOTVALID)
-AreaCheck("AR0202")
-CombatCounter(0)
-Global("tb#StivanKeldornStink","GLOBAL",0)~ THEN TB#STIVB
-~(Sniff sniff) Cos’è questo fetore?~
-DO ~SetGlobal("tb#StivanKeldornStink","GLOBAL",1)~
-== BKELDOR ~Ogni angolo di questo posto è impregnato dell’odore del male. Suggerisco di avanzare con cautela.~ 
-== TB#STIVB ~Heh. Io pensavo che avessi fatto una puzzetta, paladino!~
-== BKELDOR ~…~
-EXIT
-
-Un dialogo in cui Stivan prende nuovamente Aerie di mira se CHARNAME ha avuto il dialogo in cui l’elfa racconta del modo in cui ha perso le ali - credo che quel dialogo sia Global("BAerie10","LOCALS",1). 
-
 CHAIN 
 IF ~InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
-Global("BAerie10","LOCALS",1)
+Global("tb#StivanAerieToldWIngs","GLOBAL",1)
 !Global("tb#StivanAerie","GLOBAL",2)
 CombatCounter(0)
-Global("tb#StivanDislikesAerie","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanDislikesAerie","GLOBAL",0)~ THEN TB#STIVB stivanaeriewings
 ~Quindi, elfa, hai perso le tue ali nel patetico tentativo di salvare un bambino. Piuttosto stupido da parte tua, ma non mi sorprende.~
 DO ~SetGlobal("tb#StivanDislikesAerie","GLOBAL",1)~
 == BAERIE ~Come... Come fai a saperlo? Hai origliato di nuovo la mia conversazione con <CHARNAME>?~
@@ -1331,32 +1147,36 @@ IF ~~ THEN REPLY ~Sai bene che ti ascolto più che volentieri. Non prestare atten
 IF ~~ THEN REPLY ~E' sempre un piacere sentire ciò che hai da dire, ma vorrei che tu riuscissi ad essere un pò più forte.~ EXTERN BAERIE StivanDislikesAerie1-2
 IF ~~ THEN REPLY ~Beh, Stivan non ha tutti i torti. A volte sei piuttosto noiosa e ripetitiva.~ EXTERN BAERIE StivanDislikesAerie1-3
 
-CHAIN BAERIE StivanDislikesAerie1-2
-SAY ~Io… Cerco solo di essere me stessa… Con i miei pregi e i miei difetti. Ma cercherò di… di essere più coraggiosa e autonoma, se è questo che vuoi.~
+APPEND BAERIE
+IF ~~ THEN StivanDislikesAerie1-2
+SAY ~Io... Cerco solo di essere me stessa... Con i miei pregi e i miei difetti. Ma cercherò di... di essere più coraggiosa e autonoma, se è questo che vuoi.~
 IF ~~ THEN EXIT
 END
 
-CHAIN BAERIE StivanDislikesAerie1-3
-SAY ~Ah sì? V-va bene, <CHARNAME>: s-s-se sono così noiosa e rip-petitiva, non ti seccherò più! Io… Non credevo di essere un peso per te!~
-IF ~~ THEN EXIT
+IF ~~ THEN StivanDislikesAerie1-3
+SAY ~Ah sì? V-va bene, <CHARNAME>: s-s-se sono così noiosa e rip-petitiva, non ti seccherò più! Io... Non credevo di essere un peso per te!~
+IF ~~ THEN DO ~SetGlobal("AerieRomance","global",3)~ EXIT
+END
 END
 
-CHAIN TB#STIVB StivanDislikesAerie1-1
+APPEND TB#STIVB
+
+IF ~~ THEN StivanDislikesAerie1-1
 SAY ~Heh. A volte c’è bisogno che siano le labbra altrui a confessare verità che non ammetti a te stesso. Dovresti ringraziarmi!~
-END
 IF ~~ THEN REPLY ~Stivan, ho capito che a te non piace Aerie, ma questo non significa che tu debba metterti in mezzo a noi.~ EXTERN TB#STIVB StivanDislikesAerie1-4
 IF ~~ THEN REPLY ~Non ho certo bisogno che *tu* mi dica cosa provo per lei! Chi credi di essere?~ EXTERN TB#STIVB StivanDislikesAerie1-4
 IF ~~ THEN REPLY ~Sono stanco del modo in cui la tratti, halfing. Osa ancora una volta infastidirla e ti sbatto fuori dal gruppo.~ EXTERN TB#STIVB StivanDislikesAerie1-4
-
-CHAIN TB#STIVB StivanDislikesAerie1-4
-SAY ~Povero <CHARNAME>… Sei la dimostrazione vivente del fatto che l’uomo è imperfetto. Eppure bisogna capire e scusare, considerando l’epoca in cui è stato creato.~
-= ~(Stivan ti fa una pernacchia).~
 END
+
+IF ~~ THEN StivanDislikesAerie1-4
+SAY ~Povero <CHARNAME>... Sei la dimostrazione vivente del fatto che l’uomo è imperfetto. Eppure bisogna capire e scusare, considerando l’epoca in cui è stato creato.~
+= ~(Stivan ti fa una pernacchia).~
 IF ~~ THEN REPLY ~Tu vuoi proprio morire, halfing.~ EXTERN TB#STIVB StivanDislikesAerie1-5
 IF ~~ THEN REPLY ~Ti lascio in vita soltanto perché apprezzo le tue frasi proverbiali.~ EXTERN TB#STIVB StivanDislikesAerie1-5
 IF ~~ THEN REPLY ~(Sigh) E’ peggio di un poppante.~ EXTERN TB#STIVB StivanDislikesAerie1-5
+END
 
-CHAIN TB#STIVB StivanDislikesAerie1-5
+IF ~~ THEN StivanDislikesAerie1-5
 SAY ~Heh. E’ uno spasso viaggiare con te, ragazzo.~
 IF ~~ THEN EXIT
 END
@@ -1367,23 +1187,23 @@ IF ~InParty("Imoen2")
 See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanImoen","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanImoen","GLOBAL",0)~ THEN TB#STIVB stivanimoen1
 ~E così tu saresti la sorella di <CHARNAME>, nonché figlia di Bhaal. Sai che anche Stivan appartiene ad una progenie divina?~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",1)~
 == BIMOEN2 ~Sospettavo che il Signore dell’Omicidio non fosse il solo ad aver sparso il suo seme qua e là. A quanto pare va di moda tra gli dei fecondare ogni donna che capita a tiro.~
 == TB#STIVB ~Heh. La mia mammina è stata fortunata ad incontrare il grande Brandobaris.~
 == BIMOEN2 ~Brandobaris? Il dio della furtività e dei ladri halfing?~
-== TB#STIVB ~Esatto! E’ stato lui ad affidare a Stivan il gravoso compito di sterminare i gabbiani di tutta Faerun! Inoltre il mio retaggio fa di me il miglior ladro di questo gruppo, pertanto… fatti da parte!~
-== BIMOEN2 ~Aspetta, ma… Non hai iniziato a dar loro la caccia soltanto dopo la morte dei tuoi familiari?
-== TB#STIVB ~Accidenti! La ragazzina è più sveglia di quanto pensassi… 
+== TB#STIVB ~Esatto! E’ stato lui ad affidare a Stivan il gravoso compito di sterminare i gabbiani di tutta Faerun! Inoltre il mio retaggio fa di me il miglior ladro di questo gruppo, pertanto... fatti da parte!~
+== BIMOEN2 ~Aspetta, ma... Non hai iniziato a dar loro la caccia soltanto dopo la morte dei tuoi familiari?~
+== TB#STIVB ~Accidenti! La ragazzina è più sveglia di quanto pensassi... ~
 = ~*Ahem* Ad ogni modo, sono io il più abile ladro di questa compagnia di scapestrati!~
-== BIMOEN2 ~Non penso proprio. Forse non sai che, prima di dedicarmi alle arti arcane, ero nota lungo tutta la Costa della Spada come “Imoen La Svelta”.~
-== TB#STIVB ~Se la metti così allora sarà il ferro a stabilire chi di noi due è il migliore! Preparati ad ass…
-= ~Ehi, ma…~
+== BIMOEN2 ~Non penso proprio. Forse non sai che, prima di dedicarmi alle arti arcane, ero nota lungo tutta la Costa della Spada come "Imoen La Svelta".~
+== TB#STIVB ~Se la metti così allora sarà il ferro a stabilire chi di noi due è il migliore! Preparati ad ass...~
+= ~Ehi, ma...~
 = ~Dov’è la mia arma?!~
-== BIMOEN2 ~Questa qui? Oh, scusami, Stivan… L’ho presa senza neanche dirtelo. O forse dovrei dire che te l’ho soffiata da sotto il naso?~
+== BIMOEN2 ~Questa qui? Oh, scusami, Stivan... L’ho presa senza neanche dirtelo. O forse dovrei dire che te l’ho soffiata da sotto il naso?~
 == TB#STIVB ~ (Snort!) E va bene, ragazzina. Se vuoi la guerra, che guerra sia!~
-== BIMOEN2 ~Come vuoi… Ho già un punto in tasca!~
+== BIMOEN2 ~Come vuoi... Ho già un punto in tasca!~
 EXIT
  
 CHAIN 
@@ -1391,16 +1211,16 @@ IF ~InParty("Imoen2")
 See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanImoen","GLOBAL",1)~ THEN TB#STIVB
-~Ed ecco l’intrepido Stivan scivolare silenziosamente verso la sua acerrima nemica. Con passo felpato si avvicina all’ignara vittima, fa scorrere senza il minimo rumore la sua micidiale arma tra le dita e…~
+Global("tb#StivanImoen","GLOBAL",1)~ THEN TB#STIVB stivanimoen2
+~Ed ecco l’intrepido Stivan scivolare silenziosamente verso la sua acerrima nemica. Con passo felpato si avvicina all’ignara vittima, fa scorrere senza il minimo rumore la sua micidiale arma tra le dita e...~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",2)~
 == BIMOEN2 ~Imoen la Svelta non ha bisogno di voltarsi per schivare la fatale piuma di gabbiano scagliatale addosso dal suo rivale e, con un agile piroetta, estrae la sua lama e scatta in direzione dell’avversario!~ 
 == TB#STIVB ~Nell’aria rieccheggia lo sfrigolio dell’acciaio, con fendenti che cercano ferite da aprire!~
-== BIMOEN2 ~Imoen la Svelta disarma l’avversario con uno sgambetto…~
+== BIMOEN2 ~Imoen la Svelta disarma l’avversario con uno sgambetto...~
 == TB#STIVB ~Non val -- *Ouch*!~
-== BIMOEN2 ~… E punta la sua lama alla gola del nemico!~
+== BIMOEN2 ~... E punta la sua lama alla gola del nemico!~
 == TB#STIVB ~Prendi questo!~
-== BIMOEN2 ~Arghh! Ma cosa…?~
+== BIMOEN2 ~Arghh! Ma cosa...?~
 == TB#STIVB ~Heh. La cacca di gabbiano negli occhi è micidiale.~ 
 == BIMOEN2 ~Bleah! Che schifo!~
 == TB#STIVB ~E con questo siamo uno pari! Con il prossimo round la vittoria sarà mia, strega!~
@@ -1413,45 +1233,44 @@ IF ~InParty("Imoen2")
 See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanImoen","GLOBAL",2)~ THEN TB#STIVB
-~(Pant pant) Sono stremato…~
+Global("tb#StivanImoen","GLOBAL",2)~ THEN TB#STIVB stivanimoen3
+~(Pant pant) Sono stremato...~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",3)~
 == BIMOEN2 ~ (Pant pant) A chi lo dici!~
-== TB#STIVB ~Rassegnati, Imoen… Sono io il migliore!~
-== BIMOEN2 ~Aspetta… Mi è venuta un’idea.~
+== TB#STIVB ~Rassegnati, Imoen... Sono io il migliore!~
+== BIMOEN2 ~Aspetta... Mi è venuta un’idea.~
 == TB#STIVB ~Credi che sia così sciocco da cascare nella tua trappola?~
 == BIMOEN2 ~No, parlo sul serio. Il nostro confronto potrebbe non finire mai. Perché non rimettere il giudizio al nostro leader?~
-== TB#STIVB ~…~
-= ~… Abbiamo un leader?~
-== BIMOEN2 ~Mi riferisco a <CHARNAME>…~
+== TB#STIVB ~...~
+= ~... Abbiamo un leader?~
+== BIMOEN2 ~Mi riferisco a <CHARNAME>...~
 == TB#STIVB IF~Gender(Player1,MALE)~ THEN ~Non vale! Lui è tuo fratello, come potrebbe essere obiettivo?~
 == TB#STIVB IF~Gender(Player1,FEMALE)~ THEN ~Non vale! Lei è tua sorella, come potrebbe essere obiettiva?~
 == BIMOEN2 ~<CHARNAME> è un ottimo arbitro. Non lascerebbe mai che dei semplici legami di parentela oscurassero la sua capacità di giudizio.~
 == BIMOEN2 IF~Gender(Player1,MALE)~ THEN ~(Bisbigliando) Mi raccomando, fratellino, scegli me!~
 == BIMOEN2 IF~Gender(Player1,FEMALE)~ THEN ~ (Bisbigliando) Mi raccomando, sorellina, scegli me!~
-== TB#STIVB ~*Ahem* Ebbene, <PROGIRLBOY>? Qual è  il miglior ladro? Il Grande Cacciatore di Gabbiani… oppure la Streghetta della Costa?~
+== TB#STIVB ~*Ahem* Ebbene, <PROGIRLBOY>? Qual è  il miglior ladro? Il Grande Cacciatore di Gabbiani... oppure la Streghetta della Costa?~
 END
-IF ~Class(Player1,THIEF)~ THEN REPLY ~E’ ovvio che sia io il numero uno.~ GOTO tb#StivanImoen1-1
+IF ~Class(Player1,THIEF)~ THEN REPLY ~E’ ovvio che sia io il numero uno.~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~ (Sigh) Perché mi avete tirato in mezzo?~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~Io direi entrambi.~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~Nessuno dei due.~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~Imoen combina i molteplici usi della magia con le sue abilità furtive. E’ lei la migliore.~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~Stivan combina l’arte della guerra con una buona rapidità di mano. E’ lui il migliore.~ EXTERN BIMOEN2 tb#StivanImoen1-1
 
-CHAIN BIMOEN2
+CHAIN IF ~~ THEN BIMOEN2 tb#StivanImoen1-1
 ~Sei soddisfatto della sua risposta?~
 == TB#STIVB ~Heh. Dovrei?~
 == BIMOEN2 ~Assaggia questo! Biscotto alla cannella!!~
 == TB#STIVB ~Prendi questo! Piuma di gabbiano!!~
 EXIT
  
-
 CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanMinsc","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanMinsc","GLOBAL",0)~ THEN TB#STIVB stivanminsc1
 ~Noto che parli spesso al tuo criceto, Minsc. Non pensavo che quelle palline di pelo fossero degli interessanti interlocutori.~
 DO ~SetGlobal("tb#StivanMinsc","GLOBAL",1)~
 == BMINSC ~Boo è un gran chiaccherone! E anche un gran bardo! Compone fior fior di poemi ogni volta che riempiamo il male di calci nel sedere!~
@@ -1470,7 +1289,7 @@ IF ~InParty("Minsc")
 See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanMinsc","GLOBAL",1)~ THEN TB#STIVB
+Global("tb#StivanMinsc","GLOBAL",1)~ THEN TB#STIVB stivanminsc2
 ~Boo, saresti così gentile da non urlare come uno scalmanato in battaglia? I miei timpani rischiano di essere sfondati dai tuoi schiamazzi!~
 DO ~SetGlobal("tb#StivanMinsc","GLOBAL",2)~
 == BMINSC ~Haha! Hai sentito, Boo? Il tuo fiato è così potente da stordire il nostro amico halfing! Continua così!~
@@ -1484,182 +1303,12 @@ DO ~SetGlobal("tb#StivanMinsc","GLOBAL",2)~
 EXIT
 
 
-CHAIN
-IF ~InParty("Jan")
-See("Jan")
-!StateCheck("Jan",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanJan","GLOBAL",1)~ THEN TB#STIVB
-~Jan, mi sono appena ricordato quello che volevi dirmi la volta scorsa.~
-DO ~SetGlobal("tb#StivanJan","GLOBAL",2)~
-== BJAN ~Sul serio? Questo è un bene, Stivan, perchè da poco tempo a questa parte tendo a scordarmi le cose. A proposito di smemoratezza, ti ho mai detto che zio Scratchy dimenticava persino il suo nome?~
-== TB#STIVB ~No, non me ne hai mai parlato. Ciò di cui volevi discutere...~
-== BJAN ~Visto che ci siamo, perchè accantonare il discorso? Stavo dicendo, povero zietto! Era un vero malandrino. Rubava rape e gioielli qua e là, ma poi non si ricordava più dove avesse nascosto la sua refurtiva, ortaggi o monili che fossero.~
-= ~In famiglia si vocifera che abbia accumulato una quantità così grande di ricchezze da far gola a qualsiasi avventuriero! La mia cara zia Petunia sta progettando da diverso tempo di mettersi alla ricerca di questo tesoro con l'aiuto del suo draghetto d'ombra. E' una simpatica bestiola, sai?~
-== TB#STIVB ~... Ti riferisci al drago, vero?~
-== BJAN ~No, a mia zia.~
-== TB#STIVB ~Ah.~
-= ~Se mai dovessi incontrarla, eviterò di metterle i bastoni tra le ruote.~
-== BJAN ~Ora, cosa mi stavi dicendo?~
-== TB#STIVB ~Finalmente arriviamo al punto. Dunque, la volta scorsa avevi iniziato la conversazione dicendomi che...~
-= ~Dicendomi che...~
-= ~...~
-= ~Jan... Temo di essermene dimenticato...~
-== BJAN ~Lascia che te lo dica, Stivan: sei proprio uno smemorato! A confronto lo zio Scratchy aveva una memoria invidiabile. Secondo me dovresti bere un pò di succo di rapa. Lascia che te ne elenchi le proprietà benefiche!~
-== TB#STIVB ~…~
-EXIT
-// ?
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanAerie", "GLOBAL",1)~ THEN BAERIE
-~Oh! Stivan, una farfalla si è posata sui tuoi capelli!~
-DO ~SetGlobal("tb#StivanAerie", "GLOBAL",2)~
-== TB#STIVB ~...~
-= ~... Ora non più.~
-== BAERIE ~NO! L'hai... L'hai uccisa! Perchè? Perchè l'hai fatto?!~
-== TB#STIVB ~La prossima volta non scambierà più la mia chioma per un fiore.~
-== BAERIE ~C-come potrà esserci un'altra volta se l'hai uccisa? Sei... Sei un mostro!~
-== TB#STIVB ~Visto che questa farfalla ti stava particolarmente a cuore, prendine pure i resti e seppelliscili. Tieni: sono qui nella mia mano. Penso che faticherai non poco a ricomporli...~
-== BAERIE ~AHHH! N-non avvicinarti!~
-== TB#STIVB ~Ebbene? Non vuoi più i resti di questa creaturina dalle ali sfaldate? A proposito, che ironica coincidenza: è la stessa fine che hanno fatto le tue, giusto?~
-== BAERIE ~N-no!~
-== TB#STIVB ~Hai ragione: sono appassite, sono marcite!~
-== BAERIE ~~(Singhiozzando) S-smettila!~
-== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Aerie, ignoralo. L'indifferenza è il miglior atteggiamento da assumere in questi casi. Quanto a te, Stivan, stai iniziando a stamcarmi col tuo comportamento infantile.~
-== TB#STIVB ~Lo sai che non ricresceranno più?~
-== BAERIE ~Ahhh!~
-== TB#STIVB ~"E fu così che Aerie scoppiò in lacrime e corse via". Quando voglio sbarazzarmi di una persona fastidiosa so essere *così* crudele... Mwahahahah!~
-== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~
-EXIT 
-Questo dialogo dovrebbe aver luogo nella sala dove si trova il Drago d’Ombra.
-
-CHAIN 
-IF ~InParty("Mazzy")
-See("Mazzy")
-!StateCheck("Mazzy",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanMazzyDragon","GLOBAL",0)~ THEN TB#STIVB
-~Eeeekkk! C... Cos'è quel coso?!~
-DO ~SetGlobal("tb#StivanMazzyDragon","GLOBAL",1)~
-== BMAZZY ~Eccolo. E' il drago che ha sconfitto me e i miei amici. Benchè Amuana ci abbia sconsigliato di affrontarlo, fremo dalla rabbia all'idea di risparmiare una creatura così malvagia!~
-== TB#STIVB ~Combattici te se sei abbastanza folle da farlo! Io non staccherò le mani dalla Pietra dell'Ombra neanche morto!~
-== BMAZZY ~Nessun halfing dovrebbe mai tirarsi indietro di fronte ad una prova di coraggio. Davide non ebbe alcuna esitazione ad affrontare Golia!~
-== TB#STIVB ~Svegliati, Mazzy! La realtà è ben diversa da quella stupida favola per marmocchi insonni!~
-END
-IF ~~ THEN REPLY ~(Resti in silenzio).~ EXTERN BMAZZY StivanMazzyDragon1-1
-IF ~~ THEN REPLY ~Davide? Golia? Di chi state parlando?~ EXTERN BMAZZY StivanMazzyDragon1-2
-IF ~~ THEN REPLY ~Affronteremo il drago, Stivan, che ti piaccia o no.~ EXTERN TB#STIVB StivanMazzyDragon1-3
-IF ~~ THEN REPLY ~Si tratta di un nemico troppo pericoloso, Mazzy. Non lo sfideremo.~ EXTERN BMAZZY StivanMazzyDragon1-4
-
-IF ~~ THEN BEGIN StivanMazzyDragon1-1
-SAY ~Quella storia, inventata o veritiera che sia, ha un insegnamento che faresti bene a ricordare. Lascia che ti rinfreschi la memoria.~
-== TB#STIVB ~Non ce n’è bisogno, la conosco meglio di te!~ EXTERN BMAZZY StivanMazzyDragon1-5
-END
-
-IF ~~ THEN BEGIN StivanMazzyDragon1-2
-SAY ~Si tratta dei protagonisti di una leggenda che le madri halfing son solite raccontarci in tenera età.~ EXTERN BMAZZY StivanMazzyDragon1-5
-END
-
-IF ~~ THEN BEGIN StivanMazzyDragon1-3
-SAY ~Tu sei folle, <CHARNAME>, folle! Non voglio morire sbranato da quel mostro! Eeeekkkk!~ DO ~Panic()~ THEN EXIT
-END
-
-IF ~~ THEN BEGIN StivanMazzyDragon1-4
-SAY ~Non volevo suggerire nulla del genere, <CHARNAME>. Ho già affrontato quella bestia, e so bene quanto sia forte. Il problema è che... Sento le grida dei miei compagni caduti. Chiedono giustizia.~
-END
-IF ~~ THEN REPLY ~E l’avranno. Il Signore delle Ombre pagherà per gli orrori di cui è responsabile.~ EXIT
-IF ~~ THEN REPLY ~Riconoscere i propri limiti è segno di saggezza. Non ha senso sprecare le nostre vite attaccandolo; ci rivarremo sul padrone di questa orrida bestia.~ EXIT
-IF ~~ THEN REPLY ~Così sia. Preparati, Stivan: combatteremo contro il drago.~ EXTERN TB#STIVB StivanMazzyDragon1-3
-IF ~~ THEN REPLY ~Capisco cosa dici, ma è meglio proseguire. Abbiamo indugiato sin troppo qui.~ EXIT
-
-IF ~~ THEN BEGIN StivanMazzyDragon1-5
-SAY ~Nei pressi di un insediamento halfing a sud del Golfo di Vilhon si era stabilito un gruppo di giganti che terrorizzava le comunità del posto. Ad essere sincera, non ricordo con esattezza il nome del villaggio.~
-== TB#STIVB ~(Snort!) Si trattava del Bosco di Chondal, ignorante!~
-== BMAZZY ~Visto che sai più dettagli di me, perché non prosegui?~
-== TB#STIVB ~Puoi starne certa!~
-= ~*Ahem* Secondo questa leggenda, seguirono anni di lotte in cui gli halfing si divertivano a tagliuzzare le gambe degli avversari e i giganti a scagliare il più lontano possibile i nostri simili.~
-= ~La situazione rimase invariata sino a quando il campione dei nuovi arrivati, Golia, rivolse una vera e propria sfida agli halfing degli spiriti che abitavano il posto. La sua tribù avrebbe abbandonato il Bosco di Chondal soltanto se lui fosse stato sconfitto in combattimento.~
-= ~Nessuno ebbe il coraggio di accettare la sfida, ad eccezione di un tale di nome Davide.~
-= ~I due si incontrarono in una valle, conosciuta come la Valle di Elah. Certo di avere la vittoria in tasca, Golia lasciò che fosse l’avversario a fare la prima mossa.~
-== BMAZZY ~La sua presunzione gli fu fatale, in quanto Davide infilò la mano nella sua bisaccia, ne trasse una pietra, la lanciò con la fionda e colpì il gigante in fronte, facendolo cadere a terra. A quel punto corse in direzione dell’avversario, prese la sua spada e lo uccise, per poi tagliargli la testa.~
-== TB#STIVB ~(Sospira) E fu così che gli halfing del Bosco di Chondal furono liberi dalla minaccia dei giganti, in quanto fuggirono alla notizia della morte del loro capo.~
-== BMAZZY ~Lo vedi, Stivan? Le idee ispirate dal coraggio sono come le pedine degli scacchi. Se da una parte possono essere mangiate, dall’altra possono anche dare avvio ad un gioco vincente.~
-== TB#STIVB ~(Snort!) Non tutti sono dei Davide scesi nella Valle di Elah per affrontare un mostro tanto più grande e forte di noi. E non tutti hanno la capacità di uccidere il gigante. Di rado i cosiddetti “buoni” vincono e vivono per raccontarlo.~
-IF ~~ THEN EXIT
-END
-END
-
-Questo dialogo dovrebbe aver luogo nel Sottosuolo dopo aver svolto qualcuna delle missioni drow – direi dopo il salvataggio di Phaere.
-
-CHAIN 
-IF ~InParty("Mazzy")
-See("Mazzy")
-!StateCheck("Mazzy",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanMazzyDrow","GLOBAL",0)~ THEN TB#STIVB
-~WOW! Questo corpo è... E' incredibile! Sto scoprendo e facendo un sacco di cose che prima non mi erano possibili! Non trovi che sia magnifico, Mazzy?~
-DO ~SetGlobal("tb#StivanMazzyDrow","GLOBAL",1)~
-== BMAZZY ~Non capisco il tuo entusiasmo. Io provo un gran disagio al pensiero di avere le sembianze di una creatura malvagia.~
-== TB#STIVB ~Di quale disagio vai parlando? Essere alti ed essere drow ha tantissimi vantaggi!~
-= ~Non hai peli sui piedi.~
-= ~Non hai gambe e braccia a forma di coscia di pollo.~
-= ~Non hai il torcicollo derivante dal dover alzare la testa ogni volte che parli con qualcuno.~
-= ~Puoi fare dei passi incredibilmente lunghi.~
-= ~Puoi brandire quelle armi che prima erano più grandi di te.~
-= ~Puoi afferrare gli oggetti da un tavolo senza doverti mettere in punta di piedi.~
-= ~Puoi... Puoi fare un sacco di cose!~
-== BMAZZY ~(Sospira) Goditi quest'esperienza finchè puoi, allora. Presto riassumeremo le nostre vere sembianze, lo sai.~
-== TB#STIVB ~Heh. Questo è quello che *tu* pensi.~
-== BMAZZY ~Cosa vorresti dire?~
-== TB#STIVB ~Chiederò a quel simpatico draghetto di lasciare immutata la mia forma.~
-== BMAZZY ~Cosa?! Vorresti mantenere le fattezze di un drow? Sarebbe questo il tuo sogno nel cassetto?~
-== TB#STIVB ~Io non ho sogni nel cassetto, Mazzy. Preferisco tenerci la biancheria!~
-== BMAZZY ~Non è il momento di scherzare, Stivan! L'incantesimo lanciato da Aldalon non è altro che un'illusione. Non cambierà mai la tua natura di halfing!~
-= ~Hai pensato inoltre alle conseguenze che il tuo aspetto porterebbe con sè? Una volta tornati in superficie, le persone ne saranno terrorizzate e ti eviteranno. Alcuni cercheranno addirittura di ucciderti!~
-== TB#STIVB ~(Snort!) E allora? Lo scenario che dipingi non sarebbe poi tanto diverso da quello che ho vissuto sino ad oggi!~
-= ~Le persone mi hanno sempre evitato per il mio aspetto trasandato, come se avessi potuto tirarmi a lucido dopo la perdita di tutti i miei beni. Quanto ai tentativi di uccisione, sono innumerevoli le guardie che hanno cercato di aggredirmi e di sbattermi in prigione soltanto perchè dormivo per strada. "Dobbiamo mantenere l'ordine e la sicurezza" dicevano, quando i problemi del distretto erano altri!~
-= ~Ben venga se coloro che incontrerò avranno paura di me per le mie sembianze da drow. Il loro timore sarà sinonimo di rispetto!~
-== BMAZZY ~Stivan, calmati e ascoltami.~
-= ~Capisco meglio di chiunque altro quanto sia difficile per un halfing essere accettati dalla società. Agli occhi dei più non siamo altro che creature buffe e frivole, pavide e vigliacche. Eppure, io ho lottato perchè almeno nel mio mondo le cose cambiassero, perchè le persone mi vedessero per quel che sono veramente, non con le lenti dei pregiudizi che accompagnano il nome della nostra razza.~ 
-= ~E' stato un cammino lungo e periglioso, non lo nego. In più occasioni mi sono sentita demoralizzata, ma ogni volta sono riuscita ad andare avanti dicendomi: "Sei caduta sette volte? Rialzati otto". Alla fine, ho dimostrato a me stessa e agli altri di essere una persona forte e coraggiosa, leale e onesta.~
-== TB#STIVB ~...~
-= ~... Heh. Ci hai provato, Mazzy, ma non mi lascerò intortare dalla tua storiellina. Io manterrò quest'aspetto, che ti piaccia o no!~
-== BMAZZY ~Ragiona, Sti--~
-== TB#STIVB ~(Urla) Basta! Non voglio sentire altro!~
-EXIT
-
-Questo dovrebbe aver luogo una volta usciti dal Sottosuolo, dopo aver parlato con Elan. Il dialogo chiama in causa anche uno degli elfi nelle vicinanze (nel banter ho scritto ELFO per farti capire quali sarebbero le sue battute).
-
-CHAIN 
-IF ~InParty("Mazzy")
-See("Mazzy")
-!StateCheck("Mazzy",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanMazzyDrow","GLOBAL",1)~ THEN TB#STIVB
-~Vedi, Mazzy? *Vedi* come questi sbruffoni mi fissano? Se avessi mantenuto l'aspetto di un drow non mi guarderebbero con quell'espressione di sfacciata superiorità!~
-DO ~SetGlobal("tb#StivanMazzyDrow","GLOBAL",2)~
-== BMAZZY ~Hai ragione. Ti avrebbero piantato al suolo con lance e frecce.~
-= ~Osserva e impara.~
-= ~Ehi, tu! Posso sapere perchè guardi in quel modo il mio amico? Non ti hanno insegnato che è maleducato fissare le persone senza dir nulla?~
-== ELFO ~Guardo dove mi pare, donnetta.~
-== BMAZZY ~Ne sei sicuro? Vuoi che venga lì e ti faccia volgere lo sguardo altrove a suon di schiaffi?~
-== ELFO ~Ehm... No. Non ce n'è bisogno...~
-== BMAZZY ~Presto fatto.~ 
-= ~Sii coraggioso, Stivan. Anche gli halfing, nel cercare di scalare la più alta delle vette, possono raggiungerne la cima.~
-== TB#STIVB ~...~
-= ~(Arrossisce) Grazie, Mazzy.~
-== BMAZZY ~Figurati.~
-EXIT
-
 CHAIN 
 IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanAnomen","GLOBAL",3)~ THEN TB#STIVB 
+Global("tb#StivanAnomen","GLOBAL",3)~ THEN TB#STIVB  stivananomen4
 ~Non trovi che sia incredibile, Anomen? Chi avrebbe mai detto che quell'infido di Saerk fosse responsabile della mia rovina e di quella di tuo padre?~
 DO ~SetGlobal("tb#StivanAnomen","GLOBAL",4)~
 == BANOMEN ~La cosa non mi sorprende. Quell'uomo è sempre stato noto per la sua viltà e per il suo opportunismo. Com'è possibile che l'Ordine mi abbia cacciato per avere ucciso una simile feccia?~
@@ -1680,7 +1329,7 @@ IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanAnomen","GLOBAL",4)~ THEN EXTERN BANOMEN
+Global("tb#StivanAnomen","GLOBAL",4)~ THEN BANOMEN stivananomen5
 ~Temo di essere stato troppo precipitoso, l'altra volta. Non era mia intenzione offenderti. Forse è meglio che mi spieghi.~
 DO ~SetGlobal("tb#StivanAnomen","GLOBAL",5)~
 == TB#STIVB ~(Snort!) E' il minimo che tu possa fare!~
@@ -1700,7 +1349,7 @@ IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanAnomen","GLOBAL",5)~ THEN TB#STIVB
+Global("tb#StivanAnomen","GLOBAL",5)~ THEN TB#STIVB stivananomen6
 ~Uhm? Cosa stai rigirando tra le dita, Anomen?~
 DO ~SetGlobal("tb#StivanAnomen","GLOBAL",6)~
 == BANOMEN ~Questo? E' un anello. Un anello dal grande valore.~
@@ -1711,7 +1360,7 @@ DO ~SetGlobal("tb#StivanAnomen","GLOBAL",6)~
 = ~Mia sorella fu costretta a svolgere quei compiti che spettavano alla servitù. Lavare, preparare i pasti... Attività che erano al di sotto di lei e a cui non era abituata.~
 == TB#STIVB ~*Ahem* So bene quanto sia dura e amara la discesa verso la povertà.~
 == BANOMEN ~Ciò nonostante, non si lamentò mai della propria condizione. In seguito, scoprii che aveva addirittura venduto alcuni dei suoi gioielli e dei suoi capi per aiutare mio padre a fronteggiare i suoi problemi finanziari.~
-== TB#STIVB ~Come hai fatto a saperlo?
+== TB#STIVB ~Come hai fatto a saperlo?~
 == BANOMEN ~Umpf. Uno degli Scudieri dell'Ordine aveva comprato un anello per la sua amata e si stava vantando di averlo ottenuto ad un misero prezzo. Rimasi scioccato quando mi resi conto che si trattava dell'anello che mia madre aveva dato a Moira prima di morire.~
 = ~Ripresomi dallo sgomento iniziale, gli dissi di restituirmelo perchè apparteneva alla mia famiglia.~
 == TB#STIVB ~Trattandosi di un aspirante cavaliere perfettino, sono sicuro che te l'abbia dato subito.~
@@ -1720,8 +1369,8 @@ DO ~SetGlobal("tb#StivanAnomen","GLOBAL",6)~
 = ~In preda all'ira, l'ho colpito al volto con un pugno, e se gli altri scudieri non mi avessero fermato, avrei continuato ad infierire su di lui. Il suo viso era una maschera di sangue... In seguito seppi di avergli rotto il naso, ma in quel momento in me bruciava una rabbia, un furore così cieco...~
 = ~Il mio scoppio d'ira venne duramente punito dai miei superiori, ma in compenso riottenni l'anello di mia sorella. Lo trovai pochi giorni dopo nei miei alloggi.~
 == TB#STIVB ~Beh, deve valere molto per te se non hai esitato a mettere da parte la tua rigida disciplina per riaverlo. Lo terrai come ricordo di tua madre e di Moira?~
-== BANOMEN IF~Global("AnomenRomanceActive","GLOBAL",3)~ THEN ~No. Ho intenzione di donarlo a <CHARNAME> non appena troverò il momento giusto. Questo... Questo suggellerà il nostro amore.~
-== BANOMEN IF~!Global("AnomenRomanceActive","GLOBAL",3)~ THEN ~No. Lo donerò alla donna a cui mi legherò un domani, come simbolo del mio amore per lei.~
+== BANOMEN IF~Global("AnomenRomanceActive","GLOBAL",2)~ THEN ~No. Ho intenzione di donarlo a <CHARNAME> non appena troverò il momento giusto. Questo... Questo suggellerà il nostro amore.~
+== BANOMEN IF~!Global("AnomenRomanceActive","GLOBAL",2)~ THEN ~No. Lo donerò alla donna a cui mi legherò un domani, come simbolo del mio amore per lei.~
 == TB#STIVB ~Ah. Bene. Mi fa... piacere saperlo.~
 == BANOMEN ~Qualcosa non va?~
 == TB#STIVB ~No no. Mi sono soltanto accorto che stiamo parlando da molto. Non vorrei rallentare il resto del gruppo.~
@@ -1732,25 +1381,8 @@ CHAIN
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-HPLT("tb#Stiv",50%)
 CombatCounter(0)
-Global("tb#StivanAnomen","GLOBAL",6)~ THEN EXTERN BANOMEN
-~Non dovresti esporti così tanto in battaglia, halfling. Ti mancano tattica e disciplina, due abilità fondamentali negli scontri corpo a corpo.~ 
-DO ~SetGlobal("tb#StivanAnomen","GLOBAL",7)~
-= ~La prossima volta lascia a me gli avversari più robusti: saprò sistemarli a dovere. Ora, è meglio che ti curi.~
-== TB#STIVB ~Heh. Grazie.~
-= ~Comunque avevi ragione.~ 
-== BANOMEN ~Riguardo a cosa?~
-DO ~ActionOverride("Anomen",ForceSpell("tb#Stiv",CLERIC_CURE_MEDIUM_WOUNDS))~
-== TB#STIVB ~E' solo quando cominci a temere veramente la morte che impari ad apprezzare i chierici.~
-EXIT
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanAnomen","GLOBAL",7)~ THEN EXTERN BANOMEN
+Global("tb#StivanAnomen","GLOBAL",7)~ THEN BANOMEN stivanomen8
 ~Non va bene. Quando ti lanci verso un nemico, devi sempre tenere l'arma all'altezza del petto. In questo modo sarai pronto sia per l'attacco sia per un'eventuale difesa da colpi che ti venissero sferrati a sorpresa.~
 DO ~SetGlobal("tb#StivanAnomen","GLOBAL",8)~
 == TB#STIVB ~Uhm... Così?~
@@ -1764,57 +1396,12 @@ DO ~SetGlobal("tb#StivanAnomen","GLOBAL",8)~
 == TB#STIVB ~... Qualcuno mi aiuti!~
 EXIT
 
-Il dialogo che segue dovrebbe aver luogo presso l'Albero della Vita non appena il gruppo si accinge a dirigersi verso l'area in cui si trovano Ellesime ed Irenicus e solo se la romance tra CHARNAME e Anomen è attiva.
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-See("Player1")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-!StateCheck("Player1",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanAnomen","GLOBAL",8)~ THEN EXTERN BANOMEN
-~Pronto alla battaglia?~ 
-DO ~SetGlobal("tb#StivanAnomen","GLOBAL",9)~
-== TB#STIVB ~Heh. Puoi contarci.~
-== BANOMEN ~Fà tesoro dei miei insegnamenti. Dovremo fare il possibile per proteggere <CHARNAME> - impazzirei se le dovesse succedere qualcosa.~
-== TB#STIVB ~(Snort!) Sono sicuro che sia in grado di cavarsela da sola!~
-== BANOMEN ~Non ne dubito, ma è mio dovere difenderla ad ogni costo.~
-== TB#STIVB ~(Gasp!) Non puoi promettere una cosa simile!~
-== BANOMEN ~Non preoccuparti, amico mio. Ci vuole ben altro che un mago da strapazzo per mettermi in difficoltà. Ma basta indugiare: la battaglia ci aspetta.~
-== TB#STIVB ~<CHARNAME>...! <CHARNAME>, ti prego, non lasciare che Anomen muoia! Per favore!~
-END
-IF ~~ THEN REPLY ~Non gli accadrà nulla. Avremo la meglio su quel folle una volta per tutte.~ GOTO StivanAnomenLastTalk1-1
-IF ~~ THEN REPLY ~Darò tutta me stessa per proteggere ogni membro di questo gruppo. E' il minimo che possa fare dopo tutto il sostegno che mi avete dato.~ GOTO StivanAnomenLastTalk1-1
-IF ~~ THEN REPLY ~Tranquillo, Stivan: avrò un occhio di riguardo nei suoi confronti. E' troppo importante per me.~ GOTO StivanAnomenLastTalk1-1
-IF ~~ THEN REPLY ~Non so se riusciremo ad avere la meglio su Irenicus, ma fammi un favore: se dovesse succedermi qualcosa, non permettere che Anomen compia dei gesti avventati.~ GOTO StivanAnomenLastTalk1-2
-
-IF ~~ THEN BEGIN StivanAnomenLastTalk1-1
-SAY ~(Sniff) Perchè all'improvviso provo tutta questa paura? Mi stavo dirigendo intrepido verso lo scontro e adesso... Adesso ho il terrore che quel pazzoide possa farci del male!~
-= ~Se non dovessi farcela, vorrei... Vorrei riposare nella stessa cripta dove si trovano i miei familiari. Se invece dovesse succedere qualcosa ad Anomen e tu non avrai la decenza di accompagnarlo nella morte, ti ridurrò a fettine!~
-IF ~~ THEN EXIT
-END
-
-IF ~~ THEN BEGIN StivanAnomenLastTalk1-2
-SAY ~Quindi se tu dovessi morire mi autorizzi a tramortirlo e a riportarlo sano e salvo ad Athkatla? E' questo che intendi?~
-END
-IF ~~ THEN REPLY ~Esat--~ GOTO StivanAnomenLastTalk1-3
-IF ~~ THEN REPLY ~In realt--~ GOTO StivanAnomenLastTalk1-3
-IF ~~ THEN REPLY ~Non propr--~ GOTO StivanAnomenLastTalk1-3
-
-IF ~~ THEN BEGIN StivanAnomenLastTalk1-3
-SAY ~Yeah! Sei fenomenale, <CHARNAME>! Cosa aspetti lì imbambolata? Andiamo!~ 
-IF ~~ THEN EXIT
-END
-END
-
-
 CHAIN 
 IF ~InParty("Korgan")
 See("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanKorgan","GLOBAL",2)~ THEN TB#STIVB
+Global("tb#StivanKorgan","GLOBAL",2)~ THEN TB#STIVB stivankorgan3
 ~Uhm?~ 
 DO ~SetGlobal("tb#StivanKorgan","GLOBAL",3)~
 = ~Ti è caduto un libro dallo zaino, Korgan.~
@@ -1844,87 +1431,12 @@ svelti... Beh, fecero come facciamo noi".~
 == BEDWIN IF~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(Eccellente. Tutto è andato esattamente secondo i miei piani).~
 EXIT
 
-Questo lo farei partire nel Sottosuolo dopo il salvataggio di Phaere.
-
-CHAIN 
-IF ~InParty("Korgan")
-See("Korgan")
-!StateCheck("Korgan",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanKorgan","GLOBAL",3)~ THEN TB#STIVB
-~(Gasp!) Quelle creature erano *mostruose*! Mi fa male la testa... E' come se l'avessero presa a frustrate!~
-DO ~SetGlobal("tb#StivanKorgan","GLOBAL",4)~ 
-== BKORGAN ~Bah! Il Sottosuolo non è un posto adatto a femminucce come te! Fatti da parte e lascia che siano i veri guerrieri a fare il lavoro sporco!~
-== TB#STIVB ~Sono perfettamente capace di cavarmela, Korgan. Ho soltanto bisogno di tempo per abituarmi a queste nuove sembianze.~
-== BKORGAN ~L'aspetto non significa nulla, inutile mucchietto di sputi goblin. Anche con le fattezze di un lurido gambelunghe drow so bene dove affondare la mia ascia.~
-= ~Proprio qui... All'altezza del tuo collo!~
-== TB#STIVB ~Eeeekkkk!!!~
-== BKORGAN ~Har har! Guarda come corre, il bambinetto!~
-== BMAZZY IF~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Per Arvoreen, Korgan! Ti rendi conto che spaventare un membro del nostro gruppo è soltanto controproducente?~
-== BKORGAN IF~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Avanti, Mazzy... Goditi lo spasso!~
-== BMAZZY IF~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Ci sono degli sciocchi che sfruttano abilmente la loro stupidità. Mi hai appena dato l'ennesima prova di essere uno di questi.~ 
-EXIT
-
-CHAIN 
-IF ~InParty("Haerdalis")
-See("Haerdalis")
-!StateCheck("Haerdalis",CD_STATE_NOTVALID)
-HPLT("tb#Stiv",30%)
-CombatCounter(0)
-Global("tb#StivanHaerdalis","GLOBAL",3)~ THEN TB#STIVB
-~Io… Non mi sento molto bene…~
-DO ~SetGlobal("tb#StivanHaerdalis","GLOBAL",4)~
-== BHAERDA ~<CHARNAME>, spero che tu abbia intenzione di fare qualcosa per strappare il nostro amico dal gelido abbraccio della morte. Non dubito che sia una creatura troppo strana per vivere, ma è anche troppo rara per morire.~
-EXIT
-
-
-CHAIN 
-IF ~InParty("Minsc")
-See("Minsc")
-!StateCheck("Minsc",CD_STATE_NOTVALID)
-HPLT("tb#Stiv",40%)
-Global("tb#StivanMinsc","GLOBAL",2)~ THEN TB#STIVB
-~Accidenti. Il sangue delle mie ferite ha addirittura insozzato le mie piume.~
-DO ~SetGlobal("tb#StivanMinsc","GLOBAL",3)~
-== BMINSC ~Minsc ammira il tuo coraggio, ma non vuole che il suo piccolo amico si esponga così tanto nelle battaglie! Dovresti fare compagnia a Boo nelle retrofile, di tanto in tanto.~
-== TB#STIVB ~Perchè ti preoccupi di me, Minsc? Io... Non credo di meritare la tua apprensione.~
-== BMINSC ~Questo ranger e questo criceto credono che tu sia cattivo solo all'apparenza, e puoi star certo che hanno visto il male così tante volte da non potersi sbagliare!~
-= ~Boo aggiunge che ogni tanto ti meriteresti una lavata di capo però.~
-== TB#STIVB ~Heh. Forse ho sbagliato a giudicarti, ranger. Dopo tutto... Sei una brava persona.~
-EXIT
-
-Aggiungerei pertanto nel dialogo con la spada la condition !Global("tb#StivanMinsc","GLOBAL",3).
-
-Il dialogo che segue dovrebbe aver luogo nel Sottosuolo, sempre dopo che è trascorso un pò di tempo da quando il gruppo ha assunto le sembianze drow. Per evitare che dialoghi simili abbiano luogo uno vicino all'altro, magari si potrebbe mettere nelle conditions la Global legata ad una delle missioni che Phaere assegna al gruppo.
-Esempio: 
-Il banter con Mazzy dopo aver ucciso il beholder 
-Il banter con Minsc dopo che Phaere ha detto al gruppo di incontrare la Matrona Ardulace
-... e così via.
-Che ne pensi?
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("tb#StivanMinscDrow","GLOBAL",0)~ THEN EXTERN BMINSC
-~Minsc e Boo si stanno chiedendo come mai il loro piccolo amico sia così felice ultimamente.~
-DO ~SetGlobal("tb#StivanMinscDrow","GLOBAL",1)~
-== TB#STIVB ~Questo corpo è un vero spasso! Ogni semplice gesto, dal camminare al respirare, mi sembra nuovo e completamente diverso!~
-== BMINSC ~Minsc non si sente a suo agio nell'indossare i vestiti altrui. Inoltre dare i calci al male con queste gambine è molto più difficile!~
-== TB#STIVB ~E Boo cosa dice?~
-== BMINSC ~Boo teme che se i suoi piccoli amici lo vedessero così nero scapperebbero dalla paura.~
-= ~*Squeak!*~
-= ~Senti com'è preoccupato?~
-== TB#STIVB ~Heh. A quanto pare sono il solo ad essere così entusiasta di queste nuove sembianze. Meglio così... Non ci saranno altri che avanzeranno la mia stessa richiesta a quella simpatica lucertola troppo cresciuta!~
-EXIT
-
 CHAIN 
 IF ~InParty("Nalia")
 See("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanNalia","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanNalia","GLOBAL",0)~ THEN TB#STIVB stivannalia1
 ~Miss Nalia, lasciate che vi ripeta ancora una volta quanto sono onorato di viaggiare in vostra compagnia. Non c'è mendicante in questa città che non sia a conoscenza della vostra bontà d'animo!~
 DO ~SetGlobal("tb#StivanNalia","GLOBAL",1)~ 
 == BNALIA ~Per favore, non essere così formale nei miei confronti. Per quello ci sono già i servitori e le guardie del maniero. Piuttosto, potresti ripetermi come ti chiami?~
@@ -1943,8 +1455,6 @@ DO ~SetGlobal("tb#StivanNalia","GLOBAL",1)~
 = ~Heh. Adesso posso anche morire felice.~
 EXIT
 
-Questo dovrebbe aver luogo dopo che Nalia, uscita dal Maniero, chiede a CHARNAME di diventarne il Signore o, nel caso in cui non sia un combattente, di farla rimanere nel suo gruppo.
-
 CHAIN 
 IF ~InParty("Nalia")
 See("Nalia")
@@ -1952,9 +1462,10 @@ See("Player1")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 !StateCheck("Player1",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanNaliaAfterFatherDeath","GLOBAL",0)~ THEN TB#STIVB
+Global("tb#StivanNaliaFatherDeath","GLOBAL",0)
+Dead("TorGal")~ THEN TB#STIVB stivannalia2
 ~(Sniff) Miss Nalia... Io... Io sono *così* dispiaciuto per la vostra perdita!~
-DO ~SetGlobal("tb#StivanNaliaAfterFatherDeath","GLOBAL",1)~
+DO ~SetGlobal("tb#StivanNaliaFatherDeath","GLOBAL",1)~
 == BNALIA ~Non fare così, Stivan. E'... E' una cosa con cui dovrò imparare a convivere. Del resto, l'esperienza del lutto non mi è nuova. L' ho già conosciuta anni fa, quando persi mia Madre, sebbene allora fossi molto più piccola.~
 == BJAHEIR IF ~IsValidForPartyDialog("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~ La morte è parte della vita stessa. Ci auguriamo che quel momento non giunga mai, sebbene sia inevitabile.~
 == TB#STIVB ~Siete... Siete così regale nel vostro cordoglio! Questo... (Sniff) Questo mi fa piangere ancora di più!~
@@ -1982,48 +1493,48 @@ SAY ~Davvero? Quindi siamo entrambi orfani, anche se immagino di essere stata fo
 = ~Ora è meglio ritornare a ciò di cui ci stavamo occupando. Un pò di sana distrazione mi farà bene.~
 IF ~~ THEN EXIT
 END
+END
 
-IF ~~ THEN BEGIN AfterFatherDeath1-3
-SAY ~E' quello che farò. Ti ringrazio molto per la tua vicinanza, <CHARNAME>, e anche per la tua, Stivan.~
+CHAIN
+IF ~~ THEN BNALIA AfterFatherDeath1-3
+~E' quello che farò. Ti ringrazio molto per la tua vicinanza, <CHARNAME>, e anche per la tua, Stivan.~
 == TB#STIVB ~(Sniff) Dovere, Miss Nalia. Dovere...~
-IF ~~ THEN EXIT
-END
+EXIT
 
-IF ~~ THEN BEGIN AfterFatherDeath1-4
-SAY ~Le tue parole sono aspre e pungenti, ma veritiere. Andiamo, Stivan. Non facciamo perdere altro tempo a <CHARNAME>.~
+CHAIN
+IF ~~ THEN BNALIA AfterFatherDeath1-4
+~Le tue parole sono aspre e pungenti, ma veritiere. Andiamo, Stivan. Non facciamo perdere altro tempo a <CHARNAME>.~
 == TB#STIVB ~(Snort!) Sei un mostro! Come puoi essere così cattivo con Miss Nalia in un momento tanto difficile per lei? Se non avessi gli occhi offuscati dalle lacrime, ti avrei soffocato con ogni mia piuma!~
-IF ~~ THEN EXIT
-END
-END
-
-Questo dovrebbe aver luogo nel caso in cui CHARNAME non sia un combattente o non abbia accettato di diventare Signore del maniero di Nalia.
-(Ad un certo punto del dialogo, ci sono due diverse risposte di Nalia a seconda del caso).
+EXIT
 
 CHAIN 
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanNaliaAfterFatherDeath","GLOBAL",1)
-Global("tb#StivanNaliaAboutManorHouse","GLOBAL",0)~ THEN EXTERN BNALIA
+Global("tb#StivanNaliaFatherDeath","GLOBAL",1)
+Global("tb#StivanNaliaManor","GLOBAL",0)
+Global("KeepPlot","GLOBAL",0)~ THEN BNALIA stivannaliakeep
 ~Non avrei mai pensato di sentire la mancanza del mio maniero, eppure è così. E pensare che sino a non molto tempo fa mi sentivo soffocare tra le sue mura e non desideravo altro che scapparne!~
-DO ~SetGlobal("tb#StivanNaliaAboutManorHouse","GLOBAL",1)~
+DO ~SetGlobal("tb#StivanNaliaManor","GLOBAL",1)~
 == TB#STIVB ~E' normale che vi manchi. Grande o piccola, lussuosa o fatiscente, la casa resta pur sempre il luogo dei nostri affetti. Voi sapete come ho perso la mia?~
 == BNALIA ~No, non me l'hai mai raccontato. Cos'è successo?~
 == TB#STIVB ~Nulla di paragonabile all'invasione che avete subito voi.~
 = ~Quando i miei familiari vennero uccisi, chiesi aiuto al socio in affari di mio padre perchè non avevo idea di come gestire il denaro e i nostri vigneti. Si rivelò un errore fatale, in quanto quell'infame si impossessò dei miei atti di proprietà ed esibì ai magistrati dei falsi documenti in cui appariva come l'intestatario di quelli che in realtà erano i beni della mia famiglia.~
 = ~La rovina giunse rapida, ma... *Ahem* Non è questo il punto.~
 = ~Io ho cercato di fare il possibile per mantenere il possesso della mia casetta. Perchè voi non avete fatto lo stesso con il vostro maniero?~ 
-== BNALIA IF~Class("Player1",FIGHTER)~ THEN~Non avevo nessuna speranza. Se <CHARNAME> fosse stato un combattente, allora l'avrei potuto nominare <PRO_LADYLORD> delle mie terre in modo che se ne prendesse cura; tuttavia, dal momento che <PRO_HESHE> è un <CLASS>, questa possibilità è sfumata.~
-== BNALIA ~Non mi sono arresa subito. Avevo chiesto a <CHARNAME> di diventare <PRO_LADYLORD> delle mie terre, ma <PRO_HESHE> ha rifiutato.~
+== BNALIA IF ~!Class(Player1,FIGHTER_ALL)~ THEN ~Non avevo nessuna speranza. Se <CHARNAME> fosse stato un combattente, allora l'avrei potuto nominare <PRO_LADYLORD> delle mie terre in modo che se ne prendesse cura; tuttavia, dal momento che <PRO_HESHE> è un <CLASS>, questa possibilità è sfumata.~
+== BNALIA IF ~Class(Player1,FIGHTER_ALL)~ THEN ~Non mi sono arresa subito. Avevo chiesto a <CHARNAME> di diventare <PRO_LADYLORD> delle mie terre, ma <PRO_HESHE> ha rifiutato.~
 == TB#STIVB ~Ma perchè avete riposto tutte le vostre speranze in <PRO_HESHE>? Ci sono tanti altri guerrieri che non avrebbero esitato a cogliere una simile opportunità. Quel tizio della palizzata, ad esempio?~
 == BNALIA ~Anch'io avevo pensato al Capitano Arat, ma ha rifiutato la mia proposta.~
 == TB#STIVB ~Perchè?~
 == BNALIA ~Si ritiene in parte responsabile della morte di mio padre. E' convinto di non aver fatto abbastanza per salvarlo.~
 == TB#STIVB ~Capisco.~
-== TB#STIVB IF~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~E cosa mi dite di Korgan?~
-== BKORGAN IF~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~(Rutto) Eh?~
-== TB#STIVB IF~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~... Come non detto.~
+BRANCH ~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ BEGIN
+== TB#STIVB ~E cosa mi dite di Korgan?~
+== BKORGAN ~(Rutto) Eh?~
+== TB#STIVB ~... Come non detto.~
+END
 == TB#STIVB ~*Ahem* E a me? Non avete pensato a me?~
 == BNALIA ~... A te?~
 == TB#STIVB ~Sì! Immaginatevi la scena: il vostro maniero, ritornato al suo antico splendore sotto la guida illuminata di Padron Stivan. Una fortezza di pace e di prosperità, dove le catapulte entrano in azione soltanto per abbattere i pennuti a me odiosi.~
@@ -2040,9 +1551,10 @@ IF ~InParty("Nalia")
 See("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanNaliaAfterPrison","GLOBAL",0)~ THEN TB#STIVB
+Global("NaliaIsaeaPlotDone","GLOBAL",1)
+Global("tb#StivanNaliaPrison","GLOBAL",0)~ THEN TB#STIVB stivannaliaprison
 ~Ho sentito molto la vostra mancanza mentre eravate in arresto, Miss Nalia. E' stato peggio del rimanere a corto di cacca di gabbiano!~
-DO ~SetGlobal("tb#StivanNaliaAfterPrison","GLOBAL",1)~
+DO ~SetGlobal("tb#StivanNaliaPrison","GLOBAL",1)~
 == BNALIA ~Ehm... Immagino che dovrei esserne lusingata...~
 == TB#STIVB ~Qualcuno ha forse osato farvi del male? Se così fosse, non esitate a dirmelo: Stivan il Cacciatore provvederà a punire ogni insolenza mossa alla vostra persona!~
 == BNALIA ~Nessuna insolenza, Stivan, anzi. Ho imparato qualcosa di utile. C'erano alcuni uomini - Ladri Tenebrosi, a giudicare dai cappucci - con cui ho parlato di trappole e trucchetti. Mi hanno consigliato di stare attenta ad un nuovo congegno ideato dalle guardie di Athkatla. Si tratta di un dispositivo a lame capace di tagliare le mani se non viene correttamente disattivato.~
@@ -2069,53 +1581,31 @@ DO ~SetGlobal("tb#StivanNaliaAfterPrison","GLOBAL",1)~
 == BNALIA ~Oh no! Il viso no!~
 EXIT
 
-
-
-
-
-
+/*
+// ?
 CHAIN 
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-AreaType(OUTDOOR)
-Global("FoughtFaldorn","LOCALS",1)
-Global("tb#StivanCernd","GLOBAL",0)~ THEN EXTERN BCERND
-~Come un insidioso manto di nubi oscure si allontana dopo la tempesta, così la minaccia di Faldorn è stata scongiurata per sempre.~
-= ~Ciò nonostante, pare che la Natura sia ingiustamente accusata di un altro crimine. Dico bene, Stivan?~
-DO ~SetGlobal("tb#StivanCernd","GLOBAL",1)~
-== TB#STIVB ~Cos'è questo, un tentativo di socializzazione? Spiacente, ma non ho la benchè minima intenzione di sprecare fiato con te.~
-= ~Aspetta un momento... Come fai a sapere il mio nome?~
-== BCERND ~Non ha importanza. In qualità di druido, è mio dovere intervenire per ripristinare l'Equilibrio e aprire i tuoi occhi alla luce della verità. Lungo il nostro cammino crescerai, e insieme daremo senso e significato alle tue tragedie.~
-== TB#STIVB ~(Snort!) Non c'è bisogno di ricorrere a simili espedienti verbali per darmi dell'immaturo! Non sono uno stupido, e so riconoscere un insulto!~
-== BCERND ~Ogni creazione della Madre è o è stata immatura. Esistono germogli che non giungono a fiorire? O alberi che non fruttificano?~
-== TB#STIVB ~Chiudi la bocca, druido! Stà zitto!!~
-== BCERND ~Presto inizieremo il nostro percorso. Molto presto.~
-EXIT
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("CerndBeggar","GLOBAL",2)
-Global("tb#StivanCernd","GLOBAL",1)~ THEN TB#STIVB
-~Heh. Pare che le nubi siano tornate, druido, ma questa volta per addensarsi sulla tua testa. Sbaglio o la patata bollente che hai tra le mani ti impedirà di seccarmi per un pò con i tuoi stupidi discorsi?~
-DO ~SetGlobal("tb#StivanCernd","GLOBAL",2)~
-== BCERND ~Ti sbagli. Non posso permettere che la mia vita personale intralci i miei doveri di druido. Il nostro cammino comincia adesso.~
-== TB#STIVB ~Oh, no!~
-== BCERND ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
-== TB#STIVB ~(Snort!) Stai abusando della mia pazienza, tu! Chi diavolo credi di essere per esigere che ti racconti la storia dell'uccisione dei miei familiari?~
-== BCERND ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti della conoscenza spingano le tue vele verso il mare della conoscenza.~
-== TB#STIVB ~Ora capisco dove vuoi arrivare! Tu... Stai mettendo in discussione la colpevolezza dei gabbiani!~
-== BCERND ~Dei semplici uccelli marini non potrebbero mai macchiarsi di un crimine come l'uccisione di un'innocente famiglia. Non è nella loro natura.~
-== TB#STIVB ~Evidentemente quel giorno devono essere caduti in preda a degli istinti carnivori, dato che li ho visti pasteggiare con i resti dei miei familiari!~
-== BCERND ~Esatto, Stivan. Tu sostieni di averli visti mentre si cibavano, non mentre uccidevano i tuoi genitori e i tuoi fratelli.~
+Global("tb#StivanAerie", "GLOBAL",1)~ THEN BAERIE
+~Oh! Stivan, una farfalla si è posata sui tuoi capelli!~
+DO ~SetGlobal("tb#StivanAerie", "GLOBAL",2)~
 == TB#STIVB ~...~
-= ~... Non cercare di ingannarmi con subdoli giri di parole! Sono stati i gabbiani ad ucciderli e a profanare i loro corpi! Sono stati loro!!~
-== BCERND ~Il seme del dubbio è stato gettato, e a tempo debito metterà radici.~
+= ~... Ora non più.~
+== BAERIE ~NO! L'hai... L'hai uccisa! Perchè? Perchè l'hai fatto?!~
+== TB#STIVB ~La prossima volta non scambierà più la mia chioma per un fiore.~
+== BAERIE ~C-come potrà esserci un'altra volta se l'hai uccisa? Sei... Sei un mostro!~
+== TB#STIVB ~Visto che questa farfalla ti stava particolarmente a cuore, prendine pure i resti e seppelliscili. Tieni: sono qui nella mia mano. Penso che faticherai non poco a ricomporli...~
+== BAERIE ~AHHH! N-non avvicinarti!~
+== TB#STIVB ~Ebbene? Non vuoi più i resti di questa creaturina dalle ali sfaldate? A proposito, che ironica coincidenza: è la stessa fine che hanno fatto le tue, giusto?~
+== BAERIE ~N-no!~
+== TB#STIVB ~Hai ragione: sono appassite, sono marcite!~
+== BAERIE ~~(Singhiozzando) S-smettila!~
+== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Aerie, ignoralo. L'indifferenza è il miglior atteggiamento da assumere in questi casi. Quanto a te, Stivan, stai iniziando a stamcarmi col tuo comportamento infantile.~
+== TB#STIVB ~Lo sai che non ricresceranno più?~
+== BAERIE ~Ahhh!~
+== TB#STIVB ~"E fu così che Aerie scoppiò in lacrime e corse via". Quando voglio sbarazzarmi di una persona fastidiosa so essere *così* crudele... Mwahahahah!~
+== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~
 EXIT
-
 */
-

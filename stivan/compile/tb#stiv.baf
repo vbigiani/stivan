@@ -245,7 +245,7 @@ END
 
 IF
 	AreaCheck("AR0502")
-	Global("EnteredTanner2","AR0502",0)
+	Global("tb#StivanEnteredTanner2","AR0502",0)
 THEN
 	RESPONSE #100
 		StartDialogueNoSet(Player1)
@@ -304,4 +304,189 @@ THEN
 		ActionOverride("Edwin",SetSequence(SEQ_READY))
 		Wait(1)
 		ActionOverride("Edwin",StartDialogueNoSet("tb#stiv"))
+END
+
+IF
+	InParty("Haerdalis")
+	See("Haerdalis")
+	!StateCheck("Haerdalis",CD_STATE_NOTVALID)
+	AreaType(OUTDOOR)
+	CombatCounter(0)
+	Global("tb#StivanHaerdalisBesamen","GLOBAL",0)
+	OR(2)
+	Global("BesamenDead","GLOBAL",1)
+	Global("BesamenDead","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("heardalis")
+END
+
+IF
+	InParty("Jaheira")
+	See("Jaheira")
+	!StateCheck("Jaheira",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanJaheira","GLOBAL",0)
+	AreaCheck("AR2000")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Jaheira")
+END
+
+IF
+InParty("Jaheira")
+See("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
+Global("JaheiraCursed","GLOBAL",3)
+CombatCounter(0)
+Global("tb#StivanJaheiraCursed","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Jaheira")
+END
+
+IF
+	InParty("Valygar")
+	See("Valygar")
+	!StateCheck("Valygar",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanValygarSphere","GLOBAL",0)
+	Dead("obshal04")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Valygar")
+END
+
+IF
+	InParty("Mazzy")
+	See("Mazzy")
+	!StateCheck("Mazzy",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanMazzyObshal01","GLOBAL",0)
+	Dead("obshal01")
+	Dead("obshal02")
+	Dead("obshal03")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Mazzy")
+END
+
+IF
+	InParty("Keldorn")
+	See("Keldorn")
+	!StateCheck("Keldorn",CD_STATE_NOTVALID)
+	AreaCheck("AR0202")
+	CombatCounter(0)
+	Global("tb#StivanKeldornStink","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Keldorn")
+END
+	
+IF
+	InParty("Mazzy")
+	See("Mazzy")
+	!StateCheck("Mazzy",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanMazzyDragon","GLOBAL",0)
+	AreaCheck("ar1402")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Mazzy")
+END
+
+IF
+	InParty("Mazzy")
+	See("Mazzy")
+	!StateCheck("Mazzy",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanMazzyDrow","GLOBAL",0)
+	GlobalGT("PhaereJob","GLOBAL",5)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("mazzy")
+END
+
+IF
+	InParty("Mazzy")
+	See("Mazzy")
+	!StateCheck("Mazzy",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanMazzyDrow","GLOBAL",1)
+	AreaCheck("ar2500")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("mazzy")
+END
+
+IF
+	InParty("Haerdalis")
+	See("Haerdalis")
+	!StateCheck("Haerdalis",CD_STATE_NOTVALID)
+	HPPercentLT("tb#Stiv",30)
+	CombatCounter(0)
+	Global("tb#StivanHaerdalis","GLOBAL",3)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("haerdalis")
+END
+
+IF
+	InParty("Minsc")
+	See("Minsc")
+	!StateCheck("Minsc",CD_STATE_NOTVALID)
+	HPPercentLT("tb#Stiv",40)
+	Global("tb#StivanMinsc","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Minsc")
+END
+
+IF
+	InParty("tb#Stiv")
+	See("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("CerndBeggar","GLOBAL",2)
+	Global("tb#StivanCernd","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("cernd")
+END
+
+IF
+	InParty("Anomen")
+	See("Anomen")
+	!StateCheck("Anomen",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("AnomenDecide","GLOBAL",4)
+	Global("tb#AnomenStivanSaerk","GLOBAL",0)
+	AreaCheck("AR1002")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Anomen")
+END
+
+IF
+InParty("Anomen")
+See("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#AnomenStivanSaerk","GLOBAL",1)
+AreaCheck("AR1000")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Anomen")
+END
+
+IF
+	InParty("Cernd")
+	See("Cernd")
+	!StateCheck("Cernd",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanCernd","GLOBAL",3)
+	GlobalGT("AsylumPlot","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Cernd")
 END

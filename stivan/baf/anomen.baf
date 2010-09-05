@@ -1,0 +1,25 @@
+IF
+	InParty("tb#Stiv")
+	See("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	HPPercentLT("tb#Stiv",50)
+	CombatCounter(0)
+	Global("tb#StivanAnomen","GLOBAL",6)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("tb#stiv")
+END
+
+IF
+	InParty("tb#Stiv")
+	See("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanAnomen","GLOBAL",8)
+	Global("AnomenRomanceActive","GLOBAL",2)
+	AreaCheck("ar2804")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("tb#stiv")
+END
+	
