@@ -1,0 +1,31 @@
+IF
+	Global("FoundScroll","LOCALS",1)
+	Global("tb#StivanEdwinScroll","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#StivanEdwinScroll","GLOBAL",1)
+END
+
+IF
+	PartyRested()
+	InParty("Edwin")
+	InParty("tb#Stiv")
+	!StateCheck("Edwin",CD_STATE_NOTVALID)
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("TalkedDegardan","GLOBAL",3)
+	Global("EdwinComplainsOfStivan","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	PartyRested()
+	Global("tb#StivanEdwinaDrunk","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",3)
+		StartDialogueNoSet("tb#stiv")
+END

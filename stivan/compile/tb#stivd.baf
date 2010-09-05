@@ -1,0 +1,23 @@
+IF
+	InParty("Edwin")
+	See("Edwin")
+	!StateCheck("Edwin",CD_STATE_NOTVALID)
+	Gender("Edwin",Female)
+	CombatCounter(0)
+	Global("tb#StivanEdwinaDrunk","GLOBAL",0)
+	OR(10)
+	AreaCheck("AR0313") // The Thumb
+	AreaCheck("AR0406") // Copper Coronet
+	AreaCheck("AR0509") // Five Flagons
+	AreaCheck("AR0513") // Delosar
+	AreaCheck("AR0522") // Five Flagons
+	AreaCheck("AR0704") // Mithrest
+	AreaCheck("AR0709") // Den of 7 Vales
+	AreaCheck("AR1105") // Umar Inn
+	AreaCheck("AR1602") // Brynnlaw Inn
+	AreaCheck("AR2010") // Trademeet Inn
+THEN
+	RESPONSE #100
+		SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",1)
+		StartDialogueNoSet("edwin")
+END

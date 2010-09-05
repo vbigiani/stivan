@@ -565,8 +565,8 @@ INTERJECT_COPY_TRANS VICONIJ 122 tb#stivanViconij-122
 ~Sono stanca di avere noie con gli abitanti della Superficie, Stivan. Che faccia quel che vuole... La sua paura mi diverte.~
 END
 
-INTERJECT C6ELHAN2 62 tb#stivanC6elhan2-62
-== TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+INTERJECT C6ELHAN2 63 tb#stivanC6elhan2-63
+== TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN
 ~<CHARNAME>! Perchè hai permesso una cosa simile?!~
 END
 IF ~~ THEN REPLY ~Non sono tenuto a spiegarti le mie ragioni, Stivan.~ EXTERN TB#STIVJ ViconiaGeas1-1
@@ -578,7 +578,7 @@ IF ~~ THEN REPLY ~Come tu stesso puoi vedere, questi elfi sono tutto fuorchè col
 APPEND TB#STIVJ
 IF ~~ ViconiaGeas1-1
 SAY ~Non... Non sei tenuto a spiegarmi le tue ragioni? Bene! Benissimo! Quando mi metterai un cappio intorno alla gola mi sforzerò di non chiederti il perchè!~
-COPY_TRANS C6ELHAN2 62
+COPY_TRANS C6ELHAN2 63
 END
 
 IF ~~ ViconiaGeas1-2
@@ -595,7 +595,7 @@ END
 
 IF ~~ ViconiaGeas1-4
 SAY ~Bah! La tua mente è più contorta di quella di un gabbiano!~
-COPY_TRANS C6ELHAN2 62
+COPY_TRANS C6ELHAN2 63
 END
 END
 
@@ -608,7 +608,7 @@ IF ~~ THEN TB#STIVJ ViconiaGeas1-5
 = ~Cosa *diavolo* stai facendo?! Toglimi le mani di dosso, iblith!~
 == TB#STIV ~Heh. Ti voglio bene, Viccy.~
 == VICONIJ~... Shar mi sia testimone, <CHARNAME>: pagherai per ogni affronto inflittomi dal piccoletto. Possano le tenebre inghiottirmi se non terrò fede al mio giuramento!~
-COPY_TRANS C6ELHAN2 62
+COPY_TRANS C6ELHAN2 63
 
 INTERJECT MAZZY 25 tb#StivanMazzy-25
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
@@ -1182,8 +1182,22 @@ INTERJECT_COPY_TRANS ISAEA 29 tb#StivanIsaea-29
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non possiamo permettere che Miss Nalia cada nelle mani di quel manigoldo! Dobbiamo liberarla! O invocare l'ira dei gabbiani su quell'infame! <CHARNAME>, dobbiamo fare qualcosa!~
 END
 
-INTERJECT_COPY_TRANS EDWIN 12 tb#StivanEdwin-12
+INTERJECT EDWIN 12 tb#StivanEdwin-12
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Se vuoi che mi occupi io di questo recupero, <CHARNAME>, non devi far altro che chiedere.~
+END
+IF ~~ THEN REPLY ~Grazie, ma ci penso io.~ EXTERN tb#stivj tb#StivanEdwin-12a
+IF ~~ THEN DO ~SetGlobal("#tbStivanMarcus","GLOBAL",1)~ REPLY ~Grazie, mi hai tolto la preoccupazione di doverlo fare io stesso.~ EXTERN tb#stivj tb#StivanEdwin-12b
+
+APPEND TB#STIVJ
+IF ~~ THEN tb#StivanEdwin-12a
+SAY ~Tornerai a chiedermelo in ginocchio, lo so!~
+COPY_TRANS EDWIN 12
+END
+
+IF ~~ THEN tb#StivanEdwin-12b
+SAY ~Yeah! Andiamo la', allora!~
+COPY_TRANS EDWIN 12
+END
 END
 
 INTERJECT MARCUS 0 tb#StivanMarcus-0
@@ -1226,3 +1240,84 @@ INTERJECT trgyp02 2 tb#StivanTrgyp02-2
 == tb#stivj ~Oh, no! Non voglio restare di nuovo solo e senza amici! Sei sicura di aver visto bene tra i peli della mia mano?~
 EXIT
 
+
+
+
+
+///////////////////////////////////////////
+// Scripted banters
+///////////////////////////////////////////
+
+CHAIN 
+IF ~PartyRested()
+InParty("Viconia")
+See("Viconia")
+!StateCheck("Viconia",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanViconia","GLOBAL",1)~ THEN TB#STIVJ stivan-viconia-2
+~Viconia, mia cara Viconia... Dormito bene?~
+DO ~SetGlobal("tb#StivanViconia","GLOBAL",2)~
+== VICONIJ ~Chiudi la bocca, stupido essere di Superficie. La tua voce è uno strazio per le mie orecchie.~
+== TB#STIVJ ~Heh. Vedo che oggi sei di ottimo umore, Viccy.~
+== VICONIJ ~*Non* chiamarmi con quel ridicolo nome, idiota!~
+== TB#STIVJ ~Come desideri, Viccy.~
+EXIT
+
+CHAIN 
+IF ~InParty("Anomen")
+See("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+Global("AnomenIsNotKnight","GLOBAL",0)
+OR(2)
+AreaCheck("AR0901")
+AreaCheck("AR0902")
+CombatCounter(0)
+Global("tb#StivanAnomenAboutFaith","GLOBAL",0)~ THEN TB#STIVJ stivan-anomen-temple
+~Ogni volta che entro in simili posti mi sento male. La visione di questi sciocchi fedeli prostrati in adorazione è a dir poco penosa!~
+DO ~SetGlobal("tb#StivanAnomenAboutFaith","GLOBAL",1)~
+== ANOMENJ ~Al contrario, la devozione che provano nei confronti del loro dio è lodevole. Nulla di cui tu sia capace.~
+== TB#STIVJ ~Per fortuna. Che cosa ne ricaverei, Anomen? Illusioni? False speranze? Qualche incantesimo di convenienza?~
+== ANOMENJ ~Fede. Nei momenti di maggiore difficoltà, la fede dà coraggio e determinazione, speranza e conforto; ti offre un appiglio a cui aggrapparti per andare avanti.~
+== TB#STIVJ ~Non vedo di che utilità possa essere per noi poveri eretici. In questo modo ne traete vantaggio soltanto voi guaritori.~
+== ANOMENj ~Quando sei sul punto di esalare l'ultimo respiro in battaglia è un chierico a salvarti la pelle. Ti è forse sfuggito, ladruncolo?~
+== TB#STIVJ ~Hai ragione. La prossima volta mi lascerò morire.~
+== ANOMENJ ~Umpf. In quel momento non sarai così spavaldo. Fidati.~
+EXIT
+
+CHAIN 
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+Global("FollowedGarren","GLOBAL",1)
+CombatCounter(0)
+Global("tb#StivanKeldornAboutGarren","GLOBAL",0)~ THEN KELDORJ stivanKeldornGarren
+~Per fortuna quest'uomo si è offerto di mettere una buona parola su di noi. Sarebbe stato spiacevole doversi scontrare con dei compagni dell'Ordine.~
+DO ~SetGlobal("tb#StivanKeldornAboutGarren","GLOBAL",1)~
+== TB#STIVJ ~Spiacevole? Questo è il sogno di una vita! Ho sempre desiderato avere alle calcagne una dozzina di paladini!~
+== KELDORJ ~Una fantasia piuttosto bizzarra, halfing. Grazie a Torm rimarrà per sempre tale.~
+== TB#STIVJ ~Credi che il tuo dio mi impedirà di tagliuzzare i tuoi amichetti?~
+== KELDORJ ~Credo che sarà sufficiente il buon senso di <CHARNAME>. Non è forse vero, mio giovane amico?~
+END
+IF ~~ THEN REPLY ~Verissimo, Keldorn. Non ho intenzione di scontrarmi con i membri del Cuore Radioso.~ EXTERN TB#STIVJ StivanKeldorn1-1
+IF ~~ THEN REPLY ~Accetterò l'aiuto di Garren, se è questo che intendi.~ EXTERN TB#STIVJ StivanKeldorn1-1
+IF ~~ THEN REPLY ~In realtà l'idea di Stivan non è niente male. Penso che sarebbe divertente massacrare qualche paladino.~ EXTERN TB#STIVJ StivanKeldorn1-2
+IF ~~ THEN REPLY ~Io andrò per la mia strada, Keldorn. Se i tuoi compagni mi metteranno i bastoni tra le ruote, saprò come difendermi.~ EXTERN TB#STIVJ StivanKeldorn1-2
+
+APPEND TB#STIVJ
+IF ~~ StivanKeldorn1-1
+SAY ~Dannati guastafeste! Se non sarà la mia lama a farli a fettine, ci penseranno i gabbiani con i loro becchi! (Urla)~
+IF ~~ THEN EXIT
+END
+
+IF ~~ StivanKeldorn1-2
+SAY ~Yeah! Così si fa!~
+IF ~~ EXTERN KELDORJ StivanKeldorn1-3
+END
+END
+
+APPEND KELDORJ
+IF ~~ THEN StivanKeldorn1-3
+SAY ~Mi auguro che le tue parole non vengano seguite dai fatti, <CHARNAME>. Sai bene che non esiterei a rivoltarmi contro di te se dovessi aggredire i miei compagni.~
+IF ~~ THEN EXIT
+END
+END

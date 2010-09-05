@@ -84,7 +84,7 @@ END
 
 IF ~~ THEN BEGIN PD3-2
 SAY ~...~
-= ~... Il mio silenzio dovrebbe essere più che eloquente.~
+= ~... Non ho altro da aggiungere.~ 
 IF ~~ THEN EXIT
 END
 

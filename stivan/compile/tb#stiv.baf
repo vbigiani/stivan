@@ -250,3 +250,58 @@ THEN
 	RESPONSE #100
 		StartDialogueNoSet(Player1)
 END
+
+IF
+	PartyRested()
+	InParty("Viconia")
+	See("Viconia")
+	!StateCheck("Viconia",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanViconia","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Viconia")
+END
+
+IF
+	InParty("Anomen")
+	See("Anomen")
+	!StateCheck("Anomen",CD_STATE_NOTVALID)
+	Global("AnomenIsNotKnight","GLOBAL",0)
+	OR(2)
+	AreaCheck("AR0901")
+	AreaCheck("AR0902")
+	CombatCounter(0)
+	Global("tb#StivanAnomenAboutFaith","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("Anomen")
+END
+
+IF
+	Global("TB#StivanSusanScene","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		SetGlobal("TB#StivanSusanScene","GLOBAL",2)
+		SetSequence(SEQ_CAST)
+		Wait(1)
+		CreateCreature("tb#ssus",[-1.-1],0)
+		SetSequence(SEQ_READY)
+		Wait(1)
+		ActionOverride("tb#ssus",StartDialogueNoSet("Edwin"))
+END
+
+IF
+	Global("TB#StivanSusanScene","GLOBAL",3)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		SetGlobal("TB#StivanSusanScene","GLOBAL",4)
+		ActionOverride("Edwin",SetSequence(SEQ_CAST))
+		Wait(1)
+		ActionOverride("tb#ssus",Polymorph(RAT))
+		ActionOverride("Edwin",SetSequence(SEQ_READY))
+		Wait(1)
+		ActionOverride("Edwin",StartDialogueNoSet("tb#stiv"))
+END

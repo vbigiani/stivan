@@ -1,0 +1,12 @@
+IF
+	InParty("tb#Stiv")
+	See("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	Global("FollowedGarren","GLOBAL",1)
+	CombatCounter(0)
+	Global("tb#StivanKeldornAboutGarren","GLOBAL",0)
+	AreaCheck("AR1200")
+THEN
+RESPONSE #100
+	StartDialogueNoSet("tb#stiv")
+END
