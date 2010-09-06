@@ -210,10 +210,12 @@ COPY_EXISTING ~tooltip.2da~ ~override~
 	REPLACE ~POO_BLIND~ ~Cecita'~
 	REPLACE ~POO_EXPLOSION~ ~Esplosione Alchemica~
 	
-/* CRE file shamelessly copied from PPG's BanterPack */
-COPY ~stivan/cre/tb#slil.cre~ ~override~
+COPY_EXISTING ~sword01.cre~ ~override/tb#slil.cre~
 	SAY NAME1 ~Lilarcor~
 	SAY NAME2 ~Lilarcor~
+	WRITE_ASCII 0x248 ~tb#slil~ #8 // override script
+	WRITE_ASCII 0x280 ~tb#slil~ #32 // name
+	WRITE_ASCII 0x2cc ~tb#slil~ #8 // dialogue
 	
 COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	WRITE_LONG 0x14  0 // xp value
