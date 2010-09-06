@@ -1,17 +1,11 @@
 ACTION_IF FILE_EXISTS ~override/tb#stiva.txt~ THEN BEGIN
 FAIL ~Il mod e' gia' installato.~
 END
-//this file will help other mods detect if component is installed.
 
+//this file will help other mods detect if component is installed.
 COPY_EXISTING ~sw1h01.itm~ ~override/tb#stiva.txt~
 
-APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
-
-COMPILE ~stivan/compile~
-COMPILE ~stivan/d/pid.d~ // must be last
-COPY ~stivan/copy~ ~override~
-
-// instant BAMs
+// Create resources
 COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2i.bam~ // Yoshimo's +3 Katana
               ~imisc22.bam~ ~override/tb#surni.bam~ // urn
               ~cmisc22.bam~ ~override/tb#surnc.bam~ // urn
@@ -21,14 +15,52 @@ COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2i.bam~ // Yoshimo's +3 Katana
               ~cmisc22.bam~ ~override/tb#srplc.bam~ // red plume
               ~imisc22.bam~ ~override/tb#spooi.bam~ // poo
               ~cmisc22.bam~ ~override/tb#spooc.bam~ // poo
+	
+COPY_EXISTING ~skelwa.cre~ ~override/tb#sskm.cre~
+	SAY NAME1 ~Scheletro Mago~
+	SAY NAME2 ~Scheletro Mago~
+	WRITE_ASCII 0x2cc ~tb#sskm~ #8
+	
+COPY_EXISTING ~skelwa.cre~ ~override/tb#sskc.cre~
+	SAY NAME1 ~Scheletro Chierico~
+	SAY NAME2 ~Scheletro Chierico~
+	WRITE_ASCII 0x2cc ~tb#sskc~ #8
+
+COPY_EXISTING ~skelwa03.cre~ ~override/tb#sskf.cre~
+	SAY NAME1 ~Scheletro Sergente~
+	SAY NAME2 ~Scheletro Sergente~
+	WRITE_ASCII 0x2cc ~tb#sskf~ #8
+
+
+			  
+// compile BAFs and Ds			  
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
+
+COMPILE ~stivan/compile~
+COMPILE ~stivan/d/pid.d~ // must be last
 
 ACTION_BASH_FOR ~stivan/baf~ ~^.*\.baf~ BEGIN
 	EXTEND_TOP ~%BASH_FOR_RES%.bcs~ ~%BASH_FOR_FILESPEC%~
 END
 
+
+
+// copy static resources
+
+COPY ~stivan/copy~ ~override~
+
+
+
+// Add map notes
+
 COPY_EXISTING ~ar0500.are~ ~override~
 	ADD_MAP_NOTE #4845 #2049 gray ~Stivan, il Cacciatore~
 
+
+
+// Create new CREs
+	
 COPY_EXISTING ~bhalf1.cre~ ~override~
 	WRITE_ASCIIT 0x248 ~tb#stdes~
 
@@ -64,20 +96,80 @@ COPY_EXISTING ~c6elf1.cre~ ~override/tb#self.cre~
 	WRITE_ASCII 0x280 ~tb#self~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#self~ #8 // dialogue
 	
-COPY_EXISTING ~skelwa.cre~ ~override/tb#sskm.cre~
-	SAY NAME1 ~Scheletro Mago~
-	SAY NAME2 ~Scheletro Mago~
-	WRITE_ASCII 0x2cc ~tb#sskm~ #8
+COPY_EXISTING ~sword01.cre~ ~override/tb#slil.cre~
+	SAY NAME1 ~Lilarcor~
+	SAY NAME2 ~Lilarcor~
+	WRITE_ASCII 0x248 ~tb#slil~ #8 // override script
+	WRITE_ASCII 0x280 ~tb#slil~ #32 // name
+	WRITE_ASCII 0x2cc ~tb#slil~ #8 // dialogue
 	
-COPY_EXISTING ~skelwa.cre~ ~override/tb#sskc.cre~
-	SAY NAME1 ~Scheletro Chierico~
-	SAY NAME2 ~Scheletro Chierico~
-	WRITE_ASCII 0x2cc ~tb#sskc~ #8
+COPY ~stivan/cre/tb#stiv.cre~ ~override~
+	WRITE_LONG 0x14  0 // xp value
+	WRITE_LONG 0x18  161000 // current XP
+	WRITE_ASCII 0x34 ~tb#stivS~ #8  // small portrait
+	WRITE_ASCII 0x3c ~tb#stivM~ #8  // large portrait
+	WRITE_ASCII 0x248 ~tb#stiv~ #8  // override script
+	WRITE_ASCII 0x2cc ~tb#stiv~ #8  // pre-joining dialogue file
+	WRITE_ASCII 0x280 ~tb#stiv~ #32 // DV
+	
+	ADD_CRE_ITEM ~sw1h08~ #1  #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~slng02~ #1  #0 #0 ~IDENTIFIED~ ~WEAPON2~
+	ADD_CRE_ITEM ~shld08~ #1  #0 #0 ~IDENTIFIED~ ~SHIELD~
+	ADD_CRE_ITEM ~leat02~ #1  #0 #0 ~IDENTIFIED~ ~ARMOR~
+	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER1~
+	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER2~
+	ADD_CRE_ITEM ~bull02~ #5  #0 #0 ~IDENTIFIED~ ~QUIVER3~
+	ADD_CRE_ITEM ~tb#surn~ #1 #0 #0 ~IDENTIFIED~ ~INV1~
+	ADD_CRE_ITEM ~tb#spoo~ #2 #1 #0 ~IDENTIFIED~ ~QITEM1~
+	
+	SAY NAME1 ~Stivan~
+	SAY NAME2 ~Stivan~
+	SAY MORALE ~Ahhhh! Vedo gabbiani OVUNQUE!~
+	SAY HAPPY ~Questa sì che è una compagnia di manigoldi!~
+	SAY UNHAPPY_ANNOYED ~Uhm... Mi sentivo più a mio agio quando vagabondavo per le strade di Athkatla.~
+	SAY LEADER ~Io al comando? Wow!~
+	SAY TIRED ~(Sbadiglia) Avrei un pò di sonno.~
+	SAY BATTLE_CRY1 ~Cadrete per mano di Stivan il Cacciatore!~
+	SAY BATTLE_CRY2 ~Possano i gabbiani pasteggiare con i vostri resti!~
+	SAY BATTLE_CRY3 ~Heh. Mi chiedevo quando ci saremmo dati da fare.~
+	SAY BATTLE_CRY4 ~Yahoo! All'attacco!~
+	SAY DAMAGE ~Auch!~
+	SAY DYING ~(Gemito)~
+	SAY HURT ~(Gasp!) Sto... Sto morendo...!~
+	SAY AREA_FOREST ~(Starnutisce) Fantastico. Questo sarà il primo di una lunga serie. Io ODIO la natura!~
+	SAY AREA_CITY ~Ahh... Mi sento sempre a mio agio tra queste masse brulicanti di gente.~
+	SAY AREA_DUNGEON ~Uhm... Fà piuttosto freddino qui.~
+	SAY AREA_DAY ~Per quanto luminosa, la luce del sole non eguaglia in bellezza quella delle stelle e della luna.~
+	SAY AREA_NIGHT ~Le stelle sono buchi nel cielo da cui... da cui... *Ahem* Che buio!~
+	SAY SELECT_COMMON1 ~Yeah.~
+	SAY SELECT_COMMON2 ~Cosa vuoi?~
+	SAY SELECT_COMMON3 ~Non c'è due senza tre, suppongo.~
+	SAY SELECT_COMMON4 ~Uhm?~
+	SAY SELECT_COMMON5 ~Nessuno fa qualcosa per niente.~
+	SAY SELECT_COMMON6 ~E' il mio momento!~
+	SAY SELECT_ACTION1 ~Sicuro.~
+	SAY SELECT_ACTION2 ~Vallo a prendere te!~
+	SAY SELECT_ACTION3 ~Heh. Me l'aspettavo.~
+	SAY SELECT_ACTION4 ~Vado e torno.~
+	SAY SELECT_ACTION5 ~D'accordo, d'accordo... Ci penso io.~
+	SAY SELECT_ACTION6 ~Facile come spennare un gabbiano.~
+	SAY SELECT_RARE1 ~Se devo.~
+	SAY SELECT_RARE2 ~E' tutto?~
+	SAY CRITICAL_HIT ~Haha!~
+	SAY CRITICAL_MISS ~Oops.~
+	SAY TARGET_IMMUNE ~Ci vuole qualcos'altro qui!~
+	SAY INVENTORY_FULL ~Per cosa mi hai preso, per uno sgabuzzino?~
+	SAY PICKED_POCKET ~Ho rubacchiato qualcosina.~
+	SAY HIDDEN_IN_SHADOWS ~Heh. Sfido chiunque a vedermi.~
+	SAY SPELL_DISRUPTED ~Hai fatto fallire il mio incantesimo! Possano i gabbiani perseguitarti a vita!!!~
+	SAY SET_A_TRAP ~Heh. Se aggiungessi un pò di cacca di gabbiano, questa trappola sarebbe ancora più micidiale.~
+	SAY BIO ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfing si è visto uccidere i propri genitori e i fratelli da uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
+	Costretto a vivere per le strade di Athkatla, l'halfing ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani.~
+	
 
-COPY_EXISTING ~skelwa03.cre~ ~override/tb#sskf.cre~
-	SAY NAME1 ~Scheletro Sergente~
-	SAY NAME2 ~Scheletro Sergente~
-	WRITE_ASCII 0x2cc ~tb#sskf~ #8
+	
+	
+// Create new items	
 
 COPY_EXISTING ~npsw02.itm~ ~override/tb#syk1.itm~
 	SAY NAME1 ~Vendetta di Yoshimo +1~
@@ -192,96 +284,36 @@ Stivan~
 	WRITE_ASCII 0x58 ~tb#spooc~ #8 // description icon
 	WRITE_ASCII 0x76 ~spwi106b~ #8 // header icon
 	WRITE_ASCII 0xae ~spwi304b~ #8 // header icon
+
+
+
+// Create PRO files	
 	
 COPY_EXISTING ~smllarea.pro~ ~override/tb#salc.pro~
 	WRITE_BYTE 0x200 (THIS | 64) // make it area-friendly
 
 ADD_PROJECTILE ~override/tb#salc.pro~	
+
+
+// Copy SPL files
+
 COPY ~stivan/spl/tb#sbli.spl~ ~override~
 
 COPY ~stivan/spl/tb#salc.spl~ ~override~
 	SAY 0x9e ~Esplosione Alchemica~
 	WRITE_SHORT   0x098 ~tb#salc~
 
+
+
+// Patch 2DA files	
+	
 APPEND ~tooltip.2da~ ~tb#spoo POO_BLIND POO_EXPLOSION -1~
 	UNLESS ~tb#spoo~
 
 COPY_EXISTING ~tooltip.2da~ ~override~
 	REPLACE ~POO_BLIND~ ~Cecita'~
 	REPLACE ~POO_EXPLOSION~ ~Esplosione Alchemica~
-	
-COPY_EXISTING ~sword01.cre~ ~override/tb#slil.cre~
-	SAY NAME1 ~Lilarcor~
-	SAY NAME2 ~Lilarcor~
-	WRITE_ASCII 0x248 ~tb#slil~ #8 // override script
-	WRITE_ASCII 0x280 ~tb#slil~ #32 // name
-	WRITE_ASCII 0x2cc ~tb#slil~ #8 // dialogue
-	
-COPY ~stivan/cre/tb#stiv.cre~ ~override~
-	WRITE_LONG 0x14  0 // xp value
-	WRITE_LONG 0x18  161000 // current XP
-	WRITE_ASCII 0x34 ~tb#stivS~ #8  // small portrait
-	WRITE_ASCII 0x3c ~tb#stivM~ #8  // large portrait
-	WRITE_ASCII 0x248 ~tb#stiv~ #8  // override script
-	WRITE_ASCII 0x2cc ~tb#stiv~ #8  // pre-joining dialogue file
-	WRITE_ASCII 0x280 ~tb#stiv~ #32 // DV
-	
-	ADD_CRE_ITEM ~sw1h08~ #1  #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
-	ADD_CRE_ITEM ~slng02~ #1  #0 #0 ~IDENTIFIED~ ~WEAPON2~
-	ADD_CRE_ITEM ~shld08~ #1  #0 #0 ~IDENTIFIED~ ~SHIELD~
-	ADD_CRE_ITEM ~leat02~ #1  #0 #0 ~IDENTIFIED~ ~ARMOR~
-	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER1~
-	ADD_CRE_ITEM ~bull01~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER2~
-	ADD_CRE_ITEM ~bull02~ #5  #0 #0 ~IDENTIFIED~ ~QUIVER3~
-	ADD_CRE_ITEM ~tb#surn~ #1 #0 #0 ~IDENTIFIED~ ~INV1~
-	ADD_CRE_ITEM ~tb#spoo~ #2 #1 #0 ~IDENTIFIED~ ~QITEM1~
-	
-	SAY NAME1 ~Stivan~
-	SAY NAME2 ~Stivan~
-	SAY MORALE ~Ahhhh! Vedo gabbiani OVUNQUE!~
-	SAY HAPPY ~Questa sì che è una compagnia di manigoldi!~
-	SAY UNHAPPY_ANNOYED ~Uhm... Mi sentivo più a mio agio quando vagabondavo per le strade di Athkatla.~
-	SAY LEADER ~Io al comando? Wow!~
-	SAY TIRED ~(Sbadiglia) Avrei un pò di sonno.~
-	SAY BATTLE_CRY1 ~Cadrete per mano di Stivan il Cacciatore!~
-	SAY BATTLE_CRY2 ~Possano i gabbiani pasteggiare con i vostri resti!~
-	SAY BATTLE_CRY3 ~Heh. Mi chiedevo quando ci saremmo dati da fare.~
-	SAY BATTLE_CRY4 ~Yahoo! All'attacco!~
-	SAY DAMAGE ~Auch!~
-	SAY DYING ~(Gemito)~
-	SAY HURT ~(Gasp!) Sto... Sto morendo...!~
-	SAY AREA_FOREST ~(Starnutisce) Fantastico. Questo sarà il primo di una lunga serie. Io ODIO la natura!~
-	SAY AREA_CITY ~Ahh... Mi sento sempre a mio agio tra queste masse brulicanti di gente.~
-	SAY AREA_DUNGEON ~Uhm... Fà piuttosto freddino qui.~
-	SAY AREA_DAY ~Per quanto luminosa, la luce del sole non eguaglia in bellezza quella delle stelle e della luna.~
-	SAY AREA_NIGHT ~Le stelle sono buchi nel cielo da cui... da cui... *Ahem* Che buio!~
-	SAY SELECT_COMMON1 ~Yeah.~
-	SAY SELECT_COMMON2 ~Cosa vuoi?~
-	SAY SELECT_COMMON3 ~Non c'è due senza tre, suppongo.~
-	SAY SELECT_COMMON4 ~Uhm?~
-	SAY SELECT_COMMON5 ~Nessuno fa qualcosa per niente.~
-	SAY SELECT_COMMON6 ~E' il mio momento!~
-	SAY SELECT_ACTION1 ~Sicuro.~
-	SAY SELECT_ACTION2 ~Vallo a prendere te!~
-	SAY SELECT_ACTION3 ~Heh. Me l'aspettavo.~
-	SAY SELECT_ACTION4 ~Vado e torno.~
-	SAY SELECT_ACTION5 ~D'accordo, d'accordo... Ci penso io.~
-	SAY SELECT_ACTION6 ~Facile come spennare un gabbiano.~
-	SAY SELECT_RARE1 ~Se devo.~
-	SAY SELECT_RARE2 ~E' tutto?~
-	SAY CRITICAL_HIT ~Haha!~
-	SAY CRITICAL_MISS ~Oops.~
-	SAY TARGET_IMMUNE ~Ci vuole qualcos'altro qui!~
-	SAY INVENTORY_FULL ~Per cosa mi hai preso, per uno sgabuzzino?~
-	SAY PICKED_POCKET ~Ho rubacchiato qualcosina.~
-	SAY HIDDEN_IN_SHADOWS ~Heh. Sfido chiunque a vedermi.~
-	SAY SPELL_DISRUPTED ~Hai fatto fallire il mio incantesimo! Possano i gabbiani perseguitarti a vita!!!~
-	SAY SET_A_TRAP ~Heh. Se aggiungessi un pò di cacca di gabbiano, questa trappola sarebbe ancora più micidiale.~
-	SAY BIO ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfing si è visto uccidere i propri genitori e i fratelli da uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
-	Costretto a vivere per le strade di Athkatla, l'halfing ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani.~
 
-
-//dialogue stuff
 APPEND ~pdialog.2da~
 ~tb#stiv     tb#stivP            tb#stivJ           tb#stivD~
 UNLESS ~tb#stiv~
@@ -303,12 +335,22 @@ APPEND ~interdia.2da~
 UNLESS ~tb#stiv~
 IF     ~25FILE~
 
+
+// Install ToB resources
 ACTION_IF GAME_IS ~BGT ToB~ THEN BEGIN
+
+
+	// Create PRO files
+
 	COPY_EXISTING ~fireball.pro~ ~override/tb#sal2.pro~
 		WRITE_BYTE 0x200 (THIS | 64) // make it area-friendly
 
 	ADD_PROJECTILE ~override/tb#sal2.pro~	
 
+	
+	
+	// Copy SPL files
+	
 	COPY ~stivan/spl/tb#sal2.spl~ ~override~
 		SAY 0x9e ~Esplosione Alchemica~
 		WRITE_SHORT   0x09c ~tb#sal2~
