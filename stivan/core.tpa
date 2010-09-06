@@ -13,8 +13,6 @@ COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2i.bam~ // Yoshimo's +3 Katana
               ~cmisc22.bam~ ~override/tb#spluc.bam~ // plume
               ~imisc22.bam~ ~override/tb#srpli.bam~ // red plume
               ~cmisc22.bam~ ~override/tb#srplc.bam~ // red plume
-              ~imisc22.bam~ ~override/tb#spooi.bam~ // poo
-              ~cmisc22.bam~ ~override/tb#spooc.bam~ // poo
 	
 COPY_EXISTING ~skelwa.cre~ ~override/tb#sskm.cre~
 	SAY NAME1 ~Scheletro Mago~
@@ -281,7 +279,7 @@ Stivan~
 	WRITE_ASCII 0x3a ~tb#spooi~ #8 // inventory icon
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
 	WRITE_LONG  0x4c 1 // weight
-	WRITE_ASCII 0x58 ~tb#spooc~ #8 // description icon
+	WRITE_ASCII 0x58 ~cbag04~   #8 // description icon
 	WRITE_ASCII 0x76 ~spwi106b~ #8 // header icon
 	WRITE_ASCII 0xae ~spwi304b~ #8 // header icon
 
@@ -337,7 +335,7 @@ IF     ~25FILE~
 
 
 // Install ToB resources
-ACTION_IF GAME_IS ~BGT ToB~ THEN BEGIN
+ACTION_IF GAME_IS ~BGT ToB~ && false THEN BEGIN
 
 
 	// Create PRO files
@@ -349,9 +347,46 @@ ACTION_IF GAME_IS ~BGT ToB~ THEN BEGIN
 
 	
 	
+	// Copy ITM files
+	
+	COPY_EXISTING ~stivan/tob/itm/tb#spoo2.itm~ ~override~
+		SAY NAME1 ~Cacca di gabbiano infuocata~
+		SAY NAME2 ~Cacca di gabbiano infuocata~
+		SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. Dopo essere stata combinata con la piuma di fenice e la barba di Yaga-shura, genera un'esplosione alchemica piu' potente, ma non e' piu' in grado di accecare i nemici.
+STATISTICHE:
+Lancia "Miscela esplosiva" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
+
+Utilizzabile Da:
+Stivan~
+		SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. Dopo essere stata combinata con la piuma di fenice e la barba di Yaga-shura, genera un'esplosione alchemica piu' potente, ma non e' piu' in grado di accecare i nemici.
+STATISTICHE:
+Lancia "Miscela esplosiva" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
+
+Utilizzabile Da:
+Stivan~
+		WRITE_ASCII 0x3a ~tb#spo2i~ #8 // inventory icon
+		WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
+		WRITE_LONG  0x4c 1 // weight
+		WRITE_ASCII 0x58 ~cbag04~   #8 // description icon
+		WRITE_ASCII 0x76 ~spwi304b~ #8 // header icon
+	
+	
+	
 	// Copy SPL files
 	
-	COPY ~stivan/spl/tb#sal2.spl~ ~override~
+	COPY ~stivan/tob/spl/tb#sal2.spl~ ~override~
 		SAY 0x9e ~Esplosione Alchemica~
 		WRITE_SHORT   0x09c ~tb#sal2~
+		
+	
+	
+	// Patch 2DA files
+	
+	
+	APPEND ~tooltip.2da~ ~tb#spoo2 POO_EXPLOSION  -1-1~
+		UNLESS ~tb#spoo2~
+
+	COPY_EXISTING ~tooltip.2da~ ~override~
+		REPLACE ~POO_EXPLOSION~ ~Esplosione Alchemica~
+
 END
