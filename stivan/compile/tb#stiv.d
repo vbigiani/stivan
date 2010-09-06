@@ -68,7 +68,8 @@ END
 
 IF ~~ THEN BEGIN StivanFirstMeet1-8
 SAY ~Beh, ecco... Vedi quest'urna? Dentro ci sono le ceneri dei miei familiari. Sono stati... Sono stati uccisi da quegli schifidi uccelli di porto molto tempo fa.~
-= ~Non posso portarla con me. Ci sono buone probabilità che vada in frantumi mentre acceco un nemico con cacca di gabbiano o ne soffoco un altro con un pò di piume. Non è un'impresa facile, sai?~
+= ~In questi anni l'ho sempre tenuta nascosta in un anfratto sicuro di fianco a dove dormivo.~
+= ~Adesso che viaggero' con te, non so dove nasconderla e non posso portarla con me. Ci sono buone probabilità che vada in frantumi mentre acceco un nemico con cacca di gabbiano o ne soffoco un altro con un pò di piume. Non è un'impresa facile, sai?~
 IF ~~ THEN REPLY ~Posso a malapena immaginarlo.~ GOTO StivanFirstMeet1-9
 IF ~~ THEN REPLY ~Quindi cosa suggerisci di fare?~ GOTO StivanFirstMeet1-9
 IF ~~ THEN REPLY ~Arriva al dunque, grazie.~ GOTO StivanFirstMeet1-9

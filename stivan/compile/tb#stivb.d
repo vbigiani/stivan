@@ -172,7 +172,7 @@ Global("tb#StivanViconia","GLOBAL",2)~ THEN TB#STIVB stivan-viconia-3
 ~Viconia, ti hanno mai detto che sei una bellissima drow?~
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",3)~
 == BVICONI ~Hmmm... Ti senti bene, sakphul? Non mi sarei mai aspettata un'osservazione del genere da... da uno come te.~
-== TB#STIVB ~Ti stavo soltanto rivolgendo un complimento, elfa scura. Pensi forse che un halfing non sia capace di apprezzare la bellezza di una drow?~
+== TB#STIVB ~Ti stavo soltanto rivolgendo un complimento. Pensi forse che un halfing non sia capace di apprezzare la bellezza di una drow?~
 == BVICONI ~No, anzi. Il mio aspetto è così maestoso da abbagliare chiunque. Tappetti inclusi.~
 == TB#STIVB ~Ehm... La modestia non è una delle tue qualità...~
 EXIT
@@ -221,7 +221,7 @@ BRANCH ~Global("AnomenIsNotKnight","GLOBAL",1)~ BEGIN
 END
 BRANCH ~Global("AnomenIsNotKnight","GLOBAL",0)~ BEGIN
 == TB#STIVB ~Di... Dici sul serio...?~
-== BVICONI ~(Ride in maniera sprezzante) Puoi scordartelo, sakphul. Preferirei la castità a vita piuttosto che andare a letto con una caricatura d'uomo. Credevi davvero che fossi interessata ad uno come te?~
+== BVICONI ~Puoi scordartelo, sakphul. Preferirei la castità a vita piuttosto che andare a letto con una caricatura d'uomo. Credevi davvero che fossi interessata ad uno come te?~
 == TB#STIVB ~Ma... Ma tu...~
 == BVICONI ~Tsk. Povero idiota.~
 END
@@ -252,7 +252,7 @@ CombatCounter(0)
 Global("tb#StivanViconia","GLOBAL",7)~ THEN BVICONI stivan-viconia-7
 ~Credo... Credo che dovrei scusarmi per ciò che ti ho detto la scorsa volta, Stivan.~
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",8)~
-== TB#STIVB ~Umpf. Sarei tentato di risponderti con un bel "Era ora!" ma, conoscendoti, è meglio che lo tenga per me.~
+== TB#STIVB ~Heh. Sarei tentato di risponderti con un bel "Era ora!" ma, conoscendoti, è meglio che lo tenga per me.~
 == BVICONI ~L'hai appena detto, imbecille.~
 == TB#STIVB ~Ops... Chiedo scusa. Amici come prima?~
 == BVICONI ~Godrai nuovamente della mia considerazione, se è questo che intendi.~
@@ -267,7 +267,7 @@ See("Anomen")
 Global("AnomenIsNotKnight","GLOBAL",0)
 CombatCounter(0)
 Global("tb#StivanAnomen","GLOBAL",0)~ THEN TB#STIVB stivan-anomen-1
-~Mi sono sempre chiesto, Anomen, per quale motivo combatti nel nome di Helm. Tra tutti gli dei, credo che sia il più freddo e distaccato.~
+~Mi sono sempre chiesto, Anomen, per quale motivo combatti nel nome di Helm. Tra tutti gli dei, è noto per essere il più freddo e distaccato.~
 DO ~SetGlobal("tb#StivanAnomen", "GLOBAL",1)~
 == BANOMEN ~Fesserie! Ti posso assicurare, halfing, che nel corso di una battaglia lo spirito di Helm infiamma il mio cuore e guida la mia mano!~
 == TB#STIVB ~"Lo spirito di Helm"? Sei sicuro che non si tratti dei tuoi ormoni?~
@@ -847,7 +847,7 @@ IF ~InParty("Jan")
 See("Jan")
 !StateCheck("Jan",CD_STATE_NOTVALID)
 CombatCounter(0)
-GlobalGT("tb#StivanAnomen","GLOBAL",2)
+GlobalGT("tb#StivanAnomen","GLOBAL",5)
 Global("tb#StivanFeelsStrange","GLOBAL",0)~ THEN TB#STIVB stivanjanstrange
 ~Jan...~
 DO ~SetGlobal("tb#StivanFeelsStrange","GLOBAL",1)~
@@ -1007,8 +1007,8 @@ DO ~SetGlobal("tb#StivanYoshimo","GLOBAL",3)~
 == TB#STIVB ~Una scelta azzeccata, direi.~
 == BYOSHIM ~Più di quanto pensi.~
 == TB#STIVB ~E l'arma di cui ti servivi prima di ricevere questa? Che fine ha fatto?~
-== BYOSHIM ~Era una spada comune. Per un pò ho continuato ad usarla durante gli allenamenti, ma col tempo si è rovinata.~
-= ~(Yoshimo diventa improvvisamente cupo.)~
+== BYOSHIM ~Era una lama comune. Per un pò ho continuato ad usarla durante gli allenamenti, ma col tempo si è rovinata.~
+= ~...~
 == TB#STIVB ~Tutto bene, Yoshi?~
 == BYOSHIM ~Pare che tu abbia il potere di rievocare memorie sopite, mio piccolo amico... O forse sarebbe il caso di dire che la tua sfacciata curiosità riapre vecchie ferite. In ogni caso, abbiamo indugiato abbastanza per oggi. E' ora di proseguire.~
 EXIT
@@ -1092,14 +1092,16 @@ Global("tb#StivanValygar", "GLOBAL",1)~ THEN TB#STIVB stivanvalygar2
 ~Valygar, mi hai spiegato perchè non eri attratto dalla vita mondana, ma... Cosa ti ha spinto a diventare un ranger?~
 DO ~SetGlobal("tb#StivanValygar", "GLOBAL",2)~
 == BVALYGA ~Sarebbe più corretto chiamarmi esploratore anzichè ranger: quest'ultimo, infatti, è un titolo che viene conferito soltanto a coloro che si sono distinti nella difesa della natura.~
-== TB#STIVB IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Beh, se Minsc l'ha ottenuto, immagino che questo titolo non sia difficile da conseguire.~
-== BMINSC IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Minsc ha un udito più fine di quello di Boo e ti ha sentito! Sono diventato ranger perchè nessuno ha dato al male tanti calci nel sedere come me!~
-== TB#STIVB IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Ti ringrazio, Minsc: hai appena confermato le mie supposizioni. Stavi dicendo, Valygar?~
+BRANCH ~GlobalLT("tb#StivanMinsc","GLOBAL",3) IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ BEGIM
+== TB#STIVB ~Beh, se Minsc l'ha ottenuto, immagino che questo titolo non sia difficile da conseguire.~
+== BMINSC ~Minsc ha un udito più fine di quello di Boo e ti ha sentito! Sono diventato ranger perchè nessuno ha dato al male tanti calci nel sedere come me!~
+== TB#STIVB ~Ti ringrazio, Minsc: hai appena confermato le mie supposizioni. Stavi dicendo, Valygar?~
+END
 == BVALYGA ~Ho prestato servizio tra le guardie dell'Amn per diversi anni. Sono stato impiegato come esploratore nelle foreste e nei luoghi selvaggi per le mie capacità di mimetizzazione, ed è nel corso di una delle mie missioni che ho avvertito il richiamo della natura.~
 == TB#STIVB ~Capisco. In altre parole, proteggi i cespugli e i ciuffi d'erba per dare un senso alla tua vita.~
 == BVALYGA ~Non penso proprio di aver detto questo, Stivan.~
 == TB#STIVB ~Oh, ma non preoccuparti. Io non critico niente e nessuno. Penso soltanto che questa storia del servire Madre Natura sia una grande scemenza.~
-== BVALYGA ~Definire "scemenza" qualcosa che non conosci è capisci non ti fà onore, soprattutto visto e considerato che sei stato te a chiedermi di raccontarti come sono diventato ciò che sono.~
+== BVALYGA ~Definire "scemenza" qualcosa che non conosci non ti fà onore, soprattutto visto che sei stato te a chiedermi di raccontarti come sono diventato un ranger.~
 == TB#STIVB ~Il problema è che--~
 == BVALYGA ~Io non vedo nessun problema, Stivan, ad eccezione dei tuoi stereotipi e pregiudizi.~
 == TB#STIVB ~Io non--~
@@ -1279,7 +1281,7 @@ DO ~SetGlobal("tb#StivanMinsc","GLOBAL",1)~
 == TB#STIVB ~Voi ranger avete una fervida immaginazione.~
 == BMINSC ~Ma è vero! Boo, il nostro amico Stivan mette in dubbio le tue abilità canore!~
 = ~Cosa dici, Boo? Vuoi dimostrargli che sei uno dei migliori bardi criceto di Rasheman? Vuoi dargli prova delle tue capacità? Benissimo! Preparati, halfing: stai per assistere all'esibizione del mio criceto!!~
-= ~*Squeak!*~
+= ~*Squeak*!~
 = ~Sentito?!~
 == TB#STIVB ~...~
 EXIT

@@ -1,4 +1,17 @@
 APPEND tb#stivj
+
+IF ~IsGabber(Player1) OR (6)
+AreaCheck("AR2900")
+AreaCheck("AR2901")
+AreaCheck("AR2902")
+AreaCheck("AR2903")
+AreaCheck("AR2904")
+AreaCheck("AR2905")
+~ THEN PIDHell
+SAY ~S-stammi vicino, <CHARNAME>. Questo posto è spaventoso, e non so f-fino a quando riuscirò a trattenermi dal darmela a gambe.~
+IF ~~ THEN EXIT
+END
+
 IF ~IsGabber(Player1)~ THEN BEGIN PID1
 SAY ~Stivan il Cacciatore ti ascolta, <CHARNAME>!~
 IF ~HPPercentGT("Stivan",74)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-1
@@ -78,7 +91,8 @@ IF ~InParty("Nalia")~ THEN REPLY ~Nalia?~ GOTO PD3-22
 IF ~InParty("Mazzy")~ THEN REPLY ~Mazzy?~ GOTO PD3-23
 IF ~InParty("Korgan")~ THEN REPLY ~Korgan?~ GOTO PD3-24
 IF ~InParty("Imoen2")~ THEN REPLY ~Imoen?~ GOTO PD3-26
-IF ~InParty("Minsc")~ THEN REPLY ~Minsc?~ GOTO PD3-27
+IF ~InParty("Minsc") GlobalLT("tb#StivanMinsc","GLOBAL",3)~ THEN REPLY ~Minsc?~ GOTO PD3-27
+IF ~InParty("Minsc") GlobalGT("tb#StivanMinsc","GLOBAL",2)~ THEN REPLY ~Minsc?~ GOTO PD3-28
 IF ~~ THEN REPLY ~Fa lo stesso.~ EXIT
 END
 
@@ -266,6 +280,11 @@ END
 
 IF ~~ THEN BEGIN PD3-27b
 SAY ~Heh. Finalmente ce l'ho fatta!~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN PD23-28
+SAY ~Il ranger... Minsc... Non meritava i miei insulti. Lui e il suo criceto hanno un cuore d'oro, sotto sotto.~
 IF ~~ THEN EXIT
 END
 

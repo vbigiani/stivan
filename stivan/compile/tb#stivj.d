@@ -152,8 +152,8 @@ IF ~~ THEN TB#STIVJ FinalRest1-11
 == MINSCJ IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~(Sniff) Un giorno anche Minsc darà una degna sepoltura alla sua dolce Dynaheir. Il luogo in cui riposerà sarà così maestoso che i criceti accorreranno da tutta Faerun per onorarla!~
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Non capisco perché in città si senta il bisogno di seppellire i morti in simili spazi angusti. La Natura offre una grande varietà di luoghi che potrebbero fungere a tale scopo.~
 == CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Le tombe non sono soltanto meri contenitori delle spoglie dei defunti. In realtà le tombe hanno anche il compito di confortare l’animo di chi è rimasto in vita.~
-== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN
-~S-Sono... Sono f-felice p-per te, Stivan...~
+= ~Ora che hai riposto il peso fisico della tua tragedia, il nostro percorso si avvia verso la conclusione. L'ultima tappa ci attende.~
+== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~S-Sono... Sono f-felice p-per te, Stivan...~
 == MAZZYJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Che nessuno disturbi il vostro eterno sonno, amici halfling.~
 == NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Apprezzo la semplicità con cui hai dato loro il tuo ultimo saluto, Stivan. Dovrebbe essere d’esempio a quei nobili che dilapidano fortune per cerimonie funebri dall’inutile lusso.~
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~ Davvero commovente. Se avessi un cuore, mi sarei sciolto in lacrime.~
@@ -1068,24 +1068,32 @@ INTERJECT_COPY_TRANS PLAYER1 25 StivanHell
 = ~*Ahem* Non capisco. Siamo vivi... O morti?~
 END
 
-INTERJECT_COPY_TRANS HELLJON 7 tb#StivanHelljon-7
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS3 HELLJON 7 tb#StivanHelljon-7
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
+~E' ora di finirla una volta per tutte, bruttone. I tuoi resti marciranno in questo posto per l'eternità!~
 END
 
-INTERJECT_COPY_TRANS HELLJON 8 tb#StivanHelljon-8
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~E' ora di finirla una volta per tutte, bruttone! Possano i gabbiani cibarsi dei tuoi resti!~
+INTERJECT_COPY_TRANS3 HELLJON 8 tb#StivanHelljon-8
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
+~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
+~E' ora di finirla una volta per tutte, bruttone. I tuoi resti marciranno in questo posto per l'eternità!~
 END
 
-INTERJECT_COPY_TRANS HELLJON 9 tb#StivanHelljon-9
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS3 HELLJON 9 tb#StivanHelljon-9
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
+~E' ora di finirla una volta per tutte, bruttone. I tuoi resti marciranno in questo posto per l'eternità!~
 END
 
-INTERJECT_COPY_TRANS HELLJON 10 tb#StivanHelljon-10
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+INTERJECT_COPY_TRANS3 HELLJON 10 tb#StivanHelljon-10
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
 ~E' ora di finirla una volta per tutte, bruttone. Possano i gabbiani cibarsi dei tuoi resti!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Alignment("tb#stiv",CHAOTIC_NEUTRAL)~ THEN
+~E' ora di finirla una volta per tutte, bruttone. I tuoi resti marciranno in questo posto per l'eternità!~
 END
 
 INTERJECT_COPY_TRANS RAELIS 41 tb#StivanRaelis-41
@@ -1428,7 +1436,7 @@ IF ~~ THEN REPLY ~Io andrò per la mia strada, Keldorn. Se i tuoi compagni mi met
 
 APPEND TB#STIVJ
 IF ~~ StivanKeldorn1-1
-SAY ~Dannati guastafeste! Se non sarà la mia lama a farli a fettine, ci penseranno i gabbiani con i loro becchi! (Urla)~
+SAY ~(Urla) Dannati guastafeste! Se non sarà la mia lama a farli a fettine, ci penseranno i gabbiani con i loro becchi!~
 IF ~~ THEN EXIT
 END
 
