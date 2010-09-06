@@ -335,7 +335,7 @@ IF     ~25FILE~
 
 
 // Install ToB resources
-ACTION_IF GAME_IS ~BGT ToB~ && false THEN BEGIN
+ACTION_IF GAME_IS ~BGT ToB~ && 0 THEN BEGIN
 
 
 	// Create PRO files
