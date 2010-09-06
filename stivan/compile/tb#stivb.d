@@ -1115,10 +1115,12 @@ See("Valygar")
 Dead("Lavok02")
 CombatCounter(0)
 Global("tb#StivanValygar","GLOBAL",2)~ THEN TB#STIVB stivanvalygar2
-~Valygar, è da diverso tempo che medito su una cosetta...~
+~Valygar, è da diverso tempo che medito su una cosetta.~
 DO ~SetGlobal("tb#StivanValygar","GLOBAL",3)~
-== BVALYGA ~Sarebbe?~
-== TB#STIVB ~Ehm... Hai presente la sfera del tuo antenato?~
+== BVALYGA ~Sei sicuro di averci riflettuto abbastanza?~
+== BTB#STIV ~Certo. Non permetto mai alla mia lingua di oltrepassare il pensiero, cosa credi? ~
+== BVALYGA ~Ho qualche dubbio a riguardo, ma… Ti ascolto.~
+== BTB#STIV ~*Ahem* Hai presente la sfera del tuo antenato?~
 == BVALYGA ~Difficilmente potrei dimenticarmene.~
 == TB#STIVB ~Ecco, vedi... Il punto è che... Insomma, non pensi sia un peccato lasciarla inutilizzata? Lì, in mezzo ai rifiuti dei Bassifondi, tutta sola soletta...~
 == BVALYGA ~Utilizzarla a che scopo, scusa?~
@@ -1195,17 +1197,17 @@ DO ~SetGlobal("tb#StivanImoen","GLOBAL",1)~
 == BIMOEN2 ~Sospettavo che il Signore dell’Omicidio non fosse il solo ad aver sparso il suo seme qua e là. A quanto pare va di moda tra gli dei fecondare ogni donna che capita a tiro.~
 == TB#STIVB ~Heh. La mia mammina è stata fortunata ad incontrare il grande Brandobaris.~
 == BIMOEN2 ~Brandobaris? Il dio della furtività e dei ladri halfing?~
-== TB#STIVB ~Esatto! E’ stato lui ad affidare a Stivan il gravoso compito di sterminare i gabbiani di tutta Faerun! Inoltre il mio retaggio fa di me il miglior ladro di questo gruppo, pertanto... fatti da parte!~
+== TB#STIVB ~Esatto. E’ stato lui ad affidare a Stivan il gravoso compito di sterminare i gabbiani di tutta Faerun. Inoltre il mio retaggio fa di me il miglior ladro di questo gruppo, pertanto... fatti da parte!~
 == BIMOEN2 ~Aspetta, ma... Non hai iniziato a dar loro la caccia soltanto dopo la morte dei tuoi familiari?~
-== TB#STIVB ~Accidenti! La ragazzina è più sveglia di quanto pensassi... ~
+== TB#STIVB ~Accidenti. La ragazzina è più sveglia di quanto pensassi... ~
 = ~*Ahem* Ad ogni modo, sono io il più abile ladro di questa compagnia di scapestrati!~
 == BIMOEN2 ~Non penso proprio. Forse non sai che, prima di dedicarmi alle arti arcane, ero nota lungo tutta la Costa della Spada come "Imoen La Svelta".~
 == TB#STIVB ~Se la metti così allora sarà il ferro a stabilire chi di noi due è il migliore! Preparati ad ass...~
 = ~Ehi, ma...~
-= ~Dov’è la mia arma?!~
+= ~Dov’è la mia arma?~
 == BIMOEN2 ~Questa qui? Oh, scusami, Stivan... L’ho presa senza neanche dirtelo. O forse dovrei dire che te l’ho soffiata da sotto il naso?~
 == TB#STIVB ~ (Snort!) E va bene, ragazzina. Se vuoi la guerra, che guerra sia!~
-== BIMOEN2 ~Come vuoi... Ho già un punto in tasca!~
+== BIMOEN2 ~Come vuoi. Ho già un punto in tasca!~
 EXIT
  
 CHAIN 
@@ -1225,7 +1227,7 @@ DO ~SetGlobal("tb#StivanImoen","GLOBAL",2)~
 == BIMOEN2 ~Arghh! Ma cosa...?~
 == TB#STIVB ~Heh. La cacca di gabbiano negli occhi è micidiale.~ 
 == BIMOEN2 ~Bleah! Che schifo!~
-== TB#STIVB ~E con questo siamo uno pari! Con il prossimo round la vittoria sarà mia, strega!~
+== TB#STIVB ~E con questo siamo uno pari. Con il prossimo round la vittoria sarà mia, strega!~
 == BIMOEN2 ~Non contarci, piccoletto.~
 EXIT
 
@@ -1240,7 +1242,7 @@ Global("tb#StivanImoen","GLOBAL",2)~ THEN TB#STIVB stivanimoen3
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",3)~
 == BIMOEN2 ~ (Pant pant) A chi lo dici!~
 == TB#STIVB ~Rassegnati, Imoen... Sono io il migliore!~
-== BIMOEN2 ~Aspetta... Mi è venuta un’idea.~
+== BIMOEN2 ~Aspetta. Mi è venuta un’idea.~
 == TB#STIVB ~Credi che sia così sciocco da cascare nella tua trappola?~
 == BIMOEN2 ~No, parlo sul serio. Il nostro confronto potrebbe non finire mai. Perché non rimettere il giudizio al nostro leader?~
 == TB#STIVB ~...~
@@ -1251,9 +1253,9 @@ DO ~SetGlobal("tb#StivanImoen","GLOBAL",3)~
 == BIMOEN2 ~<CHARNAME> è un ottimo arbitro. Non lascerebbe mai che dei semplici legami di parentela oscurassero la sua capacità di giudizio.~
 == BIMOEN2 IF~Gender(Player1,MALE)~ THEN ~(Bisbigliando) Mi raccomando, fratellino, scegli me!~
 == BIMOEN2 IF~Gender(Player1,FEMALE)~ THEN ~ (Bisbigliando) Mi raccomando, sorellina, scegli me!~
-== TB#STIVB ~*Ahem* Ebbene, <PROGIRLBOY>? Qual è  il miglior ladro? Il Grande Cacciatore di Gabbiani... oppure la Streghetta della Costa?~
+== TB#STIVB ~*Ahem* Dunque, <CHARNAME>? Qual è  il miglior ladro? Il Grande Cacciatore di Gabbiani... oppure la Streghetta della Costa?~
 END
-IF ~Class(Player1,THIEF)~ THEN REPLY ~E’ ovvio che sia io il numero uno.~ EXTERN BIMOEN2 tb#StivanImoen1-1
+IF ~Class(Player1,THIEF)~ THEN REPLY ~E’ ovvio che sia *io* il numero uno.~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~ (Sigh) Perché mi avete tirato in mezzo?~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~Io direi entrambi.~ EXTERN BIMOEN2 tb#StivanImoen1-1
 IF ~~ THEN REPLY ~Nessuno dei due.~ EXTERN BIMOEN2 tb#StivanImoen1-1
@@ -1465,7 +1467,7 @@ See("Player1")
 !StateCheck("Player1",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanNaliaFatherDeath","GLOBAL",0)
-Dead("TorGal")~ THEN TB#STIVB stivannalia2
+DOPO IL FUNERALE~ THEN TB#STIVB stivannalia2
 ~(Sniff) Miss Nalia... Io... Io sono *così* dispiaciuto per la vostra perdita!~
 DO ~SetGlobal("tb#StivanNaliaFatherDeath","GLOBAL",1)~
 == BNALIA ~Non fare così, Stivan. E'... E' una cosa con cui dovrò imparare a convivere. Del resto, l'esperienza del lutto non mi è nuova. L' ho già conosciuta anni fa, quando persi mia Madre, sebbene allora fossi molto più piccola.~
@@ -1482,8 +1484,7 @@ APPEND BNALIA
 
 IF ~~ THEN BEGIN AfterFatherDeath1-1
 SAY ~Mancavi solo te, <CHARNAME>! Io...~
-= ~Mi farò forza e andrò avanti. E' la sola cosa che posso fare.~
-= ~Non mi aspettavo che entrambi foste così partecipi al mio dolore, ma non voglio affliggervi.~
+= ~Non mi aspettavo che entrambi foste così partecipi al mio dolore, ma non voglio affliggervi. Mi farò forza e andrò avanti. E' la sola cosa che posso fare.~
 = ~(Sorride) Direi di proseguire, ora, prima che vi rimettiate a piangere!~
 IF ~~ THEN EXIT
 END
@@ -1492,7 +1493,7 @@ IF ~~ THEN BEGIN AfterFatherDeath1-2
 SAY ~Davvero? Quindi siamo entrambi orfani, anche se immagino di essere stata fortunata ad aver trascorso del tempo con la mia, per quanto poco sia stato.~ 
 = ~Mia Madre era una grande donna, sai? Aveva un animo generoso e infaticabile, ed era sempre pronta ad aiutare chiunque ne avesse bisogno. Purtroppo morì giovane... Aveva contratto una malattia che nessun guaritore era in grado di curare.~
 = ~Zietta mi ripete spesso che con ogni certezza prese quel morbo da qualche bisognoso da lei soccorso, nella speranza che io mi spaventi e torni a trincerarmi nelle mura del maniero. In realtà non fa altro che spronarmi a trarre esempio da lei.~
-= ~Ora è meglio ritornare a ciò di cui ci stavamo occupando. Un pò di sana distrazione mi farà bene.~
+= ~Ma basta con queste reminescenze del passato. E’ meglio ritornare a ciò di cui ci stavamo occupando. Un pò di sana distrazione mi farà bene.~
 IF ~~ THEN EXIT
 END
 END
@@ -1563,7 +1564,7 @@ DO ~SetGlobal("tb#StivanNaliaPrison","GLOBAL",1)~
 = ~Vedi? Anche coloro che non hanno il sangue blu possono essere --~
 == TB#STIVB ~Eeeekkkkk!~
 == BNALIA ~Cos'è successo, Stivan?!~
-== TB#STIVB ~La... La vostra tunica...!~
+== TB#STIVB ~La vostra tunica...!~
 == BNALIA ~La mia tunica? Mi sembra che sia a posto.~
 == TB#STIVB ~Ha una macchia!~
 == BNALIA ~(Sospira) Ed io che temevo fosse qualcosa di grave. La laverò quando...~
@@ -1574,7 +1575,7 @@ DO ~SetGlobal("tb#StivanNaliaPrison","GLOBAL",1)~
 = ~...~
 = ~... Visto? Completamente scomparsa!~
 == BNALIA ~E' ovvio che sia scomparsa! Ha corroso la tunica!~
-== TB#STIVB ~... Ops.~
+== TB#STIVB ~Ops.~
 = ~Mi dispiace, Miss Nalia, io... Volevo solo essere d'aiuto...~
 == BNALIA ~Non fa niente, Stivan. So bene quali fossero le tue intenzioni.~
 == TB#STIVB ~Eeeekkkk!~

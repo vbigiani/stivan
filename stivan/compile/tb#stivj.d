@@ -1941,13 +1941,13 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",2)~
 == TB#STIVJ ~Oh, no!~
 == CERND ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
 == TB#STIVJ ~(Snort!) Stai abusando della mia pazienza, tu! Chi diavolo credi di essere per esigere che ti racconti la storia dell'uccisione dei miei familiari?~
-== CERNDJ ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti della conoscenza spingano le tue vele verso il mare della conoscenza.~
-== TB#STIVJ ~Ora capisco dove vuoi arrivare! Tu... Stai mettendo in discussione la colpevolezza dei gabbiani!~
+== BCERND ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti del destino spingano le tue vele verso il mare della conoscenza.~
+== BTB#STIV ~Ora capisco dove vuoi arrivare. Tu... Tu Stai mettendo in discussione la colpevolezza dei gabbiani!~
 == CERNDJ ~Dei semplici uccelli marini non potrebbero mai macchiarsi di un crimine come l'uccisione di un'innocente famiglia. Non è nella loro natura.~
 == TB#STIVJ ~Evidentemente quel giorno devono essere caduti in preda a degli istinti carnivori, dato che li ho visti pasteggiare con i resti dei miei familiari!~
 == CERNDJ ~Esatto, Stivan. Tu sostieni di averli visti mentre si cibavano, non mentre uccidevano i tuoi genitori e i tuoi fratelli.~
-== TB#STIVJ ~...~
-= ~... Non cercare di ingannarmi con subdoli giri di parole! Sono stati i gabbiani ad ucciderli e a profanare i loro corpi! Sono stati loro!!~
+== BTB#STIV ~...~
+= ~... Non cercare di ingannarmi con subdoli giri di parole. Sono stati i gabbiani ad ucciderli e a profanare i loro corpi! Sono stati loro!~
 == CERNDJ ~Il seme del dubbio è stato gettato, e a tempo debito metterà radici.~
 EXIT
 
@@ -2036,7 +2036,7 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",3)~
 == CERND ~Ecco dove volevo arrivare, Stivan. La prima tappa del nostro percorso è stata infine raggiunta.~
 == TB#STIVJ ~Potrei sapere qual è lo scopo di questa conversazione delirante, a parte quello di confondermi le idee?~
 == CERND ~Hai appena capito che dietro ad ogni cosa si dispiega sempre un ventaglio di possibilità. Ti sei interrogato su una verità che ti appariva sicura, l'hai messa in discussione e sei giunto ad una conclusione che al momento non ti offre risposte.~
-= ~La strada verso la seconda tappa è aperta.~
+= ~Il sentiero verso la seconda tappa è aperto.~
 EXIT
 
 CHAIN 
