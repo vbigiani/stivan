@@ -1118,9 +1118,9 @@ Global("tb#StivanValygar","GLOBAL",2)~ THEN TB#STIVB stivanvalygar2
 ~Valygar, è da diverso tempo che medito su una cosetta.~
 DO ~SetGlobal("tb#StivanValygar","GLOBAL",3)~
 == BVALYGA ~Sei sicuro di averci riflettuto abbastanza?~
-== BTB#STIV ~Certo. Non permetto mai alla mia lingua di oltrepassare il pensiero, cosa credi? ~
+== TB#STIVB ~Certo. Non permetto mai alla mia lingua di oltrepassare il pensiero, cosa credi? ~
 == BVALYGA ~Ho qualche dubbio a riguardo, ma… Ti ascolto.~
-== BTB#STIV ~*Ahem* Hai presente la sfera del tuo antenato?~
+== TB#STIVB ~*Ahem* Hai presente la sfera del tuo antenato?~
 == BVALYGA ~Difficilmente potrei dimenticarmene.~
 == TB#STIVB ~Ecco, vedi... Il punto è che... Insomma, non pensi sia un peccato lasciarla inutilizzata? Lì, in mezzo ai rifiuti dei Bassifondi, tutta sola soletta...~
 == BVALYGA ~Utilizzarla a che scopo, scusa?~
@@ -1467,7 +1467,7 @@ See("Player1")
 !StateCheck("Player1",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanNaliaFatherDeath","GLOBAL",0)
-DOPO IL FUNERALE~ THEN TB#STIVB stivannalia2
+Global("isaeaNalia","GLOBAL",1)~ THEN TB#STIVB stivannalia2
 ~(Sniff) Miss Nalia... Io... Io sono *così* dispiaciuto per la vostra perdita!~
 DO ~SetGlobal("tb#StivanNaliaFatherDeath","GLOBAL",1)~
 == BNALIA ~Non fare così, Stivan. E'... E' una cosa con cui dovrò imparare a convivere. Del resto, l'esperienza del lutto non mi è nuova. L' ho già conosciuta anni fa, quando persi mia Madre, sebbene allora fossi molto più piccola.~

@@ -1941,12 +1941,12 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",2)~
 == TB#STIVJ ~Oh, no!~
 == CERND ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
 == TB#STIVJ ~(Snort!) Stai abusando della mia pazienza, tu! Chi diavolo credi di essere per esigere che ti racconti la storia dell'uccisione dei miei familiari?~
-== BCERND ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti del destino spingano le tue vele verso il mare della conoscenza.~
-== BTB#STIV ~Ora capisco dove vuoi arrivare. Tu... Tu Stai mettendo in discussione la colpevolezza dei gabbiani!~
+== CERNDJ ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti del destino spingano le tue vele verso il mare della conoscenza.~
+== TB#STIVJ ~Ora capisco dove vuoi arrivare. Tu... Tu Stai mettendo in discussione la colpevolezza dei gabbiani!~
 == CERNDJ ~Dei semplici uccelli marini non potrebbero mai macchiarsi di un crimine come l'uccisione di un'innocente famiglia. Non è nella loro natura.~
 == TB#STIVJ ~Evidentemente quel giorno devono essere caduti in preda a degli istinti carnivori, dato che li ho visti pasteggiare con i resti dei miei familiari!~
 == CERNDJ ~Esatto, Stivan. Tu sostieni di averli visti mentre si cibavano, non mentre uccidevano i tuoi genitori e i tuoi fratelli.~
-== BTB#STIV ~...~
+== TB#STIVJ ~...~
 = ~... Non cercare di ingannarmi con subdoli giri di parole. Sono stati i gabbiani ad ucciderli e a profanare i loro corpi! Sono stati loro!~
 == CERNDJ ~Il seme del dubbio è stato gettato, e a tempo debito metterà radici.~
 EXIT
@@ -2029,13 +2029,13 @@ GlobalGT("Chapter","GLOBAL",2)~ THEN CERND stivancernd3
 ~Il dubbio è dipinto sul tuo volto, Stivan.~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",3)~
 == TB#STIVJ ~Immagino di dover ringraziare te per questo.~
-== CERND ~Non posso evitare che gli uccelli dell'ansia e della preoccupazione volino sulla tua testa, ma farò il possibile perchè non vi cotruiscano un nido di paure.~
+== CERNDJ ~Non posso evitare che gli uccelli dell'ansia e della preoccupazione volino sulla tua testa, ma farò il possibile perchè non vi cotruiscano un nido di paure.~
 == TB#STIVJ ~Questa potevi anche risparmiartela!~
-== CERND ~In realtà credo che ritragga con precisione il tuo stato d'animo. Sei atterrito dalla possibilità che le creature della Madre possano non essere responsabili della scomparsa dei tuoi familiari, e questo ti spaventa.~
+== CERNDJ ~In realtà credo che ritragga con precisione il tuo stato d'animo. Sei atterrito dalla possibilità che le creature della Madre possano non essere responsabili della scomparsa dei tuoi familiari, e questo ti spaventa.~
 == TB#STIVJ ~(Snort!) Se non sono stati i gabbiani ad uccidere i miei familiari, allora chi ha posto fine alla loro vita? Soprattutto, *perchè*?~
-== CERND ~Ecco dove volevo arrivare, Stivan. La prima tappa del nostro percorso è stata infine raggiunta.~
+== CERNDJ ~Ecco dove volevo arrivare, Stivan. La prima tappa del nostro percorso è stata infine raggiunta.~
 == TB#STIVJ ~Potrei sapere qual è lo scopo di questa conversazione delirante, a parte quello di confondermi le idee?~
-== CERND ~Hai appena capito che dietro ad ogni cosa si dispiega sempre un ventaglio di possibilità. Ti sei interrogato su una verità che ti appariva sicura, l'hai messa in discussione e sei giunto ad una conclusione che al momento non ti offre risposte.~
+== CERNDJ ~Hai appena capito che dietro ad ogni cosa si dispiega sempre un ventaglio di possibilità. Ti sei interrogato su una verità che ti appariva sicura, l'hai messa in discussione e sei giunto ad una conclusione che al momento non ti offre risposte.~
 = ~Il sentiero verso la seconda tappa è aperto.~
 EXIT
 
@@ -2048,23 +2048,23 @@ Global("tb#StivanCernd","GLOBAL",3)
 GlobalGT("AsylumPlot","GLOBAL",1)~ THEN TB#STIVJ stivancerd4
 ~(Gasp!) Questo posto... E' una colonia del nemico pennuto!~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",4)~
-== CERND ~I gabbiani nidificano in ambienti marini quali scogliere, isole e coste, pertanto è comprensibile che qui siano numerosi.~
+== CERNDJ ~I gabbiani nidificano in ambienti marini quali scogliere, isole e coste, pertanto è comprensibile che qui siano numerosi.~
 == TB#STIVJ ~Hanno uno sguardo feroce!~
-== CERND ~A dire il vero, i gabbiani di Athkatla sono molto più aggressivi, e non occorre faticare tanto per capire il perchè. Il progressivo inurbamento dei Moli ha violato il loro habitat, tant'è che i loro nidi sono comparsi addirittura sopra i tetti di alcune abitazioni dell'entroterra.~
+== CERNDJ ~A dire il vero, i gabbiani di Athkatla sono molto più aggressivi, e non occorre faticare tanto per capire il perchè. Il progressivo inurbamento dei Moli ha violato il loro habitat, tant'è che i loro nidi sono comparsi addirittura sopra i tetti di alcune abitazioni dell'entroterra.~
 == TB#STIVJ ~Sono di tutti i tipi!~
-== CERND ~E' vero. Quello è un gabbiano corallino, noto per la facilità con cui si insedia sulle scogliere più insidiose. Vedi quell'altro? E' un gabbiano roseo, facilmente avvistabile in ambienti ad altà salinità.~
+== CERNDJ ~E' vero. Quello è un gabbiano corallino, noto per la facilità con cui si insedia sulle scogliere più insidiose. Vedi quell'altro? E' un gabbiano roseo, facilmente avvistabile in ambienti ad altà salinità.~
 = ~E per finire...~
 = ~Quello che si è appena appoggiato sulla mia spalla è un comune esemplare di gabbiano. Vuoi chiedergli qualcosa?~
 == TB#STIVJ ~Sei impazzito, Cernd?~
-== CERND ~Coraggio; vi farò da tramite.~
+== CERNDJ ~Coraggio; vi farò da tramite.~
 == TB#STIVJ ~Beh... Ecco, io... Non saprei...~
-== CERND ~Una domanda qualsiasi andrà bene.~
+== CERNDJ ~Una domanda qualsiasi andrà bene.~
 == TB#STIVJ ~D'accordo, d'accordo.~
 = ~*Ahem* Sei un maschio... Oppure una femmina?~
-== CERND ~E' un maschio. E' in attesa che le uova della sua compagna si schiudano.~
+== CERNDJ ~E' un maschio. E' in attesa che le uova della sua compagna si schiudano.~
 = ~Avanti, guardalo più da vicino.~
 == TB#STIVJ ~Stai scherzando? Mi staccherà il naso!~
-== CERND ~Non lo farà, Stivan. Non ha motivo di esserti ostile.~
+== CERNDJ ~Non lo farà, Stivan. Non ha motivo di esserti ostile.~
 == TB#STIVJ ~...~
 = ~Heh. Tutto sommato... Ha una faccia simpatica.~
 END
@@ -2076,10 +2076,10 @@ IF ~~ THEN REPLY ~"E fu così che l'halfling depose il suo odio per il nemico pen
 CHAIN IF ~~ THEN tb#stivj StivanCernd1-1
 ~Co...~
 = ~Cosa diavolo sta succedendo? Cosa ci fa quest'uccellaccio ad un palmo dal mio naso? Via, via!~
-== CERND ~No!~
+== CERNDJ ~No!~
 == TB#STIVJ ~(Gasp!) Stavo per essere assoggettato al nemico pennuto!~
 = ~I gabbiani! Ci hanno circondati! All'attacco!!~
-== CERND ~(Sospira) <CHARNAME>, tu... Tu hai appena vanificato tutti i miei sforzi. So bene che non era tua intenzione e non voglio fartene una colpa, ma ti pregherei di non interferire più in futuro.~
-== CERND IF ~OR(2) Class(Player1,DRUID_ALL) Class(Player1,RANGER_ALL)~ THEN ~In qualità di servo della Natura, mi aspetto che tu capisca quanto sia importante difendere queste creature dal rancore esacerbante di Stivan. Se il nostro percorso procederà senza intoppi, presto anche lui verrà educato all'Equilibrio.~
-== CERND IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL)~ THEN ~Non sei un servo della Natura, pertanto non mi aspetto che tu capisca quanto sia importante difendere queste creature dal rancore esacerbante di Stivan. Ad ogni modo, se il nostro percorso procederà senza intoppi, presto verrà educato all'Equilibrio e al rispetto delle creature della Madre, com'è giusto che sia.~
+== CERNDJ ~(Sospira) <CHARNAME>, tu... Tu hai appena vanificato tutti i miei sforzi. So bene che non era tua intenzione e non voglio fartene una colpa, ma ti pregherei di non interferire più in futuro.~
+== CERNDJ IF ~OR(2) Class(Player1,DRUID_ALL) Class(Player1,RANGER_ALL)~ THEN ~In qualità di servo della Natura, mi aspetto che tu capisca quanto sia importante difendere queste creature dal rancore esacerbante di Stivan. Se il nostro percorso procederà senza intoppi, presto anche lui verrà educato all'Equilibrio.~
+== CERNDJ IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL)~ THEN ~Non sei un servo della Natura, pertanto non mi aspetto che tu capisca quanto sia importante difendere queste creature dal rancore esacerbante di Stivan. Ad ogni modo, se il nostro percorso procederà senza intoppi, presto verrà educato all'Equilibrio e al rispetto delle creature della Madre, com'è giusto che sia.~
 EXIT

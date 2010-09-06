@@ -283,7 +283,7 @@ SAY ~Heh. Finalmente ce l'ho fatta!~
 IF ~~ THEN EXIT
 END
 
-IF ~~ THEN BEGIN PD23-28
+IF ~~ THEN BEGIN PD3-28
 SAY ~Il ranger... Minsc... Non meritava i miei insulti. Lui e il suo criceto hanno un cuore d'oro, sotto sotto.~
 IF ~~ THEN EXIT
 END
