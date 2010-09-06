@@ -172,7 +172,7 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 COPY_EXISTING ~npsw02.itm~ ~override/tb#syk1.itm~
 	SAY NAME1 ~Vendetta di Yoshimo +1~
 	SAY NAME2 ~Vendetta di Yoshimo +1~
-	WRITE_LONG 0x1e 0xfbfdfff6 // only usable by chaotic neutral halfling fighter/thieves
+	WRITE_LONG 0x1e 0xfbfdfff2 // only usable by chaotic neutral halfling fighter/thieves
 	SAY IDENTIFIED_DESC ~Questa katana apparteneva a Yoshimo, il cacciatore di taglie di Kara-Tur legato ad Irenicus da una costrizione risultata fatale. L'incantesimo che la rendeva utilizzabile soltanto da lui è stato rimosso in seguito ad una generosa donazione ad Ilmater, a condizione però che l'arma venga utilizzata contro il responsabile della morte del ladro.
 Stivan spruzza entusiasmo da tutti i pori quando brandisce quest'arma, entusiasmo che i tuoi compagni poco apprezzano quando la lama arriva pericolosamente vicino alle loro teste.
 
