@@ -2102,12 +2102,13 @@ CHAIN IF ~~ THEN tb#stivj StivanCernd1-1
 EXIT
 
 CHAIN 
-IF ~InParty("tb#stiv")
-See("tb#stiv")
-!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+IF ~InParty("Stivan")
+See("Stivan")
+!StateCheck("Stivan",CD_STATE_NOTVALID)
 CombatCounter(0)
-AreaCheck("AR2900")
-Global("tb#StivanCernd","GLOBAL",4)~ THEN CERNDJ stivanCernd5
+Global("tb#StivanCernd","GLOBAL",4)
+Global("tb#StivanSawHell","GLOBAL",1)
+AreaCheck("AR2900")~ THEN CERNDJ stivanCernd5
 ~Sei pronto, Stivan? Stiamo per raggiungere l’ultima tappa del nostro lungo percorso. Non avrei mai immaginato che avresti tratto le tue ultime considerazioni qui, all’Inferno, ma se tale è il volere del destino, io non mi opporrò.~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",5)~
 == TB#STIVJ ~Dobbiamo proprio, Cernd? Questo posto... Mi mette i brividi.~

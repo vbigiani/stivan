@@ -879,27 +879,34 @@ DO ~SetGlobal("tb#StivanJaheira","GLOBAL",1)~
 == BJAHEIR ~Già. Molto sottile.~
 EXIT
 
-CHAIN 
+CHAIN
 IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanJaheira","GLOBAL",1)~ THEN TB#STIVB stivanjaheira2
-~Jaheira, posso chiederti perchè hai deciso di seguire <CHARNAME>? Sebbene all'epoca non potessi immaginartelo, questa scelta ha avuto delle notevoli ripercussioni sulla tua vita.~
+~Jaheira, posso chiederti perchè hai deciso di unirti alla compagnia di <CHARNAME>?~
 DO ~SetGlobal("tb#StivanJaheira","GLOBAL",2)~
-== BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
-== TB#STIVB ~Hai pagato un alto prezzo per tener fede alla tua parola. Non voglio attribuir<PRO_HIMHER> alcuna responsabilità, ma il suo retaggio ha attirato Irenicus e--~
-== BJAHEIR ~Dove vuoi arrivare con il tuo ragionamento, Stivan? A chiedermi se <PRO_HIMHER> avrei aiutato pur sapendo che in questo modo mio marito sarebbe morto?~
+== BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion, il <PRO_HISHER> patrigno, ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
+== TB#STIVB ~Chi è Khalid?~
+== BJAHEIR ~Khalid è... era mio marito.~
+== TB#STIVB ~*Ahem* Che fine ha fatto? L'abbiamo perso per strada?~
+== BJAHEIR ~Il tuo spirito è decisamente fuori luogo, ma lascerò correre. Mio marito è caduto per mano dello stregone di cui siamo alla ricerca, ed io non avrò pace sino a quando non sarà stato vendicato.~
+== TB#STIVB ~Accidenti, mi dispiace. Non lo sapevo.~
+== BJAHEIR ~Non c'era motivo per cui dovessi saperlo. Ora, se hai finito...~
+== TB#STIVB ~Beh, a questo punto non posso fare a meno di chiedermi un'altra cosa.~
+== BJAHEIR ~Parla, se devi, ma non ti garantisco una risposta.~
+== TB#STIVB ~Hai pagato un alto prezzo per tener fede alla tua parola. Non voglio attribuire alcuna responsabilità a <CHARNAME>, ma se non avessi viaggiato con <PRO_HIMHER>...~
+== BJAHEIR ~Dove vuoi arrivare con il tuo ragionamento, Stivan? A chiedermi se lo avrei aiutato pur sapendo che in questo modo mio marito sarebbe morto?~
 == TB#STIVB ~Esattamente.~
 == BJAHEIR ~Questa domanda non è degna di risposta. L'uccisione di Khalid... era il tassello di un disegno più grande e al di là della nostra comprensione. Soprattutto della tua!~
-== TB#STIVB ~Ehi, non c'è bisogno di essere così aggressivi. Anch'io ho perso i miei genitori, ma--~
-== BJAHEIR ~Ma cosa? Hanno assassinato Khalid! Hanno profanato il suo corpo! Mi hanno divisa per sempre da mio marito! Come potrei non essere adirata?~
+== TB#STIVB ~Ehi, non c'è bisogno di essere così aggressivi. Non dimenticare che anch'io ho perso i miei familiari.~
+== BJAHEIR ~La mia rabbia è più che giustificata! Hanno assassinato Khalid! Hanno profanato il suo corpo, dividendomi per sempre da mio marito! Come potrei non essere adirata?~
 = ~Mi addolora solo... Il fatto di non essermi potuta offrire al suo posto.~
 == TB#STIVB ~...~
 = ~... Jaheira, io--~
 == BJAHEIR ~No. Non voglio essere consolata.~
 EXIT
-
 CHAIN 
 IF ~InParty("tb#Stiv")
 See("tb#Stiv")
