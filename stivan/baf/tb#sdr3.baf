@@ -1,0 +1,10 @@
+IF
+	InParty("tb#stiv")
+	InParty("anomen")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	!StateCheck("anomen",CD_STATE_NOTVALID)
+	Global("tb#sdr3","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("anomen")
+END

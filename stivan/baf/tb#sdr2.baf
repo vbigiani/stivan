@@ -1,0 +1,10 @@
+IF
+	InParty("tb#stiv")
+	InParty("jaheira")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	!StateCheck("jaheira",CD_STATE_NOTVALID)
+	Global("tb#sdr2","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("tb#stiv")
+END

@@ -30,6 +30,23 @@ COPY_EXISTING ~skelwa03.cre~ ~override/tb#sskf.cre~
 	WRITE_ASCII 0x2cc ~tb#sskf~ #8
 
 
+
+// Clone misc resources
+
+
+COPY_EXISTING ~uddrow35.dlg~ ~override/tb#sdr1.dlg~
+		 ~uddrow35.dlg~ ~override/tb#sdr2.dlg~
+		 ~uddrow35.dlg~ ~override/tb#sdr3.dlg~
+	
+COPY_EXISTING ~uddrow35.cre~ ~override~
+	READ_ASCII 0x248 script
+BUT_ONLY
+
+COPY_EXISTING ~%script%.bcs~ ~override/tb#sdr1.bcs~
+		~%script%.bcs~ ~override/tb#sdr2.bcs~
+		~%script%.bcs~ ~override/tb#sdr3.bcs~
+
+
 			  
 // compile BAFs and Ds			  
 
@@ -55,13 +72,21 @@ COPY ~stivan/copy~ ~override~
 COPY_EXISTING ~ar0500.are~ ~override~
 	ADD_MAP_NOTE #4845 #2049 gray ~Stivan, il Cacciatore~
 
-
+		
 
 // Create new CREs
 	
 COPY_EXISTING ~bhalf1.cre~ ~override~
 	WRITE_ASCIIT 0x248 ~tb#stdes~
 
+COPY_EXISTING ~uddrow35.cre~ ~override/tb#sdr1.cre~
+		 ~uddrow35.cre~ ~override/tb#sdr2.cre~
+		 ~uddrow35.cre~ ~override/tb#sdr3.cre~
+	WRITE_EVALUATED_ASCII 0x248 ~%DEST_RES%~ #8 // override script
+	WRITE_EVALUATED_ASCII 0x280 ~%DEST_RES%~ #32 // name
+	WRITE_EVALUATED_ASCII 0x2cc ~%DEST_RES%~ #8 // dialogue
+	
+	
 COPY_EXISTING ~wench1.cre~ ~override/tb#ssus.cre~
 	SAY NAME1 ~Susan~
 	SAY NAME2 ~Susan~

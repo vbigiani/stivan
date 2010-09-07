@@ -1373,7 +1373,25 @@ INTERJECT_COPY_TRANS UDSILVER 48 tb#StivanUdsilver-48
 == UDSILVER ~Silenzio! Non ammetterò repliche!~
 END
 
+INTERJECT_COPY_TRANS SLHALF01 4 tb#StivanSlhalf01-4
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Haerdalis")!StateCheck("tb#stiv",CD_STATE_NOTVALID) StateCheck("Haerdalis",CD_STATE_NOTVALID)~ THEN 
+~Sbaglio o quell'halfling è praticamente identico a me?~
+== HAERDAJ ~Le uniche copie buone sono quelle che ci fanno vedere il ridicolo nei cattivi originali.~
+== TB#STIVJ ~Heh. Ho l'impressione che questo fosse un insulto, Haer'Dalis.~
+== HAERDAJ ~Non oserei mai, mio gabbiano.~
+END
 
+INTERJECT_COPY_TRANS RUMAR 7 tb#StivanRumar-7
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Yoshimo")!StateCheck("tb#stiv",CD_STATE_NOTVALID) StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN 
+~(Gasp!) Quest'uomo è un infedele! Ha tradito la propria moglie!~
+== YOSHJ ~Chi ha detto che l'adulterio è sinonimo di infedeltà? A volte consente di mantenersi fedele all'amante per tutta la vita.~
+END
+
+INTERJECT_COPY_TRANS NOBLEW2 1 tb#StivanNoblew2-1
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Nalia")!StateCheck("tb#stiv",CD_STATE_NOTVALID) StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN 
+~Miss Nalia, potrei giurare di aver visto quella nobildonna rubare alla Passeggiata. Com'è possibile una cosa simile?~
+== NALIAJ ~Si suppone sempre che le persone facoltose non abbiano bisogno di rubare, Stivan, ma non è facile cambiare le proprie abitudini.~
+END
 
 ///////////////////////////////////////////
 // Scripted banters
@@ -1452,8 +1470,6 @@ SAY ~Mi auguro che le tue parole non vengano seguite dai fatti, <CHARNAME>. Sai 
 IF ~~ THEN EXIT
 END
 END
-
-
 
 CHAIN 
 IF ~InParty("Haerdalis")
@@ -1909,49 +1925,6 @@ DO ~SetGlobal("tb#StivanMinscDrow","GLOBAL",1)~
 EXIT
 
 CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CombatCounter(0)
-AreaType(OUTDOOR)
-Dead("cefald01")
-Global("tb#StivanCernd","GLOBAL",0)~ THEN CERNDJ stivancernd1
-~Come un insidioso manto di nubi oscure si allontana dopo la tempesta, così la minaccia di Faldorn è stata scongiurata per sempre.~
-= ~Ciò nonostante, pare che la Natura sia ingiustamente accusata di un altro crimine. Dico bene, Stivan?~
-DO ~SetGlobal("tb#StivanCernd","GLOBAL",1)~
-== TB#STIVJ ~Cos'è questo, un tentativo di socializzazione? Spiacente, ma non ho la benchè minima intenzione di sprecare fiato con te.~
-= ~Aspetta un momento... Come fai a sapere il mio nome?~
-== CERNDJ ~Non ha importanza. In qualità di druido, è mio dovere intervenire per ripristinare l'Equilibrio e aprire i tuoi occhi alla luce della verità. Lungo il nostro cammino crescerai, e insieme daremo senso e significato alle tue tragedie.~
-== TB#STIVJ ~(Snort!) Non c'è bisogno di ricorrere a simili espedienti verbali per darmi dell'immaturo! Non sono uno stupido, e so riconoscere un insulto!~
-== CERNDJ ~Ogni creazione della Madre è o è stata immatura. Esistono germogli che non giungono a fiorire? O alberi che non fruttificano?~
-== TB#STIVJ ~Chiudi la bocca, druido! Stà zitto!!~
-== CERNDJ ~Presto inizieremo il nostro percorso. Molto presto.~
-EXIT
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
-CombatCounter(0)
-Global("CerndBeggar","GLOBAL",2)
-Global("tb#StivanCernd","GLOBAL",1)~ THEN TB#STIVJ stivancernd2
-~Heh. Pare che le nubi siano tornate, druido, ma questa volta per addensarsi sulla tua testa. Sbaglio o la patata bollente che hai tra le mani ti impedirà di seccarmi per un pò con i tuoi stupidi discorsi?~
-DO ~SetGlobal("tb#StivanCernd","GLOBAL",2)~
-== CERNDJ ~Ti sbagli. Non posso permettere che la mia vita personale intralci i miei doveri di druido. Il nostro cammino comincia adesso.~
-== TB#STIVJ ~Oh, no!~
-== CERND ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
-== TB#STIVJ ~(Snort!) Stai abusando della mia pazienza, tu! Chi diavolo credi di essere per esigere che ti racconti la storia dell'uccisione dei miei familiari?~
-== CERNDJ ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti del destino spingano le tue vele verso il mare della conoscenza.~
-== TB#STIVJ ~Ora capisco dove vuoi arrivare. Tu... Tu Stai mettendo in discussione la colpevolezza dei gabbiani!~
-== CERNDJ ~Dei semplici uccelli marini non potrebbero mai macchiarsi di un crimine come l'uccisione di un'innocente famiglia. Non è nella loro natura.~
-== TB#STIVJ ~Evidentemente quel giorno devono essere caduti in preda a degli istinti carnivori, dato che li ho visti pasteggiare con i resti dei miei familiari!~
-== CERNDJ ~Esatto, Stivan. Tu sostieni di averli visti mentre si cibavano, non mentre uccidevano i tuoi genitori e i tuoi fratelli.~
-== TB#STIVJ ~...~
-= ~... Non cercare di ingannarmi con subdoli giri di parole. Sono stati i gabbiani ad ucciderli e a profanare i loro corpi! Sono stati loro!~
-== CERNDJ ~Il seme del dubbio è stato gettato, e a tempo debito metterà radici.~
-EXIT
-
-CHAIN 
 IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
@@ -2020,9 +1993,53 @@ END
 END
 
 CHAIN 
-IF ~InParty("Stivan")
-See("Stivan")
-!StateCheck("Stivan",CD_STATE_NOTVALID)
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+CombatCounter(0)
+AreaType(OUTDOOR)
+Dead("cefald01")
+Global("tb#StivanCernd","GLOBAL",0)~ THEN CERNDJ stivancernd1
+~Come un insidioso manto di nubi oscure si allontana dopo la tempesta, così la minaccia di Faldorn è stata scongiurata per sempre.~
+= ~Ciò nonostante, pare che la Natura sia ingiustamente accusata di un altro crimine. Dico bene, Stivan?~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",1)~
+== TB#STIVJ ~Cos'è questo, un tentativo di socializzazione? Spiacente, ma non ho la benchè minima intenzione di sprecare fiato con te.~
+= ~Aspetta un momento... Come fai a sapere il mio nome?~
+== CERNDJ ~Non ha importanza. In qualità di druido, è mio dovere intervenire per ripristinare l'Equilibrio e aprire i tuoi occhi alla luce della verità. Lungo il nostro cammino crescerai, e insieme daremo senso e significato alle tue tragedie.~
+== TB#STIVJ ~(Snort!) Non c'è bisogno di ricorrere a simili espedienti verbali per darmi dell'immaturo! Non sono uno stupido, e so riconoscere un insulto!~
+== CERNDJ ~Ogni creazione della Madre è o è stata immatura. Esistono germogli che non giungono a fiorire? O alberi che non fruttificano?~
+== TB#STIVJ ~Chiudi la bocca, druido! Stà zitto!!~
+== CERNDJ ~Presto inizieremo il nostro percorso. Molto presto.~
+EXIT
+
+CHAIN 
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("CerndBeggar","GLOBAL",2)
+Global("tb#StivanCernd","GLOBAL",1)~ THEN TB#STIVJ stivancernd2
+~Heh. Pare che le nubi siano tornate, druido, ma questa volta per addensarsi sulla tua testa. Sbaglio o la patata bollente che hai tra le mani ti impedirà di seccarmi per un pò con i tuoi stupidi discorsi?~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",2)~
+== CERNDJ ~Ti sbagli. Non posso permettere che la mia vita personale intralci i miei doveri di druido. Il nostro cammino comincia adesso.~
+== TB#STIVJ ~Oh, no!~
+== CERND ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
+== TB#STIVJ ~(Snort!) Stai abusando della mia pazienza, tu! Chi diavolo credi di essere per esigere che ti racconti la storia dell'uccisione dei miei familiari?~
+== CERNDJ ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti del destino spingano le tue vele verso il mare della conoscenza.~
+== TB#STIVJ ~Ora capisco dove vuoi arrivare. Tu... Tu Stai mettendo in discussione la colpevolezza dei gabbiani!~
+== CERNDJ ~Dei semplici uccelli marini non potrebbero mai macchiarsi di un crimine come l'uccisione di un'innocente famiglia. Non è nella loro natura.~
+== TB#STIVJ ~Evidentemente quel giorno devono essere caduti in preda a degli istinti carnivori, dato che li ho visti pasteggiare con i resti dei miei familiari!~
+== CERNDJ ~Esatto, Stivan. Tu sostieni di averli visti mentre si cibavano, non mentre uccidevano i tuoi genitori e i tuoi fratelli.~
+== TB#STIVJ ~...~
+= ~... Non cercare di ingannarmi con subdoli giri di parole. Sono stati i gabbiani ad ucciderli e a profanare i loro corpi! Sono stati loro!~
+== CERNDJ ~Il seme del dubbio è stato gettato, e a tempo debito metterà radici.~
+EXIT
+
+
+CHAIN 
+IF ~InParty("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanCernd","GLOBAL",2)
 GlobalGT("Chapter","GLOBAL",2)~ THEN CERND stivancernd3
@@ -2082,4 +2099,89 @@ CHAIN IF ~~ THEN tb#stivj StivanCernd1-1
 == CERNDJ ~(Sospira) <CHARNAME>, tu... Tu hai appena vanificato tutti i miei sforzi. So bene che non era tua intenzione e non voglio fartene una colpa, ma ti pregherei di non interferire più in futuro.~
 == CERNDJ IF ~OR(2) Class(Player1,DRUID_ALL) Class(Player1,RANGER_ALL)~ THEN ~In qualità di servo della Natura, mi aspetto che tu capisca quanto sia importante difendere queste creature dal rancore esacerbante di Stivan. Se il nostro percorso procederà senza intoppi, presto anche lui verrà educato all'Equilibrio.~
 == CERNDJ IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL)~ THEN ~Non sei un servo della Natura, pertanto non mi aspetto che tu capisca quanto sia importante difendere queste creature dal rancore esacerbante di Stivan. Ad ogni modo, se il nostro percorso procederà senza intoppi, presto verrà educato all'Equilibrio e al rispetto delle creature della Madre, com'è giusto che sia.~
+EXIT
+
+CHAIN 
+IF ~InParty("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+CombatCounter(0)
+AreaCheck("AR2900")
+Global("tb#StivanCernd","GLOBAL",4)~ THEN CERNDJ stivanCernd5
+~Sei pronto, Stivan? Stiamo per raggiungere l’ultima tappa del nostro lungo percorso. Non avrei mai immaginato che avresti tratto le tue ultime considerazioni qui, all’Inferno, ma se tale è il volere del destino, io non mi opporrò.~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",5)~
+== TB#STIVJ ~Dobbiamo proprio, Cernd? Questo posto... Mi mette i brividi.~
+== CERNDJ ~Come <CHARNAME> sta affrontando delle prove che lo porteranno ad interrogarsi su se stesso e sul suo ruolo, così è di fondamentale importanza che tu faccia altrettanto.~
+= ~Ripercorriamo un’ultima volta le considerazioni maturate nel corso del nostro cammino.~
+= ~Dimmi, Stivan: hai idea di chi abbia posto fine alla vita dei tuoi familiari?~
+== TB#STIVJ ~*Ahem* No.~
+== CERNDJ ~Non erano forse i gabbiani?~
+== TB#STIVJ ~Non sono stati loro, Cernd. Questo ormai l’ho capito.~
+== CERNDJ ~E lascerai irrisolto il mistero della loro morte?~
+== TB#STIVJ ~Probabilmente non saprò mai chi è il responsabile della loro morte, ma non posso restare ancorato al passato. Ho trascurato fin troppo il presente, e ho capito che è il momento di guardare al futuro. Me ne sono reso conto quando ho riposto le ceneri dei miei familiari nella cripta.~
+== CERNDJ ~Cosa ti attende ora?~
+== TB#STIVJ ~Heh. Questa è una bella domanda.~
+== CERNDJ ~Non mi basta come risposta.~
+== TB#STIVJ ~Cernd, siamo all'Inferno. Devo ancora capire se son vivo o morto!~
+== CERNDJ ~Immagina un domani in cui i rami degli alberi ti accarezzano con le loro verdi foglie; un domani in cui la primavera scrive nell'umidità il delirante alfabeto del tempo che ritorna, mentre l'alba fa spuntare primule e tulipani attorno a te. Riesci a vederti in uno scenario come questo?~
+== TB#STIVJ ~Probabilmente all'inizio starnutirò tutto il tempo, ma quando mi ci sarò abituato potrei trovarmi a mio agio.~
+== CERNDJ ~Un’ultima domanda. ~
+== TB#STIVJ ~Mi fa male la testa, Cernd. Non sono abituato a pensare così tanto.~
+== CERNDJ ~Abbiamo quasi terminato. Cosa ne pensi della vita?~
+== TB#STIVJ ~Heh. Questa è difficile. Un'aiutino?~
+== CERNDJ ~Tua è la risposta.~
+== TB#STIVJ ~Beh, ecco… Sino a poco tempo fa, ti avrei detto che è il più aspro dei campi di battaglia; adesso, invece, considero la vita come un palcoscenico dove ciascuno deve recitare la sua parte.~
+== CERNDJ ~E tu sei intenzionato a prendere tra le mani un copione?~
+== TB#STIVJ ~Penso di sì.~
+== CERNDJ ~Molto bene, Stivan. Non c'è altro da aggiungere. La meta del nostro cammino è stata infine raggiunta. Possano la saggezza della Madre, Chauntea, e del Padre, Silvanus, accompagnarti verso ciò che ti attende.~
+== TB#STIVJ ~...~
+= ~... Posso dirti una cosa, Cernd?~
+== CERNDJ ~Certamente.~
+== TB#STIVJ ~I tuoi capelli sono più lunghi delle liane. Posso dargli un'accorciata?~
+== CERNDJ ~Prima dovremmo aiutare <CHARNAME> a recuperare le Lacrime di Bhaal e la sua anima. Poi... Vedremo.~
+== TB#STIVJ ~Yeah!~
+DO ~ApplySpellRES("tb#scg","tb#stiv") ChangeAlignment("tb#stiv",CHAOTIC_GOOD) StartCutscene("tb#sfix2")~
+EXIT
+
+
+
+///////////////////////////////////////////
+// Drow encounters
+///////////////////////////////////////////
+
+CHAIN
+IF WEIGHT #0 ~InParty("tb#stiv") InParty("Viconia") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("viconia",CD_STATE_NOTVALID) Global("tb#sdr1","GLOBAL",0)~ THEN TB#SDR1 StivanDrow1
+~Seguimi, maschio. Appagherai i miei desideri sino a quando ne avrò voglia!~
+DO ~SetGlobal("tb#sdr1","GLOBAL",1)~
+== TB#STIVJ ~(Arrossisce) Mia mamma diceva sempre che certe cose si fanno solo da sposati...~
+== TB#SDR1 ~Cosa diavolo stai blaterando?~
+== VICONIJ ~Lui appartiene a me, femmina. Fatti da parte, o assaggerai la mia ira.~
+== TB#SDR1 ~Perdonami, sorella. Non sapevo fosse di tua proprietà.~
+== TB#STIVJ ~...~
+= ~... Quella donna voleva appropriarsi della mia innocenza!~
+== VICONIJ ~E' proprio per questo che sono intervenuta. *LE* ho risparmiato un fato invero terribile.~
+EXIT
+
+CHAIN
+IF WEIGHT #0 ~InParty("tb#stiv") InParty("jaheira") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("jaheira",CD_STATE_NOTVALID) Global("tb#sdr2","GLOBAL",0)~ THEN TB#SDR2 StivanDrow2
+~Abbassa il tuo sguardo al mio cospetto, maschio!~
+DO ~SetGlobal("tb#sdr2","GLOBAL",1)~
+== TB#STIVJ ~Se abbasso la testa, come faccio a vedere dove vado?~
+== TB#SDR2 ~Osi contraddirmi?! Le Ancelle della Regina dei Ragni ti strapperanno il cuore per questo affronto!~
+== JAHEIRAJ ~Non c'è bisogno di scomodarle. Punirò io questo insolente.~
+== TB#SDR2 ~Lascio a te il piacere, femmina. Possano i tentacoli della tua verga affondare nella carne di quel verme!~
+== TB#STIVJ ~...~
+= ~... Me la sono vista brutta. Grazie, Jaheria.~
+== JAHEIRAJ ~Presta attenzione a ciò che dici e a come ti comporti, Stivan. In futuro potrei non riuscire ad aiutarti.~
+EXIT
+
+CHAIN
+IF WEIGHT #0 ~InParty("tb#stiv") InParty("anomen") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("anomen",CD_STATE_NOTVALID) Global("tb#sdr3","GLOBAL",0)~ THEN TB#SDR2 StivanDrow3
+~Tu, laggiù. Sembri dotato, per essere un maschio di Ched Nasad. Avanti, seguimi nei miei alloggi.~
+DO ~SetGlobal("tb#sdr3","GLOBAL",1)~
+== ANOMENJ ~Io, ah... Devo svolgere dei compiti per la Matrona. Compiti di fondamentale importanza.~
+== TB#SDR3 ~Non abusare della mia pazienza, miserabile! Ti aspetterò presso la Società delle Femmine Guerriere, e farai bene a non tardare!~
+== ANOMENJ ~Sì, mia signora. Sarò da voi... non appena possibile.~
+== TB#SDR3 ~Cos... Chi ha osato lanciarmi in faccia una simile schifezza? Chi?! Se trovo il responsabile di questo affronto lo getterò nella Fossa dei Ragni!~
+== TB#STIVJ ~Heh. La cacca di gabbiano non perdona.~
 EXIT
