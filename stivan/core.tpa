@@ -6,13 +6,13 @@ END
 COPY_EXISTING ~sw1h01.itm~ ~override/tb#stiva.txt~
 
 // Create resources
-COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2i.bam~ // Yoshimo's +3 Katana
+/*COPY_EXISTING ~insw1h02.bam~ ~override/tb#syk2i.bam~ // Yoshimo's +3 Katana
               ~imisc22.bam~ ~override/tb#surni.bam~ // urn
               ~cmisc22.bam~ ~override/tb#surnc.bam~ // urn
               ~imisc22.bam~ ~override/tb#splui.bam~ // plume
               ~cmisc22.bam~ ~override/tb#spluc.bam~ // plume
               ~imisc22.bam~ ~override/tb#srpli.bam~ // red plume
-              ~cmisc22.bam~ ~override/tb#srplc.bam~ // red plume
+              ~cmisc22.bam~ ~override/tb#srplc.bam~ // red plume*/
 	
 COPY_EXISTING ~skelwa.cre~ ~override/tb#sskm.cre~
 	SAY NAME1 ~Scheletro Mago~

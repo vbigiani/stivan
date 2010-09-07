@@ -4,10 +4,8 @@ Unique Containers:
 t-bhld08.bam
 t-bhld41.bam
 
-Archmage Silver:
-portraits/kivanremix/*
-
-
+Daulmakan:
+BAMs
 
 install order:
 after ER
