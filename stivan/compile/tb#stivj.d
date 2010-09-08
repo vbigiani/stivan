@@ -484,13 +484,13 @@ SAY ~Ti ho visto mentre prendevi il suo... Il suo cuore. *SOB!* Cosa hai intenzi
 IF ~~ THEN REPLY ~Cercherò di far rimuovere la costrizione che aveva stretto con Irenicus, in modo che possa riposare in pace.~ GOTO AfterYoshiBetrayal1-9
 IF ~~ THEN REPLY ~Non lo so. Al momento sono confuso, ma qualcosa dentro di me mi ha spinto a farlo.~ GOTO AfterYoshiBetrayal1-9
 IF ~~ THEN REPLY ~Ha invocato Ilmater prima di lanciarsi all'attacco. Forse un sacerdote del Dio Piangente potrà dirmi qualcosa... Qualcosa su coloro che cadono in battaglia dopo essersi raccomandati alla loro divinità.~ GOTO AfterYoshiBetrayal1-9
-IF ~~ THEN REPLY ~Il tempo mi dirà cosa farne. Adesso voglio soltanto lasciare questo posto, Stivan. L'aria è staura di morte, qui.~ GOTO AfterYoshiBetrayal1-9
+IF ~~ THEN REPLY ~Il tempo mi dirà cosa farne. Adesso voglio soltanto lasciare questo posto, Stivan. L'aria è satura di morte, qui.~ GOTO AfterYoshiBetrayal1-9
 END
 
 IF ~~ THEN AfterYoshiBetrayal1-9
 SAY ~Diversamente da te, io non avevo alcun motivo per odiare Irenicus. Ti ho aiutato a combatterlo perchè tu hai fatto molto per me. Mi hai accolto nel tuo gruppo strappandomi dalla povertà della strada, un debito che posso saldare solo aiutandoti con tutto me stesso.~
 = ~(Snort!) Adesso però anch'io ho una buona ragione per stanare quel maledetto. Io... Vendicherò la morte di Yoshimo!~
-= ~Mi senti, Irenicus? Oggi ti sei fatto un nuovo nemico! Stivan il Cacciatore ti troverà, ovunque tu sia! Possa l'ira dei gabbiani ricadere sulla tua testa!!~
+=  ~Mi senti, Irenicus? Oggi ti sei fatto un nuovo nemico! Stivan il Cacciatore ti troverà, ovunque tu sia! Possa nel frattempo l'ira dei gabbiani ricadere sulla tua testa!~
 IF ~~ THEN EXIT
 END
 END
@@ -522,7 +522,7 @@ END
 
 INTERJECT_COPY_TRANS BEDWIN 50 tb#StivanBedwin-50
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
-~(Snort!) Mia mamma mi ha sempre detto che le donne non sono oggetti sessuali!~
+~(Snort!) Mia mamma diceva sempre che le donne non sono oggetti sessuali!~
 == BEDWIN ~Ma certo. Spesso svolgono anche la funzione di recipienti in grado di sfornare mostri (ho qui vicino a me un valido esempio).~
 == TB#STIVJ ~Viconia, ti prego, dì qualcosa!~
 == BVICONI IF ~!Global("EdwinRomanceActive","GLOBAL",2)~ THEN
@@ -736,8 +736,8 @@ INTERJECT ANOMENJ 52 tb#StivanAnomenj-52
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Lo dico io cosa dobbiamo fare! E' giunto il momento che quell'infame paghi per ciò che ha fatto! Se non interveniamo *adesso*, un domani altri subiranno ciò che è successo a me e ad Anomen!~
 END
-IF ~Global("tb#StivanPCTalk","GLOBAL",2)~ THEN REPLY ~Mi è parso di capire che questo Saerk sia l'uomo che ti ha privato di tutti i tuoi beni, giusto?~ EXTERN TB#STIVJ SaerkStrikesAgain1-1
-IF ~!Global("tb#StivanPCTalk","GLOBAL",2)~ THEN REPLY ~Ho bisogno che tu scenda nei dettagli, Stivan. Chi è questo Saerk? Che cosa ti ha fatto?~ EXTERN TB#STIVJ SaerkStrikesAgain1-2
+IF ~Global("tb#StivanPCTalk","GLOBAL",3)~ THEN REPLY ~Mi è parso di capire che questo Saerk sia l'uomo che ti ha privato di tutti i tuoi beni, giusto?~ EXTERN TB#STIVJ SaerkStrikesAgain1-1
+IF ~!Global("tb#StivanPCTalk","GLOBAL",3)~ THEN REPLY ~Ho bisogno che tu scenda nei dettagli, Stivan. Chi è questo Saerk? Che cosa ti ha fatto?~ EXTERN TB#STIVJ SaerkStrikesAgain1-2
 
 APPEND TB#STIVJ
 IF ~~ THEN BEGIN SaerkStrikesAgain1-1
@@ -759,7 +759,7 @@ CHAIN IF ~~ THEN TB#STIVJ SaerkStrikesAgain1-3
 == MINSCJ IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Boo dice che chi è ingiusto ottiene sempre i migliori risultati.~
 = ~Boo! Come puoi dire una cosa simile? Tutti gli anni trascorsi a dar calci nelle chiappe al male... Spazzati via da una simile affermazione!~
 = ~Ohhhh! Capisco ora! Quell'uomo sta esercitando la sua malvagia influenza su di te! Dobbiamo fermarlo, prima che corrompa del tutto la bontà di questo criceto!~
-== EDWINJ IF ~InParty("Edwin") InParty("Minsc") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(Finalmente ho trovato il modo di impiegare quello stupido incantesimo chiamato "Dominare Animali". E pensare che stavo semplicemente cercando un valido passatempo per ignorare gli struggimenti dell'halfling).~ 
+== EDWINJ IF ~InParty("Edwin") InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(Finalmente ho trovato il modo di impiegare quello stupido incantesimo chiamato "Dominare Animali". E pensare che stavo semplicemente cercando un valido passatempo per ignorare gli struggimenti dell'halfling).~ 
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Vorresti portare quest'uomo di fronte alla giustizia? In assenza di prove non credo che andremmo molto lontani. Sarebbe bene rivolgersi alle autorità locali. Una collaborazione potrebbe risultare fruttuosa.~
 == CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Come un ragno tesse abilmente la propria tela a spese degli ignari insetti, così quest'uomo ha costruito la sua fortuna sulle disgrazie altrui. E' nostro dovere intervenire affinchè la trama della sua ragnatela non si espanda ulteriormente.~
 == VALYGARJ IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Pare che il novero dei criminali abbia accolto al suo interno anche i mercanti, come se l’attuale numero non fosse già abbastanza. Forse questa è l’occasione per mostrar loro che ad Athkatla nessuno è libero di agire come meglio crede a spese degli altri.~
@@ -1392,6 +1392,70 @@ INTERJECT_COPY_TRANS NOBLEW2 1 tb#StivanNoblew2-1
 ~Miss Nalia, potrei giurare di aver visto quella nobildonna rubare alla Passeggiata. Com'è possibile una cosa simile?~
 == NALIAJ ~Si suppone sempre che le persone facoltose non abbiano bisogno di rubare, Stivan, ma non è facile cambiare le proprie abitudini.~
 END
+
+INTERJECT_COPY_TRANS GAELAN 66 tb#StivanGaelan-66
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~Ti consiglio di concludere i tuoi affari con questo Linvail il più presto possibile, <CHARNAME>. I Signori delle Ombre cambiano di continuo ad Athkatla, e non vorrei che qualcuno prendesse il suo posto prima che tu abbia raggiunto il tuo obiettivo.~
+END
+
+INTERJECT_COPY_TRANS FIRKRA01 9 tb#StivanFirkra01-9
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~Una volta sono passato per queste colline, <CHARNAME>, ma non sono altro che una distesa brulla e deserta, se ricordo bene. Mi chiedo cosa ci facciano dei predatori in una zona simile.~
+END
+
+INTERJECT_COPY_TRANS DASLAVE1 7 tb#StivanDaslave1-7
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~(Sniff) Sei proprio una brava persona, <CHARNAME>. Hai dato un grande aiuto a queste persone, esattamente come hai fatto con me il giorno in cui mi hai accolto nella tua compagnia.~
+BRANCH ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
+== TB#STIVJ ~Miss Nalia, avete visto che bel gesto ha fatto?~
+== NALIAJ ~Sì, Stivan. Un ottimo esempio da cui trarre ispirazione, sebbene dubiti che troverebbe seguito tra le famiglie della vecchia guardia.~
+== TB#STIVJ ~Se non fossi già il vostro umile sguattero, l'avrei servito e riverito a dovere, ma la vostra nobiltà ha la precedenza.~
+END
+END
+
+INTERJECT_COPY_TRANS DASLAVE1 8 tb#StivanDaslave1-8
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~(Sniff) Sei proprio una brava persona, <CHARNAME>. Hai dato un grande aiuto a queste persone, esattamente come hai fatto con me il giorno in cui mi hai accolto nella tua compagnia.~
+BRANCH ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
+== TB#STIVJ ~Miss Nalia, avete visto che bel gesto ha fatto?~
+== NALIAJ ~Umpf. Penso che avrebbe anche potuto separarsi da qualche moneta d'oro e dare un aiuto più concreto a quei poveri sventurati.~
+== TB#STIVJ ~Non sminuite il suo gesto.~
+== NALIAJ ~Per correggere le iniquità e sradicare la povertà, non basta tendere la mano ai bisognosi, Stivan. Occorre anche aiutarli a camminare fino a quando non saranno capaci di reggersi sulle proprie gambe.~
+== TB#STIVJ ~Beh, ecco... Certo, Miss Nalia. Avete sempre ragione voi.~
+= ~(Bisbigliando) Non è vero, <CHARNAME>, io sono con te. Ogni tanto la nostra amica sragiona, ma non posso contraddirla davanti a tutti. La farei sfigurare.~
+END
+END
+
+INTERJECT_COPY_TRANS UHMAY01 18 tb#StivanUhmay01-18
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~Ehm... Io credevo che quella di Umar fosse solo una favola raccontata dalle madri halfling per spaventare i loro piccoli quando facevano i monelli o cose simili.~
+= ~Ovviamente con me non ce n'è mai stato bisogno.~
+END
+
+INTERJECT_COPY_TRANS PROST1 4 tb#StivanProst1-4
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~Gli Stregoni Incappucciati sono incredibilmente bravi a catturare le persone. Peccato che spesso siano quelle sbagliate.~
+END
+
+INTERJECT_COPY_TRANS PROST1 1 tb#StivanProst1-1
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~Heh. Mia mamma diceva sempre che i suoi ceffoni erano più che sufficienti.~
+END
+
+INTERJECT_COPY_TRANS SLUMM3 2 tb#StivanSlumm3-2
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~Non contare sul loro aiuto, perchè non arriverà. Meglio che impari a difenderti da solo, proprio come ho fatto io.~
+END
+
+INTERJECT_COPY_TRANS DHARLOT1 1 tb#StivanDharlot1-1
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+~(Arrossisce) Non... Non dirlo neanche per scherzo!~
+END
+
+
+
+
+
 
 ///////////////////////////////////////////
 // Scripted banters
@@ -2144,6 +2208,140 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",5)~
 DO ~ApplySpellRES("tb#scg","tb#stiv") ChangeAlignment("tb#stiv",CHAOTIC_GOOD) StartCutscene("tb#sfix2")~
 EXIT
 
+CHAIN
+IF ~InParty("tb#stiv")
+InParty(Player1)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+OR(2)
+	AreaCheck("AR0509")
+	AreaCheck("AR0522")
+Global("tb#StivanPCTalk","GLOBAL",1)~ THEN TB#STIVJ inAR0509
+~Eccoci! Era da un pezzo che non mettevo i miei piedini pelosi in questo posto. Samuel, l'halfling di cui ti parlavo, è lì al bancone. Andiamo a salutarlo.~
+DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",2)~
+EXIT
+
+CHAIN
+IF WEIGHT #-1 ~InParty("tb#stiv")
+InParty(Player1)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanPCTalk","GLOBAL",2)~ THEN FFBART StivanSamuel1
+~Salve, miei buon amici, e benv... Stivan! E' da un pezzo che non ti vedevo! Mi stavo proprio chiedendo che fine avessi fatto.~
+DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",3)~
+== TB#STIVJ ~Ehilà, Samuel! Scusami se non passo a salutarti con la stessa frequenza di prima, ma adesso viaggio con una compagnia di avventurieri e siamo sempre impegnati in qualche impresa eroica da una parte o dall'altra.~
+== FFBART ~Oho! Questa è una buona notizia! Finalmente Tymora ti sorride!~
+END
+IF ~Global("InteractMazzy","LOCALS",1)~ THEN EXTERN FFBART StivanSamuel1-1
+IF ~!Global("InteractMazzy","LOCALS",1)~ THEN EXTERN FFBART StivanSamuel1-2
+
+CHAIN 
+IF ~~ THEN FFBART StivanSamuel1-1
+~Ti avrei fatto dono degli stivali che indossavo ai tempi in cui erravo lungo la Costa della Spada, ma li ho già dati alla dolce Mazzy.~
+BRANCH ~InParty("mazzy")~ BEGIN
+== FFBART ~Mi raccomando, tratta bene la mia paladina preferita.~
+== TB#STIVJ ~*Ahem* Certo, Samuel. Lei ed io andiamo d'amore e d'accordo.~
+== FFBART ~Uhmm... C'è forse del tenero tra voi due?~
+== TB#STIVJ ~Tra me e la venditrice di patate? Sei forse impazzito?~
+== FFBART ~Se ti sentisse chiamarla in questo modo, Stivan, credo che te la vedresti brutta.~
+== TB#STIVJ ~Heh. Cercherò di trattenermi, allora.~
+== FFBART ~Se aspetti qualche istante, ho una sorpresa per te. Non scappare via!~
+END
+EXTERN TB#STIVJ StivanSamuel1-3
+
+CHAIN 
+IF ~~ THEN FFBART StivanSamuel1-2
+~Se aspetti un attimo dovrei riuscire a recuperare gli stivali che indossavo ai tempi in cui erravo lungo la Costa della Spada. Dunque, dove li ho messi...? Ah, eccoli qui. Tieni. Serviranno più a te che a me.~
+DO ~GiveItemCreate("BOOT02",Player1,0,0,0)~
+== TB#STIVJ ~Wow! Grazie, Samuel. Sei veramente gentile.~
+= ~Ehi, mi calzano alla perfezione!~
+== FFBART ~Non avevo dubbi. Se aspetti qualche istante, ho un'altra sorpresa per te. Non scappare via!~
+EXTERN TB#STIVJ StivanSamuel1-3
+
+APPEND TB#STIVJ
+IF ~~ THEN StivanSamuel1-3
+SAY ~D'accordo, ti aspettiamo.~
+= ~Hai visto quant'è gentile, <CHARNAME>? Mi ha aiutato molto dopo la morte dei miei genitori e dei miei fratelli.~
+IF ~GlobalGT("AnomenDecide","GLOBAL",0)~ THEN REPLY ~L'alta considerazione che hai di lui è palese.~ EXTERN TB#STIVJ StivanSamuel1-5
+IF ~Global("AnomenDecide","GLOBAL",0)~ THEN REPLY ~L'alta considerazione che hai di lui è palese.~ EXTERN TB#STIVJ StivanSamuel1-6
+IF ~!Race(Player1,HALFLING) GlobalGT("AnomenDecide","GLOBAL",0)~ THEN REPLY ~Avevo sentito dire che tra gli halfling c'è grande solidarietà, e ne ho appena avuto conferma.~ EXTERN TB#STIVJ StivanSamuel1-5
+IF ~!Race(Player1,HALFLING) Global("AnomenDecide","GLOBAL",0)~ THEN REPLY ~Avevo sentito dire che tra gli halfling c'è grande solidarietà, e ne ho appena avuto conferma.~ EXTERN TB#STIVJ StivanSamuel1-6
+IF ~~ THEN REPLY ~Che sorpresa pensi abbia in mente?~ EXTERN TB#STIVJ StivanSamuel1-4
+IF ~GlobalGT("AnomenDecide","GLOBAL",0)~ THEN REPLY ~In che modo ti ha aiutato?~ EXTERN TB#STIVJ StivanSamuel1-5
+IF ~Global("AnomenDecide","GLOBAL",0)~ THEN REPLY ~In che modo ti ha aiutato?~ EXTERN TB#STIVJ StivanSamuel1-6
+END
+
+IF ~~ THEN StivanSamuel1-4
+SAY ~Boh. Non ci resta che aspettare e vedere.~
+IF ~GlobalGT("AnomenDecide","GLOBAL",0)~ THEN EXTERN TB#STIVJ StivanSamuel1-5
+IF ~Global("AnomenDecide","GLOBAL",0)~ THEN EXTERN TB#STIVJ StivanSamuel1-6
+END
+
+IF ~~ THEN StivanSamuel1-5
+SAY ~Questo caro amico di famiglia fu il solo ad offirmi una spalla su cui appoggiarmi dopo che quel bruttone di Saerk ebbe commesso le schifezze che ti ho già raccontato.~
+IF ~~ THEN EXTERN TB#STIVJ StivanSamuel1-7
+END
+
+IF ~~ THEN StivanSamuel1-6
+SAY ~Quando i miei genitori e i miei fratelli vennero uccisi dai gabbiani, chiesi subito aiuto al socio in affari di mio padre. Non avevo la benchè minima idea di come gestire la mia eredità, ma pensavo che lui più di tutti mi avrebbe potuto dare una mano.~
+= ~Fu un errore fatale. Quel maledetto riuscì ad impossessarsi degli atti di proprietà della mia famiglia, e fece realizzare dei falsi secondo cui le mie terre appartenevano in realtà ai Farrahd da generazioni.~
+= ~Persi tutto. I vigneti, la fattoria. E infine, anche la casa.~
+IF ~~ THEN EXTERN TB#STIVJ StivanSamuel1-7
+END
+
+IF ~~ THEN StivanSamuel1-7
+SAY ~Samuel mi offrì alloggio qui, alla Locanda dei Cinque Boccali, ma quando iniziai la mia giusta campagna contro i gabbiani dovetti andarmene. Pare che alcuni clienti non ne apprezzassero la visione, ed io non volevo certo rovinargli gli affari, soprattutto dopo tutto quello che aveva fatto per me.~
+IF ~~ THEN REPLY ~Questo spiega tutto. Si vede che è una brava persona.~ EXTERN FFBART StivanSamuel1-10
+IF ~~ THEN REPLY ~Sarebbe stato più saggio rivolgersi a lui anzichè al socio di tuo padre, non credi?~ EXTERN TB#STIVJ StivanSamuel1-8
+IF ~~ THEN REPLY ~Non avresti potuto smettere di ammazzare quei poveri uccelli? Almeno in questo modo avresti avuto un tetto sotto la testa.~ EXTERN TB#STIVJ StivanSamuel1-9
+END
+
+IF ~~ THEN StivanSamuel1-8
+SAY ~(Snort!) E' facile giudicare a posteriori, <CHARNAME>! Non c'era nulla che mi inducesse a pensare che sarebbe successo quello che è successo!~
+IF ~~ THEN EXTERN FFBART StivanSamuel1-10
+END
+
+IF ~~ THEN StivanSamuel1-9
+SAY ~Heh. Ti adoro quando fai lo spiritoso.~
+IF ~~ THEN EXTERN FFBART StivanSamuel1-10
+END
+END
+
+CHAIN 
+IF ~~ THEN FFBART StivanSamuel1-10
+~Eccomi di ritorno - scusatemi per avervi fatto attendere!~
+== TB#STIVJ ~Ma quello... Quello è...~
+== FFBART ~Sì! E' uno degli ultimi fiaschi di vino prodotto dalla tua famiglia. Li conservo come se fossero i più preziosi tra i tesori, ma direi che è il caso di gustarne uno per festeggiare la tua nuova vita da avventuriero!~
+== TB#STIVJ ~(Sniff) Grazie, Samuel. Sono commosso...~
+== FFBART ~Oh, non piangere. Sarebbe un peccato se le tue lacrime salate finissero in un buon bicchiere di vino. Ecco, prendete; uno per te, ed uno per il tuo amico.~
+== TB#STIVJ ~Coraggio, <CHARNAME>, bevine un sorso. Sono sicuro che ti piacerà!~
+END
+IF ~~ THEN REPLY ~Ehm... Veramente sono astemio...~ EXTERN TB#STIVJ StivanSamuel1-11
+IF ~~ THEN REPLY ~Ti ringrazio, ma il vino proprio non mi piace.~ EXTERN TB#STIVJ StivanSamuel1-11
+IF ~~ THEN REPLY ~Io adoro il vino, soprattutto quello rosso. Stivan, Samuel, alla salute!~ EXTERN TB#STIVJ StivanSamuel1-12
+
+CHAIN
+IF ~~ THEN tb#stivj StivanSamuel1-11
+~Davvero? Che peccato. Allora brinderemo solo Samuel ed io. Alla salute, amico!~
+== FFBART ~Alla salute!~
+EXTERN TB#STIVJ StivanSamuel1-12
+
+CHAIN
+IF ~~ THEN TB#STIVJ StivanSamuel1-12
+~Yeah!~
+== FFBART ~Semplicemente divino!~
+EXTERN FFWENCH StivanSamuel1-13
+
+CHAIN
+IF ~~ THEN FFWENCH StivanSamuel1-13
+~Samuel, vuoi darti una mossa o no?! Per quale motivo te ne stai lì a chiacchierare quando io mi ammazzo di lavoro tra un tavolo el l'altro?~
+== FFBART ~Ehm... Il dovere mi chiama, amici. Adesso devo proprio lasciarvi, ma tornate a trovarmi presto!~
+== TB#STIVJ ~Puoi contarci, Samuel! Grazie di tutto e stammi bene!~
+= ~...~
+= ~... Grazie anche a te, <CHARNAME>. Questa sosta mi ha decisamente ringalluzzito, e ora mi sento pronto a tornare all'avventura con le gote belle rosse. Heh.~
+EXIT
 
 
 ///////////////////////////////////////////

@@ -101,7 +101,7 @@ IF ~~ THEN REPLY ~E’ quello che sto cercando di scoprire. Imoen, la ragazza che 
 END
 
 IF ~~ THEN StivanPC1-13
-SAY ~Cosa?! Stai scherzando, vero? Mia mamma mi ripeteva sempre che le signorine non si toccano neanche con un fiore!~
+SAY ~Cosa?! Stai scherzando, vero? Mia mamma diceva sempre che le signorine non si toccano neanche con un fiore!~
 IF ~~ THEN REPLY ~E’ quello che dico anch’io.~ GOTO StivanPC1-14
 IF ~~ THEN REPLY ~Temo che i genitori di Irenicus non abbiano fatto altrettanto.~ GOTO StivanPC1-14
 IF ~~ THEN REPLY ~Ehm... Non credo che Irenicus conosca la cavalleria...~ GOTO StivanPC1-14
