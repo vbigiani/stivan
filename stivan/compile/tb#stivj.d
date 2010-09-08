@@ -1452,8 +1452,15 @@ INTERJECT_COPY_TRANS DHARLOT1 1 tb#StivanDharlot1-1
 ~(Arrossisce) Non... Non dirlo neanche per scherzo!~
 END
 
+INTERJECT_COPY_TRANS UDSOLA01 50 UDSOLA01-50
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ ~Wow, esistono drow simpatici!~
+== VICONIJ IF ~IsValidForPartyDialog("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ ~La sua simpatia gli sarà di ben poca utilità quando quella femmina gli strapperà la pelle di dosso per la sua insolenza.~
+END
 
-
+INTERJECT_COPY_TRANS UDSOLA01 114 UDSOLA01-114
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ ~Yeah! Diglielo in faccia!~
+== UDSOLA01 ~Non ti immischiare in faccende che non ti riguardano.~
+END
 
 
 
@@ -2165,16 +2172,130 @@ CHAIN IF ~~ THEN tb#stivj StivanCernd1-1
 == CERNDJ IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL)~ THEN ~Non sei un servo della Natura, pertanto non mi aspetto che tu capisca quanto sia importante difendere queste creature dal rancore esacerbante di Stivan. Ad ogni modo, se il nostro percorso procederà senza intoppi, presto verrà educato all'Equilibrio e al rispetto delle creature della Madre, com'è giusto che sia.~
 EXIT
 
+CHAIN IF ~InParty("cernd")
+See("Cernd")
+!StateCheck("cernd",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanCernd","GLOBAL",4)
+GlobalGT("SolaufeinJob","GLOBAL",7)
+PartyHasItem("misc9w")
+Dead("udsola01")
+~ THEN TB#STIVJ killedSola
+~Non posso credere che tu abbia ucciso l'unico drow amichevole in questo posto!~
+== CERNDJ ~I gabbiani che uccidi sono ugualmente amichevoli, e alle mie orecchie giungono grida simili ogni volta che ne uccidi uno.~
+EXTERN TB#STIVJ postSola
+
+CHAIN IF ~InParty("cernd")
+See("cernd")
+!StateCheck("cernd",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanCernd","GLOBAL",4)
+Global("SolaufeinJob","GLOBAL",9)
+!Dead("udsola01")
+~ THEN TB#STIVJ savedSola
+~Mi stava simpatico. Grazie, CHARNAME, di averlo risparmiato nonostante il rischio che correvi.~
+== CERNDJ ~Cosi' come CHARNAME ha risparmiato una vita correndo un rischio cosi' grave, non dovresti allo stesso modo risparmiare le vite dei gabbiani?~
+EXTERN TB#STIVJ postSola
+
+CHAIN IF ~InParty("cernd")
+See("cernd")
+!StateCheck("cernd",CD_STATE_NOTVALID)
+Global("tb#StivanCernd","GLOBAL",4)
+AreaCheck("ar2401")~ THEN TB#STIVJ noSola
+~Non vedo l'ora di tornare alla superficie! Prepara il fuoco, <CHARNAME>, stasera vado a caccia e poi stufato di gabbiano per tutti!~
+== CERNDJ ~E' nella natura dell'uomo di uccidere per nutrirsi. Tuttavia, dubito che quello sia il vero scopo delle tue uccisioni.~
+EXTERN TB#STIVJ postSola
+
+CHAIN IF ~~ THEN TB#STIVJ postSola
+~Fatti gli affari tuoi, Cernd!~
+== CERNDJ ~La Natura e' affare mio, cosi' come e' insegnarne il rispetto.~
+= ~E' ora di riprendere il nostro cammino.~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",5)~
+== TB#STIVJ ~No, non lo e'!~
+== CERNDJ ~Dimmi, Stivan, quando sono morti i tuoi genitori?~
+== TB#STIVJ ~Morirono otto anni fa, e lo ricordo come se fosse ieri!~
+== CERNDJ ~E chi li ha uccisi?~
+== TB#STIVJ ~Ma che domande fai? Fu uno stormo di gabbiani, e lo sai meglio di me!~
+== CERNDJ ~Ammettiamo anche che cio' sia vero - ebbene, sappi che i gabbiani non vivono mai piu' di tre anni.~
+= ~Anche se tu uccidessi tutti i gabbiani che vivono oggi, non ucciderai mai quelli che tu ritieni abbiano ucciso i tuoi genitori.~
+== TB#STIVJ ~Io...~
+== CERNDJ ~Di' quello che pensi, anche se temi di dirlo.~
+== TB#STIVJ ~Io mi vendichero' uccidendo i loro figli! E i figli dei loro figli! E...~
+== CERNDJ ~Come le radici di una pianta divorano la piu' dura delle rocce con la sola forza della pazienza, cosi' i miei insegnamenti divoreranno il tuo odio. Abbiamo seminato abbastanza per oggi.~
+EXIT
+
+CHAIN IF ~InParty("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanCernd","GLOBAL",5)
+Global("Chapter","GLOBAL",6)
+AreaType(OUTDOOR)
+!AreaCheck("AR2500")
+!AreaCheck("AR2601")
+~ THEN CERNDJ StivanCernd6
+~E' ora di riprendere il nostro cammino.~
+= ~Il tuo primo dialogo con un gabbiano e' stato bruscamente interrotto.~
+= ~...~
+= ~Ecco, questo e' un gabbiano dalla testa rosa, noto per legarsi per tutta la vita ai suoi parenti - legami piu' saldi di quelli tra parenti umani. Hai qualche domanda da porgli, Stivan?~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",6)~
+== TB#STIVJ ~Ecco, io...~
+== CERNDJ ~Non esitare, Stivan. Solo parlando col tuo nemico potrai conoscerlo e terminare il tuo conflitto.~
+== TB#STIVJ ~(Snort!) Lo faccio a condizione che dopo tu chiuda la bocca una volta per tutte.~ 
+= ~Allora... Tu sei un maschio o una femmina?~
+== CERNDJ ~E' una femmina. Ha appena lasciato i cuccioli sotto la cura del maschio ed e' andata in cerca di cibo.~
+== TB#STIVJ ~Ah si'? E dove lo cerchi, uccidendo i bambini nelle culle? O preferisci attaccare gli uomini adulti?~
+= ~...~
+= ~Perche' scappa? Si vergogna delle sue colpe?~
+== CERNDJ ~(sigh) Ha detto che non puo' cercare cibo vicino a dove abitano gli uomini, a causa del Cacciatore. Ti deve aver riconosciuto.~
+== TB#STIVJ ~Yeah! Allora la mia reputazione si sta diffondendo! Presto Atkhatla sara' libera dalla minaccia!~
+== CERNDJ ~Come l'ora piu' scura e' quella che precede l'alba, cosi' l'odio e' piu' profondo prima della riconciliazione. Il nostro percorso sta per terminare.~
+EXIT
+
+CHAIN IF ~InParty("cernd")
+See("cernd")
+!StateCheck("cernd",CD_STATE_NOTVALID)
+!StateCheck("Stivan",CD_STATE_NOTVALID)
+Global("tb#StivanCernd","GLOBAL",7)
+AreaType(OUTDOOR)
+RealGlobalTimerExpired("tb#StivanCerndTimer","global")~ THEN TB#STIVJ StivanCernd7
+~Cernd, potresti attirare un'altro gabbiano? Ora so che cosa dirgli.~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",8)~
+== CERNDJ ~Vedo che i nostri semi stanno germogliando. Soddisfero' subito la tua richiesta.~
+= ~...~
+= ~Ecco. Questo gabbiano dalla coda nera ha fatto un viaggio estremamente lungo nella sua vita - e' solito nidificare nelle remote terre di Halruaa. E' estremamente longevo, vi sono esemplari che raggiungono i cinquanta anni.~
+== TB#STIVJ ~...~
+= ~Mi hai mentito! Quando mi avevi detto che i gabbiani non vivono mai piu' di tre anni, mi hai mentito!~
+= ~Potrebbe essere stato lui ad aver attaccato i miei genitori!~
+== CERNDJ ~La menzogna non e' un atto malvagio se e' commesso a fin di bene.~
+== TB#STIVJ ~Taci! Non ti voglio sentire!~
+== CERNDJ ~Come la Natura perdona il leone per le sue uccisioni, così possa la Grande Madre perdonare me per questo inammissibile errore. Spero che i semi piantati fin'ora siano piu' forti di questo sbaglio.~
+EXIT
+
+CHAIN IF ~InParty("cernd")
+See("cernd")
+!StateCheck("cernd",CD_STATE_NOTVALID)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+Global("tb#StivanCernd","GLOBAL",8)
+PartyHasItem("miscb2")~ THEN TB#STIVJ StivanCernd8
+~Cernd, scusami per averti attaccato. Se hai mentito, lo hai fatto solo a fin di bene.~
+== CERNDJ ~Ti ringrazio per la tua comprensione.~
+= ~Ora dim---~
+== TB#STIVJ ~*splash*~
+= ~In faccia me l'hai fatta, uccellaccio? Allora volete la guerra! Vieni qui che ti spenno, tu e il tuo amico!~
+== CERNDJ ~Come una mattina di gelo non uccide il germoglio sano, cosi' i tuoi germogli di pieta' non verranno uccisi da questo incidente. La fioritura e' ormai prossima.~
+EXIT
+
 CHAIN 
 IF ~InParty("Stivan")
 See("Stivan")
 !StateCheck("Stivan",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanCernd","GLOBAL",4)
+Global("tb#StivanCernd","GLOBAL",9)
 Global("tb#StivanSawHell","GLOBAL",1)
-AreaCheck("AR2900")~ THEN CERNDJ stivanCernd5
+AreaCheck("AR2900")~ THEN CERNDJ stivanCernd9
 ~Sei pronto, Stivan? Stiamo per raggiungere l’ultima tappa del nostro lungo percorso. Non avrei mai immaginato che avresti tratto le tue ultime considerazioni qui, all’Inferno, ma se tale è il volere del destino, io non mi opporrò.~
-DO ~SetGlobal("tb#StivanCernd","GLOBAL",5)~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",8)~
 == TB#STIVJ ~Dobbiamo proprio, Cernd? Questo posto... Mi mette i brividi.~
 == CERNDJ ~Come <CHARNAME> sta affrontando delle prove che lo porteranno ad interrogarsi su se stesso e sul suo ruolo, così è di fondamentale importanza che tu faccia altrettanto.~
 = ~Ripercorriamo un’ultima volta le considerazioni maturate nel corso del nostro cammino.~

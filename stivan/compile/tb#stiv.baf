@@ -229,7 +229,7 @@ THEN
 END
 
 IF
-	InParty("Stivan")
+	InParty("tb#stiv")
 	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	!StateCheck(Player1,CD_STATE_NOTVALID)
 	CombatCounter(0)
@@ -449,6 +449,83 @@ IF
 	CombatCounter(0)
 	Global("CerndBeggar","GLOBAL",2)
 	Global("tb#StivanCernd","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("cernd")
+END
+
+IF
+	InParty("cernd")
+	See("cernd")
+	!StateCheck("cernd",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanCernd","GLOBAL",4)
+	GlobalGT("SolaufeinJob","GLOBAL",7)
+	PartyHasItem("misc9w")
+	Dead("udsola01")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("cernd")
+END
+	
+IF
+	InParty("cernd")
+	See("cernd")
+	!StateCheck("cernd",CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanCernd","GLOBAL",4)
+	Global("SolaufeinJob","GLOBAL",9)
+	!Dead("udsola01")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("cernd")
+END
+
+IF
+	InParty("cernd")
+	See("cernd")
+	!StateCheck("cernd",CD_STATE_NOTVALID)
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	Global("tb#StivanCernd","GLOBAL",4)
+	AreaCheck("ar2401")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("cernd")
+END
+
+IF
+	InParty("cernd")
+	See("cernd")
+	!StateCheck("cernd",CD_STATE_NOTVALID)
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	Global("tb#StivanCernd","GLOBAL",6)
+	Global("tb#stivanentrytest","global",7)
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("tb#StivanCerndTimer","GLOBAL",120)
+		SetGlobal("tb#StivanCernd","GLOBAL",7)
+END
+
+IF
+	InParty("cernd")
+	See("cernd")
+	!StateCheck("cernd",CD_STATE_NOTVALID)
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	Global("tb#StivanCernd","GLOBAL",7)
+	AreaType(OUTDOOR)
+	RealGlobalTimerExpired("tb#StivanCerndTimer","global")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("cernd")
+END
+
+IF
+	InParty("cernd")
+	See("cernd")
+	!StateCheck("cernd",CD_STATE_NOTVALID)
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	Global("tb#StivanCernd","GLOBAL",8)
+	PartyHasItem("miscb2")
 THEN
 	RESPONSE #100
 		StartDialogueNoSet("cernd")

@@ -24,11 +24,25 @@ THEN
 END
 
 IF
-	InParty("Stivan")
-	See("Stivan")
-	!StateCheck("Stivan",CD_STATE_NOTVALID)
+	InParty("tb#stiv")
+	See("tb#stiv")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	CombatCounter(0)
-	Global("tb#StivanCernd","GLOBAL",4)
+	Global("tb#StivanCernd","GLOBAL",5)
+	Global("Chapter","GLOBAL",6)
+	AreaType(OUTDOOR)
+	!AreaCheck("AR2500")
+	!AreaCheck("AR2601")
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("tb#stiv")
+END
+
+IF
+	InParty("tb#stiv")
+	See("tb#stiv")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+	CombatCounter(0)
 	Global("tb#StivanSawHell","GLOBAL",0)
 	OR(5)
 		AreaCheck("AR2901")
@@ -42,11 +56,11 @@ THEN
 END
 
 IF
-	InParty("Stivan")
-	See("Stivan")
-	!StateCheck("Stivan",CD_STATE_NOTVALID)
+	InParty("tb#stiv")
+	See("tb#stiv")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	CombatCounter(0)
-	Global("tb#StivanCernd","GLOBAL",4)
+	Global("tb#StivanCernd","GLOBAL",9)
 	Global("tb#StivanSawHell","GLOBAL",1)
 	AreaCheck("AR2900")
 THEN
