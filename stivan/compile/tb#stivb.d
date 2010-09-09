@@ -254,7 +254,7 @@ Global("tb#StivanViconia","GLOBAL",7)~ THEN BVICONI stivan-viconia-7
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",8)~
 == TB#STIVB ~Heh. Sarei tentato di risponderti con un bel "Era ora!" ma, conoscendoti, è meglio che lo tenga per me.~
 == BVICONI ~L'hai appena detto, imbecille.~
-== TB#STIVB ~Ops... Chiedo scusa. Amici come prima?~
+== TB#STIVB ~Ops. Chiedo scusa. Amici come prima?~
 == BVICONI ~Godrai nuovamente della mia considerazione, se è questo che intendi.~
 == TB#STIVB ~Heh. Sono felice che le cose tra noi si siano sistemate, Viccy.~
 == BVICONI ~Iniziamo male, sakphul. Molto male.~
@@ -297,15 +297,17 @@ DO ~SetGlobal("tb#StivanAnomen","GLOBAL",2)~
 == BANOMEN ~Puoi scordartelo, halfing! Chiedere scusa significherebbe stendere le fondamenta per un'offesa futura!~
 EXIT
 
+ADD_TRANS_ACTION ANOMENJ BEGIN 101 END BEGIN END ~SetGlobalTimer("tb#StivanAnomenUpset","GLOBAL",FOUR_DAYS)~
 
 CHAIN 
 IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
 Global("AnomenIsNotKnight","GLOBAL",1)
+GlobalTimerExpired("tb#stivanAnomenUpset","GLOBAL")
 CombatCounter(0)
 Global("tb#StivanAnomen","GLOBAL",2)~ THEN TB#STIVB stivan-anomen-3
-~Ti trovo diverso da quando non hai superato la Prova, Anomen. Mi sembri più rilassato, più sereno... Come se ti fossi liberato di un abito troppo stretto.~
+~Ti trovo diverso da quando non hai superato la Prova, Anomen. Mi sembri più rilassato, più sereno, come se ti fossi liberato di un abito troppo stretto.~
 DO ~SetGlobal("tb#StivanAnomen","GLOBAL",3)~
 == BANOMEN ~Già, hai ragione. Sono ancora un pò amareggiato per la mia esclusione dall'Ordine, ma adesso mi sento...~
 == TB#STIVB ~Libero?~
@@ -314,7 +316,7 @@ DO ~SetGlobal("tb#StivanAnomen","GLOBAL",3)~
 == BANOMEN ~C'è un vecchio adagio che dice: "Meglio tardi che mai".~
 == TB#STIVB ~Giusto. Eppure continui a servire Helm.~
 == BANOMEN ~L'Onniveggente non mi ha privato dei miei poteri, halfing, il che significa che con le mie azioni non l'ho disonorato.~
-== TB#STIVB ~L'Ordine sembra pensarla diversamente...~
+== TB#STIVB ~L'Ordine sembra pensarla diversamente.~
 == BANOMEN ~Al diavolo l'Ordine! La sola cosa che conta sono i fatti. E parlano più che bene.~
 EXIT
 
@@ -334,6 +336,21 @@ DO ~SetGlobal("tb#StivanKeldorn","GLOBAL",1)~
 == BKELDOR ~Spiritoso. Io, almeno, sono riuscito e riesco tutt'ora a portarla. Dubito che le tue gracili spalline ne sarebbero capaci.~
 EXIT
 
+CHAIN
+IF ~InParty("Keldorn")
+See("Keldorn")
+!StateCheck("Keldorn",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("LadyMaria","GLOBAL",5)
+Global("tb#StivanKeldorn","GLOBAL",3)~ THEN TB#STIVB stivan-keldorn-4
+~*Ahem* Sono più o meno contento che le cose tra te e tua moglie si siano sistemate, ma rimane pur sempre il problema della tua vecchiaia.~
+DO ~SetGlobal("tb#StivanKeldorn","GLOBAL",4)~
+== BKELDOR ~Come ti ho già detto, non vivo i miei anni come se fossero un peso. Le rughe altro non sono che segni del tempo, simili a quelli incisi nel cuore degli alberi.~
+== TB#STIVB ~Allora devo supporre che voi due steste ancora insieme per distrazione. Sai, pare che succeda in tanti matrimoni, dove spesso si resta uniti più per pigrizia che per altro.~
+== BKELDOR ~Un'altra parola su me e Lady Maria e sarà l'ultima che proferirai.~
+== TB#STIVB ~Heh. Puoi stare tranquillo, nonno. Con te mi sono divertito quanto basta.~
+== BKELDOR ~... La misura è colma, <CHARNAME>. Al prossimo insulto del tuo discutibile alleato, non esiterò ad agire secondo i dettami dell'onore, sia chiaro.~
+EXIT
 
 CHAIN 
 IF ~InParty("tb#Stiv")
@@ -676,20 +693,26 @@ DO ~SetGlobal("tb#StivanHaerdalis","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+IF ~InParty("tb#stiv")
+See("Stivan")
+!StateCheck("Stivan",CD_STATE_NOTVALID)
 CombatCounter(0)
+Global("PlanarPrison","GLOBAL",2)
 Global("tb#StivanHaerdalis","GLOBAL",1)~ THEN BHAERDA stivan-dalis-2
 ~Mi par di arguire, mio gabbiano, che hai viaggiato molto per questa terra chiamata Faerun. E' così?~
 DO ~SetGlobal("tb#StivanHaerdalis","GLOBAL",2)~
 == TB#STIVB ~Sì, Haer'Dalis. Sono stato in molti posti finora, alcuni più belli e più suggestivi di altri, ma non ho ancora messo piede in diverse località.~
 == BHAERDA ~Mai stato a Sigil?~
-== TB#STIVB ~No, e non so nemmeno come arrivarci. Tutta questa storia dei condotti, delle sfere interplanari, delle dimensioni parallele... E' un pò troppo complicato per me.~
-== BHAERDA ~Ti assicuro che un viaggio di tal tipo non è paragonabile neanche lontanamente a quelli terra-terra a cui sei abituato. Non c'è nulla di più emozionante!~
-== TB#STIVB ~Eppure ho sentito dire che possono verificarsi degli incidenti.~
-== BHAERDA ~In effetti è vero. Una volta, ad esempio, un mio amico è entrato in un condotto instabile. Non l'avesse mai fatto: il suo busto è rimasto attaccato all'entrata del condotto, mentre le sue gambe sono arrivate più o meno integre all'uscita. Se non fosse stato così fesso da non ascoltarmi...~
-== TB#STIVB ~Ehm... Penso che continuerò a viaggiare a piedi. E' molto più sicuro...~ 
+== TB#STIVB ~No, e no0n so nemmeno come arrivarci. Tutta questa storia dei condotti, delle sfere interplanari, delle dimensioni parallele... E' un pò troppo complicato per me.~
+== BHAERDA ~In realtà è più semplice di quanto pensi.~
+= ~Sigil può essere raggiunta tramite tre diversi tipi di portali: permenenti, temporanei e mobili. Mi soffermerò soltanto sui primi due, in quanto la natura dei condotti mobili richiederebbe una trattazione troppo complicata per le tue orecchie.~
+= ~I portali permanenti, per loro stessa definizione, sono destinati ad esistere sino a quando l'entropia non li richiamerà a sè. I portali temporanei, invece, posso apparire e scomprire all'improvviso, senza motivo, oppure essere attivati da un oggetto, una formula o un incantesimo in grado di aprire il condotto.~
+= ~Per darti un'idea più precisa, quello aperto dalla mia Raelis nella prigione del Cambion era un portale temporaneo, scomparso nel momento stesso in cui il mio antico stormo è giunto a destinazione.~
+== TB#STIVB ~WOW! Sembra proprio avvincente!~
+== BHAERDA ~Tieni presente che i viaggi attraverso i condotti presentano molti più pericoli rispetto a quelli terra-terra a cui sei abituato. Una volta, ad esempio, ho visto un Raccoglitore entrare in un condotto instabile. Non l'avesse mai fatto: il suo busto è rimasto attaccato all'entrata del condotto, mentre le sue gambe sono arrivate più o meno integre all'uscita.~
+= ~Tsk. Se non fosse stato così fesso da non ascoltarmi, oggi potrebbe ancora vantare una certa integrità del corpo.~
+== TB#STIVB ~Ehm... Penso che continuerò a viaggiare a piedi. E' molto più sicuro. Ma grazie, Haer'Dalis, per questo avvincente racconto.~
+== BHAERDA ~Lieto di aver entusiasmato la mia platea. Come sempre, del resto.~
 EXIT
 
 CHAIN 
@@ -703,7 +726,7 @@ DO ~SetGlobal("tb#StivanHaerdalis","GLOBAL",3)~
 == TB#STIVB ~La morte è spesso al centro dei tuoi pensieri, Haer'Dalis. Non trovi che la vita sia altrettanto degna di considerazione?~
 == BHAERDA ~E perchè mai, mio gabbiano? La nostra esistenza non è altro che un lungo cammino costellato di affanni e di tormenti. Percorriamo questo sentiero al solo scopo di raggiungere la tanto ambita meta - l'oblio, la fine del nostro travaglio.~
 == TB#STIVB ~Lungi da me criticare le tue cupe e fosche considerazioni, ma... Non ti sembra di aver delineato un quadro piuttosto pessimistico?~
-== BHAERDA ~No, mio giovane halfing. Mi sono unicamente limitato a descrivere la realtà per quel che è.~
+== BHAERDA ~No, giovane uccello di mare. Mi sono unicamente limitato a descrivere la realtà per quel che è.~
 == TB#STIVB ~Ossia?~
 == BHAERDA ~Una nave che, stremata dalle incessanti tempeste, raggiunge un porto di fatale quiete.~
 EXIT
@@ -895,7 +918,7 @@ DO ~SetGlobal("tb#StivanJaheira","GLOBAL",2)~
 == TB#STIVB ~Accidenti, mi dispiace. Non lo sapevo.~
 == BJAHEIR ~Non c'era motivo per cui dovessi saperlo. Ora, se hai finito...~
 == TB#STIVB ~Beh, a questo punto non posso fare a meno di chiedermi un'altra cosa.~
-== BJAHEIR ~Parla, se devi, ma non ti garantisco una risposta.~
+== BJAHEIR ~Parla, se devi, ma non ti garantisco una risposta. Stai toccando ferite che non si sono ancora rimarginate.~
 == TB#STIVB ~Hai pagato un alto prezzo per tener fede alla tua parola. Non voglio attribuire alcuna responsabilità a <CHARNAME>, ma se non avessi viaggiato con <PRO_HIMHER>...~
 == BJAHEIR ~Dove vuoi arrivare con il tuo ragionamento, Stivan? A chiedermi se lo avrei aiutato pur sapendo che in questo modo mio marito sarebbe morto?~
 == TB#STIVB ~Esattamente.~
@@ -916,7 +939,7 @@ Global("tb#StivanJaheiraBalance","GLOBAL",0)
 Global("lyrosjob","global",3)~ THEN BJAHEIR stivanjaheirabalance
 ~Stivan, ti sei mai chiesto se le tue azioni hanno contribuito a mantenere l'Equilibrio?~
 DO ~SetGlobal("tb#StivanJaheiraBalance","GLOBAL",1)~
-== TB#STIVB ~L'Equilibrio? Io non penso che esista una via di mezzo, Jaheira. Se il compito di un sovrano è quello di governare, adempirà al suo dovere con il pugno di ferro o nel più generoso dei modi. Non vedo altre alternative.~
+== TB#STIVB ~L'Equilibrio? Io non penso che esista una via di mezzo, Jaheira. Se il compito di un sovrano è quello di governare, adempirà al suo dovere con il pugno di ferro o nel più generoso dei modi. Anche mia mamma diceva sempre che ci sono altre alternative.~
 == BJAHEIR ~Oltre alla tirannia e alla prodigalità esiste anche la saggezza, l'agire nel nome del bene collettivo.~
 == TB#STIVB ~Ma con quali criteri giudichi giusta o sbagliata una decisione? Ciò che è un bene per me può essere un male per te.~
 == BJAHEIR ~Esistono delle basi etiche universalmente riconosciute, Stivan. La vita, ad esempio, è il più prezioso dei beni e deve essere preservato a tutti i costi.~

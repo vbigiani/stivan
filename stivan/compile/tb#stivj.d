@@ -1611,7 +1611,7 @@ AreaCheck("AR2000")~ THEN TB#STIVJ stivanjaheiratrademeet
 DO ~SetGlobal("tb#StivanJaheira","GLOBAL",1)~
 == JAHEIRAJ ~Sarebbe bene evitare giudizi affrettati, Stivan. Preferirei che non ci pronunciassimo su una situazione di cui sappiamo poco o nulla.~
 == TB#STIVJ ~Le cose non si considerano mai per quel che sono, ma per quel che appaiono.~
-== JAHEIRAJ ~Piantala, halfing! Questo non è il momento adatto per una delle tue disquisizioni! Qualcuno o qualcosa minaccia di sconvolgere l'equilibrio di questo posto ed io sono più che intenzionata a fermarlo!~
+== JAHEIRAJ  ~Piantala, halfing. Questo non è il momento adatto per una delle tue disquisizioni. Qualcuno o qualcosa minaccia di sconvolgere l'equilibrio di questo posto, ed io sono più che intenzionata a fermarlo!~
 EXIT
 
 CHAIN 
@@ -1650,27 +1650,23 @@ DO ~SetGlobal("tb#StivanValygarSphere","GLOBAL",1)~
 == VALYGARJ ~No, Stivan. Sarà Lavok ad essere ucciso una volta per tutte.~
 EXIT
 
-/*
-Questo dialogo lo farei partire dopo la morte di Suna Seni (se è stato installata la componente “La relazione tra Valygar/Suna Seni del mod UB)
-
 CHAIN
 IF ~InParty("Valygar")
 See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
-AreaCheck("AR1514")
+Global("u!SunaDies","GLOBAL",1)
 CombatCounter(0)
-Global("tb#StivanValygarAboutSuna","GLOBAL",0)~ THEN TB#STIVB stivanvalygarsuna
+Global("tb#StivanValygarAboutSuna","GLOBAL",0)~ THEN TB#STIVJ stivanvalygarsuna
 ~(Urla) Basta! Non ne posso più di tutti questi mostri! Le mani mi stanno sanguinando per la fatica! La testa è sul punto di scoppiarmi! Come se non bastasse, ho addirittura finito la mia scorta di piume! Tutto per colpa della tua donna, ranger!~
 DO ~SetGlobal("tb#StivanValygarAboutSuna","GLOBAL",1)~
-== BVALYGA ~Cosa?! Stai accusando Suna Seni della situazione in cui ci troviamo? E' stato quel mostro di Irenicus a costringerla a lavorare per lui!~
-== TB#STIVB ~*Ahem* A me non sembra che sia stata costretta. Ha accettato in cambio di una cospicua somma, giusto?~
-== BVALYGA ~Nessuno di noi è innocente, Stivan. In questa storia siamo tutti colpevoli. Tutti. Ognuno a modo suo.~
-== TB#STIVB ~Ma io non ho fatto niente!~
-== BVALYGA ~Allora chi non ha peccato scagli la prima pietra.~
-== TB#STIVB ~... Eh?~
-== BVALYGA ~(Sigh) Lascia stare. Torniamo alla ricerca di una fuga da questo posto.~
+== VALYGARJ ~Cosa?! Stai accusando Suna Seni della situazione in cui ci troviamo? E' stato quel mostro di Irenicus a costringerla a lavorare per lui!~
+== TB#STIVJ ~*Ahem* A me non sembra che sia stata costretta. Ha accettato in cambio di una cospicua somma, giusto?~
+== VALYGARJ ~Nessuno di noi è innocente, Stivan. In questa storia siamo tutti colpevoli. Tutti. Ognuno a modo suo.~
+== TB#STIVJ ~Ma io non ho fatto niente!~
+== VALYGARJ ~Allora chi non ha peccato scagli la prima pietra.~
+== TB#STIVJ ~... Eh?~
+== VALYGARJ ~(Sigh) Lascia stare. Torniamo alla ricerca di una fuga da questo posto.~
 EXIT
-*/
 
 CHAIN 
 IF ~InParty("Mazzy")
@@ -1891,22 +1887,30 @@ See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanAnomen","GLOBAL",8)
-Global("AnomenRomanceActive","GLOBAL",2)
 AreaCheck("ar2804")~ THEN ANOMENJ stivananomen9
 ~Pronto alla battaglia?~ 
 DO ~SetGlobal("tb#StivanAnomen","GLOBAL",9)~
 == TB#STIVJ ~Heh. Puoi contarci.~
+BRANCH ~Global("AnomenRomanceActive","GLOBAL",2)~ BEGIN
 == ANOMENJ ~Fà tesoro dei miei insegnamenti. Dovremo fare il possibile per proteggere <CHARNAME> - impazzirei se le dovesse succedere qualcosa.~
-== TB#STIVJ ~(Snort!) Sono sicuro che sia in grado di cavarsela da sola!~
-== ANOMENJ ~Non ne dubito, ma è mio dovere difenderla ad ogni costo.~
+== TB#STIVJ ~... Perchè tieni così tanto a lei?~
+== ANOMENJ ~L'amore che nutro per <CHARNAME> è una rosa che ad ogni alba mostra un petalo nuovo e un colore diverso, ma la sua bellezza è quella di sempre. Nessun artista saprebbe dipingere il sapore dei suoi baci, il profumo della sua pelle, la melodia della sua voce. Io stesso non son degno di cantare la poesia del suo nome.~
+= ~Per lei sono pronto a dare la vita.~
+END
+BRANCH ~!Global("AnomenRomanceActive","GLOBAL",2)~ BEGIN
+== ANOMENJ ~Fà tesoro dei miei insegnamenti. Dovremo fare il possibile per proteggere <CHARNAME>.~
+== TB#STIVJ ~... Sono sicuro che sia in grado di cavarsela anche da sè.~
+== ANOMENJ ~Non ne dubito, ma è nostro dovere difenderlo ad ogni costo.~
+END
 == TB#STIVJ ~(Gasp!) Non puoi promettere una cosa simile!~
 == ANOMENJ ~Non preoccuparti, amico mio. Ci vuole ben altro che un mago da strapazzo per mettermi in difficoltà. Ma basta indugiare: la battaglia ci aspetta.~
 == TB#STIVJ ~<CHARNAME>...! <CHARNAME>, ti prego, non lasciare che Anomen muoia! Per favore!~
 END
 IF ~~ THEN REPLY ~Non gli accadrà nulla. Avremo la meglio su quel folle una volta per tutte.~ EXTERN tb#stivj StivanAnomenLastTalk1-1
-IF ~~ THEN REPLY ~Darò tutta me stessa per proteggere ogni membro di questo gruppo. E' il minimo che possa fare dopo tutto il sostegno che mi avete dato.~ EXTERN tb#stivj StivanAnomenLastTalk1-1
-IF ~~ THEN REPLY ~Tranquillo, Stivan: avrò un occhio di riguardo nei suoi confronti. E' troppo importante per me.~ EXTERN tb#stivj StivanAnomenLastTalk1-1
-IF ~~ THEN REPLY ~Non so se riusciremo ad avere la meglio su Irenicus, ma fammi un favore: se dovesse succedermi qualcosa, non permettere che Anomen compia dei gesti avventati.~ EXTERN tb#stivj StivanAnomenLastTalk1-2
+IF ~!Global("AnomenRomanceActive","GLOBAL",2)~ THEN REPLY ~Tranquillo, Stivan. Avrò un occhio di riguardo nei suoi confronti.~ EXTERN tb#stivj StivanAnomenLastTalk1-1
+IF ~~ THEN REPLY ~Farò il possibile per proteggere ogni membro di questo gruppo. E' il minimo che possa fare dopo tutto il sostegno che mi avete dato.~ EXTERN tb#stivj StivanAnomenLastTalk1-1
+IF ~Global("AnomenRomanceActive","GLOBAL",2)~ THEN REPLY ~Tranquillo, Stivan: avrò un occhio di riguardo nei suoi confronti. E' troppo importante per me.~ EXTERN tb#stivj StivanAnomenLastTalk1-1
+IF ~Global("AnomenRomanceActive","GLOBAL",2)~ THEN REPLY ~Non so se riusciremo ad avere la meglio su Irenicus, ma fammi un favore: se dovesse succedermi qualcosa, non permettere che Anomen compia dei gesti avventati.~ EXTERN tb#stivj StivanAnomenLastTalk1-2
 
 APPEND tb#stivJ
 IF ~~ THEN BEGIN StivanAnomenLastTalk1-1

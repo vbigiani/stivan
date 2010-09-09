@@ -582,3 +582,15 @@ THEN
 	RESPONSE #100
 		StartDialogueNoSet(Player1)
 END
+
+IF
+	InParty("Valygar")
+	See("Valygar")
+	!StateCheck("Valygar",CD_STATE_NOTVALID)
+	Global("u!SunaDies","GLOBAL",1)
+	CombatCounter(0)
+	Global("tb#StivanValygarAboutSuna","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet("valygar")
+END

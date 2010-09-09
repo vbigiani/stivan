@@ -16,7 +16,6 @@ IF
 	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 	CombatCounter(0)
 	Global("tb#StivanAnomen","GLOBAL",8)
-	Global("AnomenRomanceActive","GLOBAL",2)
 	AreaCheck("ar2804")
 THEN
 	RESPONSE #100
