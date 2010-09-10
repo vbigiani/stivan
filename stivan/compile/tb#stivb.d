@@ -910,7 +910,7 @@ CombatCounter(0)
 Global("tb#StivanJaheira","GLOBAL",1)~ THEN TB#STIVB stivanjaheira2
 ~Jaheira, posso chiederti perchè hai deciso di unirti alla compagnia di <CHARNAME>?~
 DO ~SetGlobal("tb#StivanJaheira","GLOBAL",2)~
-== BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion, il <PRO_HISHER> patrigno, ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
+== BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion, il <PRO_HISHER> padre adottivo, ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
 == TB#STIVB ~Chi è Khalid?~
 == BJAHEIR ~Khalid è... era mio marito.~
 == TB#STIVB ~*Ahem* Che fine ha fatto? L'abbiamo perso per strada?~

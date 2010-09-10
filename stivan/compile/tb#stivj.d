@@ -2207,7 +2207,7 @@ See("cernd")
 Global("tb#StivanCernd","GLOBAL",4)
 AreaCheck("ar2401")~ THEN TB#STIVJ noSola
 ~Non vedo l'ora di tornare alla superficie! Prepara il fuoco, <CHARNAME>, stasera vado a caccia e poi stufato di gabbiano per tutti!~
-== CERNDJ ~E' nella natura dell'uomo di uccidere per nutrirsi. Tuttavia, dubito che quello sia il vero scopo delle tue uccisioni.~
+== CERNDJ ~E' nella natura dell'uomo uccidere per nutrirsi. Tuttavia, dubito che quello sia il vero scopo delle tue uccisioni.~
 EXTERN TB#STIVJ postSola
 
 CHAIN IF ~~ THEN TB#STIVJ postSola
