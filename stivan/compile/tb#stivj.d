@@ -1794,7 +1794,7 @@ IF ~Global("tb#StivanLarry","GLOBAL",2)~ THEN TB#SLIL StivanLarry
 == TB#STIVJ ~Devi essere proprio stupido, ranger, per soddisfare i capricci di quella lama. Se si fosse rivolta a me in questo modo, l'avrei rigirata in una pila di letame fino ad insegnarle un pò di rispetto.~
 == MINSCJ ~Minsc non è stupido! Si prende cura del suo criceto e della sua spada per essere sempre pronto alla battaglia!~
 == TB#SLIL ~Ora basta! Se non posso ricevere la dovuta pulizia, allora assaggerò un pò di sangue!~
-== TB#STIVJ ~Ahh! Minsc, sei impazzito?!?~
+== TB#STIVJ ~AHIA! Minsc, sei impazzito?!?~
 == MINSCJ ~Minsc non ha fatto nulla! E' stato Larry! Vero, Boo?~
 == TB#STIVJ ~Nulla? Stavi per tagliarmi in due e hai il coraggio di dire che non hai fatto nulla?! Stai brandendo TU quella dannata spada! Ti è forse sfuggito?~
 == MINSCJ ~Ma Larry ogni tanto fa quel che vuole! Minsc non ha colpa se la sua spada sferra colpi da sola!~

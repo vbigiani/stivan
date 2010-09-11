@@ -375,13 +375,13 @@ Global("tb#StivanEdwin","GLOBAL",0)~ THEN TB#STIVB stivan-edwin1
 DO ~SetGlobal("tb#StivanEdwin","GLOBAL",1)~
 == BEDWIN ~Thay non è "mia", stupido halfing (anche se lo sarà presto). In ogni caso, se vuoi delle informazioni su quella terra dove non sopravviveresti neanche un giorno, dovresti rivolgerti all'ufficio per i giretti turistici riservati alle scimmie.~
 == TB#STIVB ~Quanto astio, quanto astio... Ti sei mai chiesto da dove provenga la tua scontrosità?~
-== BEDWIN ~Io mi chiedo molte cose, Stivan, ma temo che trascendano tutte la tua limitata comprensione da gibberling. (Edwin, come puoi sperare che questo scarto umano conosca il significato del termine "trascendere"? Dovrò cercarne uno più semplice...)~
-= ~(Bah! Stare tra queste scimmie sta limitando sempre di più le mie raffinatezze linguistiche!)~
+== BEDWIN ~Io mi chiedo molte cose, mocciosetto, ma temo che trascendano tutte la tua limitata comprensione da gibberling. (Edwin, come puoi sperare che questo scarto umano conosca il significato del termine "trascendere"? Dovrò cercarne uno più semplice...)~
+= ~(Bah! Stare tra questi analfabeti sta limitando sempre di più le mie raffinatezze linguistiche!)~
 == TB#STIVB ~Sei un uomo frustrato, Edwin.~
 == BEDWIN ~Cara la mia scimmia sodomita, vuoi che ti insegni in che altri modi utilizzare le banane? Vedi, nel tuo corpo ci sono dei buchi dove--~
 == TB#STIVB ~Questo è un interessante consiglio, stregone. Devi certamente averlo provato di persona per raccomandarmelo.~
 == BEDWIN ~NO! (Quella dannata sgualdrina dei Moli ha parlato! Le avrei dovuto sigillare la bocca con una sana palla di fuoco, altro che stordirla!)~
-== TB#STIVB ~Povero Edwin... Tradito da una parola di troppo. Non dovresti mai bere prima di andare a letto con una cortigiana...~
+== TB#STIVB ~Povero Edwin. Tradito da una parola di troppo. Non dovresti mai bere prima di andare a letto con una cortigiana...~
 == BEDWIN ~Ti consiglio di tapparti la bocca, halfing, prima che... che... (Dei! Mi stanno incastrando!)~
 == TB#STIVB ~... <CHARNAME>, sarebbe meglio ritornare a qualsiasi cosa stessimo facendo prima di interromperci. Edwin... Sta perdendo il controllo.~
 EXIT
@@ -430,7 +430,7 @@ END
 
 CHAIN BEDWIN StivanEdwin5
 ~Fruga nel mio zaino quanto vuoi, patetica creatura. Non la troverai *mai*. (Per motivi più che ovvi, oserei dire. Solo un genio come me poteva pensare di nasconderla nelle mie mutande).~
-== BEDWIN IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN ~(Sei proprio un figo, Edwin. Guarda l'espressione di <CHARNAME>... Bocca spalancata, occhi sgranati... Persino un idiota capirebbe che questi sono chiari segnali dell'ammirazione sconfinata che prova per me).~
+== BEDWIN IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN ~(Sei proprio un figo, Edwin. Guarda l'espressione di <CHARNAME>. Bocca spalancata, occhi sgranati... Persino un idiota capirebbe che questi sono chiari segnali dell'ammirazione sconfinata che prova per me).~
 = ~(... Beh, ora potrebbe anche chiudere la bocca. Sembra una deficiente impalata in quel modo).~
 == TB#STIVB ~...~
 == BEDWIN ~... Ebbene? Perchè mi stai fissando con quell'espressione? Gli ingranaggi del tuo cervello si sono forse incastrati?~
@@ -694,8 +694,8 @@ EXIT
 
 CHAIN
 IF ~InParty("tb#stiv")
-See("Stivan")
-!StateCheck("Stivan",CD_STATE_NOTVALID)
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("PlanarPrison","GLOBAL",2)
 Global("tb#StivanHaerdalis","GLOBAL",1)~ THEN BHAERDA stivan-dalis-2
@@ -802,67 +802,77 @@ END
 END
 EXIT
 
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+CHAIN
+IF ~InParty("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJan","GLOBAL",0)~ THEN TB#STIVB stivanjan1
-~Ti ho mai detto, Jan, che aspiravo a diventare un bardo?~
-DO ~SetGlobal("tb#StivanJan","GLOBAL",1)~               
-== BJAN ~Davvero? Anch'io avevo la tua stessa ambizione! Tutto questo mi ricorda gli anni in cui la mia altezza era ancora lontana dal raggiungere il metro e una rapa di adesso...~
+Global("tb#StivanJan","GLOBAL",0)~ THEN TB#STIVB StivanJan1
+~Sai, Jan, penso che con la tua parlantina potresti essere un ottimo bardo.~
+DO ~SetGlobal("tb#StivanJan","GLOBAL",1)~
+== BJAN ~Beh, forse questo è il momento di rivelare un segreto che non ho mai detto a nessuno. Devi sapere, Stivvy, che prima di dedicarmi alla vendita di vegetali, attività più remunerativa di quanto si possa immaginare, ho dovuto cercare qualche espediente che mi consentisse di vivere almeno alla giornata. Il mio apprendistato presso Golodon l'Evirato era ormai terminato, quindi--~
+== TB#STIVB ~Golodon L'Evirato?~
+== BJAN ~Sì. Non chiedermi il perchè di quel soprannome. Ad oggi nessuno lo sa.~
+== TB#STIVB ~Heh. Và avanti, ti ascolto.~
+== BJAN ~Ora che mi ci fai pensare, credo che gli sia stato attribuito dalla sua ex moglie. Una tipa simpatica, sebbene sia stata lei a rendere pestilenziale l'alito del mio maestro, alito che ispirò il famoso incantesimo noto come "Orribile Avvizzimento di Golodon L'Evirato". Un giorno te lo mostrerò, se proprio ci tieni, anche se è difficile sfuggire a quegli effluvi quando sei alto un metro e una rapa.~
 == TB#STIVB ~"Un metro e una rapa"? Che unità di misura è mai questa?~
-== BJAN ~Cosa?! Non sapevi che gli gnomi misurano la loro statura con il rapometro? Zio Scratchy potrebbe seppellirti in un campo di fave per questo!~
-== TB#STIVB ~Allora illuminami, Jan. Non desidero diventare fertilizzante per il terreno.~
-== BJAN ~Prima devo finire di raccontarti la mia storia. Dunque, stavo dicendo..~
+== BJAN ~Per la barba di zio Scratchy! Non sapevi che gli gnomi misurano la loro statura con il rapometro?~
+== TB#STIVB ~*Ahem* Dovrei?~
+== BJAN ~Ragazzo mio, hai decisamente bisogno di un'infarinatura a base di rape sui costumi degli gnomi! Prima però devo finire di raccontarti la mia storia. Dunque, stavo dicendo..~
 = ~Uh...~
 = ~Ehm...~
 = ~L'ho dimenticato...~
 == TB#STIVB ~Me lo dirai non appena ti verrà in mente.~
-== BJAN ~Se vuoi, posso descriverti il modo in cui si misurano le unghie dei piedi! Vedi, devi sapere che noi gnomi...~
+== BJAN ~Vorrà dire che nel frattempo ti descriverò il modo in cui misuriamo le unghie dei piedi. Vedi, devi sapere che noi gnomi...~
 == TB#STIVB ~(Sigh)~
 EXIT
-
+ 
 CHAIN
 IF ~InParty("Jan")
 See("Jan")
 !StateCheck("Jan",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJan","GLOBAL",1)~ THEN TB#STIVB stivanjan2
-~Jan, mi sono appena ricordato quello che volevi dirmi la volta scorsa.~
+Global("tb#StivanJan","GLOBAL",1)~ THEN TB#STIVB StivanJan2
+~Jan, ti sei ricordato il segreto che volevi rivelarmi?~
 DO ~SetGlobal("tb#StivanJan","GLOBAL",2)~
-== BJAN ~Sul serio? Questo è un bene, Stivan, perchè da poco tempo a questa parte tendo a scordarmi le cose. A proposito di smemoratezza, ti ho mai detto che zio Scratchy dimenticava persino il suo nome?~
-== TB#STIVB ~No, non me ne hai mai parlato. Ciò di cui volevi discutere...~
-== BJAN ~Visto che ci siamo, perchè accantonare il discorso? Stavo dicendo, povero zietto! Era un vero malandrino. Rubava rape e gioielli qua e là, ma poi non si ricordava più dove avesse nascosto la sua refurtiva, ortaggi o monili che fossero.~
-= ~In famiglia si vocifera che abbia accumulato una quantità così grande di ricchezze da far gola a qualsiasi avventuriero! La mia cara zia Petunia sta progettando da diverso tempo di mettersi alla ricerca di questo tesoro con l'aiuto del suo draghetto d'ombra. E' una simpatica bestiola, sai?~
+== BJAN ~Ebbene sì. Questo è un vero sollievo, Stivvy, perchè da poco tempo a questa parte tendo a scordarmi le cose. A proposito di smemoratezza, ti ho mai detto che zio Scratchy dimenticava persino il suo nome?~
+== TB#STIVB ~No, non me ne hai mai parlato, ma non è questo ciò di cui volevi discutere...~
+== BJAN ~Visto che ci siamo, perchè accantonare il discorso? Stavo dicendo, povero zietto. Era un vero malandrino. Rubava rape e gioielli qua e là, ma poi non si ricordava più dove avesse nascosto la sua refurtiva, ortaggi o monili che fossero. In famiglia si vocifera che abbia accumulato una quantità così grande di ricchezze e vegetali da far gola a qualsiasi avventuriero. La mia cara zia Petunia sta progettando da diverso tempo di mettersi alla ricerca di questo tesoro con l'aiuto del suo draghetto d'ombra. E' una simpatica bestiola, sai?~
 == TB#STIVB ~... Ti riferisci al drago, vero?~
 == BJAN ~No, a mia zia.~
 == TB#STIVB ~Ah.~
 = ~Se mai dovessi incontrarla, eviterò di metterle i bastoni tra le ruote.~
-== BJAN ~Ora, cosa mi stavi dicendo?~
-== TB#STIVB ~Finalmente arriviamo al punto. Dunque, la volta scorsa avevi iniziato la conversazione dicendomi che...~
-= ~Dicendomi che...~
+== BJAN ~Ora, vediamo al dunque. Il segreto che volevo rivelarti la volta scorsa riguardava...~
+= ~Riguardava...~
 = ~...~
-= ~Jan... Temo di essermene dimenticato...~
-== BJAN ~Lascia che te lo dica, Stivan: sei proprio uno smemorato! A confronto lo zio Scratchy aveva una memoria invidiabile. Secondo me dovresti bere un pò di succo di rapa. Lascia che te ne elenchi le proprietà benefiche!~
+= ~Stivvy... Più mi struggo su questa cosa, più non me ne ricordo.~
+== TB#STIVB ~*Ahem* Mia mamma diceva sempre che a volte è meglio tacere e sembrare stupidi piuttosto che aprire bocca e togliere ogni dubbio.~
+== BJAN ~Tua mamma doveva essere una donna molto saggia. E' un peccato che la sua attuale condizione non le permetta più di parlare, altrimenti sono sicuro che avrebbe trovato un rimedio per la mia smemoratezza. In alternativa, potrei bere un pò di succo di rapa. Lascia che te ne elenchi le proprietà benefiche.~
 == TB#STIVB ~...~
 EXIT
-
-CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+ 
+CHAIN
+IF ~InParty("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJan","GLOBAL",2)~ THEN BJAN stivanjan3
-~Un bardo! Volevo diventare un bardo! Ecco cosa continuavo a dimenticarmi di dirti!~
+Global("tb#StivanJan","GLOBAL",2)~ THEN BJAN StivanJan3
+~Un bardo! Sono stato un bardo prima di dedicarmi alla vendita al dettaglio di rape! E' questo il segreto che volevo rivelarti, Stivvy!~
 DO ~SetGlobal("tb#StivanJan","GLOBAL",3)~
-== TB#STIVB ~Tu... un bardo?~
-== BJAN ~Esatto! Che ne dici di darmi una mano a realizzare il mio sogno, Stivy? Sono un abile narratore. Conosco un sacco di storie. Ho una voce forte e squillante. Sarei il primo menestrello di casa Jansen!~
-== TB#STIVB ~Jan, ehm... Ognuno di noi ha le proprie attitudini... Tu sei un abile illusionista e un ladro provetto, quindi non dovresti aspirare a qualcosa per cui non sei... adatto.~
-= ~Senza offesa, ovviamente.~
-== BJAN ~...~
-= ~... Quando iniziamo?~
-== TB#STIVB ~(Sigh) Smussare il tuo entusiasmo è un'impresa a dir poco impossibile. E va bene, Jan. Alla prima occasione ti insegnerò quello che so.~
+== TB#STIVB ~Heh. Finalmente te ne sei ricordato.~
+== BJAN ~E' stata un'esperienza senza paragoni, sì. La mia platea era così entusiasta dei miei racconti che al termine di ogni esibizione non esitava a regalarmi ortaggi di ogni tipo. Raccogli una fava oggi, raccogli una zucchina domani, alla fine mi ritrovai con così tanti vegetali che mi dissi: "Perchè non provare a venderli?". E fu così che ebbe inizio la mia carriera di venditore ambulante di ortaggi, anche se devo confessarti che tra tutti la mia preferenza è per uno in particolare. Ti ho mai detto quale?~
+== TB#STIVB ~E' la rapa, no?~
+== BJAN ~Come hai fatto a capirlo?~
+== TB#STIVB ~Heh. Ho tirato ad indovinare.~
+= ~Toglimi una curisità, Jan. Come hai imparato a intrattenere il tuo pubblico?~
+== BJAN ~Tutto merito di un'apposita guida che porto sempre con me. Se aspetti un attimo la recupero subito. Dunque, dovrebbe essere qui, tra "I peccati del Golem di Carne" di Ma Jansen e "Come fare in modo che la tua birra fermentata ti faccia ruttare tanto" di Zia Kadie. Ecco... No, questo è il saggio di Zio Cletus su come farsi eliminare tre volte per poi morire definitivamente la quarta.~
+== TB#STIVB ~Non avrei mai immaginato che nella tua famiglia ci fossero così tanti scrittori.~
+== BJAN ~E invece sì, Stivvy. La coltivazione di rape e la scrittura sono due talenti innati in ogni Jansen. Eppure, vi è un ambito nel quale il qui presente Jan primeggia. E' un segreto che non ho mai rivelato a nessuno, nemmeno a Ma e Pa.~
+== TB#STIVB ~Sarebbe?~
+== BJAN ~Ti ho mai detto che sono stato il primo menestrello di casa Jansen?~
+== TB#STIVB ~E' quello che hai appena finito di dirmi!~
+== BJAN ~Questo non è carino da parte tua, Stivvy. Non ci si prende gioco di un povero gnomo! Non quando condivide storie che non ha mai raccontato a nessuno!~
+== TB#STIVB ~...~
 EXIT
 
 CHAIN
