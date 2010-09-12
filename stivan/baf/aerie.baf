@@ -5,7 +5,10 @@ IF
 	CheckStatGT("Aerie",5,FATIGUE)
 	CombatCounter(0)
 	Global("tb#StivanAerie","GLOBAL",0)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-RESPONSE #100
-	StartDialogueNoSet("tb#stiv")
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		StartDialogueNoSet("tb#stiv")
 END

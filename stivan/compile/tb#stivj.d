@@ -1710,11 +1710,12 @@ IF ~InParty("tb#Stiv")
 See("tb#Stiv")
 !StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
+GlobalGT("A#IM5Quest","GLOBAL",3)
 Global("tb#StivanMazzyAboutKram","GLOBAL",0)~ THEN MAZZYJ kram
 ~Sono contenta che Kram sia riuscito a trovare un lavoro onesto. Con un pò di costanza e di buona volontà, potrà finalmente costruirsi un futuro.~
 DO ~SetGlobal("tb#StivanMazzyAboutMazzy","GLOBAL",1)~
 == TB#STIVJ  ~Altre agili dita sottratte alla raffinata arte del borseggio... Dove andremo a finire?~
-== MAZZYJ ~Con simili osservazioni, Stivan, non c'è da stupirsi se la maggior parte delle persone etichetta gli halfing come un popolo di ladri. Grazie ad Arvoreen, vicende come quella di riescono a smussare questo genere di pregiudizi.~
+== MAZZYJ ~Con simili osservazioni, Stivan, non c'è da stupirsi se la maggior parte delle persone etichetta gli halfing come un popolo di ladri. Grazie ad Arvoreen, vicende come quella di Kram riescono a smussare questo genere di pregiudizi.~
 == TB#STIVJ ~Beh, con un pò d'impegno dovrei riuscire a traviarlo...~
 == MAZZYJ ~Sono convinta che non cederebbe a nessuna tentazione.~
 == TB#STIVJ ~E se sgrafignassi qualcosa a Galoomp sotto i suoi occhi? Questo potrebbe risvegliare l'antica abitudine...~

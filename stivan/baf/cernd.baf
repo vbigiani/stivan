@@ -6,8 +6,11 @@ IF
 	AreaType(OUTDOOR)
 	Dead("cefald01")
 	Global("tb#StivanCernd","GLOBAL",0)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("tb#Stiv")
 END
 
@@ -33,8 +36,11 @@ IF
 	AreaType(OUTDOOR)
 	!AreaCheck("AR2500")
 	!AreaCheck("AR2601")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("tb#stiv")
 END
 
@@ -63,7 +69,10 @@ IF
 	Global("tb#StivanCernd","GLOBAL",9)
 	Global("tb#StivanSawHell","GLOBAL",1)
 	AreaCheck("AR2900")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("tb#stiv")
 END

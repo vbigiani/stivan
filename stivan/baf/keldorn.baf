@@ -6,7 +6,10 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanKeldornAboutGarren","GLOBAL",0)
 	AreaCheck("AR1200")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 	StartDialogueNoSet("tb#stiv")
 END

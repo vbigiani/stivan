@@ -223,8 +223,11 @@ IF
 	Global("Chapter","GLOBAL",4)
 	CombatCounter(0)
 	Global("tb#BeforeYoshiBetrayal","GLOBAL",0)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDIalogueNoSet(Player1)
 END
 
@@ -234,8 +237,11 @@ IF
 	!StateCheck(Player1,CD_STATE_NOTVALID)
 	CombatCounter(0)
 	Global("tb#AfterYoshiBetrayal","GLOBAL",1)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDIalogueNoSet(Player1)
 END
 
@@ -316,8 +322,11 @@ IF
 	OR(2)
 	Global("BesamenDead","GLOBAL",1)
 	Global("BesamenDead","GLOBAL",2)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("heardalis")
 END
 
@@ -328,8 +337,11 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanJaheira","GLOBAL",0)
 	AreaCheck("AR2000")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("Jaheira")
 END
 
@@ -352,8 +364,6 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanValygarSphere","GLOBAL",0)
 	Dead("obshal04")
-THEN
-	RESPONSE #100
 		StartDialogueNoSet("Valygar")
 END
 
@@ -378,8 +388,11 @@ IF
 	AreaCheck("AR0202")
 	CombatCounter(0)
 	Global("tb#StivanKeldornStink","GLOBAL",0)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("Keldorn")
 END
 	
@@ -402,8 +415,11 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanMazzyDrow","GLOBAL",0)
 	GlobalGT("PhaereJob","GLOBAL",5)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("mazzy")
 END
 
@@ -426,8 +442,11 @@ IF
 	HPPercentLT("tb#Stiv",30)
 	CombatCounter(0)
 	Global("tb#StivanHaerdalis","GLOBAL",3)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("haerdalis")
 END
 
@@ -437,8 +456,11 @@ IF
 	!StateCheck("Minsc",CD_STATE_NOTVALID)
 	HPPercentLT("tb#Stiv",40)
 	Global("tb#StivanMinsc","GLOBAL",2)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("Minsc")
 END
 
@@ -463,8 +485,11 @@ IF
 	GlobalGT("SolaufeinJob","GLOBAL",7)
 	PartyHasItem("misc9w")
 	Dead("udsola01")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("cernd")
 END
 	
@@ -476,8 +501,11 @@ IF
 	Global("tb#StivanCernd","GLOBAL",4)
 	Global("SolaufeinJob","GLOBAL",9)
 	!Dead("udsola01")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("cernd")
 END
 
@@ -488,8 +516,6 @@ IF
 	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	Global("tb#StivanCernd","GLOBAL",4)
 	AreaCheck("ar2401")
-THEN
-	RESPONSE #100
 		StartDialogueNoSet("cernd")
 END
 
@@ -514,8 +540,11 @@ IF
 	Global("tb#StivanCernd","GLOBAL",7)
 	AreaType(OUTDOOR)
 	RealGlobalTimerExpired("tb#StivanCerndTimer","global")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("cernd")
 END
 
@@ -563,8 +592,11 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanCernd","GLOBAL",3)
 	GlobalGT("AsylumPlot","GLOBAL",1)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		StartDialogueNoSet("Cernd")
 END
 

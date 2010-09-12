@@ -3,8 +3,12 @@ IF
 	See("tb#Stiv")
 	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
 	CombatCounter(0)
+	GlobalGT("A#IM5Quest","GLOBAL",3)
 	Global("tb#StivanMazzyAboutKram","GLOBAL",0)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-		RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 			StartDialogueNoSet("tb#stiv")
 END

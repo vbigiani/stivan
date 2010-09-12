@@ -19,8 +19,11 @@ IF
 	CombatCounter(0)
 	HasItemEquiped("SW2H14",Myself)
 	GlobalLT("tb#StivanMinsc","GLOBAL",3)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
 		SetGlobal("tb#StivanLarry","GLOBAL",2)
 		CreateCreatureObject("tb#slil","Minsc",0,0,0)
 		Wait(1)
