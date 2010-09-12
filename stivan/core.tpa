@@ -176,7 +176,7 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	SAY INVENTORY_FULL ~Per cosa mi hai preso, per uno sgabuzzino?~
 	SAY PICKED_POCKET ~Ho rubacchiato qualcosina.~
 	SAY HIDDEN_IN_SHADOWS ~Heh. Sfido chiunque a vedermi.~
-	SAY SPELL_DISRUPTED ~Hai fatto fallire il mio incantesimo! Possano i gabbiani perseguitarti a vita!!!~
+	SAY SPELL_DISRUPTED ~Oh, no! Ho perso concentrazione!~
 	SAY SET_A_TRAP ~Heh. Se aggiungessi un pò di cacca di gabbiano, questa trappola sarebbe ancora più micidiale.~
 	SAY BIO ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfing si è visto uccidere i propri genitori e i fratelli da uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
 	Costretto a vivere per le strade di Athkatla, l'halfing ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani.~
