@@ -10,5 +10,6 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
-			StartDialogueNoSet("tb#stiv")
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+		StartDialogueNoSet("tb#stiv")
 END

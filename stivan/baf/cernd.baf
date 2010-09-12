@@ -11,6 +11,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("tb#Stiv")
 END
 
@@ -41,6 +42,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("tb#stiv")
 END
 
@@ -74,5 +76,6 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("tb#stiv")
 END

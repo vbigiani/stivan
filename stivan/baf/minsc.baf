@@ -24,6 +24,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		SetGlobal("tb#StivanLarry","GLOBAL",2)
 		CreateCreatureObject("tb#slil","Minsc",0,0,0)
 		Wait(1)

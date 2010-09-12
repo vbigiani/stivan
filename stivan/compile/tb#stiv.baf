@@ -228,6 +228,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDIalogueNoSet(Player1)
 END
 
@@ -242,6 +243,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDIalogueNoSet(Player1)
 END
 
@@ -327,6 +329,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("heardalis")
 END
 
@@ -342,6 +345,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("Jaheira")
 END
 
@@ -364,6 +368,12 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanValygarSphere","GLOBAL",0)
 	Dead("obshal04")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
+THEN
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("Valygar")
 END
 
@@ -393,6 +403,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("Keldorn")
 END
 	
@@ -420,6 +431,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("mazzy")
 END
 
@@ -447,6 +459,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("haerdalis")
 END
 
@@ -461,6 +474,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("Minsc")
 END
 
@@ -490,6 +504,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("cernd")
 END
 	
@@ -506,6 +521,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("cernd")
 END
 
@@ -516,6 +532,8 @@ IF
 	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	Global("tb#StivanCernd","GLOBAL",4)
 	AreaCheck("ar2401")
+THEN
+	RESPONSE #100
 		StartDialogueNoSet("cernd")
 END
 
@@ -545,6 +563,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("cernd")
 END
 
@@ -597,6 +616,7 @@ THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("Cernd")
 END
 
