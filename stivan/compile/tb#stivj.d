@@ -1218,7 +1218,7 @@ IF ~~ THEN REPLY ~Stivan, forse non mi sono spiegato bene. Mi servono i *documen
 IF ~~ THEN REPLY ~Fenomenale. Davvero. Peccato che l’oggetto del furto fosse un plico di fogli, non un pendente per il collo.~ EXTERN TB#STIVJ StivanMarcus1-1
 
 CHAIN IF ~~ THEN tb#stivj StivanMarcus1-1
-~Ops.~
+~Oops.~
 = ~Non disperare, <CHARNAME>! Rimedio subito!~
 = ~Ehi, tu!~
 == MARCUS ~Maledizione a te, halfling! Quelle piume mi hanno quasi accecato! Si può sapere cosa --~
@@ -1452,14 +1452,33 @@ INTERJECT_COPY_TRANS DHARLOT1 1 tb#StivanDharlot1-1
 ~(Arrossisce) Non... Non dirlo neanche per scherzo!~
 END
 
-INTERJECT_COPY_TRANS UDSOLA01 50 UDSOLA01-50
+INTERJECT_COPY_TRANS UDSOLA01 50 tb#StivanUDSOLA01-50
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ ~Wow, esistono drow simpatici!~
 == VICONIJ IF ~IsValidForPartyDialog("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ ~La sua simpatia gli sarà di ben poca utilità quando quella femmina gli strapperà la pelle di dosso per la sua insolenza.~
 END
 
-INTERJECT_COPY_TRANS UDSOLA01 114 UDSOLA01-114
+INTERJECT_COPY_TRANS UDSOLA01 114 tb#StivanUDSOLA01-114
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ ~Yeah! Diglielo in faccia!~
 == UDSOLA01 ~Non ti immischiare in faccende che non ti riguardano.~
+END
+
+INTERJECT ANOMENJ 134 tb#StivanAnomenj-134
+== ANOMENJ IF ~Global("tb#StivanAnomenj-52","GLOBAL",1)~ THEN ~Che sia questa la soluzione migliore? Io... Dopo aver ascoltato il racconto dell'halfling, faccio fatica ad accettare l'idea che quell'uomo sia innocente.~
+END
+IF ~~ THEN REPLY ~Tu stesso hai detto che i trascorsi di Stivan non devono influenzare il tuo giudizio. In questo momento non ci stiamo chiedendo se Saerk sia responsabile di un'appropriazione indebita; ci stiamo chiedendo se sia il mandante dell'assassinio di tua sorella, e a tal proposito non abbiamo nessuna prova della sua colpevolezza.~ EXTERN ANOMENJ 174
+IF ~~ THEN REPLY ~Uhm... Non hai tutti torti. Attribuire la responsabilità ad un brigante qualunque non avrebbe senso. Sarebbe inverosimile. L'accesa rivalità con tuo padre è invece un movente più che valido, soprattutto se consideriamo il non trascurabile precedente con Stivan. E sia. Vendicheremo la morte di Moira.~ EXTERN ANOMENJ 135
+IF ~!Global("AnomenRomanceActive","GLOBAL",2)~ THEN REPLY ~A questo punto la decisione è tua, Anomen. Non me la sento di pronunciarmi su una questione così delicata.~ EXTERN ANOMENJ AnomenDecidesHimself
+
+EXTEND_BOTTOM ANOMENJ 134
+IF ~!Global("AnomenRomanceActive","GLOBAL",2)~ THEN REPLY ~A questo punto la decisione è tua, Anomen. Non me la sento di pronunciarmi su una questione così delicata.~ EXTERN ANOMENJ AnomenDecidesHimself
+END
+
+APPEND ANOMENJ
+IF ~~ THEN BEGIN AnomenDecidesHimself
+SAY ~Ti capisco, <CHARNAME>. Non posso riporre sulle tue spalle il peso di una simile scelta. Spetta a me e a me solo.~
+= ~E' deciso. Non lascerò che la morte di mia sorella rimanga impunita. Vieni, <CHARNAME>... Andiamo da Saerk e facciamo giustizia!~
+COPY_TRANS ANOMENJ 135
+END
 END
 
 
