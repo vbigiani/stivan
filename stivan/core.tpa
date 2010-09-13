@@ -5,21 +5,6 @@ END
 //this file will help other mods detect if component is installed.
 COPY_EXISTING ~sw1h01.itm~ ~override/tb#stiva.txt~
 
-// Create dummy resources
-COPY_EXISTING ~skelwa.cre~ ~override/tb#sskm.cre~
-	SAY NAME1 ~Scheletro Mago~
-	SAY NAME2 ~Scheletro Mago~
-	WRITE_ASCII 0x2cc ~tb#sskm~ #8
-	
-COPY_EXISTING ~skelwa.cre~ ~override/tb#sskc.cre~
-	SAY NAME1 ~Scheletro Chierico~
-	SAY NAME2 ~Scheletro Chierico~
-	WRITE_ASCII 0x2cc ~tb#sskc~ #8
-
-COPY_EXISTING ~skelwa03.cre~ ~override/tb#sskf.cre~
-	SAY NAME1 ~Scheletro Sergente~
-	SAY NAME2 ~Scheletro Sergente~
-	WRITE_ASCII 0x2cc ~tb#sskf~ #8
 
 
 
@@ -117,6 +102,31 @@ COPY_EXISTING ~sword01.cre~ ~override/tb#slil.cre~
 	WRITE_ASCII 0x248 ~tb#slil~ #8 // override script
 	WRITE_ASCII 0x280 ~tb#slil~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#slil~ #8 // dialogue
+	
+
+COPY_EXISTING ~stivan/cre/tb#sskm.cre~ ~override/tb#sskm.cre~
+	SAY NAME1 ~Scheletro Mago~
+	SAY NAME2 ~Scheletro Mago~
+	WRITE_ASCII 0x2cc ~tb#sskm~ #8
+	
+COPY_EXISTING ~stivan/cre/tb#sskc.cre~ ~override/tb#sskc.cre~
+	SAY NAME1 ~Scheletro Chierico~
+	SAY NAME2 ~Scheletro Chierico~
+	WRITE_ASCII 0x2cc ~tb#sskc~ #8
+
+COPY_EXISTING ~skelwa03.cre~ ~override/tb#sskf.cre~
+	SAY NAME1 ~Scheletro Sergente~
+	SAY NAME2 ~Scheletro Sergente~
+	WRITE_LONG  0x14  8000 // XP value
+	WRITE_SHORT 0x24  150  // HP
+	WRITE_SHORT 0x26  150  // ditto
+	WRITE_SHORT 0x46  0    // AC
+	WRITE_SHORT 0x48  0    // ditto
+	WRITE_BYTE  0x234 15   // level
+	WRITE_BYTE  0x238 19   // strength
+	WRITE_ASCII 0x2cc ~tb#sskf~ #8
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~sw2h01~ ~sw2h11~ (8)
+	REPLACE_TEXTUALLY CASE_INSENSITIVE ~bow01~ ~bow02~ (8)
 	
 COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	WRITE_LONG 0x14  0 // xp value
