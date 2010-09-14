@@ -996,7 +996,7 @@ INTERJECT_COPY_TRANS MESSEN 10 tb#StivanMessen-10
 ~Conosco Trademeet - ci sono stato diverse volte con la mia famiglia. Se siamo fortunati, potremmo incontrare qualche mercante con cui eravamo soliti commerciare. Sono sicuro che farebbero il possibile per aiutarci a trovare quei puzzoni di druidi!~
 END
 
-INTERJECT_COPY_TRANS BHCRYPT 0 tb#StivanBhcrypt-0
+INTERJECT_COPY_TRANS2 BHCRYPT 0 tb#StivanBhcrypt-0
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~WOW! Questa cripta è perfetta! C'è spazio anche per gli altri membri del gruppo, nel caso in cui vogliano farci un pisolino!~
 == BHCRYPT ~Nessuno profanerà il luogo del mio riposo. Taglierò le vostre teste una ad una e le infilerò su una picca, cosicchè possano essere da monito agli intrusi!~
@@ -1510,6 +1510,14 @@ INTERJECT_COPY_TRANS sewerm1 23 tb#StivanSewerm1-23
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~Speriamo che almeno qualcuno dei suoi familiari sia ancora in vita. Sarebbe triste se rimanesse del tutto solo.~
 END
+
+INTERJECT_COPY_TRANS CIVFRUS1 1 tb#StivanCivfrus1-1
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Anche papà ebbe il tuo stesso problema. Non ricordo con chi parlò, ma alla fine riuscì a spuntarla.~
+END
+
+
+
+
 
 
 ///////////////////////////////////////////
