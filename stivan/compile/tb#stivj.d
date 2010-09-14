@@ -47,7 +47,7 @@ SAY ~(Snort!) Taci! Le tue scuse non significano nulla! La memoria dei miei fami
 = ~Io... Non ho la benchè minima intenzione di restare più a lungo con te. Addio, <CHARNAME>! Possano i gabbiani cibarsi dei tuoi putridi resti!~ 
 IF ~~ THEN DO ~SetGlobal("tb#StivanJoined","GLOBAL",0) LeaveParty() EscapeArea()  EraseJournalEntry(%Alla ricerca di una tomba.
 
-Mentre ci aggiravamo per i Moli abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfing mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.%) EraseJournalEntry(%Alla ricerca di una tomba.
+Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.%) EraseJournalEntry(%Alla ricerca di una tomba.
 
 L'impiegato nel Palazzo di Giustizia ha avviato le pratiche necessarie per far acquisire legalmente a Stivan la proprietà della cripta. Ha promesso di inviarci un messaggero non appena saranno ultimate e, nel frattempo, si è offerto di custodire al sicuro l'urna dell'halfling.%) EraseJournalEntry(%Alla ricerca di una tomba.
 
@@ -168,7 +168,7 @@ IF ~~ THEN TB#STIVJ FinalRest1-11
 == TB#STIVJ ~*Ahem* Ci tengo a farti sapere, <CHARNAME>, che ho messo una trappola per evitare che malintenzionati frughino il contenuto del forziere. Chi fosse così sciocco da provare ad aprirlo verrà investito da una montagna di cacca di gabbiano mista a piume. Geniale, eh?~
 = ~Per ringraziarti del tuo aiuto, voglio farti un regalo. Tieni: è il mio più prezioso tesoro.~ DO ~GiveItemCreate("tb#srpl",Player1,0,0,0) SetGlobal("tb#stivanEntryTest","GLOBAL",6) AddXPObject(Player1,5000) AddXPObject(Player2,5000) AddXPObject(Player3,5000) AddXPObject(Player4,5000) AddXPObject(Player5,5000) AddXPObject(Player6,5000) AddXPObject("tb#Stiv",15000) TakePartyItem("tb#surn") DestroyItem("tb#surn") EraseJournalEntry(%Alla ricerca di una tomba.
 
-Mentre ci aggiravamo per i Moli abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfing mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.%) EraseJournalEntry(%Alla ricerca di una tomba.
+Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.%) EraseJournalEntry(%Alla ricerca di una tomba.
 
 L'impiegato nel Palazzo di Giustizia ha avviato le pratiche necessarie per far acquisire legalmente a Stivan la proprietà della cripta. Ha promesso di inviarci un messaggero non appena saranno ultimate e, nel frattempo, si è offerto di custodire al sicuro l'urna dell'halfling.%) EraseJournalEntry(%Alla ricerca di una tomba.
 
@@ -777,7 +777,7 @@ CHAIN IF ~~ THEN TB#STIVJ SaerkStrikesAgain1-3
 == JANJ IF ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Per la barba di zio Scratchy! I mercanti sono per definizione dei truffatori, ma il Calimshita non conosce scrupoli! Neanche in occasione della Grande Carestia di Rape del 1348 fui così disonesto. Mi limitai a spacciare per rape delle zucchine adeguatamente incantate con un banale incantesimo d'illusione. Essendo il solo a commerciarle, feci soldi a palate, ma questo attirò l'attenzione dell'esattore delle Tasse e delle Entrate di Amn, un tale di nome Trax. Sai, proprio poco tempo fa stava per mettermi nel sacco, ma sono riuscita a cavarmela grazie al provvidenziale intervento di un gruppo di avventurieri. E' un peccato non averli più rivisti.~ 
 == KELDORJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Il racconto del ladro dissolve ogni dubbio sulla malvagità di quest'uomo, ma rimane il fatto che non vi sono prove della sua colpevolezza nè in uno nè nell'altro caso. No, la questione va risolta affidandoci al giudizio di Torm.~
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Dovete rimuginare sulla questione ancora per molto? Non è necessario avere una mente geniale come la mia per capire che quel mercante ve la farà ancora una volta a meno che non lo uccidiate!~
-== ANOMENJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ ~I trascorsi dell'halfing non fanno altro che complicare la situazione, pertanto suggerisco di accantonarli, per il momento.~
+== ANOMENJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ ~I trascorsi dell'halfling non fanno altro che complicare la situazione, pertanto suggerisco di accantonarli, per il momento.~
 = ~Mi trovo di fronte ad un bivio, ma non so quale sentiero percorrere. Vendicare la morte di Moira è contro i dettami dell'Ordine; non vendicarla significherebbe invece non onorare la memoria di mia sorella.~
 = ~Cosa mi suggerisci di fare, <CHARNAME>?~
 END
@@ -1533,7 +1533,7 @@ Global("tb#StivanKeldornAboutGarren","GLOBAL",0)~ THEN KELDORJ stivanKeldornGarr
 ~Per fortuna quest'uomo si è offerto di mettere una buona parola su di noi. Sarebbe stato spiacevole doversi scontrare con dei compagni dell'Ordine.~
 DO ~SetGlobal("tb#StivanKeldornAboutGarren","GLOBAL",1)~
 == TB#STIVJ ~Spiacevole? Questo è il sogno di una vita! Ho sempre desiderato avere alle calcagne una dozzina di paladini!~
-== KELDORJ ~Una fantasia piuttosto bizzarra, halfing. Grazie a Torm rimarrà per sempre tale.~
+== KELDORJ ~Una fantasia piuttosto bizzarra, halfling. Grazie a Torm rimarrà per sempre tale.~
 == TB#STIVJ ~Credi che il tuo dio mi impedirà di tagliuzzare i tuoi amichetti?~
 == KELDORJ ~Credo che sarà sufficiente il buon senso di <CHARNAME>. Non è forse vero, mio giovane amico?~
 END
@@ -1630,7 +1630,7 @@ AreaCheck("AR2000")~ THEN TB#STIVJ stivanjaheiratrademeet
 DO ~SetGlobal("tb#StivanJaheira","GLOBAL",1)~
 == JAHEIRAJ ~Sarebbe bene evitare giudizi affrettati, Stivan. Preferirei che non ci pronunciassimo su una situazione di cui sappiamo poco o nulla.~
 == TB#STIVJ ~Le cose non si considerano mai per quel che sono, ma per quel che appaiono.~
-== JAHEIRAJ  ~Piantala, halfing. Questo non è il momento adatto per una delle tue disquisizioni. Qualcuno o qualcosa minaccia di sconvolgere l'equilibrio di questo posto, ed io sono più che intenzionata a fermarlo!~
+== JAHEIRAJ  ~Piantala, halfling. Questo non è il momento adatto per una delle tue disquisizioni. Qualcuno o qualcosa minaccia di sconvolgere l'equilibrio di questo posto, ed io sono più che intenzionata a fermarlo!~
 EXIT
 
 CHAIN 
@@ -1698,7 +1698,7 @@ Dead("obshal02")
 Dead("obshal03")~ THEN TB#STIVJ stivanmazzyhalfling
 ~M-Mazzy, li hai sentiti? Quei mostri volevano cibarsi delle nostre carni! Volevano banchettare con le *mie* e con le *tue* membra!~
 DO ~SetGlobal("tb#StivanMazzyObshal01","GLOBAL",1)~
-== MAZZYJ ~Questo incontro mi ha lasciata confusa, Stivan, e anche un pò spaventata. Non avevo mai visto degli halfing... cannibali.~
+== MAZZYJ ~Questo incontro mi ha lasciata confusa, Stivan, e anche un pò spaventata. Non avevo mai visto degli halfling... cannibali.~
 == TB#STIVJ ~Come possono voler mangiare dei loro simili?~
 == MAZZYJ ~La fame è una brutta bestia. Suppongo che, se non li avessimo mai incontrati, alla fine si sarebbero divorati tra di loro.~
 == TB#STIVJ ~In effetti, credo che anch'io avrei rosicchiato qualche tuo arto piuttosto che morire d'inedia.~
@@ -1715,7 +1715,7 @@ Global("tb#StivanMazzyAboutKram","GLOBAL",0)~ THEN MAZZYJ kram
 ~Sono contenta che Kram sia riuscito a trovare un lavoro onesto. Con un pò di costanza e di buona volontà, potrà finalmente costruirsi un futuro.~
 DO ~SetGlobal("tb#StivanMazzyAboutMazzy","GLOBAL",1)~
 == TB#STIVJ  ~Altre agili dita sottratte alla raffinata arte del borseggio... Dove andremo a finire?~
-== MAZZYJ ~Con simili osservazioni, Stivan, non c'è da stupirsi se la maggior parte delle persone etichetta gli halfing come un popolo di ladri. Grazie ad Arvoreen, vicende come quella di Kram riescono a smussare questo genere di pregiudizi.~
+== MAZZYJ ~Con simili osservazioni, Stivan, non c'è da stupirsi se la maggior parte delle persone etichetta gli halfling come un popolo di ladri. Grazie ad Arvoreen, vicende come quella di Kram riescono a smussare questo genere di pregiudizi.~
 == TB#STIVJ ~Beh, con un pò d'impegno dovrei riuscire a traviarlo...~
 == MAZZYJ ~Sono convinta che non cederebbe a nessuna tentazione.~
 == TB#STIVJ ~E se sgrafignassi qualcosa a Galoomp sotto i suoi occhi? Questo potrebbe risvegliare l'antica abitudine...~
@@ -1753,7 +1753,7 @@ AreaCheck("ar1402")~ THEN TB#STIVJ stivandragon
 DO ~SetGlobal("tb#StivanMazzyDragon","GLOBAL",1)~
 == MAZZYJ ~Eccolo. E' il drago che ha sconfitto me e i miei amici. Benchè Amuana ci abbia sconsigliato di affrontarlo, fremo dalla rabbia all'idea di risparmiare una creatura così malvagia!~
 == TB#STIVJ ~Combattici te se sei abbastanza folle da farlo! Io non staccherò le mani dalla Pietra dell'Ombra neanche morto!~
-== MAZZYJ ~Nessun halfing dovrebbe mai tirarsi indietro di fronte ad una prova di coraggio. Davide non ebbe alcuna esitazione ad affrontare Golia!~
+== MAZZYJ ~Nessun halfling dovrebbe mai tirarsi indietro di fronte ad una prova di coraggio. Davide non ebbe alcuna esitazione ad affrontare Golia!~
 == TB#STIVJ ~Svegliati, Mazzy! La realtà è ben diversa da quella stupida favola per marmocchi insonni!~
 END
 IF ~~ THEN REPLY ~(Resti in silenzio).~ EXTERN MAZZYJ StivanMazzyDragon1-1
@@ -1776,7 +1776,7 @@ END
 
 APPEND MAZZYJ
 IF ~~ THEN BEGIN StivanMazzyDragon1-2
-SAY ~Si tratta dei protagonisti di una leggenda che le madri halfing son solite raccontarci in tenera età.~
+SAY ~Si tratta dei protagonisti di una leggenda che le madri halfling son solite raccontarci in tenera età.~
 IF ~~ THEN EXTERN MAZZYJ StivanMazzyDragon1-5
 END
 
@@ -1790,16 +1790,16 @@ END
 END
 
 CHAIN IF ~~ THEN MAZZYJ StivanMazzyDragon1-5
-~Nei pressi di un insediamento halfing a sud del Golfo di Vilhon si era stabilito un gruppo di giganti che terrorizzava le comunità del posto. Ad essere sincera, non ricordo con esattezza il nome del villaggio.~
+~Nei pressi di un insediamento halfling a sud del Golfo di Vilhon si era stabilito un gruppo di giganti che terrorizzava le comunità del posto. Ad essere sincera, non ricordo con esattezza il nome del villaggio.~
 == TB#STIVJ ~(Snort!) Si trattava del Bosco di Chondal, ignorante!~
 == MAZZYJ ~Visto che sai più dettagli di me, perché non prosegui?~
 == TB#STIVJ ~Puoi starne certa!~
-= ~*Ahem* Secondo questa leggenda, seguirono anni di lotte in cui gli halfing si divertivano a tagliuzzare le gambe degli avversari e i giganti a scagliare il più lontano possibile i nostri simili.~
-= ~La situazione rimase invariata sino a quando il campione dei nuovi arrivati, Golia, rivolse una vera e propria sfida agli halfing degli spiriti che abitavano il posto. La sua tribù avrebbe abbandonato il Bosco di Chondal soltanto se lui fosse stato sconfitto in combattimento.~
+= ~*Ahem* Secondo questa leggenda, seguirono anni di lotte in cui gli halfling si divertivano a tagliuzzare le gambe degli avversari e i giganti a scagliare il più lontano possibile i nostri simili.~
+= ~La situazione rimase invariata sino a quando il campione dei nuovi arrivati, Golia, rivolse una vera e propria sfida agli halfling degli spiriti che abitavano il posto. La sua tribù avrebbe abbandonato il Bosco di Chondal soltanto se lui fosse stato sconfitto in combattimento.~
 = ~Nessuno ebbe il coraggio di accettare la sfida, ad eccezione di un tale di nome Davide.~
 = ~I due si incontrarono in una valle, conosciuta come la Valle di Elah. Certo di avere la vittoria in tasca, Golia lasciò che fosse l’avversario a fare la prima mossa.~
 == MAZZYJ ~La sua presunzione gli fu fatale, in quanto Davide infilò la mano nella sua bisaccia, ne trasse una pietra, la lanciò con la fionda e colpì il gigante in fronte, facendolo cadere a terra. A quel punto corse in direzione dell’avversario, prese la sua spada e lo uccise, per poi tagliargli la testa.~
-== TB#STIVJ ~(Sospira) E fu così che gli halfing del Bosco di Chondal furono liberi dalla minaccia dei giganti, in quanto fuggirono alla notizia della morte del loro capo.~
+== TB#STIVJ ~(Sospira) E fu così che gli halfling del Bosco di Chondal furono liberi dalla minaccia dei giganti, in quanto fuggirono alla notizia della morte del loro capo.~
 == MAZZYJ ~Lo vedi, Stivan? Le idee ispirate dal coraggio sono come le pedine degli scacchi. Se da una parte possono essere mangiate, dall’altra possono anche dare avvio ad un gioco vincente.~
 == TB#STIVJ ~(Snort!) Non tutti sono dei Davide scesi nella Valle di Elah per affrontare un mostro tanto più grande e forte di noi. E non tutti hanno la capacità di uccidere il gigante. Di rado i cosiddetti "buoni" vincono e vivono per raccontarlo.~
 EXIT
@@ -1846,13 +1846,13 @@ DO ~SetGlobal("tb#StivanMazzyDrow","GLOBAL",1)~
 == TB#STIVB ~Chiederò a quel simpatico draghetto di lasciare immutata la mia forma.~
 == BMAZZY ~Cosa?! Vorresti mantenere le fattezze di un drow? Sarebbe questo il tuo sogno nel cassetto?~
 == TB#STIVB ~Io non ho sogni nel cassetto, Mazzy. Preferisco tenerci la biancheria!~
-== BMAZZY ~Non è il momento di scherzare, Stivan! L'incantesimo lanciato da Aldalon non è altro che un'illusione. Non cambierà mai la tua natura di halfing!~
+== BMAZZY ~Non è il momento di scherzare, Stivan! L'incantesimo lanciato da Aldalon non è altro che un'illusione. Non cambierà mai la tua natura di halfling!~
 = ~Hai pensato inoltre alle conseguenze che il tuo aspetto porterebbe con sè? Una volta tornati in superficie, le persone ne saranno terrorizzate e ti eviteranno. Alcuni cercheranno addirittura di ucciderti!~
 == TB#STIVB ~(Snort!) E allora? Lo scenario che dipingi non sarebbe poi tanto diverso da quello che ho vissuto sino ad oggi!~
 = ~Le persone mi hanno sempre evitato per il mio aspetto trasandato, come se avessi potuto tirarmi a lucido dopo la perdita di tutti i miei beni. Quanto ai tentativi di uccisione, sono innumerevoli le guardie che hanno cercato di aggredirmi e di sbattermi in prigione soltanto perchè dormivo per strada. "Dobbiamo mantenere l'ordine e la sicurezza" dicevano, quando i problemi del distretto erano altri!~
 = ~Ben venga se coloro che incontrerò avranno paura di me per le mie sembianze da drow. Il loro timore sarà sinonimo di rispetto!~
 == BMAZZY ~Stivan, calmati e ascoltami.~
-= ~Capisco meglio di chiunque altro quanto sia difficile per un halfing essere accettati dalla società. Agli occhi dei più non siamo altro che creature buffe e frivole, pavide e vigliacche. Eppure, io ho lottato perchè almeno nel mio mondo le cose cambiassero, perchè le persone mi vedessero per quel che sono veramente, non con le lenti dei pregiudizi che accompagnano il nome della nostra razza.~ 
+= ~Capisco meglio di chiunque altro quanto sia difficile per un halfling essere accettati dalla società. Agli occhi dei più non siamo altro che creature buffe e frivole, pavide e vigliacche. Eppure, io ho lottato perchè almeno nel mio mondo le cose cambiassero, perchè le persone mi vedessero per quel che sono veramente, non con le lenti dei pregiudizi che accompagnano il nome della nostra razza.~ 
 = ~E' stato un cammino lungo e periglioso, non lo nego. In più occasioni mi sono sentita demoralizzata, ma ogni volta sono riuscita ad andare avanti dicendomi: "Sei caduta sette volte? Rialzati otto". Alla fine, ho dimostrato a me stessa e agli altri di essere una persona forte e coraggiosa, leale e onesta.~
 == TB#STIVB ~...~
 = ~... Heh. Ci hai provato, Mazzy, ma non mi lascerò intortare dalla tua storiellina. Io manterrò quest'aspetto, che ti piaccia o no!~
@@ -1878,7 +1878,7 @@ DO ~SetGlobal("tb#StivanMazzyDrow","GLOBAL",2)~
 == MAZZYJ ~Ne sei sicuro? Vuoi che venga lì e ti faccia volgere lo sguardo altrove a suon di schiaffi?~
 == tb#self ~Ehm... No. Non ce n'è bisogno...~
 == MAZZYJ ~Presto fatto.~ 
-= ~Sii coraggioso, Stivan. Anche gli halfing, nel cercare di scalare la più alta delle vette, possono raggiungerne la cima.~
+= ~Sii coraggioso, Stivan. Anche gli halfling, nel cercare di scalare la più alta delle vette, possono raggiungerne la cima.~
 == TB#STIVJ ~...~
 = ~(Arrossisce) Grazie, Mazzy.~
 == MAZZYJ ~Figurati.~

@@ -94,7 +94,7 @@ IF ~~ THEN BEGIN StivanFirstMeet1-10
 SAY ~Dovremmo chiedere a qualche impiegato nel Palazzo di Giustizia. E' lì che si occupano di queste cose. Posso contare sul tuo aiuto?~
 IF ~~ THEN REPLY ~Direi di sì. Al Quartiere Governativo, allora.~ UNSOLVED_JOURNAL %Alla ricerca di una tomba.
 
-Mentre ci aggiravamo per i Moli abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfing mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.% GOTO StivanFirstMeet1-12
+Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.% GOTO StivanFirstMeet1-12
 
 IF ~~ THEN REPLY ~Per il momento no. Magari in futuro.~ EXIT
 END

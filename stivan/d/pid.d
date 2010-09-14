@@ -61,7 +61,7 @@ IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN PD2-2
-SAY ~Heh. Modestia a parte, sono troppo simpatico!~
+SAY ~Heh. In effetti, sono troppo simpatico!~
 IF ~~ THEN EXIT
 END
 
@@ -301,7 +301,7 @@ IF ~~ THEN REPLY ~(Indichi i Moli).~ GOTO PD4-8
 END
 
 IF ~~ THEN BEGIN PD4-2
-SAY ~La Passeggiata di Waukeen è il più importante centro di scambi commerciali in tutta Amn. E' anche il posto in cui mia mamma vendeva il nostro vino ai mercanti del posto o di passaggio, mentre io ero in viaggio con il resto della famiglia.~
+SAY ~La Passeggiata di Waukeen è il più importante centro di scambi commerciali in tutta Amn. E' anche il posto in cui mia mamma vendeva il nostro vino ai mercanti locali o di passaggio, mentre io ero in viaggio con il resto della famiglia.~~
 = ~Ma immagino che a te non interessino cibo e vettovaglie, bensì rifornimenti o equipaggiamento. C'è un negozio, l'Emporio dell'Avventuriero, che potrebbe fare al caso tuo. Il proprietario è uno sbruffone che a papino non è mai piaciuto, e neanche a me. Le alternative sono ben poche, <CHARNAME>: quel tizio ormai ha eliminato la concorrenza.~
 IF ~~ THEN EXIT
 END
@@ -313,7 +313,7 @@ END
 
 IF ~~ THEN BEGIN PD4-4
 SAY ~Il Quartiere del Ponte è il luogo dove hai chiesto al potente e famoso Stivan il Cacciatore di unirsi a te!~
-= ~Non è un caso che tu mi abbia incontrato in questa zona. Quando i miei familiari erano in vita, io vivevo proprio qui. Ti porterei volentieri a visitare la mia casetta, ma quando la persi venne venduta ad un nobile di Lord Baltis, e le sue guardie non permettono agli estranei di entrarvi. E' un peccato.~
+= ~Non è un caso che tu mi abbia incontrato in questa zona. Quando i miei familiari erano in vita, io vivevo proprio qui. Ti porterei volentieri a visitare la mia casetta, ma quando la persi venne venduta ad un nobile di nome Lord Baltis, e le sue guardie non permettono agli estranei di entrarvi. E' un peccato.~
 IF ~~ THEN EXIT
 END
 
@@ -345,7 +345,7 @@ IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN PD5
-SAY ~E' chiaramente opera dei gabbiani. Ho visto il cadavere dell'ultima vittima, e presenta chiaramente segni di perforazione da becco. Ho cercato di dirlo al tenente che si occupa delle indagini, ma ha detto di non fargli perdere tempo con queste sciocchezze. Vedrai se non ho ragione.~
+SAY ~E' chiaramente opera dei gabbiani. Ho visto il cadavere dell'ultima vittima, e presenta palesi segni di perforazione da becco. Ho cercato di dirlo al tenente che si occupa delle indagini, ma ha detto di non fargli perdere tempo con queste sciocchezze. Vedrai se non ho ragione.~
 IF ~~ THEN EXIT
 END
 

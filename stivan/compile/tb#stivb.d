@@ -151,7 +151,7 @@ Global("tb#StivanViconia","GLOBAL",0)~ THEN TB#STIVB stivan-viconia-1
 = ~... Viconia, non guardarmi in quel modo. Mi metti soggezione.~
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",1)~
 == BVICONI ~Non so ancora in che modo inquadrarti, sakphul. C'è qualcosa in te che ti rende diverso dai tuoi simili.~
-== TB#STIVB ~Questo è vero. Potresti definirmi un halfing "urbano", visto che sono nato e cresciuto qui, ad Athkatla, e non in uno dei villaggi tipici della mia razza.~
+== TB#STIVB ~Questo è vero. Potresti definirmi un halfling "urbano", visto che sono nato e cresciuto qui, ad Athkatla, e non in uno dei villaggi tipici della mia razza.~
 == BVICONI ~Ma per molti aspetti sei tale e quale ai tuoi amichetti dai piedi pelosi. Prendi il tuo aspetto fisico: è addirittura peggiore di quello degli abitanti degli alberi. Persino il più inetto tra i drow sarebbe in grado di spezzarti come un esile ramoscello.~
 == TB#STIVB ~Ti ringrazio per il complimento, Viconia.~
 == BVICONI ~E la tua fastidiosa abitudine a maneggiare grimaldelli e altri arnesi da scasso? Non è forse tipico di quelli della tua razza dedicarsi a simili rozze attività?~
@@ -172,7 +172,7 @@ Global("tb#StivanViconia","GLOBAL",2)~ THEN TB#STIVB stivan-viconia-3
 ~Viconia, ti hanno mai detto che sei una bellissima drow?~
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",3)~
 == BVICONI ~Hmmm... Ti senti bene, sakphul? Non mi sarei mai aspettata un'osservazione del genere da... da uno come te.~
-== TB#STIVB ~Ti stavo soltanto rivolgendo un complimento. Pensi forse che un halfing non sia capace di apprezzare la bellezza di una drow?~
+== TB#STIVB ~Ti stavo soltanto rivolgendo un complimento. Pensi forse che un halfling non sia capace di apprezzare la bellezza di una drow?~
 == BVICONI ~No, anzi. Il mio aspetto è così maestoso da abbagliare chiunque. Tappetti inclusi.~
 == TB#STIVB ~Ehm... La modestia non è una delle tue qualità...~
 EXIT
@@ -269,7 +269,7 @@ CombatCounter(0)
 Global("tb#StivanAnomen","GLOBAL",0)~ THEN TB#STIVB stivan-anomen-1
 ~Mi sono sempre chiesto, Anomen, per quale motivo combatti nel nome di Helm. Tra tutti gli dei, è noto per essere il più freddo e distaccato.~
 DO ~SetGlobal("tb#StivanAnomen", "GLOBAL",1)~
-== BANOMEN ~Fesserie! Ti posso assicurare, halfing, che nel corso di una battaglia lo spirito di Helm infiamma il mio cuore e guida la mia mano!~
+== BANOMEN ~Fesserie! Ti posso assicurare, halfling, che nel corso di una battaglia lo spirito di Helm infiamma il mio cuore e guida la mia mano!~
 == TB#STIVB ~"Lo spirito di Helm"? Sei sicuro che non si tratti dei tuoi ormoni?~
 == BANOMEN ~Non presterò attenzione ai tuoi sarcastici commenti.~
 == TB#STIVB ~Ma certo. L'impavido Anomen non si abbasserebbe mai a rispondere a simili affermazioni. Toglimi una curiosità, allora: rimanevi impassibile anche quando i tuoi superiori ti chiedevano di pulire il deretano dei loro destrieri?~
@@ -294,7 +294,7 @@ DO ~SetGlobal("tb#StivanAnomen","GLOBAL",2)~
 == TB#STIVB ~(Yawn) Stai iniziando ad annoiarmi con le tue minacce... Avanti, Anomen: non perdere tempo con le formalità e porgimi le tue scuse.~
 == BANOMEN ~Che cosa?! Sei stato *tu* ad iniziare ad insultarmi!~
 == TB#STIVB ~Uhm... Può darsi. Eppure credevo che gli zelanti servitori del bene come te non si facessero tanti scrupoli per sotterrare l'ascia di guerra...~
-== BANOMEN ~Puoi scordartelo, halfing! Chiedere scusa significherebbe stendere le fondamenta per un'offesa futura!~
+== BANOMEN ~Puoi scordartelo, halfling! Chiedere scusa significherebbe stendere le fondamenta per un'offesa futura!~
 EXIT
 
 ADD_TRANS_ACTION ANOMENJ BEGIN 101 END BEGIN END ~SetGlobalTimer("tb#StivanAnomenUpset","GLOBAL",FOUR_DAYS)~
@@ -315,7 +315,7 @@ DO ~SetGlobal("tb#StivanAnomen","GLOBAL",3)~
 == TB#STIVB ~Se avessi ascoltato fin da subito le critiche pungenti che rivolgevo a quegli sciocchi...~
 == BANOMEN ~C'è un vecchio adagio che dice: "Meglio tardi che mai".~
 == TB#STIVB ~Giusto. Eppure continui a servire Helm.~
-== BANOMEN ~L'Onniveggente non mi ha privato dei miei poteri, halfing, il che significa che con le mie azioni non l'ho disonorato.~
+== BANOMEN ~L'Onniveggente non mi ha privato dei miei poteri, halfling, il che significa che con le mie azioni non l'ho disonorato.~
 == TB#STIVB ~L'Ordine sembra pensarla diversamente.~
 == BANOMEN ~Al diavolo l'Ordine! La sola cosa che conta sono i fatti. E parlano più che bene.~
 EXIT
@@ -329,7 +329,7 @@ CombatCounter(0)
 Global("tb#StivanKeldorn","GLOBAL",0)~ THEN TB#STIVB stivan-keldorn-1
 ~Sei avanti negli anni, Keldorn. Capisco che per un sessant'enne sia un'idea difficile da accettare, ma... Cerca di rendertene conto: è giunto il momento di riporre la tua spada nel fodero.~
 DO ~SetGlobal("tb#StivanKeldorn","GLOBAL",1)~
-== BKELDOR ~La lotta contro il male non ha mai fine, halfing. Continuerò a combattere finchè Torm mi darà la forza necessaria a farlo.~
+== BKELDOR ~La lotta contro il male non ha mai fine, halfling. Continuerò a combattere finchè Torm mi darà la forza necessaria a farlo.~
 = ~Per inciso: io non ho sessant'anni.~
 == TB#STIVB ~E' vero: ho voluto ringiovanirti di cinque anni per motivi di... tatto.~ 
 = ~Ad ogni modo, vista la tua determinazione, ti consiglio di stare attento. Potresti essere sconfitto in qualsiasi momento da un nemico più forte o, nel peggiore dei casi, restar schiacciato dalla tua stessa armatura.~
@@ -359,7 +359,7 @@ See("tb#Stiv")
 AreaType(DUNGEON)
 CombatCounter(0)
 Global("tb#StivanEdwinInDungeon","GLOBAL",0)~ THEN BEDWIN StivanEdwinInDungeon
-~Posso sapere cosa ci trovi di tanto interessante in quella parete, halfing? Trovi che sia normale accarezzarla mormorando parole indistinte?~
+~Posso sapere cosa ci trovi di tanto interessante in quella parete, halfling? Trovi che sia normale accarezzarla mormorando parole indistinte?~
 DO ~SetGlobal("tb#StivanEdwinInDungeon","GLOBAL",1)~
 == TB#STIVB ~A me piace parlare al muro, Edwin. E' il solo che non mi contraddica.~
 == BEDWIN ~(E' un individuo pericoloso. Lo sostenevo fin dall'inizio).~
@@ -373,7 +373,7 @@ CombatCounter(0)
 Global("tb#StivanEdwin","GLOBAL",0)~ THEN TB#STIVB stivan-edwin1
 ~Edwin, perchè non mi parli un pò della tua Thay? E' una regione in cui non sono mai stato e mi piacerebbe saperne di più.~
 DO ~SetGlobal("tb#StivanEdwin","GLOBAL",1)~
-== BEDWIN ~Thay non è "mia", stupido halfing (anche se lo sarà presto). In ogni caso, se vuoi delle informazioni su quella terra dove non sopravviveresti neanche un giorno, dovresti rivolgerti all'ufficio per i giretti turistici riservati alle scimmie.~
+== BEDWIN ~Thay non è "mia", stupido halfling (anche se lo sarà presto). In ogni caso, se vuoi delle informazioni su quella terra dove non sopravviveresti neanche un giorno, dovresti rivolgerti all'ufficio per i giretti turistici riservati alle scimmie.~
 == TB#STIVB ~Quanto astio, quanto astio... Ti sei mai chiesto da dove provenga la tua scontrosità?~
 == BEDWIN ~Io mi chiedo molte cose, mocciosetto, ma temo che trascendano tutte la tua limitata comprensione da gibberling. (Edwin, come puoi sperare che questo scarto umano conosca il significato del termine "trascendere"? Dovrò cercarne uno più semplice...)~
 = ~(Bah! Stare tra questi analfabeti sta limitando sempre di più le mie raffinatezze linguistiche!)~
@@ -382,7 +382,7 @@ DO ~SetGlobal("tb#StivanEdwin","GLOBAL",1)~
 == TB#STIVB ~Questo è un interessante consiglio, stregone. Devi certamente averlo provato di persona per raccomandarmelo.~
 == BEDWIN ~NO! (Quella dannata sgualdrina dei Moli ha parlato! Le avrei dovuto sigillare la bocca con una sana palla di fuoco, altro che stordirla!)~
 == TB#STIVB ~Povero Edwin. Tradito da una parola di troppo. Non dovresti mai bere prima di andare a letto con una cortigiana...~
-== BEDWIN ~Ti consiglio di tapparti la bocca, halfing, prima che... che... (Dei! Mi stanno incastrando!)~
+== BEDWIN ~Ti consiglio di tapparti la bocca, halfling, prima che... che... (Dei! Mi stanno incastrando!)~
 == TB#STIVB ~... <CHARNAME>, sarebbe meglio ritornare a qualsiasi cosa stessimo facendo prima di interromperci. Edwin... Sta perdendo il controllo.~
 EXIT
 
@@ -398,7 +398,7 @@ DO ~SetGlobal("tb#StivanEdwin","GLOBAL",2)~
 = ~Uh? E questo cos'è? Potrei giurare che la volta scorsa non -- *EEKKK*!~
 == BEDWIN ~Persino una banale trappola per topi può essere estremamente efficace contro certi ficcanaso.~
 == TB#STIVB ~Da... Dannazione a te, stregone! Guarda com'è gonfia la mia mano!~
-== BEDWIN ~Osa rovistare ancora una volta tra i miei averi, halfing, e ti assicuro che troverai ben altro genere di sorprese.~
+== BEDWIN ~Osa rovistare ancora una volta tra i miei averi, halfling, e ti assicuro che troverai ben altro genere di sorprese.~
 == TB#STIVB ~(Urla) <CHARNAME>, mi appello a te! Dal momento che la pergamena appartiene a questo gruppo, ho il diritto di poterla consultare a mio piacimento!~
 END
 IF ~~ THEN REPLY ~Stivan ha ragione, Edwin. Tira fuori il maltolto.~ EXTERN BEDWIN StivanEdwin1
@@ -457,7 +457,7 @@ DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",3)~
 EXIT
 
 CHAIN IF ~Global("TB#StivanSusanScene","GLOBAL",4)~ THEN EDWINJ susan-finale
-~Giustizia è fatta. Quanto a te, halfing...~
+~Giustizia è fatta. Quanto a te, halfling...~
 == TB#STIVJ ~Il potere... Ho avuto tra le mani... il potere...~
 == EDWINJ ~Sarei tentato di farti implodere seduta stante, ma terrò a bada la mia ira per il momento. Subirai la giusta punizione non appena avrò compreso ogni segreto di questa pergamena (e ti assicuro che allora saranno cavoli amari).~
 DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",5)~
@@ -498,7 +498,7 @@ IF ~~ THEN GOTO EdwinComplainsOfStivan4
 END
 
 IF ~~ THEN EdwinComplainsOfStivan4
-SAY ~Quell'halfing è un problema per noi tutti. Non c'è notte in cui non sia agitato o mormori frasi sconnesse e senza senso. Come credi che possa riposare se il mio sonno viene disturbato da quell'invertito?~
+SAY ~Quell'halfling è un problema per noi tutti. Non c'è notte in cui non sia agitato o mormori frasi sconnesse e senza senso. Come credi che possa riposare se il mio sonno viene disturbato da quell'invertito?~
 IF ~~ THEN REPLY ~Infastidisce anche gli altri? E come mai loro non si sono lamentati?~ GOTO EdwinComplainsOfStivan5
 IF ~~ THEN REPLY ~D'accordo, ho afferrato il concetto: al risveglio scambierò quattro chiacchere con lui.~ GOTO EdwinComplainsOfStivan6
 IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY ~Se vuoi, posso parlarci e dirgli che il suo sonno inquieto disturba il mio meloncino.~ GOTO EdwinComplainsOfStivan7
@@ -524,7 +524,7 @@ CHAIN
 IF ~Global("tb#StivanEdwinaDrunk","GLOBAL",1)~ THEN TB#STIVJ stivanedwinpresleep
 ~Posso offrirvi da bere, signorina Odesseiron? Gradite del vino scuro di Berduska o preferite quello raffinato e soave di Tehtyr?~
 DO ~SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",2)~
-== EDWINJ ~Portami un boccale di birra, halfing, e non lasciare la mancia.~
+== EDWINJ ~Portami un boccale di birra, halfling, e non lasciare la mancia.~
 == TB#STIVJ ~Ma Miss Edwina! Quante volte vi ho già detto di non insozzarvi la bocca con simili espressioni?~
 == EDWINJ ~Tra poco insozzerò il pavimento di questa bettola col tuo sangue se non stai zitto! Io-voglio-una-birra!~
 == TB#STIVJ ~Assolutamente no. Quello che ci vuole per voi è un'ottima degustazione di vini accuratamente scelti da me.~
@@ -544,7 +544,7 @@ DO ~SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",2)~
 == TB#STIVJ ~Uhm... E questo cos'è? Vino Alurlyath?~
 == EDWINJ ~Che razza di nome è "Alurlyath"?~
 == TB#STIVJ ~Non ne ho idea, non l'ho mai assaggiato. (Sniff sniff) A giudicare dall'odore, dev'essere molto forte. E' meglio che lo allunghi con un pò d'acqua.~
-== EDWINJ ~Versamene un bicchiere così com'è, halfing. Non sono una donnetta.~
+== EDWINJ ~Versamene un bicchiere così com'è, halfling. Non sono una donnetta.~
 == TB#STIVJ ~Ah no?~
 == EDWINJ ~Versa!~
 == TB#STIVJ ~Avete dimenticato la parolina magica, Miss Edwina.~
@@ -561,7 +561,7 @@ EXIT
 
 CHAIN 
 IF ~Global("tb#StivanEdwinaDrunk","GLOBAL",3)~ THEN EDWINJ stivanEdwinAfterNight 
-~(Che nottataccia... Ho sognato di aver trascorso la serata a rotolarmi con quell'halfing. Per fortuna era solo un incubo).~
+~(Che nottataccia... Ho sognato di aver trascorso la serata a rotolarmi con quell'halfling. Per fortuna era solo un incubo).~
 = ~(Uhmmm... Tra poco dovrei alzarmi, ma mi sento come se avessi un peso che grava sul mio petto... Bah! Devo aver mangiato qualcosa di pesante, senza dubbio).~
 = ~(Appunti della giornata: sgridare adeguatamente la cuoca di questa stamberga).~
 = ~(Ma...)~
@@ -569,7 +569,7 @@ IF ~Global("tb#StivanEdwinaDrunk","GLOBAL",3)~ THEN EDWINJ stivanEdwinAfterNight
 = ~(Ieri sera io *non* ho mangiato! Allora perchè ho questa sensazione di pesantezza? L'avverto lungo tutto il corpo...)~
 = ~(Calmati, Edwin. Respira profondamente e fà mente locale su tutto ciò che è successo in questo buco di taverna).~
 = ~(...)~
-= ~(... L'halfing ti ha fatto bere fino ad ubriacarti, d'accordo. Ma dopo? Cos'è successo? Mi ha portato in camera e...)~
+= ~(... L'halfling ti ha fatto bere fino ad ubriacarti, d'accordo. Ma dopo? Cos'è successo? Mi ha portato in camera e...)~
 = ~(...)~
 = ~(Bah! Non riesco a ricordarmi nulla! E' un peccato che non sappia servirmi della divinazione - questa è una delle rare occasioni in cui mi sarebbe utile).~
 = ~(Ma questa pesantezza non mi abbandona. Inizia proprio qui, all'altezza del seno... Tra l'altro avverto anche un certo prurito tra le cavità. Più dal lato di Patricia che da quello di Thelma...)~
@@ -584,11 +584,11 @@ DO ~SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",4)~
 == EDWINJ ~A... Abbiamo dormito insieme? E' questo che stai dicendo?~
 == TB#STIVJ ~Esattamente.~
 == EDWINJ ~MI-~
-= ~MISERICORDIA! Sono andato a letto con l'halfing!~
+= ~MISERICORDIA! Sono andato a letto con l'halfling!~
 == TB#STIVJ ~Beh, in effetti non avevo mai dormito con una donna prima d'ora.~
 == EDWINJ ~NOOOOOOO!!!!!!!~
 == TB#STIVJ ~Nulla di così drammatico, Miss Edwina. In futuro cercherò di appisolarmi al vostro fianco anzichè sopra di voi.~
-== EDWINJ ~La... La mia prima volta da donna... Deflorato da un halfing...~
+== EDWINJ ~La... La mia prima volta da donna... Deflorato da un halfling...~
 == TB#STIVJ ~Deflorato? Ma cosa state dicendo? Siamo stati semplicemente sopraffatti dalla stanchezza mentre ci stavamo azzuffando. Non avrete di certo pensato che...~
 == EDWINJ ~...~
 == TB#STIVJ ~Ma che orrore! Come vi possono venire in mente certe idee?~
@@ -609,7 +609,7 @@ DO ~SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",4)~
 == TB#STIVJ ~Vi siete accertata di non essere stata violata dal sottoscritto?~
 == EDWINJ ~Violata? Di cosa stai parlando, stupida scimmia?~
 == TB#STIVJ ~Fino a qualche istante fa mi stavate accusando di avervi violentata!~
-== EDWINJ ~Piantala di dire fesserie, halfing, o ti spedisco in qualche piano infernale!~
+== EDWINJ ~Piantala di dire fesserie, halfling, o ti spedisco in qualche piano infernale!~
 == TB#STIVJ ~Basta. Io ci rinuncio.~
 == EDWINJ ~(Dei... Questo corpo riserva sorprese di ogni tipo... O sono le mie mani d'incantatore a fare il miracolo?)~
 EXIT
@@ -634,7 +634,7 @@ DO ~SetGlobal("tb#StivanEdwina","GLOBAL",1)~
 == BMINSC ~Boo dice che le donne aspettano che sia sempre l'uomo a fare la prima mossa. Minsc si chiede se la sorella di Edwin voglia ascoltare un'altra poesia.~
 == BEDWIN ~NOO!!!~
 == TB#STIVB ~Dal vostro nervosismo deduco che sono ormai prossime. Avete già scelto l'abito?~
-== BEDWIN ~Ho scelto il modo in cui ucciderti, halfing! Strangolandoti!~
+== BEDWIN ~Ho scelto il modo in cui ucciderti, halfling! Strangolandoti!~
 == TB#STIVB ~Un'altra curiosità, Miss Edwina: vestirete rosso o bianco?~
 == BEDWIN ~Di rosso, ovv... Ma cosa diavolo mi fai dire?!?~
 == TB#STIVB ~Non ne dubitavo. Sarà un onore farvi da testimone.~
@@ -654,7 +654,7 @@ DO ~SetGlobal("tb#StivanMinscUB","GLOBAL",1)~
 == BMINSC ~Tieni gli occhi bene aperti, Boo! Anche quando cala la notte, i difensori della giustizia devono restare svegli per opporsi al male!~
 = ~Minsc è contento di averti ritrovato, Boo. Senza di te si addormentava come un ghiro.~
 == TB#STIVB ~Io ti preferivo quando eri depresso, ranger. Per quanto breve, è stato il solo periodo di tempo in cui dalla tua bocca non uscivano fesserie.~
-== BMINSC ~Minsc si è stufato di ascoltare i tuoi commenti malevoli, halfing! E' giunto il momento di raddrizzarti la schiena e di darti un pò di calci nel sedere! In guardia, male: Minsc sta per...~
+== BMINSC ~Minsc si è stufato di ascoltare i tuoi commenti malevoli, halfling! E' giunto il momento di raddrizzarti la schiena e di darti un pò di calci nel sedere! In guardia, male: Minsc sta per...~
 = ~Cosa, Boo? Vuoi affrontarlo da solo? Ma... Minsc capisce, ma...~
 = ~D'accordo, Boo: Minsc lascerà a te la gloria della battaglia! Preparati ad affrontare la giustizia dei criceti, Stivan!~
 == TB#STIVB ~Tremo dalla paura.~
@@ -667,7 +667,7 @@ DO ~SetGlobal("tb#StivanMinscUB","GLOBAL",1)~
 = ~Adesso ti sistemo io, topo!~
 = ~(Stonf)~
 = ~(Doppio stonf)~
-== BEDWIN IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(L'halfing si sta picchiando da solo? Quindi è masochista... Uhm... Buono a sapersi. Vediamo se sarà così eccitato anche quando gli darò fuoco!)~
+== BEDWIN IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(L'halfling si sta picchiando da solo? Quindi è masochista... Uhm... Buono a sapersi. Vediamo se sarà così eccitato anche quando gli darò fuoco!)~
 == TB#STIVB ~No! Lì no, lì no, lì no!~
 = ~(Stonf!)~
 = ~Uhi...~
@@ -765,7 +765,7 @@ END
 IF ~~ THEN REPLY ~Shhh... Vieni qui, Aerie. Non dargli retta.~ EXTERN BAERIE AerieScared1
 IF ~~ THEN REPLY ~Mi aspetto che tu sia più coraggiosa. Non puoi spaventarti per così poco.~ EXTERN BAERIE AerieScared1
 IF ~~ THEN REPLY ~Il tuo comportamento è a dir poco infantile, Stivan.~ EXTERN TB#STIVB AerieScared2
-IF ~~ THEN REPLY ~Halfing, osa importunare ancora una volta Aerie e ti gonfio la faccia!~ EXTERN TB#STIVB AerieScared2
+IF ~~ THEN REPLY ~Halfling, osa importunare ancora una volta Aerie e ti gonfio la faccia!~ EXTERN TB#STIVB AerieScared2
 IF ~~ THEN REPLY ~Presto avrò una crisi di nervi. Non vi sopporto più...~ EXTERN TB#STIVB AerieScared2
 
 CHAIN IF ~~ THEN BAERIE AerieScared1
@@ -1083,7 +1083,7 @@ DO ~SetGlobal("tb#StivanKorgan","GLOBAL",1)~
 == TB#STIVB ~E i tuoi fratelli?~
 == BKORGAN ~Tsk. Un mucchio di bastardi.~
 == TB#STIVB ~Uhm... Ecco un raro esempio di devozione filiale. Come mai nutri una così profonda avversione per la tua famiglia?~
-== BKORGAN ~Non ficcare il naso in affari che non ti riguardano, halfing. Ti basti sapere che se dovessi incontrare uno solo di loro, non tornerà a casa vivo. E se dovesse riuscirci, avrà qualche arto in meno.~
+== BKORGAN ~Non ficcare il naso in affari che non ti riguardano, halfling. Ti basti sapere che se dovessi incontrare uno solo di loro, non tornerà a casa vivo. E se dovesse riuscirci, avrà qualche arto in meno.~
 EXIT
 
 CHAIN 
@@ -1209,13 +1209,13 @@ IF ~~ THEN StivanDislikesAerie1-1
 SAY ~Heh. A volte c’è bisogno che siano le labbra altrui a confessare verità che non ammetti a te stesso. Dovresti ringraziarmi!~
 IF ~~ THEN REPLY ~Stivan, ho capito che a te non piace Aerie, ma questo non significa che tu debba metterti in mezzo a noi.~ EXTERN TB#STIVB StivanDislikesAerie1-4
 IF ~~ THEN REPLY ~Non ho certo bisogno che *tu* mi dica cosa provo per lei! Chi credi di essere?~ EXTERN TB#STIVB StivanDislikesAerie1-4
-IF ~~ THEN REPLY ~Sono stanco del modo in cui la tratti, halfing. Osa ancora una volta infastidirla e ti sbatto fuori dal gruppo.~ EXTERN TB#STIVB StivanDislikesAerie1-4
+IF ~~ THEN REPLY ~Sono stanco del modo in cui la tratti, halfling. Osa ancora una volta infastidirla e ti sbatto fuori dal gruppo.~ EXTERN TB#STIVB StivanDislikesAerie1-4
 END
 
 IF ~~ THEN StivanDislikesAerie1-4
 SAY ~Povero <CHARNAME>... Sei la dimostrazione vivente del fatto che l’uomo è imperfetto. Eppure bisogna capire e scusare, considerando l’epoca in cui è stato creato.~
 = ~(Stivan ti fa una pernacchia).~
-IF ~~ THEN REPLY ~Tu vuoi proprio morire, halfing.~ EXTERN TB#STIVB StivanDislikesAerie1-5
+IF ~~ THEN REPLY ~Tu vuoi proprio morire, halfling.~ EXTERN TB#STIVB StivanDislikesAerie1-5
 IF ~~ THEN REPLY ~Ti lascio in vita soltanto perché apprezzo le tue frasi proverbiali.~ EXTERN TB#STIVB StivanDislikesAerie1-5
 IF ~~ THEN REPLY ~(Sigh) E’ peggio di un poppante.~ EXTERN TB#STIVB StivanDislikesAerie1-5
 END
@@ -1236,7 +1236,7 @@ Global("tb#StivanImoen","GLOBAL",0)~ THEN TB#STIVB stivanimoen1
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",1)~
 == BIMOEN2 ~Sospettavo che il Signore dell’Omicidio non fosse il solo ad aver sparso il suo seme qua e là. A quanto pare va di moda tra gli dei fecondare ogni donna che capita a tiro.~
 == TB#STIVB ~Heh. La mia mammina è stata fortunata ad incontrare il grande Brandobaris.~
-== BIMOEN2 ~Brandobaris? Il dio della furtività e dei ladri halfing?~
+== BIMOEN2 ~Brandobaris? Il dio della furtività e dei ladri halfling?~
 == TB#STIVB ~Esatto. E’ stato lui ad affidare a Stivan il gravoso compito di sterminare i gabbiani di tutta Faerun. Inoltre il mio retaggio fa di me il miglior ladro di questo gruppo, pertanto... fatti da parte!~
 == BIMOEN2 ~Aspetta, ma... Non hai iniziato a dar loro la caccia soltanto dopo la morte dei tuoi familiari?~
 == TB#STIVB ~Accidenti. La ragazzina è più sveglia di quanto pensassi... ~
@@ -1322,7 +1322,7 @@ DO ~SetGlobal("tb#StivanMinsc","GLOBAL",1)~
 == BMINSC ~E invece sì! Boo canta sempre qualcosa quando è di buon umore, come il trionfo della giustizia sulle meschinità del male, le vittorie di noi paladini del bene sui marrani o i brindisi a cui ci abbandoniamo nel nome della bontà! Celebra anche le volte in cui gli cambio i trucioli, ogni tanto.~
 == TB#STIVB ~Voi ranger avete una fervida immaginazione.~
 == BMINSC ~Ma è vero! Boo, il nostro amico Stivan mette in dubbio le tue abilità canore!~
-= ~Cosa dici, Boo? Vuoi dimostrargli che sei uno dei migliori bardi criceto di Rasheman? Vuoi dargli prova delle tue capacità? Benissimo! Preparati, halfing: stai per assistere all'esibizione del mio criceto!!~
+= ~Cosa dici, Boo? Vuoi dimostrargli che sei uno dei migliori bardi criceto di Rasheman? Vuoi dargli prova delle tue capacità? Benissimo! Preparati, halfling: stai per assistere all'esibizione del mio criceto!!~
 = ~*Squeak*!~
 = ~Sentito?!~
 == TB#STIVB ~...~
@@ -1336,7 +1336,7 @@ CombatCounter(0)
 Global("tb#StivanMinsc","GLOBAL",1)~ THEN TB#STIVB stivanminsc2
 ~Boo, saresti così gentile da non urlare come uno scalmanato in battaglia? I miei timpani rischiano di essere sfondati dai tuoi schiamazzi!~
 DO ~SetGlobal("tb#StivanMinsc","GLOBAL",2)~
-== BMINSC ~Haha! Hai sentito, Boo? Il tuo fiato è così potente da stordire il nostro amico halfing! Continua così!~
+== BMINSC ~Haha! Hai sentito, Boo? Il tuo fiato è così potente da stordire il nostro amico halfling! Continua così!~
 == TB#STIVB ~... Mi stavo rivolgendo a te, ranger. Benchè abbia confuso i vostri nomi, mi sembra ovvio che tra voi due sia tu a far tremare il suolo con i tuoi ruggiti.~
 == BMINSC ~Ma Minsc non può restare muto come un pesce! Deve riempire i polmoni d'aria per abbattere i nemici con i suoi tonanti ruggiti! In guardia, male: Minsc sta per dar fiato alle sue trombe vocali!!~
 == TB#STIVB ~Volevi dire *corde* vocali.~
