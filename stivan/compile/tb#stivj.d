@@ -991,7 +991,7 @@ INTERJECT_COPY_TRANS MESSEN 15 tb#StivanMessen-15
 ~E' senz'altro opera degli adoratori di alberi! E se... E se fossero loro i responsabili di ciò che è successo alla mia famiglia anni fa? Dobbiamo indagare, <CHARNAME>!~
 END
 
-INTERJECT_COPY_TRANS MESSEN 10 tb#StivanMessen-10
+INTERJECT_COPY_TRANS2 MESSEN 10 tb#StivanMessen-10
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Conosco Trademeet - ci sono stato diverse volte con la mia famiglia. Se siamo fortunati, potremmo incontrare qualche mercante con cui eravamo soliti commerciare. Sono sicuro che farebbero il possibile per aiutarci a trovare quei puzzoni di druidi!~
 END
