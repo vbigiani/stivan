@@ -35,6 +35,7 @@ IF ~Global("EdwinJob","GLOBAL",3)~ THEN REPLY ~Vorrei impossessarmi dei document
 IF ~Global("SpawnBarg","GLOBAL",1) Global("RoenalConvict","GLOBAL",0)~ THEN REPLY ~Per liberare Nalia dobbiamo raccogliere una quantità di prove sufficienti ad incastrare Isaea. Te la senti di introdurti all’interno della sua residenza e di cercare qualcosa di compromettente?~ GOTO PD14
 IF ~~ THEN REPLY ~Ho bisogno di accertarmi che tu non sia un dopplegenger. Qual è la cosa che Stivan odia di più al mondo?~ GOTO PD15
 IF ~Global("tb#EdwinComplainsOfStivan","GLOBAL",1)~ THEN REPLY ~Stivan, Edwin sostiene che tu sia inquieto di notte.~ DO ~SetGlobal("tb#EdwinComplainsOfStivan","GLOBAL",2)~ GOTO PD16
+IF ~Global("crothfCreate","GLOBAL",1) !Global("TakenBlame","GLOBAL",1)~ THEN REPLY ~Hai mai sentito parlare di Aulava e Tiiro?~ GOTO PD18-1
 IF ~~ THEN REPLY ~E’ tutto a posto. Proseguiamo.~ EXIT
 IF ~~ THEN REPLY ~Stivan, la tua voce sembra il garrito di un gabbiano.~ GOTO PD17
 END
@@ -301,7 +302,7 @@ IF ~~ THEN REPLY ~(Indichi i Moli).~ GOTO PD4-8
 END
 
 IF ~~ THEN BEGIN PD4-2
-SAY ~La Passeggiata di Waukeen è il più importante centro di scambi commerciali in tutta Amn. E' anche il posto in cui mia mamma vendeva il nostro vino ai mercanti locali o di passaggio, mentre io ero in viaggio con il resto della famiglia.~~
+SAY ~La Passeggiata di Waukeen è il più importante centro di scambi commerciali in tutta Amn. E' anche il posto in cui mia mamma vendeva il nostro vino ai mercanti locali o di passaggio, mentre io ero in viaggio con il resto della famiglia.~
 = ~Ma immagino che a te non interessino cibo e vettovaglie, bensì rifornimenti o equipaggiamento. C'è un negozio, l'Emporio dell'Avventuriero, che potrebbe fare al caso tuo. Il proprietario è uno sbruffone che a papino non è mai piaciuto, e neanche a me. Le alternative sono ben poche, <CHARNAME>: quel tizio ormai ha eliminato la concorrenza.~
 IF ~~ THEN EXIT
 END
@@ -430,6 +431,28 @@ SAY ~Oh, no!~
 IF ~~ THEN DO ~StartCutScene("tb#sfix")~ EXIT
 END
 
+IF ~~ THEN PD18-1
+SAY ~Oh, sì. Due tipi veramente simpatici. Il mese scorso hanno rubato un carro di provviste ad un mercante giunto da Scornubel, e in seguito le hanno distribuite ai poveracci nel Quartiere del Ponte, me incluso. Poi la ragazza ha dato fuoco al carro - pare che abbia un certo gusto per gli incendi.~
+IF ~Global("BonnieClyde","GLOBAL",2)~ THEN REPLY ~Fantastico. Adesso appiccheranno fuoco ad ogni dove dicendo che sono stato io ad ispirarli. Non potevi avvisarmi prima?~ GOTO PD18-2
+IF ~Global("BonnieClyde","GLOBAL",4)~ THEN REPLY ~E' un bene che abbia detto loro di farla finita. Se avessero continuato a frequentarsi, Athkatla sarebbe già un cumulo di cenere.~ GOTO PD18-3
+IF ~~ THEN REPLY ~Non invidio i loro genitori. Dev'essere tremendo avere come figli delle simili pesti.~ GOTO PD18-3
+IF ~~ THEN REPLY ~La gente dovrebbe seguire il loro esempio. Ognuno dev'essere libero di fare ciò che crede sia meglio per sè. Non capisco perchè le loro famiglie non li lascino stare.~ GOTO PD18-4
+END
+
+IF ~~ THEN PD18-2
+SAY ~Non me l'hai chiesto!~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN PD18-3
+SAY ~Heh. I miei non hanno mai avuto problemi con me e i miei fratelli. Siamo sempre stati bravi ed ubbidienti. Beh, forse qualche volta abbiamo commesso delle bravate, ma giuro che non erano intenzionali, tant'è che mamma si limitava a tirarci uno o due ceffoni di entità moderata.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN PD18-4
+SAY ~Heh. I grandi spiriti hanno sempre incontrato violenta opposizione da parte delle menti mediocri.~
+IF ~~ THEN EXIT
+END
 END
 
 CHAIN

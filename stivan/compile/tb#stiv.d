@@ -94,7 +94,7 @@ IF ~~ THEN BEGIN StivanFirstMeet1-10
 SAY ~Dovremmo chiedere a qualche impiegato nel Palazzo di Giustizia. E' lì che si occupano di queste cose. Posso contare sul tuo aiuto?~
 IF ~~ THEN REPLY ~Direi di sì. Al Quartiere Governativo, allora.~ UNSOLVED_JOURNAL %Alla ricerca di una tomba.
 
-Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.% GOTO StivanFirstMeet1-12
+Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.% DO ~SetGlobal("tb#StivanJoined","GLOBAL",1) SetGlobal("tb#stivanEntryTest","GLOBAL",1) SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) JoinParty()~ EXTERN tb#stiv StivanFirstMeet1-12
 
 IF ~~ THEN REPLY ~Per il momento no. Magari in futuro.~ EXIT
 END
@@ -113,9 +113,9 @@ IF ~~ THEN REPLY ~Scusa, ma... Perchè ce l'hai tanto con quei poveri uccelli?~ G
 IF ~~ THEN REPLY ~Piume? No, grazie. Magari un'altra volta.~ EXIT
 END
 
-CHAIN IF ~~ THEN tb#stiv StivanFirstMeet1-12
+CHAIN IF ~~ THEN TB#STIV StivanFirstMeet1-12
 ~Yeah! Andiamo, allora! Ci sono centinaia di gabbiani da spennare a dovere!~ 
-DO ~SetGlobal("tb#StivanJoined","GLOBAL",1) SetGlobal("tb#stivanEntryTest","GLOBAL",1) SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) JoinParty()~
+
 == TB#STIVJ IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Ehi, tu! Vieni ed unisciti a Stivan nella sua sacra crociata contro i malvagi gabbiani! Dobbiamo distruggerli TUTTI!~
 == MINSCJ IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Magari mi unirò alla tua caccia un'altra volta: devi sapere che Boo si sente a disagio con gli uccelli marini. E' meglio che gli risparmi una tortura del genere. Sì, è meglio per tutti!~
 == TB#STIVJ IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Vigliacco! Hai tremato di fronte al nemico pennuto! Non avrai una seconda possibilità!~
@@ -129,10 +129,10 @@ DO ~SetGlobal("tb#StivanJoined","GLOBAL",1) SetGlobal("tb#stivanEntryTest","GLOB
 == TB#STIVJ IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~N… Nalia? Siete forse… *Miss* Nalia De’Arnise?~
 == NALIAJ IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Non c’è bisogno di essere così formali tra compagni d’avventura. Chiamami Nalia. E’ più che sufficiente.~
 == TB#STIVJ IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Incredibile! Viaggerò con una nobile! E che nobile! WOW! Sarà un onore essere il vostro umile sguattero!~
-== NALIAJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~(Arrossisce) Non dire schiocchezze, Stivan. Mi metti in imbarazzo…~
+== NALIAJ IF ~IsValidForPartyDialog("nalia") !StateCheck("nalia",CD_STATE_NOTVALID)~ THEN ~(Arrossisce) Non dire schiocchezze, Stivan. Mi metti in imbarazzo…~
 == EDWINJ IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Grandioso. La cerchia dei tuoi alleati, ad eccezione del sottoscritto, era già ampliamente discutibile. Adesso è diventata improponibile.~
 == HAERDAJ IF ~IsValidForPartyDialog("Haerdalis") !StateCheck("Haerdalis",CD_STATE_NOTVALID)~ THEN ~Ah! Complimenti per la scelta, mio corvo. Chi vive senza follia non è così savio come crede, e questo piccolo ladruncolo par esserne la prova vivente!~ 
-== YOSHJ IF ~IsValidForPartyDialog("Stivan") !StateCheck("Stivan",CD_STATE_NOTVALID)~ THEN ~Ho già visto questo tipetto, <CHARNAME>. I suoi schiamazzi non passavano di certo inosservati. Addio, quiete…~
+== YOSHJ IF ~IsValidForPartyDialog("Yoshimo") !StateCheck("yoshimo",CD_STATE_NOTVALID)~ THEN ~Ho già visto questo tipetto, <CHARNAME>. I suoi schiamazzi non passavano di certo inosservati. Addio, quiete…~
 == VICONJ IF ~IsValidForPartyDialog("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN ~Posso sapere perché hai raccolto quella pulce dalla strada? E’ forse un modo con cui speri di risolvere qualche tuo insano problema di coscienza?~
 == VALYGARJ IF ~IsValidForPartyDialog("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Non credi che siamo già in troppi? Non vorrei che il nostro numero attirasse l’attenzione degli Incappucciati.~
 == CERNDJ IF ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Attendevo il momento in cui ci saremmo incontrati. Uccelli marini garriscono da tempo il tuo nome, riferendomi atti di estrema crudeltà nei loro confronti. Sarà mio compito educarti al rispetto delle creature di Madre Natura.~ 

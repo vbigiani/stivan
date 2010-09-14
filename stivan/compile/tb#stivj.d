@@ -1481,6 +1481,35 @@ COPY_TRANS ANOMENJ 135
 END
 END
 
+INTERJECT_COPY_TRANS KALAH2 7 tb#StivanKalah2-7
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
+~Non è giusto. Se la gente piccola fosse trattata con più rispetto e meno sufficienza,questo gnomo non avrebbe mai fatto una cosa simile.~
+END
+
+INTERJECT_COPY_TRANS VVAMN1 4 tb#StivanVvamn1-4
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
+~Tsk. Le guardie non fanno nulla se non prendersela con gli innocenti. Non avete idea di quante volte mi abbiano rincorso per la città senza motivo.~
+BRANCH ~IsValidForPartyDialog("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ BEGIN
+== YOSHJ ~Ho il vago ricordo di averti visto inseguito da un gruppo di guardie per aver lanciato loro in faccia del guano. Mi sbaglio?~
+== TB#STIVJ ~(Arrossisce) Beh, ecco... Forse quella volta sono stato io ad istigarle...~
+== YOSHJ ~Quella volta, eh?~
+END
+END
+
+INTERJECT_COPY_TRANS HENDAK 9 tb#StivanHendak-9
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
+~Quest'uomo è addirittura più sporco di me. Se lo liberassimo, potrebbe farsi un bel bagno. Insomma... Almeno una volta ogni sei mesi bisogna lavarsi.~
+END
+
+INTERJECT_COPY_TRANS HENDAK 19 tb#StivanHendak-19
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
+~Se quella nave è sempre stata la base degli schiavisti sin dal loro arrivo in città, allora... Allora sono qui da prima che nascessi!~
+END
+
+INTERJECT_COPY_TRANS sewerm1 23 tb#StivanSewerm1-23
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
+~Speriamo che almeno qualcuno dei suoi familiari sia ancora in vita. Sarebbe triste se rimanesse del tutto solo.~
+END
 
 
 ///////////////////////////////////////////
