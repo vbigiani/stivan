@@ -48,7 +48,8 @@ SAY ~Ooooh! Viaggiare con una banda di avventurieri! Fare loro da guida! Difende
 IF ~~ THEN REPLY ~<CHARNAME>. <CHARNAME> di Candlekeep.~ GOTO StivanFirstMeet1-6
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Non mi conosci? Io sono <CHARNAME>, l'eroe di Baldur's Gate.~ GOTO StivanFirstMeet1-6
 IF ~Gender(Player1,FEMALE)~ THEN REPLY ~Non mi conosci? Io sono <CHARNAME>, l'eroina di Baldur's Gate.~ GOTO StivanFirstMeet1-6
-IF ~~ THEN REPLY ~Hai davanti a te <CHARNAME>, il miglior <CLASS> di tutta Faerun.~ GOTO StivanFirstMeet1-6
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Hai davanti a te <CHARNAME>, il miglior avventuriero di tutta Faerun.~ GOTO StivanFirstMeet1-6
+IF ~Gender(Player1,FEMALE)~ THEN REPLY ~Hai davanti a te <CHARNAME>, la miglior avventuriera di tutta Faerun.~ GOTO StivanFirstMeet1-6
 END
 
 IF ~~ THEN BEGIN StivanFirstMeet1-6
