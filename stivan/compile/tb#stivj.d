@@ -1515,6 +1515,20 @@ INTERJECT_COPY_TRANS CIVFRUS1 1 tb#StivanCivfrus1-1
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Anche papà ebbe il tuo stesso problema. Non ricordo con chi parlò, ma alla fine riuscì a spuntarla.~
 END
 
+INTERJECT_COPY_TRANS EDWIN 30 tb#StivanEdwin-30
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Mia mamma diceva sempre di non fidarsi degli Stregoni Rossi. Pare che siano noti in tutti i Reami per il loro... *Ahem*... opportunismo.~
+== EDWIN ~Dove hai trovato questo scarto umano, <CHARNAME>? In una pila di rifiuti?~
+== TB#STIVJ ~Non è vero! Non stavo rovistando nella spazzatura quando <PRO_HIMHER> ed io ci siamo incontrati!~
+== EDWIN ~(L'halfling si è appena aggiudicato il primo posto nella lista dei seccatori da eliminare).~
+END
+
+INTERJECT_COPY_TRANS EDWIN 31 tb#StivanEdwin-31
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Mia mamma diceva sempre di non fidarsi degli Stregoni Rossi. Pare che siano noti in tutti i Reami per il loro... *Ahem*... opportunismo.~
+== EDWIN ~Dove hai trovato questo scarto umano, <CHARNAME>? In una pila di rifiuti?~
+== TB#STIVJ ~Non è vero! Non stavo rovistando nella spazzatura quando <PRO_HIMHER> ed io ci siamo incontrati!~
+== EDWIN ~(L'halfling si è appena aggiudicato il primo posto nella lista dei seccatori da eliminare).~
+END
+
 
 
 
