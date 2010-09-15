@@ -1481,10 +1481,10 @@ COPY_TRANS ANOMENJ 135
 END
 END
 
-INTERJECT_COPY_TRANS2 KALAH2 7 tb#StivanKalah2-7
+/* INTERJECT_COPY_TRANS2 KALAH2 7 tb#StivanKalah2-7
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~Non è giusto. Se la gente piccola fosse trattata con più rispetto e meno sufficienza, questo gnomo non avrebbe mai fatto una cosa simile.~
-END
+END */
 
 INTERJECT_COPY_TRANS2 VVAMN1 4 tb#StivanVvamn1-4
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
