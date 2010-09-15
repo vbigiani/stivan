@@ -1486,7 +1486,7 @@ INTERJECT_COPY_TRANS2 KALAH2 7 tb#StivanKalah2-7
 ~Non è giusto. Se la gente piccola fosse trattata con più rispetto e meno sufficienza, questo gnomo non avrebbe mai fatto una cosa simile.~
 END
 
-INTERJECT_COPY_TRANS VVAMN1 4 tb#StivanVvamn1-4
+INTERJECT_COPY_TRANS2 VVAMN1 4 tb#StivanVvamn1-4
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~Tsk. Le guardie non fanno nulla se non prendersela con gli innocenti. Non avete idea di quante volte mi abbiano rincorso per la città senza motivo.~
 BRANCH ~IsValidForPartyDialog("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ BEGIN
