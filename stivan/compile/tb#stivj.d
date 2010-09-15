@@ -1240,7 +1240,7 @@ INTERJECT_COPY_TRANS SAERK 4 tb#StivanSaerk-4
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non sei cambiato per nulla, mostro! Sei sempre lo stesso essere spregevole che gode nell'annichilire gli altri, proprio come hai fatto con me!~
 == SAERK ~Ancora con quella storia? Le terre di tuo padre erano troppo redditizie per lasciarle in mano ad un incompetente come te!~
 == TB#STIVJ ~(Urla) Idiota! Io stesso ti avevo detto di non esserne in grado! E' per questo che mi ero rivolto a te!~
-== SAERK ~Non importa. Non puoi *nulla* contro di me. e neanche tu, Anomen.~
+== SAERK ~Non importa. Non puoi *nulla* contro di me. E neanche tu, Anomen.~
 END
 
 INTERJECT trgyp02 2 tb#StivanTrgyp02-2
@@ -1274,15 +1274,15 @@ INTERJECT_COPY_TRANS KHELLOR 6 tb#StivanKhellor-8
 END
 
 INTERJECT_COPY_TRANS BODHIAMB 15 tb#StivanBodhiamb-15
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Viconia!  <CHARNAME>, inseguiamola!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Viconia! <CHARNAME>, inseguiamola!~
 END
 
 INTERJECT_COPY_TRANS BODHIAMB 13 tb#StivanBodhiamb-13
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Jaheira!  <CHARNAME>, inseguiamola!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Jaheira! <CHARNAME>, inseguiamola!~
 END
 
 INTERJECT_COPY_TRANS BODHIAMB 19 tb#StivanBodhiamb-19
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Anomen!  <CHARNAME>, inseguiamola!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Anomen! <CHARNAME>, inseguiamola!~
 END
 
 INTERJECT_COPY_TRANS BODHIAMB 17 tb#StivanBodhiamb-17
@@ -1483,7 +1483,7 @@ END
 
 INTERJECT_COPY_TRANS KALAH2 7 tb#StivanKalah2-7
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
-~Non è giusto. Se la gente piccola fosse trattata con più rispetto e meno sufficienza,questo gnomo non avrebbe mai fatto una cosa simile.~
+~Non è giusto. Se la gente piccola fosse trattata con più rispetto e meno sufficienza, questo gnomo non avrebbe mai fatto una cosa simile.~
 END
 
 INTERJECT_COPY_TRANS VVAMN1 4 tb#StivanVvamn1-4
@@ -2212,7 +2212,7 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",4)~
 = ~*Ahem* Sei un maschio... Oppure una femmina?~
 == CERNDJ ~E' un maschio. E' in attesa che le uova della sua compagna si schiudano.~
 = ~Avanti, guardalo più da vicino.~
-== TB#STIVJ ~Stai scherzando? Mi staccherà il naso!~
+== TB#STIVJ ~Stai scherzando? Mi perforerà la faccia!~
 == CERNDJ ~Non lo farà, Stivan. Non ha motivo di esserti ostile.~
 == TB#STIVJ ~...~
 = ~Heh. Tutto sommato... Ha una faccia simpatica.~

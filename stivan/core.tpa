@@ -290,14 +290,18 @@ COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
 	SAY NAME1 ~Cacca di gabbiano~
 	SAY NAME2 ~Cacca di gabbiano~
 	SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
+	
 STATISTICHE:
+
 Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
 Lancia "Miscela esplosiva" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
 
 Utilizzabile Da:
 Stivan~
 	SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
+
 STATISTICHE:
+
 Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
 Lancia "Miscela esplosiva" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
 
