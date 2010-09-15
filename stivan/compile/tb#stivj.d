@@ -577,7 +577,7 @@ IF ~~ THEN REPLY ~Come tu stesso puoi vedere, questi elfi sono tutto fuorchè col
 
 APPEND TB#STIVJ
 IF ~~ ViconiaGeas1-1
-SAY ~Non... Non sei tenuto a spiegarmi le tue ragioni? Bene! Benissimo! Quando mi metterai un cappio intorno alla gola mi sforzerò di non chiederti il perchè!~
+SAY ~Non... Non sei tenuto a spiegarmi le tue ragioni? Bene! Benissimo! Quando mi metterai un cappio intorno al collo mi sforzerò di non chiederti il perchè!~
 COPY_TRANS C6ELHAN2 63
 END
 
@@ -1121,16 +1121,16 @@ INTERJECT_COPY_TRANS HAERDA 103 tb#StivanHaerda-103
 END
 
 INTERJECT_COPY_TRANS AERIE 26 tb#StivanAerie-26
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Sniff sniff) A meno che il mio olfatto non mi stia tradendo, quell’orco puzza di pennuto. Stà attento, <CHARNAME>: potrebbe trattarsi di un gabbiano travestito!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Sniff sniff) A meno che il mio olfatto non mi stia tradendo, quell’orco puzza di pennuto. So che sembra assurdo, ma il mio naso non si sbaglia mai!~
 END
 
 INTERJECT_COPY_TRANS AERIE 52 tb#StivanAerie-52
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Bada a non camminare troppo vicino a me. Benchè tu non abbia più le tue ali, rimani pur sempre un’ex-pennuta.~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Cerca di non camminare troppo vicino a me. Benchè tu non abbia più le tue ali, rimani pur sempre un’ex-pennuta, e il tuo odore...~
 = ~Ehi! Cosa stai facendo?!~
 == AERIE ~Mi-mi prendo cura di questo povero gabbiano. Guarda com’è ridotto! Ha bisogno di cure!~
 == TB#STIVJ ~(Urla) Come osi liberare quello schifido uccello dalla giusta prigionia che merita? Ridammelo *subito*!~
-== AERIE ~Eeekk!~
-END
+== AERIE ~Io... Farò il possibile perchè si riprenda e torni a volare nel cielo azzurro con i suoi simili. Prima però dobbiamo salvare Quayle!~
+END	
 
 INTERJECT_COPY_TRANS AERIE 17 tb#StivanAerie-17
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non puoi fare una cosa simile, <CHARNAME>! Se la liberatrice di pennuti verrà con noi, i gabbiani sfuggiranno alle mie sevizie e allo spennamento che meritano!~
@@ -2435,7 +2435,7 @@ EXTERN TB#STIVJ StivanSamuel1-3
 
 CHAIN 
 IF ~~ THEN FFBART StivanSamuel1-2
-~Se aspetti un attimo dovrei riuscire a recuperare gli stivali che indossavo ai tempi in cui erravo lungo la Costa della Spada. Dunque, dove li ho messi...? Ah, eccoli qui. Tieni. Serviranno più a te che a me.~
+~Se le cose stanno così, lasciami recuperare gli stivali che indossavo quando erravo lungo la Costa della Spada. Serviranno più a te che a me. Dunque, dove li ho messi...? Ah, eccoli qui. Tieni. Spero che ti vadano bene.~
 DO ~GiveItemCreate("BOOT02",Player1,0,0,0)~
 == TB#STIVJ ~Wow! Grazie, Samuel. Sei veramente gentile.~
 = ~Ehi, mi calzano alla perfezione!~
@@ -2518,7 +2518,7 @@ EXTERN FFWENCH StivanSamuel1-13
 
 CHAIN
 IF ~~ THEN FFWENCH StivanSamuel1-13
-~Samuel, vuoi darti una mossa o no?! Per quale motivo te ne stai lì a chiacchierare quando io mi ammazzo di lavoro tra un tavolo el l'altro?~
+~Samuel, vuoi darti una mossa o no?! Per quale motivo te ne stai lì a chiacchierare quando io mi ammazzo di lavoro tra un tavolo e l'altro?~
 == FFBART ~Ehm... Il dovere mi chiama, amici. Adesso devo proprio lasciarvi, ma tornate a trovarmi presto!~
 == TB#STIVJ ~Puoi contarci, Samuel! Grazie di tutto e stammi bene!~
 = ~...~

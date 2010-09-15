@@ -42,7 +42,7 @@ Un messaggero ci ha informato che i documenti per l’acquisizione della cripta so
 END
 
 IF ~~ THEN BEGIN DocumentsAreReady1-6
-SAY ~(Snort!) Stivan il Cacciatore è più che sufficiente per abbattere quella sgualdrina! Ad ogni modo, se proprio vuoi cercare qualcuno che ci aiuti, cerca di fare in fretta.~
+SAY ~(Snort!) Stivan il Cacciatore è più che sufficiente per abbattere quella bruttona! Ad ogni modo, se proprio vuoi cercare qualcuno che ci aiuti, cerca di fare in fretta.~
 IF ~~ THEN DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",4) ActionOverride("tb#smess",DestroySelf())~
 UNSOLVED_JOURNAL %Alla ricerca di una tomba.
  
