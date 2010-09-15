@@ -2,7 +2,7 @@ IF
 	InParty("tb#stiv")
 	InParty(Myself)
 	HasItemEquiped("SW2H14",Myself)
-	Global("tb#StivanMinscLarry","GLOBAL",0)
+	Global("tb#StivanLarry","GLOBAL",0)
 THEN
 	RESPONSE #100
 		SetGlobal("tb#StivanLarry","GLOBAL",1)

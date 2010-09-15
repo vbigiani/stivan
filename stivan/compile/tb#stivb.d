@@ -803,9 +803,9 @@ END
 EXIT
 
 CHAIN
-IF ~InParty("tb#stiv")
-See("tb#stiv")
-!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+IF ~InParty("jan")
+See("jan")
+!StateCheck("jan",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanJan","GLOBAL",0)~ THEN TB#STIVB StivanJan1
 ~Sai, Jan, penso che con la tua parlantina potresti essere un ottimo bardo.~

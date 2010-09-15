@@ -1398,7 +1398,7 @@ INTERJECT_COPY_TRANS GAELAN 66 tb#StivanGaelan-66
 ~Ti consiglio di concludere i tuoi affari con questo Linvail il più presto possibile, <CHARNAME>. I Signori delle Ombre cambiano di continuo ad Athkatla, e non vorrei che qualcuno prendesse il suo posto prima che tu abbia raggiunto il tuo obiettivo.~
 END
 
-INTERJECT_COPY_TRANS FIRKRA01 9 tb#StivanFirkra01-9
+INTERJECT_COPY_TRANS2 FIRKRA01 9 tb#StivanFirkra01-9
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Una volta sono passato per queste colline, <CHARNAME>, ma non sono altro che una distesa brulla e deserta, se ricordo bene. Mi chiedo cosa ci facciano dei predatori in una zona simile.~
 END
