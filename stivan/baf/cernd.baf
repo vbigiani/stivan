@@ -22,8 +22,12 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanCernd","GLOBAL",2)
 	GlobalGT("Chapter","GLOBAL",2)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("tb#stiv")
 END
 
