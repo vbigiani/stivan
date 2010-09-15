@@ -28,6 +28,6 @@ EXIT
 @259  = ~E' una richiesta da brividi, mortale, ma è stata eseguita! Adesso ti devo lasciare.~
 INTERJECT_COPY_TRANS 
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#Stiv") !StateCheck("tb#Stiv",CD_STATE_NOTVALID)~ THEN 
-~Cosa?! Hai inflitto una simile tormento a quel povero gnomo?~
-= ~Tu... Tu sei un mostro, <CHARNAME>! Preferisco tornare a vendere piume piuttosto che viaggiare con un essere malvagio come te!~
+~
+Cosa?! Hai inflitto un simile tormento a quel povero gnomo? Tu... Tu sei un mostro, <CHARNAME>!~
 EXIT

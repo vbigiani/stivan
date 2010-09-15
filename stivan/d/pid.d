@@ -14,10 +14,10 @@ END
 
 IF ~IsGabber(Player1)~ THEN BEGIN PID1
 SAY ~Stivan il Cacciatore ti ascolta, <CHARNAME>!~
-IF ~HPPercentGT("Stivan",74)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-1
-IF ~HPPercentLT("Stivan",75) HPPercentGT("Stivan",49)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-2
-IF ~HPPercentLT("Stivan",50) HPPercentGT("Stivan",24)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-3
-IF ~HPPercentLT("Stivan",25)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-4
+IF ~HPPercentGT("tb#stiv",74)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-1
+IF ~HPPercentLT("tb#stiv",75) HPPercentGT("tb#stiv",49)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-2
+IF ~HPPercentLT("tb#stiv",50) HPPercentGT("tb#stiv",24)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-3
+IF ~HPPercentLT("tb#stiv",25)~ THEN REPLY ~Tutto bene, amico?~ GOTO PD1-4
 IF ~Race(Player1,HALFLING)~ THEN REPLY ~E’ un piacere viaggiare in compagnia di un altro halfling.~ GOTO PD2-2
 IF ~!Race(Player1,HALFLING)~ THEN REPLY ~E’ un piacere viaggiare in tua compagnia.~ GOTO PD2-2
 IF ~~ THEN REPLY ~Parliamo dei nostri compagni di viaggio. Cosa ne pensi di...~ GOTO PD3-1
@@ -87,8 +87,8 @@ IF ~InParty("Viconia") Global("ViconiaRomanceActive","GLOBAL",2)~ THEN REPLY ~Vi
 IF ~InParty("Anomen") Global("AnomenIsKnight","GLOBAL",0) Global("AnomenIsNotKnight","GLOBAL",0)~ THEN REPLY ~Anomen?~ GOTO PD3-18
 IF ~InParty("Anomen") Global("AnomenIsNotKnight","GLOBAL",1)~ THEN REPLY ~Anomen?~ GOTO PD3-19
 IF ~InParty("Anomen") Global("AnomenIsKnight","GLOBAL",1)~ THEN REPLY ~Anomen?~ GOTO PD3-20
-IF ~InParty("Nalia")~ THEN REPLY ~Nalia?~ GOTO PD3-21
-IF ~InParty("Nalia")~ THEN REPLY ~Nalia?~ GOTO PD3-22
+IF ~InParty("Nalia") !Dead("TorGal")~ THEN REPLY ~Nalia?~ GOTO PD3-21
+IF ~InParty("Nalia")  Dead("TorGal")~ THEN REPLY ~Nalia?~ GOTO PD3-22
 IF ~InParty("Mazzy")~ THEN REPLY ~Mazzy?~ GOTO PD3-23
 IF ~InParty("Korgan")~ THEN REPLY ~Korgan?~ GOTO PD3-24
 IF ~InParty("Imoen2")~ THEN REPLY ~Imoen?~ GOTO PD3-26
