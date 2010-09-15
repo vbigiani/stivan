@@ -2188,7 +2188,7 @@ See("tb#stiv")
 !StateCheck("tb#stiv",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanCernd","GLOBAL",2)
-GlobalGT("Chapter","GLOBAL",2)~ THEN CERND stivancernd3
+GlobalGT("Chapter","GLOBAL",2)~ THEN CERNDJ stivancernd3
 ~Il dubbio è dipinto sul tuo volto, Stivan.~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",3)~
 == TB#STIVJ ~Immagino di dover ringraziare te per questo.~

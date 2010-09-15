@@ -16,9 +16,9 @@ THEN
 END
 
 IF
-	InParty("Stivan")
-	See("Stivan")
-	!StateCheck("Stivan",CD_STATE_NOTVALID)
+	InParty("tb#stiv")
+	See("tb#stiv")
+	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	CombatCounter(0)
 	Global("tb#StivanCernd","GLOBAL",2)
 	GlobalGT("Chapter","GLOBAL",2)
