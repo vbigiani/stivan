@@ -2169,7 +2169,7 @@ Global("tb#StivanCernd","GLOBAL",1)~ THEN TB#STIVJ stivancernd2
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",2)~
 == CERNDJ ~Ti sbagli. Non posso permettere che la mia vita personale intralci i miei doveri di druido. Il nostro cammino comincia adesso.~
 == TB#STIVJ ~Oh, no!~
-== CERND ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
+== CERNDJ ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
 == TB#STIVJ ~(Snort!) Stai abusando della mia pazienza, tu! Chi diavolo credi di essere per esigere che ti racconti la storia dell'uccisione dei miei familiari?~
 == CERNDJ ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti del destino spingano le tue vele verso il mare della conoscenza.~
 == TB#STIVJ ~Ora capisco dove vuoi arrivare. Tu... Tu Stai mettendo in discussione la colpevolezza dei gabbiani!~
