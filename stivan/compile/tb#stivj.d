@@ -687,20 +687,20 @@ INTERJECT_COPY_TRANS ANOMEN 21 tb#StivanAnomen-21
 ~*Ahem* Non nutro grande simpatia per i chierici, sopratutto per quelli devoti come questo qui. Dubito che andremo d'accordo...~
 END
 
-INTERJECT_COPY_TRANS ANOMENJ 22 tb#StivanANOMENJ-22
+INTERJECT_COPY_TRANS BANOMEN 22 tb#StivanBANOMEN-22
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN 
 ~Non farmi ridere, Anomen. Non hai mai visto un solo gigante in vita tua, figuriamoci venti.~
-== ANOMENJ ~Ti consiglio di tenere a freno la tua lingua, piccoletto, prima che ti faccia ingoiare uno di quei volatili per cui tanto impazzisci.~
+== BANOMEN ~Ti consiglio di tenere a freno la tua lingua, piccoletto, prima che ti faccia ingoiare uno di quei volatili per cui tanto impazzisci.~
 END
 
-INTERJECT_COPY_TRANS ANOMENJ 224 tb#StivanAnomenj-224
+INTERJECT_COPY_TRANS BANOMEN 224 tb#StivanBANOMEN-224
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN
 ~Forse se ti seppellissimo vivo cambieresti idea. Vogliamo provare?~
-== ANOMENJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+== BANOMEN IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Tra poco ti seppellirà la mia mazza, halfling.~
 END
 
-INTERJECT_COPY_TRANS ANOMENJ 60 tb#StivanAnomen-60
+INTERJECT_COPY_TRANS BANOMEN 60 tb#StivanBANOMEN-60
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~"Gente di basso rango"? Come osi, brutto--~
 == BMAZZY ~Stivan, non intrometterti. Lascia che sia io a rispondergli.~
