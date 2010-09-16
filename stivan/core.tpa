@@ -24,19 +24,6 @@ COPY_EXISTING ~%script%.bcs~ ~override/tb#sdr1.bcs~
 		~%script%.bcs~ ~override/tb#sdr3.bcs~
 
 
-			  
-// compile BAFs and Ds			  
-
-APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
-
-COMPILE ~stivan/compile~
-COMPILE ~stivan/d/pid.d~ // must be last
-
-ACTION_BASH_FOR ~stivan/baf~ ~^.*\.baf~ BEGIN
-	EXTEND_TOP ~%BASH_FOR_RES%.bcs~ ~%BASH_FOR_FILESPEC%~
-END
-
-
 
 // copy static resources
 
@@ -363,6 +350,19 @@ APPEND ~interdia.2da~
 ~tb#stiv    tb#stivb       tb#st25b~
 UNLESS ~tb#stiv~
 IF     ~25FILE~
+
+
+			  
+// compile BAFs and Ds			  
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~ UNLESS ~CD_STATE_NOTVALID~
+
+COMPILE ~stivan/compile~
+COMPILE ~stivan/d/pid.d~ // must be last
+
+ACTION_BASH_FOR ~stivan/baf~ ~^.*\.baf~ BEGIN
+	EXTEND_TOP ~%BASH_FOR_RES%.bcs~ ~%BASH_FOR_FILESPEC%~
+END
 
 
 // Install ToB resources

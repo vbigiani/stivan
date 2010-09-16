@@ -1,11 +1,13 @@
 BACKUP ~stivan/backup~
 AUTHOR ~Valerio Bigiani (The Bigg) and Giuseppe - thebigg@spellholdstudios.net~
 
-AUTO_TRA ~stivan/tra/%s~
-AUTO_TRA ~stivan/tra/english~
+// AUTO_TRA ~stivan/tra/%s~
+// AUTO_TRA ~stivan/tra/english~
 
 VERSION ~alpha something~
 README ~stivan/tra/%LANGUAGE%/readme.htm~
+
+MODDER SETUP_TRA NONE
 
 LANGUAGE ~English~
 	 ~English~
