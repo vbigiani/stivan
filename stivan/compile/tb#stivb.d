@@ -1323,7 +1323,7 @@ DO ~SetGlobal("tb#StivanMinsc","GLOBAL",1)~
 == TB#STIVB ~Voi ranger avete una fervida immaginazione.~
 == BMINSC ~Ma è vero! Boo, il nostro amico Stivan mette in dubbio le tue abilità canore!~
 = ~Cosa dici, Boo? Vuoi dimostrargli che sei uno dei migliori bardi criceto di Rasheman? Vuoi dargli prova delle tue capacità? Benissimo! Preparati, halfling: stai per assistere all'esibizione del mio criceto!!~
-= ~*Squeak*!~
+= ~*Squeak*!~ [GAM_48]
 = ~Sentito?!~
 == TB#STIVB ~...~
 EXIT
