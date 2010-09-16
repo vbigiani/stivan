@@ -9,7 +9,7 @@ END
 IF ~~ THEN BEGIN StivanKickedOut1-1
 SAY ~(Snort!) E va bene! Andrò al Quartiere Governativo di Athkatla. Magari lì riuscirò a vendere qualche piuma di gabbiano ai nobili per i loro ridicoli copricapo...~
 IF ~~ THEN REPLY ~Aspettami qui, Stivan. Tornerò quanto prima.~ DO ~SetGlobal("tb#StivanJoined","GLOBAL",0)~ EXIT 
-IF ~~ THEN REPLY ~Va bene, ci vedremo la'.~ DO ~SetGlobal("tb#StivanJoined","GLOBAL",0) EscapeAreaMove("AR1000",2000,2000,0)~ EXIT
+IF ~~ THEN REPLY ~Va bene, ci vedremo là.~ DO ~SetGlobal("tb#StivanJoined","GLOBAL",0) EscapeAreaMove("AR1000",2000,2000,0)~ EXIT
 END
 
 IF ~~ THEN BEGIN StivanKickedOut1-2
