@@ -1529,7 +1529,11 @@ INTERJECT_COPY_TRANS EDWIN 31 tb#StivanEdwin-31
 == EDWIN ~(L'halfling si è appena aggiudicato il primo posto nella lista dei seccatori da eliminare).~
 END
 
-
+INTERJECT_COPY_TRANS2 ARENTHIS 16 tb#StivanArenthis-16
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Bah! Meglio vivere da orfani che con un padre paladino!~
+= ~...~
+= ~A chi la do a bere... Sopporterei di sapere entrambi i genitori e tutti i miei fratelli nell'Ordine pur di riaverli... *SOB!*~
+END
 
 
 
