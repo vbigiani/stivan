@@ -814,7 +814,7 @@ END
 INTERJECT_COPY_TRANS KELDOR 4 tb#StivanKeldor-4
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~L'hai fatto apposta. Dillo che l'hai fatto apposta!~
-== KELDOR ~Ti consiglio di porre un freno alla tua lingua serpentina, halfling. La tua maldicenza potrebbe costarti cara con persone meno pazienti di me.
+== KELDOR ~Ti consiglio di porre un freno alla tua lingua serpentina, halfling. La tua maldicenza potrebbe costarti cara con persone meno pazienti di me.~
 END
 
 INTERJECT_COPY_TRANS KELDORJ 11 tb#StivanKeldorj-11
