@@ -1535,6 +1535,79 @@ INTERJECT_COPY_TRANS2 ARENTHIS 16 tb#StivanArenthis-16
 = ~A chi la do a bere... Sopporterei di sapere entrambi i genitori e tutti i miei fratelli nell'Ordine pur di riaverli... *SOB!*~
 END
 
+INTERJECT_COPY_TRANS SURLY 14 tb#StivanSurly-14
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("tb#stivanSurly","GLOBAL",0)~ THEN ~Ehi! Voglio combattere nella tua fossa!~
+DO  ~SetGlobal("tb#stivanSurly","GLOBAL",1)~
+== SURLY ~Non ho tempo da perdere con le tue schiocchezze, piccoletto.~
+== TB#STIVJ ~Gua-~
+== SURLY ~Voi altri, che volete adesso?~
+END
+
+INTERJECT SURLY 14 tb#StivanSurly-14-2
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("tb#stivanSurly","GLOBAL",1)~ THEN ~Voglio combattere nella tua fossa!~
+DO  ~SetGlobal("tb#stivanSurly","GLOBAL",2)~
+== SURLY ~Questa è bella. Con chi vorresti combattere, nanerottolo? Con delle mosche? Delle pulci?~
+== TB#STIVJ ~No, con dei gabbiani.~
+== SURLY ~Gabbiani? Non farmi perdere tempo.~
+== TB#STIVJ ~Farti perdere tempo? Non sai che io sono Stivan il Cacciatore?~
+== SURLY ~Stivan il Cacciatore? Due anni fa ti pagai una piuma di gabbiano e non me l'hai mai consegnata! Adesso io ti prendo e-~
+== TB#STIVJ ~Eeeekk!~
+DO ~RunAwayFrom("surly",120)~
+EXIT
+
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("tb#stivanSurly","GLOBAL",2)~ THEN SURLY surlyStivanFinale
+~Hai il coraggio di tornare qui, piccoletto?~
+DO  ~SetGlobal("tb#stivanSurly","GLOBAL",3)~
+== TB#STIVJ ~Sì. Ho catturato DIECI gabbiani prima di entrare, e combatterò con loro nella tua arena. I proventi saranno sufficienti a colmare il mio debito.~
+== SURLY ~Hmpf. Io pensavo di ucciderti, ma il tuo modo sembra più divertente. Puoi combattere anche adesso.~
+END
+IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL) !Class(Player1,PALADIN) !IfValidForPartyDialog([PC.0.0.DRUID_ALL]) !IfValidForPartyDialog([PC.0.0.RANGER_ALL])~ THEN REPLY ~Divertiti, Stivan.~ EXTERN tb#stivj killSeagulls
+IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL) !Class(Player1,PALADIN) OR(2) IfValidForPartyDialog([PC.0.0.DRUID_ALL]) IfValidForPartyDialog([PC.0.0.RANGER_ALL])~ THEN REPLY ~(Per fortuna gli abbraccia-alberi non sono a portata di orecchi...) Divertiti, Stivan.~ EXTERN tb#stivj killSeagulls
+IF ~~ THEN REPLY ~Mi rifiuto di avere a che fare con un simile spettacolo.~ DO ~SetGlobal("tb#stivanSurly","GLOBAL",4)~ EXTERN surly surlyNoShow
+
+APPEND TB#STIVJ
+IF ~~ THEN killSeagulls
+SAY ~Yeah!~
+IF ~~ THEN DO ~StartCutSceneMode() StartCutScene("tb#ssurl")~ EXIT
+END
+END
+
+APPEND SURLY
+IF ~~ THEN surlyNoShow
+SAY ~Allora vuoi fare l'eroe? L'halfling mi deve cento monete d'oro. Tirale fuori.~
+IF ~PartyGoldGT(99)~ THEN DO ~TakePartyGold(100) DestroyGold(100)~ REPLY ~E sia - prendi i soldi.~ GOTO surlyPaid
+IF ~~ THEN REPLY ~Scordatelo.~ GOTO surlyNotPaid
+END
+
+IF WEIGHT #-1 ~Global("tb#stivanSurly","GLOBAL",5)~ THEN surlyStivanFinale
+SAY ~Hai i soldi del piccoletto?~
+IF ~PartyGoldGT(99)~ THEN DO ~TakePartyGold(100) DestroyGold(100)~ REPLY ~Sì. Eccoti le cento monete.~ GOTO surlyPaid
+IF ~~ THEN REPLY ~Scordatelo.~ GOTO surlyNotPaid
+END
+
+IF ~~ THEN surlyPaid
+SAY ~Bene. E adesso sparite!~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN surlyNotPaid
+SAY ~Sparisci dalla mia vista. Ti consiglio di avere i soldi pronti la prossima volta che mi vedi.~
+IF ~~ THEN DO ~SetGlobal("tb#stivanSurly","GLOBAL",5)~ EXIT
+END
+
+IF WEIGHT #-1 ~Global("tb#StivanSurly","GLOBAL",3)~ THEN surlyAfterSeagull
+SAY ~Hmpf. Complimenti, hai saldato il debito.~
+IF ~~ THEN DO ~SetGlobal("tb#stivanSurly","GLOBAL",4)~ GOTO surlyEnd
+END
+
+IF ~~ THEN surlyEnd
+SAY ~Avete bisogno di qualcos'altro, o volete solo farmi perdere del tempo?~
+COPY_TRANS SURLY 14
+END
+END
+
+
+
 
 
 
