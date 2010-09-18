@@ -681,12 +681,6 @@ DO ~GiveGoldForce(100)~
 END
 END
 
-
-INTERJECT_COPY_TRANS ANOMEN 21 tb#StivanAnomen-21
-== TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
-~*Ahem* Non nutro grande simpatia per i chierici, sopratutto per quelli devoti come questo qui. Dubito che andremo d'accordo...~
-END
-
 INTERJECT_COPY_TRANS BANOMEN 22 tb#StivanBANOMEN-22
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN 
 ~Non farmi ridere, Anomen. Non hai mai visto un solo gigante in vita tua, figuriamoci venti.~
@@ -806,10 +800,13 @@ END
 
 INTERJECT_COPY_TRANS KELDOR 2 tb#StivanKeldor-2
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~"Bene supremo"? "Uniamoci e cerchiamo"? Io non voglio viaggiare con questo paladino perfettino! Sarebbe una rovina per il mio commercio illegale di piume di gabbiano!~
+~"Bene supremo"? "Uniamoci e cerchiamo"? Io non voglio viaggiare con questo paladino perfettino, <CHARNAME>!~
+== KELDOR ~Non penso di aver fatto alcunché per meritare il tuo astio, ma ascolterò le tue obiezioni senza pregiudizi.~
+== TB#STIVJ ~I membri del Cuore Radioso sono degli ipocriti! Dicono di combattere il male e le ingiustizie, ma in realtà non fanno nulla per contrastare la criminalità e la povertà che dilagano ad Athkatla!~
+== KELDOR ~Anch'io la pensavo così quando avevo visto trenta inverni, ma con l'età ho capito che la violenza non risolve i problemi.~
 END
 
-INTERJECT_COPY_TRANS KELDOR 3 tb#StivanKeldor-3
+INTERJECT_COPY_TRANS2 KELDOR 3 tb#StivanKeldor-3
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~(Sospira) ... Sono salvo!~
 END
@@ -817,6 +814,7 @@ END
 INTERJECT_COPY_TRANS KELDOR 4 tb#StivanKeldor-4
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~L'hai fatto apposta. Dillo che l'hai fatto apposta!~
+== KELDOR ~La mia etica di paladino mi impedisce di ucciderti senza una ragione, ma bada di non fornirmene.~
 END
 
 INTERJECT_COPY_TRANS KELDORJ 11 tb#StivanKeldorj-11
@@ -988,12 +986,12 @@ EXIT
 
 INTERJECT_COPY_TRANS MESSEN 15 tb#StivanMessen-15
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~E' senz'altro opera degli adoratori di alberi! E se... E se fossero loro i responsabili di ciò che è successo alla mia famiglia anni fa? Dobbiamo indagare, <CHARNAME>!~
+~E' senz'altro opera degli adoratori di alberi! Ho sempre sospettato che fossero loro i responsabili di ciò che è successo alla mia famiglia, e questi episodi lasciano pochi dubbi a proposito! Dobbiamo indagare, <CHARNAME>!~
 END
 
-INTERJECT_COPY_TRANS2 MESSEN 10 tb#StivanMessen-10
+INTERJECT_COPY_TRANS MESSEN 10 tb#StivanMessen-10
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~Conosco Trademeet - ci sono stato diverse volte con la mia famiglia. Se siamo fortunati, potremmo incontrare qualche mercante con cui eravamo soliti commerciare. Sono sicuro che farebbero il possibile per aiutarci a trovare quei puzzoni di druidi!~
+~Conosco Trademeet - ci sono stato diverse volte con la mia famiglia. Se siamo fortunati, potremmo incontrare qualche mercante con cui eravamo soliti commerciare. Sono sicuro che farebbero il possibile per aiutarci a trovare quei druidi puzzoni!~
 END
 
 INTERJECT_COPY_TRANS2 BHCRYPT 0 tb#StivanBhcrypt-0
@@ -1137,7 +1135,7 @@ INTERJECT_COPY_TRANS AERIE 17 tb#StivanAerie-17
 END
 
 INTERJECT_COPY_TRANS KORGANA 9 tb#StivanKorgana-9
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Mia mamma diceva sempre che i nani sono i più abili forgiatori di tutta Faerun. Perché in cambio del nostro aiuto non realizzi qualche gingillo magico per noi?~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Mi stavo chiedendo, nano... Perchè in cambio del nostro aiuto non realizzi qualche gingillo magico per noi?~
 == KORGANA ~Io non sono un maniaco del martello e dell’incudine, bamboccio. Le sole cose che brandisco sono ascia e scudo, e presto li userò per aprirmi la strada tra le carcasse ammuffite di quella cripta!~
 END
 
@@ -1203,7 +1201,7 @@ COPY_TRANS EDWIN 12
 END
 
 IF ~~ THEN tb#StivanEdwin-12b
-SAY ~Yeah! Andiamo la', allora!~
+SAY ~Yeah! Andiamo là, allora!~
 COPY_TRANS EDWIN 12
 END
 END
@@ -1374,7 +1372,7 @@ INTERJECT_COPY_TRANS UDSILVER 48 tb#StivanUdsilver-48
 END
 
 INTERJECT_COPY_TRANS SLHALF01 4 tb#StivanSlhalf01-4
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Haerdalis")!StateCheck("tb#stiv",CD_STATE_NOTVALID) StateCheck("Haerdalis",CD_STATE_NOTVALID)~ THEN 
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Haerdalis")!StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("Haerdalis",CD_STATE_NOTVALID)~ THEN 
 ~Sbaglio o quell'halfling è praticamente identico a me?~
 == HAERDAJ ~Le uniche copie buone sono quelle che ci fanno vedere il ridicolo nei cattivi originali.~
 == TB#STIVJ ~Heh. Ho l'impressione che questo fosse un insulto, Haer'Dalis.~
@@ -1382,13 +1380,13 @@ INTERJECT_COPY_TRANS SLHALF01 4 tb#StivanSlhalf01-4
 END
 
 INTERJECT_COPY_TRANS RUMAR 7 tb#StivanRumar-7
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Yoshimo")!StateCheck("tb#stiv",CD_STATE_NOTVALID) StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN 
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Yoshimo")!StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN 
 ~(Gasp!) Quest'uomo è un infedele! Ha tradito la propria moglie!~
 == YOSHJ ~Chi ha detto che l'adulterio è sinonimo di infedeltà? A volte consente di mantenersi fedele all'amante per tutta la vita.~
 END
 
 INTERJECT_COPY_TRANS NOBLEW2 1 tb#StivanNoblew2-1
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Nalia")!StateCheck("tb#stiv",CD_STATE_NOTVALID) StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN 
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Nalia")!StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN 
 ~Miss Nalia, potrei giurare di aver visto quella nobildonna rubare alla Passeggiata. Com'è possibile una cosa simile?~
 == NALIAJ ~Si suppone sempre che le persone facoltose non abbiano bisogno di rubare, Stivan, ma non è facile cambiare le proprie abitudini.~
 END
@@ -1481,10 +1479,10 @@ COPY_TRANS ANOMENJ 135
 END
 END
 
-/* INTERJECT_COPY_TRANS2 KALAH2 7 tb#StivanKalah2-7
+INTERJECT_COPY_TRANS KALAH2 13 tb#StivanKalah2-13
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~Non è giusto. Se la gente piccola fosse trattata con più rispetto e meno sufficienza, questo gnomo non avrebbe mai fatto una cosa simile.~
-END */
+END
 
 INTERJECT_COPY_TRANS2 VVAMN1 4 tb#StivanVvamn1-4
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
@@ -1606,6 +1604,13 @@ COPY_TRANS SURLY 14
 END
 END
 
+INTERJECT_COPY_TRANS THIEF3 0 tb#StivanThief3-0
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Wow! Vorrei che anche le mie piume fossero così affilate!~
+END
+
+INTERJECT_COPY_TRANS THIEF5 7 tb#StivanThief5-7
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~L'hai comprata dal Pollice, vero? Quell’oste ha il brutto vizio di allungare il vino con l'acqua.~
+END
 
 
 
@@ -1939,15 +1944,15 @@ IF ~Global("tb#StivanLarry","GLOBAL",2)~ THEN TB#SLIL StivanLarry
 == MINSCJ ~Abbi un attimo di pazienza, Larry: Minsc sta dando da mangiare a Boo. Tra poco si prenderà cura anche di te.~
 == TB#SLIL ~Ora! Mi devi lucidare ORA, prima che la ruggine mi intacchi!~
 == MINSCJ ~E va bene. Boo, finisci di mangiare le noci da solo; Minsc deve dare una pulitina alla sua spada.~
-== TB#STIVJ ~Devi essere proprio stupido, ranger, per soddisfare i capricci di quella lama. Se si fosse rivolta a me in questo modo, l'avrei rigirata in una pila di letame fino ad insegnarle un pò di rispetto.~
+== TB#STIVJ ~Devi essere proprio stupido, ranger, per soddisfare ogni capriccio di quella lama. Se si fosse rivolta a me in questo modo, l'avrei rigirata in una pila di letame fino ad insegnarle un pò di rispetto.~
 == MINSCJ ~Minsc non è stupido! Si prende cura del suo criceto e della sua spada per essere sempre pronto alla battaglia!~
 == TB#SLIL ~Ora basta! Se non posso ricevere la dovuta pulizia, allora assaggerò un pò di sangue!~
 == TB#STIVJ ~AHIA! Minsc, sei impazzito?!?~
 == MINSCJ ~Minsc non ha fatto nulla! E' stato Larry! Vero, Boo?~
 == TB#STIVJ ~Nulla? Stavi per tagliarmi in due e hai il coraggio di dire che non hai fatto nulla?! Stai brandendo TU quella dannata spada! Ti è forse sfuggito?~
 == MINSCJ ~Ma Larry ogni tanto fa quel che vuole! Minsc non ha colpa se la sua spada sferra colpi da sola!~
-== TB#SLIL ~(Ghigna)~ DO ~DestroySelf()~
 == TB#STIVJ ~Osa solo colpirmi un'altra volta, spada, e ti rispedisco nelle fogne da cui provieni!~
+== TB#SLIL ~Mwahahahahahaha!~ DO ~DestroySelf()~
 EXIT
 
 CHAIN 

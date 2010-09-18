@@ -35,7 +35,7 @@ IF ~~ THEN EXIT
 END
 
 IF ~~ THEN StivanPC1-5
-SAY ~La mia famiglia gestiva dei vigneti poco fuori Athkatla che venivano tramandati da generazioni. Tutti gli aspetti legati alla coltivazione venivano curati da un socio di mio papà, mentre noi ci occupavamo della vendita del prodotto finale: un vino a dir poco fenomenale!~ 
+SAY ~La mia famiglia gestiva dei vigneti poco fuori Athkatla che venivano tramandati da generazioni. Tutti gli aspetti legati alla coltivazione venivano curati da un socio di mio papà, mentre noi ci occupavamo della vendita del prodotto finale: un vino semplicemente fenomenale!~ 
 = ~Ogni anno, dopo la stagione della vendemmia, i miei fratelli ed io partivamo insieme a papino per vendere le nostre botti, mentre la mamma restava a casa per commerciarne una piccola parte con i mercanti locali. Al nostro ritorno, dividevamo le entrate con i Farrahd.~
 IF ~~ THEN REPLY ~Quindi hai una certa conoscenza in materia di vini, giusto?~ GOTO StivanPC1-6
 IF ~~ THEN REPLY ~Percorrevate sempre le stesse rotte o cambiavate percorso di anno in anno?~ GOTO StivanPC1-7
@@ -845,7 +845,7 @@ DO ~SetGlobal("tb#StivanJan","GLOBAL",2)~
 == BJAN ~Ora, vediamo al dunque. Il segreto che volevo rivelarti la volta scorsa riguardava...~
 = ~Riguardava...~
 = ~...~
-= ~Stivvy... Più mi struggo su questa cosa, più non me ne ricordo.~
+= ~Stivvy... Più mi arrovello su questa cosa, più non me ne ricordo.~
 == TB#STIVB ~*Ahem* Mia mamma diceva sempre che a volte è meglio tacere e sembrare stupidi piuttosto che aprire bocca e togliere ogni dubbio.~
 == BJAN ~Tua mamma doveva essere una donna molto saggia. E' un peccato che la sua attuale condizione non le permetta più di parlare, altrimenti sono sicuro che avrebbe trovato un rimedio per la mia smemoratezza. In alternativa, potrei bere un pò di succo di rapa. Lascia che te ne elenchi le proprietà benefiche.~
 == TB#STIVB ~...~
@@ -1338,12 +1338,11 @@ Global("tb#StivanMinsc","GLOBAL",1)~ THEN TB#STIVB stivanminsc2
 DO ~SetGlobal("tb#StivanMinsc","GLOBAL",2)~
 == BMINSC ~Haha! Hai sentito, Boo? Il tuo fiato è così potente da stordire il nostro amico halfling! Continua così!~
 == TB#STIVB ~... Mi stavo rivolgendo a te, ranger. Benchè abbia confuso i vostri nomi, mi sembra ovvio che tra voi due sia tu a far tremare il suolo con i tuoi ruggiti.~
-== BMINSC ~Ma Minsc non può restare muto come un pesce! Deve riempire i polmoni d'aria per abbattere i nemici con i suoi tonanti ruggiti! In guardia, male: Minsc sta per dar fiato alle sue trombe vocali!!~
+== BMINSC ~Ma Minsc non può restare muto come un pesce! Deve riempire d'aria i suoi polmoni per abbattere i nemici con i suoi tonanti ruggiti! In guardia, male: Minsc sta per dar fiato alle sue trombe vocali!~
 == TB#STIVB ~Volevi dire *corde* vocali.~
 == BMINSC ~Ehm... "Trombe" è una parola di Boo! Vero, Boo?~
 == TB#STIVB ~Già... Ad ogni modo, ti sarei grato se la smettessi di stordirmi. Possiamo affrontare il male anche con discrezione, sai?~
-== BMINSC ~Ma Minsc deve tenere alto il morale!~
-== TB#STIVB ~Ti assicuro che sarà alle stelle in assenza dei tuoi gorgheggi.~
+== BMINSC ~Minsc terrà alto il morale con il suo vocione, Boo si accerterà che la sua gola non si infiammi troppo. E' sempre stato così, e col tempo apprezzerai i canti di battaglia di questo ranger. Boo ne è sicuro!~
 EXIT
 
 

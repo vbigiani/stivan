@@ -33,9 +33,9 @@ IF ~Global("MaeVarWork","GLOBAL",3)~ THEN REPLY ~Ho bisogno che tu ti introduca 
 IF ~Global("MaeVarWork","GLOBAL",1)~ THEN REPLY ~Ho bisogno che tu ti introduca nel Tempio di Lathander per impossessarti della statuetta raffigurante il Signore del Mattino.~ GOTO PD12
 IF ~Global("EdwinJob","GLOBAL",3)~ THEN REPLY ~Vorrei impossessarmi dei documenti richiesti da Edwin senza attirare troppo l’attenzione. Penso che tu sia abile a sufficienza da riuscire a rubarglieli di nascosto, non è così?~ GOTO PD13
 IF ~Global("SpawnBarg","GLOBAL",1) Global("RoenalConvict","GLOBAL",0)~ THEN REPLY ~Per liberare Nalia dobbiamo raccogliere una quantità di prove sufficienti ad incastrare Isaea. Te la senti di introdurti all’interno della sua residenza e di cercare qualcosa di compromettente?~ GOTO PD14
-IF ~~ THEN REPLY ~Ho bisogno di accertarmi che tu non sia un dopplegenger. Qual è la cosa che Stivan odia di più al mondo?~ GOTO PD15
-IF ~Global("tb#EdwinComplainsOfStivan","GLOBAL",1)~ THEN REPLY ~Stivan, Edwin sostiene che tu sia inquieto di notte.~ DO ~SetGlobal("tb#EdwinComplainsOfStivan","GLOBAL",2)~ GOTO PD16
 IF ~Global("crothfCreate","GLOBAL",1) !Global("TakenBlame","GLOBAL",1)~ THEN REPLY ~Hai mai sentito parlare di Aulava e Tiiro?~ GOTO PD18-1
+IF ~Global("tb#EdwinComplainsOfStivan","GLOBAL",1)~ THEN REPLY ~Stivan, Edwin sostiene che tu sia inquieto di notte.~ DO ~SetGlobal("tb#EdwinComplainsOfStivan","GLOBAL",2)~ GOTO PD16
+IF ~~ THEN REPLY ~Ho bisogno di accertarmi che tu non sia un dopplegenger. Qual è la cosa che Stivan odia di più al mondo?~ GOTO PD15
 IF ~~ THEN REPLY ~E’ tutto a posto. Proseguiamo.~ EXIT
 IF ~~ THEN REPLY ~Stivan, la tua voce sembra il garrito di un gabbiano.~ GOTO PD17
 END
@@ -434,7 +434,7 @@ END
 IF ~~ THEN PD18-1
 SAY ~Oh, sì. Due tipi veramente simpatici. Il mese scorso hanno rubato un carro di provviste ad un mercante giunto da Scornubel, e in seguito le hanno distribuite ai poveracci nel Quartiere del Ponte, me incluso. Poi la ragazza ha dato fuoco al carro - pare che abbia un certo gusto per gli incendi.~
 IF ~Global("BonnieClyde","GLOBAL",2)~ THEN REPLY ~Fantastico. Adesso appiccheranno fuoco ad ogni dove dicendo che sono stato io ad ispirarli. Non potevi avvisarmi prima?~ GOTO PD18-2
-IF ~Global("BonnieClyde","GLOBAL",4)~ THEN REPLY ~E' un bene che abbia detto loro di farla finita. Se avessero continuato a frequentarsi, Athkatla sarebbe già un cumulo di cenere.~ GOTO PD18-3
+IF ~Global("BonnieClyde","GLOBAL",4)~ THEN REPLY ~E' un bene che si siano separati. Se avessero continuato a frequentarsi, Athkatla sarebbe già un cumulo di cenere.~ GOTO PD18-3
 IF ~~ THEN REPLY ~Non invidio i loro genitori. Dev'essere tremendo avere come figli delle simili pesti.~ GOTO PD18-3
 IF ~~ THEN REPLY ~La gente dovrebbe seguire il loro esempio. Ognuno dev'essere libero di fare ciò che crede sia meglio per sè. Non capisco perchè le loro famiglie non li lascino stare.~ GOTO PD18-4
 END
