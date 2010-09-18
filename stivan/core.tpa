@@ -2,9 +2,9 @@ ACTION_IF FILE_EXISTS ~override/tb#stiva.txt~ THEN BEGIN
 FAIL ~Il mod e' gia' installato.~
 END
 
-//this file will help other mods detect if component is installed.
-COPY_EXISTING ~sw1h01.itm~ ~override/tb#stiva.txt~
-
+ACTION_IF ! (GAME_IS ~BGT TOB~) THEN BEGIN
+	FAIL ~E' richiesto Throne of Bhaal.~
+END
 
 
 
@@ -43,6 +43,9 @@ COPY_EXISTING ~ar0500.are~ ~override~
 COPY_EXISTING ~bhalf1.cre~ ~override~
 	WRITE_ASCIIT 0x248 ~tb#stdes~
 
+COPY_EXISTING ~seagul.cre~ ~override/tb#ssea.cre~
+	WRITE_ASCII 0x280 ~tb#ssea~ #32
+	
 COPY_EXISTING ~uddrow35.cre~ ~override/tb#sdr1.cre~
 		 ~uddrow35.cre~ ~override/tb#sdr2.cre~
 		 ~uddrow35.cre~ ~override/tb#sdr3.cre~
@@ -276,7 +279,7 @@ COPY_EXISTING ~misc4w.itm~ ~override/tb#sdocu.itm~
 COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
 	SAY NAME1 ~Cacca di gabbiano~
 	SAY NAME2 ~Cacca di gabbiano~
-	SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
+	SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico. Preferisci non indagare su come faccia a non esaurire mai le scorte.
 	
 STATISTICHE:
 
@@ -285,7 +288,7 @@ Lancia "Miscela esplosiva" una volta al giorno: infligge 4d4 danni da fuoco (nes
 
 Utilizzabile Da:
 Stivan~
-	SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico.
+	SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico. Preferisci non indagare su come faccia a non esaurire mai le scorte.
 
 STATISTICHE:
 
