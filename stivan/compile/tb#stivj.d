@@ -1559,8 +1559,8 @@ DO  ~SetGlobal("tb#stivanSurly","GLOBAL",3)~
 == TB#STIVJ ~Sì. Ho catturato DIECI gabbiani prima di entrare, e combatterò con loro nella tua arena. I proventi saranno sufficienti a colmare il mio debito.~
 == SURLY ~Hmpf. Io pensavo di ucciderti, ma il tuo modo sembra più divertente. Puoi combattere anche adesso.~
 END
-IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL) !Class(Player1,PALADIN) !IfValidForPartyDialog([PC.0.0.DRUID_ALL]) !IfValidForPartyDialog([PC.0.0.RANGER_ALL])~ THEN REPLY ~Divertiti, Stivan.~ EXTERN tb#stivj killSeagulls
-IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL) !Class(Player1,PALADIN) OR(2) IfValidForPartyDialog([PC.0.0.DRUID_ALL]) IfValidForPartyDialog([PC.0.0.RANGER_ALL])~ THEN REPLY ~(Per fortuna gli abbraccia-alberi non sono a portata di orecchi...) Divertiti, Stivan.~ EXTERN tb#stivj killSeagulls
+IF ~!Class(Player1,DRUID_ALL) !Class(Player2,RANGER_ALL) !See([PC.0.0.DRUID_ALL]) !See([PC.0.0.RANGER_ALL])~ THEN REPLY ~Divertiti, Stivan.~ EXTERN tb#stivj killSeagulls
+IF ~!Class(Player1,DRUID_ALL) !Class(Player2,RANGER_ALL) OR(2) See([PC.0.0.DRUID_ALL]) See([PC.0.0.RANGER_ALL])~ THEN REPLY ~Alcuni dei miei compagni si rifiutano di vedere combattere gli animali. Aspetta cinque minuti che li allontano.~ EXTERN surly surlyNotPaid
 IF ~~ THEN REPLY ~Mi rifiuto di avere a che fare con un simile spettacolo.~ DO ~SetGlobal("tb#stivanSurly","GLOBAL",4)~ EXTERN surly surlyNoShow
 
 APPEND TB#STIVJ
