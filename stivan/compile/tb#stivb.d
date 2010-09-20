@@ -342,9 +342,9 @@ See("Keldorn")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("LadyMaria","GLOBAL",5)
-Global("tb#StivanKeldorn","GLOBAL",3)~ THEN TB#STIVB stivan-keldorn-4
+Global("tb#StivanKeldorn","GLOBAL",1)~ THEN TB#STIVB stivan-keldorn-4
 ~*Ahem* Sono più o meno contento che le cose tra te e tua moglie si siano sistemate, ma rimane pur sempre il problema della tua vecchiaia.~
-DO ~SetGlobal("tb#StivanKeldorn","GLOBAL",4)~
+DO ~SetGlobal("tb#StivanKeldorn","GLOBAL",2)~
 == BKELDOR ~Come ti ho già detto, non vivo i miei anni come se fossero un peso. Le rughe altro non sono che segni del tempo, simili a quelli incisi nel cuore degli alberi.~
 == TB#STIVB ~Allora devo supporre che voi due steste ancora insieme per distrazione. Sai, pare che succeda in tanti matrimoni, dove spesso si resta uniti più per pigrizia che per altro.~
 == BKELDOR ~Un'altra parola su me e Lady Maria e sarà l'ultima che proferirai.~
@@ -1177,7 +1177,6 @@ IF ~InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("tb#StivanAerieToldWIngs","GLOBAL",1)
-!Global("tb#StivanAerie","GLOBAL",2)
 CombatCounter(0)
 Global("tb#StivanDislikesAerie","GLOBAL",0)~ THEN TB#STIVB stivanaeriewings
 ~Quindi, elfa, hai perso le tue ali nel patetico tentativo di salvare un bambino. Piuttosto stupido da parte tua, ma non mi sorprende.~
