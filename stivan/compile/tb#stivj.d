@@ -1555,18 +1555,17 @@ EXIT
 
 CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) Global("tb#stivanSurly","GLOBAL",2)~ THEN SURLY surlyStivanFinale
 ~Hai il coraggio di tornare qui, piccoletto?~
-DO  ~SetGlobal("tb#stivanSurly","GLOBAL",3)~
 == TB#STIVJ ~Sì. Ho catturato DIECI gabbiani prima di entrare, e combatterò con loro nella tua arena. I proventi saranno sufficienti a colmare il mio debito.~
 == SURLY ~Hmpf. Io pensavo di ucciderti, ma il tuo modo sembra più divertente. Puoi combattere anche adesso.~
 END
-IF ~!Class(Player1,DRUID_ALL) !Class(Player2,RANGER_ALL) !See([PC.0.0.DRUID_ALL]) !See([PC.0.0.RANGER_ALL])~ THEN REPLY ~Divertiti, Stivan.~ EXTERN tb#stivj killSeagulls
-IF ~!Class(Player1,DRUID_ALL) !Class(Player2,RANGER_ALL) OR(2) See([PC.0.0.DRUID_ALL]) See([PC.0.0.RANGER_ALL])~ THEN REPLY ~Alcuni dei miei compagni si rifiutano di vedere combattere gli animali. Aspetta cinque minuti che li allontano.~ EXTERN surly surlyNotPaid
-IF ~~ THEN REPLY ~Mi rifiuto di avere a che fare con un simile spettacolo.~ DO ~SetGlobal("tb#stivanSurly","GLOBAL",4)~ EXTERN surly surlyNoShow
+IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL) !Range([PC.0.0.RANGER_ALL],30) !Range([PC.0.0.DRUID_ALL],30)~ THEN REPLY ~Divertiti, Stivan.~ EXTERN tb#stivj killSeagulls
+IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL) OR(2) Range([PC.0.0.RANGER_ALL],30) Range([PC.0.0.DRUID_ALL],30)~ THEN REPLY ~Alcuni dei miei compagni si rifiutano di vedere combattere gli animali. Aspetta cinque minuti che li allontano.~ EXTERN surly surlyNotPaid
+IF ~~ THEN REPLY ~Mi rifiuto di avere a che fare con un simile spettacolo.~ EXTERN surly surlyNoShow
 
 APPEND TB#STIVJ
 IF ~~ THEN killSeagulls
 SAY ~Yeah!~
-IF ~~ THEN DO ~StartCutSceneMode() StartCutScene("tb#ssurl")~ EXIT
+IF ~~ THEN DO ~SetGlobal("tb#stivanSurly","GLOBAL",3) StartCutSceneMode() StartCutScene("tb#ssurl")~ EXIT
 END
 END
 
@@ -1579,13 +1578,14 @@ END
 
 IF WEIGHT #-1 ~Global("tb#stivanSurly","GLOBAL",5)~ THEN surlyStivanFinale
 SAY ~Hai i soldi del piccoletto?~
+IF ~!Class(Player1,DRUID_ALL) !Class(Player1,RANGER_ALL) !Range([PC.0.0.RANGER_ALL],30) !Range([PC.0.0.DRUID_ALL],30)~ THEN REPLY ~Credo che Stivan sia pronto a combattere.~ EXTERN tb#stivj killSeagulls
 IF ~PartyGoldGT(99)~ THEN DO ~TakePartyGold(100) DestroyGold(100)~ REPLY ~Sì. Eccoti le cento monete.~ GOTO surlyPaid
 IF ~~ THEN REPLY ~Scordatelo.~ GOTO surlyNotPaid
 END
 
 IF ~~ THEN surlyPaid
 SAY ~Bene. E adesso sparite!~
-IF ~~ THEN EXIT
+IF ~~ THEN DO ~SetGlobal("tb#stivanSurly","GLOBAL",4)~ EXIT
 END
 
 IF ~~ THEN surlyNotPaid
