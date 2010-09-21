@@ -513,7 +513,7 @@ INTERJECT_COPY_TRANS NALIAJ 265 tb#stivanNaliaj-265
 ~Miss Nalia ha ragione. Bruciamo un pò di gabbiani, piuttosto!~
 END
 
-INTERJECT_COPY_TRANS VICONI 12 tb#stivanViconi-12
+INTERJECT_COPY_TRANS VICONI 2 tb#stivanViconi-2
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~Dicono che i drow siano veramente cattivi e che mangino le persone, ma a me questa Viconia ispira simpatia. Perchè non farla venire con noi? Nella peggiore delle ipotesi scoprirò cosa significa essere bollito vivo in un pentolone.~
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN 
@@ -848,27 +848,12 @@ INTERJECT_COPY_TRANS BVALYGA 6 tb#StivanBvalyga-8
 == BVICONI ~Tsk. Gli abitanti della Superficie sono il peggior compromesso tra intelligenza e dimensioni del membro.~
 END
 
-INTERJECT_COPY_TRANS2 EDWINJ 12 tb#StivanEdwinj-12
+INTERJECT_COPY_TRANS EDWINJ 11 tb#StivanEdwinj-11
 == EDWINJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Trema, halfling! Tu sarai il primo ad assaggiare il mio nuovo e inarrestabile potere!~
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Eeeekk!~
 END
-
-INTERJECT_COPY_TRANS2 EDWINJ 13 tb#StivanEdwinj-13
-== EDWINJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~Trema, halfling! Tu sarai il primo ad assaggiare il mio nuovo e inarrestabile potere!~
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~Eeeekk!~
-END
-
-INTERJECT_COPY_TRANS2 EDWINJ 14 tb#StivanEdwinj-14
-== EDWINJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~Trema, halfling! Tu sarai il primo ad assaggiare il mio nuovo e inarrestabile potere!~
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~Eeeekk!~
-END
-
 
 INTERJECT_COPY_TRANS YOSHJ 145 tb#StivanYoshj-145
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
@@ -926,8 +911,8 @@ END
 
 INTERJECT_COPY_TRANS JAHEIRAJ 392 tb#StivanJaheiraj-392
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~Jaheira ha ragione. Non ho mai sentito parlare di questa sede degli Arpisti.~
-== JAHEIRAJ ~E perchè mai dovresti averne? I servitori dell'equilibrio non cantano ai quattro venti dove hanno stabilito le loro basi.~
+~Jaheira ha ragione. Neanch'io ne ero a conoscenza.~
+== JAHEIRAJ ~E perchè mai avresti dovuto? I servitori dell'equilibrio non cantano ai quattro venti dove hanno stabilito le loro basi.~
 == TB#STIVJ ~Ma i Ladri Tenebrosi sì. Dovresti sapere che non scorre buon sangue tra le ombre dell'Amn e gli Arpisti... Se questa tenuta fosse stata adibita a tale scopo fin da quando ero piccolo, l'intera città ormai lo saprebbe.~
 END
 
@@ -1188,7 +1173,7 @@ INTERJECT_COPY_TRANS ISAEA 29 tb#StivanIsaea-29
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Non possiamo permettere che Miss Nalia cada nelle mani di quel manigoldo! Dobbiamo liberarla! O invocare l'ira dei gabbiani su quell'infame! <CHARNAME>, dobbiamo fare qualcosa!~
 END
 
-INTERJECT EDWIN 12 tb#StivanEdwin-12
+INTERJECT EDWIN 16 tb#StivanEdwin-16
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Se vuoi che mi occupi io di questo recupero, <CHARNAME>, non devi far altro che chiedere.~
 END
 IF ~~ THEN REPLY ~Grazie, ma ci penso io.~ EXTERN tb#stivj tb#StivanEdwin-12a
@@ -1197,12 +1182,12 @@ IF ~~ THEN DO ~SetGlobal("#tbStivanMarcus","GLOBAL",1)~ REPLY ~Grazie, mi hai to
 APPEND TB#STIVJ
 IF ~~ THEN tb#StivanEdwin-12a
 SAY ~Tornerai a chiedermelo in ginocchio, lo so!~
-COPY_TRANS EDWIN 12
+COPY_TRANS EDWIN 16
 END
 
 IF ~~ THEN tb#StivanEdwin-12b
 SAY ~Yeah! Andiamo là, allora!~
-COPY_TRANS EDWIN 12
+COPY_TRANS EDWIN 16
 END
 END
 
@@ -1757,10 +1742,10 @@ IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJaheira","GLOBAL",0)
+Global("tb#StivanJaheiraTrademeet","GLOBAL",0)
 AreaCheck("AR2000")~ THEN TB#STIVJ stivanjaheiratrademeet
 ~Toglimi una curiosità, Jaheira: i tuoi amici druidi hanno forse deciso di trastullarsi con gli abitanti del luogo?~
-DO ~SetGlobal("tb#StivanJaheira","GLOBAL",1)~
+DO ~SetGlobal("tb#StivanJaheiraTrademeet","GLOBAL",1)~
 == JAHEIRAJ ~Sarebbe bene evitare giudizi affrettati, Stivan. Preferirei che non ci pronunciassimo su una situazione di cui sappiamo poco o nulla.~
 == TB#STIVJ ~Le cose non si considerano mai per quel che sono, ma per quel che appaiono.~
 == JAHEIRAJ  ~Piantala, halfling. Questo non è il momento adatto per una delle tue disquisizioni. Qualcuno o qualcosa minaccia di sconvolgere l'equilibrio di questo posto, ed io sono più che intenzionata a fermarlo!~
@@ -1784,6 +1769,62 @@ DO ~SetGlobal("tb#StivanJaheiraCursed","GLOBAL",1)~
 == JAHEIRAJ ~Non... Non volevo essere così brusca. Questa maledizione sta avendo un brutto effetto sul mio carattere.~
 == TB#STIVJ ~Davvero? Io non noto alcuna differenza.~
 == JAHEIRAJ ~... Quando perderò la pazienza, Stivan, farai bene a trovarti a miglia di distanza.~
+EXIT
+
+CHAIN 
+IF ~InParty("Jaheira")
+See("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
+Global("JaheiraCursed","GLOBAL",10)
+CombatCounter(0)
+Global("tb#StivanJaheiraCursed","GLOBAL",1)~ THEN TB#STIVB stivanjaheirapostcurse
+~Allora, Jaheira, come ti senti adesso?~
+DO ~SetGlobal("tb#StivanJaheiraCursed","GLOBAL",2)~
+== BJAHEIR ~Per la barba di Silvanus, Stivan! Vuoi lasciarmi in pace?~
+== TB#STIVB ~Ehi! Ti ho soltanto chiesto come stai!~
+== BJAHEIR ~Credi che sia una sciocca? So bene che non aspetti altro che l'occasione per prenderti gioco di me!~
+== TB#STIVB ~No, non stavolta. Io... Sono rimasto molto colpito dalla tua forza d'animo. Ultimamente ti sono capitate un sacco di sciagure, come la perdita di tuo marito o la maledizione di Ployer, eppure reagisci sempre con grinta e tenacia.~
+== BJAHEIR ~Mi limito ad andare avanti, Stivan. C'è una vendetta che attende di essere compiuta.~
+== TB#STIVB ~Sì, ma... Io non riesco ad essere forte come te. Sono passati molti anni dalla... dalla morte dei miei familiari, ma ancora non riesco a darmi pace.~
+== BJAHEIR ~...~
+= ~... Spesso accadono cose che sono come domande. Passano i giorni, oppure gli anni, e la vita risponde.~
+= ~Dopo un pò impari che l'amore non è appoggiarsi a qualcuno, che la compagnia non è sicurezza. Impari che i baci non sono contatti, che i doni non sono promesse.~
+= ~Dopo un pò impari a costruire le strade oggi, perchè il terreno di domani è troppo incerto per fare piani. Impari che nella vita l'unica certezza è la morte, la sola cosa di cui non si può sapere nulla con certezza.~
+= ~E cominci ad accettare le sconfitte a testa alta, con gli occhi aperti e la grazia di un adulto, non con il dolore di un bambino.~
+= ~E impari che non puoi far altro che essere forte.~
+= ~...~
+= ~Khalid...~
+== TB#STIVB ~*SOB*!~
+== BJAHEIR ~Non... Non era mia intenzione rattristarti, Stivan. Faresti meglio a rivolgerti ad altri per ottenere il conforto che cerchi. Io... Temo di non essere la persona più adatta.~
+EXIT
+
+CHAIN
+IF ~InParty("Jaheira")
+See("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanJaheiraKhalid","GLOBAL",1)~ THEN TB#STIVB stivanjaheira2
+~Jaheira, posso chiederti perchè hai deciso di unirti alla compagnia di <CHARNAME>?~
+DO ~SetGlobal("tb#StivanJaheiraKhalid","GLOBAL",2)~
+== BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion, il <PRO_HISHER> padre adottivo, ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
+== TB#STIVB ~Chi è Khalid?~
+== BJAHEIR ~Khalid è... era mio marito.~
+== TB#STIVB ~*Ahem* Che fine ha fatto? L'abbiamo perso per strada?~
+== BJAHEIR ~Il tuo spirito è decisamente fuori luogo, ma lascerò correre. Mio marito è caduto per mano dello stregone di cui siamo alla ricerca, ed io non avrò pace sino a quando non sarà stato vendicato.~
+== TB#STIVB ~Accidenti, mi dispiace. Non lo sapevo.~
+== BJAHEIR ~Non c'era motivo per cui dovessi saperlo. Ora, se hai finito...~
+== TB#STIVB ~Beh, a questo punto non posso fare a meno di chiedermi un'altra cosa.~
+== BJAHEIR ~Parla, se devi, ma non ti garantisco una risposta. Stai toccando ferite che non si sono ancora rimarginate.~
+== TB#STIVB ~Hai pagato un alto prezzo per tener fede alla tua parola. Non voglio attribuire alcuna responsabilità a <CHARNAME>, ma se non avessi viaggiato con <PRO_HIMHER>...~
+== BJAHEIR ~Dove vuoi arrivare con il tuo ragionamento, Stivan? A chiedermi se lo avrei aiutato pur sapendo che in questo modo mio marito sarebbe morto?~
+== TB#STIVB ~Esattamente.~
+== BJAHEIR ~Questa domanda non è degna di risposta. L'uccisione di Khalid... era il tassello di un disegno più grande e al di là della nostra comprensione. Soprattutto della tua!~
+== TB#STIVB ~Ehi, non c'è bisogno di essere così aggressivi. Non dimenticare che anch'io ho perso i miei familiari.~
+== BJAHEIR ~La mia rabbia è più che giustificata! Hanno assassinato Khalid! Hanno profanato il suo corpo, dividendomi per sempre da mio marito! Come potrei non essere adirata?~
+= ~Mi addolora solo... Il fatto di non essermi potuta offrire al suo posto.~
+== TB#STIVB ~...~
+= ~... Jaheira, io--~
+== BJAHEIR ~No. Non voglio essere consolata.~
 EXIT
 
 CHAIN 
@@ -2620,6 +2661,149 @@ IF ~~ THEN FFWENCH StivanSamuel1-13
 = ~...~
 = ~... Grazie anche a te, <CHARNAME>. Questa sosta mi ha decisamente ringalluzzito, e ora mi sento pronto a tornare all'avventura con le gote belle rosse. Heh.~
 EXIT
+
+APPEND TB#STIVJ
+IF ~InParty("tb#stiv")
+InParty(Player1)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanPCTalk","GLOBAL",0)~ THEN StivanPC1
+SAY ~Sai, <CHARNAME>, sono veramente contento che tu mi abbia chiesto di viaggiare al tuo fianco. Grazie a te non soffro più la fame e potrò dare ai miei familiari un luogo in cui riposare indisturbati. Non mi sentivo così carico da anni, ormai!~
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",1)~ REPLY ~Sei sempre stato povero, Stivan?~ GOTO StivanPC1-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",1)~ REPLY ~Eppure mi sembrava che ti piacesse vendere piume.~ GOTO StivanPC1-2
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",1)~ REPLY ~Mi fa piacere saperlo. La tua conoscenza della città si è rivelata estremamente utile.~ GOTO StivanPC1-3
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",1)~ REPLY ~Ottimo. Continuiamo il nostro cammino ben determinati, allora.~ GOTO StivanPC1-4
+END
+
+IF ~~ THEN  StivanPC1-1
+SAY ~Oh no. Un tempo vivevo in condizioni di gran lunga migliori!~
+IF ~~ THEN GOTO StivanPC1-5
+END
+
+IF ~~ THEN StivanPC1-2
+SAY ~*Ahem* Vendere piume era un espediente di cui mi servivo per sopravvivere. Preferivo di gran lunga le occupazioni di un tempo.~
+IF ~~ THEN GOTO StivanPC1-5
+END
+
+IF ~~ THEN StivanPC1-3
+SAY ~Heh. La mia conoscenza non si limita alla capitale di Amn, sai? Sono stato in molti altri posti, e adesso ti spiego come e perché.~
+IF ~~ THEN GOTO StivanPC1-5
+END
+
+IF ~~ THEN StivanPC1-4
+SAY ~Yeah! Andiamo!~
+= ~Ah, un’ultima cosa. Quando vuoi fare una sosta, potremmo andare alla Locanda dei Cinque Boccali nel Quartiere del Ponte a bere un buon bicchiere di vino. Il proprietario è un halfling come me, anche se io sono molto più simpatico. Heh.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanPC1-5
+SAY ~La mia famiglia gestiva dei vigneti poco fuori Athkatla che venivano tramandati da generazioni. Tutti gli aspetti legati alla coltivazione venivano curati da un socio di mio papà, mentre noi ci occupavamo della vendita del prodotto finale: un vino semplicemente fenomenale!~ 
+= ~Ogni anno, dopo la stagione della vendemmia, i miei fratelli ed io partivamo insieme a papino per vendere le nostre botti, mentre la mamma restava a casa per commerciarne una piccola parte con i mercanti locali. Al nostro ritorno, dividevamo le entrate con i Farrahd.~
+IF ~~ THEN REPLY ~Quindi hai una certa conoscenza in materia di vini, giusto?~ GOTO StivanPC1-6
+IF ~~ THEN REPLY ~Percorrevate sempre le stesse rotte o cambiavate percorso di anno in anno?~ GOTO StivanPC1-7
+IF ~~ THEN REPLY ~Non ho capito se abitavate in campagna o in città.~ GOTO StivanPC1-8
+IF ~~ THEN REPLY ~E’ stato molto interessante ascoltarti. Adesso però dobbiamo ritornare alle nostre occupazioni.~ GOTO StivanPC1-4
+END
+ 
+IF ~~ THEN StivanPC1-6
+SAY ~Esatto. Tutto merito di papà!~
+IF ~~ THEN GOTO StivanPC1-9
+END
+
+IF ~~ THEN StivanPC1-7
+SAY ~Un po’ e un po’. I posti dove la vendita era particolarmente proficua costituivano una tappa fissa; quelli che invece non avevano fruttato un granchè li scartavamo a favore di altri in cui non eravamo mai andati.~
+IF ~~ THEN GOTO StivanPC1-9
+END
+
+IF ~~ THEN StivanPC1-8
+SAY ~Abitavamo in città, in una casetta nel Quartiere del Ponte. In campagna invece c’era una grande fattoria dove vivevano i braccianti che lavoravano per noi.~
+IF ~~ THEN GOTO StivanPC1-9
+END
+
+IF ~~ THEN StivanPC1-9
+SAY ~La nostra vita era scandita da un calendario di eventi che mi hanno sempre rassicurato. Tutto si ripeteva secondo una certa ciclicità... Almeno sino a quando non vennero i gabbiani.~
+= ~(Snort!) Maledetti uccellacci! Mi sale la bile al sol pronunciare il loro nome! Porto ancora oggi i segni di quell’incontro!~
+= ~A giudicare dalle tue cicatrici, anche tu devi aver avuto qualche esperienza turbolenta in passato. Sei forse stato assalito da uno stormo di gabbiani?~ 
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-13 
+IF ~~ THEN REPLY ~Non cambiare discorso, Stivan. Cosa successe?~ GOTO StivanPC1-10
+IF ~~ THEN REPLY ~Com’è possibile che dei gabbiani abbiano aggredito la tua famiglia? Non è nella loro natura essere così aggressivi.~ GOTO StivanPC1-11
+END
+
+IF ~~ THEN StivanPC1-10
+SAY ~(Stivan estrae l’urna con le ceneri dei suoi familiari dallo zaino). Successe *questo*.~
+= ~Stavo dicendo: come ti sei procurato quelle cicatrici? Sono forse opera di gabbiani?~
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-13 
+END
+
+IF ~~ THEN StivanPC1-11
+SAY ~Poco importa quale sia la loro natura, il risultato è sempre lo stesso!~
+= ~Se l’occhio non mi inganna, le tue cicatrici sembrerebbero proprio opera di gabbiani. Non è forse così?~
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Queste? Sono il frutto delle torture di Irenicus, il mago che stiamo cercando.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Dunque, vediamo... Questa mi è stata inferta da un coboldo nelle miniere di Nashkel, mentre questa l’ho riportata nella battaglia contro Sarevok a Baldur’s Gate. Oh, dimenticavo *questa*: un regalo di Irenicus, il mago che mi ha catturato e torturato.~ GOTO StivanPC1-13
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-12
+IF ~ Gender(Player1,FEMALE)~ THEN REPLY ~Nessun incontro ravvicinato con i gabbiani, per fortuna. Queste sono semplicemente i segni delle ferite riportate nelle ultime battaglie. Le vere cicatrici sono quelle che Irenicus ha inferto al mio animo torturandomi.~ GOTO StivanPC1-13 
+END
+
+IF ~~ THEN StivanPC1-12
+SAY ~Ti ha torturato? E perché mai?~
+IF ~~ THEN REPLY ~Essere un figlio di Bhaal comporta questo e ben altro.~ GOTO StivanPC1-16
+IF ~~ THEN REPLY ~E’ quello che sto cercando di scoprire. Imoen, la ragazza che è stata imprigionata con me, mi ha detto che voleva esplorare il mio potenziale di figlio di Bhaal, anche se non ho idea di cosa questo significhi.~ GOTO StivanPC1-16
+END
+
+IF ~~ THEN StivanPC1-13
+SAY ~Cosa?! Stai scherzando, vero? Mia mamma diceva sempre che le signorine non si toccano neanche con un fiore!~
+IF ~~ THEN REPLY ~E’ quello che dico anch’io.~ GOTO StivanPC1-14
+IF ~~ THEN REPLY ~Temo che i genitori di Irenicus non abbiano fatto altrettanto.~ GOTO StivanPC1-14
+IF ~~ THEN REPLY ~Ehm... Non credo che Irenicus conosca la cavalleria...~ GOTO StivanPC1-14
+END
+
+IF ~~ THEN StivanPC1-14
+SAY ~Hai idea del perché ti abbia torturata?~
+IF ~~ THEN REPLY ~Essere una figlia di Bhaal comporta questo e ben altro.~ GOTO StivanPC1-16
+IF ~~ THEN REPLY ~E’ quello che sto cercando di scoprire. Imoen, la ragazza che è stata imprigionata con me, mi ha detto che voleva esplorare il mio potenziale di figlia di Bhaal, anche se non ho idea di cosa questo significhi.~ GOTO StivanPC1-16
+END
+
+IF ~~ THEN StivanPC1-16
+SAY ~Bhaal? Ho già sentito questo nome...~
+= ~Ma certo! E’ quel dongiovanni che durante il Periodo dei Disordini seduceva tutte le donne che incontrava sulla sua strada, giusto?~
+IF ~~ THEN REPLY ~Come fai a conoscere quel periodo?~ GOTO StivanPC1-17
+IF ~~ THEN REPLY ~Ehm... Non proprio. Bhaal era una divinità malvagia che, conscia della sua futura caduta, ha lasciato una prole che sperava alimentasse la sua rinascita.~ GOTO StivanPC1-18
+IF ~~ THEN REPLY ~Io lo chiamerei “Bhaal: dongiovanni nel tempo libero, Signore dell’Omicidio di professione”.~ GOTO StivanPC1-18
+END
+
+IF ~~ THEN StivanPC1-17
+SAY ~*Ahem* Dall’aspetto non si direbbe, ma io sono più grande di te, sai?~
+= ~Ricordo quegli anni. Papà era preoccupatissimo a causa della scomparsa di Waukeen, la dea del commercio. Temeva che gli affari ne avrebbero risentito, e in effetti per un po’ di tempo fu così.~
+IF ~~ THEN GOTO StivanPC1-18
+END
+
+IF ~~ THEN StivanPC1-18
+SAY ~Questo significa che non tu sei un comune <RACE> come gli altri! Vali qualcosa, sotto sotto!~ 
+= ~E cosa mi dici di tua madre?~
+IF ~~ THEN REPLY ~Non l’ho mai conosciuta. Non so nulla di lei. Né il nome, né l’aspetto... Nulla.~ GOTO StivanPC1-19
+IF ~~ THEN REPLY ~Non ho idea di chi sia. Gorion, il mio patrigno, ha sempre evitato l’argomento.~ GOTO StivanPC1-19
+IF ~~ THEN REPLY ~Merita solo il mio più profondo disprezzo. Mi ha abbandonato dopo avermi dato alla luce.~ GOTO StivanPC1-19
+END
+
+IF ~~ THEN StivanPC1-19
+SAY ~Accidenti. La storia della tua vita è più complicata delle trame degli spettacoli che danno alla Locanda dei Cinque Boccali. Ci sei mai stato? E’ nel Quartiere del Ponte. Magari lì potremmo continuare a parlare davanti a un buon bicchiere di vino. Il proprietario è un halfling come me, anche se io sono molto più simpatico. Heh.~ 
+IF ~~ THEN EXIT
+END
+END
+
 
 
 ///////////////////////////////////////////

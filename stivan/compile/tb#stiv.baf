@@ -26,7 +26,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("tb#AerieDead","GLOBAL",1)
-		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccia, se n'è andata!~)
 END
 IF
 	!Dead("Aerie")
@@ -229,7 +229,7 @@ THEN
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
-		StartDIalogueNoSet(Player1)
+		StartDialogueNoSet(Player1)
 END
 
 IF
@@ -244,7 +244,7 @@ THEN
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
 	RESPONSE #20
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
-		StartDIalogueNoSet(Player1)
+		StartDialogueNoSet(Player1)
 END
 
 //////////////////////////////////////////////////////////////
@@ -258,6 +258,31 @@ THEN
 	RESPONSE #100
 		StartDialogueNoSet(Player1)
 END
+
+IF
+	InParty(Myself)
+	!RealGlobalTimerExpired("tb#StivanNoSpam","GLOBAL")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+END
+
+IF
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	Global("tb#StivanPCTalk","GLOBAL",0)
+THEN
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+		StartDialogueNoSet(Player1)
+END
+
+	
 
 IF
 	PartyRested()
@@ -335,10 +360,38 @@ END
 
 IF
 	InParty("Jaheira")
+	InParty(Myself)
+	Global("tb#StivanJaheiraKhalid","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#StivanJaheiraKhalid","GLOBAL",1)
+		RealSetGlobalTimer("tb#StivanJaheiraTimer","GLOBAL",1200)
+END
+
+IF
+	RealGlobalTimerExpired("tb#StivanJaheiraTimer","GLOBAL")
+	Global("tb#StivanJaheiraKhalid","GLOBAL",1)
+	InParty("Jaheira")
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck("Jaheira",CD_STATE_NOTVALID)
+	InParty(Myself)
+	CombatCounter(0)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
+THEN
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+		SetGlobal("tb#StivanJaheiraKhalid","GLOBAL",2)
+		StartDialogueNoSet("jaheira")
+END
+
+IF
+	InParty("Jaheira")
 	See("Jaheira")
 	!StateCheck("Jaheira",CD_STATE_NOTVALID)
 	CombatCounter(0)
-	Global("tb#StivanJaheira","GLOBAL",0)
+	Global("tb#StivanJaheiraTrademeet","GLOBAL",0)
 	AreaCheck("AR2000")
 	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
@@ -358,6 +411,22 @@ CombatCounter(0)
 Global("tb#StivanJaheiraCursed","GLOBAL",0)
 THEN
 	RESPONSE #100
+		StartDialogueNoSet("Jaheira")
+END
+
+IF
+InParty("Jaheira")
+See("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
+Global("JaheiraCursed","GLOBAL",10)
+CombatCounter(0)
+Global("tb#StivanJaheiraCursed","GLOBAL",1)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
+THEN
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("Jaheira")
 END
 
@@ -487,6 +556,7 @@ IF
 	Global("tb#StivanCernd","GLOBAL",1)
 THEN
 	RESPONSE #100
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet("cernd")
 END
 
