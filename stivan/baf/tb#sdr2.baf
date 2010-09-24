@@ -3,6 +3,7 @@ IF
 	InParty("jaheira")
 	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	!StateCheck("jaheira",CD_STATE_NOTVALID)
+	See("tb#stiv")
 	Global("tb#sdr2","GLOBAL",0)
 THEN
 	RESPONSE #100

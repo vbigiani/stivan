@@ -2,6 +2,8 @@ IF
 	InParty("tb#Stiv")
 	See("tb#Stiv")
 	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
 	Global("FollowedGarren","GLOBAL",1)
 	CombatCounter(0)
 	Global("tb#StivanKeldornAboutGarren","GLOBAL",0)

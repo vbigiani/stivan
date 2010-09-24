@@ -35,6 +35,8 @@ IF
 	InParty("tb#Stiv")
 	See("tb#Stiv")
 	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
 	CombatCounter(0)
 	Global("tb#StivanMinscDrow","GLOBAL",0)
 	Global("PhaereJob","GLOBAL",8)

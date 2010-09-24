@@ -3,6 +3,7 @@ IF
 	InParty("anomen")
 	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	!StateCheck("anomen",CD_STATE_NOTVALID)
+	See("Anomen")
 	Global("tb#sdr3","GLOBAL",0)
 THEN
 	RESPONSE #100

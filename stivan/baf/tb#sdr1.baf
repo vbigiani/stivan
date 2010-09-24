@@ -3,6 +3,7 @@ IF
 	InParty("Viconia")
 	!StateCheck("tb#stiv",CD_STATE_NOTVALID)
 	!StateCheck("viconia",CD_STATE_NOTVALID)
+	See("tb#stiv")
 	Global("tb#sdr1","GLOBAL",0)
 THEN
 	RESPONSE #100

@@ -2,6 +2,8 @@ IF
 	InParty("Edwin")
 	See("Edwin")
 	!StateCheck("Edwin",CD_STATE_NOTVALID)
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
 	Gender("Edwin",Female)
 	CombatCounter(0)
 	Global("tb#StivanEdwinaDrunk","GLOBAL",0)

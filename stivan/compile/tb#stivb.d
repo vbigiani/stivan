@@ -299,7 +299,7 @@ CHAIN BEDWIN StivanEdwin5
 == BEDWIN ~Cosa... Cosa *diavolo* stai facendo?! Giù le mani, brutto porco! Non toccarmi! Non toccare il mio... No! NO! NOOOOO!~
 == TB#STIVB ~Yeah! Finalmente è mia!!~
 == BEDWIN ~NON OSARE...!!!~
-== TB#STIVB ~Manus... Entis... Pa!~
+== TB#STIVB ~Manus... Entis... Pa!~ [ CAS_PM2M ]
 DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",1)~
 EXIT
 
