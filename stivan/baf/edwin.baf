@@ -26,6 +26,7 @@ IF
 	Global("tb#StivanEdwinaDrunk","GLOBAL",2)
 THEN
 	RESPONSE #100
+		StartCutsceneMode()
 		SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",3)
 		StartDialogueNoSet("tb#stiv")
 END

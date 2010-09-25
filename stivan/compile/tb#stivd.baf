@@ -20,6 +20,7 @@ IF
 	AreaCheck("AR2010") // Trademeet Inn
 THEN
 	RESPONSE #100
+		StartCutSceneMode()
 		SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",1)
 		StartDialogueNoSet("edwin")
 END

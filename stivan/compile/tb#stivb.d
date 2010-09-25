@@ -416,6 +416,7 @@ DO ~SetGlobal("tb#StivanEdwinaDrunk","GLOBAL",2)~
 = ~Ma... Miss Edwina, siete tutta rossa in viso! Avete forse bevuto un pò troppo?~
 == EDWINJ ~Io non ho bevuto troppo. Sono solo *HIC!* stanco e *HIC!* stanco e *HIC!* stanco e...~
 == TB#STIVJ ~Ho capito che siete stanca. In effetti, anch'io ho un cerchio alla testa... Lasciate che vi accompagni in camera, mia diletta.~
+DO ~RestParty()~
 EXIT
 
 CHAIN 
