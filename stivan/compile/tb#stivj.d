@@ -565,7 +565,7 @@ INTERJECT_COPY_TRANS VICONIJ 122 tb#stivanViconij-122
 ~Sono stanca di avere noie con gli abitanti della Superficie, Stivan. Che faccia quel che vuole... La sua paura mi diverte.~
 END
 
-INTERJECT C6ELHAN2 63 tb#stivanC6elhan2-63
+INTERJECT C6ELHAN2 62 tb#stivanC6elhan2-62
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) InParty("viconia") !StateCheck("viconia",CD_STATE_NOTVALID)~ THEN
 ~<CHARNAME>! Perchè hai permesso una cosa simile?!~
 END
@@ -578,7 +578,7 @@ IF ~~ THEN REPLY ~Come tu stesso puoi vedere, questi elfi sono tutto fuorchè col
 APPEND TB#STIVJ
 IF ~~ ViconiaGeas1-1
 SAY ~Non... Non sei tenuto a spiegarmi le tue ragioni? Bene! Benissimo! Quando mi metterai un cappio intorno al collo mi sforzerò di non chiederti il perchè!~
-COPY_TRANS C6ELHAN2 63
+COPY_TRANS C6ELHAN2 62
 END
 
 IF ~~ ViconiaGeas1-2
@@ -595,7 +595,7 @@ END
 
 IF ~~ ViconiaGeas1-4
 SAY ~Bah! La tua mente è più contorta di quella di un gabbiano!~
-COPY_TRANS C6ELHAN2 63
+COPY_TRANS C6ELHAN2 62
 END
 END
 
@@ -608,7 +608,7 @@ IF ~~ THEN TB#STIVJ ViconiaGeas1-5
 = ~Cosa *diavolo* stai facendo?! Toglimi le mani di dosso, iblith!~
 == TB#STIV ~Heh. Ti voglio bene, Viccy.~
 == VICONIJ~... Shar mi sia testimone, <CHARNAME>: pagherai per ogni affronto inflittomi dal piccoletto. Possano le tenebre inghiottirmi se non terrò fede al mio giuramento!~
-COPY_TRANS C6ELHAN2 63
+COPY_TRANS C6ELHAN2 62
 
 INTERJECT MAZZY 25 tb#StivanMazzy-25
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
@@ -1487,11 +1487,6 @@ END
 INTERJECT_COPY_TRANS HENDAK 19 tb#StivanHendak-19
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~Se quella nave è sempre stata la base degli schiavisti sin dal loro arrivo in città, allora... Allora sono qui da prima che nascessi!~
-END
-
-INTERJECT_COPY_TRANS sewerm1 23 tb#StivanSewerm1-23
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
-~Speriamo che almeno qualcuno dei suoi familiari sia ancora in vita. Sarebbe triste se rimanesse del tutto solo.~
 END
 
 INTERJECT_COPY_TRANS CIVFRUS1 1 tb#StivanCivfrus1-1
