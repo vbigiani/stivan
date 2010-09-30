@@ -1798,9 +1798,9 @@ IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJaheiraKhalid","GLOBAL",1)~ THEN TB#STIVB stivanjaheira2
+Global("tb#StivanJaheiraKhalid","GLOBAL",2)~ THEN TB#STIVB stivanjaheira2
 ~Jaheira, posso chiederti perchè hai deciso di unirti alla compagnia di <CHARNAME>?~
-DO ~SetGlobal("tb#StivanJaheiraKhalid","GLOBAL",2)~
+DO ~SetGlobal("tb#StivanJaheiraKhalid","GLOBAL",3)~
 == BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion, il <PRO_HISHER> padre adottivo, ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
 == TB#STIVB ~Chi è Khalid?~
 == BJAHEIR ~Khalid è... era mio marito.~
