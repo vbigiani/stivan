@@ -1612,7 +1612,7 @@ END
 
 // Very well then, you shall have it.  Return it soon or you will not be given your reward.  It is very important that the cup remains in the hands of the Order.
 INTERJECT_COPY_TRANS SAFE KAYL2 21 tb#StivanKayl2-21
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Conosco qualcuno che conosce qualcuno... Potremmo rimediare un bel gruzzoletto!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Conosco qualcuno che conosce qualcuno... Potremmo rimediare un bel gruzzoletto vendendo quella coppa!~
 == KAYL2 ~Se osi parlare ancora di cose simili ti rimuovero' la lingua, Stivan!~
 == TB#STIVJ ~Chi ti ha detto il mio nome?~
 == KAYL2 ~La stessa persona che mi avviserebbe se tu tentassi di mettere atto al tuo piano.~
@@ -2861,9 +2861,9 @@ END
 == ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Dovrei ucciderti all'istante per aver solo pensato un atto del genere!~
 == ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Una proposta allettante, ma la feccia che abita questo luogo non e' degna della mia lama.~
 END
-IF ~/* !Alignment(Player1,MASK_GOOD) */~ THEN REPLY ~Un'ottima idea, adesso che chi penso.~ EXTERN tb#stivj inAr0903-2
-IF ~/* !Alignment(Player1,MASK_GOOD) */~ THEN REPLY ~Mi piacerebbe, ma temo saremmo sopraffatti dal numero di questi paladini.~ EXTERN tb#stivj inAr0903-3
-IF ~/* !Alignment(Player1,MASK_EVIL) */~ THEN REPLY ~Scordatelo. Non ho intenzione di inimicarmi questi difensori del bene.~ EXTERN tb#stivj inAr0903-3
+IF ~!Alignment(Player1,MASK_GOOD)~ THEN REPLY ~Un'ottima idea, adesso che chi penso.~ EXTERN tb#stivj inAr0903-2
+IF ~!Alignment(Player1,MASK_GOOD)~ THEN REPLY ~Mi piacerebbe, ma temo saremmo sopraffatti dal numero di questi paladini.~ EXTERN tb#stivj inAr0903-3
+IF ~!Alignment(Player1,MASK_EVIL)~ THEN REPLY ~Scordatelo. Non ho intenzione di inimicarmi questi difensori del bene.~ EXTERN tb#stivj inAr0903-3
 
 CHAIN IF ~~ THEN tb#stivj inAr0903-2
 ~Wow! Io stavo scherzando, ma non mi dispiace affatto l'esito di questa discussione!~ DO ~SetGlobal("TempleShout0903","GLOBAL",1)~
