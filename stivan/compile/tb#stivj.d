@@ -1592,7 +1592,37 @@ INTERJECT_COPY_TRANS THIEF5 7 tb#StivanThief5-7
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~L'hai comprata dal Pollice, vero? Quell’oste ha il brutto vizio di allungare il vino con l'acqua.~
 END
 
+// If you consider these men a threat, then do what you think is necessary.   Gloves of Healing would be a suitable reward for the task, I think.  Do you accept?
+INTERJECT_COPY_TRANS KAYL2 13 tb#StivanKayl2-13
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Io dico di unirci a loro! Possiamo arricchirci in modo illegale e insozzare l'onore del Cuore Radioso... Nessun lato negativo per questa opzione, dico io!~
+== KAYL2 ~Mi auguro che il capo del tuo gruppo sia piu' sensato di te, halfling.~
+END
 
+// That is a shame, truly, for we have no one else to turn to at this time.  If you change your mind, please come back and speak with me. 
+INTERJECT_COPY_TRANS KAYL2 7 tb#stivanKayl2-7
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Yippie! Non dobbiamo ubbidire ai paladini!~
+END
+
+// Excellent. Thanks to the Shadow Thieves, Anarg has kept their activities localized in the Bridge District. I suggest you search there. May Torm be with you.
+INTERJECT_COPY_TRANS KAYL2 14 tb#StivanKayl2-14
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Prima non me li lasci uccidere, poi dobbiamo addirittura ubbidire a loro... Che noia!~
+== KAYL2 ~Di cosa stai parlando, halfing? Hai forse minacciato di attaccarci?~
+== TB#STIVJ ~(cough) piuma (cough) gola.~
+END
+
+// Very well then, you shall have it.  Return it soon or you will not be given your reward.  It is very important that the cup remains in the hands of the Order.
+INTERJECT_COPY_TRANS SAFE KAYL2 21 tb#StivanKayl2-21
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Conosco qualcuno che conosce qualcuno... Potremmo rimediare un bel gruzzoletto!~
+== KAYL2 ~Se osi parlare ancora di cose simili ti rimuovero' la lingua, Stivan!~
+== TB#STIVJ ~Chi ti ha detto il mio nome?~
+== KAYL2 ~La stessa persona che mi avviserebbe se tu tentassi di mettere atto al tuo piano.~
+END
+
+// Then you are due your just reward.  The Most Noble Order of the Radiant Heart gives you our fullest thanks.
+INTERJECT_COPY_TRANS SAFE KAYL2 18 tb#StivanKayl2-18
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Abbiamo ubbidito a dei paladini e ucciso dei simpatici contrabbandieri per un paio di guanti? Bah, che perdita di tempo e opportunita' per arricchirci.~
+== KAYL2 ~Le tue azioni hanno aiutato il Bene, per cui ignorero' i tuoi insulti, per ora. Ti consiglio di non presentarti piu' al mio cospetto, Stivan.~
+END
 
 
 
