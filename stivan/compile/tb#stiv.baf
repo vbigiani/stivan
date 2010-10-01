@@ -769,3 +769,39 @@ THEN
 	RESPONSE #100
 		StartDialogueNoSet("valygar")
 END
+
+IF
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	Global("tb#stivanar0903","GLOBAL",0)
+	CombatCounter(0)
+	AreaCheck("ar0903")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
+THEN
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	Dead("Heartg1")
+	Dead("Heartg2")
+	Dead("Heartg3")
+	Dead("Heartg4")
+	Dead("Heartg5")
+	Global("tb#stivanClearedAR0903","GLOBAL",0)
+	CombatCounter(0)
+	AreaCheck("ar0903")
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
+THEN
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+		StartDialogueNoSet(Player1)
+END
+

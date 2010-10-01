@@ -2797,7 +2797,53 @@ IF ~~ THEN StivanPC1-19
 SAY ~Accidenti. La storia della tua vita è più complicata delle trame degli spettacoli che danno alla Locanda dei Cinque Boccali. Ci sei mai stato? E’ nel Quartiere del Ponte. Magari lì potremmo continuare a parlare davanti a un buon bicchiere di vino. Il proprietario è un halfling come me, anche se io sono molto più simpatico. Heh.~ 
 IF ~~ THEN EXIT
 END
+
+IF ~AreaCheck("ar0903") Global("tb#stivanar0903","GLOBAL",0)~ THEN inAr0903
+SAY ~Eh? Cosa ci facciamo in questo luogo? E' cosi' pieno di paladini che mi viene il voltastomaco!~
+= ~Ho capito! Mi vuoi fare un regalo!~
+IF ~~ THEN DO ~SetGlobal("tb#stivanar0903","GLOBAL",1)~ REPLY ~Di cosa stai parlando?~ GOTO inAr0903-1
 END
+
+IF ~~ THEN inAr0903-3
+SAY ~Bah, con te non ci si puo' mai divertire!~
+IF ~~ THEN EXIT
+END
+
+IF ~AreaCheck("ar0903")	Dead("Heartg1")
+	Dead("Heartg2")
+	Dead("Heartg3")
+	Dead("Heartg4")
+	Dead("Heartg5")
+	Global("tb#stivanClearedAR0903","GLOBAL",0)~ THEN ClearedAr0903
+SAY ~Pant... Ce-ce l'abbiamo fatta!~
+IF ~~ THEN DO ~SetGlobal("tb#stivanClearedAR0903","GLOBAL",1)~ EXIT
+END
+END
+
+CHAIN IF ~~ THEN tb#stivj inAr0903-1
+~Che domande! Mi vuoi regalare l'opportunita' di uccidere tutti questi paladini! In effetti mi serve un po' di allenamento.~
+BRANCH ~InParty("Keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ BEGIN
+== KELDORJ ~Ti avverto di pesare le tue prossime parole - mi dispiacerebbe se fossero le tue ultime.~
+== TB#STIVJ ~Dici con me o con <CHARNAME>?~
+== KELDORJ ~Con entrambi, ma solo per la prima parte della frase.~
+== TB#STIVJ ~... Eh?~
+END
+== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Dovrei ucciderti all'istante per aver solo pensato un atto del genere!~
+== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Una proposta allettante, ma la feccia che abita questo luogo non e' degna della mia lama.~
+END
+IF ~/* !Alignment(Player1,MASK_GOOD) */~ THEN REPLY ~Un'ottima idea, adesso che chi penso.~ EXTERN tb#stivj inAr0903-2
+IF ~/* !Alignment(Player1,MASK_GOOD) */~ THEN REPLY ~Mi piacerebbe, ma temo saremmo sopraffatti dal numero di questi paladini.~ EXTERN tb#stivj inAr0903-3
+IF ~/* !Alignment(Player1,MASK_EVIL) */~ THEN REPLY ~Scordatelo. Non ho intenzione di inimicarmi questi difensori del bene.~ EXTERN tb#stivj inAr0903-3
+
+CHAIN IF ~~ THEN tb#stivj inAr0903-2
+~Wow! Io stavo scherzando, ma non mi dispiace affatto l'esito di questa discussione!~ DO ~SetGlobal("TempleShout0903","GLOBAL",1)~
+== KELDORJ IF ~InParty("Keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ THEN ~Cosa state facendo? All'armi, fratelli, all'armi!~ DO ~LeaveParty() Enemy()~
+== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Tradimento! Muori, <CHARNAME>!~ DO ~LeaveParty() Enemy()~
+EXIT
+
+
+
+
 
 
 
