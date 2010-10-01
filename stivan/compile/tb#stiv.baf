@@ -732,6 +732,7 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanCernd","GLOBAL",3)
 	GlobalGT("AsylumPlot","GLOBAL",1)
+	AreaCheck("ar1600")
 	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
 	RESPONSE #80

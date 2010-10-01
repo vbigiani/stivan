@@ -113,7 +113,7 @@ Global("tb#StivanViconia","GLOBAL",7)~ THEN BVICONI stivan-viconia-7
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",8)~
 == TB#STIVB ~Heh. Sarei tentato di risponderti con un bel "Era ora!" ma, conoscendoti, è meglio che lo tenga per me.~
 == BVICONI ~L'hai appena detto, imbecille.~
-== TB#STIVB ~Ops. Chiedo scusa. Amici come prima?~
+== TB#STIVB ~Oops. Chiedo scusa. Amici come prima?~
 == BVICONI ~Godrai nuovamente della mia considerazione, se è questo che intendi.~
 == TB#STIVB ~Heh. Sono felice che le cose tra noi si siano sistemate, Viccy.~
 == BVICONI ~Iniziamo male, sakphul. Molto male.~
@@ -1420,7 +1420,7 @@ DO ~SetGlobal("tb#StivanNaliaPrison","GLOBAL",1)~
 = ~...~
 = ~... Visto? Completamente scomparsa!~
 == BNALIA ~E' ovvio che sia scomparsa! Ha corroso la tunica!~
-== TB#STIVB ~Ops.~
+== TB#STIVB ~Oops.~
 = ~Mi dispiace, Miss Nalia, io... Volevo solo essere d'aiuto...~
 == BNALIA ~Non fa niente, Stivan. So bene quali fossero le tue intenzioni.~
 == TB#STIVB ~Eeeekkkk!~

@@ -2356,7 +2356,8 @@ See("Cernd")
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanCernd","GLOBAL",3)
-GlobalGT("AsylumPlot","GLOBAL",1)~ THEN TB#STIVJ stivancerd4
+GlobalGT("AsylumPlot","GLOBAL",1)
+AreaCheck("ar1600")~ THEN TB#STIVJ stivancerd4
 ~(Gasp!) Questo posto... E' una colonia del nemico pennuto!~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",4)~
 == CERNDJ ~I gabbiani nidificano in ambienti marini quali scogliere, isole e coste, pertanto è comprensibile che qui siano numerosi.~
