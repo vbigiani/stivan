@@ -776,11 +776,8 @@ IF
 	Global("tb#stivanar0903","GLOBAL",0)
 	CombatCounter(0)
 	AreaCheck("ar0903")
-	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #80
-		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
-	RESPONSE #20
+	RESPONSE #100
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet(Player1)
 END
@@ -796,11 +793,8 @@ IF
 	Global("tb#stivanClearedAR0903","GLOBAL",0)
 	CombatCounter(0)
 	AreaCheck("ar0903")
-	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #80
-		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
-	RESPONSE #20
+	RESPONSE #100
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet(Player1)
 END
