@@ -2872,8 +2872,45 @@ CHAIN IF ~~ THEN tb#stivj inAr0903-2
 == ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Tradimento! Muori, <CHARNAME>!~ DO ~LeaveParty() Enemy()~
 EXIT
 
+CHAIN IF ~Dead("udbalor") Global("tb#stivanUdbalor","GLOBAL",0)~ THEN TB#STIVJ aboutUdBalor
+~In... in che razza di posto ci hai condotti, <CHARNAME>?~
+= ~Da quando siamo qui abbiamo dovuto combattere beholder, mind flayer, e ora demoni! Cos'altro ci aspetta, un drago? Un'esercito di drow?~
+DO ~SetGlobal("tb#stivanUdbalor","GLOBAL",1)~
+BRANCH ~InParty("viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ BEGIN
+== TB#STIVJ ~Uhm, presenti esclusi, ovviamente!~
+== VICONIJ ~Hmpf. Sarei tentata di tradirvi e unirmi alla prima pattuglia drow che incontro pur di poterti zittire una volta per sempre, jaluk.~
+== TB#STIVJ ~Heh. Ti adoro quando hai voglia di scherzare, Viccy!~
+== VICONIJ ~Non mettere a prova la tua buona sorte, piccoletto.~
+END
+END
+IF ~~ THEN REPLY ~Non ho mica scelto io questo luogo! La colpa e' di Saemon Havarian!~ EXTERN TB#STIVJ aboutUdBalor-1
+IF ~~ THEN REPLY ~Coraggio. Ho la sensazione che presto saremo di ritorno ad Athkatla.~ EXTERN TB#STIVJ aboutUdBalor-2
+IF ~~ THEN REPLY ~Tu hai paura? A me piace qua. Tre anni di battaglie, e del male non ci sara' altro che il ricordo!~ EXTERN TB#STIVJ aboutUdBalor-3
 
+APPEND TB#STIVJ
+IF ~~ THEN aboutUdBalor-1
+SAY ~Si vede che sei un buon capo - sei sempre svelto a scaricare le colpe sugli altri!~
+IF ~~ THEN REPLY ~Veramente...~ GOTO aboutUdBalor-4
+IF ~~ THEN REPLY ~Guarda che...~ GOTO aboutUdBalor-4
+IF ~~ THEN REPLY ~Di cosa stai...~ GOTO aboutUdBalor-4
+END
 
+IF ~~ THEN aboutUdBalor-2
+SAY ~Speriamo...~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN aboutUdBalor-3
+SAY ~Co-cosa? Tu sei matto!~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN aboutUdBalor-4
+SAY ~Ooh, sai anche negare l'evidenza - sei proprio tagliato per comandare!~
+= ~Mi raccomando, quando ti eleggono come Consigliere dell'Amn, nomina me come ministro della difesa aerea!~
+IF ~~ THEN EXIT
+END
+END
 
 
 
