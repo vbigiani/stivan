@@ -13,4 +13,5 @@ THEN
 		ActionOverride(Player6,LeaveAreaLUA("AR0041","",[600.400],8))
 		ActionOverride("tb#stiv",JumpToPoint([600.500]))
 		FadeFromColor([20.0],0)
+		EndCutsceneMode()
 END
