@@ -816,3 +816,13 @@ THEN
 		StartDialogueNoSet(Player1)
 END
 
+IF
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	PartyHasItem("NPSW02")
+	Global("tb#YoshiKatanaIsNotUsable","GLOBAL",1)
+	See("slilmat")
+THEN
+	RESPONSE #100
+		ActionOverride("slilmat",StartDialogueNoSet("tb#stivj"))
+END
