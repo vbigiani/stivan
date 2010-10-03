@@ -1273,7 +1273,7 @@ INTERJECT_COPY_TRANS BODHIAMB 17 tb#StivanBodhiamb-17
 END
 
 INTERJECT_COPY_TRANS UDSILVER 0 tb#StivanUdsilver-0
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~U... Un drago! Si salvi chi può!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~L..l'avevo detto! Un drago! Si salvi chi può!~
 == UDSILVER IF ~!Dead("UDtrap06") Dead("UDbalor") !Dead("UDsvir03")~ THEN ~Non agitarti. Non hai motivo di temermi.~
 == UDSILVER IF ~OR(3) Dead("UDtrap06") !Dead("UDbalor") Dead("UDsvir03")~ THEN ~Non agitarti. Sebbene le vostre azioni siano state turpi e vergognose, non subirete la mia ira. Le attuali circostanze, tuttavia, richiedono una collaborazione.~
 END
@@ -1342,6 +1342,7 @@ END
 
 IF ~~ THEN StivanDrow1-9
 SAY ~Io... Ho un pò di vertigini. Non sono abituato a simili altezze. E' meglio procedere piano piano, senza fretta. Non voglio sbucciarmi le ginocchia a furia di cadere.~
+COPY_TRANS UDSILVER 37
 END
 END
 
@@ -2403,7 +2404,7 @@ CombatCounter(0)
 Global("tb#StivanCernd","GLOBAL",4)
 GlobalGT("SolaufeinJob","GLOBAL",7)
 PartyHasItem("misc9w")
-Dead("udsola01")
+Dead("solaufein")
 ~ THEN TB#STIVJ killedSola
 ~Non posso credere che tu abbia ucciso l'unico drow amichevole in questo posto!~
 == CERNDJ ~I gabbiani che uccidi sono ugualmente amichevoli, e alle mie orecchie giungono grida simili ogni volta che ne uccidi uno.~
@@ -2415,7 +2416,7 @@ See("cernd")
 CombatCounter(0)
 Global("tb#StivanCernd","GLOBAL",4)
 Global("SolaufeinJob","GLOBAL",9)
-!Dead("udsola01")
+!Dead("solaufein")
 ~ THEN TB#STIVJ savedSola
 ~Mi stava simpatico. Grazie, CHARNAME, di averlo risparmiato nonostante il rischio che correvi.~
 == CERNDJ ~Cosi' come CHARNAME ha risparmiato una vita correndo un rischio cosi' grave, non dovresti allo stesso modo risparmiare le vite dei gabbiani?~

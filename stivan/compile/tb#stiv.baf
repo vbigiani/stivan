@@ -606,7 +606,7 @@ IF
 	Global("tb#StivanCernd","GLOBAL",4)
 	GlobalGT("SolaufeinJob","GLOBAL",7)
 	PartyHasItem("misc9w")
-	Dead("udsola01")
+	Dead("solaufein")
 	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
 	RESPONSE #80
@@ -625,7 +625,7 @@ IF
 	CombatCounter(0)
 	Global("tb#StivanCernd","GLOBAL",4)
 	Global("SolaufeinJob","GLOBAL",9)
-	!Dead("udsola01")
+	!Dead("solaufein")
 	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
 	RESPONSE #80
