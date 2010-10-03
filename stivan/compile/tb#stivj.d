@@ -1346,7 +1346,7 @@ COPY_TRANS UDSILVER 37
 END
 END
 
-INTERJECT_COPY_TRANS UDSILVER 48 tb#StivanUdsilver-48
+INTERJECT_COPY_TRANS UDSILVER 46 tb#StivanUdsilver-46
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Po... Posso farvi una ri-richiesta, illustrissima e v-veneranda...~
 == UDSILVER ~Non c'è tempo per inutili adulazioni. Parla, ma sii rapido.~
 == TB#STIVJ ~Beh, ecco... Io... Mi stavo chiedendo s-se... Se fosse possibile m-mantenere questo... q-questo aspetto...~

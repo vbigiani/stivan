@@ -187,6 +187,7 @@ END
 
 IF
 	!GlobalTimerExpired("tb#stivanMessageTimer","GLOBAL")
+	!GlobalTimerNotExpired("tb#stivanMessageTimer","GLOBAL")
 	Global("tb#stivanEntryTest","GLOBAL",3)
 	GlobalGT("Chapter","GLOBAL",5)
 	InParty(Myself)
