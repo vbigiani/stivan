@@ -7,3 +7,19 @@ THEN
 		StartCutSceneMode()
 		StartCutScene("tb#surn")
 END
+
+IF
+	InParty("tb#Stiv")
+	InParty("Nalia")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+	!StateCheck("nalia",CD_STATE_NOTVALID)
+	Global("tb#StivanNaliaTandalon","GLOBAL",0)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
+THEN
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+		CreateCreatureObject("tb#stand","Nalia",1,0,0)
+		ActionOverride("tb#stand",StartDialogueNoSet("Nalia"))
+END

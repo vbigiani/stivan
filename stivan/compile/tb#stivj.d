@@ -3152,3 +3152,18 @@ DO ~SetGlobal("tb#StivanNaliaOphal","GLOBAL",1)~
 == NALIAJ ~Vi suggerisco di andarvene, Lord Ophal. Non mi interessa il vostro sporco denaro, e non tratto le persone come bestiame destinato alla vendita.~
 == NOBLEM3 ~Che peccato. Sarebbe stato un ottimo affare.~
 EXIT
+
+BEGIN TB#STAND
+CHAIN IF ~InParty("tb#Stiv") InParty("Nalia") !StateCheck("tb#Stiv",CD_STATE_NOTVALID) !StateCheck("nalia",CD_STATE_NOTVALID) Global("tb#StivanNaliaTandalon","GLOBAL",0)~ THEN TB#STAND StivanNaliaTandalon
+~Nalia... Nel mio circolo si vocifera da tempo che fossi decaduta, ma i pettegolezzi non rendono l'idea della tua miseria.~
+== NALIAJ ~Siete tale e uguale a vostra figlia, Miss Tandolan, se non peggio. Ad ogni modo, non mi interessa ciò che dite su di me nei vostri salotti.~
+== TB#STAND ~Ma certo, cara. Tornatene tra gli zingari a cui ormai appartieni.~
+== TB#STIVJ ~La vera nobiltà non deriva dalla nascita, ma dalle proprie azioni. Il massimo a cui potete aspirare è il titolo di bruttona tra le bruttone, sapete?~
+== TB#STAND ~Come osi, mostriciattolo! Potrei farti arrestare dalle mie guardie per una simile infamia!~
+== TB#STIVJ ~Quali guardie? Quelle che i Ladri Tenebrosi si vantano di aver raggirato un'infinità di volte?~
+== TB#STAND ~Non... Non finisce qui! Vi siete appena fatti una nemica!~
+DO ~DestroySelf() SetGlobal("tb#StivanNaliaTandalon","GLOBAL",1)~
+== NALIAJ ~...~
+= ~... Ti ringrazio, Stivan. Sei stato molto gentile.~
+== TB#STIVJ ~Heh. Non potevo fare diversamente. Questa era una delle volte in cui tacere diventa una colpa e parlare diventa un obbligo.~
+EXIT
