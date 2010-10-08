@@ -3135,7 +3135,7 @@ DO ~SetGlobal("tb#StivanRose","GLOBAL",1)~
 == MURDGIRL ~Sei proprio delizioso quando arrossisci in quel modo. Ci vediamo, tesoruccio.~
 EXIT
 
-CHAIN IF ~IsValidForPartyDialog("tb#stiv")
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
 IsValidForPartyDialog("Nalia")
 See("tb#stiv")
 See("Nalia")
