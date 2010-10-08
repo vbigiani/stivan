@@ -1623,6 +1623,79 @@ INTERJECT_COPY_TRANS SAFE KAYL2 18 tb#StivanKayl2-18
 == KAYL2 ~Le tue azioni hanno aiutato il Bene, per cui ignorero' i tuoi insulti, per ora. Ti consiglio di non presentarti piu' al mio cospetto, Stivan.~
 END
 
+INTERJECT_COPY_TRANS WELLYN 3 tb#StivanWellyn-3
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~(Snort!) Simili tragedie non accadrebbero se le guardie facessero il loro dovere!~
+== JAHEIRAJ IF ~IsValidForPartyDialog("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Non dubito che la milizia locale sia inadempiente, Stivan, ma è bene essere critici portando nuove idee anzichè semplici accuse.~
+END
+
+INTERJECT_COPY_TRANS JAHEIRAJ 292 tb#StivanJaheiraj-292
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Perchè tanta preoccupazione per dei semplici ragni?~
+== JAHEIRAJ ~Per i servitori della Natura, preservare la vita delle creature della Madre è il comandamento più importante nella sua forma più reverenziale.~
+== TB#STIVJ ~Heh. Non ho capito nulla, tranne il fatto che in qualche modo vuoi essere d’aiuto a quelle bestioline.~
+END
+
+INTERJECT_COPY_TRANS WELLYN 8 tb#StivanWellyn-8
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Recuperare il pupazzo del bambino non basta - l'assassino deve essere fermato, prima che mieta altre vittime!~
+== MAZZYJ IF ~IsValidForPartyDialog("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Porremo fine a questa minaccia insieme, Stivan. Non possiamo permettere che la nostra gente venga colpita da simili tragedie!~
+BRANCH ~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ BEGIN
+== KORGANJ ~Prima l'accattone, ora il trapassato. Hai qualche perversa inclinazione per i bambocci halfling, <CHARNAME>?~
+== TB#STIVJ ~Vorrei vedere come ti sentiresti se avessero rubato il tuo, di orsacchiotto!~
+== KORGANJ ~... Allontanatemi il poppante, per le chiappe di Abbathor, prima che lo spedisca nell'Abisso dai suoi consanguinei!~
+END
+END
+
+INTERJECT_COPY_TRANS2 LLYNIS 10 tb#StivanLlynis-10
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Puoi starne certo, mostro! Muori!~
+END
+
+INTERJECT_COPY_TRANS2 LLYNIS 8 tb#StivanLlynis-8
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Puoi starne certo, mostro! Muori!~
+END
+
+INTERJECT_COPY_TRANS2 LLYNIS 11 tb#StivanLlynis-11
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo lasciare invendicata la morte del bambino halfling, <CHARNAME>! Non lo permetterò!~
+== MAZZYJ IF ~IsValidForPartyDialog("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Sono con te, Stivan! In nome di Arvoreen, giustizia sarà fatta!~
+END
+
+INTERJECT_COPY_TRANS2 LLYNIS 12 tb#StivanLlynis-12
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo lasciare invendicata la morte del bambino halfling, <CHARNAME>! Non lo permetterò!~
+== MAZZYJ IF ~IsValidForPartyDialog("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Sono con te, Stivan! In nome di Arvoreen, giustizia sarà fatta!~
+END
+
+INTERJECT_COPY_TRANS RENAL 30 tb#StivanRenal-30
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Già mi vedo nei panni della spia, mentre cerco indizi o elimino i testimoni scomodi. Stivan il Cacciatore sta per farsi un nome tra le Ombre dell'Amn!~
+BRANCH ~IsValidForPartyDialog("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ BEGIN
+== YOSHJ ~Nel caso ti fosse sfuggito, Stivan, non stiamo andando a giocare a guardie e ladri.~
+== TB#STIVJ ~Heh. Ti voglio nella mia squadra, Yoshi.~
+END
+END
+
+INTERJECT_COPY_TRANS YOSHJ 73 tb#StivanYoshj-73
+== YOSHJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Soprattutto, tieni d'occhio il piccoletto. Non vorrei che la nostra copertura saltasse ancor prima di esserci avvicinati a Mae’Var.~
+END
+
+INTERJECT_COPY_TRANS MAEVAR 29 tb#StivanMaevar-29
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Yoshimo") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN ~(Gasp!) Siamo stat -- Umpppphh!~
+== YOSHJ ~Perdoni l'interruzione, signore. Qual è il nome del nostro obiettivo?~
+END
+
+INTERJECT_COPY_TRANS NOBLEM1 7 tb#StivanNoblem1-7
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Edwin") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Heh. Mi sembra un ottimo piano per sbarazzarsi degli Incappucciati e del qui presente Edwin.~
+== EDWINJ ~(Sospettavo che l'halfling tramasse contro la mia persona, ma questo piano è diabolico. Non lascerò che mi spediscano a casa da mamma. Non dopo che mi ha schiaffeggiato per averle detto di starsene un pò zitta!)~
+END
+
+INTERJECT_COPY_TRANS NOBLEW1 6 tb#StivanNoblew1-6
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~*Mia* mamma diceva sempre che la classe dei nobili collasserebbe su se stessa se non vi fossero quelle medie e inferiori. Come la mettiamo adesso, eh?~
+END
+
+/* INTERJECT_COPY_TRANS
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") IsValidForPartyDialog("Cernd") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~(Sospira) Mi piacerebbe tanto saper decantare poesie e filastrocche come questo marinaio, ma la mia memoria, purtroppo, non è delle migliori.~
+== CERNDJ ~Se la poesia non viene naturalmente come le foglie vengono agli alberi, allora è meglio che non venga per niente.~
+== TB#STIVJ ~Complimenti, Cernd. Hai appena fatto sprofondare la scarsa considerazione che avevo di te!~
+END */
+
+
+
 
 
 ///////////////////////////////////////////
@@ -2966,11 +3039,33 @@ IF ~~ THEN EXIT
 END
 END
 
+CHAIN 
+IF ~InParty("Jaheira")
+See("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
+AreaCheck("AR2600")
+CombatCounter(0)
+Global("tb#StivanJaheiraTethyr","GLOBAL",0)~ THEN TB#STIVJ JaheiraStivanAr2600
+~Mi sembri a tuo agio in questo posto, Jaheira, come se ti trovassi a casa.~
+DO ~SetGlobal("tb#StivanJaheiraTethyr","GLOBAL",1)~
+== JAHEIRAJ ~In un certo senso lo sono. Ho visto la luce proprio in questa nazione, sebbene in una regione molto più a sud rispetto a dove ci troviamo.~
+== TB#STIVJ ~Se hai intenzione di farci un salto, ti accompagnerei volentieri. Le strade maestre di questa regione si snodano lungo una catena di piccoli villaggi halfling noti per la qualità del loro artigianato. Mio papà aveva molto a cuore quei posti.~
+== JAHEIRAJ ~L'ora della vendetta non può più essere rimandata, pertanto valuterò questa possibilità in un secondo momento. Ad ogni modo, sarebbe una tappa intermedia di un viaggio molto più lungo.~
+== TB#STIVJ ~Per dirigerti dove?~
+== JAHEIRAJ ~Penso sia mio dovere andare a Calimshan. Io… Non vorrei, ma sento che è la cosa giusta da fare.~
+== TB#STIVJ ~A prescindere dalle motivazioni che ti spingono a compiere questo viaggio, ti consiglio di non andarci da sola. Non avevo nessuno al mio fianco quando sono andato a rivedere i vigneti che un tempo appartenevano alla mia famiglia, e ti assicuro che non è stata un'esperienza piacevole.~
+== JAHEIRAJ ~Suppongo sia dipeso dallo spirito con cui vi sei tornato.~
+== TB#STIVJ ~Era inevitabile che nutrissi alcune aspettative: che quella fattoria, quel sentiero, quegli intrecci di foglie, una volta rivisti, mi ispirassero un particolare sentimento, ma sono rimasto meravigliato quando la sola cosa che ho provato è stata un’improvvisa stilettata di memoria provocata da scenari e ambienti ai quali non avrei mai attribuito un tale potere di ferire.~
+== JAHEIRAJ ~Il luogo in cui vorrei andare ha delle associazioni dolorose, ma farò il possibile perché mi lasci indifferente. Ho intenzione di percorrerlo in lungo e i largo, sbarazzina e risoluta, per poi andarmene non appena avrò ottemperato certe... formalità.~
+= ~Ebbene, direi che abbiamo indugiato abbastanza. Questa conversazione mi ha dato diversi spunti su cui riflettere, e sono piacevolmente sorpresa dalla profondità di quanto hai detto.~
+== TB#STIVJ ~Heh. L'ho sempre detto che sono sottovalutato.~
+EXIT
+
 
 
 
 ///////////////////////////////////////////
-// Drow encounters
+// Misc encounters
 ///////////////////////////////////////////
 
 CHAIN
@@ -3008,4 +3103,52 @@ DO ~SetGlobal("tb#sdr3","GLOBAL",1)~
 == ANOMENJ ~Sì, mia signora. Sarò da voi... non appena possibile.~
 == TB#SDR3 ~Cos... Chi ha osato lanciarmi in faccia una simile schifezza? Chi?! Se trovo il responsabile di questo affronto lo getterò nella Fossa dei Ragni!~
 == TB#STIVJ ~Heh. La cacca di gabbiano non perdona.~
+EXIT
+
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+Global("tb#StivanHalflingSlums","GLOBAL",0)~ THEN SLHALF01 stivanHalflingSlums
+~Per Yondalla! Cosa ci fa un mezzopelo in un quartiere pericoloso come i Bassifondi?~
+== TB#STIVJ ~Questa zona è una delle più pericolose della città, è vero, ma ti assicuro che so badare a me stesso.~
+DO ~SetGlobal("tb#StivanHalflingSlums","GLOBAL",1)~
+EXIT
+
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+Global("tb#StivanHalflingBridge","GLOBAL",0)~ THEN BMTOWN4 stivanHalflingBridge
+~Ehi! Dov’è finita la mia pagotta?!~
+== TB#STIVJ ~(Gnamm!) Non… Non ho visto nulla!~
+DO ~SetGlobal("tb#StivanHalflingBridge","GLOBAL",1)~
+EXIT
+
+CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+Global("tb#StivanRose","GLOBAL",0)~ THEN MURDGIRL stivanRose
+~Ciao, piccolino. Mi venderesti qualche piuma?~
+DO ~SetGlobal("tb#StivanRose","GLOBAL",1)~
+== TB#STIVJ ~Certo, Rose. Il solito?~
+== MURDGIRL ~Questa volta facciamo solo cinque. Purtroppo ho perso alcuni dei clienti che impazzivano quando le usavo per certi giochetti erotici.~
+== TB#STIVJ ~(Arrossisce) Non… Non voglio sapere altro. Ecco, a te.~
+== MURDGIRL ~Sei proprio delizioso quando arrossisci in quel modo. Ci vediamo, tesoruccio.~
+EXIT
+
+CHAIN IF ~IsValidForPartyDialog("tb#stiv")
+IsValidForPartyDialog("Nalia")
+See("tb#stiv")
+See("Nalia")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck("Nalia",CD_STATE_NOTVALID)
+Global("tb#StivanNaliaOphal","GLOBAL",0)~ THEN NOBLEM3 stivannaliaophal
+~Uhmmm... Il tuo sguattero sembra decisamente ossequioso, Nalia. Sei disposta a vendermelo?~
+DO ~SetGlobal("tb#StivanNaliaOphal","GLOBAL",1)~
+== NALIAJ ~Non so a chi vi stiate riferendo, Lord Ophal. Non ho bisogno di viaggiare con la servitù di casa.~
+== NOBLEM3 ~Stai dicendo che quella creatura non è alle tue dipendenze?~
+== TB#STIVJ ~Stivan il Cacciatore esegue ogni desiderio di Miss Nalia!~
+== NOBLEM3 ~E' addirittura capace di parlare. Sono pronto a farti un'ottima offerta, mia diletta. Dieci monete d'oro vanno bene?~
+== TB#STIVJ ~Wow! Non pensavo di valere così tanto!~
+== NALIAJ ~Vi suggerisco di andarvene, Lord Ophal. Non mi interessa il vostro sporco denaro, e non tratto le persone come bestiame destinato alla vendita.~
+== NOBLEM3 ~Che peccato. Sarebbe stato un ottimo affare.~
 EXIT
