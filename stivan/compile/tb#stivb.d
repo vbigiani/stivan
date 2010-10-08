@@ -922,7 +922,7 @@ See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanValygar","GLOBAL",0)~ THEN TB#STIVB stivanvalygar1
-~Valygar, per quale motivo hai deciso di diventare un ranger? La tua famiglia è di nobile origine; avresti potuto servirti del tuo buon nome e delle tue ricchezze per condurre una vita agiata.~
+~Valygar, per quale motivo hai deciso di diventare un ranger? Ho sentito dire che sei di nobile origine; avresti potuto servirti del tuo buon nome e delle tue ricchezze per condurre una vita agiata.~
 DO ~SetGlobal("tb#StivanValygar","GLOBAL",1)~
 == BVALYGA ~Avrei potuto, ma non l'ho fatto per diversi motivi. In primo luogo, i Corthala non godono di grande considerazione: quale nobile si avvicinerebbe ad una famiglia maledetta da generazioni?~
 = ~Secondariamente, sono un uomo sobrio. Il lusso e gli sfarzi non mi hanno mai attirato.~

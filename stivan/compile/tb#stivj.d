@@ -618,12 +618,12 @@ IF ~~ THEN REPLY ~Ci aiuterà a superare i pericoli di questo posto, dopodichè sa
 
 APPEND TB#STIVJ
 IF ~~ THEN BEGIN StivanDislikesMazzy1-1
-SAY ~(Snort!) Fantastico. Prossimamente chi arruolerai? Una legione di paladini del Cuore Radioso? Fammelo sapere per tempo, se possibile, così faccio i bagagli e vi lascio brindare in nome del bene e della giustizia!~
+SAY ~Fantastico. Prossimamente chi arruolerai? Una legione di paladini del Cuore Radioso? Fammelo sapere per tempo, se possibile, così faccio i bagagli e vi lascio brindare in nome del bene e della giustizia!~
 IF ~~ THEN EXTERN MAZZY StivanDislikesMazzy1-4
 END
 
 IF ~~ THEN BEGIN StivanDislikesMazzy1-2
-SAY ~(Snort!) Il sottoscritto è più che sufficiente come illustre esponente degli halfling!~
+SAY ~Il sottoscritto è più che sufficiente come illustre esponente degli halfling!~
 IF ~~ THEN EXTERN MAZZY StivanDislikesMazzy1-4
 END
 
@@ -929,7 +929,7 @@ END
 
 INTERJECT_COPY_TRANS BODHI 6 tb#StivanBodhi-6
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
-~Secondo me l'importante è riuscire nella tua missione, non mi importa grazie a chi. Comunque è impressionante il fatto che tutti siano così ansiosi di aiutarti, non trovi?~
+~Il sol pensiero di lavorare per questa donna mi fa drizzare i peli dei piedi, ma l'importante è riuscire nella tua missione, giusto?~
 END
 
 INTERJECT_COPY_TRANS RYLOCK 24 tb#StivanRylock-24
@@ -1080,7 +1080,7 @@ END
 INTERJECT_COPY_TRANS RAELIS 41 tb#StivanRaelis-41
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Haer’Dalis sarebbe il nome di quell’attore magro magro coi capelli lunghi lunghi?~
 == RAELIS ~Sì, piccolino. Sei forse un amico del nostro segugio?~
-== TB#STIVJ ~Oh, no. L’ho semplicemente visto recitare qualche volta. Avete idea di dove possa essere finito?~
+== TB#STIVJ ~Oh, no. L’ho semplicemente visto recitare qualche volta. Avete idea del perchè l'abbiano rapito?~
 END
 
 INTERJECT_COPY_TRANS HAERDA 109 tb#StivanHaerda-109
@@ -1400,7 +1400,7 @@ INTERJECT_COPY_TRANS DASLAVE1 8 tb#StivanDaslave1-8
 ~(Sniff) Sei proprio una brava persona, <CHARNAME>. Hai dato un grande aiuto a queste persone, esattamente come hai fatto con me il giorno in cui mi hai accolto nella tua compagnia.~
 BRANCH ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == TB#STIVJ ~Miss Nalia, avete visto che bel gesto ha fatto?~
-== NALIAJ ~Umpf. Penso che avrebbe anche potuto separarsi da qualche moneta d'oro e dare un aiuto più concreto a quei poveri sventurati.~
+== NALIAJ ~Hmmf. Penso che avrebbe anche potuto separarsi da qualche moneta d'oro e dare un aiuto più concreto a quei poveri sventurati.~
 == TB#STIVJ ~Non sminuite il suo gesto.~
 == NALIAJ ~Per correggere le iniquità e sradicare la povertà, non basta tendere la mano ai bisognosi, Stivan. Occorre anche aiutarli a camminare fino a quando non saranno capaci di reggersi sulle proprie gambe.~
 == TB#STIVJ ~Beh, ecco... Certo, Miss Nalia. Avete sempre ragione voi.~
@@ -1801,25 +1801,25 @@ See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("JaheiraCursed","GLOBAL",10)
 CombatCounter(0)
-Global("tb#StivanJaheiraCursed","GLOBAL",1)~ THEN TB#STIVB stivanjaheirapostcurse
+Global("tb#StivanJaheiraCursed","GLOBAL",1)~ THEN TB#STIVJ stivanjaheirapostcurse
 ~Allora, Jaheira, come ti senti adesso?~
 DO ~SetGlobal("tb#StivanJaheiraCursed","GLOBAL",2)~
-== BJAHEIR ~Per la barba di Silvanus, Stivan! Vuoi lasciarmi in pace?~
-== TB#STIVB ~Ehi! Ti ho soltanto chiesto come stai!~
-== BJAHEIR ~Credi che sia una sciocca? So bene che non aspetti altro che l'occasione per prenderti gioco di me!~
-== TB#STIVB ~No, non stavolta. Io... Sono rimasto molto colpito dalla tua forza d'animo. Ultimamente ti sono capitate un sacco di sciagure, come la perdita di tuo marito o la maledizione di Ployer, eppure reagisci sempre con grinta e tenacia.~
-== BJAHEIR ~Mi limito ad andare avanti, Stivan. C'è una vendetta che attende di essere compiuta.~
-== TB#STIVB ~Sì, ma... Io non riesco ad essere forte come te. Sono passati molti anni dalla... dalla morte dei miei familiari, ma ancora non riesco a darmi pace.~
-== BJAHEIR ~...~
+== JAHEIRJ ~Per la barba di Silvanus, Stivan! Vuoi lasciarmi in pace?~
+== TB#STIVJ ~Ehi! Ti ho soltanto chiesto come stai!~
+== JAHEIRJ ~Credi che sia una sciocca? So bene che non aspetti altro che l'occasione per prenderti gioco di me!~
+== TB#STIVJ ~No, non stavolta. Io... Sono rimasto molto colpito dalla tua forza d'animo. Ultimamente ti sono capitate un sacco di sciagure, come la perdita di tuo marito o la maledizione di Ployer, eppure reagisci sempre con grinta e tenacia.~
+== JAHEIRJ ~Mi limito ad andare avanti, Stivan. C'è una vendetta che attende di essere compiuta.~
+== TB#STIVJ ~Sì, ma... Io non riesco ad essere forte come te. Sono passati molti anni dalla... dalla morte dei miei familiari, ma ancora non riesco a darmi pace.~
+== JAHEIRJ ~...~
 = ~... Spesso accadono cose che sono come domande. Passano i giorni, oppure gli anni, e la vita risponde.~
-= ~Dopo un pò impari che l'amore non è appoggiarsi a qualcuno, che la compagnia non è sicurezza. Impari che i baci non sono contatti, che i doni non sono promesse.~
-= ~Dopo un pò impari a costruire le strade oggi, perchè il terreno di domani è troppo incerto per fare piani. Impari che nella vita l'unica certezza è la morte, la sola cosa di cui non si può sapere nulla con certezza.~
+= ~Col tempo impari che l'amore non è appoggiarsi a qualcuno, che la compagnia non è sicurezza. Impari che i baci non sono contatti, che i doni non sono promesse.~
+= ~Il ripetersi delle stagioni ti insegna a costruire le strade oggi, perchè il terreno di domani è troppo incerto per fare piani; ti insegna che nella vita l'unica certezza è la morte, la sola cosa di cui non si può sapere nulla con certezza.~
 = ~E cominci ad accettare le sconfitte a testa alta, con gli occhi aperti e la grazia di un adulto, non con il dolore di un bambino.~
 = ~E impari che non puoi far altro che essere forte.~
 = ~...~
 = ~Khalid...~
-== TB#STIVB ~*SOB*!~
-== BJAHEIR ~Non... Non era mia intenzione rattristarti, Stivan. Faresti meglio a rivolgerti ad altri per ottenere il conforto che cerchi. Io... Temo di non essere la persona più adatta.~
+== TB#STIVJ ~*SOB*!~
+== JAHEIRJ ~Non... Non era mia intenzione rattristarti, Stivan. Faresti meglio a rivolgerti ad altri per ottenere il conforto che cerchi. Io... Temo di non essere la persona più adatta.~
 EXIT
 
 CHAIN
@@ -2297,11 +2297,10 @@ Global("tb#StivanCernd","GLOBAL",0)~ THEN CERNDJ stivancernd1
 = ~Ciò nonostante, pare che la Natura sia ingiustamente accusata di un altro crimine. Dico bene, Stivan?~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",1)~
 == TB#STIVJ ~Cos'è questo, un tentativo di socializzazione? Spiacente, ma non ho la benchè minima intenzione di sprecare fiato con te.~
-= ~Aspetta un momento... Come fai a sapere il mio nome?~
-== CERNDJ ~Non ha importanza. In qualità di druido, è mio dovere intervenire per ripristinare l'Equilibrio e aprire i tuoi occhi alla luce della verità. Lungo il nostro cammino crescerai, e insieme daremo senso e significato alle tue tragedie.~
+== CERNDJ ~In qualità di druido, è mio dovere intervenire per ripristinare l'Equilibrio e aprire i tuoi occhi alla luce della verità. Lungo il nostro cammino crescerai, e insieme daremo senso e significato alle tue tragedie.~
 == TB#STIVJ ~(Snort!) Non c'è bisogno di ricorrere a simili espedienti verbali per darmi dell'immaturo! Non sono uno stupido, e so riconoscere un insulto!~
 == CERNDJ ~Ogni creazione della Madre è o è stata immatura. Esistono germogli che non giungono a fiorire? O alberi che non fruttificano?~
-== TB#STIVJ ~Chiudi la bocca, druido! Stà zitto!!~
+== TB#STIVJ ~Chiudi la bocca, druido! Stà zitto!~
 == CERNDJ ~Presto inizieremo il nostro percorso. Molto presto.~
 EXIT
 
@@ -2319,7 +2318,7 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",2)~
 == CERNDJ ~Esaminiamo l'avvenimento che ha segnato l'inizio del tuo astio nei confronti dei gabbiani. Ripercorriamo istante per istante ciò che ti successe anni fa, come se stessimo passando a setaccio i petali di un fiore.~
 == TB#STIVJ ~(Snort!) Stai abusando della mia pazienza, tu! Chi diavolo credi di essere per esigere che ti racconti la storia dell'uccisione dei miei familiari?~
 == CERNDJ ~Non scambiare per presunzione il mio tentativo di giungere alla verità. Al momento stai navigando nelle acque dell'ignoranza, ed è mio dovere fare in modo che i venti del destino spingano le tue vele verso il mare della conoscenza.~
-== TB#STIVJ ~Ora capisco dove vuoi arrivare. Tu... Tu Stai mettendo in discussione la colpevolezza dei gabbiani!~
+== TB#STIVJ ~Ora capisco dove vuoi arrivare. Tu... Tu stai mettendo in discussione la colpevolezza dei gabbiani!~
 == CERNDJ ~Dei semplici uccelli marini non potrebbero mai macchiarsi di un crimine come l'uccisione di un'innocente famiglia. Non è nella loro natura.~
 == TB#STIVJ ~Evidentemente quel giorno devono essere caduti in preda a degli istinti carnivori, dato che li ho visti pasteggiare con i resti dei miei familiari!~
 == CERNDJ ~Esatto, Stivan. Tu sostieni di averli visti mentre si cibavano, non mentre uccidevano i tuoi genitori e i tuoi fratelli.~
