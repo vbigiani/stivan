@@ -3118,7 +3118,7 @@ CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
 See("tb#stiv")
 !StateCheck("tb#stiv",CD_STATE_NOTVALID)
 Global("tb#StivanHalflingBridge","GLOBAL",0)~ THEN BMTOWN4 stivanHalflingBridge
-~Ehi! Dov’è finita la mia pagotta?!~
+~Ehi! Dov’è finita la mia pagnotta?!~
 == TB#STIVJ ~(Gnamm!) Non… Non ho visto nulla!~
 DO ~SetGlobal("tb#StivanHalflingBridge","GLOBAL",1)~
 EXIT
