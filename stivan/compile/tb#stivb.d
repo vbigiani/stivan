@@ -1,5 +1,93 @@
 BEGIN TB#STIVB
 
+IF ~InParty("tb#stiv")
+InParty(Player1)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanPCTalk","GLOBAL",4)~ THEN stivanPC3
+SAY ~Progetti per il futuro: aspirazioni, sogni, idee... Ne hai qualcuno, <CHARNAME>?~
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Vivo alla giornata. La mia condizione di Figlio di Bhaal non lascia spazio per simili cose.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Una casa accogliente, un fuoco caldo e la mia dolce metà al mio fianco. E' questo che vorrei.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Denaro. Lo investirei in vari modi, così da poter vivere di rendita senza problemi.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Mi piace l'avventura. Conto di continuare a viaggiare e a gettarmi in ogni sorta di missione sino a quando il fisico me lo consentirà.~ GOTO StivanPC3-1
+END
+
+IF ~~ THEN StivanPC3-1
+SAY ~Capisco. Ora come ora il mio presente è legato al tuo, ma non sarà sempre così. Quando avrai portato a termine la tua missione, io sarò vicino alla maggiore età, e immagino... Immagino che...~
+IF ~Race(Player1,HALFLING)~ THEN REPLY ~Maggiore età? Scusa, Stivan, ma quanti anni hai?~ GOTO StivanPC3-2
+IF ~!Race(Player1,HALFLING)~ THEN REPLY ~Maggiore età? Scusa, Stivan, ma quanti anni hai?~ GOTO StivanPC3-3
+END
+
+IF ~~ THEN StivanPC3-2
+SAY ~Heh. Io ho ventinove anni e, come ben sai, noi halfling diventiamo maggiorenni a trenta.~
+IF ~~ THEN GOTO StivanPC3-4
+END	
+
+IF ~~ THEN StivanPC3-3
+SAY ~Heh. Io ho ventinove anni. Gli halfling diventano maggiorenni a trenta, sebbene ci siano alcune comunità in cui tale traguardo si raggiunge un pò dopo.~
+IF ~~ THEN GOTO StivanPC3-4
+END
+
+IF ~~ THEN StivanPC3-4
+SAY ~Se… Se mia mamma fosse viva, mi avrebbe realizzato una bella fionda con le sue mani, com’è d’usanza in questi casi, ma il mio passaggio all'età adulta avverrà senza, purtroppo.~
+= ~Mi piacerebbe tanto avere le idee chiare sul futuro. Per fortuna di almeno una cosa sono certo: non voglio tornare a vivere per strada. Ad alcune persone piace alimentare il mito secondo cui i poveri godono della loro condizione, ma ti assicuro che non è così.~
+= ~Ciò detto, il domani mi spaventa un pò. Tu cosa mi consiglieresti, <CHARNAME>? Cosa pensi sia meglio per me?~
+IF ~~ THEN REPLY ~Limitati al presente. Non ho dubbi che quando verrà il momento di decidere sul tuo futuro, saprai cosa fare.~ GOTO StivanPC3-5
+IF ~~ THEN DO ~SetGlobal("tb#StivanDrowEncounter","GLOBAL",1)~ REPLY ~A poco a poco ti stai affermando come un valente avventuriero. Continua così.~ GOTO StivanPC3-6
+IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~Riappropriati delle tue terre, Stivan. Ti spettano di diritto, e con un pò di buona volontà potresti riportare in auge il nome dei Fristbrowfine.~ GOTO StivanPC3-7
+IF ~~ THEN REPLY ~Hai una carriera di sterminatore di gabbiani che ti attende. Cosa vuoi di più dalla vita?~ GOTO StivanPC3-8
+IF ~!Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9a
+IF ~Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9b
+IF ~~ THEN REPLY ~Non saprei. Penso che la decisione spetti a te solo.~ GOTO StivanPC3-10
+END
+
+IF ~~ THEN StivanPC3-5
+SAY ~*Ahem* Ho appena finito di dirti che sento il bisogno di pensare all'avvenire e tu mi rispondi "Limitati al presente"? Mah... Meglio che mi arrangi e decida da solo ciò che sarà meglio per me.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanPC3-6
+SAY ~Non penso di avere la stoffa del comando, ma potrei unirmi ad un’altra compagnia una volta che i nostri viaggi saranno giunti a termine. Del resto, un elemento dotato e capace come me farebbe gola a qualsiasi banda d’avventurieri. Heh.~
+IF ~~ THEN GOTO StivanPC3-11
+END
+
+IF ~~ THEN StivanPC3-7
+SAY ~Le mie terre? Non… Non so se ne sarei in grado. E’ passato così tanto tempo…~
+= ~Vedremo. Ci penserò.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanPC3-8
+SAY ~Beh, questo è ovvio, ma non posso limitarmi alla caccia del nemico pennuto.~
+IF ~~ THEN REPLY ~Limitati al presente. Non ho dubbi che quando verrà il momento di decidere del tuo futuro, saprai cosa fare.~ GOTO StivanPC3-5
+IF ~~ THEN DO ~SetGlobal("tb#StivanDrowEncounter","GLOBAL",1)~ REPLY ~A poco a poco ti stai affermando come un valente avventuriero. Continua così.~ GOTO StivanPC3-6
+IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~Riappropriati delle tue terre, Stivan. Ti spettano di diritto, e con un pò di buona volontà potresti riportare in auge il nome dei Fristbrowfine.~ GOTO StivanPC3-7
+IF ~!Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9a
+IF ~Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9b
+IF ~~ THEN REPLY ~Non saprei. Penso che la decisione spetti a te solo.~ GOTO StivanPC3-10
+END
+
+IF ~~ THEN StivanPC3-9a
+SAY ~Sì… Sì, mi sembra un’ottima idea! Avrei senz’altro un futuro come spia, e ho già un bellissimo nome in codice: il Cacciatore!~
+IF ~~ THEN GOTO StivanPC3-11
+END
+
+IF ~~ THEN StivanPC3-9b
+SAY ~Dubito fortemente che potrei avere un futuro tra le Ombre dell’Amn dopo il tuo tradimento. (Sospiro) Dovrò pensare ad altro, ma grazie per avermi ascoltato.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanPC3-10
+SAY ~Uhmm... Mia mamma diceva sempre che ciascuno è artefice della propria sorte, e penso che abbiate proprio ragione. Meglio che mi metta a pensare a ciò che voglio fare ed essere.~
+IF ~~ THEN GOTO StivanPC3-11
+END
+
+IF ~~ THEN StivanPC3-11
+SAY ~Il tuo consiglio mi ha solleticato l’immaginazione. Mi abbandonerò a qualche sogno ad occhi aperti per un pò. Grazie per avermi ascoltato, amico.~
+IF ~~ THEN EXIT
+END
+
 CHAIN 
 IF ~InParty("Viconia")
 See("Viconia")

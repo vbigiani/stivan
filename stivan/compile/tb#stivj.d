@@ -685,23 +685,23 @@ INTERJECT_COPY_TRANS SAFE BANOMEN 22 tb#StivanBANOMEN-22
 == BANOMEN ~Ti consiglio di tenere a freno la tua lingua, piccoletto, prima che ti faccia ingoiare uno di quei volatili per cui tanto impazzisci.~
 END
 
-INTERJECT_COPY_TRANS BANOMEN 224 tb#StivanBANOMEN-224
+INTERJECT_COPY_TRANS ANOMENJ 224 tb#StivanANOMENJ-224
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN
 ~Forse se ti seppellissimo vivo cambieresti idea. Vogliamo provare?~
-== BANOMEN IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
+== ANOMENJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~Tra poco ti seppellirà la mia mazza, halfling.~
 END
 
 INTERJECT_COPY_TRANS2 BANOMEN 60 tb#StivanBANOMEN-60
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~"Gente di basso rango"? Come osi, brutto--~
-== BMAZZY ~Stivan, non intrometterti. Lascia che sia io a rispondergli.~
+== MAZZYJ ~Stivan, non intrometterti. Lascia che sia io a rispondergli.~
 END
 
-INTERJECT_COPY_TRANS BMAZZY 0 tb#StivanMazzy-0
+INTERJECT_COPY_TRANS MAZZYJ 0 tb#StivanMazzy-0
 == TB#STIVJ IF ~InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 ~E questa sarebbe la tua risposta? Mazzy, ad un'offesa si risponde con un'offesa!~
-== BMAZZY ~Non ce n'è bisogno. A volte, certi insulti definiscono più le persone che li usano.~
+== MAZZYJ ~Non ce n'è bisogno. A volte, certi insulti definiscono più le persone che li usano.~
 END
 
 INTERJECT_COPY_TRANS COR 5 tb#StivanCor-5
@@ -1804,13 +1804,13 @@ CombatCounter(0)
 Global("tb#StivanJaheiraCursed","GLOBAL",1)~ THEN TB#STIVJ stivanjaheirapostcurse
 ~Allora, Jaheira, come ti senti adesso?~
 DO ~SetGlobal("tb#StivanJaheiraCursed","GLOBAL",2)~
-== JAHEIRJ ~Per la barba di Silvanus, Stivan! Vuoi lasciarmi in pace?~
+== JAHEIRAJ ~Per la barba di Silvanus, Stivan! Vuoi lasciarmi in pace?~
 == TB#STIVJ ~Ehi! Ti ho soltanto chiesto come stai!~
-== JAHEIRJ ~Credi che sia una sciocca? So bene che non aspetti altro che l'occasione per prenderti gioco di me!~
+== JAHEIRAJ ~Credi che sia una sciocca? So bene che non aspetti altro che l'occasione per prenderti gioco di me!~
 == TB#STIVJ ~No, non stavolta. Io... Sono rimasto molto colpito dalla tua forza d'animo. Ultimamente ti sono capitate un sacco di sciagure, come la perdita di tuo marito o la maledizione di Ployer, eppure reagisci sempre con grinta e tenacia.~
-== JAHEIRJ ~Mi limito ad andare avanti, Stivan. C'è una vendetta che attende di essere compiuta.~
+== JAHEIRAJ ~Mi limito ad andare avanti, Stivan. C'è una vendetta che attende di essere compiuta.~
 == TB#STIVJ ~Sì, ma... Io non riesco ad essere forte come te. Sono passati molti anni dalla... dalla morte dei miei familiari, ma ancora non riesco a darmi pace.~
-== JAHEIRJ ~...~
+== JAHEIRAJ ~...~
 = ~... Spesso accadono cose che sono come domande. Passano i giorni, oppure gli anni, e la vita risponde.~
 = ~Col tempo impari che l'amore non è appoggiarsi a qualcuno, che la compagnia non è sicurezza. Impari che i baci non sono contatti, che i doni non sono promesse.~
 = ~Il ripetersi delle stagioni ti insegna a costruire le strade oggi, perchè il terreno di domani è troppo incerto per fare piani; ti insegna che nella vita l'unica certezza è la morte, la sola cosa di cui non si può sapere nulla con certezza.~
@@ -1819,7 +1819,7 @@ DO ~SetGlobal("tb#StivanJaheiraCursed","GLOBAL",2)~
 = ~...~
 = ~Khalid...~
 == TB#STIVJ ~*SOB*!~
-== JAHEIRJ ~Non... Non era mia intenzione rattristarti, Stivan. Faresti meglio a rivolgerti ad altri per ottenere il conforto che cerchi. Io... Temo di non essere la persona più adatta.~
+== JAHEIRAJ ~Non... Non era mia intenzione rattristarti, Stivan. Faresti meglio a rivolgerti ad altri per ottenere il conforto che cerchi. Io... Temo di non essere la persona più adatta.~
 EXIT
 
 CHAIN
@@ -1827,28 +1827,28 @@ IF ~InParty("Jaheira")
 See("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanJaheiraKhalid","GLOBAL",2)~ THEN TB#STIVB stivanjaheira2
+Global("tb#StivanJaheiraKhalid","GLOBAL",2)~ THEN TB#STIVJ stivanjaheira2
 ~Jaheira, posso chiederti perchè hai deciso di unirti alla compagnia di <CHARNAME>?~
 DO ~SetGlobal("tb#StivanJaheiraKhalid","GLOBAL",3)~
-== BJAHEIR ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion, il <PRO_HISHER> padre adottivo, ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
-== TB#STIVB ~Chi è Khalid?~
-== BJAHEIR ~Khalid è... era mio marito.~
-== TB#STIVB ~*Ahem* Che fine ha fatto? L'abbiamo perso per strada?~
-== BJAHEIR ~Il tuo spirito è decisamente fuori luogo, ma lascerò correre. Mio marito è caduto per mano dello stregone di cui siamo alla ricerca, ed io non avrò pace sino a quando non sarà stato vendicato.~
-== TB#STIVB ~Accidenti, mi dispiace. Non lo sapevo.~
-== BJAHEIR ~Non c'era motivo per cui dovessi saperlo. Ora, se hai finito...~
-== TB#STIVB ~Beh, a questo punto non posso fare a meno di chiedermi un'altra cosa.~
-== BJAHEIR ~Parla, se devi, ma non ti garantisco una risposta. Stai toccando ferite che non si sono ancora rimarginate.~
-== TB#STIVB ~Hai pagato un alto prezzo per tener fede alla tua parola. Non voglio attribuire alcuna responsabilità a <CHARNAME>, ma se non avessi viaggiato con <PRO_HIMHER>...~
-== BJAHEIR ~Dove vuoi arrivare con il tuo ragionamento, Stivan? A chiedermi se lo avrei aiutato pur sapendo che in questo modo mio marito sarebbe morto?~
-== TB#STIVB ~Esattamente.~
-== BJAHEIR ~Questa domanda non è degna di risposta. L'uccisione di Khalid... era il tassello di un disegno più grande e al di là della nostra comprensione. Soprattutto della tua!~
-== TB#STIVB ~Ehi, non c'è bisogno di essere così aggressivi. Non dimenticare che anch'io ho perso i miei familiari.~
-== BJAHEIR ~La mia rabbia è più che giustificata! Hanno assassinato Khalid! Hanno profanato il suo corpo, dividendomi per sempre da mio marito! Come potrei non essere adirata?~
+== JAHEIRAJ ~Quando Khalid ed io l'abbiamo incontrato per la prima volta, <CHARNAME> era un giovane inesperto e bisognoso di una guida. Gorion, il <PRO_HISHER> padre adottivo, ci aveva raccomandato più volte di prendercene cura se gli fosse successo qualcosa, e così è stato.~
+== TB#STIVJ ~Chi è Khalid?~
+== JAHEIRAJ ~Khalid è... era mio marito.~
+== TB#STIVJ ~*Ahem* Che fine ha fatto? L'abbiamo perso per strada?~
+== JAHEIRAJ ~Il tuo spirito è decisamente fuori luogo, ma lascerò correre. Mio marito è caduto per mano dello stregone di cui siamo alla ricerca, ed io non avrò pace sino a quando non sarà stato vendicato.~
+== TB#STIVJ ~Accidenti, mi dispiace. Non lo sapevo.~
+== JAHEIRAJ ~Non c'era motivo per cui dovessi saperlo. Ora, se hai finito...~
+== TB#STIVJ ~Beh, a questo punto non posso fare a meno di chiedermi un'altra cosa.~
+== JAHEIRAJ ~Parla, se devi, ma non ti garantisco una risposta. Stai toccando ferite che non si sono ancora rimarginate.~
+== TB#STIVJ ~Hai pagato un alto prezzo per tener fede alla tua parola. Non voglio attribuire alcuna responsabilità a <CHARNAME>, ma se non avessi viaggiato con <PRO_HIMHER>...~
+== JAHEIRAJ ~Dove vuoi arrivare con il tuo ragionamento, Stivan? A chiedermi se lo avrei aiutato pur sapendo che in questo modo mio marito sarebbe morto?~
+== TB#STIVJ ~Esattamente.~
+== JAHEIRAJ ~Questa domanda non è degna di risposta. L'uccisione di Khalid... era il tassello di un disegno più grande e al di là della nostra comprensione. Soprattutto della tua!~
+== TB#STIVJ ~Ehi, non c'è bisogno di essere così aggressivi. Non dimenticare che anch'io ho perso i miei familiari.~
+== JAHEIRAJ ~La mia rabbia è più che giustificata! Hanno assassinato Khalid! Hanno profanato il suo corpo, dividendomi per sempre da mio marito! Come potrei non essere adirata?~
 = ~Mi addolora solo... Il fatto di non essermi potuta offrire al suo posto.~
-== TB#STIVB ~...~
+== TB#STIVJ ~...~
 = ~... Jaheira, io--~
-== BJAHEIR ~No. Non voglio essere consolata.~
+== JAHEIRAJ ~No. Non voglio essere consolata.~
 EXIT
 
 CHAIN 
@@ -2026,11 +2026,11 @@ See("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanMazzyDrow","GLOBAL",0)
-GlobalGT("PhaereJob","GLOBAL",5)~ THEN TB#STIVB mazzydrow
+GlobalGT("PhaereJob","GLOBAL",5)~ THEN TB#STIVJ mazzydrow
 ~WOW! Questo corpo è... E' incredibile! Sto scoprendo e facendo un sacco di cose che prima non mi erano possibili! Non trovi che sia magnifico, Mazzy?~
 DO ~SetGlobal("tb#StivanMazzyDrow","GLOBAL",1)~
-== BMAZZY ~Non capisco il tuo entusiasmo. Io provo un gran disagio al pensiero di avere le sembianze di una creatura malvagia.~
-== TB#STIVB ~Di quale disagio vai parlando? Essere alti ed essere drow ha tantissimi vantaggi!~
+== MAZZYJ ~Non capisco il tuo entusiasmo. Io provo un gran disagio al pensiero di avere le sembianze di una creatura malvagia.~
+== TB#STIVJ ~Di quale disagio vai parlando? Essere alti ed essere drow ha tantissimi vantaggi!~
 = ~Non hai peli sui piedi.~
 = ~Non hai gambe e braccia a forma di coscia di pollo.~
 = ~Non hai il torcicollo derivante dal dover alzare la testa ogni volte che parli con qualcuno.~
@@ -2038,24 +2038,24 @@ DO ~SetGlobal("tb#StivanMazzyDrow","GLOBAL",1)~
 = ~Puoi brandire quelle armi che prima erano più grandi di te.~
 = ~Puoi afferrare gli oggetti da un tavolo senza doverti mettere in punta di piedi.~
 = ~Puoi... Puoi fare un sacco di cose!~
-== BMAZZY ~(Sospira) Goditi quest'esperienza finchè puoi, allora. Presto riassumeremo le nostre vere sembianze, lo sai.~
-== TB#STIVB ~Heh. Questo è quello che *tu* pensi.~
-== BMAZZY ~Cosa vorresti dire?~
-== TB#STIVB ~Chiederò a quel simpatico draghetto di lasciare immutata la mia forma.~
-== BMAZZY ~Cosa?! Vorresti mantenere le fattezze di un drow? Sarebbe questo il tuo sogno nel cassetto?~
-== TB#STIVB ~Io non ho sogni nel cassetto, Mazzy. Preferisco tenerci la biancheria!~
-== BMAZZY ~Non è il momento di scherzare, Stivan! L'incantesimo lanciato da Aldalon non è altro che un'illusione. Non cambierà mai la tua natura di halfling!~
+== MAZZYJ ~(Sospira) Goditi quest'esperienza finchè puoi, allora. Presto riassumeremo le nostre vere sembianze, lo sai.~
+== TB#STIVJ ~Heh. Questo è quello che *tu* pensi.~
+== MAZZYJ ~Cosa vorresti dire?~
+== TB#STIVJ ~Chiederò a quel simpatico draghetto di lasciare immutata la mia forma.~
+== MAZZYJ ~Cosa?! Vorresti mantenere le fattezze di un drow? Sarebbe questo il tuo sogno nel cassetto?~
+== TB#STIVJ ~Io non ho sogni nel cassetto, Mazzy. Preferisco tenerci la biancheria!~
+== MAZZYJ ~Non è il momento di scherzare, Stivan! L'incantesimo lanciato da Aldalon non è altro che un'illusione. Non cambierà mai la tua natura di halfling!~
 = ~Hai pensato inoltre alle conseguenze che il tuo aspetto porterebbe con sè? Una volta tornati in superficie, le persone ne saranno terrorizzate e ti eviteranno. Alcuni cercheranno addirittura di ucciderti!~
-== TB#STIVB ~(Snort!) E allora? Lo scenario che dipingi non sarebbe poi tanto diverso da quello che ho vissuto sino ad oggi!~
+== TB#STIVJ ~(Snort!) E allora? Lo scenario che dipingi non sarebbe poi tanto diverso da quello che ho vissuto sino ad oggi!~
 = ~Le persone mi hanno sempre evitato per il mio aspetto trasandato, come se avessi potuto tirarmi a lucido dopo la perdita di tutti i miei beni. Quanto ai tentativi di uccisione, sono innumerevoli le guardie che hanno cercato di aggredirmi e di sbattermi in prigione soltanto perchè dormivo per strada. "Dobbiamo mantenere l'ordine e la sicurezza" dicevano, quando i problemi del distretto erano altri!~
 = ~Ben venga se coloro che incontrerò avranno paura di me per le mie sembianze da drow. Il loro timore sarà sinonimo di rispetto!~
-== BMAZZY ~Stivan, calmati e ascoltami.~
+== MAZZYJ ~Stivan, calmati e ascoltami.~
 = ~Capisco meglio di chiunque altro quanto sia difficile per un halfling essere accettati dalla società. Agli occhi dei più non siamo altro che creature buffe e frivole, pavide e vigliacche. Eppure, io ho lottato perchè almeno nel mio mondo le cose cambiassero, perchè le persone mi vedessero per quel che sono veramente, non con le lenti dei pregiudizi che accompagnano il nome della nostra razza.~ 
 = ~E' stato un cammino lungo e periglioso, non lo nego. In più occasioni mi sono sentita demoralizzata, ma ogni volta sono riuscita ad andare avanti dicendomi: "Sei caduta sette volte? Rialzati otto". Alla fine, ho dimostrato a me stessa e agli altri di essere una persona forte e coraggiosa, leale e onesta.~
-== TB#STIVB ~...~
+== TB#STIVJ ~...~
 = ~... Heh. Ci hai provato, Mazzy, ma non mi lascerò intortare dalla tua storiellina. Io manterrò quest'aspetto, che ti piaccia o no!~
-== BMAZZY ~Ragiona, Sti--~
-== TB#STIVB ~(Urla) Basta! Non voglio sentire altro!~
+== MAZZYJ ~Ragiona, Sti--~
+== TB#STIVJ ~(Urla) Basta! Non voglio sentire altro!~
 EXIT
 
 BEGIN TB#SELF
@@ -2824,6 +2824,62 @@ END
 
 IF ~~ THEN StivanPC1-19
 SAY ~Accidenti. La storia della tua vita è più complicata delle trame degli spettacoli che danno alla Locanda dei Cinque Boccali. Ci sei mai stato? E’ nel Quartiere del Ponte. Magari lì potremmo continuare a parlare davanti a un buon bicchiere di vino. Il proprietario è un halfling come me, anche se io sono molto più simpatico. Heh.~ 
+IF ~~ THEN EXIT
+END
+
+IF ~InParty("tb#stiv")
+InParty(Player1)
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanPCTalk","GLOBAL",3)~ THEN PC2
+SAY ~Mi hai parlato di una missione quando ci siamo incontrati per la prima volta, <CHARNAME>, e non posso fare a meno di chiedermi se abbiamo fatto dei progressi ultimamente.~
+IF ~Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Non quanti vorrei. Ora come ora, sto raccogliendo una certa somma di denaro per Gaelan Bayle, il rappresentante di un'organizzazione che mi ha offerto il suo aiuto.~ GOTO PC2-1
+IF ~!Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Ho due contatti che potrebbero fare al caso mio. Gaelan Bayle, un uomo che ho incontrato poco dopo il mio arrivo ad Athkatla, e una certa "Signora" di cui devo ancora valutare l'offerta.~ GOTO PC2-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Più o meno.~ GOTO PC2-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Dubito che andremo avanti se mi interrompi in continuazione. Un pò di silenzio, per favore.~ GOTO PC2-7
+END
+
+IF ~~ THEN PC2-1
+SAY ~Uhmm... Il clero qui in città è molto ricco e potente, ma dubito che si esporrebbero così tanto per uno sconosciuto. Sono troppo impegnati a genuflettersi davanti alle statue dei loro dei e cose simili.~
+= ~Lo stesso dicasi per il Cuore Radioso: a meno che tu non prometta loro una "campagna contro il male" o qualche altra sciocchezza con cui si riempiono la bocca, continueranno a fare gli sbruffoni e a lucidare le loro armature.~
+IF ~~ THEN REPLY ~Altri?~ GOTO PC2-3
+END
+
+IF ~~ THEN PC2-3
+SAY ~Oltre a questi... Non mi vengono in mente altri gruppi abbastanza potenti da prendere per il naso gli Incappucciati. Del resto, stiamo parlando di un'organizzazione potente. Cosa sai di loro?~
+IF ~~ THEN REPLY ~Nulla, in realtà. Lungo la Costa della Spada non sono noti.~ GOTO PC2-4
+IF ~~ THEN REPLY ~Ho raccolto poche informazioni qui in città. Non riesco a capire se la gente non parli per paura o per semplice ignoranza.~ GOTO PC2-4
+IF ~~ THEN REPLY ~So che *non* sono collaborativi. Il loro rappresentante al Palazzo di Giustizia non scuce una sola parola.~ GOTO PC2-4
+END
+
+IF ~~ THEN PC2-4
+SAY ~Anch'io ignoro i dettagli di cui hai bisogno, <CHARNAME>. Qui ad Athkatla si sa poco o nulla degli Incappucciati: sembra quasi che esistano da sempre, ma le cose non stanno così.~
+= ~La mia famiglia abita nella capitale dell'Amn da molte generazioni, pertanto la storia della comparsa di quei maghetti nella nostra città è stata tramandata sino a me e ai miei fratelli.~
+= ~Tuttavia, mentre la maggior parte dei racconti si arricchisce di dettagli col passare di bocca in bocca, questo si è gradualmente impoverito.~
+= ~Stando a quello che mi hanno raccontato i miei genitori, l'enclave degli Stregoni Incappucciati venne fondata circa due secoli fa da un tale di Esmeltaran allo scopo di proteggere la tradizione magica nell'Amn e fermare coloro che avessero abusato della Trama per fare i cattivoni.~
+= ~Nessuno sa chi siano veramente quei maghi, quale sia la loro base e come facciano a trovare immediatamente chiunque utilizzi la magia. Soprattutto, resta un mistero perchè all'improvviso siano diventati così... spregiudicati.~
+IF ~~ THEN REPLY ~Quindi hanno perso il lume della ragione soltanto di recente? Bizzarro. Avrei scommesso che fossero stati fuori di testa sin dalle origini.~ GOTO PC2-5
+IF ~~ THEN REPLY ~Sembrerebbe la tipica degenerazione di quanti accumulano troppo potere senza avere la capacità di gestirlo.~ GOTO PC2-5
+IF ~~ THEN REPLY ~In effetti il loro operato sarebbe valido e sensato se agissero con più criterio.~ GOTO PC2-5
+END
+
+IF ~~ THEN PC2-5
+SAY ~Il loro atteggiamento è cambiato drasticamente un anno prima della scomparsa dei miei familiari. Vi fu un colpo di stato... Un Incappucciato cercò di prendere il controllo del Consiglio, ma venne scoperto e fatto fuori.~
+= ~Non ricordo altro. Non avevo che uno spruzzo di peli sui piedi e, come forse ti ho già detto, non ho una buona memoria.~
+= ~Cerchiamo di guardare il lato positivo delle cose. Se non ci fossero stati gli Incappucciati, tu ed io non ci saremmo mai incontrati!~
+IF ~~ THEN REPLY ~A cosa segue cosa, giusto. Immagino sia una considerazione a cui debba abituarmi, soprattutto a causa del mio lignaggio.~ GOTO PC2-6
+IF ~~ THEN REPLY ~Senza offesa, Stivan, ma avrei fatto volentieri a meno della tua conoscenza se questo avesse significato non perdere Imoen.~ GOTO PC2-7
+IF ~~ THEN REPLY ~Non sempre mi riesce di vedere l'altro lato della medaglia, specialmente ora che mi trovo in questa situazione.~ GOTO PC2-6
+END
+
+IF ~~ THEN PC2-7
+SAY ~... Se questa era una battuta, <CHARNAME>, sappi che era tutto fuorchè simpatica.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN PC2-6
+SAY ~Mia mamma diceva sempre che ciò che dobbiamo imparare a fare lo impariamo facendolo. Gli anni che ho trascorso in strada le hanno dato ragione. Del resto, non si sbagliava mai.~
 IF ~~ THEN EXIT
 END
 
