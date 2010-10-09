@@ -1652,15 +1652,17 @@ INTERJECT_COPY_TRANS2 LLYNIS 8 tb#StivanLlynis-8
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Puoi starne certo, mostro! Muori!~
 END
 
-INTERJECT_COPY_TRANS2 LLYNIS 11 tb#StivanLlynis-11
+INTERJECT LLYNIS 11 tb#StivanLlynis-11
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo lasciare invendicata la morte del bambino halfling, <CHARNAME>! Non lo permetterò!~
 == MAZZYJ IF ~IsValidForPartyDialog("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Sono con te, Stivan! In nome di Arvoreen, giustizia sarà fatta!~
 END
+IF ~~ THEN DO ~ActionOverride("llynis",Enemy())~ EXIT
 
-INTERJECT_COPY_TRANS2 LLYNIS 12 tb#StivanLlynis-12
+INTERJECT LLYNIS 12 tb#StivanLlynis-12
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo lasciare invendicata la morte del bambino halfling, <CHARNAME>! Non lo permetterò!~
 == MAZZYJ IF ~IsValidForPartyDialog("Mazzy") StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Sono con te, Stivan! In nome di Arvoreen, giustizia sarà fatta!~
 END
+IF ~~ THEN DO ~ActionOverride("llynis",Enemy())~ EXIT
 
 INTERJECT_COPY_TRANS RENAL 30 tb#StivanRenal-30
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Heh. Già mi vedo nei panni della spia, mentre cerco indizi o elimino i testimoni scomodi. Stivan il Cacciatore sta per farsi un nome tra le Ombre dell'Amn!~
