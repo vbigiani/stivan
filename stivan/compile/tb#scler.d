@@ -177,3 +177,78 @@ END
 IF ~~ THEN REPLY ~Ehm... Certo, potete contarci.~ EXTERN TB#SCLER ThirdDialogueClerk1-3
 IF ~~ THEN REPLY ~Hai semplicemente fatto il tuo dovere.~ EXTERN TB#SCLER ThirdDialogueClerk1-3
 IF ~~ THEN REPLY ~Andiamocene da questo posto *immediatamente*. Rischio di morire soffocato dalla burocrazia che aleggia in queste sale!~ EXTERN TB#SCLER ThirdDialogueClerk1-3
+
+
+// miscellaneous employees
+APPEND CIVIL02
+IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN FemaleClerk
+SAY ~Spero che abbiate un valido motivo per importunarmi.~
+IF ~~ THEN REPLY ~Sapete dirmi chi si occupa del Cimitero di Athkatla?~ GOTO FemaleClerk1-1
+IF ~~ THEN REPLY ~Non perdiamo tempo in chiacchiere. Ho bisogno di una tomba.~ GOTO FemaleClerk1-2
+IF ~~ THEN REPLY ~Nulla. Scusatemi per il disturbo.~ EXIT
+END
+
+IF ~~ THEN FemaleClerk1-1
+SAY ~Ho forse scritto sulla fronte "Mappa del Palazzo di Giustizia"? No! Arrangiatevi e non infastiditemi più!~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN FemaleClerk1-2
+SAY ~Screanzato! Non otterrai alcun aiuto da me! Sparisci!~
+IF ~~ THEN EXIT
+END
+END
+
+APPEND CLERK01
+IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN ConfusedClerk
+SAY ~Uhmmm... Dove diamine ho messo quel documento a cui stavo lavorando?~
+= ~Oh! Ma guarda. L'ho cercato per tutto questo tempo senza accorgermi che l'avevo tra le mani!~
+IF ~~ THEN REPLY ~Non so se siate la persona più adatta a cui chiederlo, ma avrei bisogno di sapere chi si occupa dell'assegnazione delle tombe qui in città.~ GOTO ConfusedClerk1-1
+IF ~~ THEN REPLY ~Ne ho abbastanza di simili beoti. Meglio che vada da un'altra parte.~ EXIT
+END
+
+IF ~~ THEN ConfusedClerk1-1
+SAY ~Dunque...~
+= ~Ecco...~
+= ~Dovrebbe...~
+= ~Sì, forse...~
+= ~Beh, una volta...~
+IF ~~ THEN REPLY ~Sai o non sai a chi mi devo rivolgere?~ GOTO ConfusedClerk1-2
+IF ~~ THEN REPLY ~Eloquente quanto un orchetto. E' chiaro che non sai nemmeno come ti chiami.~ GOTO ConfusedClerk1-2
+IF ~~ THEN REPLY ~Non ho tempo da perdere con uno sciocco come te. Addio.~ EXIT
+END
+
+IF ~~ THEN ConfusedClerk1-2
+SAY ~Ehm... No. Non so proprio chi si occupi di queste cose. Mi dispiace.~
+IF ~~ THEN EXIT
+END
+END
+
+APPEND LLARSH
+IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN GovernmentOfficial
+SAY ~Togliti di mezzo, <RACE>. Mi fai ombra, e ho bisogno di luce per compilare questi moduli.~
+IF ~~ THEN REPLY ~Non me ne andrò sino a quando non mi avrai aiutato, zotico. Chi si occupa di seppellire i morti? Tu?~ GOTO GovernmentOfficial1-1
+IF ~~ THEN REPLY ~Devo parlare con voi per acquisire una cripta?~ GOTO GovernmentOfficial1-1
+IF ~~ THEN REPLY ~Addio.~ EXIT
+END
+
+IF ~~ THEN GovernmentOfficial1-1
+SAY ~Come osi scambiarmi per un addetto ad infimi compiti? Io mi occupo di modulistica! Modulistica, capito? E ora vattene! Stai calpestando la legge di fondazione di una colonia in Nuova Amn! Via, via!~
+IF ~~ THEN EXIT
+END
+END
+
+APPEND CIVIL03
+IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN NiceClerk
+SAY ~Avete un'espressione smarrita, <LADYLORD>. Forse potrei esservi d'aiuto.~
+IF ~~ THEN REPLY ~Un mio amico ha bisogno di un posto in cui riporre l'urna contenente le ceneri dei suoi familiari. Chi si occupa di queste cose qui?~ GOTO NiceClerk1-1
+IF ~~ THEN REPLY ~Lo spero proprio. Siete voi ad occuparvi di cripte e tombe?~ GOTO NiceClerk1-1
+IF ~~ THEN REPLY ~Non credo. Arrivederci.~ EXIT
+END
+
+IF ~~ THEN NiceClerk1-1
+SAY ~La persona a cui dovete rivolgervi è Lawrence Cutterwere. E' proprio qui di fianco a me.~
+= ~Poveretto. Lavora come un dannato per aggiudicarsi il titolo di migliore impiegato dell'anno, ma non sa che il nostro collega Llarsh corromperà come al solito tutti i votanti.~
+IF ~~ THEN EXIT
+END
+END
