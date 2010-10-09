@@ -1686,7 +1686,7 @@ INTERJECT_COPY_TRANS NOBLEM1 7 tb#StivanNoblem1-7
 == EDWINJ ~(Sospettavo che l'halfling tramasse contro la mia persona, ma questo piano è diabolico. Non lascerò che mi spediscano a casa da mamma. Non dopo che mi ha schiaffeggiato per averle detto di starsene un pò zitta!)~
 END
 
-INTERJECT_COPY_TRANS NOBLEW1 6 tb#StivanNoblew1-6
+INTERJECT_COPY_TRANS NOBLEW1 0 tb#StivanNoblew1-0
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~*Mia* mamma diceva sempre che la classe dei nobili collasserebbe su se stessa se non vi fossero quelle medie e inferiori. Come la mettiamo adesso, eh?~
 END
 
