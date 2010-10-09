@@ -845,3 +845,16 @@ THEN
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
 		StartDialogueNoSet(Player1)
 END
+
+
+
+IF
+	Global("TB#StivanImoen","GLOBAL",6)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		SetGlobal("TB#StivanImoen","GLOBAL",7)
+		ReallyForceSpell(Myself,WIZARD_MAGIC_MISSILE)
+		Wait(1)
+		StartDialogueNoSet("imoen2")
+END

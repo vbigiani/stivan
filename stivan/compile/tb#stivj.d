@@ -2611,7 +2611,7 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",8)~
 == CERNDJ ~Abbiamo quasi terminato. Cosa ne pensi della vita?~
 == TB#STIVJ ~Heh. Questa è difficile. Un'aiutino?~
 == CERNDJ ~Tua è la risposta.~
-== TB#STIVJ ~Beh, ecco… Sino a poco tempo fa, ti avrei detto che è il più aspro dei campi di battaglia; adesso, invece, considero la vita come un palcoscenico dove ciascuno deve recitare la sua parte.~
+== TB#STIVJ ~Beh, ecco... Sino a poco tempo fa, ti avrei detto che è il più aspro dei campi di battaglia; adesso, invece, considero la vita come un palcoscenico dove ciascuno deve recitare la sua parte.~
 == CERNDJ ~E tu sei intenzionato a prendere tra le mani un copione?~
 == TB#STIVJ ~Penso di sì.~
 == CERNDJ ~Molto bene, Stivan. Non c'è altro da aggiungere. La meta del nostro cammino è stata infine raggiunta. Possano la saggezza della Madre, Chauntea, e del Padre, Silvanus, accompagnarti verso ciò che ti attende.~
@@ -3052,7 +3052,7 @@ DO ~SetGlobal("tb#StivanJaheiraTethyr","GLOBAL",1)~
 == TB#STIVJ ~Se hai intenzione di farci un salto, ti accompagnerei volentieri. Le strade maestre di questa regione si snodano lungo una catena di piccoli villaggi halfling noti per la qualità del loro artigianato. Mio papà aveva molto a cuore quei posti.~
 == JAHEIRAJ ~L'ora della vendetta non può più essere rimandata, pertanto valuterò questa possibilità in un secondo momento. Ad ogni modo, sarebbe una tappa intermedia di un viaggio molto più lungo.~
 == TB#STIVJ ~Per dirigerti dove?~
-== JAHEIRAJ ~Penso sia mio dovere andare a Calimshan. Io… Non vorrei, ma sento che è la cosa giusta da fare.~
+== JAHEIRAJ ~Penso sia mio dovere andare a Calimshan. Io... Non vorrei, ma sento che è la cosa giusta da fare.~
 == TB#STIVJ ~A prescindere dalle motivazioni che ti spingono a compiere questo viaggio, ti consiglio di non andarci da sola. Non avevo nessuno al mio fianco quando sono andato a rivedere i vigneti che un tempo appartenevano alla mia famiglia, e ti assicuro che non è stata un'esperienza piacevole.~
 == JAHEIRAJ ~Suppongo sia dipeso dallo spirito con cui vi sei tornato.~
 == TB#STIVJ ~Era inevitabile che nutrissi alcune aspettative: che quella fattoria, quel sentiero, quegli intrecci di foglie, una volta rivisti, mi ispirassero un particolare sentimento, ma sono rimasto meravigliato quando la sola cosa che ho provato è stata un’improvvisa stilettata di memoria provocata da scenari e ambienti ai quali non avrei mai attribuito un tale potere di ferire.~
@@ -3119,7 +3119,7 @@ See("tb#stiv")
 !StateCheck("tb#stiv",CD_STATE_NOTVALID)
 Global("tb#StivanHalflingBridge","GLOBAL",0)~ THEN BMTOWN4 stivanHalflingBridge
 ~Ehi! Dov’è finita la mia pagnotta?!~
-== TB#STIVJ ~(Gnamm!) Non… Non ho visto nulla!~
+== TB#STIVJ ~(Gnamm!) Non... Non ho visto nulla!~
 DO ~SetGlobal("tb#StivanHalflingBridge","GLOBAL",1)~
 EXIT
 
@@ -3131,7 +3131,7 @@ Global("tb#StivanRose","GLOBAL",0)~ THEN MURDGIRL stivanRose
 DO ~SetGlobal("tb#StivanRose","GLOBAL",1)~
 == TB#STIVJ ~Certo, Rose. Il solito?~
 == MURDGIRL ~Questa volta facciamo solo cinque. Purtroppo ho perso alcuni dei clienti che impazzivano quando le usavo per certi giochetti erotici.~
-== TB#STIVJ ~(Arrossisce) Non… Non voglio sapere altro. Ecco, a te.~
+== TB#STIVJ ~(Arrossisce) Non... Non voglio sapere altro. Ecco, a te.~
 == MURDGIRL ~Sei proprio delizioso quando arrossisci in quel modo. Ci vediamo, tesoruccio.~
 EXIT
 

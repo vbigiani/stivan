@@ -30,7 +30,7 @@ IF ~~ THEN GOTO StivanPC3-4
 END
 
 IF ~~ THEN StivanPC3-4
-SAY ~Se… Se mia mamma fosse viva, mi avrebbe realizzato una bella fionda con le sue mani, com’è d’usanza in questi casi, ma il mio passaggio all'età adulta avverrà senza, purtroppo.~
+SAY ~Se... Se mia mamma fosse viva, mi avrebbe realizzato una bella fionda con le sue mani, com’è d’usanza in questi casi, ma il mio passaggio all'età adulta avverrà senza, purtroppo.~
 = ~Mi piacerebbe tanto avere le idee chiare sul futuro. Per fortuna di almeno una cosa sono certo: non voglio tornare a vivere per strada. Ad alcune persone piace alimentare il mito secondo cui i poveri godono della loro condizione, ma ti assicuro che non è così.~
 = ~Ciò detto, il domani mi spaventa un pò. Tu cosa mi consiglieresti, <CHARNAME>? Cosa pensi sia meglio per me?~
 IF ~~ THEN REPLY ~Limitati al presente. Non ho dubbi che quando verrà il momento di decidere sul tuo futuro, saprai cosa fare.~ GOTO StivanPC3-5
@@ -53,7 +53,7 @@ IF ~~ THEN GOTO StivanPC3-11
 END
 
 IF ~~ THEN StivanPC3-7
-SAY ~Le mie terre? Non… Non so se ne sarei in grado. E’ passato così tanto tempo…~
+SAY ~Le mie terre? Non... Non so se ne sarei in grado. E’ passato così tanto tempo...~
 = ~Vedremo. Ci penserò.~
 IF ~~ THEN EXIT
 END
@@ -69,7 +69,7 @@ IF ~~ THEN REPLY ~Non saprei. Penso che la decisione spetti a te solo.~ GOTO Sti
 END
 
 IF ~~ THEN StivanPC3-9a
-SAY ~Sì… Sì, mi sembra un’ottima idea! Avrei senz’altro un futuro come spia, e ho già un bellissimo nome in codice: il Cacciatore!~
+SAY ~Sì... Sì, mi sembra un’ottima idea! Avrei senz’altro un futuro come spia, e ho già un bellissimo nome in codice: il Cacciatore!~
 IF ~~ THEN GOTO StivanPC3-11
 END
 
@@ -387,7 +387,7 @@ CHAIN BEDWIN StivanEdwin5
 == BEDWIN ~Cosa... Cosa *diavolo* stai facendo?! Giù le mani, brutto porco! Non toccarmi! Non toccare il mio... No! NO! NOOOOO!~
 == TB#STIVB ~Yeah! Finalmente è mia!!~
 == BEDWIN ~NON OSARE...!!!~
-== TB#STIVB ~Manus... Entis... Pa!~ [ CAS_PM2M ]
+== TB#STIVB ~Facio, Voco, Ferre!~ [ CAS_PM3M ]
 DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",1)~
 EXIT
 
@@ -762,7 +762,7 @@ DO ~SetGlobal("tb#StivanJan","GLOBAL",1)~
 == TB#STIVB ~Golodon L'Evirato?~
 == BJAN ~Sì. Non chiedermi il perchè di quel soprannome. Ad oggi nessuno lo sa.~
 == TB#STIVB ~Heh. Và avanti, ti ascolto.~
-== BJAN ~Ora che mi ci fai pensare, credo che gli sia stato attribuito dalla sua ex moglie. Una tipa simpatica, sebbene sia stata lei a rendere pestilenziale l'alito del mio maestro, alito che ispirò il famoso incantesimo noto come "Orribile Avvizzimento di Golodon L'Evirato". Un giorno te lo mostrerò, se proprio ci tieni, anche se è difficile sfuggire a quegli effluvi quando sei alto un metro e una rapa.~
+== BJAN ~Ora che mi ci fai pensare, credo che gli sia stato attribuito dalla sua ex moglie. Una tipa simpatica, sebbene sia stata lei a rendere pestilenziale l'alito del mio maestro, alito che ispirò il famoso incantesimo noto come "Orribile Avvizzimento di Golodon L'Evirato". Un giorno te lo mostrerò, se proprio ci tieni, anche se è difficile sfuggire a quegli effluvi quando sei alto un metro e una rapa.~ //" I hate my editor
 == TB#STIVB ~"Un metro e una rapa"? Che unità di misura è mai questa?~
 == BJAN ~Per la barba di zio Scratchy! Non sapevi che gli gnomi misurano la loro statura con il rapometro?~
 == TB#STIVB ~*Ahem* Dovrei?~
@@ -1054,7 +1054,7 @@ Global("tb#StivanValygar","GLOBAL",2)~ THEN TB#STIVB stivanvalygar2
 DO ~SetGlobal("tb#StivanValygar","GLOBAL",3)~
 == BVALYGA ~Sei sicuro di averci riflettuto abbastanza?~
 == TB#STIVB ~Certo. Non permetto mai alla mia lingua di oltrepassare il pensiero, cosa credi? ~
-== BVALYGA ~Ho qualche dubbio a riguardo, ma… Ti ascolto.~
+== BVALYGA ~Ho qualche dubbio a riguardo, ma... Ti ascolto.~
 == TB#STIVB ~*Ahem* Hai presente la sfera del tuo antenato?~
 == BVALYGA ~Difficilmente potrei dimenticarmene.~
 == TB#STIVB ~Ecco, vedi... Il punto è che... Insomma, non pensi sia un peccato lasciarla inutilizzata? Lì, in mezzo ai rifiuti dei Bassifondi, tutta sola soletta...~
@@ -1202,7 +1202,165 @@ CHAIN IF ~~ THEN BIMOEN2 tb#StivanImoen1-1
 == BIMOEN2 ~Assaggia questo! Biscotto alla cannella!!~
 == TB#STIVB ~Prendi questo! Piuma di gabbiano!!~
 EXIT
- 
+
+CHAIN IF ~InParty("Imoen2")
+See("Imoen2")
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanImoen","GLOBAL",3)~ THEN TB#STIVB stivanimoen4
+~Vorrei proporre un'alleanza, mia acerrima rivale.~
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",4)~
+== BIMOEN2 ~Io mi diverto tanto a batterti in abilita' ladresca... perche' dovrei accettare questa tua offerta?~
+== TB#STIVB ~La mia proposta e' di accantonare la nostra sfida per un attimo e scambiarci qualche trucchetto!~
+== BIMOEN2 ~Una proposta interessante... Non ti credevo cosi' abile nel contrattare, sai?~
+== TB#STIVB ~Heh. Uno dei tanti talenti utili che mi ha trasmesso mio papa'.~
+== BIMOEN2 ~Puoi migliorare la mia tecnica di combattimento?~
+== TB#STIVB ~Una bella sfida - sei una frana sia a evitare i colpi che a infliggerli.~
+== BIMOEN2 ~Grazie del complimento! Molto gentile! E tu cosa vorresti apprendere?~
+== TB#STIVB ~Puoi insegnarmi a diventare invisibile tramite la magia?~
+== BIMOEN2 ~Non ho mai sentito parlare di halfling che padroneggino la magia...~
+== TB#STIVB ~Per favore?~
+== BIMOEN2 ~E va bene, faro' un tentativo.~
+== TB#STIVB ~Grazie!~
+EXIT
+
+CHAIN IF ~InParty("Imoen2")
+See("Imoen2")
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanImoen","GLOBAL",4)~ THEN TB#STIVB stivanimoen5
+~Avanti! Affonda!~
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",5)~
+== BIMOEN2 ~Assaggia questo!~
+== TB#STIVB ~Brava! Adesso indietro e schiva!~
+== BIMOEN2 ~Ahi!~
+== TB#STIVB ~Di nuovo! Para e poi contrattacca!~
+== BIMOEN2 ~Ahi! Prendi (pant) questo!~
+== TB#STIVB ~Non ti sbilanciare cosi' tanto! Riprovaci!~
+== BIMOEN2 ~(Pant pant) Sono stremata... pieta'!~
+== TB#STIVB ~Dai, ancora cinque minuti e poi sarai tu a riprendere me!~
+== BIMOEN2 ~E va bene... Schiva questo!~
+EXIT
+
+CHAIN IF ~InParty("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanImoen","GLOBAL",5)
+HPGT("tb#Stiv",20)~ THEN BIMOEN2 stivanimoen6
+~Ripeti con me! Incertus... Pulcher... Imperium!~ [ CAS_PM6F ]
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",6)~
+BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
+== BNALIA ~Imoen! Gli hai fatto lanciare Dardo Incantato su se' stesso! Sei impazzita?~
+== BIMOEN2 ~Oops.~
+== TB#STIVB ~Cos-~
+== BNALIA ~Non distrarti, Stivan! Potresti causausare un'esplosione se non finisci propriamente l'incantesimo!~
+== TB#STIVB ~(Gasp!)~
+END
+== TB#STIVB ~Incertus... Pulcher... Imperium!~ [ CAS_PM6M ]
+EXIT
+
+CHAIN IF ~Global("tb#StivanImoen","GLOBAL",7)~ THEN TB#STIVJ stivanimoen6-a
+~Auch!~
+= ~Vo..volevi (ahia!) farmi fuori?~
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",8)~
+== BIMOEN2 ~Scusa per l'errore!~
+== TB#STIVB ~Scusa? Almeno (ahi!) dammi qualcosa per curare la (ouch!) ferita!~
+== BIMOEN2 ~Ma che piagnone che sei, per un graffio come quello!~
+== TB#STIVB ~Ahi ahi ahi ahi..~
+== BIMOEN2 ~Sei proprio un bambinone.~
+= ~Ecco, tieni una pozione di guarigione.~
+== TB#STIVB ~(glu glu) Grazie, ora mi sento meglio!~
+DO ~ReallyForceSpell(Myself,CLERIC_CURE_LIGHT_WOUNDS)~
+EXIT
+
+CHAIN IF ~InParty("Imoen2")
+See("Imoen2")
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanImoen","GLOBAL",8)~ THEN TB#STIVB stivanimoen7
+~Stai facendo dei notevoli progressi con la lama, Imoen!~
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",9)~
+== BIMOEN2 ~Grazie! Modestamente, sono imbattibile!~
+DO ~ApplySpellRES("spcl141","Imoen2")
+ApplySpellRES("spcl441","Imoen2")
+DisplayString("Imoen2",%Bonus: +1 al colpire, +1 danno, -1 CA%)~
+== TB#STIVB ~Lo vedremo... pronta per un'altro combettimento?~
+== BIMOEN2 ~Mai stata cosi' pronta! Prendi QUESTO!~
+== TB#STIVB ~Cos-~
+= ~(Bum!)~
+= ~Auch! La testa!~
+== BIMOEN2 ~Ho vinto! Ti ho messo a terra!~
+== TB#STIVB ~Quante volte ti devo dire, Imoen, tentare di placcare un'avversario armato e' una pessima idea!~
+== BIMOEN2 ~Sara', ma con te funziona sempre!~
+== TB#STIVB ~Questo e' perche' non punto la mia spada contro di te per trapassarti se tenti di saltarmi addosso!~
+= ~Perche' si sono voltati tutti a guardarci?~
+== BIMOEN2 ~Non so se e' per il capitombolo, perche' siamo a terra l'una sull'altro, o per il doppio senso che hai appena pronunciato.~
+== TB#STIVB ~Heh. In effetti la situazione non e' spiacevole - prometto che non ti sgridero' di nuovo se mi torni ad atterrare in questo modo.~
+== BIMOEN2 ~Avanti, alzati e andiamo - ci siamo esibiti gia' abbastanza.~
+EXIT
+
+CHAIN IF ~InParty("Imoen2")
+See("Imoen2")
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanImoen","GLOBAL",9)~ THEN TB#STIVB stivanimoen8
+~Vediamo se ho capito. Manus... Potentis... Paro!~ [ CAS_PM2M ]
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",10)~
+== BIMOEN2 ~Non ci siamo proprio! Se non stai attento mi diventi un rospo!~
+== TB#STIVB ~Quasi quasi... le fiabe finiscono sempre bene per i rospi quando incontrano la loro principessa.~
+BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
+== TB#STIVB ~E io ho gia' incontrato Miss Nalia!~
+== BNALIA ~Temo di dover rovinare le tue illusioni, Stivan.~
+== TB#STIVB ~Che sbadato! Mi dimentico sempre che voi non siete una principessa!~
+END
+== BIMOEN2 ~Avanti, zuccone, riprova! Veritas... Credo... Oculos!~ [ CAS_PM1F ]
+== TB#STIVB ~Va bene! Veritas... Credo... Oculos!~ [ CAS_PM1M ]
+DO ~ApplySpell("tb#stiv",WIZARD_INVISIBILITY)~
+== TB#STIVB ~Aiuto! Non mi vedo piu' le mani!~
+DO ~AddSpecialAbility("spin118")~
+== BIMOEN2 ~Ci... ci sei riuscito! Complimenti!~
+== TB#STIVB ~Evviva!~
+EXIT
+
+CHAIN IF ~InParty("tb#stiv")
+See("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanImoen","GLOBAL",10)~ THEN BIMOEN2 stivanimoen9
+~Pronto a un'altro duello, Stivan?~
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",11)~
+== TB#STIVB ~Mai stato piu' pronto! Schiva questo!~
+== BIMOEN2 ~Un gioco da ragazzi! Para questo!~
+== TB#STIVB ~Niente di piu' facile! Prendi questo!~
+== BIMOEN2 ~Ahi!~
+== TB#STIVB ~Scusa Imoen, non volevo ferirti!~
+== BIMOEN2 ~Fa niente, e' solo un graffio.~
+== TB#STIVB ~Sei migliorata tanto, ma non riuscirai mai a sconfiggermi senza placcarmi!~
+== BIMOEN2 ~Non ho bisogno di questi trucchetti. Ti sconfiggero' onorevolmente, mi serve solo qualche altro allenamento.~
+== TB#STIVB ~Dico sul serio, non me la prendo se mi torni a battere saltandomi addosso!~
+== BIMOEN2 ~...~
+= ~Non credo tu capisca molto sulle donne.~
+== BIMOEN2 IF ~Gender(Player1,MALE)~ THEN ~Sei peggio di <CHARNAME> un paio di anni fa, Stivan.~
+EXIT
+
+CHAIN IF ~InParty("Imoen2")
+See("Imoen2")
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanImoen","GLOBAL",11)
+HaveSpellRES("spin118")~ THEN TB#STIVB stivanimoen10
+~Veritas... Credo... Oculos!~ [ CAS_PM1M ]
+= ~Heh, sono un genio! Questo e' il crimine perfetto!~
+DO ~SetGlobal("tb#StivanImoen","GLOBAL",12) SpellRES("spin118","tb#stiv")~
+== BIMOEN2 ~Non ci proverei se fossi in te. L'invisibilita' termina se tocchi qualcuno.~
+== TB#STIVB ~Ehm, parlavo di un piano per riprendermi i vigneti. Mia mamma diceva sempre che le donne non si toccano neanche con un fiore, e io le ubbdisco sempre!~
+= ~(Magari la streghetta sta bleffando? Non posso lasciarmi sfuggire l'occasione!)~
+== BIMOEN2 ~Tra parentesi, ho appena finito di ricercare una nuova magia: "Irreversibile trasformazione in Gabbiano di Imoen la Svelta". Ti interesserebbe farmi da cavia?~
+== TB#STIVB ~...~
+= ~Va bene, hai vinto tu. Terro' le mani a casa.~
+EXIT
+
 CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
