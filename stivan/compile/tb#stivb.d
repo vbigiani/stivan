@@ -1296,8 +1296,10 @@ DisplayString("Imoen2",%Bonus: +1 al colpire, +1 danno, -1 CA%)~
 == TB#STIVB ~Questo e' perche' non punto la mia spada contro di te per trapassarti se tenti di saltarmi addosso!~
 = ~Perche' si sono voltati tutti a guardarci?~
 == BIMOEN2 ~Non so se e' per il capitombolo, perche' siamo a terra l'una sull'altro, o per il doppio senso che hai appena pronunciato.~
-== TB#STIVB ~Heh. In effetti la situazione non e' spiacevole - prometto che non ti sgridero' di nuovo se mi torni ad atterrare in questo modo.~
-== BIMOEN2 ~Avanti, alzati e andiamo - ci siamo esibiti gia' abbastanza.~
+== TB#STIVB IF ~Global("AnomenIsNotKnight","GLOBAL",0)~ THEN ~Heh. In effetti la situazione non e' spiacevole - prometto che non ti sgridero' di nuovo se mi torni ad atterrare in questo modo.~
+== TB#STIVB IF ~Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~...~
+= ~Come possono pensare una cosa simile? Io sono innocente, innocuo e ingenuo!~
+== BIMOEN2 ~Avanti, alzati e andiamo - ci siamo gia' esibiti abbastanza.~
 EXIT
 
 CHAIN IF ~InParty("Imoen2")
@@ -1336,12 +1338,20 @@ DO ~SetGlobal("tb#StivanImoen","GLOBAL",11)~
 == BIMOEN2 ~Ahi!~
 == TB#STIVB ~Scusa Imoen, non volevo ferirti!~
 == BIMOEN2 ~Fa niente, e' solo un graffio.~
+BRANCH ~Global("AnomenIsNotKnight","GLOBAL",1)~ BEGIN
+== TB#STIVB ~Sei migliorata tanto, ma non riuscirai mai a sconfiggermi!~
+== BIMOEN2 ~Lo vedremo... Cacca di gabbiano!~
+== TB#STIVB ~Cos- Non vale! Quello e' il *mio* trucco vincente!~
+== BIMOEN2 ~Ha! Il maestro battuto dallo studente!~
+END
+BRANCH ~Global("AnomenIsNotKnight","GLOBAL",0)~ BEGIN
 == TB#STIVB ~Sei migliorata tanto, ma non riuscirai mai a sconfiggermi senza placcarmi!~
 == BIMOEN2 ~Non ho bisogno di questi trucchetti. Ti sconfiggero' onorevolmente, mi serve solo qualche altro allenamento.~
 == TB#STIVB ~Dico sul serio, non me la prendo se mi torni a battere saltandomi addosso!~
 == BIMOEN2 ~...~
 = ~Non credo tu capisca molto sulle donne.~
 == BIMOEN2 IF ~Gender(Player1,MALE)~ THEN ~Sei peggio di <CHARNAME> un paio di anni fa, Stivan.~
+END
 EXIT
 
 CHAIN IF ~InParty("Imoen2")
@@ -1349,7 +1359,8 @@ See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",11)
-HaveSpellRES("spin118")~ THEN TB#STIVB stivanimoen10
+HaveSpellRES("spin118")
+Global("AnomenIsNotKnight","GLOBAL",0)~ THEN TB#STIVB stivanimoen10
 ~Veritas... Credo... Oculos!~ [ CAS_PM1M ]
 = ~Heh, sono un genio! Questo e' il crimine perfetto!~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",12) SpellRES("spin118","tb#stiv")~
