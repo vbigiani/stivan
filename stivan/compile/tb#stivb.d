@@ -309,7 +309,7 @@ Global("tb#StivanEdwinInDungeon","GLOBAL",0)~ THEN BEDWIN StivanEdwinInDungeon
 ~Posso sapere cosa ci trovi di tanto interessante in quella parete, halfling? Trovi che sia normale accarezzarla mormorando parole indistinte?~
 DO ~SetGlobal("tb#StivanEdwinInDungeon","GLOBAL",1)~
 == TB#STIVB ~A me piace parlare al muro, Edwin. E' il solo che non mi contraddica.~
-== BEDWIN ~(E' un individuo pericoloso. Lo sostenevo fin dall'inizio).~
+== BEDWIN ~(E' un individuo pericoloso. Lo sostengo sin dall'inizio).~
 EXIT
 
 CHAIN 
@@ -1024,23 +1024,23 @@ See("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanValygar", "GLOBAL",1)~ THEN TB#STIVB stivanvalygar2
-~Valygar, mi hai spiegato perchè non eri attratto dalla vita mondana, ma... Cosa ti ha spinto a diventare un ranger?~
+~Valygar, mi hai spiegato perchè non eri attratto dalla vita mondana, ma resta ancora un mistero cosa ti abbia spinto a diventare un ranger.~
 DO ~SetGlobal("tb#StivanValygar", "GLOBAL",2)~
-== BVALYGA ~Sarebbe più corretto chiamarmi esploratore anzichè ranger: quest'ultimo, infatti, è un titolo che viene conferito soltanto a coloro che si sono distinti nella difesa della natura.~
+== BVALYGA ~Sarebbe più corretto chiamarmi esploratore anzichè ranger. Quest'ultimo, infatti, è un titolo che viene conferito soltanto a coloro che si sono distinti nella difesa della natura.~
 BRANCH ~GlobalLT("tb#StivanMinsc","GLOBAL",3) IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ BEGIN
-== TB#STIVB ~Beh, se Minsc l'ha ottenuto, immagino che questo titolo non sia difficile da conseguire.~
+== TB#STIVB ~Beh, se Minsc l'ha ottenuto, immagino che non sia difficile da conseguire.~
 == BMINSC ~Minsc ha un udito più fine di quello di Boo e ti ha sentito! Sono diventato ranger perchè nessuno ha dato al male tanti calci nel sedere come me!~
 == TB#STIVB ~Ti ringrazio, Minsc: hai appena confermato le mie supposizioni. Stavi dicendo, Valygar?~
 END
-== BVALYGA ~Ho prestato servizio tra le guardie dell'Amn per diversi anni. Sono stato impiegato come esploratore nelle foreste e nei luoghi selvaggi per le mie capacità di mimetizzazione, ed è nel corso di una delle mie missioni che ho avvertito il richiamo della natura.~
+== BVALYGA ~Ho prestato servizio tra le guardie dell'Amn per diversi anni. Sono stato impiegato come esploratore nelle foreste e nei luoghi selvaggi per le mie capacità di mimetizzazione, ed è nel corso di una delle mie missioni che ho sentito il dovere di fare il possibile per proteggere la terra e le sue creature.~
 == TB#STIVB ~Capisco. In altre parole, proteggi i cespugli e i ciuffi d'erba per dare un senso alla tua vita.~
 == BVALYGA ~Non penso proprio di aver detto questo, Stivan.~
 == TB#STIVB ~Oh, ma non preoccuparti. Io non critico niente e nessuno. Penso soltanto che questa storia del servire Madre Natura sia una grande scemenza.~
-== BVALYGA ~Definire "scemenza" qualcosa che non conosci non ti fà onore, soprattutto visto che sei stato te a chiedermi di raccontarti come sono diventato un ranger.~
+== BVALYGA ~Definire "scemenza" qualcosa che non conosci non ti fà onore, soprattutto visto che sei stato te a chiedermi di raccontarti come sono diventato ciò che sono.~
 == TB#STIVB ~Il problema è che--~
 == BVALYGA ~Io non vedo nessun problema, Stivan, ad eccezione dei tuoi stereotipi e pregiudizi.~
 == TB#STIVB ~Io non--~
-== BVALYGA ~Basta così. Gli stolti non capiscono mai quando è il momento di tacere, quindi è meglio che sia io ad interrompere questa conversazione. Tu ed io non abbiamo più nulla da dirci, almeno finchè non avrai imparato a pensare prima di parlare.~
+== BVALYGA ~Basta così. Gli stolti non capiscono mai quando è il momento di tacere, quindi è meglio che sia io ad interrompere questa conversazione. Noi due non abbiamo più nulla da dirci, almeno finchè non avrai imparato a pensare prima di parlare.~
 EXIT
 
 CHAIN 
@@ -1054,13 +1054,13 @@ Global("tb#StivanValygar","GLOBAL",2)~ THEN TB#STIVB stivanvalygar2
 DO ~SetGlobal("tb#StivanValygar","GLOBAL",3)~
 == BVALYGA ~Sei sicuro di averci riflettuto abbastanza?~
 == TB#STIVB ~Certo. Non permetto mai alla mia lingua di oltrepassare il pensiero, cosa credi? ~
-== BVALYGA ~Ho qualche dubbio a riguardo, ma... Ti ascolto.~
+== BVALYGA ~Ho qualche dubbio a riguardo, ma… Ti ascolto.~
 == TB#STIVB ~*Ahem* Hai presente la sfera del tuo antenato?~
 == BVALYGA ~Difficilmente potrei dimenticarmene.~
 == TB#STIVB ~Ecco, vedi... Il punto è che... Insomma, non pensi sia un peccato lasciarla inutilizzata? Lì, in mezzo ai rifiuti dei Bassifondi, tutta sola soletta...~
 == BVALYGA ~Utilizzarla a che scopo, scusa?~
-== TB#STIVB ~Beh, questi sono dettagli.~
-== BVALYGA ~Dettagli, eh? Spiacente, ma non voglio avere più nulla a che fare con quella sfera. Nella mia mente è ancora vivido il ricordo della distruzione e della sofferenza che ha causato, e nelle mani di persone incaute potrebbe ritornare ad essere pericolosa.~
+== TB#STIVB ~Se te lo dicessi, rovinerei la sorpresa. Fidati di me. Saprò servirmene come si deve.~
+== BVALYGA ~Spiacente, ma non voglio avere più nulla a che fare con quella sfera. Nella mia mente è ancora vivido il ricordo della distruzione e della sofferenza che ha causato, e nelle mani di persone incaute potrebbe ritornare ad essere pericolosa.~
 == TB#STIVB ~Ma potresti fare un sacco di cose con quell'aggeggio!~
 == BVALYGA ~Ad esempio?~
 == TB#STIVB ~Beh, potremmo servircene per eliminare tutti i gabbiani nel Faerun. Sì, mi pare un'ottima idea!~

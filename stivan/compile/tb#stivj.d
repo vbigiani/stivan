@@ -2022,47 +2022,37 @@ See("Mazzy")
 CombatCounter(0)
 Global("tb#StivanMazzyDragon","GLOBAL",0)
 AreaCheck("ar1402")~ THEN TB#STIVJ stivandragon
-~Eeeekkk! C... Cos'è quel coso?!~
+~Eeekkk! C... Cos'è quel coso?!~
 DO ~SetGlobal("tb#StivanMazzyDragon","GLOBAL",1)~
 == MAZZYJ ~Eccolo. E' il drago che ha sconfitto me e i miei amici. Benchè Amuana ci abbia sconsigliato di affrontarlo, fremo dalla rabbia all'idea di risparmiare una creatura così malvagia!~
-== TB#STIVJ ~Combattici te se sei abbastanza folle da farlo! Io non staccherò le mani dalla Pietra dell'Ombra neanche morto!~
+== TB#STIVJ ~Combattici te se sei abbastanza folle da farlo! Io non ho intenzione di perdere la vita in una battaglia inutile come questa!~
 == MAZZYJ ~Nessun halfling dovrebbe mai tirarsi indietro di fronte ad una prova di coraggio. Davide non ebbe alcuna esitazione ad affrontare Golia!~
 == TB#STIVJ ~Svegliati, Mazzy! La realtà è ben diversa da quella stupida favola per marmocchi insonni!~
 END
 IF ~~ THEN REPLY ~(Resti in silenzio).~ EXTERN MAZZYJ StivanMazzyDragon1-1
-IF ~~ THEN REPLY ~Davide? Golia? Di chi state parlando?~ EXTERN MAZZYJ StivanMazzyDragon1-2
-IF ~~ THEN REPLY ~Affronteremo il drago, Stivan, che ti piaccia o no.~ EXTERN TB#STIVJ StivanMazzyDragon1-3
-IF ~~ THEN REPLY ~Si tratta di un nemico troppo pericoloso, Mazzy. Non lo sfideremo.~ EXTERN MAZZYJ StivanMazzyDragon1-4
-
+IF ~!Race(Player1,HALFLING)~ THEN REPLY ~Davide? Golia? Di chi state parlando?~ EXTERN MAZZYJ StivanMazzyDragon1-2
+IF ~Race(Player1,HALFLING)~ THEN REPLY ~Uhmm... Ho già sentito questi nomi. Sbaglio o sono i protagonisti di un noto racconto halfling?~ EXTERN MAZZYJ StivanMazzyDragon1-3
+IF ~Class(Player1,BARD_ALL)~ THEN REPLY ~Le mie orecchie riconoscono sempre il suono di una promettente leggenda. Raccontatemela, vi ascolto.~ EXTERN MAZZYJ StivanMazzyDragon1-4
+IF ~~ THEN REPLY ~Voi due, calmatevi. Non è il momento di agitarsi inutilmente.~ EXTERN MAZZYJ StivanMazzyDragon1-1
 
 CHAIN IF ~~ THEN MAZZYJ StivanMazzyDragon1-1
 ~Quella storia, inventata o veritiera che sia, ha un insegnamento che faresti bene a ricordare. Lascia che ti rinfreschi la memoria.~
 == TB#STIVJ ~Non ce n’è bisogno, la conosco meglio di te!~
-EXTERN MAZZYJ StivanMazzyDragon1-5
-
-APPEND TB#STIVJ
-IF ~~ THEN BEGIN StivanMazzyDragon1-3
-SAY ~Tu sei folle, <CHARNAME>, folle! Non voglio morire sbranato da quel mostro! Eeeekkkk!~
-IF ~~ THEN DO ~ApplySpellRES("tb#ssca",Myself)~ EXIT
-END
-END
+EXTERN MAZZYJ StivanMazzyDragon1-4
 
 APPEND MAZZYJ
 IF ~~ THEN BEGIN StivanMazzyDragon1-2
 SAY ~Si tratta dei protagonisti di una leggenda che le madri halfling son solite raccontarci in tenera età.~
-IF ~~ THEN EXTERN MAZZYJ StivanMazzyDragon1-5
-END
-
-IF ~~ THEN BEGIN StivanMazzyDragon1-4
-SAY ~Non volevo suggerire nulla del genere, <CHARNAME>. Ho già affrontato quella bestia, e so bene quanto sia forte. Il problema è che... Sento le grida dei miei compagni caduti. Chiedono giustizia.~
-IF ~~ THEN REPLY ~E l’avranno. Il Signore delle Ombre pagherà per gli orrori di cui è responsabile.~ EXIT
-IF ~~ THEN REPLY ~Riconoscere i propri limiti è segno di saggezza. Non ha senso sprecare le nostre vite attaccandolo; ci rivarremo sul padrone di questa orrida bestia.~ EXIT
-IF ~~ THEN REPLY ~Così sia. Preparati, Stivan: combatteremo contro il drago.~ EXTERN TB#STIVJ StivanMazzyDragon1-3
-IF ~~ THEN REPLY ~Capisco cosa dici, ma è meglio proseguire. Abbiamo indugiato sin troppo qui.~ EXIT
+IF ~~ THEN EXTERN MAZZYJ StivanMazzyDragon1-4
 END
 END
 
-CHAIN IF ~~ THEN MAZZYJ StivanMazzyDragon1-5
+CHAIN IF ~~ THEN MAZZYJ StivanMazzyDragon1-3
+~Esatto, <CHARNAME>. Quella storia, inventata o veritiera che sia, ha un insegnamento che il nostro amico farebbe bene a ricordare. Lascia che gli rinfreschi la memoria.~
+== TB#STIVJ ~Non ce n’è bisogno, la conosco meglio di te!~
+EXTERN MAZZYJ StivanMazzyDragon1-4
+
+CHAIN IF ~~ THEN MAZZYJ StivanMazzyDragon1-4
 ~Nei pressi di un insediamento halfling a sud del Golfo di Vilhon si era stabilito un gruppo di giganti che terrorizzava le comunità del posto. Ad essere sincera, non ricordo con esattezza il nome del villaggio.~
 == TB#STIVJ ~(Snort!) Si trattava del Bosco di Chondal, ignorante!~
 == MAZZYJ ~Visto che sai più dettagli di me, perché non prosegui?~
@@ -2071,11 +2061,38 @@ CHAIN IF ~~ THEN MAZZYJ StivanMazzyDragon1-5
 = ~La situazione rimase invariata sino a quando il campione dei nuovi arrivati, Golia, rivolse una vera e propria sfida agli halfling degli spiriti che abitavano il posto. La sua tribù avrebbe abbandonato il Bosco di Chondal soltanto se lui fosse stato sconfitto in combattimento.~
 = ~Nessuno ebbe il coraggio di accettare la sfida, ad eccezione di un tale di nome Davide.~
 = ~I due si incontrarono in una valle, conosciuta come la Valle di Elah. Certo di avere la vittoria in tasca, Golia lasciò che fosse l’avversario a fare la prima mossa.~
-== MAZZYJ ~La sua presunzione gli fu fatale, in quanto Davide infilò la mano nella sua bisaccia, ne trasse una pietra, la lanciò con la fionda e colpì il gigante in fronte, facendolo cadere a terra. A quel punto corse in direzione dell’avversario, prese la sua spada e lo uccise, per poi tagliargli la testa.~
-== TB#STIVJ ~(Sospira) E fu così che gli halfling del Bosco di Chondal furono liberi dalla minaccia dei giganti, in quanto fuggirono alla notizia della morte del loro capo.~
+== MAZZYJ ~La sua presunzione gli fu fatale, in quanto Davide infilò la mano nella sua bisaccia, ne trasse una pietra, la lanciò con la fionda e colpì il gigante in fronte, facendolo cadere a terra. A quel punto corse in direzione dell’avversario, prese la sua spada e lo uccise tagliandogli la testa.~
+== TB#STIVJ ~(Sospiro) E fu così che gli halfling del Bosco di Chondal furono liberi dalla minaccia dei giganti, in quanto fuggirono alla notizia della morte del loro capo.~
 == MAZZYJ ~Lo vedi, Stivan? Le idee ispirate dal coraggio sono come le pedine degli scacchi. Se da una parte possono essere mangiate, dall’altra possono anche dare avvio ad un gioco vincente.~
-== TB#STIVJ ~(Snort!) Non tutti sono dei Davide scesi nella Valle di Elah per affrontare un mostro tanto più grande e forte di noi. E non tutti hanno la capacità di uccidere il gigante. Di rado i cosiddetti "buoni" vincono e vivono per raccontarlo.~
-EXIT
+== TB#STIVJ ~Non tutti sono dei Davide scesi nella Valle di Elah per affrontare un mostro tanto più grande e forte di noi. E non tutti hanno la capacità di uccidere il gigante. Di rado i cosiddetti "buoni" vincono e vivono per raccontarlo.~
+END
+IF ~~ THEN REPLY ~Affronteremo il drago, Stivan, che ti piaccia o no.~ EXTERN TB#STIVJ StivanMazzyDragon1-6
+IF ~~ THEN REPLY ~Si tratta di un nemico troppo pericoloso, Mazzy. Non lo sfideremo.~ EXTERN MAZZYJ StivanMazzyDragon1-7
+IF ~~ THEN REPLY ~Sceglierò cosa fare soltanto dopo aver studiato il nemico. Non è una decisione da prendere alla leggera.~ EXTERN TB#STIVJ StivanMazzyDragon1-8
+
+APPEND TB#STIVJ
+IF ~~ THEN BEGIN StivanMazzyDragon1-6
+SAY ~T-tu sei folle, <CHARNAME>, folle! Non voglio morire sbranato da quel mostro! Eeekkk!~
+IF ~~ THEN DO ~ApplySpellRES("tb#ssca",Myself)~ EXIT
+END
+END
+
+APPEND MAZZYJ
+IF ~~ THEN BEGIN StivanMazzyDragon1-7
+SAY ~Non volevo suggerire nulla del genere, <CHARNAME>. Ho già affrontato quella bestia, e so bene quanto sia forte. Il problema è che... Sento le grida dei miei compagni caduti. Chiedono giustizia.~
+IF ~~ THEN REPLY ~E l’avranno. Il Signore delle Ombre pagherà per gli orrori di cui è responsabile.~ EXIT
+IF ~~ THEN REPLY ~Riconoscere i propri limiti è segno di saggezza. Non ha senso sprecare le nostre vite attaccandolo; ci rivarremo sul padrone di questa orrida bestia.~ EXIT
+IF ~~ THEN REPLY ~Così sia. Preparati, Stivan: combatteremo contro il drago.~ EXTERN TB#STIVJ StivanMazzyDragon1-6
+IF ~~ THEN REPLY ~Capisco cosa dici, ma è meglio proseguire. Abbiamo indugiato sin troppo qui.~ EXIT
+END
+END
+
+APPEND TB#STIVJ
+IF ~~ THEN BEGIN StivanMazzyDragon1-8
+SAY ~Ci deve pure pensare, come se la scelta migliore non fosse già ovvia. Beh, mentre tu fai le tue riflessioni, io mediterò su quale sia il posto migliore in cui nascondermi, okay?~
+IF ~~ THEN EXIT
+END
+END
 
 BEGIN TB#SLIL
 CHAIN 
