@@ -2924,16 +2924,17 @@ InParty(Player1)
 !StateCheck("tb#stiv",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanPCTalk","GLOBAL",3)~ THEN PC2
+Global("tb#StivanPCCowled","GLOBAL",0)
+Global("Chapter","GLOBAL",2)~ THEN PC2
 SAY ~Mi hai parlato di una missione quando ci siamo incontrati per la prima volta, <CHARNAME>, e non posso fare a meno di chiedermi se abbiamo fatto dei progressi ultimamente.~
-IF ~Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Non quanti vorrei. Ora come ora, sto raccogliendo una certa somma di denaro per Gaelan Bayle, il rappresentante di un'organizzazione che mi ha offerto il suo aiuto.~ GOTO PC2-1
-IF ~!Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Ho due contatti che potrebbero fare al caso mio. Gaelan Bayle, un uomo che ho incontrato poco dopo il mio arrivo ad Athkatla, e una certa "Signora" di cui devo ancora valutare l'offerta.~ GOTO PC2-1
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Più o meno.~ GOTO PC2-1
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Dubito che andremo avanti se mi interrompi in continuazione. Un pò di silenzio, per favore.~ GOTO PC2-7
+IF ~Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Non quanti vorrei. Ora come ora, sto raccogliendo una certa somma di denaro per Gaelan Bayle, il rappresentante di un'organizzazione che mi ha offerto il suo aiuto.~ GOTO PC2-1
+IF ~!Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Ho due contatti che potrebbero fare al caso mio. Gaelan Bayle, un uomo che ho incontrato poco dopo il mio arrivo ad Athkatla, e una certa "Signora" di cui devo ancora valutare l'offerta.~ GOTO PC2-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Più o meno.~ GOTO PC2-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Dubito che andremo avanti se mi interrompi in continuazione. Un pò di silenzio, per favore.~ GOTO PC2-7
 END
 
 IF ~~ THEN PC2-1
-SAY ~Uhmm... Il clero qui in città è molto ricco e potente, ma dubito che si esporrebbero così tanto per uno sconosciuto. Sono troppo impegnati a genuflettersi davanti alle statue dei loro dei e cose simili.~
+SAY ~Uhmm... Il clero qui in città è molto ricco e potente, ma dubito che i suoi membri si esporrebbero così tanto per uno sconosciuto. Sono troppo impegnati a genuflettersi davanti alle statue dei loro dei e cose simili.~
 = ~Lo stesso dicasi per il Cuore Radioso: a meno che tu non prometta loro una "campagna contro il male" o qualche altra sciocchezza con cui si riempiono la bocca, continueranno a fare gli sbruffoni e a lucidare le loro armature.~
 IF ~~ THEN REPLY ~Altri?~ GOTO PC2-3
 END
@@ -2941,7 +2942,7 @@ END
 IF ~~ THEN PC2-3
 SAY ~Oltre a questi... Non mi vengono in mente altri gruppi abbastanza potenti da prendere per il naso gli Incappucciati. Del resto, stiamo parlando di un'organizzazione potente. Cosa sai di loro?~
 IF ~~ THEN REPLY ~Nulla, in realtà. Lungo la Costa della Spada non sono noti.~ GOTO PC2-4
-IF ~~ THEN REPLY ~Ho raccolto poche informazioni qui in città. Non riesco a capire se la gente non parli per paura o per semplice ignoranza.~ GOTO PC2-4
+IF ~~ THEN REPLY ~Sino ad ora ho raccolto veramente poche informazioni. Non riesco a capire se la gente non parli per paura o per semplice ignoranza.~ GOTO PC2-4
 IF ~~ THEN REPLY ~So che *non* sono collaborativi. Il loro rappresentante al Palazzo di Giustizia non scuce una sola parola.~ GOTO PC2-4
 END
 

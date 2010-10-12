@@ -5,12 +5,12 @@ InParty(Player1)
 !StateCheck("tb#stiv",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanPCTalk","GLOBAL",4)~ THEN stivanPC3
+Global("tb#StivanPCTalk","GLOBAL",3)~ THEN stivanPC3
 SAY ~Progetti per il futuro: aspirazioni, sogni, idee... Ne hai qualcuno, <CHARNAME>?~
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Vivo alla giornata. La mia condizione di Figlio di Bhaal non lascia spazio per simili cose.~ GOTO StivanPC3-1
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Una casa accogliente, un fuoco caldo e la mia dolce metà al mio fianco. E' questo che vorrei.~ GOTO StivanPC3-1
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Denaro. Lo investirei in vari modi, così da poter vivere di rendita senza problemi.~ GOTO StivanPC3-1
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",5)~ REPLY ~Mi piace l'avventura. Conto di continuare a viaggiare e a gettarmi in ogni sorta di missione sino a quando il fisico me lo consentirà.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Vivo alla giornata. La mia condizione di Figlio di Bhaal non lascia spazio per simili cose.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Una casa accogliente, un fuoco caldo e la mia dolce metà al mio fianco. E' questo che vorrei.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Denaro. Lo investirei in vari modi, così da poter vivere di rendita senza problemi.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Mi piace l'avventura. Conto di continuare a viaggiare e a gettarmi in ogni sorta di missione sino a quando il fisico me lo consentirà.~ GOTO StivanPC3-1
 END
 
 IF ~~ THEN StivanPC3-1

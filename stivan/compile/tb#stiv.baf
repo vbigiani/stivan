@@ -278,7 +278,13 @@ IF
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	!StateCheck(Player1,CD_STATE_NOTVALID)
 	CombatCounter(0)
-	Global("tb#StivanPCTalk","GLOBAL",0)
+	OR(2)
+		Global("tb#StivanPCTalk","GLOBAL",0)
+		Global("tb#StivanPCCowled","GLOBAL",0)
+	OR(2)
+		Global("tb#StivanPCTalk","GLOBAL",0)
+		Global("Chapter","GLOBAL",2)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
 	RESPONSE #80
 		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
