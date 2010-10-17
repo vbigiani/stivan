@@ -1696,6 +1696,15 @@ END
 == TB#STIVJ ~Complimenti, Cernd. Hai appena fatto sprofondare la scarsa considerazione che avevo di te!~
 END */
 
+INTERJECT_COPY_TRANS BKELDOR 4 tb#StivanBkeldor-4
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Tu sei l'ultima persona con cui dovrebbe parlare! Fai parte di quella squallida congrega di bigotti che ha avuto il coraggio di ritenere ingiusta la nostra vendetta!~
+== BKELDOR ~Hai una responsabilità non indifferente nella sua corruzione, halfling. Se stato tu a farlo bere da un calice di menzogne che placasse la sua sete di giustizia.~
+END
+
+INTERJECT_COPY_TRANS BANOMEN 45 tb#StivanBanomen-45
+== BKELDOR IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Il ragazzo ha sempre disprezzato le tue aspirazioni e la tua morale. Possibile che tu non ti sia accorto di come abbia sfruttato la tua debolezza per i suoi scopi?~
+== TB#STIVJ ~(Snort!) Il dolore avvicina le persone, pezzo d'idiota!~
+END
 
 
 
@@ -2927,10 +2936,15 @@ CombatCounter(0)
 Global("tb#StivanPCCowled","GLOBAL",0)
 Global("Chapter","GLOBAL",2)~ THEN PC2
 SAY ~Mi hai parlato di una missione quando ci siamo incontrati per la prima volta, <CHARNAME>, e non posso fare a meno di chiedermi se abbiamo fatto dei progressi ultimamente.~
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Più o meno.~ GOTO PC2-1a
 IF ~Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Non quanti vorrei. Ora come ora, sto raccogliendo una certa somma di denaro per Gaelan Bayle, il rappresentante di un'organizzazione che mi ha offerto il suo aiuto.~ GOTO PC2-1
 IF ~!Global("SpawnBrus","GLOBAL",0)~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Ho due contatti che potrebbero fare al caso mio. Gaelan Bayle, un uomo che ho incontrato poco dopo il mio arrivo ad Athkatla, e una certa "Signora" di cui devo ancora valutare l'offerta.~ GOTO PC2-1
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Più o meno.~ GOTO PC2-1
 IF ~~ THEN DO ~SetGlobal("tb#StivanPCCowled","GLOBAL",1)~ REPLY ~Dubito che andremo avanti se mi interrompi in continuazione. Un pò di silenzio, per favore.~ GOTO PC2-7
+END
+
+IF ~~ THEN PC2-1a
+SAY ~Più o meno, eh? D'accordo, vediamo se mi viene in mente qualcuno che possa esserti d'aiuto...~
+IF ~~ THEN GOTO PC2-1
 END
 
 IF ~~ THEN PC2-1

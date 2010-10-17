@@ -5,12 +5,13 @@ InParty(Player1)
 !StateCheck("tb#stiv",CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0)
+GlobalGT("Chapter","GLOBAL",2)
 Global("tb#StivanPCTalk","GLOBAL",3)~ THEN stivanPC3
 SAY ~Progetti per il futuro: aspirazioni, sogni, idee... Ne hai qualcuno, <CHARNAME>?~
 IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Vivo alla giornata. La mia condizione di Figlio di Bhaal non lascia spazio per simili cose.~ GOTO StivanPC3-1
 IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Una casa accogliente, un fuoco caldo e la mia dolce metà al mio fianco. E' questo che vorrei.~ GOTO StivanPC3-1
 IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Denaro. Lo investirei in vari modi, così da poter vivere di rendita senza problemi.~ GOTO StivanPC3-1
-IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Mi piace l'avventura. Conto di continuare a viaggiare e a gettarmi in ogni sorta di missione sino a quando il fisico me lo consentirà.~ GOTO StivanPC3-1
+IF ~~ THEN DO ~SetGlobal("tb#StivanPCTalk","GLOBAL",4)~ REPLY ~Mi piace l'avventura. Penso che continuerò a viaggiare e a gettarmi in ogni sorta di missione sino a quando il fisico me lo consentirà.~ GOTO StivanPC3-1
 END
 
 IF ~~ THEN StivanPC3-1
@@ -32,59 +33,63 @@ END
 IF ~~ THEN StivanPC3-4
 SAY ~Se... Se mia mamma fosse viva, mi avrebbe realizzato una bella fionda con le sue mani, com’è d’usanza in questi casi, ma il mio passaggio all'età adulta avverrà senza, purtroppo.~
 = ~Mi piacerebbe tanto avere le idee chiare sul futuro. Per fortuna di almeno una cosa sono certo: non voglio tornare a vivere per strada. Ad alcune persone piace alimentare il mito secondo cui i poveri godono della loro condizione, ma ti assicuro che non è così.~
-= ~Ciò detto, il domani mi spaventa un pò. Tu cosa mi consiglieresti, <CHARNAME>? Cosa pensi sia meglio per me?~
-IF ~~ THEN REPLY ~Limitati al presente. Non ho dubbi che quando verrà il momento di decidere sul tuo futuro, saprai cosa fare.~ GOTO StivanPC3-5
-IF ~~ THEN DO ~SetGlobal("tb#StivanDrowEncounter","GLOBAL",1)~ REPLY ~A poco a poco ti stai affermando come un valente avventuriero. Continua così.~ GOTO StivanPC3-6
-IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~Riappropriati delle tue terre, Stivan. Ti spettano di diritto, e con un pò di buona volontà potresti riportare in auge il nome dei Fristbrowfine.~ GOTO StivanPC3-7
-IF ~~ THEN REPLY ~Hai una carriera di sterminatore di gabbiani che ti attende. Cosa vuoi di più dalla vita?~ GOTO StivanPC3-8
-IF ~!Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9a
-IF ~Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9b
-IF ~~ THEN REPLY ~Non saprei. Penso che la decisione spetti a te solo.~ GOTO StivanPC3-10
+= ~Ciò detto, penso che la tua recente alleanza con i Ladri Tenebrosi sia una ghiotta opportunità da sfruttare.~
+IF ~Global("WorkingForAran","GLOBAL",1)~ THEN GOTO StivanPC3-4a
+IF ~!Global("WorkingForAran","GLOBAL",1)~ THEN GOTO StivanPC3-4b
+END
+
+IF ~~ THEN StivanPC3-4a
+SAY ~Potrei farmi strada nella loro organizzazione, sino a ricoprire un giorno una posizione di tutto rispetto. Non aspiro alla guida della gilda però: i Maestri delle Ombre fanno sempre una brutta fine, ed io non ho proprio voglia di ritrovarmi con un pugnale nelle spalle o peggio.~
+= ~Che ne dici, <CHARNAME>?~
+IF ~Class(Player1,THIEF_ALL)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Dico che unirsi alle Ombre dell'Amn sia la migliore idea che potesse venirti in mente, fratello!~ GOTO StivanPC3-5
+IF ~~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Avrai il mio sostegno, se lo desideri, ma il resto dipende da te. E' il momento di dimostrare a te stesso quanto vali, non credi?~ GOTO StivanPC3-5
+IF ~~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Ti vedo deciso e determinato, Stivan. Se pensi che questa sia la giusta strada da percorrere, non posso far altro che incoraggiarti.~ GOTO StivanPC3-5
+IF ~~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Non mi sembra una buona idea. Ti suggerirei di riprenderti le tue terre, piuttosto. Ti spettano di diritto, e con un pò di buona volontà potresti riportare in auge il nome dei Fristbrowfine.~ GOTO StivanPC3-6
+IF ~~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Non saprei. Penso che la decisione spetti a te solo.~ GOTO StivanPC3-6
 END
 
 IF ~~ THEN StivanPC3-5
-SAY ~*Ahem* Ho appena finito di dirti che sento il bisogno di pensare all'avvenire e tu mi rispondi "Limitati al presente"? Mah... Meglio che mi arrangi e decida da solo ciò che sarà meglio per me.~
-IF ~~ THEN EXIT
+SAY ~Sì... Sì, mi sembra un’ottima idea! Avrei senz’altro un futuro come spia, e ho già un bellissimo nome in codice: il Cacciatore!~ 
+IF ~~ THEN GOTO StivanPC3-7
 END
 
 IF ~~ THEN StivanPC3-6
-SAY ~Non penso di avere la stoffa del comando, ma potrei unirmi ad un’altra compagnia una volta che i nostri viaggi saranno giunti a termine. Del resto, un elemento dotato e capace come me farebbe gola a qualsiasi banda d’avventurieri. Heh.~
-IF ~~ THEN GOTO StivanPC3-11
+SAY ~Le mie terre? Non... Non so se ne sarei in grado. E’ passato così tanto tempo...~
+= ~No. Non me la sento proprio. Penso che la cosa migliore per me sia cominciare da capo, e la gilda dove stiamo per andare mi sembra un ottimo inizio.~ 
+IF ~~ THEN GOTO StivanPC3-7
 END
 
 IF ~~ THEN StivanPC3-7
-SAY ~Le mie terre? Non... Non so se ne sarei in grado. E’ passato così tanto tempo...~
-= ~Vedremo. Ci penserò.~
+SAY ~Heh. Ti ringrazio per avermi ascoltato. Direi di non perdere altro tempo, allora, e di dirigerci verso quella che presto sarà la mia nuova casa!~
 IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanPC3-4b 
+SAY ~Sebbene il domani mi spaventi un pò, ho riflettuto a lungo su ciò che sarebbe meglio per me, e sono giunto alla conclusione che devo... *Ahem*... Dovrei riprendermi le mie terre.~
+IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~Non mi sembri molto convinto...~ GOTO StivanPC3-8
+IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~Buono a sapersi. Vuoi il mio aiuto?~ GOTO StivanPC3-9
+IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~Non spetta a me dire quale sia la cosa più giusta per te. Trai le tue considerazioni e fà ciò che senti di dover fare.~ GOTO StivanPC3-11
+IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~A onor del vero, non sono d'accordo. I tuoi vigneti fanno parte del passato; se vuoi davvero concentrarti sul futuro, dovresti pensare a qualcosa di diverso, non credi?~ GOTO StivanPC3-10
 END
 
 IF ~~ THEN StivanPC3-8
-SAY ~Beh, questo è ovvio, ma non posso limitarmi alla caccia del nemico pennuto.~
-IF ~~ THEN REPLY ~Limitati al presente. Non ho dubbi che quando verrà il momento di decidere del tuo futuro, saprai cosa fare.~ GOTO StivanPC3-5
-IF ~~ THEN DO ~SetGlobal("tb#StivanDrowEncounter","GLOBAL",1)~ REPLY ~A poco a poco ti stai affermando come un valente avventuriero. Continua così.~ GOTO StivanPC3-6
-IF ~~ THEN DO ~SetGlobal("tb#StivanVineyards","GLOBAL",1)~ REPLY ~Riappropriati delle tue terre, Stivan. Ti spettano di diritto, e con un pò di buona volontà potresti riportare in auge il nome dei Fristbrowfine.~ GOTO StivanPC3-7
-IF ~!Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9a
-IF ~Global("WorkingForBodhi","GLOBAL",1)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Sei abile nell’uso della spada e nelle abilità furtive. Perché non ti unisci ai Ladri Tenebrosi?~ GOTO StivanPC3-9b
-IF ~~ THEN REPLY ~Non saprei. Penso che la decisione spetti a te solo.~ GOTO StivanPC3-10
-END
-
-IF ~~ THEN StivanPC3-9a
-SAY ~Sì... Sì, mi sembra un’ottima idea! Avrei senz’altro un futuro come spia, e ho già un bellissimo nome in codice: il Cacciatore!~
+SAY ~La paura gioca brutti scherzi, ma non lascerò che mi sopraffi.~
 IF ~~ THEN GOTO StivanPC3-11
 END
 
-IF ~~ THEN StivanPC3-9b
-SAY ~Dubito fortemente che potrei avere un futuro tra le Ombre dell’Amn dopo il tuo tradimento. (Sospiro) Dovrò pensare ad altro, ma grazie per avermi ascoltato.~
-IF ~~ THEN EXIT
+IF ~~ THEN StivanPC3-9
+SAY ~Oh, no. Ti ringrazio per l'offerta, ma sento che questa volta dovrò farcela da solo e con le mie uniche forze.~ 
+IF ~~ THEN GOTO StivanPC3-11
 END
 
 IF ~~ THEN StivanPC3-10
-SAY ~Uhmm... Mia mamma diceva sempre che ciascuno è artefice della propria sorte, e penso che abbiate proprio ragione. Meglio che mi metta a pensare a ciò che voglio fare ed essere.~
+SAY ~No. io vedo il mio avvenire come una correzione di sbagli riparabili, per fortuna.~
 IF ~~ THEN GOTO StivanPC3-11
 END
 
 IF ~~ THEN StivanPC3-11
-SAY ~Il tuo consiglio mi ha solleticato l’immaginazione. Mi abbandonerò a qualche sogno ad occhi aperti per un pò. Grazie per avermi ascoltato, amico.~
+SAY ~Ho commesso l'errore di non aver fiducia in me stesso, e ho lasciato che il bene più prezioso della mia famiglia mi venisse portato via. Non lo ripeterò una seconda volta.~
+= ~Gli inizi saranno difficili, ma mia mamma diceva sempre che ciò che non uccide fortifica. E un giorno... Un giorno ti inviterò nella mia fattoria in campagna, dove sorseggerai nuovamente il miglior vino che abbia mai bagnato le tue labbra. Heh.~
 IF ~~ THEN EXIT
 END
 
@@ -1380,12 +1385,12 @@ CombatCounter(0)
 Global("tb#StivanMinsc","GLOBAL",0)~ THEN TB#STIVB stivanminsc1
 ~Noto che parli spesso al tuo criceto, Minsc. Non pensavo che quelle palline di pelo fossero degli interessanti interlocutori.~
 DO ~SetGlobal("tb#StivanMinsc","GLOBAL",1)~
-== BMINSC ~Boo è un gran chiaccherone! E anche un gran bardo! Compone fior fior di poemi ogni volta che riempiamo il male di calci nel sedere!~
+== BMINSC ~Boo è un gran chiaccherone, e anche un gran bardo! Compone fior fior di poemi ogni volta che riempiamo il male di calci nel sedere!~
 == TB#STIVB ~... Non mi risulta che i criceti compongano suonate o altro.~
-== BMINSC ~E invece sì! Boo canta sempre qualcosa quando è di buon umore, come il trionfo della giustizia sulle meschinità del male, le vittorie di noi paladini del bene sui marrani o i brindisi a cui ci abbandoniamo nel nome della bontà! Celebra anche le volte in cui gli cambio i trucioli, ogni tanto.~
+== BMINSC ~E invece sì! Boo canta sempre qualcosa quando è di buon umore, come il trionfo della giustizia sulle meschinità del male, o le vittorie di noi paladini del bene sui marrani! Celebra anche le volte in cui gli cambio i trucioli, ogni tanto.~
 == TB#STIVB ~Voi ranger avete una fervida immaginazione.~
 == BMINSC ~Ma è vero! Boo, il nostro amico Stivan mette in dubbio le tue abilità canore!~
-= ~Cosa dici, Boo? Vuoi dimostrargli che sei uno dei migliori bardi criceto di Rasheman? Vuoi dargli prova delle tue capacità? Benissimo! Preparati, halfling: stai per assistere all'esibizione del mio criceto!!~
+= ~Cosa dici, Boo? Vuoi dimostrargli che sei uno dei migliori bardi criceto di Rasheman? Vuoi dargli prova delle tue capacità? Benissimo! Preparati, halfling: stai per assistere all'esibizione del mio criceto!~
 = ~*Squeak*!~ [GAM_48]
 = ~Sentito?!~
 == TB#STIVB ~...~
@@ -1684,6 +1689,75 @@ DO ~SetGlobal("tb#StivanNaliaPrison","GLOBAL",1)~
 == BNALIA ~Cosa c'è stavolta?!~
 == TB#STIVB ~Il vostro viso... E' sporco! Lasciate che...~
 == BNALIA ~Oh no! Il viso no!~
+EXIT
+
+CHAIN
+IF ~InParty("tb#stiv")
+InParty("Cernd")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck("Cernd",CD_STATE_NOTVALID)
+CombatCounter(0)
+GlobalGT("tb#StivanCernd","GLOBAL",2)
+Global("BJaheira11","LOCALS",1)
+Global("tb#StivanCerndJaheira","GLOBAL",0)~ THEN BJAHEIR  jaheirastivancernd
+~Non ho potuto fare a meno di ascoltare le tue ultime conversazioni con il ragazzo, Cernd, e mi è parso di capire che tu stia cercando di educarlo all'Equilibrio. E' così?~
+DO ~SetGlobal("tb#StivanCerndJaheira","GLOBAL",1)~
+== BCERND ~Lo è.~
+== TB#STIVB ~Uhmm... Ho la sensazione che quei due stiano parlando di me...~
+== BJAHEIR ~Un progetto ambizioso. Perchè ti sei assunto questa responsabilità?~
+== BCERND ~L'odio chiama l'odio, come l'amore chiama l'amore, ed è nostro dovere sforzarci ad invertire sempre la tendenza negativa. Inoltre...~
+= ~Perdona la mia esitazione, ma ho la forte sensazione che un giorno il suo destino eserciterà la sua influenza su noi tutti. Non mi è dato sapere ciò che lo attende, ma ho la certezza di doverlo dirigere verso la giusta direzione.~
+== BJAHEIR ~"E' il nostro avvenire a dettare le leggi del nostro oggi". E' uno dei primi insegnamenti che riceviamo, malgrado non sia facile tenerlo sempre a mente.~
+= ~Avrai il mio sostegno e il mio contributo, se non li consideri d'intralcio.~
+== BCERND ~Sei la benvenuta, Jaheira. Un artigiano e i suoi strumenti diventano un'unica cosa quando sono all'opera, pertanto non posso che essere lieto della tua offerta.~
+== BJAHEIR ~...~
+== BCERND ~...~
+== TB#STIVB ~(Snort!) Smettela di fissarmi in quel modo!~
+== BJAHEIR ~Temo che ci attenda un duro lavoro.~
+== BCERND ~Come la goccia scava la pietra, così faremo breccia con pazienza infinita nel suo animo. Anche la più fortificata tra le cittadelle ha una crepa tra le sue mura, ma una volta individuatala, l'accesso al suo cuore è garantito.~ 
+EXIT
+
+
+CHAIN
+IF ~InParty("tb#stiv")
+InParty("Cernd")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+!StateCheck("Cernd",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanValygar","GLOBAL",2)
+GlobalGT("tb#StivanCernd","GLOBAL",2)
+Global("tb#StivanCerndValygar","GLOBAL",0)~ THEN BVALYGA valygarstivancernd
+~C'è un particolare motivo per cui hai deciso di prendere sotto la tua ala quell'impertienente, Cernd? Ai miei occhi sembrate maestro e discepolo, sebbene non riesca a capire dove tu voglia arrivare con i tuoi insegnamenti.~
+DO ~SetGlobal("tb#StivanCerndValygar","GLOBAL",1)~
+== TB#STIVB ~*Ahem* Chi sarebbe l'impertinente?~
+== BCERND ~Come un volatile protegge i suoi piccoli, ciechi ed affamati, dalle avversità di un mondo che non sono ancora pronti ad affrontare, così io mi prendo cura di Stivan, in attesa che venga il giorno in cui spicchi il volo con le sue ali.~
+== TB#STIVB ~Queste metafore sui volatili sono *veramente* fastidiose. Potresti smetterla di paragonarmi ad un uccello?~
+== BVALYGA ~Hai scelto un alunno difficile e particolarmente impegnativo, non credi?~
+== TB#STIVB ~Senti un pò, ranger, hai qualche problema?~
+== BCERND ~Cane e gatto non sono mai andati d'accordo, ma sanno convivere pacificamente se necessario. Cercate di appianare la vostra reciproca antipatia nel nome dell'armonia del gruppo.~
+== BVALYGA ~La mia perplessità è più che fondata, ma confido nel tuo buon senso. Agisci come meglio credi, druido.~
+EXIT
+
+CHAIN
+IF ~InParty("tb#stiv")
+!StateCheck("tb#stiv",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanJan","GLOBAL",3)~ THEN BJAN jan4
+~Guarda un pò cosa ho trovato, Stivvy: il manuale con cui ho imparato a deliziare la mia platea durante il periodo della Grande Recessione delle Rape. Te ne ho mai parlato?~
+DO ~SetGlobal("tb#StivanJan","GLOBAL",4)~
+== TB#STIVB ~No, ed è meglio che tu non lo faccia. Finiresti per perderti nuovamente in un monologo senza capo nè coda. Lasciami dare un'occhiata a quello scritto, piuttosto.~
+== BJAN ~"Dieci piccoli passi per diventare un bardo", di Volo Trumph. Ovviamente questa non è la prima versione, bensì una successiva contenente i suggerimenti che ho maturato dopo la mia esperienza bardica e condiviso con l'autore.~
+== TB#STIVB ~Cosa?! Stai dicendo sul serio? Hai davvero conosciuto e lavorato con il grande Volo?~
+== BJAN ~Certo, anche se il mio debutto come scrittore avvenne molti anni prima di quella collaborazione. Esordii con il manuale "Della donna non si butta via niente - 21 ricette per cucinarla". Un ottimo testo, quello. Suggerisce un approccio inusuale con le esponenti del gentil sesso, sebbene il problema non sia cucinarle, bensì digerirle.~
+= ~Dopo tanto discorrere, inoltre, resta dubbio se le donne preferiscano essere prese, sorpese o comprese. Tu cosa dici?~
+== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~(Sigh) Che assurdità mi tocca sentire...~
+== TB#STIVB ~Nella prefazione c'è scritto che a nani, halfling e gnomi è caldamente sconsigliato intraprendere il sentiero bardico.~
+= ~"Queste creature, note per gli arti tozzi, la bassa statura e l'orrido timbro vocale, non sono adatte alla raffinata arte di cui ci occuperemo nelle prossime pagine".~
+= ~Ma questo è razzismo!~
+== BJAN ~Non dar retta a simili baggianate, Stivvy. Io sono la dimostrazione vivente di come uno gnomo possa fare molta strada.~
+== TB#STIVB ~*Ahem* Qui c'è scritto che la prefazione è a cura di Jan Jansen...~
+== BJAN ~Questo Jan Jansen non vale proprio una rapa, credimi. Se zia Petunia non fosse in missione nelle Moonshe, gli darebbe una bella ripassata, puoi starne certo!~
+== TB#STIVB ~...~
 EXIT
 
 /*
