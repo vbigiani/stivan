@@ -33,13 +33,13 @@ END
 IF ~~ THEN StivanPC3-4
 SAY ~Se... Se mia mamma fosse viva, mi avrebbe realizzato una bella fionda con le sue mani, com’è d’usanza in questi casi, ma il mio passaggio all'età adulta avverrà senza, purtroppo.~
 = ~Mi piacerebbe tanto avere le idee chiare sul futuro. Per fortuna di almeno una cosa sono certo: non voglio tornare a vivere per strada. Ad alcune persone piace alimentare il mito secondo cui i poveri godono della loro condizione, ma ti assicuro che non è così.~
-= ~Ciò detto, penso che la tua recente alleanza con i Ladri Tenebrosi sia una ghiotta opportunità da sfruttare.~
 IF ~Global("WorkingForAran","GLOBAL",1)~ THEN GOTO StivanPC3-4a
 IF ~!Global("WorkingForAran","GLOBAL",1)~ THEN GOTO StivanPC3-4b
 END
 
 IF ~~ THEN StivanPC3-4a
-SAY ~Potrei farmi strada nella loro organizzazione, sino a ricoprire un giorno una posizione di tutto rispetto. Non aspiro alla guida della gilda però: i Maestri delle Ombre fanno sempre una brutta fine, ed io non ho proprio voglia di ritrovarmi con un pugnale nelle spalle o peggio.~
+SAY ~Ciò detto, penso che la tua recente alleanza con i Ladri Tenebrosi sia una ghiotta opportunità da sfruttare.~
+= ~Potrei farmi strada nella loro organizzazione, sino a ricoprire un giorno una posizione di tutto rispetto. Non aspiro alla guida della gilda però: i Maestri delle Ombre fanno sempre una brutta fine, ed io non ho proprio voglia di ritrovarmi con un pugnale nelle spalle o peggio.~
 = ~Che ne dici, <CHARNAME>?~
 IF ~Class(Player1,THIEF_ALL)~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Dico che unirsi alle Ombre dell'Amn sia la migliore idea che potesse venirti in mente, fratello!~ GOTO StivanPC3-5
 IF ~~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",1)~ REPLY ~Avrai il mio sostegno, se lo desideri, ma il resto dipende da te. E' il momento di dimostrare a te stesso quanto vali, non credi?~ GOTO StivanPC3-5
