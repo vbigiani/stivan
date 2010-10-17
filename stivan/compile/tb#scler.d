@@ -181,7 +181,7 @@ IF ~~ THEN REPLY ~Andiamocene da questo posto *immediatamente*. Rischio di morir
 
 // miscellaneous employees
 APPEND CIVIL02
-IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN FemaleClerk
+IF WEIGHT #-1 ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN FemaleClerk
 SAY ~Spero che abbiate un valido motivo per importunarmi.~
 IF ~~ THEN REPLY ~Sapete dirmi chi si occupa del Cimitero di Athkatla?~ GOTO FemaleClerk1-1
 IF ~~ THEN REPLY ~Non perdiamo tempo in chiacchiere. Ho bisogno di una tomba.~ GOTO FemaleClerk1-2
@@ -200,7 +200,7 @@ END
 END
 
 APPEND CLERK01
-IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN ConfusedClerk
+IF WEIGHT #-1 ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN ConfusedClerk
 SAY ~Uhmmm... Dove diamine ho messo quel documento a cui stavo lavorando?~
 = ~Oh! Ma guarda. L'ho cercato per tutto questo tempo senza accorgermi che l'avevo tra le mani!~
 IF ~~ THEN REPLY ~Non so se siate la persona più adatta a cui chiederlo, ma avrei bisogno di sapere chi si occupa dell'assegnazione delle tombe qui in città.~ GOTO ConfusedClerk1-1
@@ -225,7 +225,7 @@ END
 END
 
 APPEND LLARSH
-IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN GovernmentOfficial
+IF WEIGHT #-1 ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN GovernmentOfficial
 SAY ~Togliti di mezzo, <RACE>. Mi fai ombra, e ho bisogno di luce per compilare questi moduli.~
 IF ~~ THEN REPLY ~Non me ne andrò sino a quando non mi avrai aiutato, zotico. Chi si occupa di seppellire i morti? Tu?~ GOTO GovernmentOfficial1-1
 IF ~~ THEN REPLY ~Devo parlare con voi per acquisire una cripta?~ GOTO GovernmentOfficial1-1
@@ -239,7 +239,7 @@ END
 END
 
 APPEND CIVIL03
-IF ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN NiceClerk
+IF WEIGHT #-1 ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN NiceClerk
 SAY ~Avete un'espressione smarrita, <LADYLORD>. Forse potrei esservi d'aiuto.~
 IF ~~ THEN REPLY ~Un mio amico ha bisogno di un posto in cui riporre l'urna contenente le ceneri dei suoi familiari. Chi si occupa di queste cose qui?~ GOTO NiceClerk1-1
 IF ~~ THEN REPLY ~Lo spero proprio. Siete voi ad occuparvi di cripte e tombe?~ GOTO NiceClerk1-1
