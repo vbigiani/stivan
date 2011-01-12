@@ -35,7 +35,7 @@ END
 
 IF ~~ THEN BEGIN UrnBroken1-1
 SAY ~La... La mia urna! E' andata in mille pezzi! E' completamente in frantumi!~
-= ~*SOB!* I... I miei cari... Sparsi al vento... In questo modo...~
+= ~*SOB*! I... I miei cari... Sparsi al vento... In questo modo...~
 = ~E'... E' tutta colpa tua, <CHARNAME>! Mi avevi promesso che l'avremmo riposta in un luogo sicuro, invece non ti sei minimamente interessato alla mia richiesta!~
 IF ~~ THEN REPLY ~Immagino che si sia rotta nel corso dell'ultimo combattimento. Mi dispiace, Stivan.~ GOTO UrnBroken1-2
 IF ~~ THEN REPLY ~Hai ragione. Me ne sono completamente dimenticato. Rimedierò subito!~ GOTO UrnBroken1-2
@@ -91,7 +91,7 @@ END
 IF ~~ THEN BEGIN FinalRest1-1
 SAY ~Credi che sia facile? Credi che sia facile separarsi definitivamente dalle sole persone che mi abbiano mai voluto bene? Nel momento in cui riporrò i loro resti qui, tra queste mura silenziose, io... Io sarò solo!~
 IF ~~ THEN REPLY ~Questo non è vero. Hai tanti amici intorno a te, me incluso.~ GOTO FinalRest1-5
-IF ~~ THEN REPLY ~I tuoi familiari sono scomparsi anni fa , Stivan, non adesso. In questo momento non fai altro che lasciare i loro resti dov’è giusto che stiano.~ GOTO FinalRest1-5
+IF ~~ THEN REPLY ~I tuoi familiari sono scomparsi anni fa, Stivan, non adesso. In questo momento non fai altro che lasciare i loro resti dov’è giusto che stiano.~ GOTO FinalRest1-5
 IF ~~ THEN REPLY ~Siamo tutti soli. Fa tesoro di questa esperienza per imparare a bastare a te stesso.~ GOTO FinalRest1-5
 IF ~~ THEN REPLY ~Stai forse cercando di dirmi che quell’urna ti ha fatto compagnia sino ad oggi? Non offenderti, amico, ma questa è una sciocchezza. Tra le mani non hai altro che un oggetto muto.~ GOTO FinalRest1-5
 END
@@ -153,7 +153,7 @@ IF ~~ THEN TB#STIVJ FinalRest1-11
 == JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Non capisco perché in città si senta il bisogno di seppellire i morti in simili spazi angusti. La Natura offre una grande varietà di luoghi che potrebbero fungere a tale scopo.~
 == CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Le tombe non sono soltanto meri contenitori delle spoglie dei defunti. In realtà le tombe hanno anche il compito di confortare l’animo di chi è rimasto in vita.~
 = ~Ora che hai riposto il peso fisico della tua tragedia, il nostro percorso si avvia verso la conclusione. L'ultima tappa ci attende.~
-== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~S-Sono... Sono f-felice p-per te, Stivan...~
+== AERIEJ IF ~InParty("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~S-Sono... Sono felice per te, Stivan...~
 == MAZZYJ IF ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Che nessuno disturbi il vostro eterno sonno, amici halfling.~
 == NALIAJ IF ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Apprezzo la semplicità con cui hai dato loro il tuo ultimo saluto, Stivan. Dovrebbe essere d’esempio a quei nobili che dilapidano fortune per cerimonie funebri dall’inutile lusso.~
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~ Davvero commovente. Se avessi un cuore, mi sarei sciolto in lacrime.~
@@ -283,7 +283,7 @@ InParty(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#AfterYoshiBetrayal","GLOBAL",1)~ THEN afterYoshiBetrayal1
-SAY ~*SOB!* <CHARNAME>... <CHARNAME>, perchè Yoshimo ha fatto questo? Perchè ci ha traditi?~
+SAY ~*SOB*! <CHARNAME>... <CHARNAME>, perchè Yoshimo ha fatto questo? Perchè ci ha traditi?~
 IF ~~ THEN DO ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",2)~ REPLY ~Non ne ho la più pallida idea. Eppure è successo.~ GOTO AfterYoshiBetrayal1-1
 IF ~~ THEN DO ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",2)~ REPLY ~Dannato traditore! Che bruci tra le fiamme dell'inferno!~ GOTO AfterYoshiBetrayal1-1
 IF ~~ THEN DO ~SetGlobal("tb#AfterYoshiBetrayal","GLOBAL",2)~ REPLY ~Forse è meglio che non lo sappia. A causa sua ho perso la mia anima e ho rischiato di perdere voi tutti!~ GOTO AfterYoshiBetrayal1-1
@@ -333,7 +333,7 @@ IF ~~ THEN GOTO AfterYoshiBetrayal1-8
 END
 
 IF ~~ THEN AfterYoshiBetrayal1-8
-SAY ~Ti ho visto mentre prendevi il suo... Il suo cuore. *SOB!* Cosa hai intenzione di farci?~
+SAY ~Ti ho visto mentre prendevi il suo... Il suo cuore. *SOB*! Cosa hai intenzione di farci?~
 IF ~~ THEN REPLY ~Cercherò di far rimuovere la costrizione che aveva stretto con Irenicus, in modo che possa riposare in pace.~ GOTO AfterYoshiBetrayal1-9
 IF ~~ THEN REPLY ~Non lo so. Al momento sono confuso, ma qualcosa dentro di me mi ha spinto a farlo.~ GOTO AfterYoshiBetrayal1-9
 IF ~~ THEN REPLY ~Ha invocato Ilmater prima di lanciarsi all'attacco. Forse un sacerdote del Dio Piangente potrà dirmi qualcosa... Qualcosa su coloro che cadono in battaglia dopo essersi raccomandati alla loro divinità.~ GOTO AfterYoshiBetrayal1-9
@@ -341,7 +341,7 @@ IF ~~ THEN REPLY ~Il tempo mi dirà cosa farne. Adesso voglio soltanto lasciare q
 END
 
 IF ~~ THEN AfterYoshiBetrayal1-9
-SAY ~Diversamente da te, io non avevo alcun motivo per odiare Irenicus. Ti ho aiutato a combatterlo perchè tu hai fatto molto per me. Mi hai accolto nel tuo gruppo strappandomi dalla povertà della strada, un debito che posso saldare solo aiutandoti con tutto me stesso.~
+SAY ~Diversamente da te, io non avevo alcun motivo per odiare Irenicus. Ti ho aiutato a combatterlo perchè tu hai fatto molto per me: mi hai accolto nel tuo gruppo strappandomi dalla povertà della strada, un debito che posso saldare soltanto dandoti tutto me stesso.~
 = ~(Snort!) Adesso però anch'io ho una buona ragione per stanare quel maledetto. Io... Vendicherò la morte di Yoshimo!~
 =  ~Mi senti, Irenicus? Oggi ti sei fatto un nuovo nemico! Stivan il Cacciatore ti troverà, ovunque tu sia! Possa nel frattempo l'ira dei gabbiani ricadere sulla tua testa!~
 IF ~~ THEN EXIT
@@ -599,7 +599,7 @@ END
 
 CHAIN 
 IF ~~ THEN TB#STIVJ ViconiaGeas1-5
-~*SOB!* Io non voglio più perdere degli amici a causa di queste orribili costrizioni! Yoshimo è morto proprio per questo motivo, ed io non posso permettere che lo stesso succeda a Viconia!~ 
+~*SOB*! Io non voglio più perdere degli amici a causa di queste orribili costrizioni! Yoshimo è morto proprio per questo motivo, ed io non posso permettere che lo stesso succeda a Viconia!~ 
 == VICONIJ ~Quell'insopportabile darthiir sa bene che le promesse dei miei simili sono come le sabbie mobili. Viste da lontano sembrano solide e sicure, ma quando i tuoi piedi vi si posano si rivelano inconsistenti e insidiose.~
 = ~Viconia DeVir non è così sciocca da tradirvi. Non al momento. Non ne trarrei alcun vantaggio.~
 = ~...~
@@ -955,7 +955,7 @@ See("tb#stiv")
 Global("tb#SStivanFemaleChild","GLOBAL",0)~ THEN urchin2 StivanUrchin
 ~MIA MAMMA DICE CHE GLI HALFLING SONO TUTTI DEI PUZZONI!~
 DO ~SetGlobal("tb#SStivanFemaleChild","GLOBAL",1)~
-== TB#STIVJ ~Non è vero! Lavo sempre i miei capelli almeno una volta ogni sei mesi!~
+== TB#STIVJ ~Non è vero! Mi lavo sempre almeno una volta ogni sei mesi!~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv")
@@ -1271,7 +1271,7 @@ INTERJECT_COPY_TRANS BODHIAMB 17 tb#StivanBodhiamb-17
 END
 
 INTERJECT_COPY_TRANS UDSILVER 0 tb#StivanUdsilver-0
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~L..l'avevo detto! Un drago! Si salvi chi può!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~L...l'avevo detto! Un drago! Si salvi chi può!~
 == UDSILVER IF ~!Dead("UDtrap06") Dead("UDbalor") !Dead("UDsvir03")~ THEN ~Non agitarti. Non hai motivo di temermi.~
 == UDSILVER IF ~OR(3) Dead("UDtrap06") !Dead("UDbalor") Dead("UDsvir03")~ THEN ~Non agitarti. Sebbene le vostre azioni siano state turpi e vergognose, non subirete la mia ira. Le attuali circostanze, tuttavia, richiedono una collaborazione.~
 END
@@ -1478,11 +1478,6 @@ BRANCH ~IsValidForPartyDialog("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID
 END
 END
 
-INTERJECT_COPY_TRANS HENDAK 9 tb#StivanHendak-9
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
-~Quest'uomo è addirittura più sporco di me. Se lo liberassimo, potrebbe farsi un bel bagno. Insomma... Almeno una volta ogni sei mesi bisogna lavarsi.~
-END
-
 INTERJECT_COPY_TRANS HENDAK 19 tb#StivanHendak-19
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN 
 ~Se quella nave è sempre stata la base degli schiavisti sin dal loro arrivo in città, allora... Allora sono qui da prima che nascessi!~
@@ -1509,7 +1504,7 @@ END
 INTERJECT_COPY_TRANS2 ARENTHIS 16 tb#StivanArenthis-16
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Bah! Meglio vivere da orfani che con un padre paladino!~
 = ~...~
-= ~A chi la do a bere... Sopporterei di sapere entrambi i genitori e tutti i miei fratelli nell'Ordine pur di riaverli... *SOB!*~
+= ~A chi la do a bere... Sopporterei di sapere entrambi i genitori e tutti i miei fratelli nell'Ordine pur di riaverli... *SOB*!~
 END
 
 INTERJECT_COPY_TRANS SURLY 14 tb#StivanSurly-14
@@ -1593,8 +1588,8 @@ END
 
 // If you consider these men a threat, then do what you think is necessary.   Gloves of Healing would be a suitable reward for the task, I think.  Do you accept?
 INTERJECT_COPY_TRANS KAYL2 13 tb#StivanKayl2-13
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Io dico di unirci a loro! Possiamo arricchirci in modo illegale e insozzare l'onore del Cuore Radioso... Nessun lato negativo per questa opzione, dico io!~
-== KAYL2 ~Mi auguro che il capo del tuo gruppo sia piu' sensato di te, halfling.~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Io dico di unirci a loro. Ai Paladini Decaduti, intendo. Possiamo arricchirci in modo illegale e insozzare l'onore del Cuore Radioso... Nessun lato negativo per questa opzione, dico io!~
+== KAYL2 ~Mi auguro che il capo del tuo gruppo sia più sensato di te, halfling.~
 END
 
 // That is a shame, truly, for we have no one else to turn to at this time.  If you change your mind, please come back and speak with me. 
@@ -1602,25 +1597,18 @@ INTERJECT_COPY_TRANS KAYL2 7 tb#stivanKayl2-7
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Yippie! Non dobbiamo ubbidire ai paladini!~
 END
 
-// Excellent. Thanks to the Shadow Thieves, Anarg has kept their activities localized in the Bridge District. I suggest you search there. May Torm be with you.
-INTERJECT_COPY_TRANS KAYL2 14 tb#StivanKayl2-14
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Prima non me li lasci uccidere, poi dobbiamo addirittura ubbidire a loro... Che noia!~
-== KAYL2 ~Di cosa stai parlando, halfing? Hai forse minacciato di attaccarci?~
-== TB#STIVJ ~(cough) piuma (cough) gola.~
-END
-
 // Very well then, you shall have it.  Return it soon or you will not be given your reward.  It is very important that the cup remains in the hands of the Order.
 INTERJECT_COPY_TRANS SAFE KAYL2 21 tb#StivanKayl2-21
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Conosco qualcuno che conosce qualcuno... Potremmo rimediare un bel gruzzoletto vendendo quella coppa!~
-== KAYL2 ~Se osi parlare ancora di cose simili ti rimuovero' la lingua, Stivan!~
+== KAYL2 ~Se osi parlare ancora di cose simili ti rimuoverò la lingua, Stivan!~
 == TB#STIVJ ~Chi ti ha detto il mio nome?~
 == KAYL2 ~La stessa persona che mi avviserebbe se tu tentassi di mettere atto al tuo piano.~
 END
 
 // Then you are due your just reward.  The Most Noble Order of the Radiant Heart gives you our fullest thanks.
 INTERJECT_COPY_TRANS SAFE KAYL2 18 tb#StivanKayl2-18
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Abbiamo ubbidito a dei paladini e ucciso dei simpatici contrabbandieri per un paio di guanti? Bah, che perdita di tempo e opportunita' per arricchirci.~
-== KAYL2 ~Le tue azioni hanno aiutato il Bene, per cui ignorero' i tuoi insulti, per ora. Ti consiglio di non presentarti piu' al mio cospetto, Stivan.~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Abbiamo ubbidito a dei paladini e ucciso dei simpatici contrabbandieri per un paio di guanti? Bah, che perdita di tempo e opportunità per arricchirci.~
+== KAYL2 ~Le tue azioni hanno aiutato il Bene, per cui ignorerò i tuoi insulti, per ora. Ti consiglio di non presentarti più al mio cospetto, Stivan.~
 END
 
 INTERJECT_COPY_TRANS WELLYN 3 tb#StivanWellyn-3
@@ -1673,7 +1661,7 @@ END
 END
 
 INTERJECT_COPY_TRANS YOSHJ 73 tb#StivanYoshj-73
-== YOSHJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Soprattutto, tieni d'occhio il piccoletto. Non vorrei che la nostra copertura saltasse ancor prima di esserci avvicinati a Mae’Var.~
+== YOSHJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~Soprattutto, tieni d'occhio il piccoletto. Non vorrei che scoprissero la nostra vera identità ancor prima di esserci avvicinati a Mae’Var.~
 END
 
 INTERJECT_COPY_TRANS MAEVAR 29 tb#StivanMaevar-29
@@ -2516,8 +2504,8 @@ Global("tb#StivanCernd","GLOBAL",4)
 Global("SolaufeinJob","GLOBAL",9)
 !Dead("solaufein")
 ~ THEN TB#STIVJ savedSola
-~Mi stava simpatico. Grazie, CHARNAME, di averlo risparmiato nonostante il rischio che correvi.~
-== CERNDJ ~Cosi' come CHARNAME ha risparmiato una vita correndo un rischio cosi' grave, non dovresti allo stesso modo risparmiare le vite dei gabbiani?~
+~Mi stava simpatico. Grazie, <CHARNAME>, di averlo risparmiato nonostante il rischio che correvi.~
+== CERNDJ ~Così come <CHARNAME> ha risparmiato una vita correndo un rischio così grave, non dovresti allo stesso modo risparmiare le vite dei gabbiani?~
 EXTERN TB#STIVJ postSola
 
 CHAIN IF ~InParty("cernd")
@@ -2531,20 +2519,20 @@ EXTERN TB#STIVJ postSola
 
 CHAIN IF ~~ THEN TB#STIVJ postSola
 ~Fatti gli affari tuoi, Cernd!~
-== CERNDJ ~La Natura e' affare mio, cosi' come e' insegnarne il rispetto.~
+== CERNDJ ~La Natura è affare mio, così come è insegnarne il rispetto.~
 = ~E' ora di riprendere il nostro cammino.~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",5)~
-== TB#STIVJ ~No, non lo e'!~
+== TB#STIVJ ~No, non lo è!~
 == CERNDJ ~Dimmi, Stivan, quando sono morti i tuoi genitori?~
 == TB#STIVJ ~Morirono otto anni fa, e lo ricordo come se fosse ieri!~
 == CERNDJ ~E chi li ha uccisi?~
 == TB#STIVJ ~Ma che domande fai? Fu uno stormo di gabbiani, e lo sai meglio di me!~
-== CERNDJ ~Ammettiamo anche che cio' sia vero - ebbene, sappi che i gabbiani non vivono mai piu' di tre anni.~
+== CERNDJ ~Ammettiamo anche che ciò sia vero - ebbene, sappi che i gabbiani non vivono mai più di tre anni.~
 = ~Anche se tu uccidessi tutti i gabbiani che vivono oggi, non ucciderai mai quelli che tu ritieni abbiano ucciso i tuoi genitori.~
 == TB#STIVJ ~Io...~
-== CERNDJ ~Di' quello che pensi, anche se temi di dirlo.~
-== TB#STIVJ ~Io mi vendichero' uccidendo i loro figli! E i figli dei loro figli! E...~
-== CERNDJ ~Come le radici di una pianta divorano la piu' dura delle rocce con la sola forza della pazienza, cosi' i miei insegnamenti divoreranno il tuo odio. Abbiamo seminato abbastanza per oggi.~
+== CERNDJ ~Dì quello che pensi, anche se temi di dirlo.~
+== TB#STIVJ ~Io mi vendicherò uccidendo i loro figli! E i figli dei loro figli! E...~
+== CERNDJ ~Come le radici di una pianta divorano la più dura delle rocce con la sola forza della pazienza, così i miei insegnamenti divoreranno il tuo odio. Abbiamo seminato abbastanza per oggi.~
 EXIT
 
 CHAIN IF ~InParty("tb#stiv")
@@ -2558,21 +2546,21 @@ AreaType(OUTDOOR)
 !AreaCheck("AR2601")
 ~ THEN CERNDJ StivanCernd6
 ~E' ora di riprendere il nostro cammino.~
-= ~Il tuo primo dialogo con un gabbiano e' stato bruscamente interrotto.~
+= ~Il tuo primo dialogo con un gabbiano è stato bruscamente interrotto.~
 = ~...~
-= ~Ecco, questo e' un gabbiano dalla testa rosa, noto per legarsi per tutta la vita ai suoi parenti - legami piu' saldi di quelli tra parenti umani. Hai qualche domanda da porgli, Stivan?~
+= ~Ecco, questo è un gabbiano dalla testa rosa, noto per legarsi per tutta la vita ai suoi parenti - legami più saldi di quelli tra parenti umani. Hai qualche domanda da porgli, Stivan?~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",6)~
 == TB#STIVJ ~Ecco, io...~
 == CERNDJ ~Non esitare, Stivan. Solo parlando col tuo nemico potrai conoscerlo e terminare il tuo conflitto.~
 == TB#STIVJ ~(Snort!) Lo faccio a condizione che dopo tu chiuda la bocca una volta per tutte.~ 
 = ~Allora... Tu sei un maschio o una femmina?~
-== CERNDJ ~E' una femmina. Ha appena lasciato i cuccioli sotto la cura del maschio ed e' andata in cerca di cibo.~
-== TB#STIVJ ~Ah si'? E dove lo cerchi, uccidendo i bambini nelle culle? O preferisci attaccare gli uomini adulti?~
+== CERNDJ ~E' una femmina. Ha appena lasciato i cuccioli sotto la cura del maschio ed è andata in cerca di cibo.~
+== TB#STIVJ ~Ah sì? E dove lo cerchi, uccidendo i bambini nelle culle? O preferisci attaccare gli uomini adulti?~
 = ~...~
-= ~Perche' scappa? Si vergogna delle sue colpe?~
-== CERNDJ ~(sigh) Ha detto che non puo' cercare cibo vicino a dove abitano gli uomini, a causa del Cacciatore. Ti deve aver riconosciuto.~
-== TB#STIVJ ~Yeah! Allora la mia reputazione si sta diffondendo! Presto Atkhatla sara' libera dalla minaccia!~
-== CERNDJ ~Come l'ora piu' scura e' quella che precede l'alba, cosi' l'odio e' piu' profondo prima della riconciliazione. Il nostro percorso sta per terminare.~
+= ~Perché scappa? Si vergogna delle sue colpe?~
+== CERNDJ ~(sigh) Ha detto che non può cercare cibo vicino a dove abitano gli uomini, a causa del Cacciatore. Ti deve aver riconosciuto.~
+== TB#STIVJ ~Yeah! Allora la mia reputazione si sta diffondendo! Presto Atkhatla sarà libera dalla minaccia!~
+== CERNDJ ~Come l'ora più scura è quella che precede l'alba, così l'odio è più profondo prima della riconciliazione. Il nostro percorso sta per terminare.~
 EXIT
 
 CHAIN IF ~InParty("cernd")
@@ -2584,15 +2572,15 @@ AreaType(OUTDOOR)
 RealGlobalTimerExpired("tb#StivanCerndTimer","global")~ THEN TB#STIVJ StivanCernd7
 ~Cernd, potresti attirare un'altro gabbiano? Ora so che cosa dirgli.~
 DO ~SetGlobal("tb#StivanCernd","GLOBAL",8)~
-== CERNDJ ~Vedo che i nostri semi stanno germogliando. Soddisfero' subito la tua richiesta.~
+== CERNDJ ~Vedo che i nostri semi stanno germogliando. Soddisferò subito la tua richiesta.~
 = ~...~
-= ~Ecco. Questo gabbiano dalla coda nera ha fatto un viaggio estremamente lungo nella sua vita - e' solito nidificare nelle remote terre di Halruaa. E' estremamente longevo, vi sono esemplari che raggiungono i cinquanta anni.~
+= ~Ecco. Questo gabbiano dalla coda nera ha fatto un viaggio estremamente lungo nella sua vita - è solito nidificare nelle remote terre di Halruaa. E' estremamente longevo, vi sono esemplari che raggiungono i cinquanta anni.~
 == TB#STIVJ ~...~
-= ~Mi hai mentito! Quando mi avevi detto che i gabbiani non vivono mai piu' di tre anni, mi hai mentito!~
+= ~Mi hai mentito! Quando mi avevi detto che i gabbiani non vivono mai più di tre anni, mi hai mentito!~
 = ~Potrebbe essere stato lui ad aver attaccato i miei genitori!~
-== CERNDJ ~La menzogna non e' un atto malvagio se e' commesso a fin di bene.~
+== CERNDJ ~La menzogna non è un atto malvagio se è commesso a fin di bene.~
 == TB#STIVJ ~Taci! Non ti voglio sentire!~
-== CERNDJ ~Come la Natura perdona il leone per le sue uccisioni, così possa la Grande Madre perdonare me per questo inammissibile errore. Spero che i semi piantati fin'ora siano piu' forti di questo sbaglio.~
+== CERNDJ ~Come la Natura perdona il leone per le sue uccisioni, così possa la Grande Madre perdonare me per questo inammissibile errore. Spero che i semi piantati fin'ora siano più forti di questo sbaglio.~
 EXIT
 
 CHAIN IF ~InParty("cernd")
@@ -2606,7 +2594,7 @@ PartyHasItem("miscb2")~ THEN TB#STIVJ StivanCernd8
 = ~Ora dim---~
 == TB#STIVJ ~*splash*~
 = ~In faccia me l'hai fatta, uccellaccio? Allora volete la guerra! Vieni qui che ti spenno, tu e il tuo amico!~
-== CERNDJ ~Come una mattina di gelo non uccide il germoglio sano, cosi' i tuoi germogli di pieta' non verranno uccisi da questo incidente. La fioritura e' ormai prossima.~
+== CERNDJ ~Come una mattina di gelo non uccide il germoglio sano, così i tuoi germogli di pietà non verranno uccisi da questo incidente. La fioritura è ormai prossima.~
 EXIT
 
 CHAIN 
@@ -2991,13 +2979,13 @@ IF ~~ THEN EXIT
 END
 
 IF ~AreaCheck("ar0903") Global("tb#stivanar0903","GLOBAL",0)~ THEN inAr0903
-SAY ~Eh? Cosa ci facciamo in questo luogo? E' cosi' pieno di paladini che mi viene il voltastomaco!~
+SAY ~Eh? Cosa ci facciamo in questo luogo? E' così pieno di paladini che mi viene il voltastomaco!~
 = ~Ho capito! Mi vuoi fare un regalo!~
 IF ~~ THEN DO ~SetGlobal("tb#stivanar0903","GLOBAL",1)~ REPLY ~Di cosa stai parlando?~ GOTO inAr0903-1
 END
 
 IF ~~ THEN inAr0903-3
-SAY ~Bah, con te non ci si puo' mai divertire!~
+SAY ~Bah, con te non ci si può mai divertire!~
 IF ~~ THEN EXIT
 END
 
@@ -3013,7 +3001,7 @@ END
 END
 
 CHAIN IF ~~ THEN tb#stivj inAr0903-1
-~Che domande! Mi vuoi regalare l'opportunita' di uccidere tutti questi paladini! In effetti mi serve un po' di allenamento.~
+~Che domande! Mi vuoi regalare l'opportunità di uccidere tutti questi paladini! In effetti mi serve un po' di allenamento.~
 BRANCH ~InParty("Keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ BEGIN
 == KELDORJ ~Ti avverto di pesare le tue prossime parole - mi dispiacerebbe se fossero le tue ultime.~
 == TB#STIVJ ~Dici con me o con <CHARNAME>?~
@@ -3021,7 +3009,7 @@ BRANCH ~InParty("Keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ BEGIN
 == TB#STIVJ ~... Eh?~
 END
 == ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Dovrei ucciderti all'istante per aver solo pensato un atto del genere!~
-== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Una proposta allettante, ma la feccia che abita questo luogo non e' degna della mia lama.~
+== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~Una proposta allettante, ma la feccia che abita questo luogo non è degna della mia lama.~
 END
 IF ~!Alignment(Player1,MASK_GOOD)~ THEN REPLY ~Un'ottima idea, adesso che chi penso.~ EXTERN tb#stivj inAr0903-2
 IF ~!Alignment(Player1,MASK_GOOD)~ THEN REPLY ~Mi piacerebbe, ma temo saremmo sopraffatti dal numero di questi paladini.~ EXTERN tb#stivj inAr0903-3
@@ -3044,9 +3032,9 @@ BRANCH ~InParty("viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ BEGIN
 == VICONIJ ~Non mettere a prova la tua buona sorte, piccoletto.~
 END
 END
-IF ~~ THEN REPLY ~Non ho mica scelto io questo luogo! La colpa e' di Saemon Havarian!~ EXTERN TB#STIVJ aboutUdBalor-1
+IF ~~ THEN REPLY ~Non ho mica scelto io questo luogo! La colpa è di Saemon Havarian!~ EXTERN TB#STIVJ aboutUdBalor-1
 IF ~~ THEN REPLY ~Coraggio. Ho la sensazione che presto saremo di ritorno ad Athkatla.~ EXTERN TB#STIVJ aboutUdBalor-2
-IF ~~ THEN REPLY ~Tu hai paura? A me piace qua. Tre anni di battaglie, e del male non ci sara' altro che il ricordo!~ EXTERN TB#STIVJ aboutUdBalor-3
+IF ~~ THEN REPLY ~Tu hai paura? A me piace qua. Tre anni di battaglie, e del male non ci sarà altro che il ricordo!~ EXTERN TB#STIVJ aboutUdBalor-3
 
 APPEND TB#STIVJ
 IF ~~ THEN aboutUdBalor-1
@@ -3124,7 +3112,7 @@ DO ~SetGlobal("tb#sdr2","GLOBAL",1)~
 == JAHEIRAJ ~Non c'è bisogno di scomodarle. Punirò io questo insolente.~
 == TB#SDR2 ~Lascio a te il piacere, femmina. Possano i tentacoli della tua verga affondare nella carne di quel verme!~
 == TB#STIVJ ~...~
-= ~... Me la sono vista brutta. Grazie, Jaheria.~
+= ~... Me la sono vista brutta. Grazie, Jaheira.~
 == JAHEIRAJ ~Presta attenzione a ciò che dici e a come ti comporti, Stivan. In futuro potrei non riuscire ad aiutarti.~
 EXIT
 

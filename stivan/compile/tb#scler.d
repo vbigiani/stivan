@@ -155,7 +155,7 @@ END
 CHAIN IF ~~ THEN tb#stivj SecondDialogueClerk8
 ~Cosa?! Non posso aspettare così tanto tempo! La mia urna ha già corso il rischio di andare in frantumi non so quante volte!~
 == TB#SCLER ~(Tossisce) In via del tutto eccezionale, signorino, potrei riporla nel magazzino dove gli Stregoni Incappucciati conservano i manufatti magici confiscati. Lì sarebbe indubbiamente al sicuro.~ 
-== TB#STIVJ ~(Snort!) E sia. Tieni. Ma trattala con il dovuto riguardo, capito?~
+== TB#STIVJ ~E sia. Tieni. Ma trattala con il dovuto riguardo, capito?~
 == TB#SCLER ~Uhm... Decisamente di pessimo gusto...~
 == TB#STIVJ ~A nessuno interessa il tuo parere!~
 == TB#SCLER ~Allora a presto, mio <PRO_LADYLORD>. Sarete avvisato da un messaggero quando i documenti saranno pronti. Ricordatevi di passare dal sottoscritto per ritirare l'urna del vostro... ehm... "amico".~ DO ~SetGlobal("tb#stivanEntryTest","GLOBAL",3) TakePartyItem("tb#surn") AddXPObject(Player1,2000) AddXPObject(Player2,2000) AddXPObject(Player3,2000) AddXPObject(Player4,2000) AddXPObject(Player5,2000) AddXPObject(Player6,2000) AddXPObject("tb#Stiv",3000)~ 
@@ -224,7 +224,7 @@ IF ~~ THEN EXIT
 END
 END
 
-APPEND LLARSH
+APPEND COUNSEC
 IF WEIGHT #-1 ~Global("tb#StivanEntryTest","GLOBAL",1) InParty("tb#stiv")~ THEN BEGIN GovernmentOfficial
 SAY ~Togliti di mezzo, <RACE>. Mi fai ombra, e ho bisogno di luce per compilare questi moduli.~
 IF ~~ THEN REPLY ~Non me ne andrò sino a quando non mi avrai aiutato, zotico. Chi si occupa di seppellire i morti? Tu?~ GOTO GovernmentOfficial1-1

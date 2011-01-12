@@ -292,7 +292,7 @@ COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
 STATISTICHE:
 
 Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
-Lancia "Miscela esplosiva" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
+Lancia "Miscela alchemica" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
 
 Utilizzabile Da:
 Stivan~
@@ -301,7 +301,7 @@ Stivan~
 STATISTICHE:
 
 Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
-Lancia "Miscela esplosiva" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
+Lancia "Miscela alchemica" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
 
 Utilizzabile Da:
 Stivan~
@@ -396,13 +396,13 @@ ACTION_IF GAME_IS ~BGT ToB~ && 0 THEN BEGIN
 		SAY NAME2 ~Cacca di gabbiano infuocata~
 		SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. Dopo essere stata combinata con la piuma di fenice e la barba di Yaga-shura, genera un'esplosione alchemica piu' potente, ma non e' piu' in grado di accecare i nemici.
 STATISTICHE:
-Lancia "Miscela esplosiva" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
+Lancia "Miscela alchemica" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
 
 Utilizzabile Da:
 Stivan~
 		SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. Dopo essere stata combinata con la piuma di fenice e la barba di Yaga-shura, genera un'esplosione alchemica piu' potente, ma non e' piu' in grado di accecare i nemici.
 STATISTICHE:
-Lancia "Miscela esplosiva" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
+Lancia "Miscela alchemica" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
 
 Utilizzabile Da:
 Stivan~

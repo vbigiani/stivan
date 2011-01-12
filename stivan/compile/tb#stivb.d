@@ -123,7 +123,7 @@ CombatCounter(0)
 Global("tb#StivanViconia","GLOBAL",2)~ THEN TB#STIVB stivan-viconia-3
 ~Viconia, ti hanno mai detto che sei una bellissima drow?~
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",3)~
-== BVICONI ~Hmmm... Ti senti bene, sakphul? Non mi sarei mai aspettata un'osservazione del genere da... da uno come te.~
+== BVICONI ~Hmmm... Ti senti bene, sakphul? Non mi sarei mai aspettata un'osservazione del genere da uno come te.~
 == TB#STIVB ~Ti stavo soltanto rivolgendo un complimento. Pensi forse che un halfling non sia capace di apprezzare la bellezza di una drow?~
 == BVICONI ~No, anzi. Il mio aspetto è così maestoso da abbagliare chiunque. Tappetti inclusi.~
 == TB#STIVB ~Ehm... La modestia non è una delle tue qualità...~
@@ -186,7 +186,7 @@ See("Viconia")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanViconia","GLOBAL",5)~ THEN TB#STIVB stivan-viconia-6
-~A giudicare dalle occhiate furtive che continui a lanciarmi, Viconia, suppongo che tu non abbia il coraggio di scusarti per il modo vergognoso in cui mi hai trattato.~
+~A giudicare dalle occhiate furtive che continui a lanciarmi, suppongo che tu non abbia il coraggio di scusarti per il modo vergognoso in cui mi hai trattato.~
 DO ~SetGlobal("tb#StivanViconia","GLOBAL",6)~
 == BVICONI ~Io non ho la benchè minima intenzione di scusarmi, illuso. E per cosa, poi? Per essere stata franca?~
 == TB#STIVB ~Allora potresti spiegarmi perchè continui ad avvicinarti a me come se volessi dirmi qualcosa?~
@@ -577,7 +577,7 @@ See("Minsc")
 Gender("Edwin",Female)
 CombatCounter(0)
 Global("tb#StivanEdwina","GLOBAL",0)~ THEN TB#STIVB minscEdwina
-~Voi e Minsc siete proprio una bella coppia, Miss Edwina. Ma guardatevi: vi compensate a vicenda! Uno ha i muscoli, l'altra ha il cervello.~
+~Voi e Minsc siete proprio una bella coppia, Miss Edwina. Guardatevi: vi compensate a vicenda! Uno ha i muscoli, l'altra ha il cervello.~
 DO ~SetGlobal("tb#StivanEdwina","GLOBAL",1)~
 == BEDWIN ~Stà zitto!!~
 == TB#STIVB ~A quando le nozze?~
@@ -1215,17 +1215,17 @@ CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",3)~ THEN TB#STIVB stivanimoen4
 ~Vorrei proporre un'alleanza, mia acerrima rivale.~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",4)~
-== BIMOEN2 ~Io mi diverto tanto a batterti in abilita' ladresca... perche' dovrei accettare questa tua offerta?~
-== TB#STIVB ~La mia proposta e' di accantonare la nostra sfida per un attimo e scambiarci qualche trucchetto!~
-== BIMOEN2 ~Una proposta interessante... Non ti credevo cosi' abile nel contrattare, sai?~
-== TB#STIVB ~Heh. Uno dei tanti talenti utili che mi ha trasmesso mio papa'.~
+== BIMOEN2 ~Io mi diverto tanto a batterti in abilità ladresca... perché dovrei accettare questa tua offerta?~
+== TB#STIVB ~La mia proposta è di accantonare la nostra sfida per un attimo e scambiarci qualche trucchetto!~
+== BIMOEN2 ~Una proposta interessante... Non ti credevo così abile nel contrattare, sai?~
+== TB#STIVB ~Heh. Uno dei tanti talenti utili che mi ha trasmesso mio papà.~
 == BIMOEN2 ~Puoi migliorare la mia tecnica di combattimento?~
 == TB#STIVB ~Una bella sfida - sei una frana sia a evitare i colpi che a infliggerli.~
 == BIMOEN2 ~Grazie del complimento! Molto gentile! E tu cosa vorresti apprendere?~
 == TB#STIVB ~Puoi insegnarmi a diventare invisibile tramite la magia?~
 == BIMOEN2 ~Non ho mai sentito parlare di halfling che padroneggino la magia...~
 == TB#STIVB ~Per favore?~
-== BIMOEN2 ~E va bene, faro' un tentativo.~
+== BIMOEN2 ~E va bene, farò un tentativo.~
 == TB#STIVB ~Grazie!~
 EXIT
 
@@ -1241,8 +1241,8 @@ DO ~SetGlobal("tb#StivanImoen","GLOBAL",5)~
 == BIMOEN2 ~Ahi!~
 == TB#STIVB ~Di nuovo! Para e poi contrattacca!~
 == BIMOEN2 ~Ahi! Prendi (pant) questo!~
-== TB#STIVB ~Non ti sbilanciare cosi' tanto! Riprovaci!~
-== BIMOEN2 ~(Pant pant) Sono stremata... pieta'!~
+== TB#STIVB ~Non ti sbilanciare così tanto! Riprovaci!~
+== BIMOEN2 ~(Pant pant) Sono stremata... pietà!~
 == TB#STIVB ~Dai, ancora cinque minuti e poi sarai tu a riprendere me!~
 == BIMOEN2 ~E va bene... Schiva questo!~
 EXIT
@@ -1256,7 +1256,7 @@ HPGT("tb#Stiv",20)~ THEN BIMOEN2 stivanimoen6
 ~Ripeti con me! Incertus... Pulcher... Imperium!~ [ CAS_PM6F ]
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",6)~
 BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
-== BNALIA ~Imoen! Gli hai fatto lanciare Dardo Incantato su se' stesso! Sei impazzita?~
+== BNALIA ~Imoen! Gli hai fatto lanciare Dardo Incantato su se stesso! Sei impazzita?~
 == BIMOEN2 ~Oops.~
 == TB#STIVB ~Cos-~
 == BNALIA ~Non distrarti, Stivan! Potresti causausare un'esplosione se non finisci propriamente l'incantesimo!~
@@ -1291,20 +1291,20 @@ DO ~ApplySpellRES("spcl141","Imoen2")
 ApplySpellRES("spcl441","Imoen2")
 DisplayString("Imoen2",%Bonus: +1 al colpire, +1 danno, -1 CA%)~
 == TB#STIVB ~Lo vedremo... pronta per un'altro combettimento?~
-== BIMOEN2 ~Mai stata cosi' pronta! Prendi QUESTO!~
+== BIMOEN2 ~Mai stata così pronta! Prendi QUESTO!~
 == TB#STIVB ~Cos-~
 = ~(Bum!)~
 = ~Auch! La testa!~
 == BIMOEN2 ~Ho vinto! Ti ho messo a terra!~
-== TB#STIVB ~Quante volte ti devo dire, Imoen, tentare di placcare un'avversario armato e' una pessima idea!~
-== BIMOEN2 ~Sara', ma con te funziona sempre!~
-== TB#STIVB ~Questo e' perche' non punto la mia spada contro di te per trapassarti se tenti di saltarmi addosso!~
-= ~Perche' si sono voltati tutti a guardarci?~
-== BIMOEN2 ~Non so se e' per il capitombolo, perche' siamo a terra l'una sull'altro, o per il doppio senso che hai appena pronunciato.~
-== TB#STIVB IF ~Global("AnomenIsNotKnight","GLOBAL",0)~ THEN ~Heh. In effetti la situazione non e' spiacevole - prometto che non ti sgridero' di nuovo se mi torni ad atterrare in questo modo.~
+== TB#STIVB ~Quante volte ti devo dire, Imoen, tentare di placcare un'avversario armato è una pessima idea!~
+== BIMOEN2 ~Sarà, ma con te funziona sempre!~
+== TB#STIVB ~Questo è perché non punto la mia spada contro di te per trapassarti se tenti di saltarmi addosso!~
+= ~Perché si sono voltati tutti a guardarci?~
+== BIMOEN2 ~Non so se è per il capitombolo, perché siamo a terra l'una sull'altro, o per il doppio senso che hai appena pronunciato.~
+== TB#STIVB IF ~Global("AnomenIsNotKnight","GLOBAL",0)~ THEN ~Heh. In effetti la situazione non è spiacevole - prometto che non ti sgriderò di nuovo se mi torni ad atterrare in questo modo.~
 == TB#STIVB IF ~Global("AnomenIsNotKnight","GLOBAL",1)~ THEN ~...~
 = ~Come possono pensare una cosa simile? Io sono innocente, innocuo e ingenuo!~
-== BIMOEN2 ~Avanti, alzati e andiamo - ci siamo gia' esibiti abbastanza.~
+== BIMOEN2 ~Avanti, alzati e andiamo - ci siamo già esibiti abbastanza.~
 EXIT
 
 CHAIN IF ~InParty("Imoen2")
@@ -1317,14 +1317,14 @@ DO ~SetGlobal("tb#StivanImoen","GLOBAL",10)~
 == BIMOEN2 ~Non ci siamo proprio! Se non stai attento mi diventi un rospo!~
 == TB#STIVB ~Quasi quasi... le fiabe finiscono sempre bene per i rospi quando incontrano la loro principessa.~
 BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
-== TB#STIVB ~E io ho gia' incontrato Miss Nalia!~
+== TB#STIVB ~E io ho già incontrato Miss Nalia!~
 == BNALIA ~Temo di dover rovinare le tue illusioni, Stivan.~
 == TB#STIVB ~Che sbadato! Mi dimentico sempre che voi non siete una principessa!~
 END
 == BIMOEN2 ~Avanti, zuccone, riprova! Veritas... Credo... Oculos!~ [ CAS_PM1F ]
 == TB#STIVB ~Va bene! Veritas... Credo... Oculos!~ [ CAS_PM1M ]
 DO ~ApplySpell("tb#stiv",WIZARD_INVISIBILITY)~
-== TB#STIVB ~Aiuto! Non mi vedo piu' le mani!~
+== TB#STIVB ~Aiuto! Non mi vedo più le mani!~
 DO ~AddSpecialAbility("spin118")~
 == BIMOEN2 ~Ci... ci sei riuscito! Complimenti!~
 == TB#STIVB ~Evviva!~
@@ -1337,21 +1337,21 @@ CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",10)~ THEN BIMOEN2 stivanimoen9
 ~Pronto a un'altro duello, Stivan?~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",11)~
-== TB#STIVB ~Mai stato piu' pronto! Schiva questo!~
+== TB#STIVB ~Mai stato più pronto! Schiva questo!~
 == BIMOEN2 ~Un gioco da ragazzi! Para questo!~
-== TB#STIVB ~Niente di piu' facile! Prendi questo!~
+== TB#STIVB ~Niente di più facile! Prendi questo!~
 == BIMOEN2 ~Ahi!~
 == TB#STIVB ~Scusa Imoen, non volevo ferirti!~
-== BIMOEN2 ~Fa niente, e' solo un graffio.~
+== BIMOEN2 ~Fa niente, è solo un graffio.~
 BRANCH ~Global("AnomenIsNotKnight","GLOBAL",1)~ BEGIN
 == TB#STIVB ~Sei migliorata tanto, ma non riuscirai mai a sconfiggermi!~
 == BIMOEN2 ~Lo vedremo... Cacca di gabbiano!~
-== TB#STIVB ~Cos- Non vale! Quello e' il *mio* trucco vincente!~
+== TB#STIVB ~Cos- Non vale! Quello è il *mio* trucco vincente!~
 == BIMOEN2 ~Ha! Il maestro battuto dallo studente!~
 END
 BRANCH ~Global("AnomenIsNotKnight","GLOBAL",0)~ BEGIN
 == TB#STIVB ~Sei migliorata tanto, ma non riuscirai mai a sconfiggermi senza placcarmi!~
-== BIMOEN2 ~Non ho bisogno di questi trucchetti. Ti sconfiggero' onorevolmente, mi serve solo qualche altro allenamento.~
+== BIMOEN2 ~Non ho bisogno di questi trucchetti. Ti sconfiggerò onorevolmente, mi serve solo qualche altro allenamento.~
 == TB#STIVB ~Dico sul serio, non me la prendo se mi torni a battere saltandomi addosso!~
 == BIMOEN2 ~...~
 = ~Non credo tu capisca molto sulle donne.~
@@ -1367,14 +1367,14 @@ Global("tb#StivanImoen","GLOBAL",11)
 HaveSpellRES("spin118")
 Global("AnomenIsNotKnight","GLOBAL",0)~ THEN TB#STIVB stivanimoen10
 ~Veritas... Credo... Oculos!~ [ CAS_PM1M ]
-= ~Heh, sono un genio! Questo e' il crimine perfetto!~
+= ~Heh, sono un genio! Questo è il crimine perfetto!~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",12) SpellRES("spin118","tb#stiv")~
-== BIMOEN2 ~Non ci proverei se fossi in te. L'invisibilita' termina se tocchi qualcuno.~
+== BIMOEN2 ~Non ci proverei se fossi in te. L'invisibilità termina se tocchi qualcuno.~
 == TB#STIVB ~Ehm, parlavo di un piano per riprendermi i vigneti. Mia mamma diceva sempre che le donne non si toccano neanche con un fiore, e io le ubbdisco sempre!~
 = ~(Magari la streghetta sta bleffando? Non posso lasciarmi sfuggire l'occasione!)~
 == BIMOEN2 ~Tra parentesi, ho appena finito di ricercare una nuova magia: "Irreversibile trasformazione in Gabbiano di Imoen la Svelta". Ti interesserebbe farmi da cavia?~
 == TB#STIVB ~...~
-= ~Va bene, hai vinto tu. Terro' le mani a casa.~
+= ~Va bene, hai vinto tu. Terrò le mani a casa.~
 EXIT
 
 CHAIN
@@ -1712,7 +1712,7 @@ DO ~SetGlobal("tb#StivanCerndJaheira","GLOBAL",1)~
 == BCERND ~Sei la benvenuta, Jaheira. Un artigiano e i suoi strumenti diventano un'unica cosa quando sono all'opera, pertanto non posso che essere lieto della tua offerta.~
 == BJAHEIR ~...~
 == BCERND ~...~
-== TB#STIVB ~(Snort!) Smettela di fissarmi in quel modo!~
+== TB#STIVB ~(Snort!) Smettetela di fissarmi in quel modo!~
 == BJAHEIR ~Temo che ci attenda un duro lavoro.~
 == BCERND ~Come la goccia scava la pietra, così faremo breccia con pazienza infinita nel suo animo. Anche la più fortificata tra le cittadelle ha una crepa tra le sue mura, ma una volta individuatala, l'accesso al suo cuore è garantito.~ 
 EXIT
