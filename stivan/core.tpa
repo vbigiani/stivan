@@ -338,7 +338,7 @@ APPEND ~tooltip.2da~ ~tb#spoo POO_BLIND POO_EXPLOSION -1~
 	UNLESS ~tb#spoo~
 
 COPY_EXISTING ~tooltip.2da~ ~override~
-	REPLACE ~POO_BLIND~ ~Cecita'~
+	REPLACE ~POO_BLIND~ ~Cecità~
 	REPLACE ~POO_EXPLOSION~ ~Esplosione Alchemica~
 
 APPEND ~pdialog.2da~
