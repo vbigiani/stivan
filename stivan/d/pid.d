@@ -26,7 +26,8 @@ IF ~Global("knowsmurders","GLOBAL",1) OR(2) Global("MerchantHide","GLOBAL",0) Gl
 IF ~~ THEN REPLY ~Mi chiedevo se avessi mai sentito parlare di Irenicus, il mago che stiamo cercando.~ GOTO PD6
 IF ~GlobalLT("Chapter","GLOBAL",4)~ THEN REPLY ~Dal momento che sei nativo di Athkatla, posso forse sperare che tu sappia dove vengono portate le persone arrestate dagli Stregoni Incappucciati?~ GOTO PD7
 IF ~GlobalLT("Chapter","GLOBAL",4)~ THEN REPLY ~Cosa sai dirmi della guerra tra gilde?~ GOTO PD8
-IF ~Global("TMAcceptance","GLOBAL",1)~ THEN REPLY ~Mi par di aver capito che tu sia già stato a Trademeet.~ GOTO PD9
+IF ~Global("TMAcceptance","GLOBAL",1) Dead("cefald01")  OR(2) Dead("trgeni01") Global("geniesgone","GLOBAL",1)~ THEN REPLY ~Mi par di aver capito che tu sia già stato a Trademeet.~ GOTO PD9-solved
+IF ~Global("TMAcceptance","GLOBAL",1) OR(2) !Dead("cefald01") !Dead("trgeni01") OR(2) !Dead("cefald01") !Global("geniesgone","GLOBAL",1)~ THEN REPLY ~Mi par di aver capito che tu sia già stato a Trademeet.~ GOTO PD9
 IF ~Global("WorkingForAran","GLOBAL",1)~ THEN REPLY ~Secondo te ho fatto bene a rifiutare l'offerta di Bodhi?~ GOTO PD10
 IF ~Global("WorkingForBodhi","GLOBAL",1)~ THEN REPLY ~Secondo te ho fatto bene ad accettare l'aiuto di Bodhi?~ GOTO PD11
 IF ~Global("MaeVarWork","GLOBAL",3)~ THEN REPLY ~Ho bisogno che tu ti introduca nel Tempio di Talos per impossessarti del ciondolo della Signora delle Stagioni.~ GOTO PD12
@@ -368,6 +369,11 @@ END
 IF ~~ THEN BEGIN PD9
 SAY ~Sì, ci sono già stato. Mio padre era in ottimi rapporti con il capo carovana che ogni anno faceva una sosta in quella città proprio in concomitanza al nostro arrivo. Credo si chiamasse... Feeraa? O Raafee?~
 = ~Boh. Non ricordo con precisione il suo nome, ma sono sicuro che lo riconoscerei se lo incontrassi. Magari potrebbe darci qualche informazione su ciò che sta succedendo.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN PD9-solved
+SAY ~Sì, ci sono già stato. Mio padre era in ottimi rapporti con il capo carovana che ogni anno faceva una sosta in quella città proprio in concomitanza al nostro arrivo.~
 IF ~~ THEN EXIT
 END
 
