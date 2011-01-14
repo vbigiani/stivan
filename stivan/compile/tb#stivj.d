@@ -2244,10 +2244,10 @@ IF ~InParty("Korgan")
 See("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("tb#StivanKorgan","GLOBAL",3)
+Global("tb#StivanKorganUD","GLOBAL",0)
 Global("udDrowPlot","GLOBAL",5)~ THEN TB#STIVJ stivankorgan4
-~(Gasp!) Quelle creature erano *mostruose*! Mi fa male la testa... E' come se l'avessero presa a frustrate!~
-DO ~SetGlobal("tb#StivanKorgan","GLOBAL",4)~ 
+~(Gasp!) Quelle creature erano *mostruose*! Mi fa male la testa... E' come se l'avessero presa a frustate!~
+DO ~SetGlobal("tb#StivanKorganUD","GLOBAL",1)~ 
 == KORGANJ ~Bah! Il Sottosuolo non è un posto adatto a femminucce come te! Fatti da parte e lascia che siano i veri guerrieri a fare il lavoro sporco!~
 == TB#STIVJ ~Sono perfettamente capace di cavarmela, Korgan. Ho soltanto bisogno di tempo per abituarmi a queste nuove sembianze.~
 == KORGANJ ~L'aspetto non significa nulla, inutile mucchietto di sputi goblin. Anche con le fattezze di un lurido gambelunghe drow so bene dove affondare la mia ascia.~
@@ -3078,7 +3078,7 @@ DO ~SetGlobal("tb#StivanJaheiraTethyr","GLOBAL",1)~
 == TB#STIVJ ~A prescindere dalle motivazioni che ti spingono a compiere questo viaggio, ti consiglio di non andarci da sola. Non avevo nessuno al mio fianco quando sono andato a rivedere i vigneti che un tempo appartenevano alla mia famiglia, e ti assicuro che non è stata un'esperienza piacevole.~
 == JAHEIRAJ ~Suppongo sia dipeso dallo spirito con cui vi sei tornato.~
 == TB#STIVJ ~Era inevitabile che nutrissi alcune aspettative: che quella fattoria, quel sentiero, quegli intrecci di foglie, una volta rivisti, mi ispirassero un particolare sentimento, ma sono rimasto meravigliato quando la sola cosa che ho provato è stata un’improvvisa stilettata di memoria provocata da scenari e ambienti ai quali non avrei mai attribuito un tale potere di ferire.~
-== JAHEIRAJ ~Il luogo in cui vorrei andare ha delle associazioni dolorose, ma farò il possibile perché mi lasci indifferente. Ho intenzione di percorrerlo in lungo e i largo, sbarazzina e risoluta, per poi andarmene non appena avrò ottemperato certe... formalità.~
+== JAHEIRAJ ~Il luogo in cui vorrei andare ha delle associazioni dolorose, ma farò il possibile perché mi lasci indifferente. Ho intenzione di percorrerlo in lungo e in largo, sbarazzina e risoluta, per poi andarmene non appena avrò ottemperato certe... formalità.~
 = ~Ebbene, direi che abbiamo indugiato abbastanza. Questa conversazione mi ha dato diversi spunti su cui riflettere, e sono piacevolmente sorpresa dalla profondità di quanto hai detto.~
 == TB#STIVJ ~Heh. L'ho sempre detto che sono sottovalutato.~
 EXIT

@@ -279,7 +279,7 @@ See("Keldorn")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanKeldorn","GLOBAL",0)~ THEN TB#STIVB stivan-keldorn-1
-~Sei avanti negli anni, Keldorn. Capisco che per un sessant'enne sia un'idea difficile da accettare, ma... Cerca di rendertene conto: è giunto il momento di riporre la tua spada nel fodero.~
+~Sei avanti negli anni, Keldorn. Capisco che per un sessantenne sia un'idea difficile da accettare, ma... Cerca di rendertene conto: è giunto il momento di riporre la tua spada nel fodero.~
 DO ~SetGlobal("tb#StivanKeldorn","GLOBAL",1)~
 == BKELDOR ~La lotta contro il male non ha mai fine, halfling. Continuerò a combattere finchè Torm mi darà la forza necessaria a farlo.~
 = ~Per inciso: io non ho sessant'anni.~
@@ -381,7 +381,7 @@ END
 END
 
 CHAIN BEDWIN StivanEdwin5
-~Fruga nel mio zaino quanto vuoi, patetica creatura. Non la troverai *mai*. (Per motivi più che ovvi, oserei dire. Solo un genio come me poteva pensare di nasconderla nelle mie mutande).~
+~Fruga nel mio zaino quanto vuoi, patetica creatura. Non la troverai *mai*. (Per motivi più che ovvi, oserei dire. Solo un genio come me poteva pensare di nasconderla nelle mutande).~
 == BEDWIN IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN ~(Sei proprio un figo, Edwin. Guarda l'espressione di <CHARNAME>. Bocca spalancata, occhi sgranati... Persino un idiota capirebbe che questi sono chiari segnali dell'ammirazione sconfinata che prova per me).~
 = ~(... Beh, ora potrebbe anche chiudere la bocca. Sembra una deficiente impalata in quel modo).~
 == TB#STIVB ~...~
@@ -656,10 +656,10 @@ Global("tb#StivanHaerdalis","GLOBAL",1)~ THEN BHAERDA stivan-dalis-2
 DO ~SetGlobal("tb#StivanHaerdalis","GLOBAL",2)~
 == TB#STIVB ~Sì, Haer'Dalis. Sono stato in molti posti finora, alcuni più belli e più suggestivi di altri, ma non ho ancora messo piede in diverse località.~
 == BHAERDA ~Mai stato a Sigil?~
-== TB#STIVB ~No, e no0n so nemmeno come arrivarci. Tutta questa storia dei condotti, delle sfere interplanari, delle dimensioni parallele... E' un pò troppo complicato per me.~
+== TB#STIVB ~No, e non so nemmeno come arrivarci. Tutta questa storia dei condotti, delle sfere interplanari, delle dimensioni parallele... E' un pò troppo complicato per me.~
 == BHAERDA ~In realtà è più semplice di quanto pensi.~
 = ~Sigil può essere raggiunta tramite tre diversi tipi di portali: permenenti, temporanei e mobili. Mi soffermerò soltanto sui primi due, in quanto la natura dei condotti mobili richiederebbe una trattazione troppo complicata per le tue orecchie.~
-= ~I portali permanenti, per loro stessa definizione, sono destinati ad esistere sino a quando l'entropia non li richiamerà a sè. I portali temporanei, invece, posso apparire e scomprire all'improvviso, senza motivo, oppure essere attivati da un oggetto, una formula o un incantesimo in grado di aprire il condotto.~
+= ~I portali permanenti, per loro stessa definizione, sono destinati ad esistere sino a quando l'entropia non li richiamerà a sè. I portali temporanei, invece, possono apparire e scomparire all'improvviso, senza motivo, oppure essere attivati da un oggetto, una formula o un incantesimo in grado di aprire il condotto.~
 = ~Per darti un'idea più precisa, quello aperto dalla mia Raelis nella prigione del Cambion era un portale temporaneo, scomparso nel momento stesso in cui il mio antico stormo è giunto a destinazione.~
 == TB#STIVB ~WOW! Sembra proprio avvincente!~
 == BHAERDA ~Tieni presente che i viaggi attraverso i condotti presentano molti più pericoli rispetto a quelli terra-terra a cui sei abituato. Una volta, ad esempio, ho visto un Raccoglitore entrare in un condotto instabile. Non l'avesse mai fatto: il suo busto è rimasto attaccato all'entrata del condotto, mentre le sue gambe sono arrivate più o meno integre all'uscita.~
@@ -795,7 +795,7 @@ DO ~SetGlobal("tb#StivanJan","GLOBAL",2)~
 == BJAN ~No, a mia zia.~
 == TB#STIVB ~Ah.~
 = ~Se mai dovessi incontrarla, eviterò di metterle i bastoni tra le ruote.~
-== BJAN ~Ora, vediamo al dunque. Il segreto che volevo rivelarti la volta scorsa riguardava...~
+== BJAN ~Ora, veniamo al dunque. Il segreto che volevo rivelarti la volta scorsa riguardava...~
 = ~Riguardava...~
 = ~...~
 = ~Stivvy... Più mi arrovello su questa cosa, più non me ne ricordo.~
@@ -1290,7 +1290,7 @@ DO ~SetGlobal("tb#StivanImoen","GLOBAL",9)~
 DO ~ApplySpellRES("spcl141","Imoen2")
 ApplySpellRES("spcl441","Imoen2")
 DisplayString("Imoen2",%Bonus: +1 al colpire, +1 danno, -1 CA%)~
-== TB#STIVB ~Lo vedremo... pronta per un'altro combettimento?~
+== TB#STIVB ~Lo vedremo... pronta per un altro combettimento?~
 == BIMOEN2 ~Mai stata così pronta! Prendi QUESTO!~
 == TB#STIVB ~Cos-~
 = ~(Bum!)~
@@ -1746,7 +1746,7 @@ Global("tb#StivanJan","GLOBAL",3)~ THEN BJAN jan4
 ~Guarda un pò cosa ho trovato, Stivvy: il manuale con cui ho imparato a deliziare la mia platea durante il periodo della Grande Recessione delle Rape. Te ne ho mai parlato?~
 DO ~SetGlobal("tb#StivanJan","GLOBAL",4)~
 == TB#STIVB ~No, ed è meglio che tu non lo faccia. Finiresti per perderti nuovamente in un monologo senza capo nè coda. Lasciami dare un'occhiata a quello scritto, piuttosto.~
-== BJAN ~"Dieci piccoli passi per diventare un bardo", di Volo Trumph. Ovviamente questa non è la prima versione, bensì una successiva contenente i suggerimenti che ho maturato dopo la mia esperienza bardica e condiviso con l'autore.~
+== BJAN ~"Dieci piccoli passi per diventare un bardo", di Volo Geddarm. Ovviamente questa non è la prima versione, bensì una successiva contenente i suggerimenti che ho maturato dopo la mia esperienza bardica e condiviso con l'autore.~
 == TB#STIVB ~Cosa?! Stai dicendo sul serio? Hai davvero conosciuto e lavorato con il grande Volo?~
 == BJAN ~Certo, anche se il mio debutto come scrittore avvenne molti anni prima di quella collaborazione. Esordii con il manuale "Della donna non si butta via niente - 21 ricette per cucinarla". Un ottimo testo, quello. Suggerisce un approccio inusuale con le esponenti del gentil sesso, sebbene il problema non sia cucinarle, bensì digerirle.~
 = ~Dopo tanto discorrere, inoltre, resta dubbio se le donne preferiscano essere prese, sorpese o comprese. Tu cosa dici?~
