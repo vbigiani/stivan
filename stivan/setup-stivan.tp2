@@ -17,6 +17,6 @@ LANGUAGE ~Italian~
 	 ~Italian~
 	 ~stivan/tra/Italian/setup.tra~
 
-BEGIN ~Stivan il Cacciatore - Ritratto "Ghigno" (To Be Done)~
+BEGIN ~Stivan il Cacciatore - Ritratto di Nix"
 INCLUDE ~stivan/core.tpa~
-COPY ~stivan/portraits/bigGrin~ ~override~
+COPY ~stivan/portraits/nix~ ~override~
