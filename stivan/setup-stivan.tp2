@@ -5,7 +5,7 @@ AUTO_TRA ~stivan/tra/english~
 AUTO_TRA ~stivan/tra/%s~
 
 VERSION ~alpha something~
-README ~stivan/tra/%LANGUAGE%/readme.html~ ~stivan/tra/english/readme.html~
+README ~stivan/readme-italian.html~ ~stivan/readme.html~
 
 MODDER SETUP_TRA NONE
 
