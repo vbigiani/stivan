@@ -340,7 +340,7 @@ function mail(text)
 			<span class="headerdiv-line">Author: the bigg and Giuseppe</span> | <span class="headerdiv-line"><a href="http://www.shsforums.net/forum/255-stivan-the-hunter/">Forum</a></span> | <span class="headerdiv-line">Version: alpha something</span>
 		</div>
 		<div id="headerdiv-bottom">
-			<a href="#intro">Introduction</a> | <a href="#about">About Stivan</a> | <a href="#installation">Installation</a> | <a href="#compatibility">Compatibility notes</a> | <a href="#faq">FAQ</a> | <a href="#version">Version history</a> | <a href="#credits">Credits</a> | <a href="#contact">Contact info</a>
+			<a href="#intro">Introduction</a> | <a href="#about">About Stivan</a> | <a href="#installation">Installation</a> | <a href="#compatibility">Compatibility notes</a> | <a href="#faq">FAQ</a> | <a href="#version">Version history</a> | <a href="#credits">Credits and Copyright</a> | <a href="#contact">Contact info</a>
 		</div><a name="intro" id="intro"></a>
 		<div id="maindiv">
 
@@ -384,26 +384,30 @@ function mail(text)
           glad to offer him his knowledge of the city and thankful for having found a new ally on his crusade against seagulls.
           </div>
           <p><br>
-          <br>Gameplay stats:</p>
+          <br>Gameplay information</p>
           <div class="divimp">
-          &nbsp;&nbsp;&nbsp;STR 14
-          <br>&nbsp;&nbsp;&nbsp;DEX 19
-          <br>&nbsp;&nbsp;&nbsp;CON 16
-          <br>&nbsp;&nbsp;&nbsp;INT 13
-          <br>&nbsp;&nbsp;&nbsp;WIS 8
-          <br>&nbsp;&nbsp;&nbsp;CHR 12
-          <br>
-          <br>He joins at first level, but with 161.000 experience points (equivalent to a fighter 7 / thief 8), to
-          allow you to better fine-tune his weapon proficiencies and thievery skills.
-          <br>
-          <br>Initial thief skills (not counting racial and ability bonuses) are:
-          <br>Pick Pocket 15
-          <br>Move Silently 15
-          <br>Hide in Shadows 10
-          <br>
+          To allow you to better fine-tune his weapon proficiencies and thievery skills, Stivan will join as a first level
+          Fighter/Thief with 161.000 XP, enough to become a 7/8 Fighter/Thief straight away.
+          <br><br>Stats:
+          <ul><li>STR 14</li>
+          <li>DEX 19</li>
+          <li>CON 16</li>
+          <li>INT 13</li>
+          <li>WIS 8</li>
+          <li>CHR 10</li></ul>
+          <br>Initial thief skills (base + spent = total):
+          <ul><li>Open Locks 35 + 0 = 35</li>
+          <li>Find Traps 20 + 0 = 20</li>
+          <li>Pick pockets 35 + 15 = 50</li>
+          <li>Move Silently 40 + 15 = 55</li>
+          <li>Hide in Shadows 35 + 10 = 45</li>
+          <li>Detect Illusions 0 + 0 = 0</li>
+          <li>Set Traps 10 + 0 = 10</li>
+          </ul>
           <br>Initial weapon proficiency are:
-          <br>** Short Sword
-          <br>** Sling</div>
+          <ul><li>** Short Sword</li>
+          <li>** Sling</li></ul>
+          </div>
           
           <p><br><br><br><br>The rest of this section will contain minor spoilers about BG2 and the Stivan
           mod itself, so don't read if you want to be surprised. Bigger spoilers will be hidden and must be
@@ -471,7 +475,7 @@ function mail(text)
             Jan: Jan finds in Stivan a <s>eager</s> <s>willing</s> listener for his many stories.
             </li>
             <li>
-            Keldorn: They exchange many words, few of them pleasant.
+            Keldorn: They exchange few words, even less of them pleasant.
             </li>
             <li>
             Korgan: Stivan is alternatively amused and scared by Korgan's extremely violent attitude.
@@ -595,13 +599,31 @@ function mail(text)
 				This mod uses the most up-to-date coding standards, to ensure compatibility with any other reasonably well
         coded mod.
         <br>These mods require mention (in order from most severe to least):
-        <br>Keeping Yoshimo: <span class="bigspoiler">Stivan considered Yoshimo as one of his best friends, and 
+        <div class="divimp"><ul><li>Keeping Yoshimo: <span class="bigspoiler">Stivan considered Yoshimo as one of his best friends, and 
         Yoshimo's death plays a part in future banters.</span> As such, Keeping Yoshimo is conceptually incompatible
-        with Stivan the Hunter.
-        <br>Ruad: if you upgrade Yoshimo's blade using Ruad, then Stivan won't be able to
-        <span class="bigspoiler">use it or upgrade it.</span>
-        <br>Edwin Romance: Edwin Romance should be installed BEFORE Stivan (doing so would make a single interjection
-        funnier).
+        with Stivan the Hunter.</li>
+        <li>Ruad: if you upgrade Yoshimo's blade using Ruad, then Stivan won't be able to
+        <span class="bigspoiler">use it or upgrade it.</span></li>
+        <li>Edwin Romance: Edwin Romance should be installed BEFORE Stivan (doing so would make a single interjection
+        funnier).</li>
+        <li>Stivan is integrated in Level1NPC, allowing you to alter his class, stats, or initial skill spread.</li>
+        <li>Stivan will comment on the events of these mods, independently of install order:
+          <ul>
+          <li>Unfinished Business.</li>
+          <li>Ding0's Quest Pack.</li>
+          <li>Edwin Romance.</li>
+          </ul>
+        </li>
+        Unfinished Business and Ding0's Quest Pack: Stivan will comment on some of the quests from these mods,
+        indipendently of install order.</li>
+        <li>Stivan is integrated in Crossmod. As of this writing, this adds:
+          <ul>
+          <li>4 interjections with 'Kalah and what he was promised' from Unfinished Business.</li>
+          <li>Stivan will take Anomen's place during the events of Square Mod.</li>
+          </ul>
+          
+        </li>
+        </ul></div>
 		<address>
 					<span class="address-footer-1">Stivan the Hunter &gt; Compatibility Notes</span>
 						<a href="#top">BACK TO TOP</a>
@@ -652,10 +674,24 @@ function mail(text)
 			<a name="credits" id="credits"></a>
 			<div>
 				<h4>
-					Credits
+					Credits and Copyright
 				</h4>
 				<p>
-					Mod authors: Valerio Bigiani / the bigg and Giuseppe.<br>
+          This mod is made available under <a href="copying.txt">the GPL License, v3</a>
+          (<a href="http://www.gnu.org/licenses/gpl-3.0.txt">alternate link</a>), or, at your 
+          option, any later version.<br>
+          <br>As such, anybody is free to take any section of the mod for any purpose
+          he wishes.
+          <br>You are also allowed to have your mod interact with the contents of
+          Stivan's mod (including, but not limited to, having your characters discuss
+          events of the Stivan mod, interjecting in Stivan's dialogue, or adding to
+          Stivan's dialogue). You have the permission of publishing such a mod without
+          having to contact us in any way; however, in the interest of improving both
+          mods' quality, if you add any lines to Stivan, we ask you to make a reasonable
+          effort to contact us and apply any suggestion we might
+          offer if we feel you have made some gross mistake characterizing Stivan.
+          <br>
+					<br>Mod authors: Valerio Bigiani / the bigg and Giuseppe.<br>
           <br>Contributors:
           <br>Dualmakan for most of the item graphics.
           <br>Miloch for the 'seagull poo' icons.
