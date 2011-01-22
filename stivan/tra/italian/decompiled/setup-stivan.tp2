@@ -4,7 +4,7 @@ AUTHOR ~Valerio Bigiani (The Bigg) and Giuseppe - thebigg@spellholdstudios.net~
 AUTO_TRA ~stivan/tra/english~
 AUTO_TRA ~stivan/tra/%s~
 
-VERSION ~alpha something~
+VERSION ~Stivan il Cacciatore, versione alpha qualcosa~
 README ~stivan/readme-%LANGUAGE%.html~ ~stivan/readme.html~
 
 MODDER SETUP_TRA NONE
