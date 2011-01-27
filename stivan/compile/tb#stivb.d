@@ -344,68 +344,71 @@ See("Edwin")
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 Global("tb#StivanEdwinScroll","GLOBAL",1)
 CombatCounter(0)
-Global("tb#StivanEdwin","GLOBAL",1)~ THEN TB#STIVB stivan-edwin-2
+Global("tb#StivanEdwin","GLOBAL",1)~ THEN TB#STIVJ stivan-edwin-2
 @147
-DO ~SetGlobal("tb#StivanEdwin","GLOBAL",2)~
+DO ~SetGlobal("tb#StivanEdwinScroll","GLOBAL",2)~
 = @148
-== BEDWIN @149
-== TB#STIVB @150
-== BEDWIN @151
-== TB#STIVB @152
+== EDWINJ @149
+== TB#STIVJ @150
+== EDWINJ @151
+== TB#STIVJ @152
 END
-IF ~~ THEN REPLY @153 EXTERN BEDWIN StivanEdwin1
-IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY @154 EXTERN BEDWIN StivanEdwin2
-IF ~~ THEN REPLY @155 EXTERN TB#STIVB StivanEdwin3
-IF ~~ THEN REPLY @156 EXTERN BEDWIN StivanEdwin1
+IF ~~ THEN REPLY @153 EXTERN EDWINJ StivanEdwin1
+IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY @154 EXTERN EDWINJ StivanEdwin2
+IF ~~ THEN REPLY @155 EXTERN TB#STIVJ StivanEdwin3
+IF ~~ THEN REPLY @156 EXTERN EDWINJ StivanEdwin1
 
-APPEND BEDWIN
+APPEND EDWINJ
 IF ~~ StivanEdwin1
 SAY @157
-IF ~~ THEN EXTERN BEDWIN StivanEdwin5
+IF ~~ THEN EXTERN EDWINJ StivanEdwin5
 END 
 END
 
 CHAIN
-IF ~~ THEN BEDWIN StivanEdwin2
+IF ~~ THEN EDWINJ StivanEdwin2
 @158 
 = @159
-== TB#STIVB @160
-END BEDWIN StivanEdwin5
+== TB#STIVJ @160
+END EDWINJ StivanEdwin5
 
-APPEND TB#STIVB
+APPEND TB#STIVJ
 IF ~~ StivanEdwin3
 SAY @161
 = @160
-IF ~~ THEN EXTERN BEDWIN StivanEdwin5
+IF ~~ THEN EXTERN EDWINJ StivanEdwin5
 END
 END
 
-CHAIN BEDWIN StivanEdwin5
+CHAIN EDWINJ StivanEdwin5
 @162
-== BEDWIN IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN @163
+== EDWINJ IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN @163
 = @164
-== TB#STIVB @165
-== BEDWIN @166
-== TB#STIVB @167
-== BEDWIN @168
-== TB#STIVB @169
-== BEDWIN @170
-== TB#STIVB @171
-== BEDWIN @172
-== TB#STIVB @173 
-DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",1)~
+== TB#STIVJ @165
+== EDWINJ @166
+== TB#STIVJ @167
+== EDWINJ @168
+== TB#STIVJ @169
+== EDWINJ @170
+== TB#STIVJ @171
+== EDWINJ @172
+DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",1) StartCutSceneMode() StartCutScene("tb#ssus1")~
 EXIT
 
 BEGIN TB#SSUS
+IF ~!Global("tb#StivanSusanScene","GLOBAL",2)~ THEN 0
+SAY @703
+IF ~~ THEN EXIT
+END
 
 CHAIN IF ~Global("TB#StivanSusanScene","GLOBAL",2)~ THEN TB#SSUS tb#sus
 @174
 = @175
-== TB#STIVB @176
-== BEDWIN @177
+== TB#STIVJ @176
+== EDWINJ @177
 == TB#SSUS @178
-== BEDWIN @179
-DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",3)~
+== EDWINJ @179
+DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",3) StartCutSceneMode() StartCutScene("tb#ssus2")~
 EXIT
 
 CHAIN IF ~Global("TB#StivanSusanScene","GLOBAL",4)~ THEN EDWINJ susan-finale

@@ -344,68 +344,71 @@ See("Edwin")
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 Global("tb#StivanEdwinScroll","GLOBAL",1)
 CombatCounter(0)
-Global("tb#StivanEdwin","GLOBAL",1)~ THEN TB#STIVB stivan-edwin-2
+Global("tb#StivanEdwin","GLOBAL",1)~ THEN TB#STIVJ stivan-edwin-2
 ~Uhm... Dove diavolo ha messo quella pergamena? E' la quinta volta che frugo nel suo zaino, ma non sono ancora riuscito a trovarla...~
-DO ~SetGlobal("tb#StivanEdwin","GLOBAL",2)~
+DO ~SetGlobal("tb#StivanEdwinScroll","GLOBAL",2)~
 = ~Uh? E questo cos'è? Potrei giurare che la volta scorsa non -- *EEKKK*!~
-== BEDWIN ~Persino una banale trappola per topi può essere estremamente efficace contro certi ficcanaso.~
-== TB#STIVB ~Da... Dannazione a te, stregone! Guarda com'è gonfia la mia mano!~
-== BEDWIN ~Osa rovistare ancora una volta tra i miei averi, halfling, e ti assicuro che troverai ben altro genere di sorprese.~
-== TB#STIVB ~(Urla) <CHARNAME>, mi appello a te! Dal momento che la pergamena appartiene a questo gruppo, ho il diritto di poterla consultare a mio piacimento!~
+== EDWINJ ~Persino una banale trappola per topi può essere estremamente efficace contro certi ficcanaso.~
+== TB#STIVJ ~Da... Dannazione a te, stregone! Guarda com'è gonfia la mia mano!~
+== EDWINJ ~Osa rovistare ancora una volta tra i miei averi, halfling, e ti assicuro che troverai ben altro genere di sorprese.~
+== TB#STIVJ ~(Urla) <CHARNAME>, mi appello a te! Dal momento che la pergamena appartiene a questo gruppo, ho il diritto di poterla consultare a mio piacimento!~
 END
-IF ~~ THEN REPLY ~Stivan ha ragione, Edwin. Tira fuori il maltolto.~ EXTERN BEDWIN StivanEdwin1
-IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY ~Anch'io sono interessata a quell'artefatto, Edwin. Fà la brava zucchina e mostracela.~ EXTERN BEDWIN StivanEdwin2
-IF ~~ THEN REPLY ~Un'obiezione interessante, Stivan. Sbaglio o ti ricordi di far parte di questo gruppo soltanto quando ti fa comodo?~ EXTERN TB#STIVB StivanEdwin3
-IF ~~ THEN REPLY ~Non voglio essere coinvolto in questioni che non mi riguardano. Sbrigatevela da soli.~ EXTERN BEDWIN StivanEdwin1
+IF ~~ THEN REPLY ~Stivan ha ragione, Edwin. Tira fuori il maltolto.~ EXTERN EDWINJ StivanEdwin1
+IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY ~Anch'io sono interessata a quell'artefatto, Edwin. Fà la brava zucchina e mostracela.~ EXTERN EDWINJ StivanEdwin2
+IF ~~ THEN REPLY ~Un'obiezione interessante, Stivan. Sbaglio o ti ricordi di far parte di questo gruppo soltanto quando ti fa comodo?~ EXTERN TB#STIVJ StivanEdwin3
+IF ~~ THEN REPLY ~Non voglio essere coinvolto in questioni che non mi riguardano. Sbrigatevela da soli.~ EXTERN EDWINJ StivanEdwin1
 
-APPEND BEDWIN
+APPEND EDWINJ
 IF ~~ StivanEdwin1
 SAY ~No! Non permetterò che una stupida scimmia metta le mani sulla mia pergamena!~
-IF ~~ THEN EXTERN BEDWIN StivanEdwin5
+IF ~~ THEN EXTERN EDWINJ StivanEdwin5
 END 
 END
 
 CHAIN
-IF ~~ THEN BEDWIN StivanEdwin2
+IF ~~ THEN EDWINJ StivanEdwin2
 ~Zu... Zucchina?~ 
 = ~Stupida donna, non hai ancora capito che non sono il tuo ortaggio?!~
-== TB#STIVB ~Non divaghiamo! Edwin, tira fuori quella pergamena!~
-END BEDWIN StivanEdwin5
+== TB#STIVJ ~Non divaghiamo! Edwin, tira fuori quella pergamena!~
+END EDWINJ StivanEdwin5
 
-APPEND TB#STIVB
+APPEND TB#STIVJ
 IF ~~ StivanEdwin3
 SAY ~Ehm... Ecco, io...~
 = ~Non divaghiamo! Edwin, tira fuori quella pergamena!~
-IF ~~ THEN EXTERN BEDWIN StivanEdwin5
+IF ~~ THEN EXTERN EDWINJ StivanEdwin5
 END
 END
 
-CHAIN BEDWIN StivanEdwin5
+CHAIN EDWINJ StivanEdwin5
 ~Fruga nel mio zaino quanto vuoi, patetica creatura. Non la troverai *mai*. (Per motivi più che ovvi, oserei dire. Solo un genio come me poteva pensare di nasconderla nelle mutande).~
-== BEDWIN IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN ~(Sei proprio un figo, Edwin. Guarda l'espressione di <CHARNAME>. Bocca spalancata, occhi sgranati... Persino un idiota capirebbe che questi sono chiari segnali dell'ammirazione sconfinata che prova per me).~
+== EDWINJ IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN ~(Sei proprio un figo, Edwin. Guarda l'espressione di <CHARNAME>. Bocca spalancata, occhi sgranati... Persino un idiota capirebbe che questi sono chiari segnali dell'ammirazione sconfinata che prova per me).~
 = ~(... Beh, ora potrebbe anche chiudere la bocca. Sembra una deficiente impalata in quel modo).~
-== TB#STIVB ~...~
-== BEDWIN ~... Ebbene? Perchè mi stai fissando con quell'espressione? Gli ingranaggi del tuo cervello si sono forse incastrati?~
-== TB#STIVB ~Heh. E' proprio vero che bisogna sempre cercare dove meno te l'aspetti.~
-== BEDWIN ~Per... Perchè ti stai avvicinando? Allontanati!~
-== TB#STIVB ~Stà un pò fermo, Edwin...~
-== BEDWIN ~Cosa... Cosa *diavolo* stai facendo?! Giù le mani, brutto porco! Non toccarmi! Non toccare il mio... No! NO! NOOOOO!~
-== TB#STIVB ~Yeah! Finalmente è mia!!~
-== BEDWIN ~NON OSARE...!!!~
-== TB#STIVB ~Facio, Voco, Ferre!~ [  CAS_PM3M  ]  
-DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",1)~
+== TB#STIVJ ~...~
+== EDWINJ ~... Ebbene? Perchè mi stai fissando con quell'espressione? Gli ingranaggi del tuo cervello si sono forse incastrati?~
+== TB#STIVJ ~Heh. E' proprio vero che bisogna sempre cercare dove meno te l'aspetti.~
+== EDWINJ ~Per... Perchè ti stai avvicinando? Allontanati!~
+== TB#STIVJ ~Stà un pò fermo, Edwin...~
+== EDWINJ ~Cosa... Cosa *diavolo* stai facendo?! Giù le mani, brutto porco! Non toccarmi! Non toccare il mio... No! NO! NOOOOO!~
+== TB#STIVJ ~Yeah! Finalmente è mia!!~
+== EDWINJ ~NON OSARE...!!!~
+DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",1) StartCutSceneMode() StartCutScene("tb#ssus1")~
 EXIT
 
 BEGIN TB#SSUS
+IF ~!Global("tb#StivanSusanScene","GLOBAL",2)~ THEN 0
+SAY ~*Squeak*!~ [ GAM_48 ] 
+IF ~~ THEN EXIT
+END
 
 CHAIN IF ~Global("TB#StivanSusanScene","GLOBAL",2)~ THEN TB#SSUS tb#sus
 ~... mi devi dare...~
 = ~Uh? Dove... Dove sono?~
-== TB#STIVB ~Wow! E tu chi saresti?~
-== BEDWIN ~E' lei! E' la prostituta dei Moli!!~
+== TB#STIVJ ~Wow! E tu chi saresti?~
+== EDWINJ ~E' lei! E' la prostituta dei Moli!!~
 == TB#SSUS ~Ehi, bellezza. Vuoi dare un'occhiata alle mie tettine?~
-== BEDWIN ~Scordatelo! Stai per scoprire cosa succede a chi parla troppo!~
-DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",3)~
+== EDWINJ ~Scordatelo! Stai per scoprire cosa succede a chi parla troppo!~
+DO ~SetGlobal("TB#StivanSusanScene","GLOBAL",3) StartCutSceneMode() StartCutScene("tb#ssus2")~
 EXIT
 
 CHAIN IF ~Global("TB#StivanSusanScene","GLOBAL",4)~ THEN EDWINJ susan-finale
@@ -1253,7 +1256,7 @@ See("tb#stiv")
 CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",5)
 HPGT("tb#Stiv",20)~ THEN BIMOEN2 stivanimoen6
-~Ripeti con me! Incertus... Pulcher... Imperium!~ [  CAS_PM6F  ]  
+~Ripeti con me! Incertus... Pulcher... Imperium!~ [ CAS_PM6F ]  
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",6)~
 BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA ~Imoen! Gli hai fatto lanciare Dardo Incantato su se stesso! Sei impazzita?~
@@ -1262,7 +1265,7 @@ BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA ~Non distrarti, Stivan! Potresti causausare un'esplosione se non finisci propriamente l'incantesimo!~
 == TB#STIVB ~(Gasp!)~
 END
-== TB#STIVB ~Incertus... Pulcher... Imperium!~ [  CAS_PM6M  ]  
+== TB#STIVB ~Incertus... Pulcher... Imperium!~ [ CAS_PM6M ]  
 EXIT
 
 CHAIN IF ~Global("tb#StivanImoen","GLOBAL",7)~ THEN TB#STIVJ stivanimoen6-a
@@ -1312,7 +1315,7 @@ See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",9)~ THEN TB#STIVB stivanimoen8
-~Vediamo se ho capito. Manus... Potentis... Paro!~ [  CAS_PM2M  ]  
+~Vediamo se ho capito. Manus... Potentis... Paro!~ [ CAS_PM2M ]  
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",10)~
 == BIMOEN2 ~Non ci siamo proprio! Se non stai attento mi diventi un rospo!~
 == TB#STIVB ~Quasi quasi... le fiabe finiscono sempre bene per i rospi quando incontrano la loro principessa.~
@@ -1321,8 +1324,8 @@ BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA ~Temo di dover rovinare le tue illusioni, Stivan.~
 == TB#STIVB ~Che sbadato! Mi dimentico sempre che voi non siete una principessa!~
 END
-== BIMOEN2 ~Avanti, zuccone, riprova! Veritas... Credo... Oculos!~ [  CAS_PM1F  ]  
-== TB#STIVB ~Va bene! Veritas... Credo... Oculos!~ [  CAS_PM1M  ]  
+== BIMOEN2 ~Avanti, zuccone, riprova! Veritas... Credo... Oculos!~ [ CAS_PM1F ]  
+== TB#STIVB ~Va bene! Veritas... Credo... Oculos!~ [ CAS_PM1M ]  
 DO ~ApplySpell("tb#stiv",WIZARD_INVISIBILITY)~
 == TB#STIVB ~Aiuto! Non mi vedo più le mani!~
 DO ~AddSpecialAbility("spin118")~
@@ -1366,7 +1369,7 @@ CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",11)
 HaveSpellRES("spin118")
 Global("AnomenIsNotKnight","GLOBAL",0)~ THEN TB#STIVB stivanimoen10
-~Veritas... Credo... Oculos!~ [  CAS_PM1M  ]  
+~Veritas... Credo... Oculos!~ [ CAS_PM1M ]  
 = ~Heh, sono un genio! Questo è il crimine perfetto!~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",12) SpellRES("spin118","tb#stiv")~
 == BIMOEN2 ~Non ci proverei se fossi in te. L'invisibilità termina se tocchi qualcuno.~

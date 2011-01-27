@@ -327,33 +327,22 @@ THEN
 END
 
 IF
-	Global("TB#StivanSusanScene","GLOBAL",1)
+  GlobalTimerExpired("tb#StivanEdwinTimer","GLOBAL")
+  InParty("Edwin")
+  See("Edwin")
+  !StateCheck("Edwin",CD_STATE_NOTVALID)
+  InParty(Myself)
+  !StateCheck(Myself,CD_STATE_NOTVALID)
+  Global("tb#StivanEdwinScroll","GLOBAL",1)
+  CombatCounter(0)
+  Global("tb#StivanEdwin","GLOBAL",1)
+	!RealGlobalTimerNotExpired("tb#StivanNoSpam","GLOBAL")
 THEN
-	RESPONSE #100
-		StartCutSceneMode()
-		SetGlobal("TB#StivanSusanScene","GLOBAL",2)
-		SetSequence(SEQ_CAST)
-		Wait(1)
-		CreateCreature("tb#ssus",[-1.-1],0)
-		ActionOverride("tb#stiv",ReallyForceSpell("tb#ssus",FLASHY_1))
-		SetSequence(SEQ_READY)
-		Wait(1)
-		ActionOverride("tb#ssus",StartDialogueNoSet("Edwin"))
-END
-
-IF
-	Global("TB#StivanSusanScene","GLOBAL",3)
-THEN
-	RESPONSE #100
-		StartCutSceneMode()
-		SetGlobal("TB#StivanSusanScene","GLOBAL",4)
-		ActionOverride("Edwin",SetSequence(SEQ_CAST))
-		Wait(1)
-		ActionOverride("tb#stiv",ReallyForceSpell("tb#ssus",FLASHY_1))
-		ActionOverride("tb#ssus",Polymorph(RAT))
-		ActionOverride("Edwin",SetSequence(SEQ_READY))
-		Wait(1)
-		ActionOverride("Edwin",StartDialogueNoSet("tb#stiv"))
+	RESPONSE #80
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",20)
+	RESPONSE #20
+		RealSetGlobalTimer("tb#StivanNoSpam","GLOBAL",200)
+    StartDialogueNoSet("Edwin")
 END
 
 IF

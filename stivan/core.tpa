@@ -30,7 +30,6 @@ COPY_EXISTING ~%script%.bcs~ ~override/tb#sdr1.bcs~
 COPY ~stivan/copy~ ~override~
 
 
-
 // Add map notes
 
 COPY_EXISTING ~ar0500.are~ ~override~
@@ -57,7 +56,7 @@ COPY_EXISTING ~uddrow35.cre~ ~override/tb#sdr1.cre~
 COPY_EXISTING ~wench1.cre~ ~override/tb#ssus.cre~
 	SAY NAME1 @58
 	SAY NAME2 @58
-	WRITE_ASCII 0x248 ~NONE~ #8 // override script
+	WRITE_ASCII 0x248 ~shoutdlg~ #8 // override script
 	WRITE_ASCII 0x250 ~NONE~ #8 // class script
 	WRITE_ASCII 0x258 ~NONE~ #8 // race script
 	WRITE_ASCII 0x260 ~NONE~ #8 // general script
@@ -100,7 +99,9 @@ COPY_EXISTING ~sword01.cre~ ~override/tb#slil.cre~
 	WRITE_ASCII 0x280 ~tb#slil~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#slil~ #8 // dialogue
 	
-
+COPY_EXISTING ~rat.cre~ ~override/tb#srat.cre~
+  WRITE_ASCII 0x248 tb#stdes #8
+  
 COPY_EXISTING ~stivan/cre/tb#sskm.cre~ ~override/tb#sskm.cre~
 	SAY NAME1 @64
 	SAY NAME2 @64
@@ -275,7 +276,45 @@ COPY ~stivan/spl/tb#salc.spl~ ~override~
 	SAY 0x9e @83
 	WRITE_SHORT   0x098 ~tb#salc~
 
+COPY_EXISTING ~spwi905.spl~ ~override/tb#ssus1.spl~
+  READ_LONG 0x64 "headoffset" ELSE 0
+  READ_SHORT 0x68 "headcount" ELSE 0
+  READ_LONG 0x6a "effectsoffset" ELSE 0
+  WHILE ("%headcount%" > 0) BEGIN
+    WRITE_SHORT ("%headoffset%" + (("%headcount%" - 1 ) * 0x28) + 0x12) 9
+    READ_SHORT ("%headoffset%" + (("%headcount%" - 1 ) * 0x28) + 0x1e) "count" ELSE 0
+    READ_SHORT ("%headoffset%" + (("%headcount%" - 1 ) * 0x28) + 0x20) "effectsindex" ELSE 0
+    WHILE ("%count%" > 0) BEGIN
+      READ_SHORT ("%effectsoffset%" + ("%effectsindex%" + "%count%" - 1 )* 0x30) OPCode ELSE 0
+      PATCH_IF OPCode = 177 THEN BEGIN
+        WRITE_ASCII ("%effectsoffset%" + ("%effectsindex%" + "%count%" - 1 )* 0x30 + 0x14) ~TB#SSUS1~ #8
+      END
+      SET "count" = ("%count%" -1)
+    END
+    SET "headcount" = "%headcount%" - 1
+  END  
+  
+COPY_EXISTING ~spwi415.spl~ ~override/tb#ssus2.spl~
+  READ_LONG 0x64 "headoffset" ELSE 0
+  READ_SHORT 0x68 "headcount" ELSE 0
+  READ_LONG 0x6a "effectsoffset" ELSE 0
+  WHILE ("%headcount%" > 0) BEGIN
+    READ_SHORT ("%headoffset%" + (("%headcount%" - 1 ) * 0x28) + 0x1e) "count" ELSE 0
+    READ_SHORT ("%headoffset%" + (("%headcount%" - 1 ) * 0x28) + 0x20) "effectsindex" ELSE 0
+    WHILE ("%count%" > 0) BEGIN
+      WRITE_BYTE ("%effectsoffset%" + ("%effectsindex%" + "%count%" - 1 )* 0x30 + 0x0d) 0
+      WRITE_BYTE ("%effectsoffset%" + ("%effectsindex%" + "%count%" - 1 )* 0x30 + 0x24) 0
+      SET "count" = ("%count%" -1)
+    END
+    SET "headcount" = "%headcount%" - 1
+  END
 
+
+// Copy EFF files
+
+COPY_EXISTING ~spgate.eff~ ~override/tb#ssus1.eff~
+  WRITE_ASCII 0x30 tb#srat #8
+  
 
 // Patch 2DA files	
 	

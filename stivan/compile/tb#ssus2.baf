@@ -1,0 +1,10 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+    CutSceneID("Edwin")
+    SetGlobal("TB#StivanSusanScene","GLOBAL",4)
+		ForceSpellRES("tb#ssus2","tb#ssus")
+    Wait(5)
+		StartDialogueNoSet("Edwin")
+END

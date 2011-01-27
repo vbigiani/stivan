@@ -4,6 +4,15 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("tb#StivanEdwinScroll","GLOBAL",1)
+    SetGlobalTimer("tb#StivanEdwinTimer","GLOBAL",2400)
+END
+
+IF
+  Gender(Myself,FEMALE)
+	Global("tb#StivanEdwinScroll","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tb#StivanEdwinScroll","GLOBAL",2)
 END
 
 IF
