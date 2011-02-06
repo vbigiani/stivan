@@ -317,13 +317,12 @@ COPY_EXISTING ~spgate.eff~ ~override/tb#ssus1.eff~
   
 
 // Patch 2DA files	
-	
-APPEND ~tooltip.2da~ ~tb#spoo POO_BLIND POO_EXPLOSION -1~
-	UNLESS ~tb#spoo~
 
-COPY_EXISTING ~tooltip.2da~ ~override~
-	REPLACE ~POO_BLIND~ @84
-	REPLACE ~POO_EXPLOSION~ @83
+INCLUDE ~stivan/lib/tooltip.tpa~
+LAF ~ADD_ITEM_TOOLTIPS~
+  STR_VAR item     = ~tb#spoo~
+          tooltips = ~@84 @83~
+END
 
 APPEND ~pdialog.2da~
 ~tb#stiv     tb#stivP            tb#stivJ           tb#stivD~
@@ -398,11 +397,9 @@ ACTION_IF GAME_IS ~BGT ToB~ && 0 THEN BEGIN
 	
 	// Patch 2DA files
 	
-	
-	APPEND ~tooltip.2da~ ~tb#spoo2 POO_EXPLOSION  -1-1~
-		UNLESS ~tb#spoo2~
-
-	COPY_EXISTING ~tooltip.2da~ ~override~
-		REPLACE ~POO_EXPLOSION~ @83
+  LAF ~ADD_ITEM_TOOLTIPS~
+    STR_VAR item     = ~tb#spoo2~
+            tooltips = ~@83~
+  END
 
 END
