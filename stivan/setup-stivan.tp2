@@ -18,5 +18,11 @@ LANGUAGE ~Italian~
 	 ~stivan/tra/Italian/setup.tra~
 
 BEGIN @88
+SUBCOMPONENT @89
 INCLUDE ~stivan/core.tpa~
-COPY ~stivan/portraits/nix~ ~override~
+COPY ~stivan/portraits/nix_scars~ ~override~
+
+BEGIN @90
+SUBCOMPONENT @89
+INCLUDE ~stivan/core.tpa~
+COPY ~stivan/portraits/nix_bloody~ ~override~
