@@ -1,0 +1,7 @@
+IF
+  IsValidForPartyDialog("tb#stiv")
+  Global("tb#ShadowsThievesJobs","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartDialogueNoSet("tb#stiv")
+END

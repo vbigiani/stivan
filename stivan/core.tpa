@@ -23,7 +23,21 @@ COPY_EXISTING ~%script%.bcs~ ~override/tb#sdr1.bcs~
 		~%script%.bcs~ ~override/tb#sdr2.bcs~
 		~%script%.bcs~ ~override/tb#sdr3.bcs~
 
+  
+// Make sure that referenced scripts exist
 
+COPY_EXISTING ~arnman04.cre~ ~override~
+  READ_ASCII SCRIPT_OVERRIDE default_script
+  PATCH_IF ~%default_script%~ STRING_COMPARE_CASE ~None~ &&
+      ~%default_script%~ STRING_COMPARE_CASE ~~ &&
+      ~%default_script%~ STRING_COMPARE_CASE ~arnman04~ THEN BEGIN
+    PATCH_FAIL ~arnman04.cre has %default_script% as override script.~
+  END
+  WRITE_ASCII SCRIPT_OVERRIDE ~arnman04~ #8
+  ADD_CRE_ITEM ~tb#spin~ #1 #0 #0 ~none~ ~INV~
+
+  
+  
 
 // copy static resources
 
@@ -245,6 +259,10 @@ COPY_EXISTING ~misc4w.itm~ ~override/tb#sdocu.itm~
 	SAY NAME2 @78
 	SAY IDENTIFIED_DESC @79
 	SAY UNIDENTIFIED_DESC @79
+
+COPY_EXISTING ~compon11.itm~ ~override/tb#spin.itm~  
+  SAY NAME1 ~Spilla di Missy~
+  SAY IDENTIFIED_DESC ~Una semplice spilla.~
 	
 COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
 	SAY NAME1 @80
