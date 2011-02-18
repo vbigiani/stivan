@@ -26,7 +26,7 @@ CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv") Global("tb#ShadowsThievesJ
 DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",2)~
 EXIT
 
-CHAIN IF WEIGHT #-1 ~IsValidForPartyDialog("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",2) GlobalGT("aranjob","GLOBAL",0)~ THEN arnman04 stivanMitsu2
+CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",2) GlobalGT("aranjob","GLOBAL",0)~ THEN arnman04 stivanMitsu2
 ~Eccoti qui, ragazzino. Sei ancora sicuro di voler iniziare il tuo apprendistato sotto la guida dell'inafferrabile Mitsu?~
 == arnman03 ~Ci provi fino all'ultimo, eh?~
 == arnman04 ~Beh, tentar non nuoce.~
@@ -69,8 +69,22 @@ IF ~~ THEN UNSOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
 
 Una Ladra Tenebrosa di nome Mitsu ha offerto a Stivan la possibilità di affermarsi all'interno della gilda svolgendo alcuni incarichi per conto suo. Prima però è necessario che l'halfling superi una sorta di rito iniziatico che prevede il furto della spilla di Missy la guardarobiera.~ EXIT
 
+CHAIN IF WEIGHT #-1 ~NumTimesTalkedToGT(2) Global("tb#ShadowsThievesJobs","GLOBAL",3) !PartyHasItem("tb#spin") IsGabber("tb#stiv")~ THEN ARNGRL01 firstjob
+~Ancora qui? QUALCUNO ha una GIACCA da affidarmi?~
+== tb#stivj ~Ora che ci penso ho un po' caldo. Tieni la mia tunica!~
+== ARNGRL01 ~Ewww! Cosa sono queste macche di cui è piena?~
+== tb#stivj ~Oh, solo un po' di cacca di gabbiano, niente di cui preoccuparsi.~
+== ARNGRL01 ~Cosa...~
+== tb#stivj ~Ora che ci penso, sono solito dormire per strada, magari si è impregnata del piscio di qualche cane randagio.~
+== ARNGRL01 ~Ewww, stà zitto! Mi stai facendo venire venendo la nausea...~
+== tb#stivj ~Oh, che sbadato! Ecco cosa sono quelle macchie! Un anno fa un mezzorco ci ha vomitato sopra uscendo dal Diadema di Rame, e non ho ancora fatto in tempo a lavarla.~
+== ARNGRL01 ~Uurgkh!~
+== tb#stivj ~Ecco, proprio come adesso! (Yoink, presa!)~
+END
+IF ~~ THEN DO ~CreateItem("tb#spin",1,0,0)~ EXIT
+
 APPEND arnman04
-  IF ~IsValidForPartyDialog("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",3)~ THEN firstjob2
+  IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",3)~ THEN firstjob2
     SAY ~Sei venuto a gettare la spugna, recluta?~
     IF ~PartyHasItem("tb#spin")~ THEN DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",4) TakePartyItem("tb#spin") DestroyItem("tb#spin") EraseJournalEntry(%Stivan e i Ladri Tenebrosi
 
@@ -96,7 +110,7 @@ END
 IF ~Dead("mook")~ THEN EXTERN arnman04 secondJob1-1
 IF ~!Dead("mook")~ THEN EXIT
 
-CHAIN IF WEIGHT #-1 ~Dead("mook") Global("tb#shadowsThievesJobs","GLOBAL",4)~ THEN arnman04 secondJob
+CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Dead("mook") Global("tb#shadowsThievesJobs","GLOBAL",4)~ THEN arnman04 secondJob
 ~Dannazione. E' un bene che il carico sia stato recuperato, ma la perdita di Mook non era prevista.~
 == arnman03 ~Già. Era una tipa in gamba. Ho imparato un sacco di cose da lei.~
 == arnman04 ~Ascoltami bene, Cacciatore. Sto per assegnarti la tua prima missione.~
@@ -131,7 +145,7 @@ IF ~~ THEN SOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
 
 Mitsu ha esposto a Stivan i dettagli della sua prima missione, ma ho dovuto declinare l'offerta per non perdere tempo. L'halfling si è arrabbiato con la ladra, ma ha riconosciuto le mie priorità e non ha protestato più di tanto.~ DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",101)~ EXIT
 
-CHAIN IF WEIGHT #-1 ~Global("tb#shadowsThievesJobs","GLOBAL",5) !Dead("tb#svam1")~ THEN VULOVA vulova-1
+CHAIN IF WEIGHT #-1 ~InParty("tb#stiv") InMyArea("tb#stiv") Global("tb#shadowsThievesJobs","GLOBAL",5) !Dead("tb#svam1")~ THEN VULOVA vulova-1
 ~Chi siete? Perchè siete entrati in casa mia?~
 == tb#stivj ~Piacere di conoscervi, signor Vulova. Io sono Stivan, e questi sono i miei amici. Siamo stati mandati dai Ladri Tenebrosi per proteggervi.~
 == VULOVA ~Sapevo che sarebbero giunti dei rinforzi, ma come ho già detto ai tuoi superiori, i miei uomini sono più che sufficienti.~
@@ -142,7 +156,7 @@ END
 IF ~~ THEN DO ~CreateCreatureObject("vamflf01","Vulova",1,0,0) CreateCreatureObject("tb#svam1","Vulova",1,0,0) CreateCreatureObject("vamflm01","Vulova",1,0,0)~ EXIT
 
 APPEND Vulova
-  IF WEIGHT #-1 ~Dead("tb#svam1")~ THEN vulova-2
+  IF WEIGHT #-1 ~Dead("tb#svam1") CombatCounter(0)~ THEN vulova-2
   SAY ~Per... Per gli dei! Io... Io...~
   IF ~~ THEN REPLY ~Tutto a posto, vecchio? Sei rimasto ferito?~ GOTO vulova-3
   END
@@ -155,7 +169,7 @@ APPEND Vulova
   END
 END
 
-CHAIN IF WEIGHT #-1 ~Global("tb#ShadowsThievesJobs","GLOBAL",6)~ THEN arnman04 SecondJob4
+CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",6)~ THEN arnman04 SecondJob4
 ~Sei tornato. Cos'hai da riferire?~
 == tb#stivj ~La gilda rivale ha mandato un bel trio di vampiri per far secco Vulova!~
 == arnman03 ~Per Mask! Vampiri?!~

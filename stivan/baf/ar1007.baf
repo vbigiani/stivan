@@ -1,5 +1,7 @@
 IF
-	Global("tbShadowsThievesJobs","GLOBAL",5)
+  InParty("tb#stiv")
+  InMyArea("tb#stiv")
+	Global("tb#ShadowsThievesJobs","GLOBAL",5)
 	Global("VulovaSpawn","AR1007",0)
 THEN
 	RESPONSE #100
@@ -11,9 +13,10 @@ END
 
 IF
   Dead("tb#svam1")
+  CombatCounter(0)
 THEN
   RESPONSE #100
     ActionOverride("vulfgt01",EscapeArea())
     ActionOverride("vulfgt02",EscapeArea())
-    ActionOverride("Vulova",StartDialogueNoSet("tb#stiv"))
+    ActionOverride("Vulova",StartDialogueNoSet(Myself))
 END

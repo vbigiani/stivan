@@ -3,5 +3,6 @@ IF
   Global("tb#ShadowsThievesJobs","GLOBAL",1)
 THEN
   RESPONSE #100
-    StartDialogueNoSet("tb#stiv")
+    SetNumTimesTalkedTo(1)
+    StartDialogueNoSet(Myself)
 END

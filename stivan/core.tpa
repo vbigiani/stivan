@@ -37,7 +37,6 @@ COPY_EXISTING ~arnman04.cre~ ~override~
   ADD_CRE_ITEM ~tb#spin~ #1 #0 #0 ~none~ ~INV~
 
   
-  
 
 // copy static resources
 
@@ -266,6 +265,7 @@ COPY_EXISTING ~misc4w.itm~ ~override/tb#sdocu.itm~
 
 COPY_EXISTING ~compon11.itm~ ~override/tb#spin.itm~  
   SAY NAME1 ~Spilla di Missy~
+  SAY NAME2 ~Spilla di Missy~
   SAY IDENTIFIED_DESC ~Una semplice spilla.~
 	
 COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
