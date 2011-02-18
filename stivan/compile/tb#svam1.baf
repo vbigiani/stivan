@@ -1,0 +1,7 @@
+IF
+  Global("taunt","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("taunt","LOCALS",1)
+    DisplayStringHead(Myself,61737)
+END

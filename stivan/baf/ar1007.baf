@@ -1,0 +1,19 @@
+IF
+	Global("tbShadowsThievesJobs","GLOBAL",5)
+	Global("VulovaSpawn","AR1007",0)
+THEN
+	RESPONSE #100
+		SetGlobal("VulovaSpawn","AR1007",1)
+		CreateCreature("VULOVA",[617.607],10) // Senior Armagaran Vulova
+		CreateCreature("VULFGT01",[609.518],12) // Laen Torg
+		CreateCreature("VULFGT02",[528.893],12) // Vulova Wizard
+END
+
+IF
+  Dead("tb#svam1")
+THEN
+  RESPONSE #100
+    ActionOverride("vulfgt01",EscapeArea())
+    ActionOverride("vulfgt02",EscapeArea())
+    ActionOverride("Vulova",StartDialogueNoSet("tb#stiv"))
+END

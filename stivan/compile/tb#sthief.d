@@ -6,6 +6,9 @@ tb#ShadowsThievesJobs: tracks the quests.
   3: Trying to steal Missy's pin.
   4: Stole (and reported) Missy's pin.
   5: Sent to Vulova's.
+  6: Saved Vulova.
+  7: Reported about Vulova.
+  8: Received messenger in CH6.
   100: quest failed, Stivan is angry.
   101: quest failed, Stivan is understanding.
 
@@ -69,7 +72,7 @@ Una Ladra Tenebrosa di nome Mitsu ha offerto a Stivan la possibilità di affermar
 APPEND arnman04
   IF ~IsValidForPartyDialog("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",3)~ THEN firstjob2
     SAY ~Sei venuto a gettare la spugna, recluta?~
-    IF ~PartyHasItem("tb#spin")~ THEN DO ~SetGlobal("tbShadowsThievesJobs","GLOBAL",4) TakePartyItem("tb#spin") DestroyItem("tb#spin") EraseJournalEntry(%Stivan e i Ladri Tenebrosi
+    IF ~PartyHasItem("tb#spin")~ THEN DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",4) TakePartyItem("tb#spin") DestroyItem("tb#spin") EraseJournalEntry(%Stivan e i Ladri Tenebrosi
 
 Una Ladra Tenebrosa di nome Mitsu ha offerto a Stivan la possibilità di affermarsi all'interno della gilda svolgendo alcuni incarichi per conto suo. Prima però è necessario che l'halfling superi una sorta di rito iniziatico che prevede il furto della spilla di Missy la guardarobiera.%)~ EXTERN tb#stivj firstjob2-1
     IF ~!PartyHasItem("tb#spin")~ THEN EXTERN tb#stivj firstjob2-2
@@ -93,7 +96,7 @@ END
 IF ~Dead("mook")~ THEN EXTERN arnman04 secondJob1-1
 IF ~!Dead("mook")~ THEN EXIT
 
-CHAIN IF WEIGHT #-1 ~Dead("mook") Global("tbShadowsThievesJobs","GLOBAL",4)~ THEN arnman04 secondJob
+CHAIN IF WEIGHT #-1 ~Dead("mook") Global("tb#shadowsThievesJobs","GLOBAL",4)~ THEN arnman04 secondJob
 ~Dannazione. E' un bene che il carico sia stato recuperato, ma la perdita di Mook non era prevista.~
 == arnman03 ~Già. Era una tipa in gamba. Ho imparato un sacco di cose da lei.~
 == arnman04 ~Ascoltami bene, Cacciatore. Sto per assegnarti la tua prima missione.~
@@ -114,7 +117,7 @@ CHAIN IF ~~ THEN arnman04 SecondJob1-2
 ~Sono proprio curiosa di vedere come te la caverai. La sua residenza si trova nel Quartiere Governativo. Recati lì il più presto possibile. Non indugiare, o per Armagaran sarà la fine.~
 == NALIAJ IF ~IsValidForPartyDialog("Nalia")~ THEN ~Non avrei mai immaginato che Vulova appoggiasse i Ladri Tenebrosi. Zietta non ci crederebbe neanche se li vedesse abbracciati.~
 == JAHEIRAJ IF ~IsValidForPartyDialog("Jaheira")~ THEN ~Stiamo ritardando un pò troppo il confronto con Irenicus. Salviamo quest'uomo e sbrighiamoci una volta per tutte.~
-END IF ~~ THEN UNSOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
+END IF ~~ THEN DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",5)~ UNSOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
 
 Mitsu ha assegnato a Stivan la sua prima missione: proteggere un nobile di nome Armagaran Vulova da un agguato della gilda rivale. La sua abitazione si trova nel Quartiere Governativo, ed è bene che mi ci rechi al più presto. Diversamente, potrebbe essere troppo tardi per lui.~ EXIT
 
@@ -126,55 +129,55 @@ CHAIN IF ~~ THEN arnman04 SecondJob1-3
 END
 IF ~~ THEN SOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
 
-Mitsu ha esposto a Stivan i dettagli della sua prima missione, ma ho dovuto declinare l'offerta per non perdere tempo. L'halfling si è arrabbiato con la ladra, ma ha riconosciuto le mie priorità e non ha protestato più di tanto.~ DO ~SetGlobal("tbShadowsThievesJobs","GLOBAL",101)~ EXIT
+Mitsu ha esposto a Stivan i dettagli della sua prima missione, ma ho dovuto declinare l'offerta per non perdere tempo. L'halfling si è arrabbiato con la ladra, ma ha riconosciuto le mie priorità e non ha protestato più di tanto.~ DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",101)~ EXIT
+
+CHAIN IF WEIGHT #-1 ~Global("tb#shadowsThievesJobs","GLOBAL",5) !Dead("tb#svam1")~ THEN VULOVA vulova-1
+~Chi siete? Perchè siete entrati in casa mia?~
+== tb#stivj ~Piacere di conoscervi, signor Vulova. Io sono Stivan, e questi sono i miei amici. Siamo stati mandati dai Ladri Tenebrosi per proteggervi.~
+== VULOVA ~Sapevo che sarebbero giunti dei rinforzi, ma come ho già detto ai tuoi superiori, i miei uomini sono più che sufficienti.~
+== tb#stivj ~*Ahem* Mi permetto di contraddirvi. La minaccia che incombe su di voi è grande, sapete?~
+== VULOVA ~La mia scorta saprà cavarsela. Portate comunque i miei ringraziamenti al Signore delle Ombre: il suo riguardo nei miei confronti è gradito.~
+= ~Uhm... Da dove viene questo freddo?~
+END
+IF ~~ THEN DO ~CreateCreatureObject("vamflf01","Vulova",1,0,0) CreateCreatureObject("tb#svam1","Vulova",1,0,0) CreateCreatureObject("vamflm01","Vulova",1,0,0)~ EXIT
+
+APPEND Vulova
+  IF WEIGHT #-1 ~Dead("tb#svam1")~ THEN vulova-2
+  SAY ~Per... Per gli dei! Io... Io...~
+  IF ~~ THEN REPLY ~Tutto a posto, vecchio? Sei rimasto ferito?~ GOTO vulova-3
+  END
+  
+  IF ~~ THEN vulova-3
+  SAY ~Sto... bene, per così dire. Non ho mai visto un simile orrore in tutta la mia vita... E posso assicurarti che ne ho molti, di anni.~
+  = ~Grazie per il tuo aiuto, <PRO_GIRLBOY>. Ti prego, dì ai Ladri Tenebrosi che lascio Athkatla. Ora come ora, non è più un posto sicuro per me, ma rimarrò comunque in contatto con loro.~
+  = ~Guardie, alle Porte della Città, presto.~
+  IF ~~ THEN DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",6) EscapeArea()~ EXIT
+  END
+END
+
+CHAIN IF WEIGHT #-1 ~Global("tb#ShadowsThievesJobs","GLOBAL",6)~ THEN arnman04 SecondJob4
+~Sei tornato. Cos'hai da riferire?~
+== tb#stivj ~La gilda rivale ha mandato un bel trio di vampiri per far secco Vulova!~
+== arnman03 ~Per Mask! Vampiri?!~
+== arnman04 ~Quindi le voci che ho sentito erano vere. E' sano e salvo?~
+== tb#stivj ~E' ancora tutto intero. Mi ha chiesto di dirvi che lascerà la città, e non lo biasimo di certo.~
+== arnman04 ~Sì, meglio che esca di scena per un pò. Cuchul, manda un messaggio ad Arkanis e alla sua squadra. Dì loro di tenerlo d'occhio e di accertarsi che giunga a destinazione senza problemi.~
+== arnman03 ~Sicuro.~
+== arnman04 ~E tu, Cacciatore...~
+== tb#stivj ~Dica!~
+== arnman04 ~Levati di torno per un pò. Cuchul ed io abbiamo degli affari importanti di cui occuparci, e non ho tempo da perdere con te.~
+== tb#stivj ~Ehi, e la mia nomina?~
+== arnman04 ~Verrai contattato quando avremo bisogno di te. Ora sparisci.~
+== tb#stivj ~(Snort!) Arpia!~
+== arnman04 ~Cosa hai detto?!~
+== arnman03 ~Io? Ehm... Niente. Aspetto tue notizie, Mitsu.~
+END IF ~~ THEN SOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
+
+Abbiamo salvato Armagaran Vulova da un agguato della gilda rivale. Mitsu contatterà Stivan quando avrà bisogno di lui.~ DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",7) EraseJournalEntry(%Stivan e i Ladri Tenebrosi
+
+Mitsu ha assegnato a Stivan la sua prima missione: proteggere un nobile di nome Armagaran Vulova da un agguato della gilda rivale. La sua abitazione si trova nel Quartiere Governativo, ed è bene che mi ci rechi al più presto. Diversamente, potrebbe essere troppo tardi per lui.%)~ EXIT
 
 /*
-A casa Vulova, oltre al nobile, ci sono due o tre guardie.
-
-VULOVA ~Chi siete? Perchè siete entrati in casa mia?~
-tb#stivj ~Piacere di conoscervi, signor Vulova. Io sono Stivan, e questi sono i miei amici. Siamo stati mandati dai Ladri Tenebrosi per proteggervi.~
-VULOVA ~Sapevo che sarebbero giunti dei rinforzi, ma come ho già detto ai tuoi superiori, i miei uomini sono più che sufficienti.~
-tb#stivj ~*Ahem* Mi permetto di contraddirvi. La minaccia che incombe su di voi è grande, sapete?~
-VULOVA ~La mia scorta saprà cavarsela. Portate comunque i miei ringraziamenti al Signore delle Ombre: il suo riguardo nei miei confronti è gradito.~
-= ~Uhm... Da dove viene questo freddo?~
-
-Compaiono dei pipistrelli che si trasformano in vampiri. Uno dei tre (o del numero che ritieni più opportuno) dice:
-
-~La tua esistenza finisce qui, mortale!~
-
-Segue ovviamente uno scontro. Vogliamo usare dei vampiri giovani, per non renderlo troppo difficile?
-
-Una volta uccisi, Vulova dice:
-
-VULOVA ~Per... Per gli dei! Io... Io...~
-IF ~~ THEN REPLY ~Tutto a posto, vecchio? Sei rimasto ferito?~
-
-VULOVA ~Sto... bene, per così dire. Non ho mai visto un simile orrore in tutta la mia vita... E posso assicurarti che ne ho molti, di anni.~
-= ~Grazie per il tuo aiuto, <PRO_GIRLBOY>. Ti prego, dì ai Ladri Tenebrosi che lascio Athkatla. Ora come ora, non è più un posto sicuro per me, ma rimarrò comunque in contatto con loro.~
-= ~Guardie, alle Porte della Città, presto.~
-
-Quando il gruppo riferisce il proprio successo a Mitsu, scatta questo dialogo.
-
-arnman04 ~Sei tornato. Cos'hai da riferire?~
-tb#stivj ~La gilda rivale ha mandato un bel trio di vampiri per far secco Vulova!~
-arnman03 ~Per Mask! Vampiri?!~
-arnman04 ~Quindi le voci che ho sentito erano vere. E' sano e salvo?~
-tb#stivj ~E' ancora tutto intero. Mi ha chiesto di dirvi che lascerà la città, e non lo biasimo di certo.~
-arnman04 ~Sì, meglio che esca di scena per un pò. Cuchul, manda un messaggio ad Arkanis e alla sua squadra. Dì loro di tenerlo d'occhio e di accertarsi che giunga a destinazione senza problemi.~
-arnman03 ~Sicuro.~
-arnman04 ~E tu, Cacciatore...~
-tb#stivj ~Dica!~
-arnman04 ~Levati di torno per un pò. Cuchul ed io abbiamo degli affari importanti di cui occuparci, e non ho tempo da perdere con te.~
-tb#stivj ~Ehi, e la mia nomina?~
-arnman04 ~Verrai contattato quando avremo bisogno di te. Ora sparisci.~
-tb#stivj ~(Snort!) Arpia!~
-arnman04 ~Cosa hai detto?!~
-arnman03 ~Io? Ehm... Niente. Aspetto tue notizie, Mitsu.~
-
-Stivan e i Ladri Tenebrosi
-
-Abbiamo salvato Armagaran Vulova da un agguato della gilda rivale. Mitsu contatterà Stivan quando avrà bisogno di lui.
-
 arnman03 ~Ehilà, amici! E' proprio vero che chi non viene colto con le mani nel sacco si rivede!~
 arnman04 ~Uhm? Cosa ci fai qui, Cacciatore?~
 tb#stivj ~Heh. Ti ringrazio per il benvenuto. Mi chiedevo se ti fossi finalmente decisa a darmi la nomina che merito.~
