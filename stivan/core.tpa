@@ -64,7 +64,9 @@ COPY_EXISTING ~uddrow35.cre~ ~override/tb#sdr1.cre~
 	WRITE_EVALUATED_ASCII 0x248 ~%DEST_RES%~ #8 // override script
 	WRITE_EVALUATED_ASCII 0x280 ~%DEST_RES%~ #32 // name
 	WRITE_EVALUATED_ASCII 0x2cc ~%DEST_RES%~ #8 // dialogue
-	
+
+COPY_EXISTING ~heartg1.cre~ ~override~
+  ADD_CRE_ITEM ~tb#sshi~ #1 #0 #0 ~none~ ~INV~
 	
 COPY_EXISTING ~wench1.cre~ ~override/tb#ssus.cre~
 	SAY NAME1 @58
@@ -90,6 +92,29 @@ COPY_EXISTING ~noblew1.cre~ ~override/tb#stand.cre~
 	WRITE_ASCII 0x248 ~tb#stand~ #8 // override script
 	WRITE_ASCII 0x280 ~tb#stand~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#stand~ #8 // dialogue
+  
+COPY_EXISTING
+    ~slumf1.cre~  ~override/tb#sros1.cre~
+    ~slumm1.cre~  ~override/tb#sros2.cre~
+    ~noblew1.cre~ ~override/tb#sros3.cre~
+    ~noblem1.cre~ ~override/tb#sros4.cre~
+	WRITE_ASCIIE 0x280 ~%DEST_RES%~ #32 // name
+	WRITE_ASCIIE 0x2cc ~%DEST_RES%~ #8 // dialogue
+  
+COPY_EXISTING
+    ~udogre.cre~  ~override/tb#scar.cre~
+  SAY NAME1 ~Carlino~
+  SAY NAME2 ~Carlino~
+	WRITE_ASCIIE 0x280 ~%DEST_RES%~ #32 // name
+	WRITE_ASCIIE 0x2cc ~%DEST_RES%~ #8 // dialogue
+  
+COPY_EXISTING ~trthf01.cre~ ~override/tb#sros.cre~
+  SAY NAME1 ~Rosalina~
+  SAY NAME2 ~Rosalina~
+	WRITE_ASCIIE 0x248 ~%DEST_RES%~ #8 // override script
+	WRITE_ASCIIE 0x280 ~%DEST_RES%~ #32 // name
+	WRITE_ASCIIE 0x2cc ~%DEST_RES%~ #8 // dialogue
+  ADD_CRE_ITEM ~minhp01~ #1 #0 #0 ~none~ ~RING~
 
 COPY_EXISTING ~naliames.cre~ ~override/tb#smess.cre~
 	SAY NAME1 @61
@@ -234,6 +259,24 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#splu.itm~
 	WRITE_LONG  0x4c 0 // weight
 	WRITE_ASCII 0x58 ~tb#spluc~ #8 // description icon
 
+COPY_EXISTING ~misc57.itm~ ~override/tb#sshi.itm~
+  SAY NAME1 ~Lo scudo del Mancino~
+  SAY NAME2 ~Lo scudo del Mancino~
+  SAY IDENTIFIED_DESC ~Vi era un tempo in cui Tyr non era conosciuto con l'appellativo di "Il Monco". La maggiore tra le divinità della Triade, infatti, perse la mano destra nello scontro con Kezef il Segugio del Caos, ma prima di allora era solito accompagnare la sua fatale arma con questo scudo. La leggenda vuole che Tyr l'abbia tenuto ugualmente con sè sino al Periodo dei Disordini, quando decise di donarlo ai suoi seguaci di Cormyr per essere rimasti al lui fedeli anche dopo la cecità inflittagli da Lord Ao.
+Sebbene sia sempre stato custodito dai paladini e dai chierici devoti al dio, lo scudo in questione viene utilizzato ogni anno in occasione di un rito propiziatorio al raccolto e alla lustrazione dei campi. Il culto di Tyr è infatti molto diffuso nelle campagne, dove viene chiamato dai più "Dio Pannocchia".
+
+Realizzato in acciaio pesante con venature d'argento, l'artefatto pesa così tanto da essere un impedimento più che una protezione in battaglia. Pare che sino ad oggi soltanto Tyr sia stato in grado di brandirlo, tant'è che è necessaria ben più di una persona per trasportarlo.
+
+Peso: 100~
+  SAY UNIDENTIFIED_DESC ~Vi era un tempo in cui Tyr non era conosciuto con l'appellativo di "Il Monco". La maggiore tra le divinità della Triade, infatti, perse la mano destra nello scontro con Kezef il Segugio del Caos, ma prima di allora era solito accompagnare la sua fatale arma con questo scudo. La leggenda vuole che Tyr l'abbia tenuto ugualmente con sè sino al Periodo dei Disordini, quando decise di donarlo ai suoi seguaci di Cormyr per essere rimasti al lui fedeli anche dopo la cecità inflittagli da Lord Ao.
+Sebbene sia sempre stato custodito dai paladini e dai chierici devoti al dio, lo scudo in questione viene utilizzato ogni anno in occasione di un rito propiziatorio al raccolto e alla lustrazione dei campi. Il culto di Tyr è infatti molto diffuso nelle campagne, dove viene chiamato dai più "Dio Pannocchia".
+
+Realizzato in acciaio pesante con venature d'argento, l'artefatto pesa così tanto da essere un impedimento più che una protezione in battaglia. Pare che sino ad oggi soltanto Tyr sia stato in grado di brandirlo, tant'è che è necessaria ben più di una persona per trasportarlo.
+
+Peso: 100~
+  WRITE_LONG 0x4c 100
+  WRITE_LONG 0x18 THIS | BIT0
+  
 COPY_EXISTING ~misc01.itm~ ~override/tb#srpl.itm~
 	SAY NAME1 @74
 	SAY NAME2 @74

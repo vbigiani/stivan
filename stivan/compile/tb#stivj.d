@@ -831,6 +831,11 @@ INTERJECT_COPY_TRANS EDWINJ 11 tb#StivanEdwinj-11
 @331
 END
 
+INTERJECT_COPY_TRANS2 EDWINJ 170 tb#StivanEdwinj-170
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv")~ THEN ~Heh. Sarebbe questo il tuo nuovo e inarrestabile potere, Edwin? O dovrei dire... *Miss* Edwina?~
+== EDWINJ ~Taci, microbo! Rimedierò a questo errore e poi ti sistemerò una volta per tutte!~
+END
+
 INTERJECT_COPY_TRANS YOSHJ 145 tb#StivanYoshj-145
 == TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN
 @332
@@ -2949,49 +2954,7 @@ IF ~~ THEN PC2-6
 SAY @1189
 IF ~~ THEN EXIT
 END
-
-IF ~AreaCheck("ar0903") Global("tb#stivanar0903","GLOBAL",0)~ THEN inAr0903
-SAY @1190
-= @1191
-IF ~~ THEN DO ~SetGlobal("tb#stivanar0903","GLOBAL",1)~ REPLY @1192 GOTO inAr0903-1
 END
-
-IF ~~ THEN inAr0903-3
-SAY @1193
-IF ~~ THEN EXIT
-END
-
-IF ~AreaCheck("ar0903")	Dead("Heartg1")
-	Dead("Heartg2")
-	Dead("Heartg3")
-	Dead("Heartg4")
-	Dead("Heartg5")
-	Global("tb#stivanClearedAR0903","GLOBAL",0)~ THEN ClearedAr0903
-SAY @1194
-IF ~~ THEN DO ~SetGlobal("tb#stivanClearedAR0903","GLOBAL",1)~ EXIT
-END
-END
-
-CHAIN IF ~~ THEN tb#stivj inAr0903-1
-@1195
-BRANCH ~InParty("Keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ BEGIN
-== KELDORJ @1196
-== TB#STIVJ @1197
-== KELDORJ @1198
-== TB#STIVJ @736
-END
-== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN @1199
-== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",1)~ THEN @1200
-END
-IF ~!Alignment(Player1,MASK_GOOD)~ THEN REPLY @1201 EXTERN tb#stivj inAr0903-2
-IF ~!Alignment(Player1,MASK_GOOD)~ THEN REPLY @1202 EXTERN tb#stivj inAr0903-3
-IF ~!Alignment(Player1,MASK_EVIL)~ THEN REPLY @1203 EXTERN tb#stivj inAr0903-3
-
-CHAIN IF ~~ THEN tb#stivj inAr0903-2
-@1204 DO ~SetGlobal("TempleShout0903","GLOBAL",1)~
-== KELDORJ IF ~InParty("Keldorn") !StateCheck("keldorn",CD_STATE_NOTVALID)~ THEN @1205 DO ~LeaveParty() Enemy()~
-== ANOMENJ IF ~InParty("anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) !Global("AnomenIsNotKnight","GLOBAL",1)~ THEN @1206 DO ~LeaveParty() Enemy()~
-EXIT
 
 CHAIN IF ~Dead("udbalor") Global("tb#stivanUdbalor","GLOBAL",0)~ THEN TB#STIVJ aboutUdBalor
 @1207

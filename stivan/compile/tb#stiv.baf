@@ -771,6 +771,7 @@ IF
 	InParty(Myself)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	Global("tb#stivanar0903","GLOBAL",0)
+  Global("tb#ShadowsThievesJobs","GLOBAL",9)
 	CombatCounter(0)
 	AreaCheck("ar0903")
 THEN
@@ -841,7 +842,16 @@ THEN
 		StartDialogueNoSet(Player1)
 END
 
-
+IF
+  InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+  Global("tb#ShadowsThievesJobs","GLOBAL",7)
+	CombatCounter(0)
+  Dead("c6Bodhi")
+THEN
+  RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
 
 IF
 	Global("TB#StivanImoen","GLOBAL",6)

@@ -23,3 +23,16 @@ THEN
 		CreateCreatureObject("tb#stand","Nalia",1,0,0)
 		ActionOverride("tb#stand",StartDialogueNoSet("Nalia"))
 END
+
+IF
+  Global("tb#ShadowsThievesJobs","GLOBAL",21)
+THEN
+  RESPONSE #100
+    CreateCreature("tb#sros",[2500.600],8)
+    CreateCreature("tb#scar",[2475.575],10)
+    CreateCreature("tb#sros1",[2450.600],12)
+    CreateCreature("tb#sros2",[2475.625],10)
+    CreateCreature("tb#sros3",[2525.625],6)
+    CreateCreature("tb#sros4",[2550.600],4)
+    SetGlobal("tb#ShadowsThievesJobs","GLOBAL",22)
+END

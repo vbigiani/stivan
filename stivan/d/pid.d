@@ -1,5 +1,10 @@
 APPEND tb#stivj
 
+IF ~GlobalTimerNotExpired("tb#stivanAngry","GLOBAL")~ THEN PIDAngry
+SAY ~(Stivan ti ignora quando cerchi di parlargli. Sbuffando, ti volta le spalle per immergersi nuovamente nei sui pensieri).~
+IF ~~ THEN DO ~StartCutScene("tb#sfix")~ EXIT
+END
+
 IF ~IsGabber(Player1) OR (6)
 AreaCheck("AR2900")
 AreaCheck("AR2901")
@@ -9,7 +14,7 @@ AreaCheck("AR2904")
 AreaCheck("AR2905")
 ~ THEN PIDHell
 SAY @0
-IF ~~ THEN EXIT
+IF ~~ THEN DO ~StartCutScene("tb#sfix2")~ EXIT
 END
 
 IF ~IsGabber(Player1)~ THEN BEGIN PID1
