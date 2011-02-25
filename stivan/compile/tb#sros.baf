@@ -1,0 +1,15 @@
+IF
+  See([PC])
+  NumTimesTalkedTo(0)
+THEN
+  RESPONSE #100
+    StartDialogueNoSet(LastSeenBy(Myself))
+END
+
+IF
+  HPLT(Myself,2)
+  !Global("tb#ShadowsThievesJobs","GLOBAL",23)
+THEN
+  RESPONSE #100
+    StartDialogueNoSet(LastSeenBy(Myself))
+END
