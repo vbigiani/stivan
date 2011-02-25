@@ -9,8 +9,9 @@ tb#ShadowsThievesJobs: tracks the quests.
     6: Saved Vulova.
     7: Reported about Vulova.
     8: Sent to Mitsu in CH6.
-    9: Sent to Most Holy Radiant Heart.
-   10: Killed MHRP.
+    9: 'get snoopers out'
+   10: Sent to Most Holy Radiant Heart.
+   11: Killed MHRP.
    20: Refused to kill the MHRH.
    21: Sent to Rosalina.
    22: Rosalina created.
@@ -253,7 +254,7 @@ Dal momento che non ha più ricevuto notizie da Mitsu, Stivan vorrebbe fare un sa
 END
 END
 
-CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",8)~ THEN arnman03 ThirdJob
+CHAIN IF WEIGHT #-2 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",8)~ THEN arnman03 ThirdJob
 ~Ehilà, amici! E' proprio vero che chi non viene colto con le mani nel sacco si rivede!~
 == arnman04 ~Uhm? Cosa ci fai qui, Cacciatore?~
 == tb#stivj ~Heh. Ti ringrazio per il benvenuto. Mi chiedevo se ti fossi finalmente decisa a darmi la nomina che merito.~
@@ -264,6 +265,7 @@ CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL"
 == arnman04 ~Allontana i tuoi amici, ragazzo. Qui ci sono troppe orecchie indiscrete, e non voglio che mi senta nessuno.~
 == arnman03 ~<CHARNAME> può restare. Gaelan ha detto che ci si può fidare di <PRO_HIMHER>.~
 == arnman04 ~E sia. Gli altri, fuori dai piedi.~
+DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",9)~
 BRANCH ~IsValidForPartyDialog("Yoshimo")~ BEGIN
 == arnman04 ~Aspetta. Tu puoi rimanere. Mi ispiri simpatia.~
 == YOSHJ ~La ringrazio, signorina.~
@@ -277,7 +279,7 @@ BRANCH ~IsValidForPartyDialog("Yoshimo")~ BEGIN
 END
 EXIT
 
-CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",8)
+CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",9)
 OR(3) !IsValidForPartyDialog(Player2) Name("Yoshimo",Player2) Name("tb#stiv",Player2)
 OR(3) !IsValidForPartyDialog(Player3) Name("Yoshimo",Player3) Name("tb#stiv",Player3)
 OR(3) !IsValidForPartyDialog(Player4) Name("Yoshimo",Player4) Name("tb#stiv",Player4)
@@ -293,7 +295,7 @@ OR(3) !IsValidForPartyDialog(Player6) Name("Yoshimo",Player6) Name("tb#stiv",Pla
 == arnman03 ~Quello a cui Mitsu vuole arrivare è che dobbiamo ricambiare l'offesa subita. Non possiamo permetterci altri seccatori; la gilda rivale è più che sufficiente. ~
 == arnman04 IF ~!IsValidForPartyDialog("Yoshimo")~ THEN ~Esatto, Cuchul. Ed è qui che entrate in gioco tu e il tuo amico <CHARNAME>.~
 == arnman04 IF ~IsValidForPartyDialog("Yoshimo")~ THEN ~Esatto, Cuchul. Ed è qui che entrate in gioco tu, il tuo amico <CHARNAME> e l'altro giovanotto.~
-== arnman04 ~Per alcuni giorni il Cuore Radioso ospiterà nelle proprie sale una delegazione di seguaci di Tyr proveniente da Cormyr. Pare siano giunti in città per una delle loro celebrazioni, e portano con sè un == artefatto noto come lo Scudo del Mancino.~
+== arnman04 ~Per alcuni giorni il Cuore Radioso ospiterà nelle proprie sale una delegazione di seguaci di Tyr proveniente da Cormyr. Pare siano giunti in città per una delle loro celebrazioni, e portano con sè un artefatto noto come lo Scudo del Mancino.~
 == arnman03 ~Rubarlo è impossibile. E' sorvegliato da mattina a sera, e le guardie non permettono a nessuno al di fuori dell'Ordine e della congregrazione di avvicinarvisi.~
 == arnman04 ~Ciò che ti chiediamo è un massacro, Stivan. Una chiara dimostrazione del fatto che i Ladri Tenebrosi governano la città e che nessuno deve metterci i bastoni tra le ruote. Ci stai?~
 == tb#stivj ~Tu forse non lo sai, ma mi stai dando l'opportunità che sogno da una vita!Certo che ci sto!~
@@ -313,11 +315,12 @@ END
 == arnman03 ~... Vi consiglio di andare, fratelli. La mia amica ha appena iniziato uno dei suoi monologhi in cui ci accusa di essere dei maschilisti...~
 END IF ~~ THEN UNSOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
 
-Mitsu ha affidato a Stivan una nuova missione: recuperare uno scudo sacro in mano ad una delegazione di seguaci di Tyr da poco giunta da Cormyr e ospitata dall'Ordine del Cuore Radioso. Pare che l'artefatto sia custodito in maniera così serrata da renderne impossibile il furto. Devo ancora decidere se aiutare l'halfling in questa missione o meno.~ DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",9)~
+Mitsu ha affidato a Stivan una nuova missione: recuperare uno scudo sacro in mano ad una delegazione di seguaci di Tyr da poco giunta da Cormyr e ospitata dall'Ordine del Cuore Radioso. Pare che l'artefatto sia custodito in maniera così serrata da renderne impossibile il furto. Devo ancora decidere se aiutare l'halfling in questa missione o meno.~ DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",10)~
 EXIT
 
-CHAIN IF WEIGHT #-1 ~AreaCheck("ar0903") Global("tb#stivanar0903","GLOBAL",0) Global("tb#ShadowsThievesJobs","GLOBAL",9)~ THEN tb#stivj inar0901
+CHAIN IF WEIGHT #-1 ~AreaCheck("ar0903") Global("tb#stivanar0903","GLOBAL",0) Global("tb#ShadowsThievesJobs","GLOBAL",10)~ THEN tb#stivj inar0901
 ~Questo luogo è così pieno di paladini che mi viene il voltastomaco! Bah... Pronti alla strage, <CHARNAME>?~
+DO ~SetGlobal("tb#stivanar0903","GLOBAL",1)~
 BRANCH ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ BEGIN
 == KELDORJ ~Strage? Di cosa state parlando?~
 == TB#STIVJ ~Heh. Stiamo per spedire i tuoi amichetti all'altro mondo, nonno.~
@@ -394,7 +397,7 @@ Dead("Heartg4")
 Dead("Heartg5")
 Global("tb#stivanClearedAR0903","GLOBAL",0)~ THEN tb#stivj ClearedAr0903
 ~(Pant) Ce... Ce l'abbiamo fatta!~
-DO ~SetGlobal("tb#stivanClearedAR0903","GLOBAL",1) SetGlobal("tb#ShadowsThievesJobs","GLOBAL",10)~
+DO ~SetGlobal("tb#stivanClearedAR0903","GLOBAL",1) SetGlobal("tb#ShadowsThievesJobs","GLOBAL",11)~
 BRANCH ~IsValidForPartyDialog("Korgan")~ BEGIN
 == KORGANJ ~Per i Nove Inferi! Quei fetenti avevano addosso più ferro delle miniere di Pietra di Sangue!~
 == TB#STIVJ ~... Immagino che le considerazioni a riguardo siano scontate.~
@@ -419,7 +422,7 @@ CHAIN IF ~~ THEN arnman04 FourthJob1-5
 END
 IF ~~ THEN REPLY ~Non è questo il posto dove troverai la tua strada, Stivan, ma posso assicurarti che non ti abbandonerò in un vicolo di Athkatla.~ EXTERN tb#stivj FourthJob1-6
 IF ~~ THEN REPLY ~Sarebbe questa la fiducia in te stesso che sostenevi di aver acquisito? Se tornerai ad essere povero, sarà per mancanza di determinazione, non per colpa mia!~ EXTERN tb#stivj FourthJob1-6
-IF ~~ THEN REPLY ~Non così in fretta. Cuchul, l'ultima volta hai detto che avresti fatto rapporto a Gaelan se la piccoletta avesse causato fastidi.~ EXTERN arnman04 FourthJob1-7
+IF ~~ THEN REPLY ~Non così in fretta. Cuchul, l'ultima volta hai detto che avresti fatto rapporto a Gaelan se la piccoletta avesse causato fastidi.~ EXTERN arnman03 FourthJob1-7
 IF ~~ THEN REPLY ~Andiamo, Mitsu, non fare la difficile. Perchè non ci assegni un altro incarico? Possibilmente uno che non richieda massacri come il precedente.~ EXTERN arnman04 FourthJob1-8
 
 CHAIN IF ~~ THEN tb#stivj FourthJob1-6
@@ -436,12 +439,14 @@ DO %EraseJournalEntry(~Stivan e i Ladri Tenebrosi
 Mitsu ha affidato a Stivan una nuova missione: recuperare uno scudo sacro in mano ad una delegazione di seguaci di Tyr da poco giunta da Cormyr e ospitata dall'Ordine del Cuore Radioso. Pare che l'artefatto sia custodito in maniera così serrata da renderne impossibile il furto. Devo ancora decidere se aiutare l'halfling in questa missione o meno.~) SetGlobal("tb#ShadowsThievesJobs","GLOBAL",100) SetGlobalTimer("tb#StivanAngry","GLOBAL",ONE_DAY)%
 EXIT
 
-APPEND arnman04
+APPEND arnman03
 IF ~~ THEN FourthJob1-7
 SAY ~Ehm... L'ho detto davvero?~
-IF ~~ THEN GOTO FourthJob1-9
+IF ~~ THEN EXTERN arnman04 FourthJob1-9
+END
 END
 
+APPEND arnman04
 IF ~~ THEN FourthJob1-8
 SAY ~Non penso proprio! Il fatto che tu sia il prediletto di Aran non significa che *io* debba accondiscendere ad ogni tuo capriccio!~
 IF ~~ THEN GOTO FourthJob1-9

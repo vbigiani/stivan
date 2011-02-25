@@ -578,9 +578,9 @@ THEN
 END
 
 IF
-	InParty("tb#Stiv")
-	See("tb#Stiv")
-	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+  InParty("Cernd")
+  See("Cernd")
+  !StateCheck("Cernd",CD_STATE_NOTVALID)
 	InParty(Myself)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	CombatCounter(0)
@@ -771,7 +771,7 @@ IF
 	InParty(Myself)
 	!StateCheck(Myself,CD_STATE_NOTVALID)
 	Global("tb#stivanar0903","GLOBAL",0)
-  Global("tb#ShadowsThievesJobs","GLOBAL",9)
+  Global("tb#ShadowsThievesJobs","GLOBAL",10)
 	CombatCounter(0)
 	AreaCheck("ar0903")
 THEN

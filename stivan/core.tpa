@@ -107,6 +107,7 @@ COPY_EXISTING
   SAY NAME2 ~Carlino~
 	WRITE_ASCIIE 0x280 ~%DEST_RES%~ #32 // name
 	WRITE_ASCIIE 0x2cc ~%DEST_RES%~ #8 // dialogue
+  REMOVE_CRE_ITEM ~minhp1~
   
 COPY_EXISTING ~trthf01.cre~ ~override/tb#sros.cre~
   SAY NAME1 ~Rosalina~
@@ -114,7 +115,7 @@ COPY_EXISTING ~trthf01.cre~ ~override/tb#sros.cre~
 	WRITE_ASCIIE 0x248 ~%DEST_RES%~ #8 // override script
 	WRITE_ASCIIE 0x280 ~%DEST_RES%~ #32 // name
 	WRITE_ASCIIE 0x2cc ~%DEST_RES%~ #8 // dialogue
-  ADD_CRE_ITEM ~minhp01~ #1 #0 #0 ~none~ ~RING~
+  ADD_CRE_ITEM ~minhp1~ #1 #0 #0 ~none~ ~RING~
 
 COPY_EXISTING ~naliames.cre~ ~override/tb#smess.cre~
 	SAY NAME1 @61

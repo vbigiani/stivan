@@ -2371,9 +2371,9 @@ DO ~SetGlobal("tb#StivanCernd","GLOBAL",1)~
 EXIT
 
 CHAIN 
-IF ~InParty("tb#Stiv")
-See("tb#Stiv")
-!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+IF ~InParty("Cernd")
+See("Cernd")
+!StateCheck("Cernd",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("CerndBeggar","GLOBAL",2)
 Global("tb#StivanCernd","GLOBAL",1)~ THEN TB#STIVJ stivancernd2
