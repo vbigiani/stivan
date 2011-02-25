@@ -27,13 +27,16 @@ COPY_EXISTING ~%script%.bcs~ ~override/tb#sdr1.bcs~
 // Make sure that referenced scripts exist
 
 COPY_EXISTING ~arnman04.cre~ ~override~
+    ~pirpir10.cre~ ~override~
   READ_ASCII SCRIPT_OVERRIDE default_script
   PATCH_IF ~%default_script%~ STRING_COMPARE_CASE ~None~ &&
       ~%default_script%~ STRING_COMPARE_CASE ~~ &&
-      ~%default_script%~ STRING_COMPARE_CASE ~arnman04~ THEN BEGIN
-    PATCH_FAIL ~arnman04.cre has %default_script% as override script.~
+      ~%default_script%~ STRING_COMPARE_CASE ~%SOURCE_RES%~ THEN BEGIN
+    PATCH_FAIL ~%SOURCE_RES%.cre has %default_script% as override script.~
   END
-  WRITE_ASCII SCRIPT_OVERRIDE ~arnman04~ #8
+  WRITE_ASCIIE SCRIPT_OVERRIDE ~%SOURCE_RES%~ #8
+
+COPY_EXISTING ~arnman04.cre~ ~override~
   ADD_CRE_ITEM ~tb#spin~ #1 #0 #0 ~none~ ~INV~
 
   
@@ -442,8 +445,13 @@ COPY_EXISTING ~spgate.eff~ ~override/tb#ssus1.eff~
 INCLUDE ~stivan/lib/tooltip.tpa~
 LAF ~ADD_ITEM_TOOLTIPS~
   STR_VAR item     = ~tb#spoo~
-          tooltips = ~~Cecità~ ~Esplosione Alchemica~~
+          tooltips = ~99999999 99999998~
 END
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+REPLACE ~99999999~ ~Cecità~
+REPLACE ~99999998~ ~Esplosione Alchemica~
+
 
 APPEND ~pdialog.2da~
 ~tb#stiv     tb#stivP            tb#stivJ           tb#stivD~

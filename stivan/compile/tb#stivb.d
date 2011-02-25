@@ -1290,9 +1290,9 @@ Global("tb#StivanImoen","GLOBAL",8)~ THEN TB#STIVB stivanimoen7
 ~Stai facendo dei notevoli progressi con la lama, Imoen!~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",9)~
 == BIMOEN2 ~Grazie! Modestamente, sono imbattibile!~
-DO ~ApplySpellRES("spcl141","Imoen2")
+DO %ApplySpellRES("spcl141","Imoen2")
 ApplySpellRES("spcl441","Imoen2")
-DisplayString("Imoen2",~Bonus: +1 al colpire, +1 danno, -1 CA~)~
+DisplayString("Imoen2",~Bonus: +1 al colpire, +1 danno, -1 CA~)%
 == TB#STIVB ~Lo vedremo... pronta per un altro combettimento?~
 == BIMOEN2 ~Mai stata così pronta! Prendi QUESTO!~
 == TB#STIVB ~Cos-~
