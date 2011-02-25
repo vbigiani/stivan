@@ -100,9 +100,9 @@ IF ~~ THEN DO ~CreateItem("tb#spin",1,0,0)~ EXIT
 APPEND arnman04
   IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL",3)~ THEN firstjob2
     SAY ~Sei venuto a gettare la spugna, recluta?~
-    IF ~PartyHasItem("tb#spin")~ THEN DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",4) TakePartyItem("tb#spin") DestroyItem("tb#spin") EraseJournalEntry(%Stivan e i Ladri Tenebrosi
+    IF ~PartyHasItem("tb#spin")~ THEN DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",4) TakePartyItem("tb#spin") DestroyItem("tb#spin") EraseJournalEntry(~Stivan e i Ladri Tenebrosi
 
-Una Ladra Tenebrosa di nome Mitsu ha offerto a Stivan la possibilità di affermarsi all'interno della gilda svolgendo alcuni incarichi per conto suo. Prima però è necessario che l'halfling superi una sorta di rito iniziatico che prevede il furto della spilla di Missy la guardarobiera.%)~ EXTERN tb#stivj firstjob2-1
+Una Ladra Tenebrosa di nome Mitsu ha offerto a Stivan la possibilità di affermarsi all'interno della gilda svolgendo alcuni incarichi per conto suo. Prima però è necessario che l'halfling superi una sorta di rito iniziatico che prevede il furto della spilla di Missy la guardarobiera.~)~ EXTERN tb#stivj firstjob2-1
     IF ~!PartyHasItem("tb#spin")~ THEN EXTERN tb#stivj firstjob2-2
   END
 END
@@ -201,9 +201,9 @@ CHAIN IF WEIGHT #-1 ~IsGabber("tb#stiv") Global("tb#ShadowsThievesJobs","GLOBAL"
 == arnman03 ~Io? Ehm... Niente. Aspetto tue notizie, Mitsu.~
 END IF ~~ THEN SOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
 
-Abbiamo salvato Armagaran Vulova da un agguato della gilda rivale. Mitsu contatterà Stivan quando avrà bisogno di lui.~ DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",7) EraseJournalEntry(%Stivan e i Ladri Tenebrosi
+Abbiamo salvato Armagaran Vulova da un agguato della gilda rivale. Mitsu contatterà Stivan quando avrà bisogno di lui.~ DO ~SetGlobal("tb#ShadowsThievesJobs","GLOBAL",7) EraseJournalEntry(~Stivan e i Ladri Tenebrosi
 
-Mitsu ha assegnato a Stivan la sua prima missione: proteggere un nobile di nome Armagaran Vulova da un agguato della gilda rivale. La sua abitazione si trova nel Quartiere Governativo, ed è bene che mi ci rechi al più presto. Diversamente, potrebbe essere troppo tardi per lui.%)~ EXIT
+Mitsu ha assegnato a Stivan la sua prima missione: proteggere un nobile di nome Armagaran Vulova da un agguato della gilda rivale. La sua abitazione si trova nel Quartiere Governativo, ed è bene che mi ci rechi al più presto. Diversamente, potrebbe essere troppo tardi per lui.~)~ EXIT
 
 APPEND tb#stivj
 IF WEIGHT #-1 ~Global("tb#ShadowsThievesJobs","GLOBAL",7) Dead("c6Bodhi")~ THEN bodhidead
