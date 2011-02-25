@@ -1,8 +1,10 @@
 IF
   IsValidForPartyDialog("tb#stiv")
   IsValidForPartyDialog("cernd")
+  !GlobalTimerNotExpired("tb#wait","locals")
   Global("tb#StivanPirPir10-4","GLOBAL",0)
 THEN
   RESPONSE #100
-    StartDialogueNoSet("tb#stiv")
+    StartDialogueNoSet(Myself)
+    SetGlobalTimer("tb#wait","locals",6)
 END
