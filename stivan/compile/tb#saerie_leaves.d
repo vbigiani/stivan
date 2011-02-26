@@ -58,9 +58,28 @@ IF ~OR(2) Global("aerieRomanceActive","GLOBAL",1) Global("aerieRomanceActive","G
 
 CHAIN IF ~~ THEN BAERIE aeriegone1
 ~Addio, <CHARNAME>.~
-== MINSCJ IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Perché la dolce Aerie se ne va? Dobbiamo andare subito a salvarla, <CHARNAME>! Boo non mi perdonerebbe mai se abbandonassi di nuovo la mia Strega!~
-== JAHEIRAJ IF ~InParty("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Spero tu faccia subito ammenda, Stivan. Il disprezzo non è una ragione per insultare una persona in così malo modo.~
-== CERNDJ IF ~InParty("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Il tuo operato sarebbe indegno del peggiore predatore. Aerie si aggiunge alla ahimè lunga lista di esseri che hanno sofferto per causa tua.~
+== MINSCJ IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)  Global("MinscWitch","GLOBAL",0)~ THEN ~Perché la dolce Aerie se ne va? Dobbiamo andare subito a salvarla, <CHARNAME>!~
+BRANCH ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Global("MinscWitch","GLOBAL",1)~ BEGIN
+== MINSCJ ~Boo! Boo, svegliati! Dobbiamo seguire Aerie!~
+== BAERIE ~Minsc, tu... Tu mi seguiresti? Oh, ti sono grata, ma... I tuoi doveri verso <CHARNAME>?~
+== MINSCJ ~Boo dice che non dobbiamo lasciar<PRO_HIMHER>, ma Minsc ha giurato di proteggere la sua strega fino all'ultimo respiro! Cosa faremo se le verrà fatto del male come alla gloriosa Dynaheir?~
+= ~...~
+= ~Boo dice che nessuno sa se sia nato prima l'uovo o la gallina, ma Minsc non ha tempo per le questioni filosofiche! Questo ranger e questo criceto verranno con te!~
+== BAERIE ~Ti ringrazio, Minsc. F-forse al circo troveremo anche un amico per Boo...~
+== MINSCJ ~Boo dice che dovremmo andare a trovare Aerie al circo e fare in modo che Stivan si scusi, così non dobbiamo abbandonare né il nostro amico CHARNAME né la nostra strega Aerie!~ 
+END
+BRANCH ~IsValidForPartyDialog("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ BEGIN
+== JAHEIRJ ~Perchè invece di fuggire non affronti il problema? Se ti sottrai ad ogni difficoltà, non imparerai nulla dalla vita.~
+== BAERIE ~Cosa potrei imparare da un essere così cattivo? Inoltre sono p-più grande di te, Jaheira... Non ho bisogno dei tuoi consigli!~
+== JAHEIRJ ~Età non significa esperienza. Lo capirai col tempo, spero.~
+END
+BRANCH ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ BEGIN
+== CERNDJ ~Vergognati, Stivan. La crudeltà verso gli animali è tirocinio della crudeltà verso gli uomini.~
+== BTB#STIV ~Cosa *diavolo* c'entra questo con la dipartita di quella scema?~
+== CERNDJ ~Ti sei forse dimenticato che il vostro diverbio ha avuto inizio dall'uccisione di un'innocente farfalla?~
+== BTB#STIV ~Ah sì?~
+== CERNDJ ~...~
+END
 BRANCH ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ BEGIN
 == MAZZYJ ~*slap!*~
 == TB#STIVJ ~Ahio!~
@@ -79,16 +98,24 @@ BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == NALIAJ ~...~
 END
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(Che stia imparando da me come si trattano le donne?)~
-== HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID) Global("HaerDalisRomanceActive","GLOBAL",2)~ THEN ~Le tue azioni mi hanno separato dalla mia tenera colombella, Stivan! Come osi dichiararti mio amico?~
+BRANCH ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID) Global("HaerDalisRomanceActive","GLOBAL",2)~ BEGIN
+== HAERDAJ ~Aspetta, Aerie, non lasciare che questo sparviero sia costretto a vivere senza di te!~
+== BAERIE ~Mi dispiace, Haer' Dalis, ma è meglio così. Tu stesso di sei dichiarato amico di quel... quel...~
+== HAERDAJ ~Le tue azioni mi hanno separato dalla mia tenera colombella, Stivan! Come osi dichiararti mio amico?~
+== TB#STIVB ~Heh. Mi ringrazierai per averti separato da quel violino stonato quando ci avrai dormito sopra.~
+END
 == HAERDAJ IF ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID) !Global("HaerDalisRomanceActive","GLOBAL",2)~ THEN ~Ti sembra modo di trattare una fanciulla, mio gabbiano?~
 BRANCH ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ BEGIN
-== VICONIJ ~Se continui su questa strada, presto si apriranno le porte della mia stanza da letto.~
-== TB#STIVJ ~Su..sul serio?~
-== VICONIJ ~Ha! Speraci, nanerottolo.~
+== VICONIJ ~E così hai deciso di spiccare il volo, sorella della luce? Oh, ma che sciocca... Dimenticavo che tu non puoi più volare.~
+== BAERIE ~S-sarà una liberazione non averti più vicino!~
+== VICONIJ ~Potrei dire lo stesso.~
 END
 == VALYGARJ IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Non so se essere lieto per aver rimosso uno stregone dal gruppo, o adirato per averci dentro un demone.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Stivan! Il tuo comportamento non è per niente simpatico!~
-== YOSHJ IF ~InParty("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN ~Stivan, hai ascoltato i miei insegnamenti? Le donne non vanno insultate finché non ci sei andato a letto.~
+BRANCH ~IsValidForPartyDialog("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ BEGIN
+== YOSHIMJ ~E' un peccato che tu te ne vada.~
+== BAERIE ~Non ho scelta, Yoshimo. Mi... Mi dispiace...~
+END
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Har! Congratulazioni, Stivan! Stanotte ti pago io la prostituta, te la sei meritata!~
 == KELDORJ IF ~InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Quanto a lungo ancora abuserai della nostra pazienza, halfling?~
 == ANOMENJ IF ~InParty("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Global("AnomenIsNotKnight","GLOBAL",0)~ THEN ~Insomma, <CHARNAME>! Come puoi continuare ad ospitare un simile attaccabrighe?~
@@ -141,8 +168,7 @@ CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",3) IsValidForPartyDialog
 ~Cosa ci fai qui, <CHARNAME>?~
 == tb#stivj ~Aerie, dietro di te! Lancia Pelle di Pietra!~
 == AERIEP ~Taci! Perché dovrei ascoltarti?~
-== tb#stivj ~Fallo e sgridami dopo!~
-== AERIEP ~Non capisco perché ti sto ancora ascoltando, ma va bene, faccio come vuoi, purché te ne vada.~
+== tb#stivj ~Fallo e basta!~
 END
 IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",4)~ EXIT
 
@@ -198,7 +224,7 @@ CHAIN IF WEIGHT #-100 ~Global("tb#stivanAerie","GLOBAL",10) GlobalTimerExpired("
 == tb#stivj ~Dimentichi con chi parli. Io sono il Cacciatore, e nessuno è migliore di me nell'intrufolarsi in luoghi protetti e infilare una lama nella schiena dei maghi cattivi!~
 == aeriep ~Hai ragione, dimentico che sto parlando con la persona che mi ha fatto abbandonare <CHARNAME> in lacrime non un'ora fa.~
 == tb#stivj ~Perché indugiare sul passato quando nel presente rischi la vita?~
-== aeriep ~Hai.. ragione, stai rischiando la tua stessa vita per proteggermi. Grazie.~
+== aeriep ~In effetti, stai rischiando la tua stessa vita per proteggermi. Grazie.~
 == tb#stivj ~Grazie a te di avermi concesso una seconda possibilità! <CHARNAME>, mi raccomando, proteggi Aerie mentre mi infiltro là!~
 = ~Non vorrei sterminare una dozzina di guardie e un arcimago per poi trovare Aerie morta perché ti sei distratto!~
 END
