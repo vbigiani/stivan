@@ -56,7 +56,19 @@ COPY_EXISTING ~ar0505.are~ ~override/tb#s00.are~
   REPLACE_TEXTUALLY ~sguard2~ ~tb#sgua~
   REPLACE_TEXTUALLY ~sguard3~ ~tb#sgua~
   REPLACE_TEXTUALLY ~sguard4~ ~tb#sgua~
-  REPLACE_TEXTUALLY ~ar0500~ ~ar0607~
+  READ_SHORT 0x5a trig_cnt
+  READ_LONG  0x5c trig_off
+  WHILE trig_cnt BEGIN
+    --trig_cnt
+    READ_ASCII trig_off + trig_cnt * 0xc4 trig_name (32) NULL
+    PATCH_IF ~%trig_name%~ STRING_EQUAL_CASE ~tran0500b~ THEN BEGIN
+      WRITE_ASCII trig_off + trig_cnt * 0xc4 + 0x38 ~ar0607~ #8
+      WRITE_ASCII trig_off + trig_cnt * 0xc4 + 0x40 ~Exit0700~ #32
+      WRITE_LONG  trig_off + trig_cnt * 0xc4 + 0x60 THIS & `BIT2
+
+    END
+  END
+  
 
 // Create new CREs
 	
@@ -153,8 +165,8 @@ COPY_EXISTING ~c6elf1.cre~ ~override/tb#self.cre~
 	WRITE_ASCII 0x2cc ~tb#self~ #8 // dialogue
   
 COPY_EXISTING ~tanthf01.cre~ ~override/tb#sass.cre~
-  SAY NAME1 ~Schiavista~
-  SAY NAME2 ~Schiavista~
+  SAY NAME1 ~Assassino~
+  SAY NAME2 ~Assassino~
   WRITE_ASCII 0x280 ~tb#sass~ #32
 	
 COPY_EXISTING ~sword01.cre~ ~override/tb#slil.cre~

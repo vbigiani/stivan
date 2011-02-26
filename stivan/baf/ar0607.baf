@@ -12,7 +12,8 @@ END
 
 IF
   Global("tb#StivanAerie","GLOBAL",5)
-  IsValidForPartyDialog("tb#stiv")
+	InParty("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
   Dead("tb#sass")
   CombatCounter(0)
 THEN
@@ -31,7 +32,8 @@ END
 
 IF
   Global("tb#StivanAerie","GLOBAL",7)
-  IsValidForPartyDialog("tb#stiv")
+	InParty("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
   NumDead("tb#sass",3)
   CombatCounter(0)
 THEN
@@ -44,7 +46,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("tb#StivanAerie","GLOBAL",10)
-    ActionOverride("aerie",SetSequence(SEQ_CAST))
+    ActionOverride("aerie",ForceSpell(Myself,RAELIS_OPEN_PORTAL))
     SetGlobalTimer("tb#StivanAerieTimer","AR0607",60)
 END
 
@@ -54,23 +56,18 @@ IF
   !GlobalTimerNotExpired("tb#StivanAerieTimer2","AR0607")
 THEN
   RESPONSE #100
-    ActionOverride("aerie",SetSequence(SEQ_CAST))
-    SetGlobalTimer("tb#StivanAerieTimer2","AR0607",6)
-    CreateCreatureObject("tb#sass","aerie",1,0,0)
-  RESPONSE #100
-    ActionOverride("aerie",SetSequence(SEQ_CONJURE))
     SetGlobalTimer("tb#StivanAerieTimer2","AR0607",6)
     CreateCreatureObject("tb#sass","aerie",1,0,0)
 END
 
 IF
   Global("tb#stivanAerie","GLOBAL",10)
-  IsValidForPartyDialog("tb#stiv")
+	InParty("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
   GlobalTimerExpired("tb#StivanAerieTimer","AR0607")
   CombatCounter(0)
 THEN
   RESPONSE #100
-    ActionOverride("aerie",SetSequence(SEQ_READY))
     ActionOverride("aerie",StartDialogueNoSet(Player1))
 END
   
@@ -82,7 +79,7 @@ THEN
     SetGlobal("tb#StivanAerie","GLOBAL",13)
     ActionOverride("Aerie",DisplayStringHead(Myself,~B.. buona fortuna, Stivan.~))
     Wait(3)
-    ActionOverride("tb#stivj",LeaveArea("tb#s00",[950.1750],6))
+    ActionOverride("tb#stiv",LeaveAreaLUA("tb#s00","",[950.1750],6))
     EndCutSceneMode()
 END
   

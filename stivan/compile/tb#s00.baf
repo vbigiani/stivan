@@ -1,8 +1,8 @@
 IF
-  Global("areaInit","LOCALS",0)
+  Global("areaInit","tb#s00",0)
 THEN
   RESPONSE #100
-    SetGlobal("areaInit","LOCALS",1)
+    SetGlobal("areaInit","tb#s00",1)
     TriggerActivation("tran0504a",FALSE)
     TriggerActivation("tran0504b",FALSE)
     TriggerActivation("tran0500a",FALSE)
@@ -16,9 +16,9 @@ END
 
 IF
   PartyHasItem("tb#sloc")
-  Global("areaInit","LOCALS",1)
+  Global("areaInit","tb#s00",1)
 THEN
   RESPONSE #100
-    SetGlobal("areaInit","LOCALS",2)
+    SetGlobal("areaInit","tb#s00",2)
     TriggerActivation("tran0500b",TRUE)
 END

@@ -106,7 +106,7 @@ APPEND tb#stivj
   IF ~~ THEN aeriegone3
   SAY ~Scusa, <CHARNAME>!~
   = ~Andiamo al Circo a vedere se la piagnona si è calmata.~
-  IF ~~ DO ~ActionOverride("aerie",LeaveParty()) ActionOverride("aerie",SetGlobal("KickedOut","LOCALS",1)) MoveGlobal("AR0607","Aerie",[469.437])~ UNSOLVED_JOURNAL ~Aerie lascia il gruppo
+  IF ~~ DO ~ActionOverride("aerie",LeaveParty()) ActionOverride("aerie",SetGlobal("KickedOut","LOCALS",1)) ActionOverride("Aerie",LeaveAreaLUA("ar0607","",[469.437],14))~ UNSOLVED_JOURNAL ~Aerie lascia il gruppo
 
   Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. Devo andare al Circo a vedere se sia disposta a scusarci.~ EXIT
   END
@@ -119,7 +119,7 @@ APPEND aeriep
   END
 
   IF WEIGHT #-1 ~GlobalGT("tb#StivanAerie","GLOBAL",2) GlobalLT("tb#StivanAerie","GLOBAL",100) Dead("tb#stiv") !InPartyAllowDead("tb#stiv")~ angry2
-    SAY ~C.. Ciao, <CHARNAME>. Vedo che ti sei disfatto di Stivan... permanentemente~
+    SAY ~C.. Ciao, <CHARNAME>. Vedo che ti sei disfatto di Stivan... permanentemente.~
     IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",100)~ GOTO angry3
   END
   
@@ -215,18 +215,25 @@ APPEND tb#stivj
       IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ EXIT
   END
     
-  IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",10)~ gotTarget4
+  IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",11)~ gotTarget4
     SAY ~Siete pronti a difendere Aerie mentre faccio il mio lavoro?~
       IF ~~ THEN REPLY ~Tranquillo, ci penso io ad Aerie.~ EXTERN tb#STIVJ gotTarget3
       IF ~~ THEN REPLY ~Aspetta un attimo qui, devo passarti qualche oggetto magico per renderti la vita più facile.~ EXTERN tb#STIVJ gotTarget2
     END    
 END
 
+APPEND aeriep
+  IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",11)~ THEN gotTarget
+    SAY ~Fo.. forse dovresti parlare con Stivan.~
+      IF ~~ THEN EXTERN tb#stivj gotTarget4
+  END
+END
+
 BEGIN TB#SNEC
 
 IF ~Dead("tb#sgua")~ THEN kill
 SAY ~Tu! Hai ucciso le mie guardie! Muori!~
-IF ~~ THEN DO ~Shout(153)~ EXIT
+IF ~~ THEN DO ~Enemy() Shout(153)~ EXIT
 END
 
 IF ~!Dead("tb#sgua")~ THEN necri
