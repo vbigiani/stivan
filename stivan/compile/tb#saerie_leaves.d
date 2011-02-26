@@ -10,8 +10,9 @@ tb#StivanAerie: tracks the quest.
       8: preparing before spawning assassins.
       9: start spawning assassins.
      10: spawning assassins (until "tb#stivanassassintimer","AR0607" runs out)
-     12: Stivan waits before going to quest area.
-     12: Stivan in quest area.
+     11: Stivan waits before going to quest area.
+     12: Stivan going to in quest area.
+     13: Stivan in quest area.
     100: Aerie re-joined the party.
 */
 
@@ -112,9 +113,19 @@ APPEND tb#stivj
 END
 
 APPEND aeriep
-  IF WEIGHT #-1 ~GlobalGT("tb#StivanAerie","GLOBAL",2) GlobalLT("tb#StivanAerie","GLOBAL",100)~ angry
-    SAY ~No, <CHARNAME>, non ti voglio parlare.~
+  IF WEIGHT #-1 ~GlobalGT("tb#StivanAerie","GLOBAL",2) GlobalLT("tb#StivanAerie","GLOBAL",100) OR(2) !Dead("tb#stiv") InPartyAllowDead("tb#stiv")~ angry
+    SAY ~No, <CHARNAME>, non ti voglio parlare... non finché Stivan non si sarà scusato.~
     IF ~~ THEN EXIT
+  END
+
+  IF WEIGHT #-1 ~GlobalGT("tb#StivanAerie","GLOBAL",2) GlobalLT("tb#StivanAerie","GLOBAL",100) Dead("tb#stiv") !InPartyAllowDead("tb#stiv")~ angry2
+    SAY ~C.. Ciao, <CHARNAME>. Vedo che ti sei disfatto di Stivan... permanentemente~
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",100)~ GOTO angry3
+  END
+  
+  IF ~~ THEN angry3
+  SAY ~V.. Vuoi che torni a viaggiare con te?~
+  COPY_TRANS aeriep 0
   END
 END
 
@@ -134,7 +145,7 @@ CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",3) IsValidForPartyDialog
 END
 IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",4)~ EXIT
 
-CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",5) Dead("tb#sass")~ THEN aeriep postassassination
+CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",5) Dead("tb#sass") IsValidForPartyDialog("tb#stiv")~ THEN aeriep postassassination
 ~Gr... grazie, Stivan. Non mi aspettavo un simile gesto altruista.~
 == tb#stivj ~Scusami, Aerie, a volte sono un idiota.~
 == aeriep ~E' troppo facile insultare le persone e poi chiedere scusa!~
@@ -144,7 +155,7 @@ CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",5) Dead("tb#sass")~ THEN
 DO ~SetGlobal("tb#StivanAerie","GLOBAL",6)~
 EXIT
 
-CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",7) NumDead("tb#sass",3)~ THEN aeriep divination1
+CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",7) NumDead("tb#sass",3) IsValidForPartyDialog("tb#stiv")~ THEN aeriep divination1
 ~Oh mamma, chi mi può volere così male da mandare tutti questi assassini?~
 == tb#stivj ~Non lo so.~
 = ~Però che strano, hanno tutti e tre la stessa identica faccia... Sembrano gemelli.~
@@ -169,14 +180,14 @@ APPEND aeriep
       IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",9)~ EXIT
     END
     
-  IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",8)~ ready
+  IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",8) IsValidForPartyDialog("tb#stiv")~ ready
     SAY ~Siete pronti?~
       IF ~~ THEN REPLY ~Un attimo e siamo pronti.~ EXTERN aeriep divination2
       IF ~~ THEN REPLY ~Siamo pronti. Fai quello che devi fare.~ EXTERN aeriep divination3
     END    
 END
 
-CHAIN IF WEIGHT #-100 ~Global("tb#stivanAerie","GLOBAL",10) GlobalTimerExpired("tb#StivanAerieTimer","AR0607")~ THEN aeriep gotTarget
+CHAIN IF WEIGHT #-100 ~Global("tb#stivanAerie","GLOBAL",10) GlobalTimerExpired("tb#StivanAerieTimer","AR0607") IsValidForPartyDialog("tb#stiv")~ THEN aeriep gotTarget
 ~Grazie di.. di avermi protetto. La... la mia magia ha avuto successo.~
 = ~Il mago si trova in un palazzo nel quartiere halfling.~
 == tb#stivj ~(Gasp) il palazzo di Estel Necri? La necromante halfling con le cui storie mia Mamma mi spaventava sempre quando disubbidivo?~
@@ -202,7 +213,7 @@ APPEND tb#stivj
   IF ~~ THEN gotTarget3
     SAY ~Sono pronto.~
       IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ EXIT
-    END
+  END
     
   IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",10)~ gotTarget4
     SAY ~Siete pronti a difendere Aerie mentre faccio il mio lavoro?~
@@ -210,3 +221,56 @@ APPEND tb#stivj
       IF ~~ THEN REPLY ~Aspetta un attimo qui, devo passarti qualche oggetto magico per renderti la vita più facile.~ EXTERN tb#STIVJ gotTarget2
     END    
 END
+
+BEGIN TB#SNEC
+
+IF ~Dead("tb#sgua")~ THEN kill
+SAY ~Tu! Hai ucciso le mie guardie! Muori!~
+IF ~~ THEN DO ~Shout(153)~ EXIT
+END
+
+IF ~!Dead("tb#sgua")~ THEN necri
+SAY ~Chi va là?~
+IF ~!StateCheck("tb#stiv",STATE_INVISIBLE)~ THEN REPLY ~(Tagliale la gola in silenzio)~ GOTO slitThroatFail
+IF ~StateCheck("tb#stiv", STATE_INVISIBLE)~ THEN REPLY ~(Tagliale la gola in silenzio)~ GOTO slitThroatSuccess
+IF ~CheckStatLT("tb#stiv",100,PICKPOCKET)~ THEN REPLY ~(Tenta di rubare la ciocca di capelli)~ GOTO pickpocketFail
+IF ~CheckStatGT("tb#stiv",99,PICKPOCKET)~  THEN REPLY ~(Tenta di rubare la ciocca di capelli)~ EXTERN tb#stivj pickpocketSuccess
+IF ~~ THEN REPLY ~(Chiedi perché manda assassini)~ EXTERN tb#stivj askNecri
+END
+
+IF ~~ THEN slitThroatFail
+SAY ~Aiuto! Un assassino in casa!~
+IF ~~ THEN DO ~Enemy() Shout(153)~ EXIT
+END
+
+IF ~~ THEN pickpocketFail
+SAY ~Aiuto! Un ladro in casa!~
+IF ~~ THEN DO ~Enemy() Shout(153)~ EXIT
+END
+
+CHAIN IF ~~ THEN tb#SNEC slitThroatSuccess
+~Urghk!~
+DO ~Kill("tb#snec")~
+== TB#STIVJ ~Heh. Un lavoro semplice e veloce.~
+EXIT
+
+APPEND TB#STIVJ
+  IF ~~ THEN pickpocketSuccess
+    SAY ~Yoink!~
+      IF ~~ THEN DO ~GiveItemCreate("tb#stiv","tb#sloc",1,0,0)~ EXIT
+  END
+
+  IF ~~ THEN askNecri
+    SAY ~Gentile Signora, sono un amico di Aerie, e vorrei sapere perchè voi state mandando assassini contro di lei.~
+      IF ~~ THEN EXTERN tb#Snec slitThroatFail
+  END
+END
+
+CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",13) PartyHasItem("tb#sloc") InMyArea("tb#stiv")~ THEN aeriep final
+~Hai.. hai la mia ciocca di capelli?~
+== tb#stivj ~Ci puoi scommettere. Ora, sei disposta a perdonarmi?~
+DO ~SetGlobal("tb#StivanAerie","GLOBAL",100)~
+== aeriep ~S.. Sì. Hai dimostrato che sei disposto a mettere a rischio la tua vita per difendermi, nonostante tutto.~
+= ~<CHARNAME>, vuoi che mi riunisca al gruppo?~
+COPY_TRANS aeriep 0
+

@@ -12,6 +12,7 @@ END
 
 IF
   Global("tb#StivanAerie","GLOBAL",5)
+  IsValidForPartyDialog("tb#stiv")
   Dead("tb#sass")
   CombatCounter(0)
 THEN
@@ -30,6 +31,7 @@ END
 
 IF
   Global("tb#StivanAerie","GLOBAL",7)
+  IsValidForPartyDialog("tb#stiv")
   NumDead("tb#sass",3)
   CombatCounter(0)
 THEN
@@ -63,6 +65,7 @@ END
 
 IF
   Global("tb#stivanAerie","GLOBAL",10)
+  IsValidForPartyDialog("tb#stiv")
   GlobalTimerExpired("tb#StivanAerieTimer","AR0607")
   CombatCounter(0)
 THEN
@@ -71,3 +74,23 @@ THEN
     ActionOverride("aerie",StartDialogueNoSet(Player1))
 END
   
+IF
+  Global("tb#StivanAerie","GLOBAL",12)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    SetGlobal("tb#StivanAerie","GLOBAL",13)
+    ActionOverride("Aerie",DisplayStringHead(Myself,~B.. buona fortuna, Stivan.~))
+    Wait(3)
+    ActionOverride("tb#stivj",LeaveArea("tb#s00",[950.1750],6))
+    EndCutSceneMode()
+END
+  
+IF
+  Global("tb#StivanAerie","GLOBAL",13)
+  PartyHasItem("tb#sloc")
+  InMyArea("tb#stiv")
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",StartDialogNoSet(Player1))
+END

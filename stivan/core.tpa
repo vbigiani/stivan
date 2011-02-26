@@ -46,15 +46,33 @@ COPY_EXISTING ~arnman04.cre~ ~override~
 COPY ~stivan/copy~ ~override~
 
 
-// Add map notes
+// Patch areas
 
 COPY_EXISTING ~ar0500.are~ ~override~
 	ADD_MAP_NOTE #4845 #2049 gray ~Stivan, il Cacciatore~
 
-		
+COPY_EXISTING ~ar0505.are~ ~override/tb#s00.are~
+  WRITE_ASCII 0x94 ~tb#s00~ #8
+  REPLACE_TEXTUALLY ~sguard2~ ~tb#sgua~
+  REPLACE_TEXTUALLY ~sguard3~ ~tb#sgua~
+  REPLACE_TEXTUALLY ~sguard4~ ~tb#sgua~
+  REPLACE_TEXTUALLY ~ar0500~ ~ar0607~
 
 // Create new CREs
 	
+COPY_EXISTING ~obshal04.cre~ ~Override/tb#sgua.cre~
+  WRITE_ASCII 0x280 ~tb#sgua~ #32
+  
+COPY_EXISTING ~obshal06.cre~ ~Override/tb#snec.cre~
+  SAY NAME1 ~Estel Necri~
+  SAY NAME2 ~Estel Necri~
+  WRITE_LONG 0x244 4096
+  WRITE_BYTE 0x270 128
+  WRITE_EVALUATED_ASCII 0x280 ~%DEST_RES%~ #32 // name
+  WRITE_EVALUATED_ASCII 0x2cc ~%DEST_RES%~ #8 // dialogue
+  WRITE_ASCII 0x258 ~shoutdl2~ #8
+  ADD_CRE_ITEM ~tb#sloc~ #1 #0 #0 ~none~ INV
+
 COPY_EXISTING ~bhalf1.cre~ ~override~
 	WRITE_ASCIIT 0x248 ~tb#stdes~
 
@@ -244,6 +262,11 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	
 	
 // Create new items	
+
+COPY_EXISTING ~misc5v.itm~ ~override/tb#sloc.itm~
+  SAY NAME1 ~Ciocca di capelli di Aerie~
+  SAY NAME2 ~Ciocca di capelli di Aerie~
+  SAY UNIDENTIFIED_DESC ~Questa è una ciocca di capelli di Aerie. E' stata usata da Estel Necri per inviare assassini contro l'ignara elfa.~
 
 COPY_EXISTING ~npsw02.itm~ ~override/tb#syk1.itm~
 	SAY NAME1 ~Vendetta di Yoshimo +1~
