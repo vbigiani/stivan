@@ -484,7 +484,7 @@ COMPILE ~stivan/compile~
 COMPILE ~stivan/d/pid.d~ // must be last
 
 ACTION_BASH_FOR ~stivan/baf~ ~^.*\.baf~ BEGIN
-	EXTEND_TOP ~%BASH_FOR_RES%.bcs~ ~%BASH_FOR_FILESPEC%~
+	EXTEND_BOTTOM ~%BASH_FOR_RES%.bcs~ ~%BASH_FOR_FILESPEC%~
 END
 
 
@@ -538,7 +538,10 @@ Stivan~
 	
   LAF ~ADD_ITEM_TOOLTIPS~
     STR_VAR item     = ~tb#spoo2~
-            tooltips = ~~Esplosione Alchemica~~
+            tooltips = ~99999999~
   END
+
+  COPY_EXISTING ~tooltip.2da~ ~override~
+  REPLACE ~99999999~ ~Esplosione Alchemica~
 
 END
