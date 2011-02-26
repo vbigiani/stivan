@@ -1085,7 +1085,16 @@ Global("tb#StivanDislikesAerie","GLOBAL",0)~ THEN TB#STIVB stivanaeriewings
 ~Quindi, elfa, hai perso le tue ali nel patetico tentativo di salvare un bambino. Piuttosto stupido da parte tua, ma non mi sorprende.~
 DO ~SetGlobal("tb#StivanDislikesAerie","GLOBAL",1)~
 == BAERIE ~Come... Come fai a saperlo? Hai origliato di nuovo la mia conversazione con <CHARNAME>?~
-== TB#STIVB ~Non ho origliato proprio nulla, io. Sono i tuoi lamenti a giungere alle mie orecchie. Povero ragazzo... Mi chiedo come riesca a sopportarti.~
+END
+IF ~GlobalGT("tb#StivanAerie","GLOBAL",99)~  THEN EXTERN BAERIE stivanAerieWings1
+IF ~GlobalLT("tb#StivanAerie","GLOBAL",100)~ THEN EXTERN tb#stivb stivanAerieWings2
+
+CHAIN IF ~~ THEN BAERIE stivanAerieWings1
+~Non importa, non dovrei nemmeno continuare ad ascoltarti.~
+EXIT
+
+CHAIN IF ~~ THEN tb#STIVB stivanAerieWings2
+ ~Non ho origliato proprio nulla, io. Sono i tuoi lamenti a giungere alle mie orecchie. Povero ragazzo... Mi chiedo come riesca a sopportarti.~
 == BAERIE ~<CHARNAME> non avrebbe motivo di essere infastidito dai miei sfoghi e dai miei racconti! Tu... Tu non lo sei, vero?~
 END
 IF ~~ THEN REPLY ~Assolutamente no. (Rivolgendoti a Stivan) Vuoi chiudere la bocca o preferisci che sia io a sigillartela?~ EXTERN TB#STIVB StivanDislikesAerie1-1

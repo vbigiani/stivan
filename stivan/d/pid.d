@@ -148,11 +148,18 @@ END
 
 IF ~~ THEN BEGIN PD3-7
 SAY ~Ti riferisci alla pennuta senz'ali? Beh, se non la smette di liberare i gabbiani che tramortisco giuro che si ritroverà con qualche altro moncone!~
-IF ~~ THEN EXIT
+IF ~GlobalLT("tb#StivanAerie","GLOBAL",100)~ THEN EXIT
+IF ~GlobalGT("tb#StivanAerie","GLOBAL",99)~ THEN GOTO PD3-7a
 END
 
 IF ~~ THEN BEGIN PD3-8
 SAY ~Odiosa protettrice di pennuti... Com'è possibile che Haer'Dalis abbia perso la testa per una simile creatura?~
+IF ~GlobalLT("tb#StivanAerie","GLOBAL",100)~ THEN EXIT
+IF ~GlobalGT("tb#StivanAerie","GLOBAL",99)~ THEN GOTO PD3-7a
+END
+
+IF ~~ THEN BEGIN PD3-7a
+SAY ~E per di più, da quando ha fatto quella scenata ed ha abbandonato il gruppo, non posso nemmeno sgridarla quando si distrae in battaglia!~
 IF ~~ THEN EXIT
 END
 

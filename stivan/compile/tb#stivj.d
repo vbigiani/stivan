@@ -1272,7 +1272,11 @@ INTERJECT_COPY_TRANS BODHIAMB 19 tb#StivanBodhiamb-19
 END
 
 INTERJECT_COPY_TRANS BODHIAMB 17 tb#StivanBodhiamb-17
-== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Aerie - soltanto io ho il diritto di maltrattarla! <CHARNAME>, inseguiamola!~
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) GlobalLT("tb#StivanAerie","GLOBAL",100)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Aerie - soltanto io ho il diritto di maltrattarla! <CHARNAME>, inseguiamola!~
+END
+
+INTERJECT_COPY_TRANS BODHIAMB 17 tb#StivanBodhiamb-17
+== TB#STIVJ IF ~IsValidForPartyDialog("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID) GlobalGT("tb#StivanAerie","GLOBAL",99)~ THEN ~No! Non possiamo permettere che quella bruttona porti via con sè Aerie - se non posso maltrattarla io, nessuno può! <CHARNAME>, inseguiamola!~
 END
 
 INTERJECT_COPY_TRANS UDSILVER 0 tb#StivanUdsilver-0
