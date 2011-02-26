@@ -69,15 +69,15 @@ BRANCH ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Gl
 == MINSCJ ~Boo dice che dovremmo andare a trovare Aerie al circo e fare in modo che Stivan si scusi, così non dobbiamo abbandonare né il nostro amico CHARNAME né la nostra strega Aerie!~ 
 END
 BRANCH ~IsValidForPartyDialog("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ BEGIN
-== JAHEIRJ ~Perchè invece di fuggire non affronti il problema? Se ti sottrai ad ogni difficoltà, non imparerai nulla dalla vita.~
+== JAHEIRAJ ~Perchè invece di fuggire non affronti il problema? Se ti sottrai ad ogni difficoltà, non imparerai nulla dalla vita.~
 == BAERIE ~Cosa potrei imparare da un essere così cattivo? Inoltre sono p-più grande di te, Jaheira... Non ho bisogno dei tuoi consigli!~
-== JAHEIRJ ~Età non significa esperienza. Lo capirai col tempo, spero.~
+== JAHEIRAJ ~Età non significa esperienza. Lo capirai col tempo, spero.~
 END
 BRANCH ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ BEGIN
 == CERNDJ ~Vergognati, Stivan. La crudeltà verso gli animali è tirocinio della crudeltà verso gli uomini.~
-== BTB#STIV ~Cosa *diavolo* c'entra questo con la dipartita di quella scema?~
+== TB#STIVB ~Cosa *diavolo* c'entra questo con la dipartita di quella scema?~
 == CERNDJ ~Ti sei forse dimenticato che il vostro diverbio ha avuto inizio dall'uccisione di un'innocente farfalla?~
-== BTB#STIV ~Ah sì?~
+== TB#STIVB ~Ah sì?~
 == CERNDJ ~...~
 END
 BRANCH ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ BEGIN
@@ -92,9 +92,9 @@ BRANCH ~InParty("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ BEGIN
 END
 BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == NALIAJ ~Le tue azioni sono inconcepilmente disprezzabili, Stivan!~
-== TB#STIVJ ~Eh?~
+== TB#STIVB ~Eh?~
 == NALIAJ ~Intendo dire che devi istantaneamente recarti a porgere ammenda per il tuo turpe comportamento!~
-== TB#STIVJ ~Insomma, non capisco il linguaggio colto! Parla come mangi!~
+== TB#STIVB ~Insomma, non capisco il linguaggio colto! Parla come mangi!~
 == NALIAJ ~...~
 END
 == EDWINJ IF ~InParty("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(Che stia imparando da me come si trattano le donne?)~
@@ -113,7 +113,7 @@ END
 == VALYGARJ IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Non so se essere lieto per aver rimosso uno stregone dal gruppo, o adirato per averci dentro un demone.~
 == IMOEN2J IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Stivan! Il tuo comportamento non è per niente simpatico!~
 BRANCH ~IsValidForPartyDialog("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ BEGIN
-== YOSHIMJ ~E' un peccato che tu te ne vada.~
+== YOSHJ ~E' un peccato che tu te ne vada.~
 == BAERIE ~Non ho scelta, Yoshimo. Mi... Mi dispiace...~
 END
 == KORGANJ IF ~InParty("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Har! Congratulazioni, Stivan! Stanotte ti pago io la prostituta, te la sei meritata!~
