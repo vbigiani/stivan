@@ -1,0 +1,73 @@
+IF
+  Global("tb#StivanAerie","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("tb#StivanAerie","GLOBAL",5)
+    ActionOverride("Aerie",ForceSpell(Myself,WIZARD_STONE_SKIN))
+    Wait(2)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+    ActionOverride("tb#sass",ApplySpell(Myself,WIZARD_INVISIBILITY))
+    ActionOverride("tb#sass",AttackReevaluate("aerie",30))
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",5)
+  Dead("tb#sass")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",6)
+THEN
+  RESPONSE #100
+    SetGlobal("tb#StivanAerie","GLOBAL",7)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",7)
+  NumDead("tb#sass",3)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",9)
+THEN
+  RESPONSE #100
+    SetGlobal("tb#StivanAerie","GLOBAL",10)
+    ActionOverride("aerie",SetSequence(SEQ_CAST))
+    SetGlobalTimer("tb#StivanAerieTimer","AR0607",60)
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",10)
+  GlobalTimerNotExpired("tb#StivanAerieTimer","AR0607")
+  !GlobalTimerNotExpired("tb#StivanAerieTimer2","AR0607")
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",SetSequence(SEQ_CAST))
+    SetGlobalTimer("tb#StivanAerieTimer2","AR0607",6)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+  RESPONSE #100
+    ActionOverride("aerie",SetSequence(SEQ_CONJURE))
+    SetGlobalTimer("tb#StivanAerieTimer2","AR0607",6)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+END
+
+IF
+  Global("tb#stivanAerie","GLOBAL",10)
+  GlobalTimerExpired("tb#StivanAerieTimer","AR0607")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",SetSequence(SEQ_READY))
+    ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+  
