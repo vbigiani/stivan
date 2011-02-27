@@ -111,6 +111,10 @@ BRANCH ~InParty("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ BEGIN
 == BVICONI ~Potrei dire lo stesso.~
 END
 == BVALYGA IF ~InParty("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Non so se essere lieto per aver rimosso uno stregone dal gruppo, o adirato per averci dentro un demone.~
+BRANCH ~InParty("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~  BEGIN
+== BJAN ~Tieni, Aerie: uno stufato di rape ti solleverà sicuramente il morale!~
+== BAERIE ~...~
+END
 == BIMOEN2 IF ~InParty("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Stivan! Il tuo comportamento non è per niente simpatico!~
 BRANCH ~IsValidForPartyDialog("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ BEGIN
 == BYOSHIM ~E' un peccato che tu te ne vada.~
