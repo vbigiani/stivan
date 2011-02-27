@@ -42,21 +42,33 @@ DO ~SetGlobal("tb#StivanAerie", "GLOBAL",3)~
 == BAERIE ~AHHH! N-non avvicinarti!~
 == TB#STIVB ~Ebbene? Non vuoi più i resti di questa creaturina dalle ali sfaldate? A proposito, che ironica coincidenza: è la stessa fine che hanno fatto le tue, giusto?~
 == BAERIE ~N-no!~
+== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Ora basta, Stivan! Hai oltrepassato il limite!~
 == TB#STIVB ~Hai ragione: sono appassite, sono marcite!~
-== BAERIE ~(Singhiozzando) S-smettila!~
-== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Aerie, ignoralo. L'indifferenza è il miglior atteggiamento da assumere in questi casi. Quanto a te, Stivan, stai iniziando a stamcarmi col tuo comportamento infantile.~
+== BAERIE ~S-smettila!~
 == TB#STIVB ~Lo sai che non ricresceranno più?~
+== BMAZZY IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~*Piantala*!~
 == BAERIE ~Ahhh!~
 == TB#STIVB ~"E fu così che Aerie scoppiò in lacrime e corse via". Quando voglio sbarazzarmi di una persona fastidiosa so essere *così* crudele... Mwahahahah!~
 == BMINSC IF ~IsValidForPartyDialog("Minsc")~ ~Non capisco. Perché il nostro amico Stivan sta parlando così male della dolce Aerie?~
-== BAERIE ~Sob! Io... Io non ne posso più dei tuoi continui insulti! Me..me ne torno da Quayle.~
-= ~<CHARNAME>, non... non cercarmi. Non prima di esserti disfatta di..di...~
+== BAERIE IF ~!Dead("quaylem") !Dead("quayle")~ THEN ~*SOB*! Ho deciso. Me ne vado... Torno da zio Quayle!~
+== BAERIE IF ~OR(2) Dead("quaylem") Dead("quayle")~ THEN ~*SOB*! Ho deciso. Me ne vado... Torno al circo!~
+== BAERIE ~<CHARNAME>, non... Non cercarmi. Non prima di esserti disfatta di... di... di quel...~
 END
-IF ~!Global("aerieRomanceActive","GLOBAL",1) !Global("aerieRomanceActive","GLOBAL",2)~ THEN REPLY ~Bene, vattene e non tornare più.~ EXTERN BAERIE aeriegone1
-IF ~!Global("aerieRomanceActive","GLOBAL",1) !Global("aerieRomanceActive","GLOBAL",2)~ THEN REPLY ~Aspetta, Aerie, cerca di ignorare Stivan!~ EXTERN BAERIE aeriegone1
-IF ~OR(2) Global("aerieRomanceActive","GLOBAL",1) Global("aerieRomanceActive","GLOBAL",2)~ THEN REPLY ~Aspetta, Aerie, non lasciarmi solo!~ EXTERN BAERIE aeriegone1
+IF ~OR(2) Global("aerieRomanceActive","GLOBAL",1) Global("aerieRomanceActive","GLOBAL",2)~ THEN REPLY ~Aerie, no! Non lasciarmi solo!~ EXTERN BAERIE aeriegone3
+IF ~OR(2) Global("aerieRomanceActive","GLOBAL",1) Global("aerieRomanceActive","GLOBAL",2)~ THEN REPLY ~Credevo... Credevo che tu ed io avessimo un rapporto speciale. Invece vedo che non esiti a voltarmi le spalle. Non significo nulla per te?~ EXTERN BAERIE aeriegone1
+IF ~!Global("aerieRomanceActive","GLOBAL",1) !Global("aerieRomanceActive","GLOBAL",2)~ THEN REPLY ~Così sia. Vattene e non tornare mai più.~ EXTERN BAERIE aeriegone3
+IF ~~ THEN REPLY ~Sapevo che sarebbe andata a finire così. Stivan, sei un idiota!~ EXTERN BAERIE aeriegone3
+IF ~~ THEN REPLY ~Dovresti vergogarti di te stessa. Sarebbe questo il modo con cui mi ringrazi per averti strappato dalle grinfie di Kalah?~ EXTERN BAERIE aeriegone2
 
 CHAIN IF ~~ THEN BAERIE aeriegone1
+~Io... Sono io a non significare nulla per te, altrimenti non gli avresti permesso di maltrattarmi in questo modo! Ormai... E' finita.~
+EXTERN BAERIE aeriegone3
+
+CHAIN IF ~~ THEN BAERIE aeriegone2
+~No, non è andata così. Tu... Mi hai salvata da un mostro solo per mettermi nelle mani di un altro! Ma ora... Ora basta.~
+EXTERN BAERIE aeriegone3
+
+CHAIN IF ~~ THEN BAERIE aeriegone3
 ~Addio, <CHARNAME>.~
 == BMINSC IF ~InParty("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)  Global("MinscWitch","GLOBAL",0)~ THEN ~Perché la dolce Aerie se ne va? Dobbiamo andare subito a salvarla, <CHARNAME>!~
 BRANCH ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Global("MinscWitch","GLOBAL",1)~ BEGIN
