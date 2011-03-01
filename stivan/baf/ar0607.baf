@@ -47,7 +47,7 @@ THEN
   RESPONSE #100
     SetGlobal("tb#StivanAerie","GLOBAL",10)
     ActionOverride("aerie",ForceSpell(Myself,RAELIS_OPEN_PORTAL))
-    SetGlobalTimer("tb#StivanAerieTimer","AR0607",60)
+    SetGlobalTimer("tb#StivanAerieTimer","AR0607",36)
 END
 
 IF
