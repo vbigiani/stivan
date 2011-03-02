@@ -191,6 +191,15 @@ END
 
 CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",3) IsValidForPartyDialog("tb#stiv")~ THEN aeriep assassination
 ~Cosa ci fai qui, <CHARNAME>?~
+BRANCH ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Global("MinscWitch","GLOBAL",1)~ BEGIN
+== BMINSC ~Aerie! Sei sana e salva! Oh, la tua fuga ha quasi spezzato il piccolo cuore di Boo, e anche quello di Minsc è stato sul punto di andare in frantumi!~
+== AERIEP ~Sono felice di rivedervi. Mi rattrista sapere di avervi fatto soffrire, ma... Dovete abituarvi all'idea di non avermi più al vostro fianco.~
+== BMINSC ~No! Non lo accetto! Senza di te Boo ed io siamo come un fodero senza spada, un'elsa senza lama o... uno scoiattolo senza noci! Non puoi abbandonarci!~
+== AERIEP ~Io...~
+== BMINSC ~Minsc capisce che tu voglia stare per conto tuo. A volte anche la possente Dynaheir chiedeva ai suoi fieri guardiani di lasciarla da sola per un po'  , ma non li avrebbe mai abbandonati, nossignore! Sapeva bene che dopo un momento buio e difficile Minsc e Boo erano pronti a risollevarle il morale!~
+== AERIEP ~Sono... commossa, Minsc. Solo adesso mi rendo conto di quanto tu e il tuo criceto mi vogliate bene!~
+== tb#stivj ~*Ahem* Immagino che sia giunto il mio turno. Beh, io...~
+END
 == tb#stivj ~Aerie, dietro di te! Lancia Pelle di Pietra!~
 == AERIEP ~Taci! Perché dovrei ascoltarti?~
 == tb#stivj ~Fallo e basta!~
@@ -198,19 +207,27 @@ END
 IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",4)~ EXIT
 
 CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",5) Dead("tb#sass") IsValidForPartyDialog("tb#stiv")~ THEN aeriep postassassination
-~Gr... grazie, Stivan. Non mi aspettavo un simile gesto altruista.~
-== tb#stivj ~Scusami, Aerie, a volte sono un idiota.~
+~(Pant pant) Grazie, Stivan. Io... Non mi aspettavo un gesto così altruista da parte tua.~
+== tb#stivj ~Scusami, Aerie. A volte sono un idiota.~
 == aeriep ~E' troppo facile insultare le persone e poi chiedere scusa!~
 == tb#stivj ~Mi dispiace, Aerie, ma non so cos'altro fare oltre che ripetere il vuoto rituale del chiedere scusa.~
-= ~Aspetta, la faccia di quell'assassino non è mi nuova...~
 = ~Attenta, un altro!~
 DO ~SetGlobal("tb#StivanAerie","GLOBAL",6)~
 EXIT
 
 CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",7) NumDead("tb#sass",3) IsValidForPartyDialog("tb#stiv")~ THEN aeriep divination1
-~Oh mamma, chi mi può volere così male da mandare tutti questi assassini?~
+~Baervar mi protegga! Chi può volermi così male da mandare tutti questi assassini?~
 == tb#stivj ~Non lo so.~
-= ~Però che strano, hanno tutti e tre la stessa identica faccia... Sembrano gemelli.~
+BRANCH ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID) Global("HaerDalisRomanceActive","GLOBAL",2)~ BEGIN
+== BHAERDA ~Amore mio! Sei ferita? Stai bene?~
+== AERIEP ~S-sì... Credo di sì, sono solo un po' scossa...~
+== BHAERDA ~Perdonami. Perdonami per non aver difeso il tuo onore come avrei dovuto. L'istinto detta il dovere, ma l'intelligenza fornisce sempre i pretesti per eluderlo.~
+== AERIEP ~Questo... Non è davvero il momento.~
+== BHAERDA ~Ti prego, non respingermi. Lascia che questo sparviero abbia la possibilità di redimersi dalle proprie colpe. Un amore crollato, se ricostruito, cresce forte, leggiadro, forte più di prima.~
+= ~Abbracciami; abbracciami ancora una volta, e posa le tue labbra che stillano miele vergine sulle mie!~
+== AERIEP ~(Arrossisce) Noi... Ne riparleremo più tardi, quando avremo capito cosa sta succedendo...~
+END
+== tb#stivj ~E' una mia impressione o questi tizi hanno la stessa faccia? Quasi fossero... gemelli.~
 = ~Gasp! Uno si è volatilizzato nell'aria!~
 == aeriep ~Ho sentito parlare di cose simili... una magia che... che evoca continuamente assassini contro la... vittima.~
 == tb#stivj ~Gasp! Come si ferma questa magia?~
