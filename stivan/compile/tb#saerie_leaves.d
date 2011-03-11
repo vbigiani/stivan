@@ -303,7 +303,7 @@ CHAIN IF ~~ THEN aeriep gotTarget1
 == tb#stivj ~*Ahem* Penso di aver capito di quale edificio si tratti, ma non so se gioire di questa scoperta o strapparmi i capelli per quello che ci aspetta.~
 END
 IF ~~ THEN REPLY ~Per quello che *ti* aspetta. Non illuderti che mi sia dimenticato della tua responsabilità.~ EXTERN tb#stivj gotTarget2
-IF ~~ THEN REPLY ~Per Bhaal, vogliamo giungere al dunque?!~ EXTERN tb#stivj gotTarget2
+IF ~~ THEN REPLY ~Per gli Dei, vogliamo giungere al dunque?!~ EXTERN tb#stivj gotTarget2
 IF ~~ THEN REPLY ~Ti prego, dimmi che è qui ad Athkatla e non sui Picchi delle Nuvole.~ EXTERN tb#stivj gotTarget2
 
 CHAIN IF ~~ THEN tb#stivj gotTarget2
