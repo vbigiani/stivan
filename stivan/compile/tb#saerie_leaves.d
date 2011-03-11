@@ -229,72 +229,127 @@ BRANCH ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID) Global("
 END
 == tb#stivj ~E' una mia impressione o questi tizi hanno la stessa faccia? Quasi fossero... gemelli.~
 = ~Gasp! Uno si è volatilizzato nell'aria!~
-== aeriep ~Ho sentito parlare di cose simili... una magia che... che evoca continuamente assassini contro la... vittima.~
-== tb#stivj ~Gasp! Come si ferma questa magia?~
-== aeriep ~Chiunque l'abbia lanciata possiede un ricciolo dei miei capelli. Se qualcuno riuscisse a toglierglielo l'effetto svanirebbe... almeno credo.~
-== tb#stivj ~Heh, credo di fare al caso tuo. Modestamente, sono un mago nei furti! Dove trovo l'autore di questa stregoneria?~
-== aeriep ~Posso provare con un'incantesimo di divinazione... ma voi dovete proteggermi mentre lo lancio.~
+== aeriep ~Ho p-paura di essere vittima di un maleficio! Qualcuno... Qualcuno mi vuole morta!~
+== BMINSC IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Chi?! Chi osa attentare alla vita dell'innocente Aerie?!~
+== BEDWIN IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Qualcuno che vuole sbarazzarsi di una potenziale avversaria. In Thay simili incantesimi sono all'ordine del giorno, anche se in questo caso il lanciatore deve mancare di buon senso. (Come può temere una mediocre balbuziente? Sono *io* la vera minaccia!)~
 END
-IF ~~ THEN REPLY ~Un attimo e siamo pronti.~ EXTERN aeriep divination2
-IF ~~ THEN REPLY ~Siamo pronti. Fai quello che devi fare.~ EXTERN aeriep divination3
+IF ~OR(2) Kit(Player1,INQUISITOR) Kit(Player1,WIZARDSLAYER)~ THEN REPLY ~Conosco abbastanza le arti oscure da sapere che simili rituali richiedono un oggetto della vittima. Hai forse perso qualcosa ultimamente?~ EXTERN aeriep divination4
+IF ~OR(2) Class(Player1,MAGE_ALL) Class(Player1,SORCERER) !Alignment(Player1,MASK_EVIL)~ THEN REPLY ~Ho studiato abbastanza sulle maledizioni da sapere che simili rituali richiedono un oggetto della vittima. Hai forse perso qualcosa ultimamente?~ EXTERN aeriep divination4
+IF ~OR(2) Class(Player1,MAGE_ALL) Class(Player1,SORCERER) Alignment(Player1,MASK_EVIL)~ THEN REPLY ~Ho us..studiato abbastanza maledizioni da sapere che simili rituali richiedono un oggetto della vittima. Hai forse perso qualcosa ultimamente?~ EXTERN aeriep divination4
+IF ~~ THEN REPLY ~Faremo il possibile per proteggerti. Hai idea di come porre fine a queste apparizioni?~ EXTERN aeriep divination2
+IF ~~ THEN REPLY ~Non capisco. E' forse successo qualcosa di importante da quando ci hai lasciati?~ EXTERN aeriep divination3
+IF ~~ THEN REPLY ~Ovviamente tutto questo non sarebbe mai successo se tu avessi evitato un'uscita di scena a dir poco melodrammatiche. (Sospiro) Suggerimenti sul da farsi sono ben accetti.~ EXTERN aeriep divination2
 
 APPEND aeriep
   IF ~~ THEN divination2
-    SAY ~Per favore, fai in fretta!~
-      IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",8)~ EXIT
-    END
-
+    SAY ~Non è possibile spezzare un sortilegio se non si conosce il modo in cui è stato scagliato! L'artefice di tutto questo deve avere qualcosa che mi appartiene... Ma cosa?~
+    IF ~~ THEN EXTERN aeriep divination4
+  END
+  
   IF ~~ THEN divination3
-    SAY ~Gr.. Grazie. Arrivano...~
-      IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",9)~ EXIT
-    END
-    
+    SAY ~No... Sono corsa subito qui. Ho-ho iniziato a tirar fuori le mie cose dallo zaino e mi sono accorta di non avere più un oggetto a me caro...~ 
+    IF ~~ THEN EXTERN aeriep divination4
+  END
+END
+
+CHAIN IF ~~ THEN aeriep divination4
+~Il... Il mio amuleto! Il mio amuleto a forma di procione! Credevo di averlo perso durante uno dei nostri scontri, invece... Deve avermelo rubato questo stregone!~
+== tb#stivj ~*Ahem* E' forse inciso nel legno?~
+== aeriep ~S-sì, ma... Come fai a saperlo? L'ho sempre custodito gelosamente per evitare che si rovinasse...~
+== tb#stivj ~Beh, ecco... E' probabile che sia finito nelle mani sbagliate...~
+END
+IF ~~ THEN REPLY ~Hai qualche sospetto? Conosci il responsabile?~ EXTERN tb#stivj divination5
+IF ~~ THEN REPLY ~La domanda che sto per farti sorge spontanea, Stivan. Se Aerie non ha mai indossato l'amuleto, come puoi conoscere il materiale di cui è fatto?~ EXTERN tb#stivj divination5
+IF ~~ THEN REPLY ~E' meglio che non dia voce al terribile sospetto che mi attraversa la mente...~ EXTERN tb#stivj divination5
+
+CHAIN IF ~~ THEN tb#stivj divination5
+~La... La scorsa notte, durante il mio turno di guardia, le ho rubato quel gingillo e l'ho gettato via per dispetto. Poi più tardi ho visto una persona in lontananza che lo raccoglieva, ma...~
+== aeriep ~NOO! Come... Come hai potuto mettere a rischio la mia vita per una simile sciocchezza? Cosa ti è saltato in testa?!~
+== tb#stivj ~(Glom!) Non immaginavo fosse un cattivone!~
+== aeriep ~Oh, dannazione, non... Non posso perdere altro tempo! <CHARNAME>, devo... Devo individuare il luogo in cui si trova l'autore di questa stregoneria, ma ho bisogno che tu mi protegga mentre mi servo della mia magia! Ti prego, aiutami!~
+END
+IF ~~ THEN REPLY ~Lo farò, ma lasciami qualche istante per prepararmi al nuovo attacco.~ EXTERN aeriep divination6
+IF ~~ THEN REPLY ~Non c'è bisogno che tu lo ripeta. Ti difenderò a costo della mia stessa vita!~ EXTERN aeriep divination7
+
+APPEND aeriep
+  IF ~~ THEN divination6
+  SAY ~Per favore, fà in fretta!~
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",8)~ EXIT
+  END
+
+  IF ~~ THEN divination7
+  SAY ~Grazie. Io... Porrò fine a questo orribile incubo...~
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",9)~ EXIT
+  END
+
   IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",8) IsValidForPartyDialog("tb#stiv")~ ready
-    SAY ~Siete pronti?~
-      IF ~~ THEN REPLY ~Un attimo e siamo pronti.~ EXTERN aeriep divination2
-      IF ~~ THEN REPLY ~Siamo pronti. Fai quello che devi fare.~ EXTERN aeriep divination3
-    END    
+  SAY ~Siete pronti?~
+    IF ~~ THEN REPLY ~Non ancora.~ EXTERN aeriep divination6
+    IF ~~ THEN REPLY ~Sì. Ti copriremo le spalle.~ EXTERN aeriep divination7
+  END
 END
 
 CHAIN IF WEIGHT #-100 ~Global("tb#stivanAerie","GLOBAL",10) GlobalTimerExpired("tb#StivanAerieTimer","AR0607") IsValidForPartyDialog("tb#stiv")~ THEN aeriep gotTarget
-~Grazie di.. di avermi protetto. La... la mia magia ha avuto successo.~
-= ~Il mago si trova in un palazzo nel quartiere halfling.~
-== tb#stivj ~(Gasp) il palazzo di Estel Necri? La necromante halfling con le cui storie mia Mamma mi spaventava sempre quando disubbidivo?~
-== aeriep ~Non.. non lo so, ma è l'unico palazzo nel quartiere halfling.~
-== tb#stivj ~Ho capito. Allora vedo una sola strada possibile: voi restate qui a difendere Aerie, mentre io mi intrufolo là e sottraggo la tua ciocca di capelli.~
-== aeriep ~Il palazzo è pieno di guardie, nessuno riuscirebbe ad accostarsi ad Estel senza un'esercito!~
-== tb#stivj ~Dimentichi con chi parli. Io sono il Cacciatore, e nessuno è migliore di me nell'intrufolarsi in luoghi protetti e infilare una lama nella schiena dei maghi cattivi!~
-== aeriep ~Hai ragione, dimentico che sto parlando con la persona che mi ha fatto abbandonare <CHARNAME> in lacrime non un'ora fa.~
-== tb#stivj ~Perché indugiare sul passato quando nel presente rischi la vita?~
-== aeriep ~In effetti, stai rischiando la tua stessa vita per proteggermi. Grazie.~
-== tb#stivj ~Grazie a te di avermi concesso una seconda possibilità! <CHARNAME>, mi raccomando, proteggi Aerie mentre mi infiltro là!~
-= ~Non vorrei sterminare una dozzina di guardie e un arcimago per poi trovare Aerie morta perché ti sei distratto!~
+~L-l'incantesimo si è spezzato prima del previsto! Ho visto un'immagine sfocata del posto, m-ma non so con esattezza dove si trovi! Potrebbe... Potrebbe anche non essere qui ad Athkatla, e in quel caso... Oh, <CHARNAME>, aiutami!~
 END
-IF ~~ THEN REPLY ~Tranquillo, ci penso io ad Aerie.~ EXTERN tb#STIVJ gotTarget3
-IF ~~ THEN REPLY ~Aspetta un attimo qui, devo passarti qualche oggetto magico per renderti la vita più facile.~ EXTERN tb#STIVJ gotTarget2
+IF ~~ THEN REPLY ~Ovunque sia, lo troveremo. Descrivimi l'edificio che hai visto.~ EXTERN aeriep gotTarget1
+IF ~~ THEN REPLY ~Non lasciare che il panico prenda il sopravvento, Aerie. Fà un respiro profondo e cerca di focalizzare la tua visione.~ EXTERN aeriep gotTarget1
+IF ~~ THEN REPLY ~Non intendo lasciarti sola, ma ho bisogno di sapere dove si trova il responsabile di tutto questo. Stivan escluso.~ EXTERN aeriep gotTarget1
+
+CHAIN IF ~~ THEN aeriep gotTarget1
+~(Sniff) E'... E' una villa. E' c-circondata da numerose guardie, benchè la strada su cui si affaccia sia deserta. Incute molta paura...~
+== tb#stivj ~Altro?~
+== aeriep ~Dall'esterno... Sembra molto lussuosa e... C'è uno stemma all'entrata. Uno stemma a forma di artigilio, credo...~
+== tb#stivj ~*Ahem* Penso di aver capito di quale edificio si tratti, ma non so se gioire di questa scoperta o strapparmi i capelli per quello che ci aspetta.~
+END
+IF ~~ THEN REPLY ~Per quello che *ti* aspetta. Non illuderti che mi sia dimenticato della tua responsabilità.~ EXTERN tb#stivj gotTarget2
+IF ~~ THEN REPLY ~Per Bhaal, vogliamo giungere al dunque?!~ EXTERN tb#stivj gotTarget2
+IF ~~ THEN REPLY ~Ti prego, dimmi che è qui ad Athkatla e non sui Picchi delle Nuvole.~ EXTERN tb#stivj gotTarget2
+
+CHAIN IF ~~ THEN tb#stivj gotTarget2
+~Nel Quartiere del Ponte c'è un edificio che risponde alla sua descrizione: la villa di Ester Necri.~
+= ~Malgrado sia una della nostra gente, è terribilmente malvagia. Credo non esista un halfling più perfido di lei!~
+== aeriep ~T-tu...?~
+== tb#stivj ~Io?!~
+== aeriep ~Vorresti negare di essere cattivo? Hai-hai dato al mio carnefice la scure con cui uccidermi!~
+== tb#stivj ~Io non sono cattivo! Mia mamma diceva sempre che sono soltanto un po'... vivace, ecco!~
+= ~Non guardarmi con quella faccia scettica, elfa. Io sono un bravo halfling, e te lo dimostrerò! Se recuperassi il tuo gingillo, riusciresti a porre fine al maleficio?~
+== aeriep ~S-sì... Sarebbe sufficiente riaverlo indietro per annullare l'incantesimo che vi è stato lanciato.~
+== tb#stivj ~Bene, allora me ne occuperò io. Riavrai il tuo mantello e riconoscerai davanti a tutti che non sono cattivo!~
+== aeriep ~E' un amuleto, Stivan...~
+== tb#stivj ~Proprio quel che ho detto. <CHARNAME>, prenditi cura di Aerie mentre mi intrufolo nella villa di Ester. Non vorrei rischiare i peli dei piedi per poi trovarla morta al mio ritorno.~
+END
+IF ~~ THEN REPLY ~Hai combinato sin troppi guai, ragazzo; meglio che me ne occupi io. Non vorrei che con la tua prossima sbadataggine mi consegnassi ai miei nemici.~ EXTERN tb#STIVJ gotTarget3
+IF ~~ THEN REPLY ~Tu, piuttosto. Cerca di passare inosservato e di non farti distrarre da qualche stupido gabbiano.~ EXTERN tb#STIVJ gotTarget4
+IF ~~ THEN REPLY ~Il tuo piano può funzionare, ma non ti lascerò andare senza averti preparato a dovere. Dammi il tempo di sistemare qualche oggetto utile nel tuo zaino, dopodichè potrai andare.~ EXTERN tb#STIVJ gotTarget5
 
 APPEND tb#stivj
-  IF ~~ THEN gotTarget2
-    SAY ~Non è mai una cattiva idea prestarmi oggetti magici e costosi. Se fai il bravo te li rendo anziché venderli al mio amico Roger!~
-      IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",11)~ EXIT
-    END
-
   IF ~~ THEN gotTarget3
-    SAY ~Sono pronto.~
-      IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ EXIT
+  SAY ~Heh. Stai per scoprire il significato dell'espressione "orecchie da mercante". A dopo!~
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ EXIT
   END
-    
-  IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",11)~ gotTarget4
-    SAY ~Siete pronti a difendere Aerie mentre faccio il mio lavoro?~
-      IF ~~ THEN REPLY ~Tranquillo, ci penso io ad Aerie.~ EXTERN tb#STIVJ gotTarget3
-      IF ~~ THEN REPLY ~Aspetta un attimo qui, devo passarti qualche oggetto magico per renderti la vita più facile.~ EXTERN tb#STIVJ gotTarget2
-    END    
+  
+  IF ~~ THEN gotTarget4
+  SAY ~Heh. Farò del mio meglio.~
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ EXIT
+  END
+  
+  IF ~~ THEN gotTarget5
+  SAY ~D'accordo, anche se non prometto di restituirteli. Heh.~
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",11)~ EXIT
+  END
+
+  IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",11)~ gotTarget6
+  SAY ~Siete pronti a difendere Aerie mentre faccio il mio lavoro?~
+    IF ~~ THEN REPLY ~Direi di sì. Cerca di non farti uccidere, per favore.~ EXTERN tb#STIVJ gotTarget4
+    IF ~~ THEN REPLY ~Non ancora, ma ho quasi finito di riunire gli oggetti che potrebbero tornarti utili.~ EXTERN tb#STIVJ gotTarget5
+  END
 END
 
 APPEND aeriep
   IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",11)~ THEN gotTarget
-    SAY ~Fo.. forse dovresti parlare con Stivan.~
-      IF ~~ THEN EXTERN tb#stivj gotTarget4
+  SAY ~Forse... Dovresti parlare con Stivan.~
+    IF ~~ THEN EXTERN tb#stivj gotTarget6
   END
 END
 
