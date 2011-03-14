@@ -216,7 +216,7 @@ DO ~SetGlobal("tb#StivanAerie","GLOBAL",6)~
 EXIT
 
 CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",7) NumDead("tb#sass",3) IsValidForPartyDialog("tb#stiv")~ THEN aeriep divination1
-~Baervar mi protegga! Chi può volermi così male da mandare tutti questi assassini?~
+~Baervan mi protegga! Chi può volermi così male da mandare tutti questi assassini?~
 == tb#stivj ~Non lo so.~
 BRANCH ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID) Global("HaerDalisRomanceActive","GLOBAL",2)~ BEGIN
 == BHAERDA ~Amore mio! Sei ferita? Stai bene?~
@@ -326,17 +326,23 @@ IF ~~ THEN REPLY ~Il tuo piano può funzionare, ma non ti lascerò andare senza av
 APPEND tb#stivj
   IF ~~ THEN gotTarget3
   SAY ~Heh. Stai per scoprire il significato dell'espressione "orecchie da mercante". A dopo!~
-    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ EXIT
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ UNSOLVED_JOURNAL ~Aerie lascia il gruppo.
+ 
+Al circo ho trovato Aerie, fortunatamente prima che cadesse vittima di misteriosi assassini. Pare che l'elfa sia vittima di un maleficio che le è stato scagliato da una necromante halfing attraverso un suo amuleto. Dal momento che è in parte responsabile dell'accaduto, Stivan si è offerto di recuperarlo: soltanto in questo modo sarà possibile spezzare l'incantesimo. Nel frattempo cercherò di proteggere Aerie da ulteriori attacchi.~ EXIT
   END
   
   IF ~~ THEN gotTarget4
   SAY ~Heh. Farò del mio meglio.~
-    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ EXIT
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",12)~ UNSOLVED_JOURNAL ~Aerie lascia il gruppo.
+ 
+Al circo ho trovato Aerie, fortunatamente prima che cadesse vittima di misteriosi assassini. Pare che l'elfa sia vittima di un maleficio che le è stato scagliato da una necromante halfing attraverso un suo amuleto. Dal momento che è in parte responsabile dell'accaduto, Stivan si è offerto di recuperarlo: soltanto in questo modo sarà possibile spezzare l'incantesimo. Nel frattempo cercherò di proteggere Aerie da ulteriori attacchi.~ EXIT
   END
   
   IF ~~ THEN gotTarget5
   SAY ~D'accordo, anche se non prometto di restituirteli. Heh.~
-    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",11)~ EXIT
+    IF ~~ THEN DO ~SetGlobal("tb#StivanAerie","GLOBAL",11)~ UNSOLVED_JOURNAL ~Aerie lascia il gruppo.
+ 
+Al circo ho trovato Aerie, fortunatamente prima che cadesse vittima di misteriosi assassini. Pare che l'elfa sia vittima di un maleficio che le è stato scagliato da una necromante halfing attraverso un suo amuleto. Dal momento che è in parte responsabile dell'accaduto, Stivan si è offerto di recuperarlo: soltanto in questo modo sarà possibile spezzare l'incantesimo. Nel frattempo cercherò di proteggere Aerie da ulteriori attacchi.~ EXIT
   END
 
   IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",11)~ gotTarget6
@@ -364,8 +370,8 @@ IF ~!Dead("tb#sgua")~ THEN necri
 SAY ~Chi va là?~
 IF ~!StateCheck("tb#stiv",STATE_INVISIBLE)~ THEN REPLY ~(Tagliale la gola in silenzio)~ GOTO slitThroatFail
 IF ~StateCheck("tb#stiv", STATE_INVISIBLE)~ THEN REPLY ~(Tagliale la gola in silenzio)~ GOTO slitThroatSuccess
-IF ~CheckStatLT("tb#stiv",100,PICKPOCKET)~ THEN REPLY ~(Tenta di rubare la ciocca di capelli)~ GOTO pickpocketFail
-IF ~CheckStatGT("tb#stiv",99,PICKPOCKET)~  THEN REPLY ~(Tenta di rubare la ciocca di capelli)~ EXTERN tb#stivj pickpocketSuccess
+IF ~CheckStatLT("tb#stiv",100,PICKPOCKET)~ THEN REPLY ~(Tenta di rubare l'amuleto)~ GOTO pickpocketFail
+IF ~CheckStatGT("tb#stiv",99,PICKPOCKET)~  THEN REPLY ~(Tenta di rubare l'amuleto)~ EXTERN tb#stivj pickpocketSuccess
 IF ~~ THEN REPLY ~(Chiedi perché manda assassini)~ EXTERN tb#stivj askNecri
 END
 
@@ -398,10 +404,25 @@ APPEND TB#STIVJ
 END
 
 CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",13) PartyHasItem("tb#sloc") InMyArea("tb#stiv")~ THEN aeriep final
-~Hai.. hai la mia ciocca di capelli?~
-== tb#stivj ~Ci puoi scommettere. Ora, sei disposta a perdonarmi?~
-DO ~SetGlobal("tb#StivanAerie","GLOBAL",100)~
-== aeriep ~S.. Sì. Hai dimostrato che sei disposto a mettere a rischio la tua vita per difendermi, nonostante tutto.~
-= ~<CHARNAME>, vuoi che mi riunisca al gruppo?~
-COPY_TRANS aeriep 0
+~L'amuleto! Ce l'hai!~
+== tb#stivj ~Ecco a te, con le mie scuse per il pasticcio che ho combinato.~
+DO ~SetGlobal("tb#StivanAerie","GLOBAL",100) EraseJournalEntry(%Aerie lascia il gruppo.
+Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. Devo andare al Circo a vedere se sia disposta a scusarci.%) EraseJournalEntry(%Aerie lascia il gruppo.
+ 
+Al circo ho trovato Aerie, fortunatamente prima che cadesse vittima di misteriosi assassini. Pare che l'elfa sia vittima di un maleficio che le è stato scagliato da una necromante halfing attraverso un suo amuleto. Dal momento che è in parte responsabile dell'accaduto, Stivan si è offerto di recuperarlo: soltanto in questo modo sarà possibile spezzare l'incantesimo. Nel frattempo cercherò di proteggere Aerie da ulteriori attacchi.%) AddJournalEntry(%Aerie lascia il gruppo.
+ 
+Stivan è riuscito a recuperare l'amuleto a forma di procione di Aerie, la quale ha subito provveduto a spezzare il sortilegio. L'halfling si è scusato con l'elfa, chiaramente diffidente visto l'accaduto. Posso solo augurarmi che quei due la finiscano di litigare... Non ne posso più!%,QUEST_DONE)~
 
+== aeriep ~Ora... Ora potrò spezzare questo orribile maleficio una volta per tutte!~
+/* (Aerie lancia un incantesimo) */
+== tb#stivj ~Ha funzionato?~
+== aeriep ~S-sì... Credo di sì.~
+== tb#stivj ~Posso sapere perchè tieni tanto a quel gingillo?~
+== aeriep ~E' un regalo di zio Quayle. Me lo diede quando iniziò a raccontarmi delle avventure di Baervan e del suo fedele procione Chiktika Fastpaws. Oltre ai ricordi, è t-tutto ciò che mi resta di lui...~
+== aeriep ~E' un regalo di zio Quayle. Me lo diede quando iniziò a raccontarmi delle avventure di Baervan e del suo fedele procione Chiktika Fastpaws. Mi-mi piace stringerlo tra le mani quando ne sento la mancanza...~
+== tb#stivj ~Fantastico. Adesso mi sento ancora più in colpa per averlo gettato via.~
+== aeriep ~Ogni azione ha le sue conseguenze, e quelli che agiscono d'impulso come te causano i danni maggiori!~
+== tb#stivj ~(Sospiro) Io ti ho porto le mie scuse; sta a te decidere cosa farne.~
+== aeriep ~N-non puoi pretendere che le accetti subito. Il perdono arriva col tempo, e inoltre... Non è sempre detto che ci sia.~
+= ~<CHARNAME>, vuoi... Mi vuoi di nuovo nel gruppo?~
+COPY_TRANS aeriep 0
