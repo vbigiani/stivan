@@ -2600,6 +2600,7 @@ See("cernd")
 Global("tb#StivanCernd","GLOBAL",8)
 PartyHasItem("miscb2")~ THEN TB#STIVJ StivanCernd8
 ~Cernd, scusami per averti attaccato. Se hai mentito, lo hai fatto solo a fin di bene.~
+DO ~SetGlobal("tb#StivanCernd","GLOBAL",9)~
 == CERNDJ ~Ti ringrazio per la tua comprensione.~
 = ~Ora dim---~
 == TB#STIVJ ~*splash*~
