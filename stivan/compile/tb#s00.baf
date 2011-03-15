@@ -96,6 +96,7 @@ THEN
     ActionOverride("tb#stiv",MoveToPoint([1800.1050]))
     MoveViewPoint([1850.1000],INSTANT)
     Wait(5)
+    ActionOverride("tb#snec",SetNumTimesTalkedTo(0))
     EndCutSceneMode()
 END
 IF

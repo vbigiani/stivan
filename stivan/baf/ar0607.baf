@@ -82,6 +82,16 @@ THEN
     ActionOverride("tb#stiv",LeaveAreaLUA("tb#s00","",[950.1750],6))
     EndCutSceneMode()
 END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",99)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ActionOverride("aerie",ForceSpell(Myself,CLERIC_FALSE_DAWN))
+    Wait(8)
+    ActionOverride("tb#stiv",StartDialogueNoSet(Myself))
+END
   
 IF
   Global("tb#StivanAerie","GLOBAL",13)

@@ -378,12 +378,7 @@ EXIT
 
 BEGIN TB#SNEC
 
-IF ~Dead("tb#sgua")~ THEN kill
-SAY ~Tu! Hai ucciso le mie guardie! Muori!~
-IF ~~ THEN DO ~Enemy() Shout(153)~ EXIT
-END
-
-IF ~!Dead("tb#sgua")~ THEN necri
+IF ~!Dead("tb#sgua") !PartyHasItem("tb#sloc")~ THEN necri
 SAY ~Chi va là?~
 IF ~!StateCheck("tb#stiv",STATE_INVISIBLE)~                                       THEN REPLY ~(Tagliale la gola in silenzio)~ DO ~SetGlobal("tb#sslitfail","TB#S00",1)~ EXIT
 IF ~StateCheck("tb#stiv", STATE_INVISIBLE)~                                       THEN REPLY ~(Tagliale la gola in silenzio)~ DO ~SetGlobal("tb#sslitsucc","TB#S00",1)~ EXIT
@@ -393,10 +388,20 @@ IF ~StateCheck("tb#stiv", STATE_INVISIBLE) CheckStatGT("tb#stiv",99,PICKPOCKET)~
 IF ~~                                                                             THEN REPLY ~(Chiedi perché manda assassini)~ DO ~SetGlobal("tb#sask","TB#S00",1)~ EXIT
 END
 
+IF ~Dead("tb#sgua")~ THEN kill
+SAY ~Tu! Hai ucciso le mie guardie! Muori!~
+IF ~~ THEN DO ~SetGlobal("tb#sslitfail","TB#S00",1)~ EXIT
+END
+
+IF ~True()~ THEN last
+SAY ~Chi va là?~
+IF ~~ THEN DO ~SetGlobal("tb#sslitfail","TB#S00",1)~ EXIT
+END
+
 CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",13) PartyHasItem("tb#sloc") InMyArea("tb#stiv")~ THEN aeriep final
 ~L'amuleto! Ce l'hai!~
 == tb#stivj ~Ecco a te, con le mie scuse per il pasticcio che ho combinato.~
-DO ~SetGlobal("tb#StivanAerie","GLOBAL",100) EraseJournalEntry(%Aerie lascia il gruppo.
+DO ~SetGlobal("tb#StivanAerie","GLOBAL",99) EraseJournalEntry(%Aerie lascia il gruppo.
 Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. Devo andare al Circo a vedere se sia disposta a scusarci.%) EraseJournalEntry(%Aerie lascia il gruppo.
  
 Al circo ho trovato Aerie, fortunatamente prima che venisse aggredita da misteriosi assassini. Pare che l'elfa sia vittima di un maleficio che le è stato scagliato da una necromante halfling attraverso un suo amuleto. Dal momento che è in parte responsabile dell'accaduto, Stivan si è offerto di recuperarlo: soltanto in questo modo sarà possibile spezzare l'incantesimo. Nel frattempo cercherò di proteggere Aerie da ulteriori attacchi.%) AddJournalEntry(%Aerie lascia il gruppo.
@@ -404,8 +409,11 @@ Al circo ho trovato Aerie, fortunatamente prima che venisse aggredita da misteri
 Stivan è riuscito a recuperare l'amuleto a forma di procione di Aerie, la quale ha subito provveduto a spezzare il sortilegio. L'halfling si è scusato con l'elfa, chiaramente diffidente visto l'accaduto. Posso solo augurarmi che quei due la finiscano di litigare... Non ne posso più!%,QUEST_DONE)~
 
 == aeriep ~Ora... Ora potrò spezzare questo orribile maleficio una volta per tutte!~
-/* (Aerie lancia un incantesimo) */
-== tb#stivj ~Ha funzionato?~
+EXIT
+
+CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",99)~ THEN tb#stivj final
+~Ha funzionato?~
+DO ~SetGlobal("tb#stivanAerie","GLOBAL",100)~
 == aeriep ~S-sì... Credo di sì.~
 BRANCH ~InParty("haerdalis") !StateCheck("haerdalis",CD_STATE_NOTVALID) Global("HaerDalisRomanceActive","GLOBAL",2)~ BEGIN
 == aeriep ~Haer'Dalis, ho... Ho avuto così tanta paura! Paura di non farcela e di... perderti...!~
@@ -419,8 +427,8 @@ BRANCH ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Gl
 == MINSCJ ~Sentito, male?! Il tuo fetido odore non riuscirà MAI a separare un ranger e un criceto dalla loro strega!~
 END
 == tb#stivj ~Posso sapere perchè tieni tanto a quel gingillo?~
-== aeriep ~E' un regalo di zio Quayle. Me lo diede quando iniziò a raccontarmi delle avventure di Baervan e del suo fedele procione Chiktika Fastpaws. Oltre ai ricordi, è t-tutto ciò che mi resta di lui...~
-== aeriep ~E' un regalo di zio Quayle. Me lo diede quando iniziò a raccontarmi delle avventure di Baervan e del suo fedele procione Chiktika Fastpaws. Mi-mi piace stringerlo tra le mani quando ne sento la mancanza...~
+== aeriep IF ~OR(2) Dead("quaylem") Dead("quayle")~ THEN ~E' un regalo di zio Quayle. Me lo diede quando iniziò a raccontarmi delle avventure di Baervan e del suo fedele procione Chiktika Fastpaws. Oltre ai ricordi, è t-tutto ciò che mi resta di lui...~
+== aeriep IF ~!Dead("quaylem") !Dead("quayle")~ THEN ~E' un regalo di zio Quayle. Me lo diede quando iniziò a raccontarmi delle avventure di Baervan e del suo fedele procione Chiktika Fastpaws. Mi-mi piace stringerlo tra le mani quando ne sento la mancanza...~
 == tb#stivj ~Fantastico. Adesso mi sento ancora più in colpa per averlo gettato via.~
 == aeriep ~Ogni azione ha le sue conseguenze, e quelli che agiscono d'impulso come te causano i danni maggiori!~
 == tb#stivj ~(Sospiro) Io ti ho porto le mie scuse; sta a te decidere cosa farne.~
