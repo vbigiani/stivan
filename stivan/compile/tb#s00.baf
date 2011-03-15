@@ -15,6 +15,108 @@ THEN
 END
 
 IF
+  Global("tb#sslitfail","tb#s00",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    MoveViewPoint([2000.650],INSTANT)
+    SetGlobal("tb#sslitfail","tb#s00",2)
+    ActionOverride("tb#stiv",MoveToPoint([2000.850])
+    Wait(2)
+    ActionOverride("tb#snec",DisplayStringHead(Myself,~Aiuto! Un assassino in casa!~))
+    Wait(2)
+    ActionOverride("tb#snec",Enemy())
+    ActionOverride("tb#snec",Shout(153))
+    CreateCreatureObject("tb#sgua","tb#snec",14,0,0)
+    CreateCreatureObject("tb#sgua","tb#snec",14,0,0)
+    CreateCreatureObject("tb#sgua","tb#stiv",14,0,0)
+    EndCutSceneMode()
+END
+
+IF
+  Global("tb#sask","tb#s00",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    MoveViewPoint([2000.650],INSTANT)
+    SetGlobal("tb#sask","tb#s00",2)
+    ActionOverride("tb#stiv",ApplySpellRES("jwtrue",Myself))
+    ActionOverride("tb#stiv",DisplayStringHead(Myself,~Gentile Signora, sono un amico di Aerie, e vorrei sapere perchè voi state mandando assassini contro di lei.~))
+    Wait(2)
+    ActionOverride("tb#snec",DisplayStringHead(Myself,~Aiuto! Un assassino in casa!~))
+    Wait(2)
+    ActionOverride("tb#snec",Enemy())
+    ActionOverride("tb#snec",Shout(153))
+    CreateCreatureObject("tb#sgua","tb#snec",14,0,0)
+    CreateCreatureObject("tb#sgua","tb#snec",14,0,0)
+    CreateCreatureObject("tb#sgua","tb#stiv",14,0,0)
+    EndCutSceneMode()
+END
+
+IF
+  Global("tb#spickfail","tb#s00",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    MoveViewPoint([2000.650],INSTANT)
+    SetGlobal("tb#spickfail","tb#s00",2)
+    ActionOverride("tb#stiv",MoveToPoint([2120.720]))
+    Wait(5)
+    ActionOverride("tb#stiv",ApplySpellRES("jwtrue",Myself))
+    ActionOverride("tb#stiv",Face(6))
+    ActionOverride("tb#snec",Face(14))
+    ActionOverride("tb#snec",DisplayStringHead(Myself,~Aiuto! Un assassino in casa!~))
+    Wait(2)
+    ActionOverride("tb#snec",Enemy())
+    ActionOverride("tb#snec",Shout(153))
+    CreateCreatureObject("tb#sgua","tb#snec",14,0,0)
+    CreateCreatureObject("tb#sgua","tb#snec",14,0,0)
+    CreateCreatureObject("tb#sgua","tb#stiv",14,0,0)
+    EndCutSceneMode()
+END
+
+IF
+  Global("tb#spicksucc","tb#s00",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    MoveViewPoint([2000.650],INSTANT)
+    SetGlobal("tb#spicksucc","tb#s00",2)
+    ActionOverride("tb#stiv",MoveToPoint([2120.720]))
+    Wait(5)
+    ActionOverride("tb#stiv",Face(6))
+    Wait(1)
+    ActionOverride("tb#stiv",DisplayStringHead(Myself,~Yoink!~))
+    GiveItemCreate("tb#sloc","tb#stiv",1,0,0)
+    ActionOverride("tb#snec",DestroyItem("tb#sloc"))
+    Wait(2)
+    ActionOverride("tb#stiv",MoveToPoint([1800.1050]))
+    MoveViewPoint([1850.1000],INSTANT)
+    Wait(5)
+    EndCutSceneMode()
+END
+IF
+  Global("tb#sslitsucc","tb#s00",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    MoveViewPoint([2000.650],INSTANT)
+    SetGlobal("tb#sslitsucc","tb#s00",2)
+    ActionOverride("tb#stiv",MoveToPoint([2120.720]))
+    ActionOverride("tb#stiv",Face(6))
+    ActionOverride("tb#snec",Face(6))
+    Wait(5)
+    ActionOverride("tb#stiv",Attack("tb#snec")
+    Wait(2)
+    ActionOverride("tb#snec",DisplayStringHead(Myself,~Urghk!~))
+    ActionOverride("tb#stiv",Kill("tb#snec"))
+    Wait(2)
+    ActionOverride("tb#stiv",DisplayStringHead(Myself,~Heh. Un lavoro semplice e veloce.~))
+    Wait(2)
+    EndCutSceneMode()
+END
+
+IF
   PartyHasItem("tb#sloc")
   Global("areaInit","tb#s00",1)
 THEN

@@ -125,7 +125,7 @@ END
 BRANCH ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Global("MinscWitch","GLOBAL",1)~ BEGIN
 == BMINSC ~Cosa succede? Perchè la mia strega se ne sta andando? Boo! Boo, svegliati! Dobbiamo seguire Aerie!~
 == BAERIE ~Minsc, tu... Tu mi seguiresti? Oh, ti sono grata, ma... I tuoi doveri verso <CHARNAME>?~
-== BMINSC ~Boo dice che non possiamo abbandonare il nostro eroe preferito, ma Minsc ha anche giurato di proteggerti sino all'ultimo respiro! Cosa faremo se qualche brutto prepotente ti farà del come alla gloriosa Dynaheir? E cosa faremo se il mago cattivo cercherà di imprigionare nuovamente <CHARNAME>?~
+== BMINSC ~Boo dice che non possiamo abbandonare il nostro eroe preferito, ma Minsc ha anche giurato di proteggerti sino all'ultimo respiro! Cosa faremo se qualche brutto prepotente ti farà del male come alla gloriosa Dynaheir? E cosa faremo se il mago cattivo cercherà di imprigionare nuovamente <CHARNAME>?~
 = ~...~
 = ~Boo dice che nessuno sa se sia nato prima l'uovo o la gallina, ma Minsc non ha tempo per le questioni filosofiche!~
 == BAERIE ~Non hai motivo di preoccuparti. Da questo momento io... Non sono più la tua strega. Torno ad essere una comune Avariel a cui sono state recise le ali. A-addio...~
@@ -196,7 +196,7 @@ BRANCH ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) Gl
 == AERIEP ~Sono felice di rivedervi. Mi rattrista sapere di avervi fatto soffrire, ma... Dovete abituarvi all'idea di non avermi più al vostro fianco.~
 == BMINSC ~No! Non lo accetto! Senza di te Boo ed io siamo come un fodero senza spada, un'elsa senza lama o... uno scoiattolo senza noci! Non puoi abbandonarci!~
 == AERIEP ~Io...~
-== BMINSC ~Minsc capisce che tu voglia stare per conto tuo. A volte anche la possente Dynaheir chiedeva ai suoi fieri guardiani di lasciarla da sola per un po'  , ma non li avrebbe mai abbandonati, nossignore! Sapeva bene che dopo un momento buio e difficile Minsc e Boo erano pronti a risollevarle il morale!~
+== BMINSC ~Minsc capisce che tu voglia stare per conto tuo. A volte anche la possente Dynaheir chiedeva ai suoi fieri guardiani di lasciarla da sola per un po', ma non li avrebbe mai abbandonati, nossignore! Sapeva bene che dopo un momento buio e difficile Minsc e Boo erano pronti a risollevarle il morale!~
 == AERIEP ~Sono... commossa, Minsc. Solo adesso mi rendo conto di quanto tu e il tuo criceto mi vogliate bene!~
 == tb#stivj ~*Ahem* Immagino che sia giunto il mio turno. Beh, io...~
 END
@@ -385,39 +385,12 @@ END
 
 IF ~!Dead("tb#sgua")~ THEN necri
 SAY ~Chi va là?~
-IF ~!StateCheck("tb#stiv",STATE_INVISIBLE)~ THEN REPLY ~(Tagliale la gola in silenzio)~ GOTO slitThroatFail
-IF ~StateCheck("tb#stiv", STATE_INVISIBLE)~ THEN REPLY ~(Tagliale la gola in silenzio)~ GOTO slitThroatSuccess
-IF ~CheckStatLT("tb#stiv",100,PICKPOCKET)~ THEN REPLY ~(Tenta di rubare l'amuleto)~ GOTO pickpocketFail
-IF ~CheckStatGT("tb#stiv",99,PICKPOCKET)~  THEN REPLY ~(Tenta di rubare l'amuleto)~ EXTERN tb#stivj pickpocketSuccess
-IF ~~ THEN REPLY ~(Chiedi perché manda assassini)~ EXTERN tb#stivj askNecri
-END
-
-IF ~~ THEN slitThroatFail
-SAY ~Aiuto! Un assassino in casa!~
-IF ~~ THEN DO ~Enemy() Shout(153)~ EXIT
-END
-
-IF ~~ THEN pickpocketFail
-SAY ~Aiuto! Un ladro in casa!~
-IF ~~ THEN DO ~Enemy() Shout(153)~ EXIT
-END
-
-CHAIN IF ~~ THEN tb#SNEC slitThroatSuccess
-~Urghk!~
-DO ~Kill("tb#snec")~
-== TB#STIVJ ~Heh. Un lavoro semplice e veloce.~
-EXIT
-
-APPEND TB#STIVJ
-  IF ~~ THEN pickpocketSuccess
-    SAY ~Yoink!~
-      IF ~~ THEN DO ~GiveItemCreate("tb#stiv","tb#sloc",1,0,0)~ EXIT
-  END
-
-  IF ~~ THEN askNecri
-    SAY ~Gentile Signora, sono un amico di Aerie, e vorrei sapere perchè voi state mandando assassini contro di lei.~
-      IF ~~ THEN EXTERN tb#Snec slitThroatFail
-  END
+IF ~!StateCheck("tb#stiv",STATE_INVISIBLE)~                                       THEN REPLY ~(Tagliale la gola in silenzio)~ DO ~SetGlobal("tb#sslitfail","TB#S00",1)~ EXIT
+IF ~StateCheck("tb#stiv", STATE_INVISIBLE)~                                       THEN REPLY ~(Tagliale la gola in silenzio)~ DO ~SetGlobal("tb#sslitsucc","TB#S00",1)~ EXIT
+IF ~!StateCheck("tb#stiv", STATE_INVISIBLE)~                                      THEN REPLY ~(Tenta di rubare l'amuleto)~ DO ~SetGlobal("tb#sslitfail","TB#S00",1)~ EXIT
+IF ~StateCheck("tb#stiv", STATE_INVISIBLE) CheckStatLT("tb#stiv",100,PICKPOCKET)~ THEN REPLY ~(Tenta di rubare l'amuleto)~ DO ~SetGlobal("tb#spickfail","TB#S00",1)~ EXIT
+IF ~StateCheck("tb#stiv", STATE_INVISIBLE) CheckStatGT("tb#stiv",99,PICKPOCKET)~  THEN REPLY ~(Tenta di rubare l'amuleto)~ DO ~SetGlobal("tb#spicksucc","TB#S00",1)~ EXIT
+IF ~~                                                                             THEN REPLY ~(Chiedi perché manda assassini)~ DO ~SetGlobal("tb#sask","TB#S00",1)~ EXIT
 END
 
 CHAIN IF WEIGHT #-100 ~Global("tb#StivanAerie","GLOBAL",13) PartyHasItem("tb#sloc") InMyArea("tb#stiv")~ THEN aeriep final
