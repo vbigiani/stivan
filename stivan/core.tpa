@@ -275,10 +275,12 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	
 // Create new items	
 
-COPY_EXISTING ~misc5v.itm~ ~override/tb#sloc.itm~
-  SAY NAME1 ~Ciocca di capelli di Aerie~
-  SAY NAME2 ~Ciocca di capelli di Aerie~
-  SAY UNIDENTIFIED_DESC ~Questa è una ciocca di capelli di Aerie. E' stata usata da Estel Necri per inviare assassini contro l'ignara elfa.~
+COPY_EXISTING ~amul02.itm~ ~override/tb#sloc.itm~
+  WRITE_LONG 0x34 0
+  WRITE_SHORT 0x48 1
+  SAY NAME1 ~Amuleto di Aerie~
+  SAY NAME2 ~Amuleto di Aerie~
+  SAY UNIDENTIFIED_DESC ~Questa è un amuleto di legno a forma di procione, di proprietà di Aerie. E' stata usato da Estel Necri per inviare assassini contro l'ignara elfa.~
 
 COPY_EXISTING ~npsw02.itm~ ~override/tb#syk1.itm~
 	SAY NAME1 ~Vendetta di Yoshimo +1~
