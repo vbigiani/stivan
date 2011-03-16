@@ -28,14 +28,23 @@ COPY_EXISTING ~%script%.bcs~ ~override/tb#sdr1.bcs~
 
 COPY_EXISTING ~arnman04.cre~ ~override~
     ~pirpir10.cre~ ~override~
-  READ_ASCII SCRIPT_OVERRIDE default_script
-  PATCH_IF ~%default_script%~ STRING_COMPARE_CASE ~None~ &&
-      ~%default_script%~ STRING_COMPARE_CASE ~~ &&
-      ~%default_script%~ STRING_COMPARE_CASE ~%SOURCE_RES%~ THEN BEGIN
-    PATCH_FAIL ~%SOURCE_RES%.cre has %default_script% as override script.~
+  done = 0
+  off = SCRIPT_OVERRIDE
+  WHILE (!done && off <= SCRIPT_DEFAULT) BEGIN
+    READ_ASCII off script
+    PATCH_IF ~%script%~ STRING_COMPARE_CASE ~None~ &&
+        ~%script%~ STRING_COMPARE_CASE ~~ &&
+        ~%script%~ STRING_COMPARE_CASE ~%SOURCE_RES%~ THEN BEGIN
+      off += 8
+    END ELSE BEGIN
+      done = 1
+      WRITE_ASCIIE off ~%SOURCE_RES%~ #8
+    END
   END
-  WRITE_ASCIIE SCRIPT_OVERRIDE ~%SOURCE_RES%~ #8
-
+  PATCH_IF !done THEN BEGIN
+    PATCH_FAIL ~%SOURCE_RES%.cre has no empty script slot.~
+  END
+  
 COPY_EXISTING ~arnman04.cre~ ~override~
   ADD_CRE_ITEM ~tb#spin~ #1 #0 #0 ~none~ ~INV~
 
