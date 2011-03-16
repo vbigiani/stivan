@@ -1771,3 +1771,27 @@ DO ~SetGlobal("tb#StivanJan","GLOBAL",4)~
 == BJAN ~Questo Jan Jansen non vale proprio una rapa, credimi. Se zia Petunia non fosse in missione nelle Moonshe, gli darebbe una bella ripassata, puoi starne certo!~
 == TB#STIVB ~...~
 EXIT
+
+
+CHAIN IF ~Global("tb#StivanAerie","GLOBAL",100) InParty("tb#stiv") !StateCheck("tb#stiv",CD_STATE_NOTVALID)~ THEN baerie post-quest
+~Ho... Ho notato che mi eviti, Stivan.~
+DO ~SetGlobal("tb#StivanAerie","GLOBAL",101)~
+== tb#stivb ~Ed è ciò che continuerò a fare. Se sentissi i tuoi lamenti, dubito che riuscirei a trattenermi dall'insultarti.~
+== baerie ~M-ma... Pensavo che...~
+BRANCH ~GlobalLT("tb#stivanCernd","GLOBAL",3)~ BEGIN // senza cernd, o dopo pochi dialoghi tra di loro
+== tb#stivb ~Cosa? Pensavi che le cose tra noi sarebbero cambiate dopo ciò che è successo al circo? Per me non c'è alcuna differenza; sei sempre la solita piagnucolona!~
+== baerie ~V-va bene! Ti lascerò da solo a contemplare il vuoto della tua vita se è questo che vuoi!~
+== tb#stivb ~Era ora!~
+END
+BRANCH ~GlobalGT("tb#stivanCernd","GLOBAL",4)~ BEGIN // dopo il banter a Brynnlaw, Stivan sta cominciando a cambiare visione del mondo
+== tb#stivb ~Io... Ti chiedo scusa, Aerie. Noi due siamo in disaccordo su troppe cose, in particolare su come affrontare le difficoltà della vita. Credo sia meglio che io continui a non parlarti, piuttosto che aprire bocca e dire cose di cui potrei pentirmi.~
+== baerie ~Io... Ho capito. Ti ringrazio della tua calma onestà.~
+BRANCH ~InParty("cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ BEGIN
+== bcernd ~Vedo che stai diventando più maturo nel tuo rapporto verso i nostri compagni di viaggio. Sono lieto di questo sviluppo.~
+== tb#stivb IF ~GlobalLT("tb#stivanCernd","GLOBAL",8)~ THEN // prima del banter "Cernd, potresti attirare un'altro gabbiano? Ora so che cosa dirgli."
+~(Tappandosi le orecchie) Lalalalala, non-ti-sento!~
+== tb#stivb IF ~GlobalGT("tb#stivanCernd","GLOBAL",7)~ THEN // dopo il suddetto banter
+~Io... Bah! Di questo passo mi farete rammollire al punto da aprire un ricovero per pennuti o lustrare gli stivali a qualche paladino!~
+END
+END
+EXIT
