@@ -1303,7 +1303,7 @@ IF ~Race(Player1,GNOME)~ THEN REPLY ~Le mie guance paffute... Sono sparite!~ EXT
 IF ~OR (2) Race(Player1,ELF) Race(Player1,HALF_ELF)~ THEN REPLY ~Non mi sento per nulla a mio agio con queste sembianze.~ EXTERN TB#STIVJ StivanDrow1-4
 IF ~Class(Player1,MAGE_ALL)~ THEN REPLY ~Una simile magia è a dir poco portentosa. Pochissimi incantatori riuscirebbero ad emularla.~ EXTERN TB#STIVJ StivanDrow1-5
 IF ~Gender(Player1,MALE)~ THEN REPLY ~Hai visto come son figo, eh?~ EXTERN TB#STIVJ StivanDrow1-6
-IF ~Gender(Player1,FEMALE)~ THEN REPLY ~Cosa ne pensi, Stivan? Mi trovi più bella così o con le semianze di un <PRO_RACE>?~ EXTERN TB#STIVJ StivanDrow1-7
+IF ~Gender(Player1,FEMALE)~ THEN REPLY ~Cosa ne pensi, Stivan? Mi trovi più bella così o con le sembianze di un <PRO_RACE>?~ EXTERN TB#STIVJ StivanDrow1-7
 IF ~~ THEN REPLY ~Beh, adesso potremo vantarci di aver fatto un'esperienza decisamente unica.~ EXTERN TB#STIVJ StivanDrow1-8
 IF ~~ THEN REPLY ~Non sei il solo a sentirsi disorientato. Anch'io avrò bisogno di un pò di tempo per abituarmi a questo aspetto.~ EXTERN TB#STIVJ StivanDrow1-9
 END
