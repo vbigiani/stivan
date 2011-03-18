@@ -95,7 +95,7 @@ IF ~~ THEN BEGIN StivanFirstMeet1-10
 SAY ~Dovremmo chiedere a qualche impiegato nel Palazzo di Giustizia. E' lì che si occupano di queste cose. Posso contare sul tuo aiuto?~
 IF ~~ THEN REPLY ~Direi di sì. Al Quartiere Governativo, allora.~ UNSOLVED_JOURNAL ~Alla ricerca di una tomba.
 
-Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.~ 
+Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.~ GOTO StivanFirstMeet1-12
 
 IF ~~ THEN REPLY ~Per il momento no. Magari in futuro.~ EXIT
 END
@@ -144,5 +144,5 @@ CHAIN IF ~~ THEN TB#STIV StivanFirstMeet1-12
 == ANOMENJ IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Adesso accogli nel tuo gruppo anche i mendicanti? Per gli dei, dov’è finito il tuo buon senso? Hai bisogno di combattenti validi e devoti, non di accattoni di basso borgo!~
 == KELDORJ IF ~IsValidForPartyDialog("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Ci sono difetti che, se sfruttati bene, brillano più della stessa virtù. Che possa valere anche per quest’halfling?~
  == TB#STIV ~Cosa stiamo aspettando? Ci sono centinaia di gabbiani da spennare a dovere!~ 
-DO ~SetGlobal("tb#StivanJoined","GLOBAL",1) SetGlobal("tb#stivanEntryTest","GLOBAL",1) SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) JoinParty()~ EXTERN tb#stiv StivanFirstMeet1-12
+DO ~SetGlobal("tb#StivanJoined","GLOBAL",1) SetGlobal("tb#stivanEntryTest","GLOBAL",1) SetGlobalTimer("tb#stivanEntryTimer","GLOBAL",FOUR_DAYS) JoinParty()~ 
 EXIT
