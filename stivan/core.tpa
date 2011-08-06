@@ -1,5 +1,5 @@
 ACTION_IF FILE_EXISTS ~override/tb#stiva.txt~ THEN BEGIN
-FAIL ~Il mod e' gia' installato.~
+FAIL ~Il mod è già installato.~
 END
 
 ACTION_IF ! (GAME_IS ~BGT TOB~) THEN BEGIN
