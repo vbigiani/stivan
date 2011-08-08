@@ -3,7 +3,7 @@ IF
 THEN
 	RESPONSE #100
 		CutSceneID(Player1)
-		ActionOverride("tb#stiv",DisplayStringWait(Myself,@61))
+		ActionOverride("tb#stiv",DisplayStringWait(Myself,~Cosa stiamo aspettando? Andiamo alla mia tomba!~))
 		Wait(5)
 		FadeToColor([20.0],0)
 		MultiPlayerSync()

@@ -1,0 +1,109 @@
+@0    = ~Greetings to you, <PRO_LADYLORD>. How can I be of service?~
+@1    = ~I... well... need a tomb.~
+@2    = ~My friend is looking for a tomb where the ashes of his close ones might lie. How much would that cost?~
+@3    = ~Strange... you're not as nervous as the other clerks in here.~
+@4    = ~Another time, perhaps.~
+@5    = ~Differently from those mad fools, I love my work. Being rude to customers, moreover, would make me look like unprofessional and remove any chances I might have to be elected as best employee of <YEAR>.~
+@6    = ~(Wink wink) Can I help you in any way?~
+@7    = ~I am terribly sorry, but you came in a bad moment. I'm afraid we ran out of headstones and the like.~
+@8    = ~Pardon? are you saying you don't have anywhere to bury the dead?~
+@9    = ~But I need one. What can we do?~
+@10   = ~I understand. We'll be back in a couple of days, in that case.~
+@11   = ~Have you heard, Stivan? I'm afraid you'll have to do without your tomb. The matter is over.~
+@12   = ~I'm afraid it is so. Since last month, the number of dead or missing people has been frightengly on the rise. Usually we have a dozen deaths per day - be it by hunger or a violent death - but right now we're handling triple that amount.~
+@13   = ~I doubt that this will change in such a small time span. The Council of Six should have approved a plan for enlarging the Graveyard, but the recent trouble in Matzica has halted all of that. You can't do much but wait like everybody else.~
+@14   = ~Isn't there a small corner, a hole where I could put that damned urn?~
+@15   = ~You're really sure you can't help me in any way?~
+@16   = ~Well... I think there's a possibility, my <PRO_LADYLORD>, but it is a desperate one. I only mention it because you look like a skilled <RACE>.~
+@17   = ~Most people are waiting for new crypts to be built, or old ones to be enlarged. Among those, however, there is one where not even the Cowled Wizards would dare tread. They say that, in there, lives an ancient king, known for his violence in life, but it might be just a old legend.~
+@18   = ~If you're brave enough to go in there to claim its ownership or, in the worst of cases, to clean it of whomever roams it, it is yours. Athkatla's inhabitants are a superstitious bunch, so I doubt anyone would ever dream of buying that crypt.~
+@19   = ~Very well. I'll go take a look.~
+@20   = ~It doesn't look like I have much choice. Where is that tomb?~
+@21   = ~I'm sorry, but I have no intention of breaking into a tomb. The matter is over, Stivan.~
+@22   = ~The tomb is in the North-East, near a monument built to Kelemvor~
+@23   = ~Be cautios, my <PRO_LADYLORD>. It would be bad for my career if anything happened to you.~
+@24   = ~Looking for a tomb.
+
+A clerk in the Council of Six Building explained us that there are currently no free tombs. However, he also mentioned that there is one where no one dares to tread because of voices about its inhabitant. Not scared by such tales, I decided to explore it: after cleaning it of any trouble I might find, in fact, we'd be free to claim it for Stivan's relatives.~
+@25   = ~It is always a pleasure to see you again, my <PRO_LADYLORD>. Is there anything new?~
+@26   = ~Not yet.~
+@27   = ~Yes. I managed to remove the previous owner of the tomb.~
+@28   = ~I was wondering if I could ask you some questions.~
+@29   = ~I understand. I'll get back to work.~
+@30   = ~Of course. What do you need to ask.~
+@31   = ~What do you know about the Shadow Thieves?~
+@32   = ~Who should I ask about if I wanted to cast spells in the city?~
+@33   = ~One of my friends was arrested by the Cowled Wizards. Do you happen to know where they keep their prisoners?~
+@34   = ~Bad people. I hope you'll never have to deal with them.~
+@35   = ~I have to go now.~
+@36   = ~Talk with Corneil. It is him who looks after such matters, even if he deserves to work as a farmer for his arrogance.~
+@37   = ~I'm afraid I can't help you with that. I only handle tombs.~
+@38   = ~So the voices I told you about were correct. Very well... now I should handle all bureaucratic matters; in four to five weeks you'll become the lawful owners of that tomb and will be able to use it freely.~
+@39   = ~Looking for a tomb.
+
+The clerk in the Council of Six Building has started the procedures required to make Stivna properly acquire the tomb. He promised he will send for us as soon as he is done, and also offered to keep the urn safe in the meantime.~
+@40   = ~I see that your friend isn't with you. If I'm not mistaken, he mentioned he wanted to put an urn in there. Come back with him, my <PRO_LADYLORD>: I might have a soluton for his... ehm... "problem" while the required documents are ready.~
+@41   = ~I was anxiously waiting to see you again, my <PRO_LADYLORD>!~
+@42   = ~The documents for the ownership of the crypt are ready, but I need your friend to sign them. Come back with him.~
+@43   = ~Write Lawrence! Lawrence Cutterwere!~
+@44   = ~I am sorry, <PRO_LADYLORD>, but I am terribly busy. Could I ask you to come back later?~
+@45   = ~Uff... And now that's done. I have only three hundred and forty bodies left to bury, now!~
+@46   = ~I thought you'd try more to help me, <CHARNAME>! Instead, you throw the towel at the first sign of trouble! I will have nothing to do with you! I'm gone!~
+@47   = ~Looking for a tomb.
+
+While we were exploring the Bridge District we found Stivan, an halfling native of Athkatla, whom I asked for help in my search of Imoen and Irenicus. In exchange for a tomb where he might put the ashes of his close ones, Stivan offered us his guidance in his town and his defense against... ehm... seagulls. The halfling said I should go in the Government District and ask some clerk in the Council of Six.~
+@48   = ~Looking for a tomb.
+ 
+A messenger informed us that the documents for the transferral of the crypt are ready. I can go pick them up any time I wish from the clerk Lawrence in the Council of Six building.~
+@49   = ~Looking for a tomb.
+
+Not having found a tomb where Stivan might put the ashes of his relatives, I suggested him to give up. The halfling left the party in anger, claiming I should have done more to help him.~
+@50   = ~What?! I can't wait that long! My urn has already risked breakage far too many times!~
+@51   = ~(Cough) As an exceptional favor, young man, I could stash it in the warehouse where the Cowled Wizards keep guard of their artifacts. It will be doubtlessly safe there.~
+@52   = ~So be it. Here it is. Treat it with due respect, have I made myself clear?~
+@53   = ~Uhm... Really ugly...~
+@54   = ~Nobody asked for your judgment!~
+@55   = ~See you soon, my <PRO_LADYLORD>. A messenger will warn you as soon as the documents are ready. Remember to come by yours truly to take back the urn of your... ehm... "friend".~
+@56   = ~The documents for the transferral of the urn are ready. I just need a dozen signatures from your friend.~
+@57   = ~Ehm... you do know how to write a signature, my young man?~
+@58   = ~Sure! Where do I need to sign?~
+@59   = ~Here, here, here, and....~
+@60   = ~...~
+@61   = ~... Done.~
+@62   = ~Tsk. What an ugly writing style. You should've claimed you were illiterate and sign with an 'X'.~
+@63   = ~And here is your urn. If you want a suggestion, you should change it: it is an insult to good taste and proper behavior. It looks like a night vase!~
+@64   = ~ (Snort!) Give it to me!~
+@65   = ~(Wink wink) My <PRO_LADYLORD>, if you were satisfied by my work, don't hesitate to nominate me as the best employee of <YEAR>.~
+@66   = ~Ehm... Sure, you can count on it.~
+@67   = ~You just did your job.~
+@68   = ~Let's get out of here *now*. I'm going to choke on all the bureaucracy that is lingering in these halls!~
+@69   = ~I hope you have a proper reason to disturb me.~
+@70   = ~Could you tell me who handles the Graveyard District?~
+@71   = ~I don't want to waste my time in idle chatter. I want a tomb.~
+@72   = ~Nothing. Sorry for my intrusion.~
+@73   = ~Do I have "Map of the Council of Six" written on my forehead? No! Mind your own business and don't bother me!~
+@74   = ~Moron! You won't get any help out of me! Get out!~
+@75   = ~Uhmmm... Now, where did I put that document I was working on?~
+@76   = ~Oh! Look. I searched for it for a day without noticing I was holding it!~
+@77   = ~I don't know if I should ask you for help, but I need to know who handles tomb allotment in this town.~
+@78   = ~I can't take another idiot. I'd rather go somewhere else.~
+@79   = ~Er...~
+@80   = ~Well...~
+@81   = ~It should...~
+@82   = ~I think...~
+@83   = ~Now...~
+@84   = ~Do you know whom I should ask or not?~
+@85   = ~As charming as an orc. It's pretty clear you've forgotten your own name.~
+@86   = ~I don't have time to waste with such an idiot. Goodbye.~
+@87   = ~Ehm... No. I can't really recall who handles that. I'm sorry.~
+@88   = ~Get out of my way, <RACE>. You're casting a shadow, and I need light to fill up these reports.~
+@89   = ~I won't get away until you've helped me, cretin. Who buries the dead? You?~
+@90   = ~Should I ask you for a tomb?~
+@91   = ~Goodbye.~
+@92   = ~How you dare mistake me with such a low-rank peasant? I handle reports! Reports, understood? And now begone, you're treading on the approval of a new colony in New Amn! Away, away!~
+@93   = ~You look lost, <LADYLORD>. Maybe I could help.~
+@94   = ~My friend needs a place to put the urn with the ashes of his relatives. Who handles that sort of thing here?~
+@95   = ~I hope so. Do you handle tombs and the like?~
+@96   = ~I don't think so, goodbye.~
+@97   = ~You should ask Lawrence Cutterwere. He's right next to me.~
+@98   = ~Poor guy. He works like a slave to be named the Employee of the Year, but he doesn't know that Llarsh will corrupt everyone as usual.~

@@ -77,7 +77,7 @@ THEN
   RESPONSE #100
     StartCutSceneMode()
     SetGlobal("tb#StivanAerie","GLOBAL",13)
-    ActionOverride("Aerie",DisplayStringHead(Myself,@0))
+    ActionOverride("Aerie",DisplayStringHead(Myself,~B.. buona fortuna, Stivan.~))
     Wait(3)
     ActionOverride("tb#stiv",LeaveAreaLUA("tb#s00","",[950.1750],6))
     EndCutSceneMode()

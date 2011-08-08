@@ -38,7 +38,7 @@ BEGIN
           LAUNCH_PATCH_FUNCTION ~TRA2STR~ STR_VAR tra = EVALUATE_BUFFER ~%MATCH1%~ RET str = str END
           // use REPLACE to get a strref for our new string
           INNER_PATCH ~0~ BEGIN
-            REPLACE ~0~ @105
+            REPLACE ~0~ ~%str%~
             READ_2DA_ENTRY 0 0 1 strref
           END
           TEXT_SPRINT row ~%row% %strref%~ // add to our row

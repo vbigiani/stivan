@@ -1,0 +1,176 @@
+@0    = ~B.. buona fortuna, Stivan.~
+@1    = ~Aiuto! Un assassino in casa!~
+@2    = ~Gentile Signora, sono un amico di Aerie, e vorrei sapere perchè voi state mandando assassini contro di lei.~
+@3    = ~Oops, credo mi abbia notato...~
+@4    = ~Yoink!~
+@5    = ~Urghk!~
+@6    = ~Heh. Un lavoro semplice e veloce.~
+@7    = ~Stivan~
+@8    = ~Ahhhh! Vedo gabbiani OVUNQUE!~
+@9    = ~Questa sì che è una compagnia di manigoldi!~
+@10   = ~Uhm... Mi sentivo più a mio agio quando vagabondavo per le strade di Athkatla.~
+@11   = ~Io al comando? Wow!~
+@12   = ~(Sbadiglia) Avrei un pò di sonno.~
+@13   = ~Cadrete per mano di Stivan il Cacciatore!~
+@14   = ~Possano i gabbiani pasteggiare con i vostri resti!~
+@15   = ~Heh. Mi chiedevo quando ci saremmo dati da fare.~
+@16   = ~Yahoo! All'attacco!~
+@17   = ~Auch!~
+@18   = ~(Gemito)~
+@19   = ~(Gasp!) Sto... Sto morendo...!~
+@20   = ~(Starnutisce) Fantastico. Questo sarà il primo di una lunga serie. Io ODIO la natura!~
+@21   = ~Ahh... Mi sento sempre a mio agio tra queste masse brulicanti di gente.~
+@22   = ~Uhm... Fà piuttosto freddino qui.~
+@23   = ~Per quanto luminosa, la luce del sole non eguaglia in bellezza quella delle stelle e della luna.~
+@24   = ~Le stelle sono buchi nel cielo da cui... da cui... *Ahem* Che buio!~
+@25   = ~Yeah.~
+@26   = ~Cosa vuoi?~
+@27   = ~Non c'è due senza tre, suppongo.~
+@28   = ~Uhm?~
+@29   = ~Nessuno fa qualcosa per niente.~
+@30   = ~E' il mio momento!~
+@31   = ~Sicuro.~
+@32   = ~Vallo a prendere te!~
+@33   = ~Heh. Me l'aspettavo.~
+@34   = ~Vado e torno.~
+@35   = ~D'accordo, d'accordo... Ci penso io.~
+@36   = ~Facile come spennare un gabbiano.~
+@37   = ~Se devo.~
+@38   = ~E' tutto?~
+@39   = ~Haha!~
+@40   = ~Oops.~
+@41   = ~Ci vuole qualcos'altro qui!~
+@42   = ~Per cosa mi hai preso, per uno sgabuzzino?~
+@43   = ~Ho rubacchiato qualcosina.~
+@44   = ~Heh. Sfido chiunque a vedermi.~
+@45   = ~Oh, no! Ho perso concentrazione!~
+@46   = ~Heh. Se aggiungessi un pò di cacca di gabbiano, questa trappola sarebbe ancora più micidiale.~
+@47   = ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfling si è visto uccidere i propri genitori e i fratelli da uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
+Costretto a vivere per le strade di Athkatla, l'halfling ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani.~
+@48   = ~Eeeekkkk!~
+@49   = ~Cadrete per mano di Stivan!~
+@50   = ~La vostra perfidia vi costerà la vita!~
+@51   = ~Natura... Un'entità sconosciuta a cui mi avvicino a piccoli passi.~
+@52   = ~Facile come spenn... *Ahem* E' un gioco da ragazzi.~
+@53   = ~Questa trappola... farà male a qualcuno.~
+@54   = ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfling si è visto uccidere i propri genitori e i fratelli da quello che credeva essere uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
+Costretto a vivere per le strade di Athkatla, l'halfling ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani. Nel corso dei suoi viaggi, tuttavia, il druido Cernd è riuscito ad educare Stivan all'Equilibrio e al rispetto per le creature della Madre, ponendo così fine all'odio che il Cacciatore nutriva nei confronti dei volatili.~
+@55   = ~Questo è per papino!~
+@56   = ~Questo è per mammina!~
+@57   = ~E questo è per i miei fratelli!~
+@58   = ~[Nascondendo una risata] Poveraccio, se n'è andato!~
+@59   = ~[Nascondendo una risata] Poveraccia, se n'è andata!~
+@60   = ~nnnnNNNNOOOOOO!!!~
+@61   = ~Cosa stiamo aspettando? Andiamo alla mia tomba!~
+@62   = ~Il mod è già installato.~
+@63   = ~E' richiesto Throne of Bhaal.~
+@64   = ~%SOURCE_RES%.cre has no empty script slot.~
+@65   = ~Stivan, il Cacciatore~
+@66   = ~Estel Necri~
+@67   = ~Susan~
+@68   = ~Lawrence Cutterwere~
+@69   = ~Miss Tandalon~
+@70   = ~Carlino~
+@71   = ~Rosalina~
+@72   = ~Messaggero~
+@73   = ~Elfo~
+@74   = ~Assassino~
+@75   = ~Lilarcor~
+@76   = ~Scheletro Mago~
+@77   = ~Scheletro Chierico~
+@78   = ~Scheletro Sergente~
+@79   = ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfling si è visto uccidere i propri genitori e i fratelli da uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
+	Costretto a vivere per le strade di Athkatla, l'halfling ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani.~
+@80   = ~Amuleto di Aerie~
+@81   = ~Questa è un amuleto di legno a forma di procione, di proprietà di Aerie. E' stata usato da Estel Necri per inviare assassini contro l'ignara elfa.~
+@82   = ~Vendetta di Yoshimo +1~
+@83   = ~Questa katana apparteneva a Yoshimo, il cacciatore di taglie di Kara-Tur legato ad Irenicus da una costrizione risultata fatale. L'incantesimo che la rendeva utilizzabile soltanto da lui è stato rimosso in seguito ad una generosa donazione ad Ilmater, a condizione però che l'arma venga utilizzata contro il responsabile della morte del ladro.
+	
+Stivan spruzza entusiasmo da tutti i pori quando brandisce quest'arma, entusiasmo che i tuoi compagni poco apprezzano quando la lama arriva pericolosamente vicino alle loro teste.
+
+STATISTICHE:
+
+THAC0: Bonus +1
+Danno: 1D10 +1
+Tipo di Danno: Taglio
+Peso: 5
+Fattore Velocità: 3
+Tipo di Competenza: Katana
+Tipo: A una mano
+Richiede: Forza 6
+Utilizzabile Da:
+Stivan~
+@84   = ~Vendetta di Yoshimo +3~
+@85   = ~Questa katana apparteneva a Yoshimo, il cacciatore di taglie di Kara-Tur legato ad Irenicus da una costrizione risultata fatale. L'incantesimo che la rendeva utilizzabile soltanto da lui è stato rimosso in seguito ad una generosa donazione ad Ilmater, a condizione però che l'arma venga utilizzata contro il responsabile della morte del ladro.
+
+Stivan spruzza entusiasmo da tutti i pori quando brandisce quest'arma, entusiasmo che i tuoi compagni poco apprezzano quando la lama arriva pericolosamente vicino alle loro teste.
+
+Al fine di rendere la lama più temibile, il fabbro Cromwell ne ha potenziato l'originario incantamento e vi ha infuso le proprietà dell'oggetto da cui Stivan non si separerebbe mai -- la cacca di gabbiano. Sorprendentemente, l'halfling si è guardato bene dal dirgli cosa fosse quella "strana poltiglia biancastra". 
+
+STATISTICHE:
+
+Abilità in Combattimento:
+10% di possibilità che il bersaglio venga accecato per due round ad ogni colpo messo a segno (a meno che non superi un tiro salvezza contro soffio con penalità -2);
+5% di possibilità che il bersaglio venga investito da un'Esplosione Alchemica (4d4 danni da fuoco addizionali, nessun tiro salvezza).
+
+THAC0: Bonus +3
+Danno: 1D10 +3
+Tipo di Danno: Taglio
+Peso: 5
+Fattore Velocità: 1
+Tipo di Competenza: Katana
+Tipo: A una mano
+Richiede: Forza 6
+Utilizzabile Da:
+Stivan~
+@86   = ~Piuma~
+@87   = ~Una piuma di Gabbiano.~
+@88   = ~Lo scudo del Mancino~
+@89   = ~Vi era un tempo in cui Tyr non era conosciuto con l'appellativo di "Il Monco". La maggiore tra le divinità della Triade, infatti, perse la mano destra nello scontro con Kezef il Segugio del Caos, ma prima di allora era solito accompagnare la sua fatale arma con questo scudo. La leggenda vuole che Tyr l'abbia tenuto ugualmente con sè sino al Periodo dei Disordini, quando decise di donarlo ai suoi seguaci di Cormyr per essere rimasti al lui fedeli anche dopo la cecità inflittagli da Lord Ao.
+Sebbene sia sempre stato custodito dai paladini e dai chierici devoti al dio, lo scudo in questione viene utilizzato ogni anno in occasione di un rito propiziatorio al raccolto e alla lustrazione dei campi. Il culto di Tyr è infatti molto diffuso nelle campagne, dove viene chiamato dai più "Dio Pannocchia".
+
+Realizzato in acciaio pesante con venature d'argento, l'artefatto pesa così tanto da essere un impedimento più che una protezione in battaglia. Pare che sino ad oggi soltanto Tyr sia stato in grado di brandirlo, tant'è che è necessaria ben più di una persona per trasportarlo.
+
+Peso: 100~
+@90   = ~Piuma Rossa~
+@91   = ~Questa piuma rossa è un regalo datoti da Stivan come segno della sua gratitudine. L’halfling la descrive come il suo "più prezioso tesoro", e probabilmente è per questo motivo che ad ogni sosta si accerta che sia sempre nel tuo zaino.~
+@92   = ~Urna di Stivan~
+@93   = ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
+Temendo che possa rompersi nel corso di un combattimento, l'halfling ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
+@94   = ~Documenti~
+@95   = ~Non immaginavi che per legittimare l’acquisizione della cripta da parte di Stivan fossero necessari così tanti documenti. Non puoi fare a meno di chiederti se questa mole di atti, firme e sigilli dipendano dall’apparato burocratico di Athkatla o dall’eccessiva minuziosità dell’impiegato Lawrence.~
+@96   = ~Spilla di Missy~
+@97   = ~Una semplice spilla.~
+@98   = ~Cacca di gabbiano~
+@99   = ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico. Preferisci non indagare su come faccia a non esaurire mai le scorte.
+	
+STATISTICHE:
+
+Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
+Lancia "Miscela alchemica" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
+
+Utilizzabile Da:
+Stivan~
+@100  = ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico. Preferisci non indagare su come faccia a non esaurire mai le scorte.
+
+STATISTICHE:
+
+Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
+Lancia "Miscela alchemica" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
+
+Utilizzabile Da:
+Stivan~
+@101  = ~Esplosione Alchemica~
+@102  = ~Cecità~
+@103  = ~Cacca di gabbiano infuocata~
+@104  = ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. Dopo essere stata combinata con la piuma di fenice e la barba di Yaga-shura, genera un'esplosione alchemica piu' potente, ma non e' piu' in grado di accecare i nemici.
+STATISTICHE:
+Lancia "Miscela alchemica" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
+
+Utilizzabile Da:
+Stivan~
+@105  = ~%str%~
+@106  = ~Stivan il Cacciatore, versione alpha qualcosa~
+@107  = ~Ritratto di default (Nix)~
+@108  = ~Stivan il Cacciatore~
+@109  = ~Ritratto insanguinato (Nix)~
