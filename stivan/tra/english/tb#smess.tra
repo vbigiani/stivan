@@ -5,16 +5,16 @@
 @4    = ~I found you at last. You've been impossible to find for far too long - I was beginning to worry for the worse.~
 @5    = ~I was tasked with informing you that the documents of requested are ready, and you can go collect them any time you wish. Mister Lawrence works night and day hoping to be elected as Employee of the Year,~
 @6    = ~I have nothing else to add. Have a good <DAYNIGHT>.~
-@7    = ~Finally the ashes of my loved ones will rest in peace. We just need to go to the Government Quarter, collect urn and paperwork and go in my lawfully-bought crypt.~ [TB#ST076]
+@7    = ~Finally the ashes of my loved ones will rest in peace. We just need to go to the Government Quarter, collect urn and paperwork and go in my lawfully-bought crypt.~
 @8    = ~Let's not waste any time chattering, in that case.~
 @9    = ~Not now, Stivan. I must look for allies against Bodhi.~
 @10   = ~Why don't you go there ahead of us? While we finish readying the battle against Bodhi, you could handle all matters by yourself~
-@11   = ~Heh. It sounded as if you were being sarcastic, <CHARNAME>...~ [TB#ST077]
-@12   = ~Heh. It must be one of my usual buyers - he must have run out of plumes while we were gone.~ [TB#ST078]
-@13   = ~<CHARNAME>, have I become invisible? I am Stivan!~ [TB#ST079]
-@14   = ~Yeah! Let's go!~ [TB#ST080]
+@11   = ~Heh. It sounded as if you were being sarcastic, <CHARNAME>...~
+@12   = ~Heh. It must be one of my usual buyers - he must have run out of plumes while we were gone.~
+@13   = ~<CHARNAME>, have I become invisible? I am Stivan!~
+@14   = ~Yeah! Let's go!~
 @15   = ~Looking for a tomb.
 
 A messenger informed us that the documents for the transferal of the crypt are ready. I can go pick them up any time I wish from the clerk Lawrence in the Council of Six building.~
-@16   = ~(Snort!) Stivan the Hunter is enough to handle that meanie! Either way, if you really need to look for further help, try and hurry.~ [TB#ST081]
+@16   = ~(Snort!) Stivan the Hunter is enough to handle that meanie! Either way, if you really need to look for further help, try and hurry.~
 @17   = ~I'd rather you come with me, <CHARNAME>. I could strangle that clerk if I went alone...~ [STIVAN]
