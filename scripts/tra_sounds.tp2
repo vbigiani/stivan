@@ -24,16 +24,15 @@ COPY - ~names-to-soundsets~ ~names-to-soundsets~
 		TEXT_SPRINT $names(EVALUATE_BUFFER ~%name%~) ~%prefix%~
 		SET $sizes(EVALUATE_BUFFER ~%name%~) = 8 - STRING_LENGTH ~%prefix%~
 		SET $last(EVALUATE_BUFFER ~%name%~) = 0
-		
 		INNER_ACTION BEGIN
-			COPY - ~empty~ ~%name%~
+			COPY - ~empty~ ~%name%.tmp~
 		END
 	END
 BUT_ONLY
 
-OUTER_SET i = 0
 COPY	~stivan/tra/english/setup.tra~ ~stivan/tra/english/setup.tra~
 		~stivan/tra/english~ ~stivan/tra/english~
+	PATCH_SILENT
 	REPLACE_EVALUATE "\(~[^~]*~\) \[\([^]]*\)\]%LNL%\(@[0-9]*\)" BEGIN
 		TEXT_SPRINT result ~%MATCH1% [%MATCH2%]%LNL%%MATCH3%~
 		TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%~
@@ -51,11 +50,13 @@ COPY	~stivan/tra/english/setup.tra~ ~stivan/tra/english/setup.tra~
 			TEXT_SPRINT result ~%MATCH1% [%prefix%%str%]%LNL%%MATCH3%~
 			
 			INNER_ACTION BEGIN
-				APPEND_OUTER - ~%MATCH2%~ ~%result%~
+				APPEND_OUTER - ~%MATCH2%.tmp~ ~%result%~
 			END
 		END
 	END ~%result%~
 BUT_ONLY
+
+VERBOSE
 
 COPY ~stivan/tra/italian~ ~stivan/tra/italian~
 	REPLACE_EVALUATE "~%LNL%\(@[0-9]*\)" BEGIN
@@ -73,7 +74,7 @@ COPY - ~names-to-soundsets~ ~names-to-soundsets~
 		READ_2DA_ENTRY_FORMER names2da i 0 name
 		
 		INNER_ACTION BEGIN
-			COPY ~%name%~ ~%name%.txt~
+			COPY ~%name%.tmp~ ~%name%.txt~
 		END
 	END
 BUT_ONLY
