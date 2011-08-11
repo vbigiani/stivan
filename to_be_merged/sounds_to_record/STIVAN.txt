@@ -5,7 +5,7 @@
 ~I am the leader? Wow!~ [TB#ST004]
 ~(Yawn) I'm feeling a bit drowsy.~ [TB#ST005]
 ~You'll fall by the hand of Stivan the Hunter!~ [TB#ST006]
-~Might the seagulls feast with your bodies!~ [TB#ST007]
+~May the seagulls feast with your bodies!~ [TB#ST007]
 ~Heh. I was wondering when we'd be starting to get things done.~ [TB#ST008]
 ~Yahoo! To the assault!~ [TB#ST009]
 ~Ouch!~ [TB#ST010]
