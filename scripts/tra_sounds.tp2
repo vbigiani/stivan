@@ -26,6 +26,16 @@ COPY - ~names-to-soundsets~ ~names-to-soundsets~
 		SET $last(EVALUATE_BUFFER ~%name%~) = 0
 		INNER_ACTION BEGIN
 			COPY - ~empty~ ~%name%.tmp~
+			
+			ACTION_IF ! FILE_EXISTS ~to_be_merged/sounds_to_record/%name%.txt~ THEN BEGIN
+				COPY ~empty~ ~to_be_merged/sounds_to_record/%name%.txt~
+				APPEND_OUTER ~to_be_merged/sounds_to_record/%name%.txt~ 0
+			END ELSE BEGIN
+				COPY ~to_be_merged/sounds_to_record/%name%.txt~ ~to_be_merged/sounds_to_record/%name%.txt~
+					READ_2DA_ENTRY 0 0 0 val
+					SET $last(EVALUATE_BUFFER ~%name%~) = val
+				BUT_ONLY
+			END
 		END
 	END
 BUT_ONLY
@@ -74,10 +84,8 @@ COPY - ~names-to-soundsets~ ~names-to-soundsets~
 		READ_2DA_ENTRY_FORMER names2da i 0 name
 		
 		INNER_ACTION BEGIN
-			ACTION_IF ! FILE_EXISTS ~to_be_merged/sounds_to_record/%name%.txt~ THEN BEGIN
-				COPY ~empty~ ~to_be_merged/sounds_to_record/%name%.txt~
-			END
 			COPY ~to_be_merged/sounds_to_record/%name%.txt~ ~to_be_merged/sounds_to_record/%name%.txt~
+				SET_2DA_ENTRY 0 0 0 $last(EVALUATE_BUFFER ~%name%~)
 				APPEND_FILE ~%name%.tmp~
 				REPLACE_TEXTUALLY ~%LNL%%LNL%*~ ~%LNL%~
 		END
