@@ -50,7 +50,7 @@ COPY	~stivan/tra/english/setup.tra~ ~stivan/tra/english/setup.tra~
 			TEXT_SPRINT result ~%MATCH1% [%prefix%%str%]%LNL%%MATCH3%~
 			
 			INNER_ACTION BEGIN
-				APPEND_OUTER - ~%MATCH2%.tmp~ ~%result%~
+				APPEND_OUTER - ~%MATCH2%.tmp~ ~%MATCH1% [%prefix%%str%]~
 			END
 		END
 	END ~%result%~
@@ -74,7 +74,7 @@ COPY - ~names-to-soundsets~ ~names-to-soundsets~
 		READ_2DA_ENTRY_FORMER names2da i 0 name
 		
 		INNER_ACTION BEGIN
-			COPY ~%name%.tmp~ ~%name%.txt~
+			COPY ~%name%.tmp~ ~to_be_merged/sounds_to_record/%name%.txt~
 		END
 	END
 BUT_ONLY
