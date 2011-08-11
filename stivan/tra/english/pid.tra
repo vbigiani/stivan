@@ -1,6 +1,6 @@
 @0    = ~(Stivan ignores you when you try to talk to him. He gives you the cold shoulder and gets back to his thoughts).~
-@1    = ~K-Keep close, <CHARNAME>. This place is frightening, and I d-don't know how long I'll manage not to run away.~
-@2    = ~Stivan the Hunter is listening to you, <CHARNAME>!~
+@1    = ~K-Keep close, <CHARNAME>. This place is frightening, and I d-don't know how long I'll manage not to run away.~ [STIVAN]
+@2    = ~Stivan the Hunter is listening to you, <CHARNAME>!~ [STIVAN]
 @3    = ~Is everything all right, my friend?~
 @4    = ~It is a pleasure to travel in the company of another halfling.~
 @5    = ~It is a pleasure to travel in your company.~

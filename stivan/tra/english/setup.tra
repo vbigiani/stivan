@@ -2,12 +2,12 @@
 
 
 @0    = ~G.. Good luck, Stivan.~
-@1    = ~Help! There's an assassin here!~
-@2    = ~My fair Lady, I'm a friend of Aerie's, and I'd like to know why are you sending assassins against her.~
-@3    = ~Whoops, I think she's noticed me...~
-@4    = ~Yoink!~
-@5    = ~Urghk!~
-@6    = ~Heh. A clean and easy job.~
+@1    = ~Help! There's an assassin here!~ [ESTELNECRI]
+@2    = ~My fair Lady, I'm a friend of Aerie's, and I'd like to know why are you sending assassins against her.~ [STIVAN]
+@3    = ~Whoops, I think she's noticed me...~ [STIVAN]
+@4    = ~Yoink!~ [STIVAN]
+@5    = ~Urghk!~ [ESTELNECRI]
+@6    = ~Heh. A clean and easy job.~ [STIVAN]
 @7    = ~Stivan~
 @8    = ~Ahhhh! I see seagulls EVERYWHERE!~ [TB#ST001]
 @9    = ~This is a fine group of ne'er do wells!~ [TB#ST002]
@@ -58,13 +58,13 @@ Forced to live on Athkatla's streets, the Halfling happily accepted <CHARNAME>'s
 @53   = ~This trap... will really hurt somebody.~ [TB#ST045]
 @54   = ~If asked about his past, STIVAN doesn't hesitate before narrating his life with abundance of detail. Born in Athkatla to a family of wine merchants, the Halfling saw his parents being slaughtered by a ravaging flock of seagulls, an attack he survived by sheer luck. Thus his hatred for what he defines "the feathered enemy", which he claims to be responsible of his next misfortunes as well - losing his father's activity and possessions to a rich merchant who, rather than help him, left him penniless.
 Forced to live on Athkatla's streets, the Halfling happily accepted <CHARNAME>'s offer to join his band, glad to offer him his knowledge of the city and thankful for having found a new ally on his crusade against seagulls. During his travels, however, the druid Cernd managed to educated Stivan in the ways of Balance and respecting Mother's creatures, thus ending Stivan's hatred against flying creatures.~
-@55   = ~This is for daddy!~
-@56   = ~This is for mommy!~
-@57   = ~And this is for my brothers!~
-@58   = ~[Hiding laughter] Poor boy, he's gone!~
-@59   = ~[Hiding laughter] Poor girl, she's gone!~
-@60   = ~nnnnNNNNOOOOOO!!!~
-@61   = ~What are we waiting for? Let's get to my tomb!~
+@55   = ~This is for daddy!~ [STIVAN]
+@56   = ~This is for mommy!~ [STIVAN]
+@57   = ~And this is for my brothers!~ [STIVAN]
+@58   = ~[Hiding laughter] Poor boy, he's gone!~ [STIVAN]
+@59   = ~[Hiding laughter] Poor girl, she's gone!~ [STIVAN]
+@60   = ~nnnnNNNNOOOOOO!!!~ [STIVAN]
+@61   = ~What are we waiting for? Let's get to my tomb!~ [STIVAN]
 @62   = ~The mod is already installed.~
 @63   = ~Throne of Bhaal is required.~
 @64   = ~%SOURCE_RES%.cre has no empty script slot.~
