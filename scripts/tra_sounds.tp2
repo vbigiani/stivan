@@ -11,6 +11,9 @@ CUCHUL TB#SC
 ESTELNECRI TB#SE
 
 >>>>>>>>
+
+<<<<<<<< empty
+>>>>>>>>
 COPY - ~names-to-soundsets~ ~names-to-soundsets~
 	READ_2DA_ENTRIES_NOW names2da 2
 	FOR (i = 1; i < names2da; ++i) BEGIN
@@ -19,6 +22,10 @@ COPY - ~names-to-soundsets~ ~names-to-soundsets~
 		TEXT_SPRINT $names(EVALUATE_BUFFER ~%name%~) ~%prefix%~
 		SET $sizes(EVALUATE_BUFFER ~%name%~) = 8 - STRING_LENGTH ~%prefix%~
 		SET $last(EVALUATE_BUFFER ~%name%~) = 0
+		
+		INNER_ACTION BEGIN
+			COPY - ~empty~ ~%name%~
+		END
 	END
 BUT_ONLY
 
@@ -40,6 +47,10 @@ COPY	~stivan/tra/english/setup.tra~ ~stivan/tra/english/setup.tra~
 			END
 			TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%%str%~
 			TEXT_SPRINT result ~%MATCH1% [%prefix%%str%]%LNL%%MATCH3%~
+			
+			INNER_ACTION BEGIN
+				APPEND_OUTER - ~%MATCH2%~ ~%result%~
+			END
 		END
 	END ~%result%~
 BUT_ONLY
@@ -53,4 +64,14 @@ COPY ~stivan/tra/italian~ ~stivan/tra/italian~
 			TEXT_SPRINT result ~ [%str%]%LNL%%MATCH1%~
 		END
 	END "~%result%"
+BUT_ONLY
+
+COPY - ~names-to-soundsets~ ~names-to-soundsets~
+	FOR (i = 1; i < names2da; ++i) BEGIN
+		READ_2DA_ENTRY_FORMER names2da i 0 name
+		
+		INNER_ACTION BEGIN
+			COPY ~%name%~ ~%name%.txt~
+		END
+	END
 BUT_ONLY
