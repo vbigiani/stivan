@@ -1,4 +1,4 @@
-81
+96
 ~Ahhhh! I see seagulls EVERYWHERE!~ [TB#ST001]
 ~This is a fine group of ne'er do wells!~ [TB#ST002]
 ~Uhm... I felt more at ease while slumming through the streets of Athkatla.~ [TB#ST003]
@@ -83,3 +83,19 @@
 ~<CHARNAME>, have I become invisible? I am Stivan!~ [TB#ST079]
 ~Yeah! Let's go!~ [TB#ST080]
 ~(Snort!) Stivan the Hunter is enough to handle that meanie! Either way, if you really need to look for further help, try and hurry.~ [TB#ST081]
+
+~Have you seen a seagull around here? I am Stivan the Seagull Hunter, powerful and famous. Er... would you like to buy a plume? I have plenty.~ [TB#ST082]
+~Yes, I hunt seagulls. They're the sea's vermin, and I bravely fought against hundreds of them. Hundreds, I say!~ [TB#ST083]
+~Have you ever looked a seagull in the eye, eh? There is evil there... Pure evil. And I intend to hunt all of them... All of them!~ [TB#ST084]
+~Ooh! Traveling in an adventuring party! Being their guide! Defending them against the aerial strikes of seagulls! WOW!~ [TB#ST085]
+~WOW! It sounds anything but easy, but I don't care! Let's go! There are flocks of seagulls to deplume and...~ [TB#ST086]
+~Since I'll be traveling with you, I don't know where to hide it, nor can I bring it with me. There's a strong risk it might break while I'm blinding an enemy with seagull poo or suffocating another with a bunch of plumes. It's not an easy job, you know?~ [TB#ST087]
+~Heh. I'm looking forward to selling my last plumes, so that I might hunt more seagulls!~ [TB#ST088]
+~You there! Why don't you buy this beautiful plum? It's the best thing ever to write the epicest of poems, or to cast the deadliest of arrows!~ [TB#ST089]
+~Incredible! I'll travel with a noble! And what a noble! WOW! It'll be my honor to be your humble servant!~ [TB#ST090]
+~(Achoo) Oh, no. I'm allergic to tree-huggers!~ [TB#ST091]
+~(Sniff sniff) I can smell the stink of correctness in here...~ [TB#ST092]
+~Eeekkk! The horror!~ [TB#ST093]
+~*Ahem* Pardon? Are you turning down the most skilled seagull hunter in Faerun?~ [TB#ST094]
+~Come, ladies and gents, come! Two plumes for the price of three! No, wait, two plumes for the price of four!~ [TB#ST095]
+~Uhm... I'm afraid I'm doing something wrong...~ [TB#ST096]
