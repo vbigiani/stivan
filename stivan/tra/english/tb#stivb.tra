@@ -308,8 +308,8 @@
 @303  = ~COLPISCI AGLI OCCHI, BOO! COLPISCI AGLI OCCHI! RAARGHHH!!!!~
 @304  = ~... Ebbene? Dov'è finito il tuo terribile criceto?~
 @305  = ~Oh, ma...~
-@306  = ~Ahia! *Ahia*!~
-@307  = ~Quella bestia mi è entrata nell'armatura! *Ahi!* Mi sta morsicando - AHIA! - da tutte le parti!~
+@306  = ~Ow! *Ow*!~
+@307  = ~Quella bestia mi è entrata nell'armatura! *Ow!* Mi sta morsicando - OW! - da tutte le parti!~
 @308  = ~Adesso ti sistemo io, topo!~
 @309  = ~(Stonf)~
 @310  = ~(Doppio stonf)~
@@ -627,9 +627,9 @@
 @622  = ~Avanti! Affonda!~
 @623  = ~Assaggia questo!~
 @624  = ~Brava! Adesso indietro e schiva!~
-@625  = ~Ahi!~
+@625  = ~Ow!~
 @626  = ~Di nuovo! Para e poi contrattacca!~
-@627  = ~Ahi! Prendi (pant) questo!~
+@627  = ~Ow! Prendi (pant) questo!~
 @628  = ~Non ti sbilanciare così tanto! Riprovaci!~
 @629  = ~(Pant pant) Sono stremata... pietà!~
 @630  = ~Dai, ancora cinque minuti e poi sarai tu a riprendere me!~
@@ -642,11 +642,11 @@
 @637  = ~(Gasp!)~
 @638  = ~Incertus... Pulcher... Imperium!~ [CAS_PM6M]
 @639  = ~Auch!~
-@640  = ~Vo..volevi (ahia!) farmi fuori?~
+@640  = ~Vo..volevi (ow!) farmi fuori?~
 @641  = ~Scusa per l'errore!~
-@642  = ~Scusa? Almeno (ahi!) dammi qualcosa per curare la (ouch!) ferita!~
+@642  = ~Scusa? Almeno (ow!) dammi qualcosa per curare la (ouch!) ferita!~
 @643  = ~Ma che piagnone che sei, per un graffio come quello!~
-@644  = ~Ahi ahi ahi ahi..~
+@644  = ~Ow ow ow ow..~
 @645  = ~Sei proprio un bambinone.~
 @646  = ~Ecco, tieni una pozione di guarigione.~
 @647  = ~(glu glu) Grazie, ora mi sento meglio!~
