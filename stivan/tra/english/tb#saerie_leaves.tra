@@ -67,14 +67,14 @@
 @66   = ~Boo says that nobody knows if the egg or the chicken came first, but Minsc does not have time for philosophical questions!~
 @67   = ~You don't have to worry. From this moment I.. am no longer your witch. I'll be again a normal Avariel who lost her winds. G-goodbye...~
 @68   = ~No! NOOO! This ranger and this hamster have lost their witch... again! NOOOOO!!!~
-@69   = ~Umhh... Maybe I exagerated a bit. Do you think I should say 'sorry'?~
+@69   = ~Uhm... Maybe I exaggerated a bit. Do you think I should say 'sorry'?~
 @70   = ~'A bit'?! You're lucky your head is still attached to the rest of your body! You will apologize this instant!~
 @71   = ~I think Aerie is a bother too, but her skills are needed for our mission. Let's go to the Circus, and let's hope she accepts your reparations.~
 @72   = ~Heh. Modestly, I'm the best guy at faking apologies there ever was!~
 @73   = ~Stivan!~
-@74   = ~That's stronger than me, <CHARNAME>. I can resist anything, except tentations.~
+@74   = ~That's stronger than me, <CHARNAME>. I can resist anything, except temptations.~
 @75   = ~Oh, gods! The elders do not lie when they say that you know the depth of your love only on the hour of goodbyes!~
-@76   = ~We're not in a theater, Haer-Dalis. Save your drama for another occasion.~
+@76   = ~We're not in a theater, Haer'Dalis. Save your drama for another occasion.~
 @77   = ~You'd better offer your apologies to my sweet love as soon as possible, otherwise I won't hesitate to wet my blades with your blood to have my dove back.~
 @78   = ~Uhm? What's this roaring noise?~
 @79   = ~RRRAAAARRGGHHH! Boo does not understand how such an evilness could fit a body as small as yours, but Minsc does not care! EVIL, MEET MY SWORD!~
@@ -121,7 +121,7 @@ Stivan insulted Aerie to the point to force her to leave the party in tears. I m
 @118  = ~Gasp! One of them just vanished in thin air!~
 @119  = ~I'm afraid I'm victim of some curse! Some.. somebody wants me dead!~
 @120  = ~Who?! Who dares attempt to take innocent Aerie's life?!~
-@121  = ~Somebody who wants to get rid of a potential enemy. In thay such spells are commonplace, even if in this case the caster must be out of his minde. (Who would be afraid of such a stuttering fool? *I* am the real menace!)~
+@121  = ~Somebody who wants to get rid of a potential enemy. In Thay such spells are commonplace, even if in this case the caster must be out of his mind. (Who would be afraid of such a stuttering fool? *I* am the real menace!)~
 @122  = ~I know enough about the dark arts to know that such a ritual requires an object of the victim's. Did you lose something lately?~
 @123  = ~I studied enough about curses to know that such a ritual requires an object of the victim's. Did you lose something lately?~
 @124  = ~I us..studied enough about curses to know that such a ritual requires an object of the victim's. Did you lose something lately?~
@@ -130,7 +130,7 @@ Stivan insulted Aerie to the point to force her to leave the party in tears. I m
 @127  = ~Obviously all this wouldn't have happened if you didn't leave as theatrically as you did. Ideas are welcome.~
 @128  = ~It isn't possible to stop such a curse if you don't know how it was cast! Whomever started all of this must have something of mine... but what?~
 @129  = ~No... I ran here straight away. I-I started emptying my backpack and noticed something dear to me was missing...~
-@130  = ~My... My amulet! With a racoon-shaped pendant! I thought I'd lost it during a battle, but... that wizard must have stolen it!~
+@130  = ~My... My amulet! With a raccoon-shaped pendant! I thought I'd lost it during a battle, but... that wizard must have stolen it!~
 @131  = ~*Ahem* Is it a wooden amulet?~
 @132  = ~Y-yes, but... How do you know? I've always kept it close to avoid ruining it...~
 @133  = ~Well, I... It's possible it ended up in the possession of the wrong person...~
@@ -181,7 +181,7 @@ In the Circus I found Aerie, luckily before she was killed by mysterious assassi
 @176  = ~Okay, although I can't promise you'll have them back. Heh.~
 @177  = ~Are you ready to protect Aerie while I do my job?~
 @178  = ~Yes. Try not to get yourself killed, please.~
-@179  = ~Not yet, but I've almost finished sorting out what you migth need.~
+@179  = ~Not yet, but I've almost finished sorting out what you might need.~
 @180  = ~Maybe.. you should talk with Stivan.~
 @181  = ~Later!~
 @182  = ~Boo asks whether it is wise to let the little one go by himself. Minsc is worried too, but <CHARNAME>'s trust is never misplaced!~
@@ -192,7 +192,7 @@ In the Circus I found Aerie, luckily before she was killed by mysterious assassi
 @187  = ~Let's see if I got it together correctly, wuss. You're saving that crying baby's life, right when we might get rid ourselves of her forever?~
 @188  = ~... Do I have to answer you?~
 @189  = ~Joke of a man! Dirty pile of...~
-@190  = ~*Ahem* I shoudl go.~
+@190  = ~*Ahem* I should go.~
 @191  = ~Who's there?~
 @192  = ~(Cut her throat silently)~
 @193  = ~(Try to steal the amulet)~
@@ -202,19 +202,19 @@ In the Circus I found Aerie, luckily before she was killed by mysterious assassi
 @197  = ~Here you go, with my excuses for the mess I started.~
 @198  = ~Aerie leaves the group.
  
-Stivan was able to rescue Aerie's wooden pendant, and she broke the enchantment right away. The halfling apologized to the still-wary elf. I can only hope they're done attacking each other... I can't take it anymoe!~
-@199  = ~Now... now I'll breat that horrible curse forever!~
+Stivan was able to rescue Aerie's wooden pendant, and she broke the enchantment right away. The halfling apologized to the still-wary elf. I can only hope they're done attacking each other... I can't take it anymore!~
+@199  = ~Now... now I'll break that horrible curse forever!~
 @200  = ~Did it work?~
 @201  = ~Y-yes... I think so.~
 @202  = ~Haer'Dalis, I... I was so very much afraid! I was afraid of dying and... losing you...!~
 @203  = ~Come here, my love. A single embrace will be enough to give quiet and calm to your heart. I was afraid as well that the Star of Osiris would soon show your way towards the Dead Reign's gates, but your place is here, by my side.~
 @204  = ~Hamsters and rangers everywhere, rejoice! Aerie is safe!~
-@205  = ~It's also thanks to you. You protected me with courage and strenght even after I removed your duty from you. I.. no matter how shaken I was, I souldn't have left you that way.~
+@205  = ~It's also thanks to you. You protected me with courage and strength even after I removed your duty from you. I.. no matter how shaken I was, I shouldn’t have left you that way.~
 @206  = ~Minsc's large shoulders will endure this and much more. You.. will you become my witch again?~
 @207  = ~Certainly, Minsc. I'll be your witch for as long as your dajemma isn't over.~
 @208  = ~Have you heard, evil?! Your reek will NEVER tear a ranger and his hamster away from their witch!~
 @209  = ~Might I ask why you care so much for that trinket?~
-@210  = ~It's a gift from Uncle Quayle. He gave it to me when he started telling me of the adventures of Baervan and his loyal raccoon Chiktika Fastpaws. Aside from the memories, th-that's everyting left of him...~
+@210  = ~It's a gift from Uncle Quayle. He gave it to me when he started telling me of the adventures of Baervan and his loyal raccoon Chiktika Fastpaws. Aside from the memories, th-that's everything left of him...~
 @211  = ~It's a gift from Uncle Quayle. He gave it to me when he started telling me of the adventures of Baervan and his loyal raccoon Chiktika Fastpaws. I-I like to hold it close when I'm feeling him homesick...~
 @212  = ~Great. Now I feel even worse for having thrown it away.~
 @213  = ~Every action has its consequences, and those who act rashly like you cause the biggest troubles!~
