@@ -1,4 +1,4 @@
-@0    = ~Have you seen a seagull around here? I am Stivan the Seagull Hunter, powerful and famous. Ehm... would you like to buy a plume? I have plenty.~
+@0    = ~Have you seen a seagull around here? I am Stivan the Seagull Hunter, powerful and famous. Er... would you like to buy a plume? I have plenty.~
 @1    = ~Sure. How much does it cost?~
 @2    = ~A seagull... hunter? Did I get that right?~
 @3    = ~Wait a moment... Why do you hate those birds like that?~
@@ -11,7 +11,7 @@
 @10   = ~What is an halfling like you doing in the capital of Amn?~
 @11   = ~You said you were a seagull hunter, right?~
 @12   = ~Yes, I hunt seagulls. They're the sea's vermin, and I bravely fought against hundreds of them. Hundreds, I say!~
-@13   = ~Ehm... Have a good hunt, in that case.~
+@13   = ~Er... Have a good hunt, in that case.~
 @14   = ~What else is an halfling like you doing in the capital of Amn?~
 @15   = ~Have you ever looked a seagull in the eye, eh? There is evil there... Pure evil. And I intend to hunt all of them... All of them!~
 @16   = ~Other than hunting seagulls and selling their plumes? Well, I like to roam around the streets of Athkatla, which hold no secret to me. Sometimes I need to handle some ruffian, but they're no trouble to me. Other than that, I don't have much to do, given that I live under a bridge.~
@@ -31,7 +31,7 @@
 @30   = ~I intend to find Imoen, a childhood friend of mine who was kidnapped by the Cowled Wizards.~
 @31   = ~We're looking for answers, Stivan. I must find out what happened to  Imoen, a friend from Candlekeep, and Irenicus, a madman who had fun torturing me and my companions.~
 @32   = ~WOW! It sounds anything but easy, but I don't care! Let's go! There are flocks of seagulls to deplume and...~
-@33   = ~Ah. There's a small matter I might have forgotten to mention. Ehm... could you do me a favor?~
+@33   = ~Ah. There's a small matter I might have forgotten to mention. Er... could you do me a favor?~
 @34   = ~What do you need?~
 @35   = ~Depends, Stivan. Explain me what it's about.~
 @36   = ~You haven't even started marching with us and you're already adding trouble to the party..~
@@ -54,7 +54,7 @@
 @53   = ~I'd say so. To the Government District, then.~
 @54   = ~Looking for a tomb.
 
-While we were exploring the Bridge District we found Stivan, an halfling native of Athkatla, whom I asked for help in my search of Imoen and Irenicus. In exchange for a tomb where he might put the ashes of his close ones, Stivan offered us his guidance in his town and his defense against... ehm... seagulls. The halfling said I should go in the Government District and ask some clerk in the Council of Six.~
+While we were exploring the Bridge District we found Stivan, an halfling native of Athkatla, whom I asked for help in my search of Imoen and Irenicus. In exchange for a tomb where he might put the ashes of his close ones, Stivan offered us his guidance in his town and his defense against... er... seagulls. The halfling said I should go in the Government District and ask some clerk in the Council of Six.~
 @55   = ~Not right now. Maybe later.~
 @56   = ~Boh.~
 @57   = ~Heh. I'm looking forward to selling my last plumes, so that I might hunt more seagulls!~

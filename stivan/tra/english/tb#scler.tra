@@ -42,7 +42,7 @@ A clerk in the Council of Six Building explained us that there are currently no 
 @39   = ~Looking for a tomb.
 
 The clerk in the Council of Six Building has started the procedures required to make Stivna properly acquire the tomb. He promised he will send for us as soon as he is done, and also offered to keep the urn safe in the meantime.~
-@40   = ~I see that your friend isn't with you. If I'm not mistaken, he mentioned he wanted to put an urn in there. Come back with him, my <PRO_LADYLORD>: I might have a soluton for his... ehm... "problem" while the required documents are ready.~
+@40   = ~I see that your friend isn't with you. If I'm not mistaken, he mentioned he wanted to put an urn in there. Come back with him, my <PRO_LADYLORD>: I might have a soluton for his... er... "problem" while the required documents are ready.~
 @41   = ~I was anxiously waiting to see you again, my <PRO_LADYLORD>!~
 @42   = ~The documents for the ownership of the crypt are ready, but I need your friend to sign them. Come back with him.~
 @43   = ~Write Lawrence! Lawrence Cutterwere!~
@@ -51,7 +51,7 @@ The clerk in the Council of Six Building has started the procedures required to 
 @46   = ~I thought you'd try more to help me, <CHARNAME>! Instead, you throw the towel at the first sign of trouble! I will have nothing to do with you! I'm gone!~
 @47   = ~Looking for a tomb.
 
-While we were exploring the Bridge District we found Stivan, an halfling native of Athkatla, whom I asked for help in my search of Imoen and Irenicus. In exchange for a tomb where he might put the ashes of his close ones, Stivan offered us his guidance in his town and his defense against... ehm... seagulls. The halfling said I should go in the Government District and ask some clerk in the Council of Six.~
+While we were exploring the Bridge District we found Stivan, an halfling native of Athkatla, whom I asked for help in my search of Imoen and Irenicus. In exchange for a tomb where he might put the ashes of his close ones, Stivan offered us his guidance in his town and his defense against... er... seagulls. The halfling said I should go in the Government District and ask some clerk in the Council of Six.~
 @48   = ~Looking for a tomb.
  
 A messenger informed us that the documents for the transferral of the crypt are ready. I can go pick them up any time I wish from the clerk Lawrence in the Council of Six building.~
@@ -63,9 +63,9 @@ Not having found a tomb where Stivan might put the ashes of his relatives, I sug
 @52   = ~So be it. Here it is. Treat it with due respect, have I made myself clear?~
 @53   = ~Uhm... Really ugly...~
 @54   = ~Nobody asked for your judgment!~
-@55   = ~See you soon, my <PRO_LADYLORD>. A messenger will warn you as soon as the documents are ready. Remember to come by yours truly to take back the urn of your... ehm... "friend".~
+@55   = ~See you soon, my <PRO_LADYLORD>. A messenger will warn you as soon as the documents are ready. Remember to come by yours truly to take back the urn of your... er... "friend".~
 @56   = ~The documents for the transferral of the urn are ready. I just need a dozen signatures from your friend.~
-@57   = ~Ehm... you do know how to write a signature, my young man?~
+@57   = ~Er... you do know how to write a signature, my young man?~
 @58   = ~Sure! Where do I need to sign?~
 @59   = ~Here, here, here, and....~
 @60   = ~...~
@@ -74,7 +74,7 @@ Not having found a tomb where Stivan might put the ashes of his relatives, I sug
 @63   = ~And here is your urn. If you want a suggestion, you should change it: it is an insult to good taste and proper behavior. It looks like a night vase!~
 @64   = ~ (Snort!) Give it to me!~
 @65   = ~(Wink wink) My <PRO_LADYLORD>, if you were satisfied by my work, don't hesitate to nominate me as the best employee of <YEAR>.~
-@66   = ~Ehm... Sure, you can count on it.~
+@66   = ~Er... Sure, you can count on it.~
 @67   = ~You just did your job.~
 @68   = ~Let's get out of here *now*. I'm going to choke on all the bureaucracy that is lingering in these halls!~
 @69   = ~I hope you have a proper reason to disturb me.~
@@ -95,7 +95,7 @@ Not having found a tomb where Stivan might put the ashes of his relatives, I sug
 @84   = ~Do you know whom I should ask or not?~
 @85   = ~As charming as an orc. It's pretty clear you've forgotten your own name.~
 @86   = ~I don't have time to waste with such an idiot. Goodbye.~
-@87   = ~Ehm... No. I can't really recall who handles that. I'm sorry.~
+@87   = ~Er... No. I can't really recall who handles that. I'm sorry.~
 @88   = ~Get out of my way, <RACE>. You're casting a shadow, and I need light to fill up these reports.~
 @89   = ~I won't get away until you've helped me, cretin. Who buries the dead? You?~
 @90   = ~Should I ask you for a tomb?~

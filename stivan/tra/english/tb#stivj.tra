@@ -18,7 +18,7 @@
 @17   = ~Io... Non ho la benchè minima intenzione di restare più a lungo con te. Addio, <CHARNAME>! Possano i gabbiani cibarsi dei tuoi putridi resti!~
 @18   = ~Alla ricerca di una tomba.
 
-Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.~
+Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... er... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.~
 @19   = ~Alla ricerca di una tomba.
 
 L'impiegato nel Palazzo di Giustizia ha avviato le pratiche necessarie per far acquisire legalmente a Stivan la proprietà della cripta. Ha promesso di inviarci un messaggero non appena saranno ultimate e, nel frattempo, si è offerto di custodire al sicuro l'urna dell'halfling.~
@@ -113,7 +113,7 @@ Abbiamo infine riposto le ceneri dei familiari di Stivan nella cripta. Per ringr
 @100  = ~Rilassati, Stivan. Non sono preoccupato. Sono sicuro che <CHARNAME> sarà all'altezza di qualsiasi inconveniente ci attenda. Non è così?~
 @101  = ~Puoi dirlo forte, amico mio.~
 @102  = ~Esatto. Insieme supereremo anche questo ostacolo.~
-@103  = ~Ehm... Non esageriamo. Io farò il possibile, ma rimango sempre un <RACE>.~
+@103  = ~Er... Non esageriamo. Io farò il possibile, ma rimango sempre un <RACE>.~
 @104  = ~Direi di proseguire, allora. Perdere tempo non ha senso.~
 @105  = ~La paura è per gli smidollati, e tu non rientri tra questi. Non credo che tu abbia esistato quando...~
 @106  = ~EEEEEKKKKK!~
@@ -545,7 +545,7 @@ Abbiamo infine riposto le ceneri dei familiari di Stivan nella cripta. Per ringr
 @532  = ~Per correggere le iniquità e sradicare la povertà, non basta tendere la mano ai bisognosi, Stivan. Occorre anche aiutarli a camminare fino a quando non saranno capaci di reggersi sulle proprie gambe.~
 @533  = ~Well, ecco... Certo, Miss Nalia. Avete sempre ragione voi.~
 @534  = ~(Bisbigliando) Non è vero, <CHARNAME>, io sono con te. Ogni tanto la nostra amica sragiona, ma non posso contraddirla davanti a tutti. La farei sfigurare.~
-@535  = ~Ehm... Io credevo che quella di Umar fosse solo una favola raccontata dalle madri halfling per spaventare i loro piccoli quando facevano i monelli o cose simili.~
+@535  = ~Er... Io credevo che quella di Umar fosse solo una favola raccontata dalle madri halfling per spaventare i loro piccoli quando facevano i monelli o cose simili.~
 @536  = ~Ovviamente con me non ce n'è mai stato bisogno.~
 @537  = ~Gli Stregoni Incappucciati sono incredibilmente bravi a catturare le persone. Peccato che spesso siano quelle sbagliate.~
 @538  = ~Heh. Mia mamma diceva sempre che i suoi ceffoni erano più che sufficienti.~
@@ -698,7 +698,7 @@ sento sporgere le fredde ossa di un morto".~
 @679  = ~Tu fatti gli affari tuoi!~
 @680  = ~... Heh. Stavo scherzando, Mazzy. Non guardarmi in quel modo...~
 @681  = ~Spero di essere stata chiara, Stivan.~
-@682  = ~Ehm... Certo. Chiarissima.~
+@682  = ~Er... Certo. Chiarissima.~
 @683  = ~Toglimi una curiosità, Jaheira: i tuoi amici druidi hanno forse deciso di trastullarsi con gli abitanti del luogo?~
 @684  = ~Sarebbe bene evitare giudizi affrettati, Stivan. Preferirei che non ci pronunciassimo su una situazione di cui sappiamo poco o nulla.~
 @685  = ~Le cose non si considerano mai per quel che sono, ma per quel che appaiono.~
@@ -861,7 +861,7 @@ sento sporgere le fredde ossa di un morto".~
 @842  = ~Ehi, tu! Posso sapere perchè guardi in quel modo il mio amico? Non ti hanno insegnato che è maleducato fissare le persone senza dir nulla?~
 @843  = ~Guardo dove mi pare, donnetta.~
 @844  = ~Ne sei sicuro? Vuoi che venga lì e ti faccia volgere lo sguardo altrove a suon di schiaffi?~
-@845  = ~Ehm... No. Non ce n'è bisogno...~
+@845  = ~Er... No. Non ce n'è bisogno...~
 @846  = ~Presto fatto.~
 @847  = ~Sii coraggioso, Stivan. Anche gli halfling, nel cercare di scalare la più alta delle vette, possono raggiungerne la cima.~
 @848  = ~(Arrossisce) Grazie, Mazzy.~
@@ -1120,14 +1120,14 @@ sento sporgere le fredde ossa di un morto".~
 @1101 = ~(Sniff) Grazie, Samuel. Sono commosso...~
 @1102 = ~Oh, non piangere. Sarebbe un peccato se le tue lacrime salate finissero in un buon bicchiere di vino. Ecco, prendete; uno per te, ed uno per il tuo amico.~
 @1103 = ~Coraggio, <CHARNAME>, bevine un sorso. Sono sicuro che ti piacerà!~
-@1104 = ~Ehm... Veramente sono astemio...~
+@1104 = ~Er... Veramente sono astemio...~
 @1105 = ~Ti ringrazio, ma il vino proprio non mi piace.~
 @1106 = ~Io adoro il vino, soprattutto quello rosso. Stivan, Samuel, alla salute!~
 @1107 = ~Davvero? Che peccato. Allora brinderemo solo Samuel ed io. Alla salute, amico!~
 @1108 = ~Alla salute!~
 @1109 = ~Semplicemente divino!~
 @1110 = ~Samuel, vuoi darti una mossa o no?! Per quale motivo te ne stai lì a chiacchierare quando io mi ammazzo di lavoro tra un tavolo e l'altro?~
-@1111 = ~Ehm... Il dovere mi chiama, amici. Adesso devo proprio lasciarvi, ma tornate a trovarmi presto!~
+@1111 = ~Er... Il dovere mi chiama, amici. Adesso devo proprio lasciarvi, ma tornate a trovarmi presto!~
 @1112 = ~Puoi contarci, Samuel! Grazie di tutto e stammi bene!~
 @1113 = ~... Grazie anche a te, <CHARNAME>. Questa sosta mi ha decisamente ringalluzzito, e ora mi sento pronto a tornare all'avventura con le gote belle rosse. Heh.~
 @1114 = ~Sai, <CHARNAME>, sono veramente contento che tu mi abbia chiesto di viaggiare al tuo fianco. Grazie a te non soffro più la fame e potrò dare ai miei familiari un luogo in cui riposare indisturbati. Non mi sentivo così carico da anni, ormai!~
@@ -1167,14 +1167,14 @@ sento sporgere le fredde ossa di un morto".~
 @1148 = ~Cosa?! Stai scherzando, vero? Mia mamma diceva sempre che le signorine non si toccano neanche con un fiore!~
 @1149 = ~E’ quello che dico anch’io.~
 @1150 = ~Temo che i genitori di Irenicus non abbiano fatto altrettanto.~
-@1151 = ~Ehm... Non credo che Irenicus conosca la cavalleria...~
+@1151 = ~Er... Non credo che Irenicus conosca la cavalleria...~
 @1152 = ~Hai idea del perché ti abbia torturata?~
 @1153 = ~Essere una figlia di Bhaal comporta questo e ben altro.~
 @1154 = ~E’ quello che sto cercando di scoprire. Imoen, la ragazza che è stata imprigionata con me, mi ha detto che voleva esplorare il mio potenziale di figlia di Bhaal, anche se non ho idea di cosa questo significhi.~
 @1155 = ~Bhaal? Ho già sentito questo nome...~
 @1156 = ~Ma certo! E’ quel dongiovanni che durante il Periodo dei Disordini seduceva tutte le donne che incontrava sulla sua strada, giusto?~
 @1157 = ~Come fai a conoscere quel periodo?~
-@1158 = ~Ehm... Non proprio. Bhaal era una divinità malvagia che, conscia della sua futura caduta, ha lasciato una prole che sperava alimentasse la sua rinascita.~
+@1158 = ~Er... Non proprio. Bhaal era una divinità malvagia che, conscia della sua futura caduta, ha lasciato una prole che sperava alimentasse la sua rinascita.~
 @1159 = ~Io lo chiamerei “Bhaal: dongiovanni nel tempo libero, Signore dell’Omicidio di professione”.~
 @1160 = ~*Ahem* Dall’aspetto non si direbbe, ma io sono più grande di te, sai?~
 @1161 = ~Ricordo quegli anni. Papà era preoccupatissimo a causa della scomparsa di Waukeen, la dea del commercio. Temeva che gli affari ne avrebbero risentito, e in effetti per un po’ di tempo fu così.~

@@ -12,7 +12,7 @@
 @11   = ~Yes. Thanks to <CHARNAME> I've acquired some self-esteem, and I'm sure I'm good enough to become a good Shadow Thief. A better one than you, maybe.~
 @12   = ~Well said!~
 @13   = ~Don't get over your head. So many young boys started with your pride and ended up staying in the lower ranks for the rest of their lives. Like Cuchul, for instance.~
-@14   = ~Ehm... Don't listen to her, friend. She rambles, sometimes.~
+@14   = ~Er... Don't listen to her, friend. She rambles, sometimes.~
 @15   = ~I think it's time for your initiation ritual.~
 @16   = ~Here, in the guild, is a wardrobe keeper. Every self-respecting thief must be able to steal her pin, or he's worth nothing.~
 @17   = ~Be careful. Missy has become paranoid after having been the victim of so many thefts. YOu'd better be cautious.~
@@ -47,7 +47,7 @@ A Shadow Thief named Mitsu offered Stivan the chance of proving his worth in the
 @44   = ~Uurgkh!~
 @45   = ~Yes, it went exactly like that! (Yoink, it's mine!)~
 @46   = ~Have you come to give up, young one?~
-@47   = ~Ehm, I'm still working on it, let me reassure you...~
+@47   = ~Er, I'm still working on it, let me reassure you...~
 @48   = ~You'd better hurry up, Mitsu isn't known for her patience.~
 @49   = ~Yes, hurry up! If you make me wait too much I'll write a letter to Aran, and then you can forget about joining us!~
 @50   = ~I thought you were illiterate?~
@@ -105,7 +105,7 @@ Mitsu gave Stivan his first real job, but I had to renounce it to avoid losing t
 @98   = ~We'll call on you when we need you. Now get lost.~
 @99   = ~(Snort!) Harpy!~
 @100  = ~What did you just say?!~
-@101  = ~I? Ehm... Nothing. I'll wait to hear from you, Mitsu.~
+@101  = ~I? Er... Nothing. I'll wait to hear from you, Mitsu.~
 @102  = ~Stivan and the Shadow Thieves
 
 We saved Armagaran Vulova from an ambush from the rival guild. Mistu will contact Stivan when she needs him again.~
@@ -114,7 +114,7 @@ We saved Armagaran Vulova from an ambush from the rival guild. Mistu will contac
 @105  = ~Not yet, Stivan. You should know that a vampire only really dies if you pierce his heart with a wooden stake. Would you like to handle that yourself?~
 @106  = ~We'... we'll party later. Now... I must catch my breath.~
 @107  = ~The wizard is scarier. What he did to you and your sister... that's beyond comprehension.~
-@108  = ~Ehm... To you the honor. Last time I did that, the beast shrieked so loud I almost fell into its sarcophagus. Brrr...~
+@108  = ~Er... To you the honor. Last time I did that, the beast shrieked so loud I almost fell into its sarcophagus. Brrr...~
 @109  = ~I can't still understand how you manage to stand. I thought that the soul was needed to live, but you're disregarding that at every breath. From whence comes the spark of life, then?~
 @110  = ~It really comes from the soul. Even if I look fine, it really isn't so. I feel as if my strength were the sand in a hourglass. Wile it's falling down, I'm getting emptier.~
 @111  = ~No mere man could live without a soul, but I am no mere man. You'd be dead already, if you were in my shoes.~
@@ -133,7 +133,7 @@ Not having heard from Mitsu, Stivan would like to go meet her at the Guild to ob
 @122  = ~You must have read my mind, little boy, since I had just the job for you.~
 @123  = ~It was really more like "let's see who we can hand this hot potato off to".~
 @124  = ~Cuchul!~
-@125  = ~Ehm... Did I say that out loud?~
+@125  = ~Er... Did I say that out loud?~
 @126  = ~Tell your friends to go somewhere else. There are far too many ears in here, and I don't want any of those.~
 @127  = ~<CHARNAME> can remain. Gaelan said that <PRO_HIMHER> is to be trusted.~
 @128  = ~So be it. Everybody else, go away.~
@@ -163,7 +163,7 @@ Not having heard from Mitsu, Stivan would like to go meet her at the Guild to ob
 @152  = ~Calm down, my friend. Mistu won't leave you to them - She'd do anything to defend you.~
 @153  = ~Well, companions are to be helped, right?~
 @154  = ~Companion? Did you mean "brother", right?~
-@155  = ~Ehm... Yes.~
+@155  = ~Er... Yes.~
 @156  = ~You have your job, Hunter. I don't need to explain you where those cursed paladins' stronghold is, so go there and avenge our busted brothers!~
 @157  = ~Heh. At your orders, chief!~
 @158  = ~As soon as that is done, you'll be a full-fledged Shadow Thief.~
@@ -236,7 +236,7 @@ I refused to take part in the carnage required to obtain the Shield of the Left 
 @221  = ~Stivan and the Shadow Thieves
 
 Not rescuing the Shield of the Left Handed halted Stivan's career between the Shadow Thieves. The halfling now closed himself into a deep silence.~
-@222  = ~Ehm... Did I really say that?~
+@222  = ~Er... Did I really say that?~
 @223  = ~I don't really think so! You being the chosen one of Aran doesn't mean that *I* have to live up to your every wish!~
 @224  = ~We Shadow Thieves have rules. Whomever refuses a job for personal reasons is out, and that's it. No second chances.~
 @225  = ~You'd better cooperate, you know? I have the resources to make your life Hell. I'm the head of a Thief Guild, after all.~
