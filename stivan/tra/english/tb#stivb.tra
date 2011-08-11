@@ -257,7 +257,7 @@
 @252  = ~Esattamente.~
 @253  = ~MI-~
 @254  = ~MISERICORDIA! Sono andato a letto con l'halfling!~
-@255  = ~Beh, in effetti non avevo mai dormito con una donna prima d'ora.~
+@255  = ~Well, in effetti non avevo mai dormito con una donna prima d'ora.~
 @256  = ~NOOOOOOO!!!!!!!~
 @257  = ~Nulla di così drammatico, Miss Edwina. In futuro cercherò di appisolarmi al vostro fianco anzichè sopra di voi.~
 @258  = ~La... La mia prima volta da donna... Deflorato da un halfling...~
@@ -297,7 +297,7 @@
 @292  = ~Di rosso, ovv... Ma cosa diavolo mi fai dire?!?~
 @293  = ~Non ne dubitavo. Sarà un onore farvi da testimone.~
 @294  = ~(Sospiro) "Le stelle nascondono nuovamente il loro volto luminoso intorno alla luna... E mentre essa rifulge al culmine del suo splendore, sulla terra tutto tace".~
-@295  = ~Beh... *Quasi* tutto...~
+@295  = ~Well... *Quasi* tutto...~
 @296  = ~Tieni gli occhi bene aperti, Boo! Anche quando cala la notte, i difensori della giustizia devono restare svegli per opporsi al male!~
 @297  = ~Minsc è contento di averti ritrovato, Boo. Senza di te si addormentava come un ghiro.~
 @298  = ~Io ti preferivo quando eri depresso, ranger. Per quanto breve, è stato il solo periodo di tempo in cui dalla tua bocca non uscivano fesserie.~
@@ -371,7 +371,7 @@
 @366  = ~(Sospira) Il buon senso, dunque, non avrà mai degli eroi.~
 @367  = ~(Ghigna) Scusami, <CHARNAME>. Resisto a tutto, ma non alle tentazioni.~
 @368  = ~Sai, Jan, penso che con la tua parlantina potresti essere un ottimo bardo.~
-@369  = ~Beh, forse questo è il momento di rivelare un segreto che non ho mai detto a nessuno. Devi sapere, Stivvy, che prima di dedicarmi alla vendita di vegetali, attività più remunerativa di quanto si possa immaginare, ho dovuto cercare qualche espediente che mi consentisse di vivere almeno alla giornata. Il mio apprendistato presso Golodon l'Evirato era ormai terminato, quindi--~
+@369  = ~Well, forse questo è il momento di rivelare un segreto che non ho mai detto a nessuno. Devi sapere, Stivvy, che prima di dedicarmi alla vendita di vegetali, attività più remunerativa di quanto si possa immaginare, ho dovuto cercare qualche espediente che mi consentisse di vivere almeno alla giornata. Il mio apprendistato presso Golodon l'Evirato era ormai terminato, quindi--~
 @370  = ~Golodon L'Evirato?~
 @371  = ~Sì. Non chiedermi il perchè di quel soprannome. Ad oggi nessuno lo sa.~
 @372  = ~Heh. Và avanti, ti ascolto.~
@@ -513,7 +513,7 @@
 @508  = ~Se lo conoscessi quanto basta, Stivan, non diresti una cosa simile.~
 @509  = ~Valygar, mi hai spiegato perchè non eri attratto dalla vita mondana, ma resta ancora un mistero cosa ti abbia spinto a diventare un ranger.~
 @510  = ~Sarebbe più corretto chiamarmi esploratore anzichè ranger. Quest'ultimo, infatti, è un titolo che viene conferito soltanto a coloro che si sono distinti nella difesa della natura.~
-@511  = ~Beh, se Minsc l'ha ottenuto, immagino che non sia difficile da conseguire.~
+@511  = ~Well, se Minsc l'ha ottenuto, immagino che non sia difficile da conseguire.~
 @512  = ~Minsc ha un udito più fine di quello di Boo e ti ha sentito! Sono diventato ranger perchè nessuno ha dato al male tanti calci nel sedere come me!~
 @513  = ~Ti ringrazio, Minsc: hai appena confermato le mie supposizioni. Stavi dicendo, Valygar?~
 @514  = ~Ho prestato servizio tra le guardie dell'Amn per diversi anni. Sono stato impiegato come esploratore nelle foreste e nei luoghi selvaggi per le mie capacità di mimetizzazione, ed è nel corso di una delle mie missioni che ho sentito il dovere di fare il possibile per proteggere la terra e le sue creature.~
@@ -537,7 +537,7 @@
 @532  = ~Spiacente, ma non voglio avere più nulla a che fare con quella sfera. Nella mia mente è ancora vivido il ricordo della distruzione e della sofferenza che ha causato, e nelle mani di persone incaute potrebbe ritornare ad essere pericolosa.~
 @533  = ~Ma potresti fare un sacco di cose con quell'aggeggio!~
 @534  = ~Ad esempio?~
-@535  = ~Beh, potremmo servircene per eliminare tutti i gabbiani nel Faerun. Sì, mi pare un'ottima idea!~
+@535  = ~Well, potremmo servircene per eliminare tutti i gabbiani nel Faerun. Sì, mi pare un'ottima idea!~
 @536  = ~... Per oggi ne hai dette fin troppe, Stivan. Il mio no è definitivo.~
 @537  = ~Quindi, elfa, hai perso le tue ali nel patetico tentativo di salvare un bambino. Piuttosto stupido da parte tua, ma non mi sorprende.~
 @538  = ~Come... Come fai a saperlo? Hai origliato di nuovo la mia conversazione con <CHARNAME>?~
@@ -547,7 +547,7 @@
 @542  = ~Assolutamente no. (Rivolgendoti a Stivan) Vuoi chiudere la bocca o preferisci che sia io a sigillartela?~
 @543  = ~Sai bene che ti ascolto più che volentieri. Non prestare attenzione a quello che dice.~
 @544  = ~E' sempre un piacere sentire ciò che hai da dire, ma vorrei che tu riuscissi ad essere un pò più forte.~
-@545  = ~Beh, Stivan non ha tutti i torti. A volte sei piuttosto noiosa e ripetitiva.~
+@545  = ~Well, Stivan non ha tutti i torti. A volte sei piuttosto noiosa e ripetitiva.~
 @546  = ~Io... Cerco solo di essere me stessa... Con i miei pregi e i miei difetti. Ma cercherò di... di essere più coraggiosa e autonoma, se è questo che vuoi.~
 @547  = ~Ah sì? V-va bene, <CHARNAME>: s-s-se sono così noiosa e rip-petitiva, non ti seccherò più! Io... Non credevo di essere un peso per te!~
 @548  = ~Heh. A volte c’è bisogno che siano le labbra altrui a confessare verità che non ammetti a te stesso. Dovresti ringraziarmi!~
@@ -755,7 +755,7 @@
 @750  = ~Di fronte ad una simile offesa, persi completamente la testa.~
 @751  = ~In preda all'ira, l'ho colpito al volto con un pugno, e se gli altri scudieri non mi avessero fermato, avrei continuato ad infierire su di lui. Il suo viso era una maschera di sangue... In seguito seppi di avergli rotto il naso, ma in quel momento in me bruciava una rabbia, un furore così cieco...~
 @752  = ~Il mio scoppio d'ira venne duramente punito dai miei superiori, ma in compenso riottenni l'anello di mia sorella. Lo trovai pochi giorni dopo nei miei alloggi.~
-@753  = ~Beh, deve valere molto per te se non hai esitato a mettere da parte la tua rigida disciplina per riaverlo. Lo terrai come ricordo di tua madre e di Moira?~
+@753  = ~Well, deve valere molto per te se non hai esitato a mettere da parte la tua rigida disciplina per riaverlo. Lo terrai come ricordo di tua madre e di Moira?~
 @754  = ~No. Ho intenzione di donarlo a <CHARNAME> non appena troverò il momento giusto. Questo... Questo suggellerà il nostro amore.~
 @755  = ~No. Lo donerò alla donna a cui mi legherò un domani, come simbolo del mio amore per lei.~
 @756  = ~Ah. Bene. Mi fa... piacere saperlo.~
@@ -786,7 +786,7 @@ Lui le prese teneramente la mano;
 si guardarono fisso negli occhi, 
 poi si guardarono in giro che non vegliassero i genitori;
 e poichè non videro nessuno,
-svelti... Beh, fecero come facciamo noi".~
+svelti... Well, fecero come facciamo noi".~
 @780  = ~Ohhhh! Com'è audace questa poesia!~
 @781  = ~Povero hargluk. Ridotto a soddisfare la tua libido attraverso le pagine incartapecorite di un libro.~
 @782  = ~Tra poco vedrai quanto sarò audace nell'aprirti in due! Da qua!~
@@ -802,7 +802,7 @@ svelti... Beh, fecero come facciamo noi".~
 @792  = ~Oooohhhh! Come ogni nobile che si rispetti, disprezzate i popolani a tal punto da dimenticarvi del loro nome!~
 @793  = ~No, non è così! E' solo che... Sono molto preoccupata, e non riesco a concentrarmi su nient'altro che non sia la difesa della mia casa.~
 @794  = ~Heh. Non avete motivo di scusarvi. Ad ogni modo, io sono Stivan. Stivan il Cacciatore.~
-@795  = ~Piacere, Stivan. Io sono... Beh, sai già chi sono. Fa sempre un certo effetto vedere che gli altri ti conoscono mentre tu non hai idea di chi sia il tuo interlocutore.~
+@795  = ~Piacere, Stivan. Io sono... Well, sai già chi sono. Fa sempre un certo effetto vedere che gli altri ti conoscono mentre tu non hai idea di chi sia il tuo interlocutore.~
 @796  = ~State forse dicendo che la mia fama di sterminatore di gabbiani non è giunta alle vostre orecchie?~
 @797  = ~Zietta funge da filtro col mondo esterno. Sono poche le cose di cui vengo a conoscenza senza che non siano state attentamente vagliate da lei.~
 @798  = ~Anni fa, ad esempio, in occasione del compleanno di mio Padre, un bardo particolarmente abile si esibì con dei componimenti un pò boccacceschi. Zietta non gradì per niente quei versi a sua detta "osceni" e cacciò in malo modo lo sventurato cantastorie. E' facile intuire che da allora nessuno osò più proferire poesie licenziose nel nostro maniero.~

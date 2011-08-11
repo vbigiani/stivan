@@ -484,7 +484,7 @@ Abbiamo infine riposto le ceneri dei familiari di Stivan nella cripta. Per ringr
 @471  = ~Accolgo con dispiacere questa triste notizia. E' successo di recente?~
 @472  = ~No, risale ad otto anni fa, ma di sicuro sono stati loro a manovrare i gabbiani che hanno ucciso i miei genitori e i miei fratelli!~
 @473  = ~Qui a Trademeet gli attacchi da parte degli animali sono iniziati nelle ultime settimane, pertanto dubito che siano connessi ad un episodio così remoto.~
-@474  = ~Accidenti, ero certo che... Beh, non importa. *Adesso* sono di sicuro loro i responsabili di tutto questo caos.~
+@474  = ~Accidenti, ero certo che... Well, non importa. *Adesso* sono di sicuro loro i responsabili di tutto questo caos.~
 @475  = ~Heh. Pare che a casa Firecam tiri una brutta aria.~
 @476  = ~(Gasp!) Quell'uomo si è rivelato più pericoloso di quanto pensassi! C'è... C'è forse il rischio che Miss Nalia venga venduta come concubina?~
 @477  = ~Roenal terrà la ragazza ben stretta a sé. In fin dei conti, gli serve per ottenere le terre da lui ambite. Non escludo però che possa anche decidere di sbarazzarsene una volta conseguito il suo scopo.~
@@ -507,20 +507,20 @@ Abbiamo infine riposto le ceneri dei familiari di Stivan nella cripta. Per ringr
 @494  = ~Una simile magia è a dir poco portentosa. Pochissimi incantatori riuscirebbero ad emularla.~
 @495  = ~Hai visto come son figo, eh?~
 @496  = ~Cosa ne pensi, Stivan? Mi trovi più bella così o con le sembianze di un <PRO_RACE>?~
-@497  = ~Beh, adesso potremo vantarci di aver fatto un'esperienza decisamente unica.~
+@497  = ~Well, adesso potremo vantarci di aver fatto un'esperienza decisamente unica.~
 @498  = ~Non sei il solo a sentirsi disorientato. Anch'io avrò bisogno di un pò di tempo per abituarmi a questo aspetto.~
 @499  = ~In effetti sei irriconoscibile, <CHARNAME>.~
 @500  = ~Heh. Anch'io non riesco a credere di avere dei piedi lisci.~
 @501  = ~E' vero, hai un volto più scavato rispetto a prima. Sei praticamente irriconoscibile!~
-@502  = ~Beh, a parte il colore della pelle, sei praticamente identico a prima.~
+@502  = ~Well, a parte il colore della pelle, sei praticamente identico a prima.~
 @503  = ~*Ahem* Avevo capito fin da subito che non aveva intenzioni ostili.~
 @504  = ~Heh. A quanto pare, sei soddisfatto del tuo nuovo aspetto.~
-@505  = ~(Arrossisce) Beh, i tuoi attributi... Sono rimasti inalterati...~
+@505  = ~(Arrossisce) Well, i tuoi attributi... Sono rimasti inalterati...~
 @506  = ~Heh. Samuel rimarrà sbalordito quando glielo racconterò!~
 @507  = ~Io... Ho un pò di vertigini. Non sono abituato a simili altezze. E' meglio procedere piano piano, senza fretta. Non voglio sbucciarmi le ginocchia a furia di cadere.~
 @508  = ~Po... Posso farvi una ri-richiesta, illustrissima e v-veneranda...~
 @509  = ~Non c'è tempo per inutili adulazioni. Parla, ma sii rapido.~
-@510  = ~Beh, ecco... Io... Mi stavo chiedendo s-se... Se fosse possibile m-mantenere questo... q-questo aspetto...~
+@510  = ~Well, ecco... Io... Mi stavo chiedendo s-se... Se fosse possibile m-mantenere questo... q-questo aspetto...~
 @511  = ~Vorresti mantenere le sembianze di un elfo dal cuore nero? Ho capito bene?~
 @512  = ~S-sì...~
 @513  = ~E' fuori discussione. Dissolverò l'illusione che io stessa ho creato e vi condurrò verso l'uscita. Questi erano i patti, e non intendo sentire altre assurde richieste.~
@@ -543,7 +543,7 @@ Abbiamo infine riposto le ceneri dei familiari di Stivan nella cripta. Per ringr
 @530  = ~Hmmf. Penso che avrebbe anche potuto separarsi da qualche moneta d'oro e dare un aiuto più concreto a quei poveri sventurati.~
 @531  = ~Non sminuite il suo gesto.~
 @532  = ~Per correggere le iniquità e sradicare la povertà, non basta tendere la mano ai bisognosi, Stivan. Occorre anche aiutarli a camminare fino a quando non saranno capaci di reggersi sulle proprie gambe.~
-@533  = ~Beh, ecco... Certo, Miss Nalia. Avete sempre ragione voi.~
+@533  = ~Well, ecco... Certo, Miss Nalia. Avete sempre ragione voi.~
 @534  = ~(Bisbigliando) Non è vero, <CHARNAME>, io sono con te. Ogni tanto la nostra amica sragiona, ma non posso contraddirla davanti a tutti. La farei sfigurare.~
 @535  = ~Ehm... Io credevo che quella di Umar fosse solo una favola raccontata dalle madri halfling per spaventare i loro piccoli quando facevano i monelli o cose simili.~
 @536  = ~Ovviamente con me non ce n'è mai stato bisogno.~
@@ -564,7 +564,7 @@ Abbiamo infine riposto le ceneri dei familiari di Stivan nella cripta. Per ringr
 @551  = ~Non è giusto. Se la gente piccola fosse trattata con più rispetto e meno sufficienza, questo gnomo non avrebbe mai fatto una cosa simile.~
 @552  = ~Tsk. Le guardie non fanno nulla se non prendersela con gli innocenti. Non avete idea di quante volte mi abbiano rincorso per la città senza motivo.~
 @553  = ~Ho il vago ricordo di averti visto inseguito da un gruppo di guardie per aver lanciato loro in faccia del guano. Mi sbaglio?~
-@554  = ~(Arrossisce) Beh, ecco... Forse quella volta sono stato io ad istigarle...~
+@554  = ~(Arrossisce) Well, ecco... Forse quella volta sono stato io ad istigarle...~
 @555  = ~Quella volta, eh?~
 @556  = ~Se quella nave è sempre stata la base degli schiavisti sin dal loro arrivo in città, allora... Allora sono qui da prima che nascessi!~
 @557  = ~Anche papà ebbe il tuo stesso problema. Non ricordo con chi parlò, ma alla fine riuscì a spuntarla.~
@@ -678,7 +678,7 @@ che vi è sotto uno scheletro celato".~
 dovunque o tocchi, o baci, o la man posi,
 sento sporgere le fredde ossa di un morto".~
 @661  = ~Ebbene? Che cosa ne pensi?~
-@662  = ~Beh, i tuoi versi rappresentano l'amore con una gelida oggettività, lo svuotano di tutto il suo calore. Sono... freddi.~
+@662  = ~Well, i tuoi versi rappresentano l'amore con una gelida oggettività, lo svuotano di tutto il suo calore. Sono... freddi.~
 @663  = ~Al contrario, trovo che siano una commistione di erotismo e di necrofilia, di sensualità e di decadenza. Amore e morte formano un binomio inscindibile, un nodo che nessuna forza può allentare.~
 @664  = ~Non è così, mia colomba?~
 @665  = ~(Arrossisce)~
@@ -736,7 +736,7 @@ sento sporgere le fredde ossa di un morto".~
 @717  = ~Il tuo spirito è decisamente fuori luogo, ma lascerò correre. Mio marito è caduto per mano dello stregone di cui siamo alla ricerca, ed io non avrò pace sino a quando non sarà stato vendicato.~
 @718  = ~Accidenti, mi dispiace. Non lo sapevo.~
 @719  = ~Non c'era motivo per cui dovessi saperlo. Ora, se hai finito...~
-@720  = ~Beh, a questo punto non posso fare a meno di chiedermi un'altra cosa.~
+@720  = ~Well, a questo punto non posso fare a meno di chiedermi un'altra cosa.~
 @721  = ~Parla, se devi, ma non ti garantisco una risposta. Stai toccando ferite che non si sono ancora rimarginate.~
 @722  = ~Hai pagato un alto prezzo per tener fede alla tua parola. Non voglio attribuire alcuna responsabilità a <CHARNAME>, ma se non avessi viaggiato con <PRO_HIMHER>...~
 @723  = ~Dove vuoi arrivare con il tuo ragionamento, Stivan? A chiedermi se lo avrei aiutato pur sapendo che in questo modo mio marito sarebbe morto?~
@@ -770,7 +770,7 @@ sento sporgere le fredde ossa di un morto".~
 @751  = ~Sono contenta che Kram sia riuscito a trovare un lavoro onesto. Con un pò di costanza e di buona volontà, potrà finalmente costruirsi un futuro.~
 @752  = ~Altre agili dita sottratte alla raffinata arte del borseggio... Dove andremo a finire?~
 @753  = ~Con simili osservazioni, Stivan, non c'è da stupirsi se la maggior parte delle persone etichetta gli halfling come un popolo di ladri. Grazie ad Arvoreen, vicende come quella di Kram riescono a smussare questo genere di pregiudizi.~
-@754  = ~Beh, con un pò d'impegno dovrei riuscire a traviarlo...~
+@754  = ~Well, con un pò d'impegno dovrei riuscire a traviarlo...~
 @755  = ~Sono convinta che non cederebbe a nessuna tentazione.~
 @756  = ~E se sgrafignassi qualcosa a Galoomp sotto i suoi occhi? Questo potrebbe risvegliare l'antica abitudine...~
 @757  = ~Quando ti comporti in questo modo, Stivan, sarei tentata di prenderti a schiaffi.~
@@ -814,7 +814,7 @@ sento sporgere le fredde ossa di un morto".~
 @795  = ~Riconoscere i propri limiti è segno di saggezza. Non ha senso sprecare le nostre vite attaccandolo; ci rivarremo sul padrone di questa orrida bestia.~
 @796  = ~Così sia. Preparati, Stivan: combatteremo contro il drago.~
 @797  = ~Capisco cosa dici, ma è meglio proseguire. Abbiamo indugiato sin troppo qui.~
-@798  = ~Ci deve pure pensare, come se la scelta migliore non fosse già ovvia. Beh, mentre tu fai le tue riflessioni, io mediterò su quale sia il posto migliore in cui nascondermi, okay?~
+@798  = ~Ci deve pure pensare, come se la scelta migliore non fosse già ovvia. Well, mentre tu fai le tue riflessioni, io mediterò su quale sia il posto migliore in cui nascondermi, okay?~
 @799  = ~Testa di latta, è da ben *due* ore che non mi lustri! Cosa stai aspettando?!~
 @800  = ~Abbi un attimo di pazienza, Larry: Minsc sta dando da mangiare a Boo. Tra poco si prenderà cura anche di te.~
 @801  = ~Ora! Mi devi lucidare ORA, prima che la ruggine mi intacchi!~
@@ -987,7 +987,7 @@ sento sporgere le fredde ossa di un morto".~
 @968  = ~Quello che si è appena appoggiato sulla mia spalla è un comune esemplare di gabbiano. Vuoi chiedergli qualcosa?~
 @969  = ~Sei impazzito, Cernd?~
 @970  = ~Coraggio; vi farò da tramite.~
-@971  = ~Beh... Ecco, io... Non saprei...~
+@971  = ~Well... Ecco, io... Non saprei...~
 @972  = ~Una domanda qualsiasi andrà bene.~
 @973  = ~D'accordo, d'accordo.~
 @974  = ~*Ahem* Sei un maschio... Oppure una femmina?~
@@ -1075,7 +1075,7 @@ sento sporgere le fredde ossa di un morto".~
 @1056 = ~Abbiamo quasi terminato. Cosa ne pensi della vita?~
 @1057 = ~Heh. Questa è difficile. Un'aiutino?~
 @1058 = ~Tua è la risposta.~
-@1059 = ~Beh, ecco... Sino a poco tempo fa, ti avrei detto che è il più aspro dei campi di battaglia; adesso, invece, considero la vita come un palcoscenico dove ciascuno deve recitare la sua parte.~
+@1059 = ~Well, ecco... Sino a poco tempo fa, ti avrei detto che è il più aspro dei campi di battaglia; adesso, invece, considero la vita come un palcoscenico dove ciascuno deve recitare la sua parte.~
 @1060 = ~E tu sei intenzionato a prendere tra le mani un copione?~
 @1061 = ~Penso di sì.~
 @1062 = ~Molto bene, Stivan. Non c'è altro da aggiungere. La meta del nostro cammino è stata infine raggiunta. Possano la saggezza della Madre, Chauntea, e del Padre, Silvanus, accompagnarti verso ciò che ti attende.~
