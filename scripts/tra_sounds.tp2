@@ -3,6 +3,8 @@ AUTHOR ~tb~
 
 BEGIN ~Populate TRA sound references~
 
+NO_LOG_RECORD
+
 <<<<<<<< names-to-soundsets
 Description prefix
 STIVAN TB#ST
