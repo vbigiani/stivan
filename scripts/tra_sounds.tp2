@@ -3,7 +3,7 @@ AUTHOR ~tb~
 
 BEGIN ~Populate TRA sound references~
 
-<<<<<<<< names-to-soundsets
+<<<<<<<< override/names-to-soundsets.2da
 Description prefix
 STIVAN TB#ST
 MITSU TB#SM
@@ -11,46 +11,31 @@ CUCHUL TB#SC
 ESTELNECRI TB#SE
 
 >>>>>>>>
-COPY - ~names-to-soundsets~ ~names-to-soundsets~
-	READ_2DA_ENTRIES_NOW names2da 2
-	FOR (i = 1; i < names2da; ++i) BEGIN
-		READ_2DA_ENTRY_FORMER names2da i 0 name
-		READ_2DA_ENTRY_FORMER names2da i 1 prefix
-		TEXT_SPRINT $names(EVALUATE_BUFFER ~%name%~) ~%prefix%~
-		SET $sizes(EVALUATE_BUFFER ~%name%~) = 8 - STRING_LENGTH ~%prefix%~
-		SET $last(EVALUATE_BUFFER ~%name%~) = 0
-	END
-BUT_ONLY
-
 OUTER_SET i = 0
 COPY	~stivan/tra/english/setup.tra~ ~stivan/tra/english/setup.tra~
 		~stivan/tra/english~ ~stivan/tra/english~
 	REPLACE_EVALUATE "\(~[^~]*~\) \[\([^]]*\)\]%LNL%\(@[0-9]*\)" BEGIN
-		TEXT_SPRINT result ~%MATCH1% [%MATCH2%]%LNL%%MATCH3%~
-		TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%~
-		PATCH_IF VARIABLE_IS_SET $names(EVALUATE_BUFFER ~%MATCH2%~) THEN BEGIN
-			i = $last(EVALUATE_BUFFER ~%MATCH2%~)
+		SPRINT result ~%MATCH1% [%MATCH2%]%LNL%%MATCH3%~
+			SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%~
+		PATCH_IF FILE_CONTAINS_EVALUATED (~names-to-soundsets.2da~ ~%LNL%%MATCH2% ~) THEN BEGIN
 			i += 1
-			SET $last(EVALUATE_BUFFER ~%MATCH2%~) = i
-			TEXT_SPRINT str ~%i%~
-			SET length = $sizes(EVALUATE_BUFFER ~%MATCH2%~)
-			TEXT_SPRINT prefix $names(EVALUATE_BUFFER ~%MATCH2%~)
-			WHILE STRING_LENGTH ~%str%~ < length BEGIN
-				TEXT_SPRINT str ~0%str%~
+			SPRINT str ~%i%~
+			WHILE STRING_LENGTH ~%str%~ < 3 BEGIN
+				SPRINT str ~0%str%~
 			END
-			TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%%str%~
-			TEXT_SPRINT result ~%MATCH1% [%prefix%%str%]%LNL%%MATCH3%~
+			SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%%str%~
+			SPRINT result ~%MATCH1% [TB#ST%str%]%LNL%%MATCH3%~
 		END
 	END ~%result%~
 BUT_ONLY
 
 COPY ~stivan/tra/italian~ ~stivan/tra/italian~
 	REPLACE_EVALUATE "~%LNL%\(@[0-9]*\)" BEGIN
-		TEXT_SPRINT result ~%LNL%%MATCH1%~
+		SPRINT result ~%LNL%%MATCH1%~
 		PATCH_IF VARIABLE_IS_SET EVALUATE_BUFFER ~%SOURCE_RES% %MATCH1%~ THEN BEGIN
-			TEXT_SPRINT str ~%SOURCE_RES% %MATCH1%~
-			TEXT_SPRINT str EVALUATE_BUFFER ~%%str%%~
-			TEXT_SPRINT result ~ [%str%]%LNL%%MATCH1%~
+			SPRINT str ~%SOURCE_RES% %MATCH1%~
+			SPRINT str EVALUATE_BUFFER ~%%str%%~
+			SPRINT result ~ [%str%]%LNL%%MATCH1%~
 		END
 	END "~%result%"
 BUT_ONLY
