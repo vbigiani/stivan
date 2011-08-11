@@ -6,7 +6,7 @@
 @5    = ~*Ahem* I'm afraid that's going to change, since I'm equally determined in advancing in your organization.~
 @6    = ~Wow! The kid knows what he wants. I think he'll give you some trouble.~
 @7    = ~I don't think so! Go speak with Aran about any business you have, then come back to me. If you want to join our organization, you'll have to do what *I* say.~
-@8    = ~Here you are, boy. Are you still sure you want to learn under the uncatchable Mitsu?~
+@8    = ~Here you are, boy. Are you still sure you want to learn under the unbeatable Mitsu?~
 @9    = ~You're still trying to get rid of him, eh?~
 @10   = ~Trying can't hurt.~
 @11   = ~Yes. Thanks to <CHARNAME> I've acquired some self-esteem, and I'm sure I'm good enough to become a good Shadow Thief. A better one than you, maybe.~
@@ -15,7 +15,7 @@
 @14   = ~Er... Don't listen to her, friend. She rambles, sometimes.~
 @15   = ~I think it's time for your initiation ritual.~
 @16   = ~Here, in the guild, is a wardrobe keeper. Every self-respecting thief must be able to steal her pin, or he's worth nothing.~
-@17   = ~Be careful. Missy has become paranoid after having been the victim of so many thefts. YOu'd better be cautious.~
+@17   = ~Be careful. Missy has become paranoid after having been the victim of so many thefts. You’d better be cautious.~
 @18   = ~You can count on it. I'll come back as a winner sooner than you're expecting!~
 @19   = ~<CHARNAME>, will you help me handle some jobs for the guild?~
 @20   = ~I'd rather not. Aran gave me a job, and I don't have time to waste on other errands.~
@@ -28,7 +28,7 @@
 @27   = ~Eheheheh...~
 @28   = ~Yeah! I knew I could count on you!~
 @29   = ~Is such an alliance good for you, Stivan?~
-@30   = ~Don't be such a party-pooper. I'm not a kid you must reprieve every time.~
+@30   = ~Don't be such a party-popper. I'm not a kid you must reprieve every time.~
 @31   = ~Minsc and Boo don't tolerate theft! Who will console the wardrobe keeper when she'll find out she's lost her pin?~
 @32   = ~I'm just borrowing it, Minsc. She won't even notice its absence.~
 @33   = ~I will ensure you'll keep your word. Minsc's heart would be broken if you stole his hamster or his sword!~
@@ -62,7 +62,7 @@ A Shadow Thief named Mitsu offered Stivan the chance of proving his worth in the
 @59   = ~Our organization is backed up by a number of nobles here in Athkatla. Chief amongst them is Armagaran Vulova, whose life is at risk even as we speak.~
 @60   = ~(Gasp!) Armagaran Vulova is one of the richest merchants in town! Who would want him dead?~
 @61   = ~The rival guild, obviously.~
-@62   = ~The Lort of Shadows wants him shielded against any and all menaces. If you accept the job, you'll be responsible of his well-being. If you fail or renounce, you're out.~
+@62   = ~The Lord of Shadows wants him shielded against any and all menaces. If you accept the job, you'll be responsible of his well-being. If you fail or renounce, you're out.~
 @63   = ~If <CHARNAME> doesn't mind...~
 @64   = ~I'm in it. Where can I find this nobleman?~
 @65   = ~So be it. However, I'll ignore any further requests, have I made myself clear?~
@@ -87,8 +87,8 @@ Mitsu gave Stivan his first real job, but I had to renounce it to avoid losing t
 @80   = ~My men will be able to handle it. Bring my thanks to the Lord of Shadows: his attention is still welcome.~
 @81   = ~Uhm... Why is it so cold?~
 @82   = ~By... by the Gods! I... I...~
-@83   = ~Are you allright, old man? Were you injured?~
-@84   = ~I'm... allright, if you can say so. I've never seen such an horror in my life... and I have seen a lot of years.~
+@83   = ~Are you alright, old man? Were you injured?~
+@84   = ~I'm... alright, if you can say so. I've never seen such an horror in my life... and I have seen a lot of years.~
 @85   = ~Thanks for your help, boy. Please, tell the Shadow Thieves that I'm leaving Athkatla. It's not safe for me right now, but I'll keep contact.~
 @86   = ~Guards, to the Gate District.~
 @87   = ~You're back. Do you have anything to report?~
@@ -101,7 +101,7 @@ Mitsu gave Stivan his first real job, but I had to renounce it to avoid losing t
 @94   = ~As for you, Hunter...~
 @95   = ~Yes sir!~
 @96   = ~Get out of here for a while. Cuchul and I have more important things to do, and can't waste any further time on you..~
-@97   = ~Ehy, what about my recruiting?~
+@97   = ~Hey, what about my recruiting?~
 @98   = ~We'll call on you when we need you. Now get lost.~
 @99   = ~(Snort!) Harpy!~
 @100  = ~What did you just say?!~
@@ -118,12 +118,12 @@ We saved Armagaran Vulova from an ambush from the rival guild. Mistu will contac
 @109  = ~I can't still understand how you manage to stand. I thought that the soul was needed to live, but you're disregarding that at every breath. From whence comes the spark of life, then?~
 @110  = ~It really comes from the soul. Even if I look fine, it really isn't so. I feel as if my strength were the sand in a hourglass. Wile it's falling down, I'm getting emptier.~
 @111  = ~No mere man could live without a soul, but I am no mere man. You'd be dead already, if you were in my shoes.~
-@112  = ~That's a question for a philosoper.~
+@112  = ~That's a question for a philosopher.~
 @113  = ~... If that's the price to pay to be the child of a god, I'd rather remain an average guy.~
 @114  = ~Yes, yes, I understood you're special, but you aren't perfect either. I saw you pick your nose yesterday, you know?~
 @115  = ~Mommy always said that whomever thinks of the world is a philosopher. You don't need a special name to talk about the universal questions.~
 @116  = ~Either way, it is time we sent that bitch in the Abyss, right? We also have to bring those long legs their pocket lamp, although I'd rather go visit Mitsu before leaving town again.~
-@117  = ~We've been away from Athkatla for months, but I doubt that she's looked for me all this time. That harpy is surely lying through her teeth to Sdeny me the recruitment I deserve!~
+@117  = ~We've been away from Athkatla for months, but I doubt that she's looked for me all this time. That harpy is surely lying through her teeth to deny me the recruitment I deserve!~
 @118  = ~Stivan and the Shadow Thieves
 
 Not having heard from Mitsu, Stivan would like to go meet her at the Guild to obtain the place he deserves.~
@@ -139,7 +139,7 @@ Not having heard from Mitsu, Stivan would like to go meet her at the Guild to ob
 @128  = ~So be it. Everybody else, go away.~
 @129  = ~Wait. You can remain. You look nice enough.~
 @130  = ~Thank you, my lady.~
-@131  = ~She's been eyeing you up since she saw you, friend. There's something going on here...~
+@131  = ~She's been eyeballing you up since she saw you, friend. There's something going on here...~
 @132  = ~Oh, shut up, Cuchul!~
 @133  = ~I am so glad of your attention. Maybe we can dine together later?~
 @134  = ~Ooh!~
@@ -176,12 +176,12 @@ Not having heard from Mitsu, Stivan would like to go meet her at the Guild to ob
 Mitsu gave Stivan his next mission: rescue a sacred shield from a party of Tyr followers from Cormyr, hosted in the Radiant Heart Order. It looks like the artifact is guarded so closely that the only option is a bloodbath. I must still decide if I should help the halfling or no.~
 @164  = ~This place is so filled of paladins that I'm feeling sick!. Bah... ready for the carnage, <CHARNAME>?~
 @165  = ~Carnage? What are you talking about?~
-@166  = ~Heh. We're about to send your friends in the otherlife gramps.~
+@166  = ~Heh. We're about to send your friends in the other-life, grandpa.~
 @167  = ~You should weight carefully your next words - I'd be sorry if they were your last.~
 @168  = ~Are you talking to <CHARNAME> or me?~
 @169  = ~Both, but just as far as the first part of the sentence goes.~
 @170  = ~... Eh?~
-@171  = ~I should kill you where you stand just for thinking of such an abominion!~
+@171  = ~I should kill you where you stand just for thinking of such an abomination!~
 @172  = ~An interesting idea, but the filth that dwells in this place is not worthy of my blade.~
 @173  = ~A great idea, now that you mention it.~
 @174  = ~I'm looking forward to getting hold of that artifact. Let's go!~
@@ -198,7 +198,7 @@ Mitsu gave Stivan his next mission: rescue a sacred shield from a party of Tyr f
 @185  = ~I'm sorry, but I don't want the deaths of innocent people on my conscience.~
 @186  = ~Oh, right. Let's not waste any further time and let's get done with this as soon as possible.~
 @187  = ~Please... Please, <CHARNAME>, think of me. I've been at your side for all this time helping you as best as I could; why won't you do the same? Why do you want others to help you and not do the same with them?~
-@188  = ~Hypocrite. I offered you a place in my party and you're calling me unthankful?~
+@188  = ~Hypocrite. I offered you a place in my party and you're calling me thankless?~
 @189  = ~Don't try to confuse me with your words. I'm unmovable in my decision.~
 @190  = ~The crime you're asking me to commit on my brothers is unacceptable, Stivan. There's nothing else to say.~
 @191  = ~So be it. But stop looking at me with those big begging eyes, okay?~
@@ -206,7 +206,7 @@ Mitsu gave Stivan his next mission: rescue a sacred shield from a party of Tyr f
 @193  = ~That sounds easy. I'll make sure she won't punish you.~
 @194  = ~I'll try, but I can't guarantee anything.~
 @195  = ~I want nothing more to do with that damned guild, Stivan. I wash my hands of it.~
-@196  = ~You won, I'd rather kill innocent men than discussi with Mitsu. Ready yourself for battle.~
+@196  = ~You won, I'd rather kill innocent men than discuss with Mitsu. Ready yourself for battle.~
 @197  = ~Let's get back to the Docks, then. I'm really curious to see how you'll manage to convince that witch not to get angry at me.~
 @198  = ~Stivan and the Shadow Thieves
 
@@ -217,7 +217,7 @@ I refused to take part in the carnage required to obtain the Shield of the Left 
 @202  = ~... I can add nothing more to that.~
 @203  = ~What to say? You left me speechless, boyo. You have it in you, when you want to.~
 @204  = ~It was an harsh battle, but... Heh. They deserved it.~
-@205  = ~Well, Hunter? Did you teach those self-deluted fools a lesson?~
+@205  = ~Well, Hunter? Did you teach those self-deluded fools a lesson?~
 @206  = ~(Snort!) Please, <CHARNAME>! Explain her what the hell were you thinking!~
 @207  = ~Sorry, Mitsu, but we aren't going to carry out your task.~
 @208  = ~The Paladins are alive, and will remain so. I won't kill them to satisfy your whims.~
@@ -254,9 +254,9 @@ Not rescuing the Shield of the Left Handed halted Stivan's career between the Sh
 @237  = ~Whoops.~
 @238  = ~In addition to that, you must solve an annoying issue. Something for a spineless male like my colleague.~
 @239  = ~Hey, I heard that!~
-@240  = ~There's a woman in the Government District, an indipendent one, who is practicing a well-paying activity without our permission. Make sure she understands that she's going to make us angry if she keeps doing that.~
+@240  = ~There's a woman in the Government District, an independent one, who is practicing a well-paying activity without our permission. Make sure she understands that she's going to make us angry if she keeps doing that.~
 @241  = ~What exactly is she doing?~
-@242  = ~How can I reckognize her?~
+@242  = ~How can I recognize her?~
 @243  = ~It's a deal. Here's the money for your "fine".~
 @244  = ~I'm in, but I don't have the money to pay.~
 @245  = ~Lending money at an high rate. In a day she makes more than I am paid in an year!~
@@ -268,7 +268,7 @@ Not rescuing the Shield of the Left Handed halted Stivan's career between the Sh
 
 I managed to convince Mitsu to give us another job to ensure Stivan will become one of the Shadow Thieves. I must go to the Government Quarter and force an independent money lender to leave the town. It sounds like she's a loud-mouth usurer.~
 @251  = ~Are you a poorly-paid employee who couldn't afford even the smallest of harems? Or a lusty old man who dreams of dying between the arms of the most beautiful of courtesans?~
-@252  = ~Are you a fallen noble who would want to wear once again fineries woven by Calimshite slaves? or a simple pleasant who wants to get rid of her old garments?~
+@252  = ~Are you a fallen noble who would want to wear once again finery woven by Calimshite slaves? or a simple pleasant who wants to get rid of her old garments?~
 @253  = ~Whomever you are and whatever you wish, we can help you! Ask Sounding Coin for a loan!~
 @254  = ~Sounding Coin is your trusted money lender. Mortgages up to ten thousand gold pieces in a few minutes and without guarantees!~
 @255  = ~Really? No counter-lending or...~
@@ -282,16 +282,16 @@ I managed to convince Mitsu to give us another job to ensure Stivan will become 
 @263  = ~Isn't he lovely?~
 @264  = ~For any further question or doubt, take a look at the rules and regulations. They're here, written on the chest of our dear Carlino.~
 @265  = ~It's written in goblinesque!~
-@266  = ~With Sounding Coin you can even affort lessons in such an unintelligible tongue. Think of when you'll be able to understand every single word the goblins utter as they are hanging you and your family to a tree!~
+@266  = ~With Sounding Coin you can even afford lessons in such an unintelligible tongue. Think of when you'll be able to understand every single word the goblins utter as they are hanging you and your family to a tree!~
 @267  = ~Come on, show yourselves!~
 @268  = ~You, there! You really need some cleaning up. Ask us for a loan, and the rich baths of Waterdeep will remove most of your stains, crusts and foul odors, if not all of them!~
-@269  = ~(Snort!) Why does everybody obsess over my personal hygene?~
+@269  = ~(Snort!) Why does everybody obsess over my personal hygiene?~
 @270  = ~You can even bring your own girlfriend. Look how they're cute. It's really true, Ao makes them and then pairs them!~
 @271  = ~(Blushes) I'm not her girlfriend, and you're really annoying!~
 @272  = ~You there, would you like a loan?~
 @273  = ~I don't want your damned money. I'm here by the wish of the Shadow Thieves.~
 @274  = ~Now that I think of it.. I do. I need 500 gold pieces.~
-@275  = ~You want a Shadow Thief? With Sounding coun *you can*!~
+@275  = ~You want a Shadow Thief? With Sounding Coin *you can*!~
 @276  = ~You didn't understand me. Your money-lending is angering the Shadow Thieves, and they asked us to make you leave.~
 @277  = ~Great! here, use them as you prefer. I just need to know your name and where your children usually go.~
 @278  = ~I doubt it. The Shadow Thieves want you to stop your activity. They really don't like that somebody operates money lending on their own.~
@@ -301,7 +301,7 @@ I managed to convince Mitsu to give us another job to ensure Stivan will become 
 @282  = ~Mi... Mitsu? That stupid, angry little dwarf? CARLINO?!?~
 @283  = ~Y-yes, mistress?~
 @284  = ~Didn't I tell you to handle that despicable annoying girl once and for all!~
-@285  = ~Carlinotried but... But the baby halfling did the boo-boos to Carlino!~
+@285  = ~Carlino tried but... But the baby halfling did the boo-boos to Carlino!~
 @286  = ~The boo-boos, eh? I will break my own wrists, but my slaps will hurt you more!~
 @287  = ~Ow! Ow!!~
 @288  = ~Stupid idiot! As for you... I'm sorry for this little diversion. I'm sure we can find a mutually satisfactory agreement.~
@@ -312,7 +312,7 @@ I managed to convince Mitsu to give us another job to ensure Stivan will become 
 @293  = ~Ca... Carlino! Protect your mistress!~
 @294  = ~Yes! Bad customers now handle Carlino!~
 @295  = ~Why are you still complaining, Cuchul?~
-@296  = ~Because I'm tired! I've been writing condolescence letters for hours, and my skilled fingers would rather do something else!~
+@296  = ~Because I'm tired! I've been writing condolence letters for hours, and my skilled fingers would rather do something else!~
 @297  = ~The war with the rival guild killed a lot of brothers. Would you rather announce the deaths house by house?~
 @298  = ~(Sigh) do you have something to say, Hunter? Have you handled that money lender?~
 @299  = ~We managed to make her flee, but she's not really "eccentric"; more like "mad".~
@@ -325,7 +325,7 @@ I managed to convince Mitsu to give us another job to ensure Stivan will become 
 @306  = ~(Sigh) Do you have something to say, Hunter? Did you rescue the Shield of the Hunter?~
 @307  = ~*We* rescued it! It would've been impossible by myself.~
 @308  = ~By Mask's dagger! <CHARNAME> and the boy really stole that mass of tin!~
-@309  = ~I'm stupified. I would've never imagined that you'd saw that through. Do you have any idea how much that artifact would fetch on the black market?~
+@309  = ~I'm stupefied. I would've never imagined that you'd saw that through. Do you have any idea how much that artifact would fetch on the black market?~
 @310  = ~I only know it's as heavy as useless. Don't you think the paladins would try to get it back?~
 @311  = ~You have nothing to fear. I want to hand it off to Booter - it will surely be safe with him.~
 @312  = ~Well now... If things are... I mean...~
