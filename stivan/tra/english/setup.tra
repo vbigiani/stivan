@@ -2,12 +2,12 @@
 
 
 @0    = ~G.. Good luck, Stivan.~
-@1    = ~Help! There's an assassin here!~ [TB#SE001]
-@2    = ~My fair Lady, I'm a friend of Aerie's, and I'd like to know why are you sending assassins against her.~ [TB#ST046]
-@3    = ~Whoops, I think she's noticed me...~ [TB#ST047]
-@4    = ~Yoink!~ [TB#ST048]
-@5    = ~Urghk!~ [TB#SE002]
-@6    = ~Heh. A clean and easy job.~ [TB#ST049]
+@1    = ~Help! There's an assassin here!~
+@2    = ~My fair Lady, I'm a friend of Aerie's, and I'd like to know why are you sending assassins against her.~
+@3    = ~Whoops, I think she's noticed me...~
+@4    = ~Yoink!~
+@5    = ~Urghk!~
+@6    = ~Heh. A clean and easy job.~
 @7    = ~Stivan~
 @8    = ~Ahhhh! I see seagulls EVERYWHERE!~ [TB#ST001]
 @9    = ~This is a fine group of ne'er do wells!~ [TB#ST002]
