@@ -1,0 +1,41 @@
+BACKUP ~scripts/backup~
+AUTHOR ~tb~
+
+BEGIN ~Populate TRA sound references~
+
+<<<<<<<< override/names-to-soundsets.2da
+Description prefix
+STIVAN TB#ST
+MITSU TB#SM
+CUCHUL TB#SC
+ESTELNECRI TB#SE
+
+>>>>>>>>
+OUTER_SET i = 0
+COPY	~stivan/tra/english/setup.tra~ ~stivan/tra/english/setup.tra~
+		~stivan/tra/english~ ~stivan/tra/english~
+	REPLACE_EVALUATE "\(~[^~]*~\) \[\([^]]*\)\]%LNL%\(@[0-9]*\)" BEGIN
+		SPRINT result ~%MATCH1% [%MATCH2%]%LNL%%MATCH3%~
+			SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%~
+		PATCH_IF FILE_CONTAINS_EVALUATED (~names-to-soundsets.2da~ ~%LNL%%MATCH2% ~) THEN BEGIN
+			i += 1
+			SPRINT str ~%i%~
+			WHILE STRING_LENGTH ~%str%~ < 3 BEGIN
+				SPRINT str ~0%str%~
+			END
+			SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%%str%~
+			SPRINT result ~%MATCH1% [TB#ST%str%]%LNL%%MATCH3%~
+		END
+	END ~%result%~
+BUT_ONLY
+
+COPY ~stivan/tra/italian~ ~stivan/tra/italian~
+	REPLACE_EVALUATE "~%LNL%\(@[0-9]*\)" BEGIN
+		SPRINT result ~%LNL%%MATCH1%~
+		PATCH_IF VARIABLE_IS_SET EVALUATE_BUFFER ~%SOURCE_RES% %MATCH1%~ THEN BEGIN
+			SPRINT str ~%SOURCE_RES% %MATCH1%~
+			SPRINT str EVALUATE_BUFFER ~%%str%%~
+			SPRINT result ~ [%str%]%LNL%%MATCH1%~
+		END
+	END "~%result%"
+BUT_ONLY
