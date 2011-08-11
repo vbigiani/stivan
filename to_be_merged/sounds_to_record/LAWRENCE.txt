@@ -1,1 +1,16 @@
-0
+14
+
+~Greetings to you, <PRO_LADYLORD>. How can I be of service?~ [TB#SL001]
+~I am terribly sorry, but you came in a bad moment. I'm afraid we ran out of headstones and the like.~ [TB#SL002]
+~The tomb is in the North-East, near a monument built to Kelemvor.~ [TB#SL003]
+~Be cautious, my <PRO_LADYLORD>. It would be bad for my career if anything happened to you.~ [TB#SL004]
+~It is always a pleasure to see you again, my <PRO_LADYLORD>. Is there anything new?~ [TB#SL005]
+~So the voices I told you about were correct. Very well... now I should handle all bureaucratic matters; in four to five weeks you'll become the lawful owners of that tomb and will be able to use it freely.~ [TB#SL006]
+~I was anxiously waiting to see you again, my <PRO_LADYLORD>!~ [TB#SL007]
+~Write Lawrence! Lawrence Cutterwere!~ [TB#SL008]
+~Whew... And now that's done. I have only three hundred and forty bodies left to bury, now!~ [TB#SL009]
+~Uhm... Really ugly...~ [TB#SL010]
+~The documents for the transferal of the urn are ready. I just need a dozen signatures from your friend.~ [TB#SL011]
+~Er... you do know how to write a signature, my young man?~ [TB#SL012]
+~Tsk. What an ugly writing style. You should have claimed you were illiterate and sign with an 'X'.~ [TB#SL013]
+~(Wink wink) My <PRO_LADYLORD>, if you were satisfied by my work, don't hesitate to nominate me as the best employee of <YEAR>.~ [TB#SL014]

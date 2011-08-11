@@ -1,11 +1,11 @@
-@0    = ~Salute a voi, <PRO_LADYLORD>. Come posso esservi d'aiuto?~
+@0    = ~Salute a voi, <PRO_LADYLORD>. Come posso esservi d'aiuto?~ [LAWRENCE001]
 @1    = ~Io... Ecco... Avrei bisogno di una tomba.~
 @2    = ~Il mio amico sta cercando una tomba dove riporre le ceneri dei suoi cari. Potete dirmi all'incirca quanto costerebbe?~
 @3    = ~Strano... Non siete isterico come gli altri impiegati nell'edificio.~
 @4    = ~Un'altra volta, magari.~
 @5    = ~A differenza di quei pazzi scriteriati, io adoro il mio lavoro. Essere scortese con i cittadini, inoltre, lederebbe la mia immagine e manderebbe in fumo le mie possibilità di vincere il primo premio come miglior impiegato del <YEAR>.~
 @6    = ~(Wink wink) Posso aiutarvi in qualche modo?~
-@7    = ~Sono desolato, ma giungete in un brutto momento. Attualmente siamo a corto di lapidi e affini.~
+@7    = ~Sono desolato, ma giungete in un brutto momento. Attualmente siamo a corto di lapidi e affini.~ [LAWRENCE002]
 @8    = ~Prego? Mi state forse dicendo di non avere più spazio per seppellire i morti?~
 @9    = ~Ma io ne ho bisogno. Cosa possiamo fare?~
 @10   = ~Capisco. Ritornerò tra qualche giorno, allora.~
@@ -20,12 +20,12 @@
 @19   = ~E va bene. Andrò a dare un'occhiata allora.~
 @20   = ~Non mi sembra di avere molta scelta. Dov'è questa tomba?~
 @21   = ~Spiacente, ma non ho intenzione di profanare una tomba. La faccenda è chiusa, Stivan.~
-@22   = ~La tomba si trova a nord ovest, vicino ad un lugubre monumento dedicato a Kelemvor.~
-@23   = ~Fate attenzione, mio <PRO_LADYLORD>. Sarebbe spiacevole se dovesse accadervi qualcosa.~
+@22   = ~La tomba si trova a nord ovest, vicino ad un lugubre monumento dedicato a Kelemvor.~ [LAWRENCE003]
+@23   = ~Fate attenzione, mio <PRO_LADYLORD>. Sarebbe spiacevole se dovesse accadervi qualcosa.~ [LAWRENCE004]
 @24   = ~Alla ricerca di una tomba.
 
 Un impiegato del Palazzo di Giustizia ci ha spiegato che al momento non ci sono tombe disponibili. Pare, tuttavia, che ve ne sia una in cui nessuno osa mettere piede a causa di sinistre leggende sull'essere che vi dimorerebbe. Per nulla impressionato da queste storie, ho deciso di andare ad esplorarla: eliminati gli eventuali pericoli, infatti, saremo liberi di deporvi l'urna di Stivan.~
-@25   = ~E' sempre un piacere rivedervi, mio <PRO_LADYLORD>. Ci sono novità?~
+@25   = ~E' sempre un piacere rivedervi, mio <PRO_LADYLORD>. Ci sono novità?~ [LAWRENCE005]
 @26   = ~Non ancora.~
 @27   = ~Sì. Ho eliminato il precedente occupante della cripta.~
 @28   = ~Mi stavo chiedendo se posso rivolgerti qualche domanda.~
@@ -38,17 +38,17 @@ Un impiegato del Palazzo di Giustizia ci ha spiegato che al momento non ci sono 
 @35   = ~Ora devo andare.~
 @36   = ~Parlate con Corneil. E' lui ad occuparsi di queste pratiche, anche se meriterebbe di andare a zappare la terra per la sua arroganza.~
 @37   = ~Temo di non poter esservi d'aiuto su questo. Io mi occupo unicamente di tombe.~
-@38   = ~Quindi le voci di cui vi avevo parlato erano fondate. Molto bene... Ora dovrò semplicemente occuparmi delle pratiche burocratiche del caso. Nel giro di qualche settimana diventerete legittimi proprietari della tomba e ne potrete liberamente usufruire.~
+@38   = ~Quindi le voci di cui vi avevo parlato erano fondate. Molto bene... Ora dovrò semplicemente occuparmi delle pratiche burocratiche del caso. Nel giro di qualche settimana diventerete legittimi proprietari della tomba e ne potrete liberamente usufruire.~ [LAWRENCE006]
 @39   = ~Alla ricerca di una tomba.
 
 L'impiegato nel Palazzo di Giustizia ha avviato le pratiche necessarie per far acquisire legalmente a Stivan la proprietà della cripta. Ha promesso di inviarci un messaggero non appena saranno ultimate e, nel frattempo, si è offerto di custodire al sicuro l'urna dell'halfling.~
 @40   = ~Ma vedo che il vostro amico non è qui con voi. Se non sbaglio, aveva parlato di un'urna che voleva riporre al suo interno. Tornate in sua compagnia, mio <PRO_LADYLORD>: potrei avere una soluzione al suo... ehm... "dilemma" in attesa che i documenti del caso siano ultimati.~
-@41   = ~Aspettavo con ansia di rivedervi, mio <PRO_LADYLORD>!~
+@41   = ~Aspettavo con ansia di rivedervi, mio <PRO_LADYLORD>!~ [LAWRENCE007]
 @42   = ~I documenti per l’acquisizione della cripta sono stati ultimati, ma ho bisogno che il vostro amico li firmi. Tornate in sua compagnia.~
-@43   = ~Scrivete Lawrence! Lawrence Cutterwere!~
+@43   = ~Scrivete Lawrence! Lawrence Cutterwere!~ [LAWRENCE008]
 @44   = ~Perdonatemi, <PRO_LADYLORD>, ma sono terribilmente indaffarato. Vi pregherei di tornare in un altro momento.~
-@45   = ~Uff... Anche questo è sistemato. Adesso mi restano soltanto altri trecentoquaranta cadaveri a cui trovare una collocazione!~
-@46   = ~Pensavo che ti saresti sforzato di più per aiutarmi, <CHARNAME>! Invece getti la spugna di fronte alla prima difficoltà! Puah! Non ho nulla da spartire con uno come te! Me ne vado!~
+@45   = ~Uff... Anche questo è sistemato. Adesso mi restano soltanto altri trecentoquaranta cadaveri a cui trovare una collocazione!~ [LAWRENCE009]
+@46   = ~Pensavo che ti saresti sforzato di più per aiutarmi, <CHARNAME>! Invece getti la spugna di fronte alla prima difficoltà! Puah! Non ho nulla da spartire con uno come te! Me ne vado!~ [STIVAN071]
 @47   = ~Alla ricerca di una tomba.
 
 Mentre ci aggiravamo per il Quartiere del Ponte abbiamo incontrato Stivan, un halfling nativo di Athkatla a cui ho chiesto di unirsi nella mia ricerca di Imoen e di Irenicus. In cambio di una tomba dove riporre l'urna contenente le ceneri dei suoi cari, Stivan si è offerto di farci da guida in città e di proteggerci dai... ehm... gabbiani. L'halfling mi ha suggerito di andare nel Quartiere Governativo e di rivolgermi a qualche impiegato nel Palazzo di Giustizia.~
@@ -58,22 +58,22 @@ Un messaggero ci ha informato che i documenti per l’acquisizione della cripta so
 @49   = ~Alla ricerca di una tomba.
 
 Non essendo riuscito a trovare una tomba in cui Stivan potesse riporre le ceneri dei suoi familiari, gli ho consigliato di rinunciarci. L’halfling ha quindi lasciato il gruppo infuriato, sostenendo che avrei potuto fare di più per aiutarlo.~
-@50   = ~Cosa?! Non posso aspettare così tanto tempo! La mia urna ha già corso il rischio di andare in frantumi non so quante volte!~
+@50   = ~Cosa?! Non posso aspettare così tanto tempo! La mia urna ha già corso il rischio di andare in frantumi non so quante volte!~ [STIVAN072]
 @51   = ~(Tossisce) In via del tutto eccezionale, signorino, potrei riporla nel magazzino dove gli Stregoni Incappucciati conservano i manufatti magici confiscati. Lì sarebbe indubbiamente al sicuro.~
 @52   = ~E sia. Tieni. Ma trattala con il dovuto riguardo, capito?~
-@53   = ~Uhm... Decisamente di pessimo gusto...~
-@54   = ~A nessuno interessa il tuo parere!~
+@53   = ~Uhm... Decisamente di pessimo gusto...~ [LAWRENCE010]
+@54   = ~A nessuno interessa il tuo parere!~ [STIVAN073]
 @55   = ~Allora a presto, mio <PRO_LADYLORD>. Sarete avvisato da un messaggero quando i documenti saranno pronti. Ricordatevi di passare dal sottoscritto per ritirare l'urna del vostro... ehm... "amico".~
-@56   = ~I documenti per l’acquisizione della cripta sono stati ultimati. Ho soltanto bisogno di qualche firma del vostro amico.~
-@57   = ~Ehm… Siete capace di scrivere, mezzo uomo?~
-@58   = ~Certo! Dove devo firmare?~
+@56   = ~I documenti per l’acquisizione della cripta sono stati ultimati. Ho soltanto bisogno di qualche firma del vostro amico.~ [LAWRENCE011]
+@57   = ~Ehm… Siete capace di scrivere, mezzo uomo?~ [LAWRENCE012]
+@58   = ~Certo! Dove devo firmare?~ [STIVAN074]
 @59   = ~Qui, qui e… Anche qui, prego.~
 @60   = ~…~
 @61   = ~… Fatto.~
-@62   = ~Tsk. Che brutta calligrafia. Avreste fatto meglio a spacciarvi per analfabeta e a mettere una X.~
+@62   = ~Tsk. Che brutta calligrafia. Avreste fatto meglio a spacciarvi per analfabeta e a mettere una X.~ [LAWRENCE013]
 @63   = ~Ed ecco a voi l’urna. Se volete accettare il mio consiglio, cambiatela: è un affronto al decoro e al gusto. Assomiglia ad un vaso da notte!~
-@64   = ~ (Snort!) Dà qui!~
-@65   = ~(Wink wink) Mio <PRO_LADYLORD>, se la qualità del mio lavoro vi soddisfa, non esitate a votarmi quando verrà nominato il miglior impiegato di Athkatla del <YEAR>.~
+@64   = ~ (Snort!) Dà qui!~ [STIVAN075]
+@65   = ~(Wink wink) Mio <PRO_LADYLORD>, se la qualità del mio lavoro vi soddisfa, non esitate a votarmi quando verrà nominato il miglior impiegato di Athkatla del <YEAR>.~ [LAWRENCE014]
 @66   = ~Ehm... Certo, potete contarci.~
 @67   = ~Hai semplicemente fatto il tuo dovere.~
 @68   = ~Andiamocene da questo posto *immediatamente*. Rischio di morire soffocato dalla burocrazia che aleggia in queste sale!~

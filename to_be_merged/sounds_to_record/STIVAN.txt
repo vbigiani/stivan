@@ -1,4 +1,4 @@
-70
+81
 ~Ahhhh! I see seagulls EVERYWHERE!~ [TB#ST001]
 ~This is a fine group of ne'er do wells!~ [TB#ST002]
 ~Uhm... I felt more at ease while slumming through the streets of Athkatla.~ [TB#ST003]
@@ -71,3 +71,15 @@
 ~Are you ready to protect Aerie while I do my job?~ [TB#ST068]
 ~Later!~ [TB#ST069]
 ~Here you go, with my excuses for the mess I started.~ [TB#ST070]
+
+~I thought you'd try more to help me, <CHARNAME>! Instead, you throw the towel at the first sign of trouble! I will have nothing to do with you! I'm gone!~ [TB#ST071]
+~What?! I can't wait that long! My urn has already risked breakage far too many times!~ [TB#ST072]
+~Nobody asked for your judgment!~ [TB#ST073]
+~Sure! Where do I need to sign?~ [TB#ST074]
+~ (Snort!) Give it to me!~ [TB#ST075]
+~Finally the ashes of my loved ones will rest in peace. We just need to go to the Government Quarter, collect urn and paperwork and go in my lawfully-bought crypt.~ [TB#ST076]
+~Heh. It sounded as if you were being sarcastic, <CHARNAME>...~ [TB#ST077]
+~Heh. It must be one of my usual buyers - he must have run out of plumes while we were gone.~ [TB#ST078]
+~<CHARNAME>, have I become invisible? I am Stivan!~ [TB#ST079]
+~Yeah! Let's go!~ [TB#ST080]
+~(Snort!) Stivan the Hunter is enough to handle that meanie! Either way, if you really need to look for further help, try and hurry.~ [TB#ST081]

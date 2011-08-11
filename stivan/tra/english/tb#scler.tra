@@ -1,11 +1,11 @@
-@0    = ~Greetings to you, <PRO_LADYLORD>. How can I be of service?~
+@0    = ~Greetings to you, <PRO_LADYLORD>. How can I be of service?~ [TB#SL001]
 @1    = ~I... well... need a tomb.~
 @2    = ~My friend is looking for a tomb where the ashes of his close ones might lie. How much would that cost?~
 @3    = ~Strange... you're not as nervous as the other clerks in here.~
 @4    = ~Another time, perhaps.~
 @5    = ~Differently from those mad fools, I love my work. Being rude to customers, moreover, would make me look like unprofessional and remove any chances I might have to be elected as best employee of <YEAR>.~
 @6    = ~(Wink wink) Can I help you in any way?~
-@7    = ~I am terribly sorry, but you came in a bad moment. I'm afraid we ran out of headstones and the like.~
+@7    = ~I am terribly sorry, but you came in a bad moment. I'm afraid we ran out of headstones and the like.~ [TB#SL002]
 @8    = ~Pardon? are you saying you don't have anywhere to bury the dead?~
 @9    = ~But I need one. What can we do?~
 @10   = ~I understand. We'll be back in a couple of days, in that case.~
@@ -20,12 +20,12 @@
 @19   = ~Very well. I'll go take a look.~
 @20   = ~It doesn't look like I have much choice. Where is that tomb?~
 @21   = ~I'm sorry, but I have no intention of breaking into a tomb. The matter is over, Stivan.~
-@22   = ~The tomb is in the North-East, near a monument built to Kelemvor~
-@23   = ~Be cautious, my <PRO_LADYLORD>. It would be bad for my career if anything happened to you.~
+@22   = ~The tomb is in the North-East, near a monument built to Kelemvor.~ [TB#SL003]
+@23   = ~Be cautious, my <PRO_LADYLORD>. It would be bad for my career if anything happened to you.~ [TB#SL004]
 @24   = ~Looking for a tomb.
 
 A clerk in the Council of Six Building explained us that there are currently no free tombs. However, he also mentioned that there is one where no one dares to tread because of voices about its inhabitant. Not scared by such tales, I decided to explore it: after cleaning it of any trouble I might find, in fact, we'd be free to claim it for Stivan's relatives.~
-@25   = ~It is always a pleasure to see you again, my <PRO_LADYLORD>. Is there anything new?~
+@25   = ~It is always a pleasure to see you again, my <PRO_LADYLORD>. Is there anything new?~ [TB#SL005]
 @26   = ~Not yet.~
 @27   = ~Yes. I managed to remove the previous owner of the tomb.~
 @28   = ~I was wondering if I could ask you some questions.~
@@ -38,17 +38,17 @@ A clerk in the Council of Six Building explained us that there are currently no 
 @35   = ~I have to go now.~
 @36   = ~Talk with Corneil. It is him who looks after such matters, even if he deserves to work as a farmer for his arrogance.~
 @37   = ~I'm afraid I can't help you with that. I only handle tombs.~
-@38   = ~So the voices I told you about were correct. Very well... now I should handle all bureaucratic matters; in four to five weeks you'll become the lawful owners of that tomb and will be able to use it freely.~
+@38   = ~So the voices I told you about were correct. Very well... now I should handle all bureaucratic matters; in four to five weeks you'll become the lawful owners of that tomb and will be able to use it freely.~ [TB#SL006]
 @39   = ~Looking for a tomb.
 
 The clerk in the Council of Six Building has started the procedures required to make Stivan properly acquire the tomb. He promised he will send for us as soon as he is done, and also offered to keep the urn safe in the meantime.~
 @40   = ~I see that your friend isn't with you. If I'm not mistaken, he mentioned he wanted to put an urn in there. Come back with him, my <PRO_LADYLORD>: I might have a solution for his... er... "problem" while the required documents are ready.~
-@41   = ~I was anxiously waiting to see you again, my <PRO_LADYLORD>!~
+@41   = ~I was anxiously waiting to see you again, my <PRO_LADYLORD>!~ [TB#SL007]
 @42   = ~The documents for the ownership of the crypt are ready, but I need your friend to sign them. Come back with him.~
-@43   = ~Write Lawrence! Lawrence Cutterwere!~
+@43   = ~Write Lawrence! Lawrence Cutterwere!~ [TB#SL008]
 @44   = ~I am sorry, <PRO_LADYLORD>, but I am terribly busy. Could I ask you to come back later?~
-@45   = ~Whew... And now that's done. I have only three hundred and forty bodies left to bury, now!~
-@46   = ~I thought you'd try more to help me, <CHARNAME>! Instead, you throw the towel at the first sign of trouble! I will have nothing to do with you! I'm gone!~
+@45   = ~Whew... And now that's done. I have only three hundred and forty bodies left to bury, now!~ [TB#SL009]
+@46   = ~I thought you'd try more to help me, <CHARNAME>! Instead, you throw the towel at the first sign of trouble! I will have nothing to do with you! I'm gone!~ [TB#ST071]
 @47   = ~Looking for a tomb.
 
 While we were exploring the Bridge District we found Stivan, an halfling native of Athkatla, whom I asked for help in my search of Imoen and Irenicus. In exchange for a tomb where he might put the ashes of his close ones, Stivan offered us his guidance in his town and his defense against... er... seagulls. The halfling said I should go in the Government District and ask some clerk in the Council of Six.~
@@ -58,22 +58,22 @@ A messenger informed us that the documents for the transferal of the crypt are r
 @49   = ~Looking for a tomb.
 
 Not having found a tomb where Stivan might put the ashes of his relatives, I suggested him to give up. The halfling left the party in anger, claiming I should have done more to help him.~
-@50   = ~What?! I can't wait that long! My urn has already risked breakage far too many times!~
+@50   = ~What?! I can't wait that long! My urn has already risked breakage far too many times!~ [TB#ST072]
 @51   = ~(Cough) As an exceptional favor, young man, I could stash it in the warehouse where the Cowled Wizards keep guard of their artifacts. It will be doubtlessly safe there.~
 @52   = ~So be it. Here it is. Treat it with due respect, have I made myself clear?~
-@53   = ~Uhm... Really ugly...~
-@54   = ~Nobody asked for your judgment!~
+@53   = ~Uhm... Really ugly...~ [TB#SL010]
+@54   = ~Nobody asked for your judgment!~ [TB#ST073]
 @55   = ~See you soon, my <PRO_LADYLORD>. A messenger will warn you as soon as the documents are ready. Remember to come by yours truly to take back the urn of your... er... "friend".~
-@56   = ~The documents for the transferal of the urn are ready. I just need a dozen signatures from your friend.~
-@57   = ~Er... you do know how to write a signature, my young man?~
-@58   = ~Sure! Where do I need to sign?~
+@56   = ~The documents for the transferal of the urn are ready. I just need a dozen signatures from your friend.~ [TB#SL011]
+@57   = ~Er... you do know how to write a signature, my young man?~ [TB#SL012]
+@58   = ~Sure! Where do I need to sign?~ [TB#ST074]
 @59   = ~Here, here, here, and....~
 @60   = ~...~
 @61   = ~... Done.~
-@62   = ~Tsk. What an ugly writing style. You should have claimed you were illiterate and sign with an 'X'.~
+@62   = ~Tsk. What an ugly writing style. You should have claimed you were illiterate and sign with an 'X'.~ [TB#SL013]
 @63   = ~And here is your urn. If you want a suggestion, you should change it: it is an insult to good taste and proper behavior. It looks like a night vase!~
-@64   = ~ (Snort!) Give it to me!~
-@65   = ~(Wink wink) My <PRO_LADYLORD>, if you were satisfied by my work, don't hesitate to nominate me as the best employee of <YEAR>.~
+@64   = ~ (Snort!) Give it to me!~ [TB#ST075]
+@65   = ~(Wink wink) My <PRO_LADYLORD>, if you were satisfied by my work, don't hesitate to nominate me as the best employee of <YEAR>.~ [TB#SL014]
 @66   = ~Er... Sure, you can count on it.~
 @67   = ~You just did your job.~
 @68   = ~Let's get out of here *now*. I'm going to choke on all the bureaucracy that is lingering in these halls!~
