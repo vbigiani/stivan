@@ -1,4 +1,4 @@
-58
+70
 ~Ahhhh! I see seagulls EVERYWHERE!~ [TB#ST001]
 ~This is a fine group of ne'er do wells!~ [TB#ST002]
 ~Uhm... I felt more at ease while slumming through the streets of Athkatla.~ [TB#ST003]
@@ -58,3 +58,16 @@
 ~What are we waiting for? Let's get to my tomb!~ [TB#ST056]
 ~K-Keep close, <CHARNAME>. This place is frightening, and I d-don't know how long I'll manage not to run away.~ [TB#ST057]
 ~Stivan the Hunter is listening to you, <CHARNAME>!~ [TB#ST058]
+
+~... Not anymore.~ [TB#ST059]
+~*Ahem* I imagine it's my turn. Well, I...~ [TB#ST060]
+~I'm sorry, Aerie, I had been an idiot.~ [TB#ST061]
+~*Ahem* Is it a wooden amulet?~ [TB#ST062]
+~Well, I... It's possible it ended up in the possession of the wrong person...~ [TB#ST063]
+~La... Last night, during my watch, I stole that trinket from her backpack and threw it away in anger. I later saw somebody picking it up, but...~ [TB#ST064]
+~*Ahem* I think I figured out which building that is, but I don't know if I should be glad for the discovery or tear my hair out for what lies in wait for us.~ [TB#ST065]
+~Don't look at me like that, elf. I'm a good halfling, and I'll prove so! If I rescued your trinket, would you be able to end the curse?~ [TB#ST066]
+~Okay, although I can't promise you'll have them back. Heh.~ [TB#ST067]
+~Are you ready to protect Aerie while I do my job?~ [TB#ST068]
+~Later!~ [TB#ST069]
+~Here you go, with my excuses for the mess I started.~ [TB#ST070]

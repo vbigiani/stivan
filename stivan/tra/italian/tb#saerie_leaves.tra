@@ -1,6 +1,6 @@
 @0    = ~Oh! Stivan, una farfalla si è posata sui tuoi capelli!~
 @1    = ~...~
-@2    = ~... Ora non più.~
+@2    = ~... Ora non più.~ [STIVAN059]
 @3    = ~NO! L'hai... L'hai uccisa! Perchè? Perchè l'hai fatto?!~
 @4    = ~La prossima volta non scambierà più la mia chioma per un fiore.~
 @5    = ~C-come potrà esserci un'altra volta se l'hai uccisa? Sei... Sei un mostro!~
@@ -98,12 +98,12 @@ Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. De
 @96   = ~Io...~
 @97   = ~Minsc capisce che tu voglia stare per conto tuo. A volte anche la possente Dynaheir chiedeva ai suoi fieri guardiani di lasciarla da sola per un po', ma non li avrebbe mai abbandonati, nossignore! Sapeva bene che dopo un momento buio e difficile Minsc e Boo erano pronti a risollevarle il morale!~
 @98   = ~Sono... commossa, Minsc. Solo adesso mi rendo conto di quanto tu e il tuo criceto mi vogliate bene!~
-@99   = ~*Ahem* Immagino che sia giunto il mio turno. Beh, io...~
+@99   = ~*Ahem* Immagino che sia giunto il mio turno. Beh, io...~ [STIVAN060]
 @100  = ~Aerie, dietro di te! Lancia Pelle di Pietra!~
 @101  = ~Taci! Perché dovrei ascoltarti?~
 @102  = ~Fallo e basta!~
 @103  = ~(Pant pant) Grazie, Stivan. Io... Non mi aspettavo un gesto così altruista da parte tua.~
-@104  = ~Scusami, Aerie. A volte sono un idiota.~
+@104  = ~Scusami, Aerie. A volte sono un idiota.~ [STIVAN061]
 @105  = ~E' troppo facile insultare le persone e poi chiedere scusa!~
 @106  = ~Mi dispiace, Aerie, ma non so cos'altro fare oltre che ripetere il vuoto rituale del chiedere scusa.~
 @107  = ~Attenta, un altro!~
@@ -130,13 +130,13 @@ Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. De
 @128  = ~Non è possibile spezzare un sortilegio se non si conosce il modo in cui è stato scagliato! L'artefice di tutto questo deve avere qualcosa che mi appartiene... Ma cosa?~
 @129  = ~No... Sono corsa subito qui. Ho-ho iniziato a tirar fuori le mie cose dallo zaino e mi sono accorta di non avere più un oggetto a me caro...~
 @130  = ~Il... Il mio amuleto! Il mio amuleto a forma di procione! Credevo di averlo perso durante uno dei nostri scontri, invece... Deve avermelo rubato questo stregone!~
-@131  = ~*Ahem* E' forse inciso nel legno?~
+@131  = ~*Ahem* E' forse inciso nel legno?~ [STIVAN062]
 @132  = ~S-sì, ma... Come fai a saperlo? L'ho sempre custodito gelosamente per evitare che si rovinasse...~
-@133  = ~Beh, ecco... E' probabile che sia finito nelle mani sbagliate...~
+@133  = ~Beh, ecco... E' probabile che sia finito nelle mani sbagliate...~ [STIVAN063]
 @134  = ~Hai qualche sospetto? Conosci il responsabile?~
 @135  = ~La domanda che sto per farti sorge spontanea, Stivan. Se Aerie non ha mai indossato l'amuleto, come puoi conoscere il materiale di cui è fatto?~
 @136  = ~E' meglio che non dia voce al terribile sospetto che mi attraversa la mente...~
-@137  = ~La... La scorsa notte, durante il mio turno di guardia, le ho rubato quel gingillo e l'ho gettato via per dispetto. Poi più tardi ho visto una persona in lontananza che lo raccoglieva, ma...~
+@137  = ~La... La scorsa notte, durante il mio turno di guardia, le ho rubato quel gingillo e l'ho gettato via per dispetto. Poi più tardi ho visto una persona in lontananza che lo raccoglieva, ma...~ [STIVAN064]
 @138  = ~NOO! Come... Come hai potuto mettere a rischio la mia vita per una simile sciocchezza? Cosa ti è saltato in testa?!~
 @139  = ~(Glom!) Non immaginavo fosse un cattivone!~
 @140  = ~Oh, dannazione, non... Non posso perdere altro tempo! <CHARNAME>, devo... Devo individuare il luogo in cui si trova l'autore di questa stregoneria, ma ho bisogno che tu mi protegga mentre mi servo della mia magia! Ti prego, aiutami!~
@@ -154,7 +154,7 @@ Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. De
 @152  = ~(Sniff) E'... E' una villa. E' c-circondata da numerose guardie, benchè la strada su cui si affaccia sia deserta. Incute molta paura...~
 @153  = ~Altro?~
 @154  = ~Dall'esterno... Sembra molto lussuosa e... C'è uno stemma all'entrata. Uno stemma a forma di artiglio, credo...~
-@155  = ~*Ahem* Penso di aver capito di quale edificio si tratti, ma non so se gioire di questa scoperta o strapparmi i capelli per quello che ci aspetta.~
+@155  = ~*Ahem* Penso di aver capito di quale edificio si tratti, ma non so se gioire di questa scoperta o strapparmi i capelli per quello che ci aspetta.~ [STIVAN065]
 @156  = ~Per quello che *ti* aspetta. Non illuderti che mi sia dimenticato della tua responsabilità.~
 @157  = ~Per gli Dei, vogliamo giungere al dunque?!~
 @158  = ~Ti prego, dimmi che è qui ad Athkatla e non sui Picchi delle Nuvole.~
@@ -164,7 +164,7 @@ Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. De
 @162  = ~Io?!~
 @163  = ~Vorresti negare di essere cattivo? Hai-hai dato al mio carnefice la scure con cui uccidermi!~
 @164  = ~Io non sono cattivo! Mia mamma diceva sempre che sono soltanto un po'... vivace, ecco!~
-@165  = ~Non guardarmi con quella faccia scettica, elfa. Io sono un bravo halfling, e te lo dimostrerò! Se recuperassi il tuo gingillo, riusciresti a porre fine al maleficio?~
+@165  = ~Non guardarmi con quella faccia scettica, elfa. Io sono un bravo halfling, e te lo dimostrerò! Se recuperassi il tuo gingillo, riusciresti a porre fine al maleficio?~ [STIVAN066]
 @166  = ~S-sì... Sarebbe sufficiente riaverlo indietro per annullare l'incantesimo che vi è stato lanciato.~
 @167  = ~Bene, allora me ne occuperò io. Riavrai il tuo mantello e riconoscerai davanti a tutti che non sono cattivo!~
 @168  = ~E' un amuleto, Stivan...~
@@ -177,12 +177,12 @@ Stivan ha insultato Aerie al punto da farle abbandonare il gruppo in lacrime. De
  
 Al circo ho trovato Aerie, fortunatamente prima che venisse aggredita da misteriosi assassini. Pare che l'elfa sia vittima di un maleficio che le è stato scagliato da una necromante halfling attraverso un suo amuleto. Dal momento che è in parte responsabile dell'accaduto, Stivan si è offerto di recuperarlo: soltanto in questo modo sarà possibile spezzare l'incantesimo. Nel frattempo cercherò di proteggere Aerie da ulteriori attacchi.~
 @175  = ~Heh. Farò del mio meglio.~
-@176  = ~D'accordo, anche se non prometto di restituirteli. Heh.~
-@177  = ~Siete pronti a difendere Aerie mentre faccio il mio lavoro?~
+@176  = ~D'accordo, anche se non prometto di restituirteli. Heh.~ [STIVAN067]
+@177  = ~Siete pronti a difendere Aerie mentre faccio il mio lavoro?~ [STIVAN068]
 @178  = ~Direi di sì. Cerca di non farti uccidere, per favore.~
 @179  = ~Non ancora, ma ho quasi finito di riunire gli oggetti che potrebbero tornarti utili.~
 @180  = ~Forse... Dovresti parlare con Stivan.~
-@181  = ~A dopo!~
+@181  = ~A dopo!~ [STIVAN069]
 @182  = ~Boo si chiede se sia saggio lasciar andare il piccoletto da solo. Anche Minsc ha qualche dubbio, ma la fiducia di <CHARNAME> è sempre ben riposta!~
 @183  = ~Che la fortuna aiuti o meno gli audaci, è giusto che quest'uccello di mare voli verso le coste dell'espiazione. Se non tornerà vittorioso... Beh, ci sarà un Custode del Fato ad attenderlo.~
 @184  = ~Fermo, Stivan. Non puoi affrontare una simile minaccia da solo. Lascia che ti accompagni.~
@@ -192,13 +192,13 @@ Al circo ho trovato Aerie, fortunatamente prima che venisse aggredita da misteri
 @188  = ~... Devo proprio risponderti?~
 @189  = ~Scherzo della natura! Lurido sacco di...~
 @190  = ~*Ahem* Meglio che vada.~
-@191  = ~Chi va là?~
+@191  = ~Chi va là?~ [ESTELNECRI003]
 @192  = ~(Tagliale la gola in silenzio)~
 @193  = ~(Tenta di rubare l'amuleto)~
 @194  = ~(Chiedi perché manda assassini)~
-@195  = ~Tu! Hai ucciso le mie guardie! Muori!~
+@195  = ~Tu! Hai ucciso le mie guardie! Muori!~ [ESTELNECRI004]
 @196  = ~L'amuleto! Ce l'hai!~
-@197  = ~Ecco a te, con le mie scuse per il pasticcio che ho combinato.~
+@197  = ~Ecco a te, con le mie scuse per il pasticcio che ho combinato.~ [STIVAN070]
 @198  = ~Aerie lascia il gruppo.
  
 Stivan è riuscito a recuperare l'amuleto a forma di procione di Aerie, la quale ha subito provveduto a spezzare il sortilegio. L'halfling si è scusato con l'elfa, chiaramente diffidente visto l'accaduto. Posso solo augurarmi che quei due la finiscano di litigare... Non ne posso più!~

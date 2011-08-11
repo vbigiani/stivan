@@ -1,4 +1,7 @@
-2
+4
 
 ~Help! There's an assassin here!~ [TB#SE001]
 ~Urghk!~ [TB#SE002]
+
+~Who's there?~ [TB#SE003]
+~You! You killed my guards! Die!~ [TB#SE004]

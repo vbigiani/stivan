@@ -1,6 +1,6 @@
 @0    = ~Oh! Stivan, you have a butterfly on your hair!~
 @1    = ~...~
-@2    = ~... Not anymore.~ [STIVAN]
+@2    = ~... Not anymore.~ [TB#ST059]
 @3    = ~NO! You... You killed her! Why? Why did you do that?!~
 @4    = ~She won't mistake my hair for a flower next time.~
 @5    = ~H-How will there be a next time if you killed her? You're... You're a monster!~
@@ -99,12 +99,12 @@ Stivan insulted Aerie to the point to force her to leave the party in tears. I m
 @96   = ~I...~
 @97   = ~Minsc understands that you want to be left alone. Sometimes powerful Dynaheir would ask her fierce guardians to leave her alone a bit, but she wouldn't have left them, no sir! She knew very well that after a dark and difficult moment Minsc and Boo were ready to cheer her up!~
 @98   = ~I'm... moved, Minsc. Only know I know how much you and your hamster loved me!~
-@99   = ~*Ahem* I imagine it's my turn. Well, I...~ [STIVAN]
+@99   = ~*Ahem* I imagine it's my turn. Well, I...~ [TB#ST060]
 @100  = ~Aerie, behind you! Cast Stoneskin!~
 @101  = ~Shut up! Why should I listen to you?~
 @102  = ~Shut up and do as I say!~
 @103  = ~(Pant pant) Thanks, Stivan. I... Didn't expect such a selfless gesture from you.~
-@104  = ~I'm sorry, Aerie, I had been an idiot.~ [STIVAN]
+@104  = ~I'm sorry, Aerie, I had been an idiot.~ [TB#ST061]
 @105  = ~It's far too easy to hurt people and then say 'sorry'!~
 @106  = ~I am sorry, Aerie, but I don't know what to do, other than repeat the empty ritual of offering an apology.~
 @107  = ~Careful! Another one!~
@@ -131,13 +131,13 @@ Stivan insulted Aerie to the point to force her to leave the party in tears. I m
 @128  = ~It isn't possible to stop such a curse if you don't know how it was cast! Whomever started all of this must have something of mine... but what?~
 @129  = ~No... I ran here straight away. I-I started emptying my backpack and noticed something dear to me was missing...~
 @130  = ~My... My amulet! With a raccoon-shaped pendant! I thought I'd lost it during a battle, but... that wizard must have stolen it!~
-@131  = ~*Ahem* Is it a wooden amulet?~ [STIVAN]
+@131  = ~*Ahem* Is it a wooden amulet?~ [TB#ST062]
 @132  = ~Y-yes, but... How do you know? I've always kept it close to avoid ruining it...~
-@133  = ~Well, I... It's possible it ended up in the possession of the wrong person...~ [STIVAN]
+@133  = ~Well, I... It's possible it ended up in the possession of the wrong person...~ [TB#ST063]
 @134  = ~Do you know who that is?~
 @135  = ~This question is pretty obvious, Stivan. If Aerie never wore the amulet, how could you know what material was it made out of?~
 @136  = ~I'd rather not say out loud what I'm thinking...~
-@137  = ~La... Last night, during my watch, I stole that trinket from her backpack and threw it away in anger. I later saw somebody picking it up, but...~ [STIVAN]
+@137  = ~La... Last night, during my watch, I stole that trinket from her backpack and threw it away in anger. I later saw somebody picking it up, but...~ [TB#ST064]
 @138  = ~NOO! How... How could you risk my life for something that futile? What were you thinking?!~
 @139  = ~(Gulp!) I didn't imagine it was a bad guy!~
 @140  = ~Oh, damn, we can't... I can't lose more time! <CHARNAME>, I... I must find out where the author of this sorcery lives, but I need you to back me up while I cast my divination! I beg you, help me!~
@@ -155,7 +155,7 @@ Stivan insulted Aerie to the point to force her to leave the party in tears. I m
 @152  = ~(Sniff) It... it's a palace. It's s-surrounded by numerous guards, while the road it faces is empty. It's very scary...~
 @153  = ~Anything else?~
 @154  = ~From the outside... it looks very rich and... there is a banner on the entrance. A talon banner, I believe...~
-@155  = ~*Ahem* I think I figured out which building that is, but I don't know if I should be glad for the discovery or tear my hair out for what lies in wait for us.~ [STIVAN]
+@155  = ~*Ahem* I think I figured out which building that is, but I don't know if I should be glad for the discovery or tear my hair out for what lies in wait for us.~ [TB#ST065]
 @156  = ~What lies in wait for *you*. Don't presume I forgot about your responsibility.~
 @157  = ~By the gods, will you get to the point?~
 @158  = ~I hope you'll tell me it's here in Athkatla and not on the Cloud Peaks.~
@@ -165,7 +165,7 @@ Stivan insulted Aerie to the point to force her to leave the party in tears. I m
 @162  = ~I...~
 @163  = ~You'd claim you aren't evil? You-you gave my killer the weapon for the deed!~
 @164  = ~I'm not evil! Mommy always said that I'm just a little... hyper-active, that's all!~
-@165  = ~Don't look at me like that, elf. I'm a good halfling, and I'll prove so! If I rescued your trinket, would you be able to end the curse?~ [STIVAN]
+@165  = ~Don't look at me like that, elf. I'm a good halfling, and I'll prove so! If I rescued your trinket, would you be able to end the curse?~ [TB#ST066]
 @166  = ~Y-yes... Having it back would be enough to end the spell cast on it.~
 @167  = ~Very well, I'll handle it. You'll have your cloak back and you'll say in front of everyone that I'm not mean!~
 @168  = ~It's an amulet, Stivan...~
@@ -178,12 +178,12 @@ Stivan insulted Aerie to the point to force her to leave the party in tears. I m
  
 In the Circus I found Aerie, luckily before she was killed by mysterious assassins. It looks like the elf had been a victim of a curse cast upon her by an halfling necromancer via her amulet. Since he's partly responsible for what happened, Stivan offered to rescue it: that's the only way to end the enchantment. I'll try to defend Aerie from further attacks in the meantime.~
 @175  = ~Heh. I'll do my best.~
-@176  = ~Okay, although I can't promise you'll have them back. Heh.~ [STIVAN]
-@177  = ~Are you ready to protect Aerie while I do my job?~ [STIVAN]
+@176  = ~Okay, although I can't promise you'll have them back. Heh.~ [TB#ST067]
+@177  = ~Are you ready to protect Aerie while I do my job?~ [TB#ST068]
 @178  = ~Yes. Try not to get yourself killed, please.~
 @179  = ~Not yet, but I've almost finished sorting out what you might need.~
 @180  = ~Maybe.. you should talk with Stivan.~
-@181  = ~Later!~ [STIVAN]
+@181  = ~Later!~ [TB#ST069]
 @182  = ~Boo asks whether it is wise to let the little one go by himself. Minsc is worried too, but <CHARNAME>'s trust is never misplaced!~
 @183  = ~Whether 'tis true that luck aids the brave or not, it feels fitting that this seagull flies towards the shores of expiation. If he doesn't return in victory... Well, there'll be a Guardian of Fate awaiting for him.~
 @184  = ~Stop, Stivan. You cannot handle such a menace by yourself. Let me accompany you.~
@@ -193,13 +193,13 @@ In the Circus I found Aerie, luckily before she was killed by mysterious assassi
 @188  = ~... Do I have to answer you?~
 @189  = ~Joke of a man! Dirty pile of...~
 @190  = ~*Ahem* I should go.~
-@191  = ~Who's there?~ [ESTELNECRI]
+@191  = ~Who's there?~ [TB#SE003]
 @192  = ~(Cut her throat silently)~
 @193  = ~(Try to steal the amulet)~
 @194  = ~(Try asking why she is sending assassins against Aerie)~
-@195  = ~You! You killed my guards! Die!~ [ESTELNECRI]
+@195  = ~You! You killed my guards! Die!~ [TB#SE004]
 @196  = ~The amulet! You have it!~
-@197  = ~Here you go, with my excuses for the mess I started.~ [STIVAN]
+@197  = ~Here you go, with my excuses for the mess I started.~ [TB#ST070]
 @198  = ~Aerie leaves the group.
  
 Stivan was able to rescue Aerie's wooden pendant, and she broke the enchantment right away. The halfling apologized to the still-wary elf. I can only hope they're done attacking each other... I can't take it anymore!~

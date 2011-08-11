@@ -40,8 +40,7 @@ COPY - ~names-to-soundsets~ ~names-to-soundsets~
 	END
 BUT_ONLY
 
-COPY	~stivan/tra/english/setup.tra~ ~stivan/tra/english/setup.tra~
-		~stivan/tra/english~ ~stivan/tra/english~
+COPY	~stivan/tra/english~ ~stivan/tra/english~
 	PATCH_SILENT
 	REPLACE_EVALUATE "\(~[^~]*~\) \[\([^]]*\)\]%LNL%\(@[0-9]*\)" BEGIN
 		TEXT_SPRINT result ~%MATCH1% [%MATCH2%]%LNL%%MATCH3%~
