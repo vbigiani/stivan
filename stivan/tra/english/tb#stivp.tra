@@ -1,12 +1,12 @@
-@0    = ~*Ahem* Pardon? Are you turning down the most skilled seagull hunter in Faerun?~
+@0    = ~*Ahem* Pardon? Are you turning down the most skilled seagull hunter in Faerun?~ [STIVAN]
 @1    = ~I have other priorities for the moment. We'll meet again once I need again your abilities.~
 @2    = ~Oh, no. I wasn't talking about you.~
 @3    = ~(Snort!) Very well! We'll meet at the Government Quarter in Athkatla. Maybe I could sell some seagull plumes to the nobles for their ridiculous headgear...~
 @4    = ~Wait here, Stivan. I'll be back as soon as possible.~
 @5    = ~Very well, we'll meet here.~
 @6    = ~Heh. I had no doubt. You'd be dead without me.~
-@7    = ~Come, ladies and gents, come! Two plumes for the price of three! No, wait, two plumes for the price of four!~
-@8    = ~Uhm... I'm afraid I'm doing something wrong...~
+@7    = ~Come, ladies and gents, come! Two plumes for the price of three! No, wait, two plumes for the price of four!~ [STIVAN]
+@8    = ~Uhm... I'm afraid I'm doing something wrong...~ [STIVAN]
 @9    = ~*Ahem* Look who's here! <CHARNAME>! How are you? Did you decide at last to require again the services of Stivan, the famous seagull hunter?~
 @10   = ~You said it yourself. Let's go.~
 @11   = ~Hello to you, Stivan. We all felt your absence.~
