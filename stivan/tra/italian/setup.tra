@@ -1,10 +1,10 @@
 @0    = ~B.. buona fortuna, Stivan.~
-@1    = ~Aiuto! Un assassino in casa!~
-@2    = ~Gentile Signora, sono un amico di Aerie, e vorrei sapere perchè voi state mandando assassini contro di lei.~
-@3    = ~Oops, credo mi abbia notato...~
-@4    = ~Yoink!~
-@5    = ~Urghk!~
-@6    = ~Heh. Un lavoro semplice e veloce.~
+@1    = ~Aiuto! Un assassino in casa!~ [TB#SE001]
+@2    = ~Gentile Signora, sono un amico di Aerie, e vorrei sapere perchè voi state mandando assassini contro di lei.~ [TB#ST046]
+@3    = ~Oops, credo mi abbia notato...~ [TB#ST047]
+@4    = ~Yoink!~ [TB#ST048]
+@5    = ~Urghk!~ [TB#SE002]
+@6    = ~Heh. Un lavoro semplice e veloce.~ [TB#ST049]
 @7    = ~Stivan~
 @8    = ~Ahhhh! Vedo gabbiani OVUNQUE!~ [TB#ST001]
 @9    = ~Questa sì che è una compagnia di manigoldi!~ [TB#ST002]
@@ -55,13 +55,13 @@ Costretto a vivere per le strade di Athkatla, l'halfling ha accolto con entusias
 @53   = ~Questa trappola... farà male a qualcuno.~ [TB#ST045]
 @54   = ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfling si è visto uccidere i propri genitori e i fratelli da quello che credeva essere uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
 Costretto a vivere per le strade di Athkatla, l'halfling ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani. Nel corso dei suoi viaggi, tuttavia, il druido Cernd è riuscito ad educare Stivan all'Equilibrio e al rispetto per le creature della Madre, ponendo così fine all'odio che il Cacciatore nutriva nei confronti dei volatili.~
-@55   = ~Questo è per papino!~
-@56   = ~Questo è per mammina!~
-@57   = ~E questo è per i miei fratelli!~
-@58   = ~[Nascondendo una risata] Poveraccio, se n'è andato!~
-@59   = ~[Nascondendo una risata] Poveraccia, se n'è andata!~
-@60   = ~nnnnNNNNOOOOOO!!!~
-@61   = ~Cosa stiamo aspettando? Andiamo alla mia tomba!~
+@55   = ~Questo è per papino!~ [TB#ST050]
+@56   = ~Questo è per mammina!~ [TB#ST051]
+@57   = ~E questo è per i miei fratelli!~ [TB#ST052]
+@58   = ~[Nascondendo una risata] Poveraccio, se n'è andato!~ [TB#ST053]
+@59   = ~[Nascondendo una risata] Poveraccia, se n'è andata!~ [TB#ST054]
+@60   = ~nnnnNNNNOOOOOO!!!~ [TB#ST055]
+@61   = ~Cosa stiamo aspettando? Andiamo alla mia tomba!~ [TB#ST056]
 @62   = ~Il mod è già installato.~
 @63   = ~E' richiesto Throne of Bhaal.~
 @64   = ~%SOURCE_RES%.cre has no empty script slot.~

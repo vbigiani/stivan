@@ -1,6 +1,6 @@
 @0    = ~(Stivan ti ignora quando cerchi di parlargli. Sbuffando, ti volta le spalle per immergersi nuovamente nei sui pensieri).~
-@1    = ~S-stammi vicino, <CHARNAME>. Questo posto è spaventoso, e non so f-fino a quando riuscirò a trattenermi dal darmela a gambe.~
-@2    = ~Stivan il Cacciatore ti ascolta, <CHARNAME>!~
+@1    = ~S-stammi vicino, <CHARNAME>. Questo posto è spaventoso, e non so f-fino a quando riuscirò a trattenermi dal darmela a gambe.~ [STIVAN057]
+@2    = ~Stivan il Cacciatore ti ascolta, <CHARNAME>!~ [STIVAN058]
 @3    = ~Tutto bene, amico?~
 @4    = ~E’ un piacere viaggiare in compagnia di un altro halfling.~
 @5    = ~E’ un piacere viaggiare in tua compagnia.~

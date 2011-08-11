@@ -1,4 +1,4 @@
-45
+58
 ~Ahhhh! I see seagulls EVERYWHERE!~ [TB#ST001]
 ~This is a fine group of ne'er do wells!~ [TB#ST002]
 ~Uhm... I felt more at ease while slumming through the streets of Athkatla.~ [TB#ST003]
@@ -44,3 +44,17 @@
 ~Nature... A unknown entity I'm slowly getting to know.~ [TB#ST043]
 ~As easy as depl... *Ahem* Child's play.~ [TB#ST044]
 ~This trap... will really hurt somebody.~ [TB#ST045]
+
+~My fair Lady, I'm a friend of Aerie's, and I'd like to know why are you sending assassins against her.~ [TB#ST046]
+~Whoops, I think she's noticed me...~ [TB#ST047]
+~Yoink!~ [TB#ST048]
+~Heh. A clean and easy job.~ [TB#ST049]
+~This is for daddy!~ [TB#ST050]
+~This is for mommy!~ [TB#ST051]
+~And this is for my brothers!~ [TB#ST052]
+~[Hiding laughter] Poor boy, he's gone!~ [TB#ST053]
+~[Hiding laughter] Poor girl, she's gone!~ [TB#ST054]
+~nnnnNNNNOOOOOO!!!~ [TB#ST055]
+~What are we waiting for? Let's get to my tomb!~ [TB#ST056]
+~K-Keep close, <CHARNAME>. This place is frightening, and I d-don't know how long I'll manage not to run away.~ [TB#ST057]
+~Stivan the Hunter is listening to you, <CHARNAME>!~ [TB#ST058]
