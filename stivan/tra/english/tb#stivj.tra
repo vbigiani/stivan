@@ -352,40 +352,39 @@ We finally managed to leave the ashes of Stivan's familiars in the crypt. To tha
 @339  = ~I fear not, my small friend. Nothing can be changed.~
 @340  = ~No! No! You must... you *have to* explain yourself to me! I... Don't understand... ~
 @341  = ~I spent all my life understanding you don't need to understand everything. Time is a great teacher, but unluckily it kills all of its pupils.~
-
-
-
-
-@342  = ~*Ahem* Non posso fare a meno di chiedermi se il gioco ne valga la candela. Ci stiamo inimicando i più potenti incantatori dell'Amn... Per cosa?~
-@343  = ~L'halfling ha ragione. Ti ricordo, <CHARNAME>, che sono stati gli Incappucciati ad imprigionare Irenicus e la tua amica... Vogliamo andare a far loro compagnia?~
-@344  = ~Tsk. Ipocrita E ingrato. Un singolare connubio di attributi, Valygar, che meriti come nessun altro.~
-@345  = ~Puoi dire quello che vuoi, ma non ucciderò mai un innocente per...~
-@346  = ~Per cosa? Per una causa meritevole come quella di <CHARNAME>? Puah! Sputo su di te e sulla tua moralità da accattoni!~
-@347  = ~Pondera bene la tua prossima scelta, <CHARNAME>. La lingua velenosa di quest'halfling è già di per sè un motivo più che valido per andarmene.~
-@348  = ~(Sniff sniff) Ranger, sei sicuro di non aver confuso l'odore di questo posto con quello delle tue ascelle?~
-@349  = ~(Sigh) <CHARNAME>, a cosa pensavi quando gli hai chiesto di seguirti?~
-@350  = ~Quando mendicavo per le strade, nessuno è mai stato così generoso con me.~
-@351  = ~Non c'è stato un solo nobile che ti abbia dato qualche moneta d'oro? Gli Argrim, ad esempio?~
+@342  = ~*Ahem* I can't wonder if the game is worth the price. We're about to make enemies out of the most powerful enchanters of Amn... for what?~
+@343  = ~The halfling is right. I should remind you, <CHARNAME>, that it is the Cowlies who keep Irenicus and your friend in prison... do you want to go and keep them company?~
+@344  = ~Tsk. Hypocrite and thankless. A singular combination of qualities, Valygar, that you deserve like no other.~
+@345  = ~You can say whatever you wish, but I will never kill some innocent for...~
+@346  = ~For what? For a deserving cause like <CHARNAME>'s? Ptew! I spit on you and your beggar morality!~
+@347  = ~Ponder your next choice carefully, <CHARNAME>. This halfling's venomous tongue is already reason enough for me to leave.~
+@348  = ~(Sniff sniff) Ranger, are you sure you aren't mixing up this place's odor with your armpits'?~
+@349  = ~(Sigh) <CHARNAME>, what were you thinking when you asked him to follow you?~
+@350  = ~When I was begging on the streets, nobody has ever been that generous to me.~
+@351  = ~No noble ever gave you a single gold piece? The Argrims, for example?~
 @352  = ~No.~
-@353  = ~E gli Jysstev?~
-@354  = ~Nemmeno.~
-@355  = ~E' una vergogna! Un'indecenza! Con appena la metà delle ricchezze che possiedono potrebbero sfamare tutti gli abitanti di Athkatla, eppure non muovono un dito!~
-@356  = ~Miss Nalia, è giusto che sia così. Nè io nè i miei familiari ci siamo mai preoccupati di aiutare i mendicanti a suo tempo. Immagino che sia una sorta di... contrappasso.~
-@357  = ~*Ahem* Non che la cosa mi abbia entusiasmato. Ne avrei fatto volentieri a meno.~
-@358  = ~Jaheira ha ragione. Neanch'io ne ero a conoscenza.~
-@359  = ~E perchè mai avresti dovuto? I servitori dell'equilibrio non cantano ai quattro venti dove hanno stabilito le loro basi.~
-@360  = ~Ma i Ladri Tenebrosi sì. Dovresti sapere che non scorre buon sangue tra le ombre dell'Amn e gli Arpisti... Se questa tenuta fosse stata adibita a tale scopo fin da quando ero piccolo, l'intera città ormai lo saprebbe.~
-@361  = ~(Tossisce) Che... Che schifo è mai questo? Nemmeno i vicoli in cui dormivo erano così ripugnanti! Do... (Tossisce) Dobbiamo proseguire per forza? Io... Spero di no...~
-@362  = ~*Ahem* Questa donna mi mette a disagio, <CHARNAME>. Ho la pelle d'oca...~
-@363  = ~Il sol pensiero di lavorare per questa donna mi fa drizzare i peli dei piedi, ma l'importante è riuscire nella tua missione, giusto?~
-@364  = ~*Ahem* Dobbiamo proprio? La gente, qui ai Moli, dice che chi entra in quella casa non ne esce più vivo...~
-@365  = ~E dov'è il problema, mio gabbiano? Se ci attende la morte, avremo il piacere di fare un viaggio senza valigie.~
-@366  = ~Da quando fanno entrare simili lordure in un quartiere benestante come questo?~
-@367  = ~Heh. La sola lordura che vedo, signore, è quella che avete sotto i vostri piedi.~
-@368  = ~MIA MAMMA DICE CHE GLI HALFLING SONO TUTTI DEI PUZZONI!~
-@369  = ~Non è vero! Mi lavo sempre almeno una volta ogni sei mesi!~
-@370  = ~Allontanati, accattone! La tua sola vicinanza offusca lo splendore delle mie perle!~
-@371  = ~Heh. Brillano bene, per essere finte.~
+@353  = ~And the Jyssev?~
+@354  = ~Neither.~
+@355  = ~It is a ignominy! An affront! With half their riches they could feed all of Athkatla, yet they don't raise a finger!~
+@356  = ~Miss Nalia, it is fitting it is so. Neither I nor my relatives ever cared about helping the beggars when we were comfortable. I imagine it's some sort of... punishment.~
+@357  = ~*Ahem* Not that I am happy of that. I would have gladly done without.~
+@358  = ~Jaheira is right. I didn't know about it either.~
+@359  = ~And why should you know about it at all? The servants of Balance don't tell everybody where their strongholds are at.~
+@360  = ~But the Shadow Thieves do. You should know that there is bad blood between the Shadows of Amn and the Harpers... Had this stronghold been here since I was young, the entire city would know about it.~
+@361  = ~(Cough) What... What sort of filth is this? Not even the corners I slept in were this foul! Do... (Cough) do we have to continue? I... I hope not...~
+@362  = ~*Ahem* This woman makes me uneasy, <CHARNAME>. I have the goosebumps...~
+@363  = ~Just thinking about working for that woman ruffles my feet's hairs, but the most important thing is to succeed in your mission, right?~
+@364  = ~*Ahem* Do we really have to? People, here in the Docks, claim that those who enter that house never come out alive...~
+@365  = ~And what's the matter, my seagull? If death awaits us, we'll have the pleasure of traveling without needing baggage.~
+@366  = ~Since when do they let such filthiness enter this rich district?~
+@367  = ~Heh. The only filth I see, my lord, is what you have under your feet.~
+@368  = ~MOMMY ALWAYS SAYS THAT ALL HALFLING STINK!~
+@369  = ~It's not true! I wash myself every six months, at the least!~
+@370  = ~Away with you, beggar! Having you near me removes the shine out of my pearls!~
+@371  = ~Heh. They shine nicely, for fakes.~
+
+
+
 @372  = ~E' senz'altro opera degli adoratori di alberi! Ho sempre sospettato che fossero loro i responsabili di ciò che è successo alla mia famiglia, e questi episodi lasciano pochi dubbi a proposito! Dobbiamo indagare, <CHARNAME>!~
 @373  = ~Conosco Trademeet - ci sono stato diverse volte con la mia famiglia. Se siamo fortunati, potremmo incontrare qualche mercante con cui eravamo soliti commerciare. Sono sicuro che farebbero il possibile per aiutarci a trovare quei druidi puzzoni!~
 @374  = ~WOW! Questa cripta è perfetta! C'è spazio anche per gli altri membri del gruppo, nel caso in cui vogliano farci un pisolino!~
