@@ -57,7 +57,7 @@ IF
 	Dead("Anomen")
 	InPartyAllowDead("Anomen")
 	Global("tb#AnomenDead","GLOBAL",0)
-	Global("AnomenIsNotKnight","GLOBAL",1)
+	Global("AnomenIsNotKnight","GLOBAL",0)
 THEN
 	RESPONSE #100
 		SetGlobal("tb#AnomenDead","GLOBAL",0)
