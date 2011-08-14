@@ -842,19 +842,24 @@ I can feel the cold bones of the dead".~
 @823  = ~Heh. That's what *you* think.~
 @824  = ~What are you talking about?~
 @825  = ~I'll ask that friendly drake to leave me as I am now.~
-@826  = ~Cosa?! Vorresti mantenere le fattezze di un drow? Sarebbe questo il tuo sogno nel cassetto?~
-@827  = ~Io non ho sogni nel cassetto, Mazzy. Preferisco tenerci la biancheria!~
-@828  = ~Non è il momento di scherzare, Stivan! L'incantesimo lanciato da Aldalon non è altro che un'illusione. Non cambierà mai la tua natura di halfling!~
-@829  = ~Hai pensato inoltre alle conseguenze che il tuo aspetto porterebbe con sè? Una volta tornati in superficie, le persone ne saranno terrorizzate e ti eviteranno. Alcuni cercheranno addirittura di ucciderti!~
-@830  = ~(Snort!) E allora? Lo scenario che dipingi non sarebbe poi tanto diverso da quello che ho vissuto sino ad oggi!~
-@831  = ~Le persone mi hanno sempre evitato per il mio aspetto trasandato, come se avessi potuto tirarmi a lucido dopo la perdita di tutti i miei beni. Quanto ai tentativi di uccisione, sono innumerevoli le guardie che hanno cercato di aggredirmi e di sbattermi in prigione soltanto perchè dormivo per strada. "Dobbiamo mantenere l'ordine e la sicurezza" dicevano, quando i problemi del distretto erano altri!~
-@832  = ~Ben venga se coloro che incontrerò avranno paura di me per le mie sembianze da drow. Il loro timore sarà sinonimo di rispetto!~
-@833  = ~Stivan, calmati e ascoltami.~
-@834  = ~Capisco meglio di chiunque altro quanto sia difficile per un halfling essere accettati dalla società. Agli occhi dei più non siamo altro che creature buffe e frivole, pavide e vigliacche. Eppure, io ho lottato perchè almeno nel mio mondo le cose cambiassero, perchè le persone mi vedessero per quel che sono veramente, non con le lenti dei pregiudizi che accompagnano il nome della nostra razza.~
-@835  = ~E' stato un cammino lungo e periglioso, non lo nego. In più occasioni mi sono sentita demoralizzata, ma ogni volta sono riuscita ad andare avanti dicendomi: "Sei caduta sette volte? Rialzati otto". Alla fine, ho dimostrato a me stessa e agli altri di essere una persona forte e coraggiosa, leale e onesta.~
-@836  = ~... Heh. Ci hai provato, Mazzy, ma non mi lascerò intortare dalla tua storiellina. Io manterrò quest'aspetto, che ti piaccia o no!~
-@837  = ~Ragiona, Sti--~
-@838  = ~(Urla) Basta! Non voglio sentire altro!~
+@826  = ~What?! You would like to remain with a drow's looks? Would that be your dream in the closet?~
+@827  = ~I have no dreams in my closet, Mazzy. I prefer to put my clothes in there!~
+@828  = ~This is not the time to joke, Stivan! Adalon's spell is just an illusion. It won't change your nature as an halfling!~
+@829  = ~Did you think about the consequences your looks would have? Once on the surface, people will be terrorized by your looks and will avoid you. Some will even try to kill you!~
+@830  = ~(Snort!) So? This is not much different from what I went through all these years!~
+@831  = ~People have always avoided me for my unwashed look, as if I could clean myself after losing everything I had. As for people trying to kill me, guards have been trying to attack me and put me in jail just for sleeping on the street. "We must protect order and peace", they said, while the district's problem were others!~
+@832  = ~It would be better if those we meet are scared by my drow looks. Their fear would be out of respect!~
+@833  = ~Stivan, calm down and listen to me.~
+@834  = ~I understand better than anyone else how hard is it for a drow to be accepted by society. To most, we aren't but funny and frivolous creatures, scared and fat. Yet, I fought so that things would change at least for me, so that people would see me as I was, not as what prejudice tells them I am.~
+@835  = ~It was a long and perilous journey, I can't deny it. I felt down on many occasions, but I always brought myself back telling me: "did you fall seven times? Get up eight". At the end, I proved to myself and others that I'm a strong, brave, loyal and honest person.~
+@836  = ~... Heh. You did your best, Mazzy, but I won't let myself be moved by your little tale. I'll keep these looks, whether you like it or not!~
+@837  = ~Think, Sti--~
+@838  = ~Enough! I want to hear nothing more!~
+
+
+
+
+
 @839  = ~Vedi, Mazzy? *Vedi* come questi sbruffoni mi fissano? Se avessi mantenuto l'aspetto di un drow non mi guarderebbero con quell'espressione di sfacciata superiorità!~
 @840  = ~Hai ragione. Ti avrebbero piantato al suolo con lance e frecce.~
 @841  = ~Osserva e impara.~
