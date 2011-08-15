@@ -1265,7 +1265,7 @@ See("tb#stiv")
 CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",5)
 HPGT("tb#Stiv",20)~ THEN BIMOEN2 stivanimoen6
-@632 [ CAS_PM6F ]  
+@632
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",6)~
 BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA @633
@@ -1274,7 +1274,7 @@ BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA @636
 == TB#STIVB @637
 END
-== TB#STIVB @638 [ CAS_PM6M ]  
+== TB#STIVB @638
 EXIT
 
 CHAIN IF ~Global("tb#StivanImoen","GLOBAL",7)~ THEN TB#STIVJ stivanimoen6-a
@@ -1324,7 +1324,7 @@ See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",9)~ THEN TB#STIVB stivanimoen8
-@664 [ CAS_PM2M ]  
+@664
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",10)~
 == BIMOEN2 @665
 == TB#STIVB @666
@@ -1333,8 +1333,8 @@ BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA @668
 == TB#STIVB @669
 END
-== BIMOEN2 @670 [ CAS_PM1F ]  
-== TB#STIVB @671 [ CAS_PM1M ]  
+== BIMOEN2 @670
+== TB#STIVB @671
 DO ~ApplySpell("tb#stiv",WIZARD_INVISIBILITY)~
 == TB#STIVB @672
 DO ~AddSpecialAbility("spin118")~
@@ -1378,7 +1378,7 @@ CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",11)
 HaveSpellRES("spin118")
 Global("AnomenIsNotKnight","GLOBAL",0)~ THEN TB#STIVB stivanimoen10
-@690 [ CAS_PM1M ]  
+@690
 = @691
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",12) SpellRES("spin118","tb#stiv")~
 == BIMOEN2 @692
