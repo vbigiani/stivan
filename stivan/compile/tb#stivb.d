@@ -397,7 +397,7 @@ EXIT
 
 BEGIN TB#SSUS
 IF ~!Global("tb#StivanSusanScene","GLOBAL",2)~ THEN 0
-SAY @173 [ GAM_48 ] 
+SAY @173
 IF ~~ THEN EXIT
 END
 
@@ -1403,7 +1403,7 @@ DO ~SetGlobal("tb#StivanMinsc","GLOBAL",1)~
 == TB#STIVB @701
 == BMINSC @702
 = @703
-= @173 [ GAM_48 ]  
+= @173
 = @704
 == TB#STIVB @165
 EXIT
