@@ -151,23 +151,25 @@ CHAIN IF ~~ THEN arnman04 SecondJob1-3
 END
 IF ~~ THEN SOLVED_JOURNAL @75 DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",101)~ EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("tb#stiv") InMyArea("tb#stiv") Global("tb#shadowsThievesJobs","GLOBAL",5) !Dead("tb#svam1")~ THEN VULOVA vulova-1
+BEGIN TB#SVUL
+
+CHAIN IF WEIGHT #-1 ~InParty("tb#stiv") InMyArea("tb#stiv") Global("tb#shadowsThievesJobs","GLOBAL",5) !Dead("tb#svam1")~ THEN tb#svul tb#svul-1
 @76
 == tb#stivj @77
-== VULOVA @78
+== tb#svul @78
 == tb#stivj @79
-== VULOVA @80
+== tb#svul @80
 = @81
 END
-IF ~~ THEN DO ~CreateCreatureObject("vamflf01","Vulova",1,0,0) CreateCreatureObject("tb#svam1","Vulova",1,0,0) CreateCreatureObject("vamflm01","Vulova",1,0,0)~ EXIT
+IF ~~ THEN DO ~CreateCreatureObject("vamflf01","tb#svul",1,0,0) CreateCreatureObject("tb#svam1","tb#svul",1,0,0) CreateCreatureObject("vamflm01","tb#svul",1,0,0)~ EXIT
 
-APPEND Vulova
-  IF WEIGHT #-1 ~Dead("tb#svam1") CombatCounter(0)~ THEN vulova-2
+APPEND tb#svul
+  IF WEIGHT #-1 ~Dead("tb#svam1") CombatCounter(0)~ THEN tb#svul-2
   SAY @82
-  IF ~~ THEN REPLY @83 GOTO vulova-3
+  IF ~~ THEN REPLY @83 GOTO tb#svul-3
   END
   
-  IF ~~ THEN vulova-3
+  IF ~~ THEN tb#svul-3
   SAY @84
   = @85
   = @86

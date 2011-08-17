@@ -6,9 +6,9 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("VulovaSpawn","AR1007",1)
-		CreateCreature("VULOVA",[617.607],10) // Senior Armagaran Vulova
-		CreateCreature("VULFGT01",[609.518],12) // Laen Torg
-		CreateCreature("VULFGT02",[528.893],12) // Vulova Wizard
+		CreateCreature("TB#SVUL",[617.607],10) // Senior Armagaran Vulova
+		CreateCreature("TB#SV01",[609.518],12) // Laen Torg
+		CreateCreature("TB#SV02",[528.893],12) // Vulova Wizard
 END
 
 IF
@@ -16,7 +16,7 @@ IF
   CombatCounter(0)
 THEN
   RESPONSE #100
-    ActionOverride("vulfgt01",EscapeArea())
-    ActionOverride("vulfgt02",EscapeArea())
-    ActionOverride("Vulova",StartDialogueNoSet(Myself))
+    ActionOverride("TB#SV01",EscapeArea())
+    ActionOverride("TB#SV02",EscapeArea())
+    ActionOverride("TB#SVUL",StartDialogueNoSet(Myself))
 END
