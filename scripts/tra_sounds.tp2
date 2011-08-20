@@ -18,24 +18,24 @@ OUTER_TEXT_SPRINT ~sound_reference~ ~to_be_merged/sounds_to_record~
 
 
 DEFINE_PATCH_MACRO read BEGIN
-	REPLACE_EVALUATE "\(~[^~]*~\) \[\([^]]*\)\]%LNL%\(@[0-9]*\)" BEGIN
-		TEXT_SPRINT result ~%MATCH1% [%MATCH2%]%LNL%%MATCH3%~
-		TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%~
-		PATCH_IF VARIABLE_IS_SET $names(EVALUATE_BUFFER ~%MATCH2%~) THEN BEGIN
-			i = $last(EVALUATE_BUFFER ~%MATCH2%~)
+	REPLACE_EVALUATE "\(@[0-9]* *\)= \(~[^~]*~\) \[\([^]]*\)\]" BEGIN
+		TEXT_SPRINT result ~%MATCH1%= %MATCH2% [%MATCH3%]~
+		TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH1%~ ~%MATCH3%~
+		PATCH_IF VARIABLE_IS_SET $names(EVALUATE_BUFFER ~%MATCH3%~) THEN BEGIN
+			i = $last(EVALUATE_BUFFER ~%MATCH3%~)
 			i += 1
-			SET $last(EVALUATE_BUFFER ~%MATCH2%~) = i
+			SET $last(EVALUATE_BUFFER ~%MATCH3%~) = i
 			TEXT_SPRINT str ~%i%~
-			SET length = $sizes(EVALUATE_BUFFER ~%MATCH2%~)
-			TEXT_SPRINT prefix $names(EVALUATE_BUFFER ~%MATCH2%~)
+			SET length = $sizes(EVALUATE_BUFFER ~%MATCH3%~)
+			TEXT_SPRINT prefix $names(EVALUATE_BUFFER ~%MATCH3%~)
 			WHILE STRING_LENGTH ~%str%~ < length BEGIN
 				TEXT_SPRINT str ~0%str%~
 			END
-			TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%%str%~
-			TEXT_SPRINT result ~%MATCH1% [%prefix%%str%]%LNL%%MATCH3%~
+			TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%str%~
+			TEXT_SPRINT result ~%MATCH2% [%prefix%%str%]%LNL%%MATCH1%~
 			
 			INNER_ACTION BEGIN
-				APPEND_OUTER - ~%MATCH2%.tmp~ ~%MATCH1% [%prefix%%str%]~
+				APPEND_OUTER - ~%MATCH3%.tmp~ ~%MATCH2% [%prefix%%str%]~
 			END
 		END
 	END ~%result%~
@@ -83,14 +83,14 @@ VERBOSE
 
 ACTION_PHP_EACH langs AS from => to BEGIN
 	COPY ~%to%~ ~%to%~
-		REPLACE_EVALUATE "~%LNL%\(@[0-9]*\)" BEGIN
-			TEXT_SPRINT result ~%LNL%%MATCH1%~
+		REPLACE_EVALUATE "\(@[0-9]* *\)= \(~[^~]*~\)%LNL%" BEGIN
+			TEXT_SPRINT result ~%MATCH1%= %MATCH2%%LNL%~
 			PATCH_IF VARIABLE_IS_SET EVALUATE_BUFFER ~%SOURCE_RES% %MATCH1%~ THEN BEGIN
 				TEXT_SPRINT str ~%SOURCE_RES% %MATCH1%~
 				TEXT_SPRINT str EVALUATE_BUFFER ~%%str%%~
-				TEXT_SPRINT result ~ [%str%]%LNL%%MATCH1%~
+				TEXT_SPRINT result ~%MATCH1%= %MATCH2%[%str%]%LNL%~
 			END
-		END "~%result%"
+		END "%result%"
 	BUT_ONLY
 END
 
