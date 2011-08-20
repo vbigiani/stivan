@@ -31,11 +31,11 @@ DEFINE_PATCH_MACRO read BEGIN
 			WHILE STRING_LENGTH ~%str%~ < length BEGIN
 				TEXT_SPRINT str ~0%str%~
 			END
-			TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%str%~
-			TEXT_SPRINT result ~%MATCH2% [%prefix%%str%]%LNL%%MATCH1%~
+			TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%prefix%%str%~
+			TEXT_SPRINT result ~%MATCH1%= %MATCH2% [%prefix%%str%]~
 			
 			INNER_ACTION BEGIN
-				APPEND_OUTER - ~%MATCH3%.tmp~ ~%MATCH2% [%prefix%%str%]~
+				APPEND_OUTER - ~%MATCH3%.tmp~ ~%MATCH1% [%prefix%%str%]~
 			END
 		END
 	END ~%result%~
