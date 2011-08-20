@@ -10,10 +10,10 @@ Description prefix
 STIVAN TB#SS
 >>>>>>>>
 
-SPRINT ~source~ ~stivan/tra/english~
+OUTER_TEXT_SPRINT ~source~ ~stivan/tra/english~
 ACTION_DEFINE_ARRAY ~early~ BEGIN ~setup.tra~ END
-ACTION_DEFINE_ARRAY ~langs~ BEGIN ~stiva/tra/italian~ END
-SPRINT ~sound_reference~ ~to_be_merged/sounds_to_record~
+ACTION_DEFINE_ARRAY ~langs~ BEGIN ~stivan/tra/italian~ END
+OUTER_TEXT_SPRINT ~sound_reference~ ~to_be_merged/sounds_to_record~
 
 
 
