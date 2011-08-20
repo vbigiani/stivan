@@ -35,7 +35,7 @@ DEFINE_PATCH_MACRO read BEGIN
 			TEXT_SPRINT result ~%MATCH1%= %MATCH2% [%prefix%%str%]~
 			
 			INNER_ACTION BEGIN
-				APPEND_OUTER - ~%MATCH3%.tmp~ ~%MATCH1% [%prefix%%str%]~
+				APPEND_OUTER - ~%MATCH3%.tmp~ ~[%prefix%%str%] = %MATCH2% (in %MATCH1% of %SOURCE_RES%)~
 			END
 		END
 	END ~%result%~
