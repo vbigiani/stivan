@@ -7,41 +7,17 @@ NO_LOG_RECORD
 
 <<<<<<<< names-to-soundsets
 Description prefix
-STIVAN TB#ST
-ESTELNECRI TB#SE
-LAWRENCE TB#SL
-CARLINO TB#SC
-ROSALINA TB#SR
+STIVAN TB#SS
 >>>>>>>>
 
-<<<<<<<< empty
->>>>>>>>
-COPY - ~names-to-soundsets~ ~names-to-soundsets~
-	READ_2DA_ENTRIES_NOW names2da 2
-	FOR (i = 1; i < names2da; ++i) BEGIN
-		READ_2DA_ENTRY_FORMER names2da i 0 name
-		READ_2DA_ENTRY_FORMER names2da i 1 prefix
-		TEXT_SPRINT $names(EVALUATE_BUFFER ~%name%~) ~%prefix%~
-		SET $sizes(EVALUATE_BUFFER ~%name%~) = 8 - STRING_LENGTH ~%prefix%~
-		SET $last(EVALUATE_BUFFER ~%name%~) = 0
-		INNER_ACTION BEGIN
-			COPY - ~empty~ ~%name%.tmp~
-			
-			ACTION_IF ! FILE_EXISTS ~to_be_merged/sounds_to_record/%name%.txt~ THEN BEGIN
-				COPY ~empty~ ~to_be_merged/sounds_to_record/%name%.txt~
-				APPEND_OUTER ~to_be_merged/sounds_to_record/%name%.txt~ 0
-			END ELSE BEGIN
-				COPY ~to_be_merged/sounds_to_record/%name%.txt~ ~to_be_merged/sounds_to_record/%name%.txt~
-					READ_2DA_ENTRY 0 0 0 val
-					SET $last(EVALUATE_BUFFER ~%name%~) = val
-				BUT_ONLY
-			END
-		END
-	END
-BUT_ONLY
+SPRINT ~source~ ~stivan/tra/english~
+ACTION_DEFINE_ARRAY ~early~ BEGIN ~setup.tra~ END
+ACTION_DEFINE_ARRAY ~langs~ BEGIN ~stiva/tra/italian~ END
+SPRINT ~sound_reference~ ~to_be_merged/sounds_to_record~
 
-COPY	~stivan/tra/english~ ~stivan/tra/english~
-	PATCH_SILENT
+
+
+DEFINE_PATCH_MACRO read BEGIN
 	REPLACE_EVALUATE "\(~[^~]*~\) \[\([^]]*\)\]%LNL%\(@[0-9]*\)" BEGIN
 		TEXT_SPRINT result ~%MATCH1% [%MATCH2%]%LNL%%MATCH3%~
 		TEXT_SPRINT EVALUATE_BUFFER ~%SOURCE_RES% %MATCH3%~ ~%MATCH2%~
@@ -63,27 +39,67 @@ COPY	~stivan/tra/english~ ~stivan/tra/english~
 			END
 		END
 	END ~%result%~
+END
+
+<<<<<<<< empty
+>>>>>>>>
+COPY - ~names-to-soundsets~ ~names-to-soundsets~
+	READ_2DA_ENTRIES_NOW names2da 2
+	FOR (i = 1; i < names2da; ++i) BEGIN
+		READ_2DA_ENTRY_FORMER names2da i 0 name
+		READ_2DA_ENTRY_FORMER names2da i 1 prefix
+		TEXT_SPRINT $names(EVALUATE_BUFFER ~%name%~) ~%prefix%~
+		SET $sizes(EVALUATE_BUFFER ~%name%~) = 8 - STRING_LENGTH ~%prefix%~
+		SET $last(EVALUATE_BUFFER ~%name%~) = 0
+		INNER_ACTION BEGIN
+			COPY - ~empty~ ~%name%.tmp~
+			
+			ACTION_IF ! FILE_EXISTS ~%sound_reference%/%name%.txt~ THEN BEGIN
+				COPY ~empty~ ~%sound_reference%/%name%.txt~
+				APPEND_OUTER ~%sound_reference%/%name%.txt~ 0
+			END ELSE BEGIN
+				COPY ~%sound_reference%/%name%.txt~ ~%sound_reference%/%name%.txt~
+					READ_2DA_ENTRY 0 0 0 val
+					SET $last(EVALUATE_BUFFER ~%name%~) = val
+				BUT_ONLY
+			END
+		END
+	END
+BUT_ONLY
+
+SILENT
+
+ACTION_PHP_EACH early AS from => to BEGIN
+	COPY ~%source%/%to%~ ~%source%/%to%~
+		LPM ~read~
+	BUT_ONLY
+END
+
+COPY ~%source%~ ~%source%~
+	LPM ~read~
 BUT_ONLY
 
 VERBOSE
 
-COPY ~stivan/tra/italian~ ~stivan/tra/italian~
-	REPLACE_EVALUATE "~%LNL%\(@[0-9]*\)" BEGIN
-		TEXT_SPRINT result ~%LNL%%MATCH1%~
-		PATCH_IF VARIABLE_IS_SET EVALUATE_BUFFER ~%SOURCE_RES% %MATCH1%~ THEN BEGIN
-			TEXT_SPRINT str ~%SOURCE_RES% %MATCH1%~
-			TEXT_SPRINT str EVALUATE_BUFFER ~%%str%%~
-			TEXT_SPRINT result ~ [%str%]%LNL%%MATCH1%~
-		END
-	END "~%result%"
-BUT_ONLY
+ACTION_PHP_EACH langs AS from => to BEGIN
+	COPY ~%to%~ ~%to%~
+		REPLACE_EVALUATE "~%LNL%\(@[0-9]*\)" BEGIN
+			TEXT_SPRINT result ~%LNL%%MATCH1%~
+			PATCH_IF VARIABLE_IS_SET EVALUATE_BUFFER ~%SOURCE_RES% %MATCH1%~ THEN BEGIN
+				TEXT_SPRINT str ~%SOURCE_RES% %MATCH1%~
+				TEXT_SPRINT str EVALUATE_BUFFER ~%%str%%~
+				TEXT_SPRINT result ~ [%str%]%LNL%%MATCH1%~
+			END
+		END "~%result%"
+	BUT_ONLY
+END
 
 COPY - ~names-to-soundsets~ ~names-to-soundsets~
 	FOR (i = 1; i < names2da; ++i) BEGIN
 		READ_2DA_ENTRY_FORMER names2da i 0 name
 		
 		INNER_ACTION BEGIN
-			COPY ~to_be_merged/sounds_to_record/%name%.txt~ ~to_be_merged/sounds_to_record/%name%.txt~
+			COPY ~%sound_reference%/%name%.txt~ ~%sound_reference%/%name%.txt~
 				SET_2DA_ENTRY 0 0 0 $last(EVALUATE_BUFFER ~%name%~)
 				APPEND_FILE ~%name%.tmp~
 				REPLACE_TEXTUALLY ~%LNL%%LNL%*~ ~%LNL%~
