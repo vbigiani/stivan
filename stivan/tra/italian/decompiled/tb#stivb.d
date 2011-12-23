@@ -397,7 +397,7 @@ EXIT
 
 BEGIN TB#SSUS
 IF ~!Global("tb#StivanSusanScene","GLOBAL",2)~ THEN 0
-SAY ~*Squeak*!~ [ GAM_48 ]  [ GAM_48 ] 
+SAY ~*Squeak*!~ [ GAM_48 ] 
 IF ~~ THEN EXIT
 END
 
@@ -614,7 +614,7 @@ DO ~SetGlobal("tb#StivanMinscUB","GLOBAL",1)~
 = ~Cosa, Boo? Vuoi affrontarlo da solo? Ma... Minsc capisce, ma...~
 = ~D'accordo, Boo: Minsc lascerà a te la gloria della battaglia! Preparati ad affrontare la giustizia dei criceti, Stivan!~
 == TB#STIVB ~Tremo dalla paura.~
-== BMINSC ~COLPISCI AGLI OCCHI, BOO! COLPISCI AGLI OCCHI! RAARGHHH!!!!~
+== BMINSC ~COLPISCI AGLI OCCHI, BOO! COLPISCI AGLI OCCHI! RAARGHHH!!!!~ [ MINSC10 ] 
 == TB#STIVB ~...~
 = ~... Ebbene? Dov'è finito il tuo terribile criceto?~
 = ~Oh, ma...~
@@ -1265,7 +1265,7 @@ See("tb#stiv")
 CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",5)
 HPGT("tb#Stiv",20)~ THEN BIMOEN2 stivanimoen6
-~Ripeti con me! Incertus... Pulcher... Imperium!~ [ CAS_PM6F ]  [ CAS_PM6F ]  
+~Ripeti con me! Incertus... Pulcher... Imperium!~ [ CAS_PM6F ] 
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",6)~
 BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA ~Imoen! Gli hai fatto lanciare Dardo Incantato su se stesso! Sei impazzita?~
@@ -1274,7 +1274,7 @@ BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA ~Non distrarti, Stivan! Potresti causausare un'esplosione se non finisci propriamente l'incantesimo!~
 == TB#STIVB ~(Gasp!)~
 END
-== TB#STIVB ~Incertus... Pulcher... Imperium!~ [ CAS_PM6M ]  [ CAS_PM6M ]  
+== TB#STIVB ~Incertus... Pulcher... Imperium!~ [ CAS_PM6M ] 
 EXIT
 
 CHAIN IF ~Global("tb#StivanImoen","GLOBAL",7)~ THEN TB#STIVJ stivanimoen6-a
@@ -1324,7 +1324,7 @@ See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",9)~ THEN TB#STIVB stivanimoen8
-~Vediamo se ho capito. Manus... Potentis... Paro!~ [ CAS_PM2M ]  [ CAS_PM2M ]  
+~Vediamo se ho capito. Manus... Potentis... Paro!~ [ CAS_PM2M ] 
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",10)~
 == BIMOEN2 ~Non ci siamo proprio! Se non stai attento mi diventi un rospo!~
 == TB#STIVB ~Quasi quasi... le fiabe finiscono sempre bene per i rospi quando incontrano la loro principessa.~
@@ -1333,8 +1333,8 @@ BRANCH ~InParty("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ BEGIN
 == BNALIA ~Temo di dover rovinare le tue illusioni, Stivan.~
 == TB#STIVB ~Che sbadato! Mi dimentico sempre che voi non siete una principessa!~
 END
-== BIMOEN2 ~Avanti, zuccone, riprova! Veritas... Credo... Oculos!~ [ CAS_PM1F ]  [ CAS_PM1F ]  
-== TB#STIVB ~Va bene! Veritas... Credo... Oculos!~ [ CAS_PM1M ]  [ CAS_PM1M ]  
+== BIMOEN2 ~Avanti, zuccone, riprova! Veritas... Credo... Oculos!~ [ CAS_PM1F ] 
+== TB#STIVB ~Va bene! Veritas... Credo... Oculos!~ [ CAS_PM1M ] 
 DO ~ApplySpell("tb#stiv",WIZARD_INVISIBILITY)~
 == TB#STIVB ~Aiuto! Non mi vedo più le mani!~
 DO ~AddSpecialAbility("spin118")~
@@ -1378,7 +1378,7 @@ CombatCounter(0)
 Global("tb#StivanImoen","GLOBAL",11)
 HaveSpellRES("spin118")
 Global("AnomenIsNotKnight","GLOBAL",0)~ THEN TB#STIVB stivanimoen10
-~Veritas... Credo... Oculos!~ [ CAS_PM1M ]  [ CAS_PM1M ]  
+~Veritas... Credo... Oculos!~ [ CAS_PM1M ] 
 = ~Heh, sono un genio! Questo è il crimine perfetto!~
 DO ~SetGlobal("tb#StivanImoen","GLOBAL",12) SpellRES("spin118","tb#stiv")~
 == BIMOEN2 ~Non ci proverei se fossi in te. L'invisibilità termina se tocchi qualcuno.~
@@ -1403,7 +1403,7 @@ DO ~SetGlobal("tb#StivanMinsc","GLOBAL",1)~
 == TB#STIVB ~Voi ranger avete una fervida immaginazione.~
 == BMINSC ~Ma è vero! Boo, il nostro amico Stivan mette in dubbio le tue abilità canore!~
 = ~Cosa dici, Boo? Vuoi dimostrargli che sei uno dei migliori bardi criceto di Rasheman? Vuoi dargli prova delle tue capacità? Benissimo! Preparati, halfling: stai per assistere all'esibizione del mio criceto!~
-= ~*Squeak*!~ [ GAM_48 ]  [ GAM_48 ]  
+= ~*Squeak*!~ [ GAM_48 ] 
 = ~Sentito?!~
 == TB#STIVB ~...~
 EXIT

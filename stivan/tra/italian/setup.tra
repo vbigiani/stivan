@@ -1,3 +1,6 @@
+@106  = ~Stivan il Cacciatore, versione 0.90 beta~
+
+
 @0    = ~B.. buona fortuna, Stivan.~
 @1    = ~Aiuto! Un assassino in casa!~
 @2    = ~Gentile Signora, sono un amico di Aerie, e vorrei sapere perchè voi state mandando assassini contro di lei.~
@@ -170,7 +173,6 @@ Lancia "Miscela alchemica" una volta al giorno: infligge 8d8 danni da fuoco (nes
 Utilizzabile Da:
 Stivan~
 @105  = ~%str%~
-@106  = ~Stivan il Cacciatore, versione alpha qualcosa~
 @107  = ~Ritratto di default (Nix)~
 @108  = ~Stivan il Cacciatore~
 @109  = ~Ritratto insanguinato (Nix)~

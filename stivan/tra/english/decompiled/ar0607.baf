@@ -1,0 +1,103 @@
+IF
+  Global("tb#StivanAerie","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("tb#StivanAerie","GLOBAL",5)
+    ActionOverride("Aerie",ForceSpell(Myself,WIZARD_STONE_SKIN))
+    Wait(2)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+    ActionOverride("tb#sass",ApplySpell(Myself,WIZARD_INVISIBILITY))
+    ActionOverride("tb#sass",AttackReevaluate("aerie",30))
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",5)
+	InParty("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+  Dead("tb#sass")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",6)
+THEN
+  RESPONSE #100
+    SetGlobal("tb#StivanAerie","GLOBAL",7)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",7)
+	InParty("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+  NumDead("tb#sass",3)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",9)
+THEN
+  RESPONSE #100
+    SetGlobal("tb#StivanAerie","GLOBAL",10)
+    ActionOverride("aerie",ForceSpell(Myself,RAELIS_OPEN_PORTAL))
+    SetGlobalTimer("tb#StivanAerieTimer","AR0607",36)
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",10)
+  GlobalTimerNotExpired("tb#StivanAerieTimer","AR0607")
+  !GlobalTimerNotExpired("tb#StivanAerieTimer2","AR0607")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tb#StivanAerieTimer2","AR0607",6)
+    CreateCreatureObject("tb#sass","aerie",1,0,0)
+END
+
+IF
+  Global("tb#stivanAerie","GLOBAL",10)
+	InParty("tb#Stiv")
+	!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+  GlobalTimerExpired("tb#StivanAerieTimer","AR0607")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+  
+IF
+  Global("tb#StivanAerie","GLOBAL",12)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    SetGlobal("tb#StivanAerie","GLOBAL",13)
+    ActionOverride("Aerie",DisplayStringHead(Myself,~G.. Good luck, Stivan.~))
+    Wait(3)
+    ActionOverride("tb#stiv",LeaveAreaLUA("tb#s00","",[950.1750],6))
+    EndCutSceneMode()
+END
+
+IF
+  Global("tb#StivanAerie","GLOBAL",99)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ActionOverride("aerie",ForceSpell(Myself,CLERIC_FALSE_DAWN))
+    Wait(8)
+    ActionOverride("tb#stiv",StartDialogueNoSet(Myself))
+END
+  
+IF
+  Global("tb#StivanAerie","GLOBAL",13)
+  PartyHasItem("tb#sloc")
+  InMyArea("tb#stiv")
+THEN
+  RESPONSE #100
+    ActionOverride("aerie",StartDialogNoSet(Player1))
+END

@@ -1,0 +1,21 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneID(Player1)
+		ActionOverride("tb#stiv",DisplayStringWait(Myself,~What are we waiting for? Let's get to my tomb!~))
+		Wait(5)
+		FadeToColor([20.0],0)
+		MultiPlayerSync()
+		LeaveAreaLUA("AR0806","",[350.400],8)
+		ActionOverride(Player2,LeaveAreaLUA("AR0806","",[500.400],8))
+		ActionOverride(Player3,LeaveAreaLUA("AR0806","",[450.450],8))
+		ActionOverride(Player4,LeaveAreaLUA("AR0806","",[400.500],8))
+		ActionOverride(Player5,LeaveAreaLUA("AR0806","",[550.450],8))
+		ActionOverride(Player6,LeaveAreaLUA("AR0806","",[600.400],8))
+		Wait(1)
+		FadeFromColor([20.0],0)
+		ActionOverride("tb#stiv",JumpToPoint([350.320]))
+		Wait(1)
+		ActionOverride("tb#stiv",StartDialogueNoSet(Player1))
+END

@@ -159,23 +159,25 @@ IF ~~ THEN SOLVED_JOURNAL ~Stivan e i Ladri Tenebrosi
 
 Mitsu ha esposto a Stivan i dettagli della sua prima missione, ma ho dovuto declinare l'offerta per non perdere tempo. L'halfling si è arrabbiato con la ladra, ma ha riconosciuto le mie priorità e non ha protestato più di tanto.~ DO ~SetGlobal("tb#shadowsThievesJobs","GLOBAL",101)~ EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("tb#stiv") InMyArea("tb#stiv") Global("tb#shadowsThievesJobs","GLOBAL",5) !Dead("tb#svam1")~ THEN VULOVA vulova-1
+BEGIN TB#SVUL
+
+CHAIN IF WEIGHT #-1 ~InParty("tb#stiv") InMyArea("tb#stiv") Global("tb#shadowsThievesJobs","GLOBAL",5) !Dead("tb#svam1")~ THEN tb#svul tb#svul-1
 ~Chi siete? Perchè siete entrati in casa mia?~
 == tb#stivj ~Piacere di conoscervi, signor Vulova. Io sono Stivan, e questi sono i miei amici. Siamo stati mandati dai Ladri Tenebrosi per proteggervi.~
-== VULOVA ~Sapevo che sarebbero giunti dei rinforzi, ma come ho già detto ai tuoi superiori, i miei uomini sono più che sufficienti.~
+== tb#svul ~Sapevo che sarebbero giunti dei rinforzi, ma come ho già detto ai tuoi superiori, i miei uomini sono più che sufficienti.~
 == tb#stivj ~*Ahem* Mi permetto di contraddirvi. La minaccia che incombe su di voi è grande, sapete?~
-== VULOVA ~La mia scorta saprà cavarsela. Portate comunque i miei ringraziamenti al Signore delle Ombre: il suo riguardo nei miei confronti è gradito.~
+== tb#svul ~La mia scorta saprà cavarsela. Portate comunque i miei ringraziamenti al Signore delle Ombre: il suo riguardo nei miei confronti è gradito.~
 = ~Uhm... Da dove viene questo freddo?~
 END
-IF ~~ THEN DO ~CreateCreatureObject("vamflf01","Vulova",1,0,0) CreateCreatureObject("tb#svam1","Vulova",1,0,0) CreateCreatureObject("vamflm01","Vulova",1,0,0)~ EXIT
+IF ~~ THEN DO ~CreateCreatureObject("vamflf01","tb#svul",1,0,0) CreateCreatureObject("tb#svam1","tb#svul",1,0,0) CreateCreatureObject("vamflm01","tb#svul",1,0,0)~ EXIT
 
-APPEND Vulova
-  IF WEIGHT #-1 ~Dead("tb#svam1") CombatCounter(0)~ THEN vulova-2
+APPEND tb#svul
+  IF WEIGHT #-1 ~Dead("tb#svam1") CombatCounter(0)~ THEN tb#svul-2
   SAY ~Per... Per gli dei! Io... Io...~
-  IF ~~ THEN REPLY ~Tutto a posto, vecchio? Sei rimasto ferito?~ GOTO vulova-3
+  IF ~~ THEN REPLY ~Tutto a posto, vecchio? Sei rimasto ferito?~ GOTO tb#svul-3
   END
   
-  IF ~~ THEN vulova-3
+  IF ~~ THEN tb#svul-3
   SAY ~Sto... bene, per così dire. Non ho mai visto un simile orrore in tutta la mia vita... E posso assicurarti che ne ho molti, di anni.~
   = ~Grazie per il tuo aiuto, <PRO_GIRLBOY>. Ti prego, dì ai Ladri Tenebrosi che lascio Athkatla. Ora come ora, non è più un posto sicuro per me, ma rimarrò comunque in contatto con loro.~
   = ~Guardie, alle Porte della Città, presto.~

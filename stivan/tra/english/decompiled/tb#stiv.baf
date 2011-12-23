@@ -9,7 +9,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("tb#KeldornDead","GLOBAL",1)
-		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+		DisplayStringHead(Myself,~[Hiding laughter] Poor boy, he's gone!~)
 END
 IF
 	!Dead("Keldorn")
@@ -26,7 +26,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("tb#AerieDead","GLOBAL",1)
-		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccia, se n'è andata!~)
+		DisplayStringHead(Myself,~[Hiding laughter] Poor girl, she's gone!~)
 END
 IF
 	!Dead("Aerie")
@@ -43,7 +43,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("tb#ValygarDead","GLOBAL",1)
-		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+		DisplayStringHead(Myself,~[Hiding laughter] Poor boy, he's gone!~)
 END
 IF
 	!Dead("Valygar")
@@ -61,7 +61,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("tb#AnomenDead","GLOBAL",0)
-		DisplayStringHead(Myself,~[Nascondendo una risata] Poveraccio, se n'è andato!~)
+		DisplayStringHead(Myself,~[Hiding laughter] Poor boy, he's gone!~)
 END
 IF
 	Dead("Anomen")

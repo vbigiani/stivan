@@ -1,9 +1,9 @@
 ACTION_IF FILE_EXISTS ~override/tb#stiva.txt~ THEN BEGIN
-FAIL ~Il mod è già installato.~
+FAIL ~The mod is already installed.~
 END
 
 ACTION_IF ! (GAME_IS ~BGT TOB~) THEN BEGIN
-	FAIL ~E' richiesto Throne of Bhaal.~
+	FAIL ~Throne of Bhaal is required.~
 END
 
 
@@ -58,7 +58,7 @@ COPY ~stivan/copy~ ~override~
 // Patch areas
 
 COPY_EXISTING ~ar0500.are~ ~override~
-	ADD_MAP_NOTE #4845 #2049 gray ~Stivan, il Cacciatore~
+	ADD_MAP_NOTE #4845 #2049 gray ~Stivan, the Hunter~
 
 COPY_EXISTING ~ar0505.are~ ~override/tb#s00.are~
   WRITE_ASCII 0x94 ~tb#s00~ #8
@@ -175,22 +175,22 @@ COPY_EXISTING ~trthf01.cre~ ~override/tb#sros.cre~
   ADD_CRE_ITEM ~minhp1~ #1 #0 #0 ~none~ ~RING~
 
 COPY_EXISTING ~naliames.cre~ ~override/tb#smess.cre~
-	SAY NAME1 ~Messaggero~
-	SAY NAME2 ~Messaggero~
+	SAY NAME1 ~Messenger~
+	SAY NAME2 ~Messenger~
 	WRITE_ASCII 0x248 ~tb#smess~ #8 // override script
 	WRITE_ASCII 0x280 ~tb#smess~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#smess~ #8 // dialogue
 	
 COPY_EXISTING ~c6elf1.cre~ ~override/tb#self.cre~	
-	SAY NAME1 ~Elfo~
-	SAY NAME2 ~Elfo~
+	SAY NAME1 ~Elf~
+	SAY NAME2 ~Elf~
 	WRITE_ASCII 0x248 ~tb#self~ #8 // override script
 	WRITE_ASCII 0x280 ~tb#self~ #32 // name
 	WRITE_ASCII 0x2cc ~tb#self~ #8 // dialogue
   
 COPY_EXISTING ~tanthf01.cre~ ~override/tb#sass.cre~
-  SAY NAME1 ~Assassino~
-  SAY NAME2 ~Assassino~
+  SAY NAME1 ~Assassin~
+  SAY NAME2 ~Assassin~
   WRITE_ASCII 0x280 ~tb#sass~ #32
 	
 COPY_EXISTING ~sword01.cre~ ~override/tb#slil.cre~
@@ -208,18 +208,18 @@ COPY_EXISTING ~vamflm01.cre~ ~override/tb#svam1.cre~
   WRITE_ASCII 0x248 ~tb#svam1~ #8
   
 COPY_EXISTING ~stivan/cre/tb#sskm.cre~ ~override/tb#sskm.cre~
-	SAY NAME1 ~Scheletro Mago~
-	SAY NAME2 ~Scheletro Mago~
+	SAY NAME1 ~Skeleton Mage~
+	SAY NAME2 ~Skeleton Mage~
 	WRITE_ASCII 0x2cc ~tb#sskm~ #8
 	
 COPY_EXISTING ~stivan/cre/tb#sskc.cre~ ~override/tb#sskc.cre~
-	SAY NAME1 ~Scheletro Chierico~
-	SAY NAME2 ~Scheletro Chierico~
+	SAY NAME1 ~Skeleton Cleric~
+	SAY NAME2 ~Skeleton Cleric~
 	WRITE_ASCII 0x2cc ~tb#sskc~ #8
 
 COPY_EXISTING ~skelwa03.cre~ ~override/tb#sskf.cre~
-	SAY NAME1 ~Scheletro Sergente~
-	SAY NAME2 ~Scheletro Sergente~
+	SAY NAME1 ~Skeleton Sargent~
+	SAY NAME2 ~Skeleton Sargent~
 	WRITE_LONG  0x14  8000 // XP value
 	WRITE_SHORT 0x24  150  // HP
 	WRITE_SHORT 0x26  150  // ditto
@@ -252,47 +252,47 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 	
 	SAY NAME1 ~Stivan~
 	SAY NAME2 ~Stivan~
-	SAY MORALE ~Ahhhh! Vedo gabbiani OVUNQUE!~ [ TB#SS001 ] 
-	SAY HAPPY ~Questa sì che è una compagnia di manigoldi!~ [ TB#SS002 ] 
-	SAY UNHAPPY_ANNOYED ~Uhm... Mi sentivo più a mio agio quando vagabondavo per le strade di Athkatla.~ [ TB#SS003 ] 
-	SAY LEADER ~Io al comando? Wow!~ [ TB#SS004 ] 
-	SAY TIRED ~(Sbadiglia) Avrei un pò di sonno.~ [ TB#SS005 ] 
-	SAY BATTLE_CRY1 ~Cadrete per mano di Stivan il Cacciatore!~ [ TB#SS006 ] 
-	SAY BATTLE_CRY2 ~Possano i gabbiani pasteggiare con i vostri resti!~ [ TB#SS007 ] 
-	SAY BATTLE_CRY3 ~Heh. Mi chiedevo quando ci saremmo dati da fare.~ [ TB#SS008 ] 
-	SAY BATTLE_CRY4 ~Yahoo! All'attacco!~ [ TB#SS009 ] 
-	SAY DAMAGE ~Auch!~ [ TB#SS010 ] 
-	SAY DYING ~(Gemito)~ [ TB#SS011 ] 
-	SAY HURT ~(Gasp!) Sto... Sto morendo...!~ [ TB#SS012 ] 
-	SAY AREA_FOREST ~(Starnutisce) Fantastico. Questo sarà il primo di una lunga serie. Io ODIO la natura!~ [ TB#SS013 ] 
-	SAY AREA_CITY ~Ahh... Mi sento sempre a mio agio tra queste masse brulicanti di gente.~ [ TB#SS014 ] 
-	SAY AREA_DUNGEON ~Uhm... Fà piuttosto freddino qui.~ [ TB#SS015 ] 
-	SAY AREA_DAY ~Per quanto luminosa, la luce del sole non eguaglia in bellezza quella delle stelle e della luna.~ [ TB#SS016 ] 
-	SAY AREA_NIGHT ~Le stelle sono buchi nel cielo da cui... da cui... *Ahem* Che buio!~ [ TB#SS017 ] 
+	SAY MORALE ~Ahhhh! I see seagulls EVERYWHERE!~ [ TB#SS001 ] 
+	SAY HAPPY ~This is a fine group of ne'er do wells!~ [ TB#SS002 ] 
+	SAY UNHAPPY_ANNOYED ~Uhm... I felt more at ease while slumming through the streets of Athkatla.~ [ TB#SS003 ] 
+	SAY LEADER ~I am the leader? Wow!~ [ TB#SS004 ] 
+	SAY TIRED ~(Yawn) I'm feeling a bit drowsy.~ [ TB#SS005 ] 
+	SAY BATTLE_CRY1 ~You'll fall by the hand of Stivan the Hunter!~ [ TB#SS006 ] 
+	SAY BATTLE_CRY2 ~May the seagulls feast with your bodies!~ [ TB#SS007 ] 
+	SAY BATTLE_CRY3 ~Heh. I was wondering when we'd be starting to get things done.~ [ TB#SS008 ] 
+	SAY BATTLE_CRY4 ~Yahoo! To the assault!~ [ TB#SS009 ] 
+	SAY DAMAGE ~Ouch!~ [ TB#SS010 ] 
+	SAY DYING ~(Ah)~ [ TB#SS011 ] 
+	SAY HURT ~(Gasp!) I... I'm dying...!~ [ TB#SS012 ] 
+	SAY AREA_FOREST ~(Achoo) Great. This is but the first of many. I HATE nature!~ [ TB#SS013 ] 
+	SAY AREA_CITY ~Ahh... I've always felt at east in the middle of crowds.~ [ TB#SS014 ] 
+	SAY AREA_DUNGEON ~Uhm... It's pretty cold in here.~ [ TB#SS015 ] 
+	SAY AREA_DAY ~No matter how bright, the Sun's light cannot match the Moon and the stars in beauty.~ [ TB#SS016 ] 
+	SAY AREA_NIGHT ~Stars are holes in the sky from where... where... *Ahem* it's really dark!~ [ TB#SS017 ] 
 	SAY SELECT_COMMON1 ~Yeah.~ [ TB#SS018 ] 
-	SAY SELECT_COMMON2 ~Cosa vuoi?~ [ TB#SS019 ] 
-	SAY SELECT_COMMON3 ~Non c'è due senza tre, suppongo.~ [ TB#SS020 ] 
+	SAY SELECT_COMMON2 ~What do you want?~ [ TB#SS019 ] 
+	SAY SELECT_COMMON3 ~There's no two without a three, I guess.~ [ TB#SS020 ] 
 	SAY SELECT_COMMON4 ~Uhm?~ [ TB#SS021 ] 
-	SAY SELECT_COMMON5 ~Nessuno fa qualcosa per niente.~ [ TB#SS022 ] 
-	SAY SELECT_COMMON6 ~E' il mio momento!~ [ TB#SS023 ] 
-	SAY SELECT_ACTION1 ~Sicuro.~ [ TB#SS024 ] 
-	SAY SELECT_ACTION2 ~Vallo a prendere te!~ [ TB#SS025 ] 
-	SAY SELECT_ACTION3 ~Heh. Me l'aspettavo.~ [ TB#SS026 ] 
-	SAY SELECT_ACTION4 ~Vado e torno.~ [ TB#SS027 ] 
-	SAY SELECT_ACTION5 ~D'accordo, d'accordo... Ci penso io.~ [ TB#SS028 ] 
-	SAY SELECT_ACTION6 ~Facile come spennare un gabbiano.~ [ TB#SS029 ] 
-	SAY SELECT_RARE1 ~Se devo.~ [ TB#SS030 ] 
-	SAY SELECT_RARE2 ~E' tutto?~ [ TB#SS031 ] 
+	SAY SELECT_COMMON5 ~Nobody does something for nothing.~ [ TB#SS022 ] 
+	SAY SELECT_COMMON6 ~It's my moment!~ [ TB#SS023 ] 
+	SAY SELECT_ACTION1 ~Sure.~ [ TB#SS024 ] 
+	SAY SELECT_ACTION2 ~Go fetch it yourself!~ [ TB#SS025 ] 
+	SAY SELECT_ACTION3 ~Heh. I was expecting this.~ [ TB#SS026 ] 
+	SAY SELECT_ACTION4 ~I'm gone an back.~ [ TB#SS027 ] 
+	SAY SELECT_ACTION5 ~Alright, alright... I'll handle this myself.~ [ TB#SS028 ] 
+	SAY SELECT_ACTION6 ~As easy as depluming a seagull.~ [ TB#SS029 ] 
+	SAY SELECT_RARE1 ~If I must.~ [ TB#SS030 ] 
+	SAY SELECT_RARE2 ~Is that all?~ [ TB#SS031 ] 
 	SAY CRITICAL_HIT ~Haha!~ [ TB#SS032 ] 
-	SAY CRITICAL_MISS ~Oops.~ [ TB#SS033 ] 
-	SAY TARGET_IMMUNE ~Ci vuole qualcos'altro qui!~ [ TB#SS034 ] 
-	SAY INVENTORY_FULL ~Per cosa mi hai preso, per uno sgabuzzino?~ [ TB#SS035 ] 
-	SAY PICKED_POCKET ~Ho rubacchiato qualcosina.~ [ TB#SS036 ] 
-	SAY HIDDEN_IN_SHADOWS ~Heh. Sfido chiunque a vedermi.~ [ TB#SS037 ] 
-	SAY SPELL_DISRUPTED ~Oh, no! Ho perso concentrazione!~ [ TB#SS038 ] 
-	SAY SET_A_TRAP ~Heh. Se aggiungessi un pò di cacca di gabbiano, questa trappola sarebbe ancora più micidiale.~ [ TB#SS039 ] 
-	SAY BIO ~Se interrogato sul suo passato, STIVAN non esita a lanciarsi in un corposo riassunto della sua vita. Nativo di Athkatla e figlio di un mercante di vini, l'halfling si è visto uccidere i propri genitori e i fratelli da uno stormo inferocito di gabbiani a cui è miracolosamente sfuggito. Da qui il suo odio feroce per quello che definisce "il nemico pennuto", a sua detta responsabile anche delle disgrazie che seguirono - la perdita dell'attività del padre e di tutti i suoi beni per opera di un ricco mercante che, invece di aiutarlo, lo portò alla bancarotta.
-	Costretto a vivere per le strade di Athkatla, l'halfling ha accolto con entusiasmo l'offerta di <CHARNAME> di unirsi alla sua compagnia, felice di mettere a disposizione la sua conoscenza della città e di aver trovato un nuovo alleato nella sua campagna contro i gabbiani.~
+	SAY CRITICAL_MISS ~Whoops.~ [ TB#SS033 ] 
+	SAY TARGET_IMMUNE ~I need something else here!~ [ TB#SS034 ] 
+	SAY INVENTORY_FULL ~What did you mistake me for, some storage room?~ [ TB#SS035 ] 
+	SAY PICKED_POCKET ~I've stolen a little something-something.~ [ TB#SS036 ] 
+	SAY HIDDEN_IN_SHADOWS ~Heh. I'll challenge anyone to see me.~ [ TB#SS037 ] 
+	SAY SPELL_DISRUPTED ~Oh, no! I've lost my concentration!~ [ TB#SS038 ] 
+	SAY SET_A_TRAP ~Heh. This trap could be even more dangerous, had I some seagull poo to add.~ [ TB#SS039 ] 
+	SAY BIO ~If asked about his past, STIVAN doesn't hesitate before narrating his life with abundance of detail. Born in Athkatla to a family of wine merchants, the Halfling saw his parents being slaughtered by a ravaging flock of seagulls, an attack he survived by sheer luck. Thus his hatred for what he defines "the feathered enemy", which he claims to be responsible of his next misfortunes as well - losing his father's activity and possessions to a rich merchant who, rather than help him, left him penniless.
+Forced to live on Athkatla's streets, the Halfling happily accepted <CHARNAME>'s offer to join his band, glad to offer him his knowledge of the city and thankful for having found a new ally on his crusade against seagulls.~
 	
 
 	
@@ -302,64 +302,62 @@ COPY ~stivan/cre/tb#stiv.cre~ ~override~
 COPY_EXISTING ~amul02.itm~ ~override/tb#sloc.itm~
   WRITE_LONG 0x34 0
   WRITE_SHORT 0x48 1
-  SAY NAME1 ~Amuleto di Aerie~
-  SAY NAME2 ~Amuleto di Aerie~
-  SAY UNIDENTIFIED_DESC ~Questa è un amuleto di legno a forma di procione, di proprietà di Aerie. E' stata usato da Estel Necri per inviare assassini contro l'ignara elfa.~
+  SAY NAME1 ~Aerie's amulet~
+  SAY NAME2 ~Aerie's amulet~
+  SAY UNIDENTIFIED_DESC ~This is Aerie's wooden amulet, with a raccoon pendant. It was used by Estel Necri to send assassins against the unwitting elf~
 
 COPY_EXISTING ~npsw02.itm~ ~override/tb#syk1.itm~
-	SAY NAME1 ~Vendetta di Yoshimo +1~
-	SAY NAME2 ~Vendetta di Yoshimo +1~
+	SAY NAME1 ~Yoshimo's Vengeance +1~
+	SAY NAME2 ~Yoshimo's Vengeance +1~
 	WRITE_LONG 0x1e 0xfbbdfff2 // only usable by chaotic neutral halfling fighter/thieves and thieves
-	SAY IDENTIFIED_DESC ~Questa katana apparteneva a Yoshimo, il cacciatore di taglie di Kara-Tur legato ad Irenicus da una costrizione risultata fatale. L'incantesimo che la rendeva utilizzabile soltanto da lui è stato rimosso in seguito ad una generosa donazione ad Ilmater, a condizione però che l'arma venga utilizzata contro il responsabile della morte del ladro.
+	SAY IDENTIFIED_DESC ~This was the katana of Yoshimo's, the Kara-turan Bounty Hunter tied to Irenicus by a lethal Geas. The enchantment that made the weapon unusable by anybody but him was removed after a generous donation to Ilmater, on condition that the weapon be used against the responsible of the thief's death.
 	
-Stivan spruzza entusiasmo da tutti i pori quando brandisce quest'arma, entusiasmo che i tuoi compagni poco apprezzano quando la lama arriva pericolosamente vicino alle loro teste.
+Stivan radiates joy when wielding this weapon, a joy not shared by your companions when the blade ends up near their heads.
 
-STATISTICHE:
+STATISTICS:
 
-THAC0: Bonus +1
-Danno: 1D10 +1
-Tipo di Danno: Taglio
-Peso: 5
-Fattore Velocità: 3
-Tipo di Competenza: Katana
-Tipo: A una mano
-Richiede: Forza 6
-Utilizzabile Da:
-Stivan~
+THAC0: +1 bonus
+Damage:  1D10 +1
+Damage type:  slashing
+Weight:  5
+Speed Factor: 3
+Proficiency Type: Katana
+Type:  1-handed
+Usable By:
+ Stivan~
 
 COPY ~stivan/itm/tb#syk2.itm~ ~override~
-	SAY NAME1 ~Vendetta di Yoshimo +3~
-	SAY NAME2 ~Vendetta di Yoshimo +3~
-	SAY IDENTIFIED_DESC ~Questa katana apparteneva a Yoshimo, il cacciatore di taglie di Kara-Tur legato ad Irenicus da una costrizione risultata fatale. L'incantesimo che la rendeva utilizzabile soltanto da lui è stato rimosso in seguito ad una generosa donazione ad Ilmater, a condizione però che l'arma venga utilizzata contro il responsabile della morte del ladro.
+	SAY NAME1 ~Yoshimo's Vengeance +3~
+	SAY NAME2 ~Yoshimo's Vengeance +3~
+	SAY IDENTIFIED_DESC ~This was the katana of Yoshimo's, the Kara-turan Bounty Hunter tied to Irenicus by a lethal Geas. The enchantment that made the weapon unusable by anybody but him was removed after a generous donation to Ilmater, on condition that the weapon be used against the responsible of the thief's death.
+	
+Stivan radiates when wielding this weapon, a joy not shared by your companions when the blade ends up near their heads.
 
-Stivan spruzza entusiasmo da tutti i pori quando brandisce quest'arma, entusiasmo che i tuoi compagni poco apprezzano quando la lama arriva pericolosamente vicino alle loro teste.
+To make the blade deadlier, the smith Cromwell strengthened its enchantment and imbued the weapon with the properties of the item Stivan would never part with - seagull poo. Strangely, Stivan refrained from telling Cromwell the nature of that "strange whitish goo".
 
-Al fine di rendere la lama più temibile, il fabbro Cromwell ne ha potenziato l'originario incantamento e vi ha infuso le proprietà dell'oggetto da cui Stivan non si separerebbe mai -- la cacca di gabbiano. Sorprendentemente, l'halfling si è guardato bene dal dirgli cosa fosse quella "strana poltiglia biancastra". 
+STATISTICS:
 
-STATISTICHE:
+Abilities:
+10% chance that the target is blinded for two rounds (saving throw vs. Breath -2)
+5% that the target is victim of an Alchemical Explosion (4d4 fire damage, no saving throw)
 
-Abilità in Combattimento:
-10% di possibilità che il bersaglio venga accecato per due round ad ogni colpo messo a segno (a meno che non superi un tiro salvezza contro soffio con penalità -2);
-5% di possibilità che il bersaglio venga investito da un'Esplosione Alchemica (4d4 danni da fuoco addizionali, nessun tiro salvezza).
-
-THAC0: Bonus +3
-Danno: 1D10 +3
-Tipo di Danno: Taglio
-Peso: 5
-Fattore Velocità: 1
-Tipo di Competenza: Katana
-Tipo: A una mano
-Richiede: Forza 6
-Utilizzabile Da:
-Stivan~
+THAC0: +3 bonus
+Damage:  1D10 +3
+Damage type:  slashing
+Weight:  5
+Speed Factor: 1
+Proficiency Type: Katana
+Type:  1-handed
+Usable By:
+ Stivan~
 	WRITE_ASCII 0x3a tb#syk2i #8
 	WRITE_ASCII 0x76 tb#syk2i #8
 
 COPY_EXISTING ~misc01.itm~ ~override/tb#splu.itm~
-	SAY NAME1 ~Piuma~
-	SAY NAME2 ~Piuma~
-	SAY IDENTIFIED_DESC ~Una piuma di Gabbiano.~
-	SAY UNIDENTIFIED_DESC ~Una piuma di Gabbiano.~
+	SAY NAME1 ~Plume~
+	SAY NAME2 ~Plume~
+	SAY IDENTIFIED_DESC ~A seagull plume.~
+	SAY UNIDENTIFIED_DESC ~A seagull plume.~
 	WRITE_ASCII 0x3a ~tb#splui~ #8 // inventory icon
 	WRITE_LONG 0x34  1 // price
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
@@ -367,28 +365,28 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#splu.itm~
 	WRITE_ASCII 0x58 ~tb#spluc~ #8 // description icon
 
 COPY_EXISTING ~misc57.itm~ ~override/tb#sshi.itm~
-  SAY NAME1 ~Lo scudo del Mancino~
-  SAY NAME2 ~Lo scudo del Mancino~
-  SAY IDENTIFIED_DESC ~Vi era un tempo in cui Tyr non era conosciuto con l'appellativo di "Il Monco". La maggiore tra le divinità della Triade, infatti, perse la mano destra nello scontro con Kezef il Segugio del Caos, ma prima di allora era solito accompagnare la sua fatale arma con questo scudo. La leggenda vuole che Tyr l'abbia tenuto ugualmente con sè sino al Periodo dei Disordini, quando decise di donarlo ai suoi seguaci di Cormyr per essere rimasti al lui fedeli anche dopo la cecità inflittagli da Lord Ao.
-Sebbene sia sempre stato custodito dai paladini e dai chierici devoti al dio, lo scudo in questione viene utilizzato ogni anno in occasione di un rito propiziatorio al raccolto e alla lustrazione dei campi. Il culto di Tyr è infatti molto diffuso nelle campagne, dove viene chiamato dai più "Dio Pannocchia".
+  SAY NAME1 ~The shield of the Left-Handed~
+  SAY NAME2 ~The shield of the Left-Handed~
+  SAY IDENTIFIED_DESC ~There was a time when Tyr wasn't known as 'the one-handed god'. The greatest of the Triad's deities, in fact, lost his right hand in his battle against Kezef the Chaos' Hound, but before that time he used to pair his lethal weapon with this shield. Legend says that Tyr still wielded this until the Time of Disorders, when he donated it to his Cormyrian followers for having remained loyal to him after being blinded by Lord Ao.
+While it has always been guarded by the paladins and clerics worshipping the god, it is yeraly used in a good-luck rite before the gathering season. Tyr's cult is, in fact, very common in the country, where he is called "Corn God".
 
-Realizzato in acciaio pesante con venature d'argento, l'artefatto pesa così tanto da essere un impedimento più che una protezione in battaglia. Pare che sino ad oggi soltanto Tyr sia stato in grado di brandirlo, tant'è che è necessaria ben più di una persona per trasportarlo.
+Forged in heavy steel with silver accentures, the artifact is so heavy it is more a burden than a protection in battle. It appears that, until now, only Tyr had been able to wield it, to the point it takes more than a person to transport it.
 
-Peso: 100~
-  SAY UNIDENTIFIED_DESC ~Vi era un tempo in cui Tyr non era conosciuto con l'appellativo di "Il Monco". La maggiore tra le divinità della Triade, infatti, perse la mano destra nello scontro con Kezef il Segugio del Caos, ma prima di allora era solito accompagnare la sua fatale arma con questo scudo. La leggenda vuole che Tyr l'abbia tenuto ugualmente con sè sino al Periodo dei Disordini, quando decise di donarlo ai suoi seguaci di Cormyr per essere rimasti al lui fedeli anche dopo la cecità inflittagli da Lord Ao.
-Sebbene sia sempre stato custodito dai paladini e dai chierici devoti al dio, lo scudo in questione viene utilizzato ogni anno in occasione di un rito propiziatorio al raccolto e alla lustrazione dei campi. Il culto di Tyr è infatti molto diffuso nelle campagne, dove viene chiamato dai più "Dio Pannocchia".
+Weight: 100~
+  SAY UNIDENTIFIED_DESC ~There was a time when Tyr wasn't known as 'the one-handed god'. The greatest of the Triad's deities, in fact, lost his right hand in his battle against Kezef the Chaos' Hound, but before that time he used to pair his lethal weapon with this shield. Legend says that Tyr still wielded this until the Time of Disorders, when he donated it to his Cormyrian followers for having remained loyal to him after being blinded by Lord Ao.
+While it has always been guarded by the paladins and clerics worshipping the god, it is yeraly used in a good-luck rite before the gathering season. Tyr's cult is, in fact, very common in the country, where he is called "Corn God".
 
-Realizzato in acciaio pesante con venature d'argento, l'artefatto pesa così tanto da essere un impedimento più che una protezione in battaglia. Pare che sino ad oggi soltanto Tyr sia stato in grado di brandirlo, tant'è che è necessaria ben più di una persona per trasportarlo.
+Forged in heavy steel with silver accentures, the artifact is so heavy it is more a burden than a protection in battle. It appears that, until now, only Tyr had been able to wield it, to the point it takes more than a person to transport it.
 
-Peso: 100~
+Weight: 100~
   WRITE_LONG 0x4c 100
   WRITE_LONG 0x18 THIS | BIT0
   
 COPY_EXISTING ~misc01.itm~ ~override/tb#srpl.itm~
-	SAY NAME1 ~Piuma Rossa~
-	SAY NAME2 ~Piuma Rossa~
-	SAY IDENTIFIED_DESC ~Questa piuma rossa è un regalo datoti da Stivan come segno della sua gratitudine. L’halfling la descrive come il suo "più prezioso tesoro", e probabilmente è per questo motivo che ad ogni sosta si accerta che sia sempre nel tuo zaino.~
-	SAY UNIDENTIFIED_DESC ~Questa piuma rossa è un regalo datoti da Stivan come segno della sua gratitudine. L’halfling la descrive come il suo "più prezioso tesoro", e probabilmente è per questo motivo che ad ogni sosta si accerta che sia sempre nel tuo zaino.~
+	SAY NAME1 ~Red Plume~
+	SAY NAME2 ~Red Plume~
+	SAY IDENTIFIED_DESC ~This red plume was given to you by Stivan as a token of his gratitude. The Halfling describes it as his "most precious treasure", and that's probably why it checks for its continued presence in your backpack every time you stop.~
+	SAY UNIDENTIFIED_DESC ~This red plume was given to you by Stivan as a token of his gratitude. The Halfling describes it as his "most precious treasure", and that's probably why it checks for its continued presence in your backpack every time you stop.~
 	WRITE_ASCII 0x3a ~tb#srpli~ #8 // inventory icon
 	WRITE_LONG 0x34  1 // price
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
@@ -397,12 +395,12 @@ COPY_EXISTING ~misc01.itm~ ~override/tb#srpl.itm~
 
 
 COPY_EXISTING ~misc01.itm~ ~override/tb#surn.itm~
-	SAY NAME1 ~Urna di Stivan~
-	SAY NAME2 ~Urna di Stivan~
-	SAY IDENTIFIED_DESC ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
-Temendo che possa rompersi nel corso di un combattimento, l'halfling ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
-	SAY UNIDENTIFIED_DESC ~Questa è l'urna contenente le ceneri dei familiari di Stivan. Guardandola più da vicino, ti accorgi che presenta diversi graffi lungo la superficie e che il colore è diventato opaco in alcuni punti.
-Temendo che possa rompersi nel corso di un combattimento, l'halfling ti ha chiesto di rivolgerti ad uno degli impiegati nel Palazzo di Giustizia per comprare una tomba dove riporla al sicuro.~
+	SAY NAME1 ~Stivan's urn~
+	SAY NAME2 ~Stivan's urn~
+	SAY IDENTIFIED_DESC ~This urn contains Stivan's family ashes. Looking at it more closely, you notice it bears different marks upon its surface and its color had become opaque.
+Fearing it might break in battle, the halfling asked for your assistance in asking one of the clerks in the Council of Six building for a tomb, where the urn might lie in safety.~
+	SAY UNIDENTIFIED_DESC ~This urn contains Stivan's family ashes. Looking at it more closely, you notice it bears different marks upon its surface and its color had become opaque.
+Fearing it might break in battle, the halfling asked for your assistance in asking one of the clerks in the Council of Six building for a tomb, where the urn might lie in safety.~
 	WRITE_LONG  0x18 ((THIS | 1) & 0xfffffffb)  // make unsellable and undroppable
 	WRITE_ASCII 0x3a ~tb#surni~ #8 // inventory icon
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
@@ -410,36 +408,36 @@ Temendo che possa rompersi nel corso di un combattimento, l'halfling ti ha chies
 	WRITE_ASCII 0x58 ~tb#surnc~ #8 // description icon
 	
 COPY_EXISTING ~misc4w.itm~ ~override/tb#sdocu.itm~
-	SAY NAME1 ~Documenti~
-	SAY NAME2 ~Documenti~
-	SAY IDENTIFIED_DESC ~Non immaginavi che per legittimare l’acquisizione della cripta da parte di Stivan fossero necessari così tanti documenti. Non puoi fare a meno di chiederti se questa mole di atti, firme e sigilli dipendano dall’apparato burocratico di Athkatla o dall’eccessiva minuziosità dell’impiegato Lawrence.~
-	SAY UNIDENTIFIED_DESC ~Non immaginavi che per legittimare l’acquisizione della cripta da parte di Stivan fossero necessari così tanti documenti. Non puoi fare a meno di chiederti se questa mole di atti, firme e sigilli dipendano dall’apparato burocratico di Athkatla o dall’eccessiva minuziosità dell’impiegato Lawrence.~
+	SAY NAME1 ~Documents~
+	SAY NAME2 ~Documents~
+	SAY IDENTIFIED_DESC ~You didn't think that you needed this much paperwork to legally register Stivan's purchase of the tomb. You can't help but wonder if this mass of documents, signatures and stamps are required by Athkatla's bureaucratic arm or by Lawrence's excessive dedication to his work.~
+	SAY UNIDENTIFIED_DESC ~You didn't think that you needed this much paperwork to legally register Stivan's purchase of the tomb. You can't help but wonder if this mass of documents, signatures and stamps are required by Athkatla's bureaucratic arm or by Lawrence's excessive dedication to his work.~
 
 COPY_EXISTING ~compon11.itm~ ~override/tb#spin.itm~  
-  SAY NAME1 ~Spilla di Missy~
-  SAY NAME2 ~Spilla di Missy~
-  SAY IDENTIFIED_DESC ~Una semplice spilla.~
+  SAY NAME1 ~Missy's pin~
+  SAY NAME2 ~Missy's pin~
+  SAY IDENTIFIED_DESC ~A plain pin.~
 	
 COPY_EXISTING ~stivan/itm/tb#spoo.itm~ ~override~
-	SAY NAME1 ~Cacca di gabbiano~
-	SAY NAME2 ~Cacca di gabbiano~
-	SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico. Preferisci non indagare su come faccia a non esaurire mai le scorte.
+	SAY NAME1 ~Seagull poo~
+	SAY NAME2 ~Seagull poo~
+	SAY IDENTIFIED_DESC ~This sack contains a noticeable amount of seagull poo, collected by Stivan. The halfling uses it to blind his enemies or to create an alchemical compound that explodes upon being thrown. You'd rather not know how he manages to never run out of it.
 	
-STATISTICHE:
+STATISTICS:
 
-Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
-Lancia "Miscela alchemica" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
+Casts "Blindness" twice a day: the target must save against Breath (-2 penalty) or be blinded for two rounds.
+Casts "Alchemical Explosion" once a day: inflicts 4d4 fire damage (no saving throw).
 
-Utilizzabile Da:
+Usable by:
 Stivan~
-	SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. L'halfling è solito servirsene per accecare i propri avversari o per creare una miscela alchemica che esplode se lanciata contro un nemico. Preferisci non indagare su come faccia a non esaurire mai le scorte.
+	SAY UNIDENTIFIED_DESC ~This sack contains a noticeable amount of seagull poo, collected by Stivan. The halfling uses it to blind his enemies or to create an alchemical compound that explodes upon being thrown. You'd rather not know how he manages to never run out of it.
+	
+STATISTICS:
 
-STATISTICHE:
+Casts "Blindness" twice a day: the target must save against Breath (-2 penalty) or be blinded for two rounds.
+Casts "Alchemical Explosion" once a day: inflicts 4d4 fire damage (no saving throw).
 
-Lancia "Cecità" due volte al giorno: il bersaglio deve superare un tiro salvezza contro soffio (penalità -2) o restare accecato per due round.
-Lancia "Miscela alchemica" una volta al giorno: infligge 4d4 danni da fuoco (nessun tiro salvezza).
-
-Utilizzabile Da:
+Usable by:
 Stivan~
 	WRITE_ASCII 0x3a ~tb#spooi~ #8 // inventory icon
 	WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
@@ -463,7 +461,7 @@ ADD_PROJECTILE ~override/tb#salc.pro~
 COPY ~stivan/spl/tb#sbli.spl~ ~override~
 
 COPY ~stivan/spl/tb#salc.spl~ ~override~
-	SAY 0x9e ~Esplosione Alchemica~
+	SAY 0x9e ~Alchemical Explosion~
 	WRITE_SHORT   0x098 ~tb#salc~
 
 COPY_EXISTING ~spwi905.spl~ ~override/tb#ssus1.spl~
@@ -515,8 +513,8 @@ LAF ~ADD_ITEM_TOOLTIPS~
 END
 
 COPY_EXISTING ~tooltip.2da~ ~override~
-REPLACE ~99999999~ ~Cecità~
-REPLACE ~99999998~ ~Esplosione Alchemica~
+REPLACE ~99999999~ ~Blindness~
+REPLACE ~99999998~ ~Alchemical Explosion~
 
 
 APPEND ~pdialog.2da~
@@ -570,19 +568,23 @@ ACTION_IF GAME_IS ~BGT ToB~ && 0 THEN BEGIN
 	// Copy ITM files
 	
 	COPY_EXISTING ~stivan/tob/itm/tb#spoo2.itm~ ~override~
-		SAY NAME1 ~Cacca di gabbiano infuocata~
-		SAY NAME2 ~Cacca di gabbiano infuocata~
-		SAY IDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. Dopo essere stata combinata con la piuma di fenice e la barba di Yaga-shura, genera un'esplosione alchemica piu' potente, ma non e' piu' in grado di accecare i nemici.
-STATISTICHE:
-Lancia "Miscela alchemica" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
+		SAY NAME1 ~Flaming seagull poo~
+		SAY NAME2 ~Flaming seagull poo~
+		SAY IDENTIFIED_DESC ~This sack contains a noticeable amount of seagull poo, collected by Stivan. After having been enchanted with the Phoenix plume and Yaga-Shura's beard, it sets off a more powerful explosion, but isn't able to blind enemies anymore.
 
-Utilizzabile Da:
+STATISTICS:
+
+Casts "Alchemical Explosion" once a day: inflicts 8d8 fire damage (no saving throw).
+
+Usable by:
 Stivan~
-		SAY UNIDENTIFIED_DESC ~Questo sacchetto contiene una certa quantità di cacca di gabbiano raccolta da Stivan. Dopo essere stata combinata con la piuma di fenice e la barba di Yaga-shura, genera un'esplosione alchemica piu' potente, ma non e' piu' in grado di accecare i nemici.
-STATISTICHE:
-Lancia "Miscela alchemica" una volta al giorno: infligge 8d8 danni da fuoco (nessun tiro salvezza).
+		SAY UNIDENTIFIED_DESC ~This sack contains a noticeable amount of seagull poo, collected by Stivan. After having been enchanted with the Phoenix plume and Yaga-Shura's beard, it sets off a more powerful explosion, but isn't able to blind enemies anymore.
 
-Utilizzabile Da:
+STATISTICS:
+
+Casts "Alchemical Explosion" once a day: inflicts 8d8 fire damage (no saving throw).
+
+Usable by:
 Stivan~
 		WRITE_ASCII 0x3a ~tb#spo2i~ #8 // inventory icon
 		WRITE_ASCII 0x44 ~gsack01~ #8 // ground icon
@@ -595,7 +597,7 @@ Stivan~
 	// Copy SPL files
 	
 	COPY ~stivan/tob/spl/tb#sal2.spl~ ~override~
-		SAY 0x9e ~Esplosione Alchemica~
+		SAY 0x9e ~Alchemical Explosion~
 		WRITE_SHORT   0x09c ~tb#sal2~
 		
 	
@@ -608,6 +610,6 @@ Stivan~
   END
 
   COPY_EXISTING ~tooltip.2da~ ~override~
-  REPLACE ~99999999~ ~Esplosione Alchemica~
+  REPLACE ~99999999~ ~Alchemical Explosion~
 
 END
