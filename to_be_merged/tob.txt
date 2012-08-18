@@ -3,8 +3,8 @@ Primo dialogo tra Stivan e Imoen.
 Imoen: Continuare a ripetermi la stessa domanda non ti farà ottenere una risposta, Stivan.
 Stivan: Non puoi fingere di non essere coinvolta in tutto questo. Avanti, dimmi quali sono le tue intenzioni!
 Imoen: (Sospira) Te l’ho già detto. Non ho idea di ciò che succederà. Soprattutto, ignoro ciò che il destino riserva a me e a <CHARNAME>.
-Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure… Oppure stai complottando alle spalle di tuo fratello?
-Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure… Oppure stai complottando alle spalle di tua sorella?
+Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure... Oppure stai complottando alle spalle di tuo fratello?
+Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure... Oppure stai complottando alle spalle di tua sorella?
 Imoen: Oh, che sbadata! Devo ancora provare l’"Irreversibile Trasformazione in Gabbiano di Imoen la Svelta". Visto che hai tanta voglia di vedere cosa succede quando diventi qualcosa che non sei, che ne dici di provare il mio incantesimo?
 Stivan CN: (Glom!) Tu.. tu non...
 Stivan CN: Come puoi paragonare il potere di un dio ad uno schifido pennuto? Pensa, potresti ricordarti del tuo caro amico Stivan e liberare il mondo dai gabbiani!
@@ -21,23 +21,23 @@ Stivan CB: La tua netta rinuncia al divino mi inquieta un pò, ma finalmente ho a
 
 Secondo dialogo tra Stivan e Imoen, dopo un combattimento. E’ necessario che Imoen abbia avuto almeno un dialogo con CHARNAME sulla corruzione di Bhaal.
 -----------------------------------------------
-Stivan: (Pant pant) La tua magia… Mi ha salvato le chiappe ancora una volta!
+Stivan: (Pant pant) La tua magia... Mi ha salvato le chiappe ancora una volta!
 Imoen: Felice di averti aiutato.
-Stivan: Davvero? Non ne sembri molto convinta…
+Stivan: Davvero? Non ne sembri molto convinta...
 Imoen: Sono solo confusa. Il mio potere sta aumentando notevolmente. Anche troppo, forse. Mi chiedo se dipenda dalla corruzione di Bhaal o da altro.
 Stivan: Non ti seguo. A cosa ti riferisci?
-Imoen: Di recente sto sperimentando qualcosa di simile a ciò che è successo a <CHARNAME>. Sogni inquieti, abilità sconosciute, scatti di rabbia…
+Imoen: Di recente sto sperimentando qualcosa di simile a ciò che è successo a <CHARNAME>. Sogni inquieti, abilità sconosciute, scatti di rabbia...
 Stivan: Di cosa hai paura?
-Imoen: Io… Non voglio diventare malvagia. 
+Imoen: Io... Non voglio diventare malvagia. 
 Stivan: Non lo sei e mai lo sarai.
 Imoen: Chi lo garantisce? Sto cercando di ignorare quella voce che mi invita ad eliminare qualsiasi cosa mi infastidisca, ma non è facile. E se un giorno facessi del male alle persone a me care?
 Stivan: Pur augurandomi di non prendere fuoco all’improvviso o di essere nella traiettoria dei tuoi fulmini, io capirei la situazione.
 Imoen: Che sfacciato. Credi davvero di essere nella cerchia dei miei affetti?
 Stivan CN: E perche' no? Io ho un ricordo piacevole del tempo passato ad allenarci insieme...
 Stivan CB: Giusto. Appartengo al gruppo dei tuoi spasimanti. 
-Imoen: Lo vedi? In circostanze normali accoglierei con piacere il tuo umorismo, ma adesso… Mi da soltanto fastidio. Lo trovo stupido, vorrei quasi metterti addosso le mani per aver detto una simile sciocchezza!
-Stivan CN: (Glom!) S-sì, capisco cosa intendi dire. Hai un aspetto davvero minaccioso. Meglio… Meglio che torni a sistemare le mie scorte di cacca di gabbiano…
-Stivan CB: (Glom!) S-sì, capisco cosa intendi dire. Hai un aspetto davvero minaccioso. Meglio… Meglio che dia una lettura ai miei libri per vedere se c’è qualche rimedio naturale che possa calmarti… 
+Imoen: Lo vedi? In circostanze normali accoglierei con piacere il tuo umorismo, ma adesso... Mi da soltanto fastidio. Lo trovo stupido, vorrei quasi metterti addosso le mani per aver detto una simile sciocchezza!
+Stivan CN: (Glom!) S-sì, capisco cosa intendi dire. Hai un aspetto davvero minaccioso. Meglio... Meglio che torni a sistemare le mie scorte di cacca di gabbiano...
+Stivan CB: (Glom!) S-sì, capisco cosa intendi dire. Hai un aspetto davvero minaccioso. Meglio... Meglio che dia una lettura ai miei libri per vedere se c’è qualche rimedio naturale che possa calmarti... 
 
 
 Banter tra Stivan CG e Jaheira.
@@ -263,6 +263,118 @@ Edwin: Immagino tu ti senta perfettamente a tuo agio in questa fogna. In qualsia
 Stivan: Già. Suppongo di doverti ringraziare, visto che la tua presenza aggiunge a questo pittoresco quadro il tratto squallido che le mancava.
 
 
+Primo dialogo tra Stivan e Cernd a Saradush all’aperto.
+-----------------------------------------------
+Stivan: Tieni, Peep. Mangia questi semi di papavero. Sono nutrienti e ricchi di proprietà che fanno bene.
+Cernd: E’ giunto il momento che il tuo gabbiano impari a procurarsi il cibo da solo. Come una lupa svezza i suoi cuccioli insegnando loro a cacciare, così è necessario che tu faccia altrettanto.
+Stivan: Sarebbe una follia! Non hai visto quant’è pericoloso questo posto? I proiettili delle catapulte e le frecce non lo risparmierebbero!
+Cernd: Non preoccuparti. Lo proteggerò con un incantesimo che renda la sua pelle coriacea e invulnerabile al fuoco. Se la vista non mi inganna, laggiù c’è un porto, habitat ideale per fargli muovere i primi passi verso l’autosufficienza. 
+Stivan: E se scappasse?
+Cernd: Non lo farà. Come il tiglio cresce forte e saldo nel tronco di una quercia, così il legame tra voi due rimarrà saldo e immune alla scure della separazione.
+Stivan: Ma...
+Cernd: Shhh. I tuoi timori e le tue incertezze sono comprensibili, ma non gioverà a nulla angustiarsi in questo modo. Ricorda che la conoscenza parla...
+Stivan: ... Ma la saggezza ascolta. Heh. E va bene. Farò come dici, ma non mi assumerò alcuna responsabilità se Peep dovesse fare la cacca in testa a qualcuno.
+
+Secondo dialogo tra Stivan e Cernd all’arrivo ad Amketram.
+-----------------------------------------------
+Stivan: ... Quindi il croco è un fiore tanto benefico quanto mortale. Nelle giuste dosi consente di curare un gran numero di problemi agli occhi, ma in quantità eccessiva diventa un potente veleno in grado di uccidere.
+Cernd: Esatto. Rimane un’ultima proprietà da esaminare.
+Stivan: Beh, ecco... Non penso che *quella* possa essermi utile...
+Cernd: A te no, ma ad altri sì. Ricorda che la tua conoscenza sarà a disposizione degli altri ancor prima di te stesso. Qual è dunque l’uso del fiore che ancora non hai menzionato?
+Stivan: Allora... Il croco può essere messo insieme a mirra e incenso su un panno di lana per favorire il concepimento delle donne.
+Cernd: Dove va applicato?
+Stivan: Aps shmdn.
+Cernd: Parla bene e chiaro, per favore. Dove va applicato?
+Stivan: (Arrossisce) All’altezza dell’utero...
+Cernd: La tua pudicizia deve essere superata. Non puoi arrossire come un gambero ogni volta che parliamo di qualsiasi cosa legata alla procreazione.
+Stivan: Mia mamma...
+Cernd: Tua madre ti ha portato in grembo e dato alla luce nel modo in cui vuole la natura. Non c’è nulla di sconveniente in questo; piuttosto, dovresti commuoverti ogni volta che si ripete il miracolo della vita.
+Cernd: Ad ogni modo, a parte qualche incertezza, direi che ci siamo. Il mio compito è infine giunto a termine.
+Stivan: Uhm? Che vuol dire?
+Cernd: Come gli animali della savana si abbeverano insaziabili non appena trovano una sorgente d’acqua, così ti sei dissetato alla fonte del sapere. La tua gola non è più arsa dall’ignoranza, quindi puoi intraprendere il viaggio che ti aspetta.
+Stivan: No! Io ho ancora sete! Ci sono molte altre cose che non so!
+Cernd: E’ vero, ma le dovrai imparare da solo.
+Stivan: Perché non puoi insegnarmele tu?
+Cernd: La teoria, se non viene messa in pratica, è sterile e non produce frutti. E’ attraverso l’azione pratica che maturano i risultati.
+Stivan: Sì, ma... Perché da solo? Non possiamo lavorare insieme?
+Cernd: Non ha senso opporsi al grande disegno che la Madre ha in serbo per ciascuno di noi. In ogni caso, non è il momento di indugiare oltre: <CHARNAME> ci ha fatto cenno di proseguire.
+
+Terzo dialogo tra Stivan e Cernd all’interno del monastero di Balthazar, prima dello scontro.
+-----------------------------------------------
+Stivan: Perché non vuoi più essere il mio maestro? C’entra forse il fatto che mi imbarazzo ogni volta che si parla delle pudende?
+Cernd: Certo che no, Stivan. Ti ho già spiegato il motivo, ma proverò a ripeterlo con parole più semplici per evitare fraintendimenti: è giunto il momento che tu segua la tua strada.
+Stivan: Ho capito, ma perché la mia strada non può essere la tua? Perché non possiamo continuare a viaggiare insieme?
+Cernd: Gli indizi sono chiari. Il crepitio dell’alloro consumato dal fuoco, la disposizione delle foglie di tè, il rumore delle noci di quercia... Il verdetto è sempre lo stesso: tu ed io siamo destinati a prendere direzioni diverse. Non c’è spazio per me nel tuo avvenire.
+Stivan: Me ne infischio di ciò che dicono le tue previsioni. Non lascerò che tu te ne vada. Non lo permetterò!
+Cernd: La tua testardaggine mi è ben nota, ma ormai ho imparato a lavorarla come se fosse morbida argilla. Invece di affliggerti per la nostra separazione, apprezza il tempo che abbiamo trascorso insieme.
+Cernd: Il nostro incontro non è stato casuale. La Madre ha in serbo un grande compito per te, ma era necessario che qualcuno ti aprisse gli occhi e ti preparasse in vista di quel futuro.  
+Stivan: *SOB*! Non m’importa nulla dei piani di Chauntea! Se questo significa stare nuovamente da solo... Ne faccio volentieri a meno!
+Cernd: Anch’io ho conosciuto il dolore della separazione, lacerante come gli artigli di un falco e triste come i cinguettii di un uccello morente. Tu però hai una conoscenza di cui io ero privo; servitene per trovare la pace interiore e il posto che ti spetta nell’ordine delle cose.
+Stivan: Ma io... *SOB*! Io non sono nessuno! Sono una mela ancora acerba che vuoi spacciare per matura!
+Cernd: Non commettere l’errore di sottovalutarti. Ricorda i miei insegnamenti: come arrivano lontano i raggi di una piccola candela, così splende una buona azione in un mondo malvagio e privo di equilibrio.
+Stivan: Tutto questo... E’ ingiusto! La Madre non può privarmi del mio più grande amico e... *SOB*! ... e fare di me il suo strumento. E’... E’ crudele!
+Cernd: Ti interrompo prima che tu possa proferire altre sciocchezze. Per quanto dettato dall’impeto del momento, non puoi tacciare di crudeltà colei che ci ha fatto il grande dono della vita. Aiuteremo <CHARNAME> nella sua missione e poi... Ciascuno farà ci che il fato ha in serbo.
+ 
+ 
+Primo dialogo tra Stivan e Anomen, dopo che il gruppo arriva per la prima volta nel piano extradimensionale.
+-----------------------------------------------
+Anomen: Questo posto è inquietante. La fredda pietra, l’aria gelida, il tetro silenzio...
+Stivan: Anche le statue sono decisamente cupe. Non c’è volto che non sia deforme o straziato.
+Anomen: Dall’alcova di una divinità malvagia come Bhaal, mi sarei aspettato rappresentazioni che inneggiassero a stragi e uccisioni. Invece... Sembra un monumento alla sofferenza.
+Stivan: Io lo trovo macabro.
+Anomen: A me trasmette tutt’altro. Guarda quelle espressioni. Sembra che il loro artefice abbia voluto cristallizzare il loro dolore.
+Stivan: Pensi che siano vittime del Signore dell’Omicidio?
+Anomen: No. Sono vittime della solitudine.
+Stivan: *Ahem* Trovo difficile immaginare che Bhaal possa aver sentito la mancanza di compagnia.
+Anomen: Per alcuni aspetti, gli dei ci somigliano più di quanto credi. Dopotutto, è rimasto senza alleati e seguaci, tradito da quelli in cui aveva fede e abbandonato da quelli che lo avevano servito. A cosa giova disporre di un potere così grande se poi si è soli?
+Stivan: Non è un problema che mi riguarda. Non più, almeno. Grazie a questo gruppo mi sento a casa.
+Anomen (No Romance): Purtroppo non posso dire lo stesso, ma immagino che sia la sorte degli spiriti più grandi.
+Anomen: (Sì Romance) Ed io, grazie a <CHARNAME>, sono rinato. Forse l’amore consiste proprio in questo: due solitudini che si proteggono, si toccano e si accolgono.
+
+
+Secondo dialogo tra Stivan e Anomen dopo aver ucciso Sendai e Abazigal. Il banter è molto complesso a causa di più variabili, quindi l’ho spezzettato in modo che siano chiari i passaggi.
+-----------------------------------------------
+In caso di romance tra CHARNAME e Anomen.
+
+Stivan: Mi è parso di capire che ognuno prenderà la sua strada non appena la lotta tra i Figli di Bhaal sarà giunta al termine. Quali sono... *Ahem* Quali sono le tue intenzioni?
+Anomen: Dipende tutto da <CHARNAME>. E’ un argomento che non abbiamo ancora affrontato.
+Stivan: Già, <CHARNAME>... Quella donna è sempre in mezzo!
+Anomen: Cosa intendi dire?
+Stivan: No, ecco... Mi riferivo al fatto che è sempre in mezzo ai tuoi pensieri...
+Anomen: Ti confesso che sono preoccupato. Se fossi nei suoi panni, la prospettiva di diventare un dio mi alletterebbe molto. Pensi che sia stupido da parte mia sperare che vi rinunci per amor mio?
+Stivan: Beh, io... Non so cosa dire...
+Anomen: Nell’amicizia ciò che conta è la franchezza. Adesso più che mai ho bisogno di sentire un’opinione sincera. Cosa ne pensi?
+Stivan: Penso che... (Arrossisce) Sarebbe sciocco da parte di <CHARNAME> rinunciare a te.
+Anomen: Dici sul serio? 
+Stivan: Purtroppo sì.
+Anomen: Mi auguro che anche lei sia del tuo stesso avviso. Sai, tempo fa stavo pensando che potresti farci da testimone al nostro matrimonio. Non ho nessun altro amico che lo meriti più di te.
+Stivan: Testimone? Io? N... No. Questo è davvero troppo. Non volermene, Anomen, ma... Io... Sono stato un tale stupido!
+Anomen: Cosa...
+Stivan: No. Non tornerò ad Athkatla, quindi non potrò fare ciò che chiedi. Trovati qualcun altro.
+
+Senza romance tra CHARNAME e Anomen, con risposte diverse in base all’allineamento di Stivan e alle sue scelte.
+
+Stivan: Mi è parso di capire che ognuno prenderà la sua strada non appena la lotta tra i Figli di Bhaal sarà giunta al termine. Quali sono... *Ahem* Quali sono le tue intenzioni?
+Anomen: Bella domanda. Ancora non mi sono soffermato a rifletterci, ma in effetti è tempo che inizi a pensarci. Potrei riprendere in mano i contatti di mio padre e rilanciare la sua attività, ma non ho mai avuto la stoffa del mercante.
+Stivan: Ti aiuterei più che volentieri. Sai bene che ho una discreta esperienza.
+Anomen: Senza offesa, ma ho qualche riserva sulla tua effettiva competenza. In passato ti sei fatto soffiare la tua eredità.
+Stivan: Sì, ma ero giovane e immaturo. Adesso sono adulto e preparato. Ti assicuro che nessuno si prenderà gioco di noi!
+Anomen: In alternativa potrei unirmi a qualche altra compagnia. Le sfide e le avventure non mancano mai, proprio come la feccia da eliminare.
+Heh. Sono pronto ad unirmi a qualsiasi banda di scapestrati!
+TRANCH STIVAN CG
+Anomen: Dici? Il druido mi ha detto che ti occuperai di ben altro. Sostiene che nessuno di noi dovrà interferire con ciò che ti aspetta.
+Stivan: *Ahem* Ultimamente Cernd ha preso un abbaglio. Parla a sproposito, quindi... Non ascoltarlo.
+Anomen: Un tempo non avrei mai creduto a simili profezie, ma viaggiare con <CHARNAME> mi ha insegnato a dar credito a questi avvertimenti. E’ meglio che tu segua la tua strada, qualunque essa sia.
+Stivan: Ma...
+Anomen: Non preoccuparti. Non ci perderemo di vista. Ogni tanto faremo in modo di vederci e di raccontarci cosa abbiamo combinato.
+Stivan: Perché non...
+Anomen: Dobbiamo proseguire, Stivan. Gli altri ci stanno aspettando. Approfondiremo la questione quando ci sarà tempo.
+TRANCH STIVAN CN
+Anomen: Dici? Eppure hai faticato tanto per unirti ai Ladri Tenebrosi. Di certo non è un’organizzazione di cui io vorrei far parte, ma non puoi tirarti indietro.
+Stivan: Ma...
+Anomen: Fatti valere. Metti in riga quei borseggiatori di bassa lega e mostra loro ciò di cui sei capace. Soprattutto, tieni a mente i miei insegnamenti.
+Stivan: Perché non...
+Anomen: Dobbiamo proseguire, Stivan. Gli altri ci stanno aspettando. Approfondiremo la questione quando ci sarà tempo.
 
 
 
@@ -270,36 +382,68 @@ Stivan: Già. Suppongo di doverti ringraziare, visto che la tua presenza aggiunge
 
 
 
+Primo dialogo tra Sarevok e Stivan CG.
+-----------------------------------------------
+Sarevok: Piantala di guardarmi con la coda dell’occhio. Mi infastidisce.
+Stivan: Chiedo scusa. Sono stato decisamente indiscreto, ma le mie impressioni richiedevano una conferma.
+Sarevok: In merito a cosa?
+Stivan: Al gruppo in cui annoverarti. Mia mamma diceva sempre che il male non ha bisogno di presentazioni. In effetti, non occorre un grande acume per capire che sei malvagio.
+Sarevok: E’ questo ciò che fai? Giudichi le persone sulla base del loro aspetto?
+Stivan: No. Ti ho osservato. Ti ho visto uccidere i nostri nemici senza pietà, affondando i tuoi colpi con forza e annientando le difese dell’avversario. Togliere la vita è qualcosa che ti è decisamente familiare, vero?
+Sarevok: Posso dartene una dimostrazione anche adesso. 
+Stivan: Ignoro i tuoi trascorsi con <CHARNAME>, ma immagino che non avesse bisogno di particolari pretesti per ucciderti. Ciò che mi sfugge è il motivo per cui ti ha voluto al suo fianco. Tornaconto personale o spirito di perdono?
+Sarevok: Perché non lo chiedi a <PRO_HESHE>?
+Stivan (se CHARNAME è malvagio): Entrambi appartenete al novero dei cattivoni. Forse ti ha ridato la vita perché siete simili, legati da quelle che gli halfling anziani chiamano “affinità elettive”.
+Sarevok: *Non* paragonarmi a mio fratello. La sopportazione, l’ingegno, la lungimiranza... Il mio grande disegno... Tutte cose che lui non ha neanche lontanamente concepito.
+Sarevok: *Non* paragonarmi a mia sorella. La sopportazione, l’ingegno, la lungimiranza... Il mio grande disegno... Tutte cose che lei non ha neanche lontanamente concepito. 
+Stivan (se CHARNAME è buono): E’ proprio questo il problema: <PRO_HESHE> fa parte dei buoni, mentre tu appartieni al gruppo dei malvagi. Siete forse opposti che si attraggono?
+Sarevok: No. Siamo solo figli dello stesso padre.
+Stivan (se CHARNAME è neutrale): <CHARNAME> sfugge all’elementare distinzione tra bene e male. Serve entrambi i principi, intervenendo dove c’è conflitto in maniera imparziale.
+Sarevok: Tsk. La mia uccisione a Baldur’s Gate è stata tutto fuorché disinteressata.
+Stivan: Prima o poi qualcuno dovrà raccontarmi cos’è successo tra voi due.
+Sarevok: Un banale malinteso. Agivo con le migliori intenzioni.
+Stivan: I peggiori propositi nascono sempre in questo modo.
+ 
+Secondo dialogo tra Sarevok e Stivan CG.
+-----------------------------------------------
+Sarevok: La tua goffa distinzione tra bene e male non prevede altre categorie?
+Stivan: In che senso?
+Sarevok: Oltre a questi due grandi poli, non contempli una o più vie di mezzo? Realtà che sfuggono ai due sommi principi? Morali che si collocano a metà strada?
+Stivan: *Ahem* Non posso pronunciarmi su una questione così complessa. Ancora non sono abbastanza versato negli studi sull’Equilibrio.
+Sarevok: Non m’importa un accidente delle dissertazioni accademiche. Voglio soltanto sentire il tuo punto di vista. Inoltre non mi sto riferendo a quell’insensata bilancia di forze che tu e i tuoi simili sostenete di preservare.
+Stivan: Dunque di chi e di che cosa stiamo parlando? Di te e della tua volontà di fare parte per te stesso?
+Sarevok: Rispondimi.
+Stivan: Non puoi agire basandoti unicamente sul tuo codice di leggi morali. Non è detto che queste vadano d’accordo con quelle della società.
+Sarevok: Non sono un tipo che scende a compromessi.
+Stivan: Se ciascuno di noi facesse ciò che vuole, saremmo in uno stato di guerra perenne.
+Sarevok: Evidentemente, il conflitto fa parte della nostra natura.
+Stivan: Certo, ma è completato dal suo opposto, cioè dal desiderio di pace. Coloro che ordiscono grandi minacce vengono sempre sconfitti da chi vuole preservare la quiete. Le due cose si alternano in perfetto equilibrio.
+Sarevok: ...
+Sarevok: ... Secondo il tuo ragionamento, il bene avrebbe un valore aggiunto rispetto al male.
+Stivan: Dipende. Certe minacce ricordano all’uomo valori e lezioni dimenticate.
+Sarevok: Bah. Giochi molto con le parole, ma è chiaro da che parte stai. Chi teme le tenebre non ha visto di cosa è capace la luce. Non dimenticarlo.
 
+Primo dialogo tra Sarevok e Stivan CN.
+-----------------------------------------------
+Stivan: Vediamo se ho capito bene. Tu saresti quel cattivone che tempo fa ha messo a ferro e fuoco la Costa della Spada, giusto?
+Sarevok: ... Cattivone?
+Stivan: La gente diceva che eri grande quanto un palazzo e che mangiavi vive le persone. Eppure, oltre ad avere l’altezza tipica dei gambelunghe, sino ad ora non ti ho visto ingoiare né uomini né donne.
+Sarevok: Il vociare dei plebei mi ha sempre irritato e divertito allo stesso tempo. La vostra piccola testolina non aveva minimamente realizzato quali fossero i miei piani. Avrei tratto grande piacere dal vedervi atterriti e terrorizzati prima di essere trafitti a morte dalla mia lama.
+Stivan: (Glom!) Quali... Quali erano le tue vere intenzioni?
+Sarevok: Liberare Faerun da feccia come te.
+Stivan: Ehi! Io lavoro con la cacca, ma non siamo la stessa cosa!
+Sarevok: ... La bassezza dei seguaci di mio fratello mi era ben nota, ma resta un mistero come sia potuto sopravvivere circondandosi di poveri deficienti. E’ proprio vero che la mediocrità è dura a morire.
+Sarevok: ... La bassezza dei seguaci di mia sorella mi era ben nota, ma resta un mistero come sia potuta sopravvivere circondandosi di poveri deficienti. E’ proprio vero che la mediocrità è dura a morire.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Secondo dialogo tra Sarevok e Stivan CN.
+-----------------------------------------------
+Sarevok: Cosa speri di ottenere aggrappandoti alle sottane di <CHARNAME>? Ricchezze? Fama? Potere?
+Stivan: Veramente è nato tutto dal suo bisogno di una guida ad Athkatla e dalla mia ricerca di una tomba. Come spesso accade in queste situazioni, da cosa nasce cosa, quindi... Eccomi qui.
+Sarevok: La tua discutibile utilità è venuta meno da un pezzo. Di sicuro, aspiri a qualcosa.
+Stivan: *Ahem* Devo dissentire. La mia unica ambizione è quella di non essere nessuno in particolare. 
+Sarevok: Mi sembra la soluzione più sensata.
+Stivan: E tu, invece? Perché rimani al suo fianco? L’utilità della tua conoscenza si è esaurita da un pezzo.
+Sarevok: Non ne sarei così tanto sicuro. Il sapere non finisce mai di riservare sorprese.
 
 Primo banter tra Viconia e Stivan, a prescindere dall’allineamento.
 
@@ -570,13 +714,13 @@ Stivan: Bah! Mi farò un bagno, se è questo che vuoi. Mi chiedo a cosa servirà, v
 Primo dialogo tra Stivan CG ed Aerie.
 
 Stivan: Perché hai quell’espressione torva? Peep ti ha infastidito in qualche modo?
-Aerie: No, il tuo gabbiano è un volatile molto docile e tranquillo. Stavo solo pensando che forse… Forse vorrebbe essere libero.
+Aerie: No, il tuo gabbiano è un volatile molto docile e tranquillo. Stavo solo pensando che forse... Forse vorrebbe essere libero.
 Stivan: Lo è già.
-Aerie: Confinato sulla tua spalla? No, questa non è libertà. Volare con i suoi fratelli, accarezzare le nuvole, tuffarsi nel cielo azzurro bagnato dal sole… Questa è la vera libertà.
+Aerie: Confinato sulla tua spalla? No, questa non è libertà. Volare con i suoi fratelli, accarezzare le nuvole, tuffarsi nel cielo azzurro bagnato dal sole... Questa è la vera libertà.
 Stivan: A me sembra che Peep sia felice di viaggiare al mio fianco. Inoltre non gli ho mai proibito di volare o di divertirsi per un pò con altri uccelli, sebbene in questa regione siano piuttosto rari.
 Aerie: Ma alla fine torna sempre da te. Le sue zampe sono legate da un’invisibile ceppo che lo confina qui, sulla terra, dove non dovrebbe stare.
-Stivan: Uhm… Sei sicura che il vero argomento della discussione sia il mio compagno animale e non qualcuno che risponde al nome di Aerie?
-Aerie: Cosa? Oh, no. Ormai ho accettato il mio destino. Penso solo che il fato ha destinato al tuo gabbiano una vita diversa da quella che la natura aveva in serbo per lui. Gli altri… Non dovrebbero decidere sull’esistenza altrui. E’ qualcosa su cui dovresti riflettere.
+Stivan: Uhm... Sei sicura che il vero argomento della discussione sia il mio compagno animale e non qualcuno che risponde al nome di Aerie?
+Aerie: Cosa? Oh, no. Ormai ho accettato il mio destino. Penso solo che il fato ha destinato al tuo gabbiano una vita diversa da quella che la natura aveva in serbo per lui. Gli altri... Non dovrebbero decidere sull’esistenza altrui. E’ qualcosa su cui dovresti riflettere.
 
 Secondo dialogo tra Stivan CG ed Aerie.
 
@@ -594,8 +738,8 @@ Stivan: Ed io ho appena avuto conferma del fatto che non stiamo parlando del mio
 Imoen: Continuare a ripetermi la stessa domanda non ti farà ottenere una risposta, Stivan.
 Stivan: Non puoi fingere di non essere coinvolta in tutto questo. Avanti, dimmi quali sono le tue intenzioni!
 Imoen: (Sospira) Te l’ho già detto. Non ho idea di ciò che succederà. Soprattutto, ignoro ciò che il destino riserva a me e a <CHARNAME>.
-Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure… Oppure stai complottando alle spalle di tuo fratello?
-Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure… Oppure stai complottando alle spalle di tua sorella?
+Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure... Oppure stai complottando alle spalle di tuo fratello?
+Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure... Oppure stai complottando alle spalle di tua sorella?
 Imoen: Mi stai invitando a trasformarti in un rospo, vero? Per la tua faccia sarebbe di certo un miglioramento.
 Stivan: Heh. Per quanto la cosa mi tenti, devo declinare. 
 Imoen: Non ho nessuna intenzione di reclamare l’eredità di mio padre. Sto bene così come sono.
@@ -612,8 +756,8 @@ Secondo dialogo tra Imoen e Stivan, a prescindere dall’allineamento, dopo una ba
 Imoen: Continuare a ripetermi la stessa domanda non ti farà ottenere una risposta, Stivan.
 Stivan: Non puoi fingere di non essere coinvolta in tutto questo. Avanti, dimmi quali sono le tue intenzioni!
 Imoen: (Sospira) Te l’ho già detto. Non ho idea di ciò che succederà. Soprattutto, ignoro ciò che il destino riserva a me e a <CHARNAME>.
-Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure… Oppure stai complottando alle spalle di tuo fratello?
-Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure… Oppure stai complottando alle spalle di tua sorella?
+Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure... Oppure stai complottando alle spalle di tuo fratello?
+Stivan: La tua reticenza nell’affrontare la questione è sospetta. Sei davvero disinteressata al Trono di Bhaal oppure... Oppure stai complottando alle spalle di tua sorella?
 Imoen: Oh, che sbadata! Devo ancora provare l’"Irreversibile Trasformazione in Gabbiano di Imoen la Svelta". Visto che hai tanta voglia di vedere cosa succede quando diventi qualcosa che non sei, che ne dici di provare il mio incantesimo?
 Stivan CN: (Glom!) Tu.. tu non...
 Stivan CN: Come puoi paragonare il potere di un dio ad uno schifido pennuto? Pensa, potresti ricordarti del tuo caro amico Stivan e liberare il mondo dai gabbiani!
@@ -629,7 +773,7 @@ Stivan CB: La tua netta rinuncia al divino mi inquieta un pò, ma finalmente ho a
 
 Primo banter tra Mazzy e Stivan (a prescindere dall’allineamento) all’aperto.
 
-Stivan: Uff… Avevo dimenticato l’afa di questa regione. E’ sfiancante!
+Stivan: Uff... Avevo dimenticato l’afa di questa regione. E’ sfiancante!
 Mazzy: Le nostre armature rendono la marcia ancora più faticosa, ma sono fondamentali per la nostra sicurezza. Piuttosto, mi chiedo cosa ti abbia spinto in passato a venire in una terra calda quanto il sole.
 Stivan: Le gonfie tasche dei Calimshiti valevano ogni goccia del nostro sudore. I nobili del posto amano il vino, ma l’aridità di queste terre non consente a nessun tipo di vite di attecchire.
 Mazzy: In effetti, sembra quasi che il sole bruci ogni cosa, risparmiando soltanto qualche oasi.
@@ -640,7 +784,7 @@ Stivan: Icario pregò quindi la sua dea, nella speranza che lo aiutasse a rallegr
 Stivan: Il sacerdote seguì le sue istruzioni, continuando a pestare acini d’uva sino a quando non gli sembrò che il liquido venutosi a creare fosse sufficiente.
 Mazzy: Fu così che nacque il vino?
 Stivan: Sì, ma la storia non è ancora finita. Icario invitò gli abitanti del villaggio dove si era da poco fermato ad assaggiare la bevanda. Tutti rimasero estasiati da ciò che avevano assaggiato, ragion per cui continuarono a bere quel nettare incolore così delizioso sino ad ubriacarsi.
-Stivan: Dal momento che i loro sensi erano notevolmente ofuscati, gli halfling cedettero di essere stati avvelenati, quindi… Uccisero Icario. 
+Stivan: Dal momento che i loro sensi erano notevolmente ofuscati, gli halfling cedettero di essere stati avvelenati, quindi... Uccisero Icario. 
 Stivan: Furiosa per l’accaduto, Chauntea maledì la terra di Calimshan rendendola sterile. Si dice che il vino abbia così assunto l’attuale colore rosso, in ricordo del sangue versato ingiustamente dal sacerdote.
 Mazzy: E’ una storia molto triste. Tu che insegnamento ne hai tratto?
 TRANCH STIVAN CB
@@ -658,13 +802,13 @@ Secondo banter tra Mazzy e Stivan (a prescindere dall’allineamento), prima di ra
 
 Stivan: *Ahem* Ho qualcosa da dirti, Mazzy.
 Mazzy: Ti ascolto, ma sii rapido. Dobbiamo prepararci a dovere per la dura sfida che ci attende.
-Stivan: E’ proprio questo il punto. Se non dovessi farcela…
+Stivan: E’ proprio questo il punto. Se non dovessi farcela...
 Mazzy: Non dirlo neanche per scherzo. Non lascerò che i miei compagni siano sopraffatti dal male ancora una volta. Nel nome di Arvoreen, giuro di dare me stessa affinchè nessuno di voi cada in battaglia!
-Stivan: Questo… E’ gentile da parte tua, ma lascia lo stesso che ti dica quali sono le mie ultime volontà. Se dovesse succedermi qualcosa, vorrei… Vorrei riposare insieme ai miei familiari. Mi… riporteresti ad Athkatla?
+Stivan: Questo... E’ gentile da parte tua, ma lascia lo stesso che ti dica quali sono le mie ultime volontà. Se dovesse succedermi qualcosa, vorrei... Vorrei riposare insieme ai miei familiari. Mi... riporteresti ad Athkatla?
 Mazzy: Dicono che il nostro destino venga scritto al momento stesso della nostra nascita. Se così fosse, farò l’impossibile per cambiarlo.
-Stivan: … Lo prendo per un sì. Ti ringrazio. E’ molto gentile e inaspettato da parte tua, visto che non sono mai stato particolarmente simpatico nei tuoi confronti.
+Stivan: ... Lo prendo per un sì. Ti ringrazio. E’ molto gentile e inaspettato da parte tua, visto che non sono mai stato particolarmente simpatico nei tuoi confronti.
 Mazzy: Questo non fa di noi nemici giurati. I battibecchi possono essere il preludio a qualcosa di più piacevole, non lo sai?
-Stivan: Uhm… Cosa stai cercando di dirmi?
+Stivan: Uhm... Cosa stai cercando di dirmi?
 Mazzy: (Arrossisce) Non è il momento di perdere tempo. Finisci di prepararti e ripassa gli schemi della battaglia, su!
 
 Primo dialogo tra Valygar e Stivan CG.
@@ -673,9 +817,9 @@ Valygar: Non è nella mia natura essere curioso, ma il gabbiano sulla tua spalla 
 Stivan: Ti risparmio la fatica di formularle, allora. E’ un regalo di Cernd. Si chiama Peep.
 Valygar: Ah, già. Il druido mi aveva detto di volerti avviare nella giusta direzione, in modo da adempiere “al grande disegno della Madre” o qualcosa di simile.
 Stivan: Io stesso non so cosa significhino queste parole, ma non importa. Fintantoché Peep sarà al mio fianco, sono disposto ad andare in qualsiasi posto.
-Valygar: Uhmmm…
+Valygar: Uhmmm...
 Stivan: La tua fronte corrugata non promette nulla di buono. A cosa stai pensando?
-Valygar: Questo improvviso cambiamento, questa presunta redenzione… Non mi convince per nulla. E’ assurdo pensare che l’oggetto del tuo odio sia diventato l’esatto opposto in così poco tempo.
+Valygar: Questo improvviso cambiamento, questa presunta redenzione... Non mi convince per nulla. E’ assurdo pensare che l’oggetto del tuo odio sia diventato l’esatto opposto in così poco tempo.
 Stivan: Beh, le persone cambiano, nel bene o nel male, ma forse per te è più rassicurante l’idea che ogni individuo porti l’etichetta di “buono” o “malvagio” per tutta la vita.
 Valygar: Credi che viaggiare con un volatile al seguito possa cancellare le uccisioni senza senso che hai commesso?
 Stivan: No, non lo farà. Ciò nonostante, se le mie azioni passate mi segnassero per sempre, non avrebbe senso cercare di fare ammenda.
@@ -684,7 +828,7 @@ Valygar: Ammenda? No, questa è una farsa. Hai indossato la maschera dell’ipocris
 Secondo dialogo tra Valygar e Stivan CG, nel bosco dove si trova il nascondiglio di Sendai.
 
 Valygar: Ti consiglio di non perdere di vista il tuo gabbiano. In questo posto si aggirano uccelli predatori che non esiterebbero ad aggredirlo.
-Stivan: Buono a sapersi, ma… Perché mi hai dato un simile avvertimento?
+Stivan: Buono a sapersi, ma... Perché mi hai dato un simile avvertimento?
 Valygar: Sono un ranger, nel caso te lo sia dimenticato. Il fatto che tra noi due non scorra buon sangue non significa che io debba tacere i pericoli in cui incorrerebbe il tuo compagno animale.
 Stivan: Allora non devo ringraziarti di nulla. Hai semplicemente svolto il tuo dovere.
 
@@ -692,7 +836,7 @@ Primo dialogo tra Stivan CN e Valygar.
 
 Stivan: *Ahem* Avrei bisogno di sapere se in questa regione si aggira qualche uccello simile ai gabbiani. C’è qualche speranza?
 Valygar: Non avrai questa informazione, halfling. Non incentiverò il tuo folle sterminio di volatili.
-Stivan: Ma… Sto finendo cacca e piume!
+Stivan: Ma... Sto finendo cacca e piume!
 Valygar: Io ho esaurito da tempo la pazienza, ma tiro avanti senza problemi.
 Stivan: Questa mancanza di collaborazione è inaccettabile. Siamo compagni di gruppo; dovremmo aiutarci a vicenda, no?
 Valygar: Giusta osservazione. Inizia col tenere la bocca chiusa.
@@ -706,8 +850,8 @@ Secondo dialogo tra Stivan CN e Valygar.
 Valygar: Decisamente poco originale l’idea di rovinare il mio zaino con escrementi di gabbiano.
 Stivan: Heh. Sono quasi rimasto senza scorte, ma ne valeva la pena.
 Valygar: Vedo che ti diverti con poco. (Sospira) Gli darò una pulita quando ci troveremo nei pressi di uno specchio d’acqua.
-Stivan: …
-Stivan: … Tutto qui?
+Stivan: ...
+Stivan: ... Tutto qui?
 Valygar: Cosa ti aspettavi?
 Stivan: Beh, credevo ti saresti arrabbiato o vendicato!
 Valygar: Sai qual è la differenza più importante tra me e te?
@@ -717,185 +861,3 @@ Stivan: Non è vero! Adesso sono anch’io un ometto! Ho appena compiuto trent’anni
 Valygar: Raggiungere la maggiore età non significa diventare maturi. Come vedi, il tuo sciocco desiderio di ripicca non ti ha portato nulla. Hai soltanto sprecato quei trofei che tanto cerchi.
 Stivan: (Snort!) Dannazione a te, ranger! Ti odio!!!
 Valygar: Lo vedi? Se fossi un uomo, capiresti che la sola persona con cui dovresti arrabbiarti sei te stesso. Và a sfogare la tua rabbia pestando la terra coi piedi. Da un bamboccio, non mi aspetto nulla di diverso. 
-
-
-
-Primo dialogo tra Sarevok e Stivan CG.
-
-Sarevok: Piantala di guardarmi con la coda dell’occhio. Mi infastidisce.
-Stivan: Chiedo scusa. Sono stato decisamente indiscreto, ma le mie impressioni richiedevano una conferma.
-Sarevok: In merito a cosa?
-Stivan: Al gruppo in cui annoverarti. Mia mamma diceva sempre che il male non ha bisogno di presentazioni. In effetti, non occorre un grande acume per capire che sei malvagio.
-Sarevok: E’ questo ciò che fai? Giudichi le persone sulla base del loro aspetto?
-Stivan: No. Ti ho osservato. Ti ho visto uccidere i nostri nemici senza pietà, affondando i tuoi colpi con forza e annientando le difese dell’avversario. Togliere la vita è qualcosa che ti è decisamente familiare, vero?
-Sarevok: Posso dartene una dimostrazione anche adesso. 
-Stivan: Ignoro i tuoi trascorsi con <CHARNAME>, ma immagino che non avesse bisogno di particolari pretesti per ucciderti. Ciò che mi sfugge è il motivo per cui ti ha voluto al suo fianco. Tornaconto personale o spirito di perdono?
-Sarevok: Perché non lo chiedi a <PRO_HESHE>?
-Stivan (se CHARNAME è malvagio): Entrambi appartenete al novero dei cattivoni. Forse ti ha ridato la vita perché siete simili, legati da quelle che gli halfling anziani chiamano “affinità elettive”.
-Sarevok: *Non* paragonarmi a mio fratello. La sopportazione, l’ingegno, la lungimiranza… Il mio grande disegno… Tutte cose che lui non ha neanche lontanamente concepito.
-Sarevok: *Non* paragonarmi a mia sorella. La sopportazione, l’ingegno, la lungimiranza… Il mio grande disegno… Tutte cose che lei non ha neanche lontanamente concepito. 
-Stivan (se CHARNAME è buono): E’ proprio questo il problema: <PRO_HESHE> fa parte dei buoni, mentre tu appartieni al gruppo dei malvagi. Siete forse opposti che si attraggono?
-Sarevok: No. Siamo solo figli dello stesso padre.
-Stivan (se CHARNAME è neutrale): <CHARNAME> sfugge all’elementare distinzione tra bene e male. Serve entrambi i principi, intervenendo dove c’è conflitto in maniera imparziale.
-Sarevok: Tsk. La mia uccisione a Baldur’s Gate è stata tutto fuorché disinteressata.
-Stivan: Prima o poi qualcuno dovrà raccontarmi cos’è successo tra voi due.
-Sarevok: Un banale malinteso. Agivo con le migliori intenzioni.
-Stivan: I peggiori propositi nascono sempre in questo modo.
- 
-Secondo dialogo tra Sarevok e Stivan CG.
-
-Sarevok: La tua goffa distinzione tra bene e male non prevede altre categorie?
-Stivan: In che senso?
-Sarevok: Oltre a questi due grandi poli, non contempli una o più vie di mezzo? Realtà che sfuggono ai due sommi principi? Morali che si collocano a metà strada?
-Stivan: *Ahem* Non posso pronunciarmi su una questione così complessa. Ancora non sono abbastanza versato negli studi sull’Equilibrio.
-Sarevok: Non m’importa un accidente delle dissertazioni accademiche. Voglio soltanto sentire il tuo punto di vista. Inoltre non mi sto riferendo a quell’insensata bilancia di forze che tu e i tuoi simili sostenete di preservare.
-Stivan: Dunque di chi e di che cosa stiamo parlando? Di te e della tua volontà di fare parte per te stesso?
-Sarevok: Rispondimi.
-Stivan: Non puoi agire basandoti unicamente sul tuo codice di leggi morali. Non è detto che queste vadano d’accordo con quelle della società.
-Sarevok: Non sono un tipo che scende a compromessi.
-Stivan: Se ciascuno di noi facesse ciò che vuole, saremmo in uno stato di guerra perenne.
-Sarevok: Evidentemente, il conflitto fa parte della nostra natura.
-Stivan: Certo, ma è completato dal suo opposto, cioè dal desiderio di pace. Coloro che ordiscono grandi minacce vengono sempre sconfitti da chi vuole preservare la quiete. Le due cose si alternano in perfetto equilibrio.
-Sarevok: …
-Sarevok: … Secondo il tuo ragionamento, il bene avrebbe un valore aggiunto rispetto al male.
-Stivan: Dipende. Certe minacce ricordano all’uomo valori e lezioni dimenticate.
-Sarevok: Bah. Giochi molto con le parole, ma è chiaro da che parte stai. Chi teme le tenebre non ha visto di cosa è capace la luce. Non dimenticarlo.
-
-Primo dialogo tra Sarevok e Stivan CN.
-
-Stivan: Vediamo se ho capito bene. Tu saresti quel cattivone che tempo fa ha messo a ferro e fuoco la Costa della Spada, giusto?
-Sarevok: … Cattivone?
-Stivan: La gente diceva che eri grande quanto un palazzo e che mangiavi vive le persone. Eppure, oltre ad avere l’altezza tipica dei gambelunghe, sino ad ora non ti ho visto ingoiare né uomini né donne.
-Sarevok: Il vociare dei plebei mi ha sempre irritato e divertito allo stesso tempo. La vostra piccola testolina non aveva minimamente realizzato quali fossero i miei piani. Avrei tratto grande piacere dal vedervi atterriti e terrorizzati prima di essere trafitti a morte dalla mia lama.
-Stivan: (Glom!) Quali… Quali erano le tue vere intenzioni?
-Sarevok: Liberare Faerun da feccia come te.
-Stivan: Ehi! Io lavoro con la cacca, ma non siamo la stessa cosa!
-Sarevok: … La bassezza dei seguaci di mio fratello mi era ben nota, ma resta un mistero come sia potuto sopravvivere circondandosi di poveri deficienti. E’ proprio vero che la mediocrità è dura a morire.
-Sarevok: … La bassezza dei seguaci di mia sorella mi era ben nota, ma resta un mistero come sia potuta sopravvivere circondandosi di poveri deficienti. E’ proprio vero che la mediocrità è dura a morire.
-
-Secondo dialogo tra Sarevok e Stivan CN.
-
-Sarevok: Cosa speri di ottenere aggrappandoti alle sottane di <CHARNAME>? Ricchezze? Fama? Potere?
-Stivan: Veramente è nato tutto dal suo bisogno di una guida ad Athkatla e dalla mia ricerca di una tomba. Come spesso accade in queste situazioni, da cosa nasce cosa, quindi… Eccomi qui.
-Sarevok: La tua discutibile utilità è venuta meno da un pezzo. Di sicuro, aspiri a qualcosa.
-Stivan: *Ahem* Devo dissentire. La mia unica ambizione è quella di non essere nessuno in particolare. 
-Sarevok: Mi sembra la soluzione più sensata.
-Stivan: E tu, invece? Perché rimani al suo fianco? L’utilità della tua conoscenza si è esaurita da un pezzo.
-Sarevok: Non ne sarei così tanto sicuro. Il sapere non finisce mai di riservare sorprese.
-
-
-
-
-Primo dialogo tra Stivan e Cernd a Saradush all’aperto.
-
-Stivan: Tieni, Peep. Mangia questi semi di papavero. Sono nutrienti e ricchi di proprietà che fanno bene.
-Cernd: E’ giunto il momento che il tuo gabbiano impari a procurarsi il cibo da solo. Come una lupa svezza i suoi cuccioli insegnando loro a cacciare, così è necessario che tu faccia altrettanto.
-Stivan: Sarebbe una follia! Non hai visto quant’è pericoloso questo posto? I proiettili delle catapulte e le frecce non lo risparmierebbero!
-Cernd: Non preoccuparti. Lo proteggerò con un incantesimo che renda la sua pelle coriacea e invulnerabile al fuoco. Se la vista non mi inganna, laggiù c’è un porto, habitat ideale per fargli muovere i primi passi verso l’autosufficienza. 
-Stivan: E se scappasse?
-Cernd: Non lo farà. Come il tiglio cresce forte e saldo nel tronco di una quercia, così il legame tra voi due rimarrà saldo e immune alla scure della separazione.
-Stivan: Ma…
-Cernd: Shhh. I tuoi timori e le tue incertezze sono comprensibili, ma non gioverà a nulla angustiarsi in questo modo. Ricorda che la conoscenza parla…
-Stivan: … Ma la saggezza ascolta. Heh. E va bene. Farò come dici, ma non mi assumerò alcuna responsabilità se Peep dovesse fare la cacca in testa a qualcuno.
-
-Secondo dialogo tra Stivan e Cernd all’arrivo ad Amketram.
-
-Stivan: … Quindi il croco è un fiore tanto benefico quanto mortale. Nelle giuste dosi consente di curare un gran numero di problemi agli occhi, ma in quantità eccessiva diventa un potente veleno in grado di uccidere.
-Cernd: Esatto. Rimane un’ultima proprietà da esaminare.
-Stivan: Beh, ecco… Non penso che *quella* possa essermi utile…
-Cernd: A te no, ma ad altri sì. Ricorda che la tua conoscenza sarà a disposizione degli altri ancor prima di te stesso. Qual è dunque l’uso del fiore che ancora non hai menzionato?
-Stivan: Allora… Il croco può essere messo insieme a mirra e incenso su un panno di lana per favorire il concepimento delle donne.
-Cernd: Dove va applicato?
-Stivan: Aps shmdn.
-Cernd: Parla bene e chiaro, per favore. Dove va applicato?
-Stivan: (Arrossisce) All’altezza dell’utero…
-Cernd: La tua pudicizia deve essere superata. Non puoi arrossire come un gambero ogni volta che parliamo di qualsiasi cosa legata alla procreazione.
-Stivan: Mia mamma…
-Cernd: Tua madre ti ha portato in grembo e dato alla luce nel modo in cui vuole la natura. Non c’è nulla di sconveniente in questo; piuttosto, dovresti commuoverti ogni volta che si ripete il miracolo della vita.
-Cernd: Ad ogni modo, a parte qualche incertezza, direi che ci siamo. Il mio compito è infine giunto a termine.
-Stivan: Uhm? Che vuol dire?
-Cernd: Come gli animali della savana si abbeverano insaziabili non appena trovano una sorgente d’acqua, così ti sei dissetato alla fonte del sapere. La tua gola non è più arsa dall’ignoranza, quindi puoi intraprendere il viaggio che ti aspetta.
-Stivan: No! Io ho ancora sete! Ci sono molte altre cose che non so!
-Cernd: E’ vero, ma le dovrai imparare da solo.
-Stivan: Perché non puoi insegnarmele tu?
-Cernd: La teoria, se non viene messa in pratica, è sterile e non produce frutti. E’ attraverso l’azione pratica che maturano i risultati.
-Stivan: Sì, ma… Perché da solo? Non possiamo lavorare insieme?
-Cernd: Non ha senso opporsi al grande disegno che la Madre ha in serbo per ciascuno di noi. In ogni caso, non è il momento di indugiare oltre: <CHARNAME> ci ha fatto cenno di proseguire.
-Terzo dialogo tra Stivan e Cernd all’interno del monastero di Balthazar, prima dello scontro.
-
-Stivan: Perché non vuoi più essere il mio maestro? C’entra forse il fatto che mi imbarazzo ogni volta che si parla delle pudende?
-Cernd: Certo che no, Stivan. Ti ho già spiegato il motivo, ma proverò a ripeterlo con parole più semplici per evitare fraintendimenti: è giunto il momento che tu segua la tua strada.
-Stivan: Ho capito, ma perché la mia strada non può essere la tua? Perché non possiamo continuare a viaggiare insieme?
-Cernd: Gli indizi sono chiari. Il crepitio dell’alloro consumato dal fuoco, la disposizione delle foglie di tè, il rumore delle noci di quercia… Il verdetto è sempre lo stesso: tu ed io siamo destinati a prendere direzioni diverse. Non c’è spazio per me nel tuo avvenire.
-Stivan: Me ne infischio di ciò che dicono le tue previsioni. Non lascerò che tu te ne vada. Non lo permetterò!
-Cernd: La tua testardaggine mi è ben nota, ma ormai ho imparato a lavorarla come se fosse morbida argilla. Invece di affliggerti per la nostra separazione, apprezza il tempo che abbiamo trascorso insieme.
-Cernd: Il nostro incontro non è stato casuale. La Madre ha in serbo un grande compito per te, ma era necessario che qualcuno ti aprisse gli occhi e ti preparasse in vista di quel futuro.  
-Stivan: *SOB*! Non m’importa nulla dei piani di Chauntea! Se questo significa stare nuovamente da solo… Ne faccio volentieri a meno!
-Cernd: Anch’io ho conosciuto il dolore della separazione, lacerante come gli artigli di un falco e triste come i cinguettii di un uccello morente. Tu però hai una conoscenza di cui io ero privo; servitene per trovare la pace interiore e il posto che ti spetta nell’ordine delle cose.
-Stivan: Ma io… *SOB*! Io non sono nessuno! Sono una mela ancora acerba che vuoi spacciare per matura!
-Cernd: Non commettere l’errore di sottovalutarti. Ricorda i miei insegnamenti: come arrivano lontano i raggi di una piccola candela, così splende una buona azione in un mondo malvagio e privo di equilibrio.
-Stivan: Tutto questo… E’ ingiusto! La Madre non può privarmi del mio più grande amico e… *SOB*! … e fare di me il suo strumento. E’… E’ crudele!
-Cernd: Ti interrompo prima che tu possa proferire altre sciocchezze. Per quanto dettato dall’impeto del momento, non puoi tacciare di crudeltà colei che ci ha fatto il grande dono della vita. Aiuteremo <CHARNAME> nella sua missione e poi… Ciascuno farà ci che il fato ha in serbo.
- 
-
-
- Primo dialogo tra Stivan e Anomen, dopo che il gruppo arriva per la prima volta nel piano extradimensionale.
-
-Anomen: Questo posto è inquietante. La fredda pietra, l’aria gelida, il tetro silenzio…
-Stivan: Anche le statue sono decisamente cupe. Non c’è volto che non sia deforme o straziato.
-Anomen: Dall’alcova di una divinità malvagia come Bhaal, mi sarei aspettato rappresentazioni che inneggiassero a stragi e uccisioni. Invece… Sembra un monumento alla sofferenza.
-Stivan: Io lo trovo macabro.
-Anomen: A me trasmette tutt’altro. Guarda quelle espressioni. Sembra che il loro artefice abbia voluto cristallizzare il loro dolore.
-Stivan: Pensi che siano vittime del Signore dell’Omicidio?
-Anomen: No. Sono vittime della solitudine.
-Stivan: *Ahem* Trovo difficile immaginare che Bhaal possa aver sentito la mancanza di compagnia.
-Anomen: Per alcuni aspetti, gli dei ci somigliano più di quanto credi. Dopotutto, è rimasto senza alleati e seguaci, tradito da quelli in cui aveva fede e abbandonato da quelli che lo avevano servito. A cosa giova disporre di un potere così grande se poi si è soli?
-Stivan: Non è un problema che mi riguarda. Non più, almeno. Grazie a questo gruppo mi sento a casa.
-Anomen (No Romance): Purtroppo non posso dire lo stesso, ma immagino che sia la sorte degli spiriti più grandi.
-Anomen: (Sì Romance) Ed io, grazie a <CHARNAME>, sono rinato. Forse l’amore consiste proprio in questo: due solitudini che si proteggono, si toccano e si accolgono.
-
-Secondo dialogo tra Stivan e Anomen dopo aver ucciso Sendai e Abazigal. Il banter è molto complesso a causa di più variabili, quindi l’ho spezzettato in modo che siano chiari i passaggi.
-
-In caso di romance tra CHARNAME e Anomen.
-
-Stivan: Mi è parso di capire che ognuno prenderà la sua strada non appena la lotta tra i Figli di Bhaal sarà giunta al termine. Quali sono… *Ahem* Quali sono le tue intenzioni?
-Anomen: Dipende tutto da <CHARNAME>. E’ un argomento che non abbiamo ancora affrontato.
-Stivan: Già, <CHARNAME>… Quella donna è sempre in mezzo!
-Anomen: Cosa intendi dire?
-Stivan: No, ecco… Mi riferivo al fatto che è sempre in mezzo ai tuoi pensieri…
-Anomen: Ti confesso che sono preoccupato. Se fossi nei suoi panni, la prospettiva di diventare un dio mi alletterebbe molto. Pensi che sia stupido da parte mia sperare che vi rinunci per amor mio?
-Stivan: Beh, io… Non so cosa dire…
-Anomen: Nell’amicizia ciò che conta è la franchezza. Adesso più che mai ho bisogno di sentire un’opinione sincera. Cosa ne pensi?
-Stivan: Penso che… (Arrossisce) Sarebbe sciocco da parte di <CHARNAME> rinunciare a te.
-Anomen: Dici sul serio? 
-Stivan: Purtroppo sì.
-Anomen: Mi auguro che anche lei sia del tuo stesso avviso. Sai, tempo fa stavo pensando che potresti farci da testimone al nostro matrimonio. Non ho nessun altro amico che lo meriti più di te.
-Stivan: Testimone? Io? N… No. Questo è davvero troppo. Non volermene, Anomen, ma… Io… Sono stato un tale stupido!
-Anomen: Cosa…
-Stivan: No. Non tornerò ad Athkatla, quindi non potrò fare ciò che chiedi. Trovati qualcun altro.
-
-Senza romance tra CHARNAME e Anomen, con risposte diverse in base all’allineamento di Stivan e alle sue scelte.
-
-Stivan: Mi è parso di capire che ognuno prenderà la sua strada non appena la lotta tra i Figli di Bhaal sarà giunta al termine. Quali sono… *Ahem* Quali sono le tue intenzioni?
-Anomen: Bella domanda. Ancora non mi sono soffermato a rifletterci, ma in effetti è tempo che inizi a pensarci. Potrei riprendere in mano i contatti di mio padre e rilanciare la sua attività, ma non ho mai avuto la stoffa del mercante.
-Stivan: Ti aiuterei più che volentieri. Sai bene che ho una discreta esperienza.
-Anomen: Senza offesa, ma ho qualche riserva sulla tua effettiva competenza. In passato ti sei fatto soffiare la tua eredità.
-Stivan: Sì, ma ero giovane e immaturo. Adesso sono adulto e preparato. Ti assicuro che nessuno si prenderà gioco di noi!
-Anomen: In alternativa potrei unirmi a qualche altra compagnia. Le sfide e le avventure non mancano mai, proprio come la feccia da eliminare.
-Heh. Sono pronto ad unirmi a qualsiasi banda di scapestrati!
-TRANCH STIVAN CG
-Anomen: Dici? Il druido mi ha detto che ti occuperai di ben altro. Sostiene che nessuno di noi dovrà interferire con ciò che ti aspetta.
-Stivan: *Ahem* Ultimamente Cernd ha preso un abbaglio. Parla a sproposito, quindi... Non ascoltarlo.
-Anomen: Un tempo non avrei mai creduto a simili profezie, ma viaggiare con <CHARNAME> mi ha insegnato a dar credito a questi avvertimenti. E’ meglio che tu segua la tua strada, qualunque essa sia.
-Stivan: Ma…
-Anomen: Non preoccuparti. Non ci perderemo di vista. Ogni tanto faremo in modo di vederci e di raccontarci cosa abbiamo combinato.
-Stivan: Perché non…
-Anomen: Dobbiamo proseguire, Stivan. Gli altri ci stanno aspettando. Approfondiremo la questione quando ci sarà tempo.
-TRANCH STIVAN CN
-Anomen: Dici? Eppure hai faticato tanto per unirti ai Ladri Tenebrosi. Di certo non è un’organizzazione di cui io vorrei far parte, ma non puoi tirarti indietro.
-Stivan: Ma…
-Anomen: Fatti valere. Metti in riga quei borseggiatori di bassa lega e mostra loro ciò di cui sei capace. Soprattutto, tieni a mente i miei insegnamenti.
-Stivan: Perché non…
-Anomen: Dobbiamo proseguire, Stivan. Gli altri ci stanno aspettando. Approfondiremo la questione quando ci sarà tempo.
-
- 
