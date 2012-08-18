@@ -1034,40 +1034,50 @@ Branwen: ~So it would seem, but I still haven't thought about what I should prep
 Stivan: ~Seagull breast, slowly roasted?~
 Branwen: ~I'd prefer more filling meat, but I'm afraid we'll have to make do.~
 Stivan: Any idea on how to garnish it? Mine always ends up tasteless.~
-Branwen: Ho con me alcune foglie di alloro. In genere le applico sulle ferite per facilitare il processo di rimarginazione, ma si prestano a tanti scopi. Potremmo anche aggiungerci qualche seme di finocchio. Li tengo sempre nello zaino per evitare il mal di gola causato dalle basse temperature, ma in questa regione non ne avrò bisogno.
-Stivan: (Gnam!) Ho già l’acquolina in bocca! Non sapevo te ne intendessi di cucina.
-Branwen: Perché non dovrei? Ho risposto alla chiamata di Tempus e abbracciato le armi, ma sono pur sempre una donna. E’ naturale che me ne intenda più di un maschietto su queste cose.
-Stivan: Heh. In effetti, ti vedo bene con un mattarello in una mano e un martello nell’altra.
-Branwen: (Sospira) Coraggio, dammi una mano a raccogliere un po’ di legna senza dire altre assurdità.
+Branwen: I have some leaves of laurel with me. I usually put them on wounds to make their closing easier, but they're good for this as well. We could also add some fennel seeds. I always keep them to fix a sore throat, but we won't need them here.~
+Stivan: ~(Nom!) I'm watering already! I didn't know you were a good cook!~
+Branwen: ~And why not? I answered Tempus' call and took up arms, but I'm still a woman. I'm supposed to know more about these things and a boy.~
+Stivan: ~Heh. after all, you could do all right with a hammer in one hand and a rolling pin in the other.~
+Branwen: ~(SIght) Come on, help me pick up some wood without saying more stupid things.~
+
+
+
+
 
 Furthermore, I wrote Branwen, Alora and Garrick’s reactions when Stivan joins the party. They should be added after the last sentence of Stivan during that dialogue.
 
-Alora: Sììììì! Un amico halfling con cui rubare ninnoli preziosi! Oh, quest’avventura diventa sempre più emozionante!
+Alora: ~Yesss! An halfling friend with whom I should steal precious things! Gosh, this adventure is looking more and more promising!~
 
-Garrick: Salve salvino! Il mio nome Garrick, Sir Garrick, e sono felice che un mendicante del tuo calibro si sia unito al mio gruppo. Grazie alla tua abilità nell'accattonaggio, ci riempiremo le tasche senza correre pericoli!
-Stivan: Ehm… Credevo fosse <CHARNAME> il capo. Ad ogni modo, i nobili del posto hanno il braccio corto, quindi non aspettarti grandi guadagni.
-Garrick: Non importa. Sarai senz’altro un’inesauribile fonte di piume per ME.
+Garrick: ~Hullo there! My name is Garrick, Sir Garrick, and I'm happy that a beggar like you joined our party. Thanks to my skill in such a job, we'll fill our pockets without a single risk!~
+Stivan: ~Ehm... I thought <CHARNAME> were the boss. Either way, the local nobles don't like giving out money, so don't expect many alms.~
+Garrick: ~I don't care. You'll still be an endless supply of feathers for me.~
 
-Branwen: A giudicare dal modo in cui agita la sua lama, quest'halfling ha il potenziale per diventare un gran guerriero, ma il suo ferro è destinato a restar freddo senza un'adeguata dose di disciplina e di esercizio.
+Branwen: ~By the way he waves his blade, this halfling might become a great warrior, but his steel is going to remain coold without lots of discipline and training.~
 
-Branwen, Alora and Garrick’s reactions when Stivan puts the urn in the crypt:
 
-Branwen: Perché mai dovremmo lasciare impunito quell’uomo? Io dico di non perdere altro tempo e di
-staccargli la testa dal resto del corpo!
 
-Alora: Ooohhh, che brutta situazione! Non vorrei essere nei tuoi peli, Stivan. Se quest’uomo ha qualche oggettino scintillante, potrei rubacchiarglielo per dispetto, ma non fargli del male. Non ha senso punire i cattivi facendo i cattivi.
 
-Garrick: Questa trama è troppo fitta per i miei gusti. Meglio i classici intrighi di un tempo, dove il malvagio di turno palesava le sue intenzioni senza troppi indugi.
-… Scusate, potreste ripetermi chi ha ingannato chi?
+
+Branwen, Alora and Garrick’s reactions when Stivan tells of Saerk:
+
+Branwen: ~Why should we ever leave that man unpunished? I say we stop waiting around and remove his head from his neck!~
+
+Alora: ~Ooohhh, what a bad situation! I wouldn't want to be in your hair, Stivan. If this man has some jolly shining things, I could steal them as an insult, but not hurt him. You should never punish evil men by acting in an evil way.~
+
+Garrick: ~This plot is too thick for me. I prefer the old times' stories, where the bad guy always explained his goals without being shy about it.~
+~... Sorry, could you repeat who tricked whom?~
+
+
+
+
 
 Stivan thoughts about Branwen, Alora and Garrick should become available in the PIDs:
 
-Non ho mai visto una gambelunghe forte ed energica come lei! Mia mamma diceva sempre che le persone dall’aspetto possente nascondono in realtà un animo fragile, ma avrebbe di sicuro rimangiato le sue parole se avesse conosciuto Branwen.
+~I've never seen a longleg as strong and energic as her! Mommy always said that tough looking people actually hide their weaknesses, but she would surely change her idea if she ever knew Branwen.~
 
-Il bardo? Oh, lui sì che è simpatico, mica come te. Oltre ad essere spiritoso, mi sta insegnando alcune cose sull’arte della recitazione. Peccato che il più delle volte cambi bruscamente argomento e inizi ad elogiare la propria persona a oltranza.
+~The bard? Oh, he's a friendly one, not like you. He's funny, and he's teaching me something about acting. A pity he always ends up changing the subject and praising his own skills.~
 
-Heh. Se l’avessi conosciuta prima, i miei anni sulle strade sarebbero stati molto più divertenti. E’ gentile, simpatica e brava a rubacchiare, anche se io resto sempre il migliore. Inoltre… (Arrossice) E’ anche carina.
-
+~Heh. Had I known her before, my years on the streets would have been much funnier. She's gentl, friendly and a good thief, even if I'm better. (Blushes) She also looks nice.~
 
 
 
