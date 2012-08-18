@@ -861,3 +861,213 @@ Stivan: Non è vero! Adesso sono anch’io un ometto! Ho appena compiuto trent’anni
 Valygar: Raggiungere la maggiore età non significa diventare maturi. Come vedi, il tuo sciocco desiderio di ripicca non ti ha portato nulla. Hai soltanto sprecato quei trofei che tanto cerchi.
 Stivan: (Snort!) Dannazione a te, ranger! Ti odio!!!
 Valygar: Lo vedi? Se fossi un uomo, capiresti che la sola persona con cui dovresti arrabbiarti sei te stesso. Và a sfogare la tua rabbia pestando la terra coi piedi. Da un bamboccio, non mi aspetto nulla di diverso. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////// w/Alora
+CHAIN
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("StivanAlora","GLOBAL",0)~ THEN ~TB#STIVB~ StivanAlora_1
+~I know that you are new to Athkatla, Alora. If you should ever want to go out and take in a few sights, just let me know. I've lived in the capital of Amn for almost thirty years, and nobody knows its streets better than I do.~
+DO ~SetGlobal("StivanAlora","GLOBAL",1)~
+== 7XAloraB ~Well, golly gee willikers! That sure is nice of you Stivan. The City of Coin sure can be rough on a girl..~
+=
+~What with vampires around every corner and killers that will skin you alive! Ohhh! Just thinking about it gives me the heebie-jeebies!~
+== TB#STIVB ~Athkatla has always been the same.. a degraded crime haven, held in check by the Cowled Wizards.~
+=
+~Despite that however, it is still one of the nicer places to live in Faerûn. Besides, you have nothing to fear for Stivan the Hunter will punish any attack on your person!~
+== 7XAloraB ~Hahaha! Thank, Stivan.. I guess Athkatla is not so bad. I just wish that I was not always feeling so homesick for Baldur's Gate.~
+== TB#STIVB ~It's hard to feel settled when you are always in the middle of the Promenade, what with all the hustling and bustling that goes on over there. Tell me, have you ever been to the Wave District? They have the nicest theater there.~
+=
+~Mommy used to take us there along the boardwalk. They had these delicious shrimp skewers. Mmmm! They are the best!~
+=
+~I usually would not set foot there, what with all the seagulls there, but I would make an exception if a lovely lass like you were to accompany me.~
+== 7XAloraB ~Gee wizz! That sounds like fun Stivan. To be honest, all this adventuring can become a bummer after a while and I could use a night out on the town.~
+== TB#STIVB ~It's a date then!~
+EXIT
+CHAIN
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+InParty("7XALORA")!StateCheck("7XALORA",CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("StivanAlora","GLOBAL",1)~ THEN ~TB#STIVB~ StivanAlora_2
+~Can I ask you, Stivan, why it is that you hate seagulls so much?~
+DO ~SetGlobal("StivanAlora","GLOBAL",2)~
+== TB#STIVB ~Those filthy seagulls killed my parents, feasted on their bodies and slept with the remains! How could I not hate them?!~
+== 7XAloraB ~Gosh, I'm so sorry, Stivan! That's horrible!~
+== TB#STIVB ~To make matters worse, after my parents and siblings were killed, I asked my father's partners for help, since I didn't know how to handle money and vineyards. It was a fatal mistake, since that coward stole my papers and showed the court false documents, where he was named as the owner of my family's manor.~
+=
+~I was feeling real low about myself then.. and that is when Brandobaris came to me and gave me the heavy task of ridding Faerûn of Seagulls.~
+== 7XAloraB ~What happened to your family is terrible, killing every seagull to come across won't bring your parents back to life?~
+=
+~Love is stronger than death even though it can't stop death from happening, but no matter how hard death tries it can't separate people from love. It can't take away our memories either. In the end, life is stronger than death.~
+== TB#STIVB ~You know, you are right. *sigh* It will be hard starting out, but mommy always said that which doesn't kill you makes you stronger.~
+=
+~Thank you, Alora.. One day I'll have to invite you to my country farm to show my gratitude. You'll drink of the best wine to ever wet your own lips.~
+== 7XAloraB ~Hehehehe! I prefer sarsaparilla to wine.~
+EXIT
+
+//////////// w/Garrick
+
+CHAIN
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+Global("StivanKindrek","GLOBAL",0)~ THEN ~B7XGar~ StivanGarrick_1
+~Ah, Stivan! Just the halfling that I was looking for.~
+=
+~May I ask you an important question?~ DO ~SetGlobal("GarrickKindrek","GLOBAL",1)~
+== TB#STIVB ~Let me guess.. You want to use my tragic story and the quest Brandobaris gave me as the basis of your newext rendition of the Ballad of brave Brave Sir Garrick?~
+== B7XGar ~Well, no actually. I was going to ask you to use your slingshot to clear the stagehouse of those pesky pidgeons. Darn things having been pooing all over the statues!~
+=
+~Although.. adding your story to the newest edition of my ballad is not a bad idea. It might make an interesting change to the whole cliched 'warrior with a sword' image, to tell the tale of a halfling with a mission.~
+=
+~I can see it now! We'll call it, 'The Biggest Little Thing You Have Ever Seen' and we'll charge two extra gold coins per ticket!!! Oh, where are my quill and parchment when I need them?~ [garrickb]
+== TB#STIVB ~Er... Well, would you like to buy a plume? I have plenty. For you, just five gold coins.~
+== B7XGar ~Five gold coins, huh? Mmm.. How about you loan me a plume for now? I will pay you back after we sellout our first theater. Trust me, a story this good sells itself.~
+== TB#STIVB ~Very well. here you go.~
+== B7XGar ~Thank you so very much.~ [garrick4]
+=
+~Hmm.. now where to find a piece of parchment?~
+== TB#STIVB ~Funny that you should mention it. I have this fine parchment right here, made of seagull hide. For you, twenty gold coins per sheet.~
+== B7XGar ~*sigh* I can already tell this is going to be an expensive production.~ [garrickv]
+EXIT
+
+
+CHAIN
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+Global("StivanGarrick","GLOBAL",1)~ THEN ~B7XGar~ StivanGarrick_2
+~This plume you sold me has done wonders for my story writing, Stivan. Ever since I have been
+using it to write with, I have been getting tremendous inspiration.~
+=
+~Could it be that it is magical?~ DO ~SetGlobal("StivanGarrick","GLOBAL"2)~
+== TB#STIVB ~Magical? Umm.. why yes! With it you wil be able to write the best poems ever.~
+=
+~I found it in the middle of a huge pile of enchanted seagull poo.~
+== B7XGar ~Pile of enchanted seagull, WHAT?!~
+== TB#STIVB ~Yes, you should probably stop putting it in your mouth when you are brainstorming.~
+== B7XGar ~Well, I wish you would have told me that earlier.~
+== TB#STIVB ~Sorry. How is the newest edition of your ballad going? Have you had time yet to
+dedicate a chapter to Stivan and his holy crusade against the evil seagulls?~
+== B7XGar ~I was thinking I could append it to the back of a later chapter later on somewhere,
+perhaps random miscellany.. somwhere between Fonnick and Vanim..?~
+== TB#STIVB ~The tragedy of my family being killed by those nasty seagulls deserves more than
+just being appended near the back! It needs its own chapter, so that the people will know that I
+have deplumed entire flocks of seagulls in my quest for revenge.~
+=
+~Come on, Garrick, do a friend a favor.~
+== B7XGar ~After what you charged me for this parchment, friend, you are lucky to be getting a
+mention at all.~
+EXIT
+CHAIN
+IF ~InParty("tb#Stiv")
+See("tb#Stiv")
+!StateCheck("tb#Stiv",CD_STATE_NOTVALID)
+InParty("7XGAR")!StateCheck("7XGAR",CD_STATE_NOTVALID)
+Global("StivanKindrek","GLOBAL",2)~ THEN ~B7XGar~ StivanGarrick_3
+~I must say that you were right, Stivan and that I am sorry I ever doubted you. This stuff that
+you have been giving me is pure literary gold!~
+=
+~Hopefully this newest edition of the ballad of brave Brave Sir Garrick will line both our
+pockets with real gold very, very soon.~ DO ~SetGlobal("StivanGarrick","GLOBAL"3)~
+== TB#STIVB ~The important thing to me is that my family's story will be published and preserved
+for generations to come and finally, everyone will know to the treachery seagulls.~
+=
+~Have you ever looked a seagull in the eye, eh? There is evil there... Pure evil. And I intend to
+hunt all of them... All of them!~
+== B7XGar ~Ummm.. yes.~
+=
+~Perhaps we could talk more aout this later, maybe with a few glasses of that wine you are always
+going on about.~
+== TB#STIVB ~Sounds good to me, although I must warn you. The wine that my family made and taught
+me to make, is the best that you will ever drink, but it also has some kick to it.~
+== B7XGar ~Not to worry my friend. For I am, brave Brave Sir Garrick, and I have drunk many a
+glasses of wine in many a taverns. Tis just another merry adventure, for I!~
+EXIT
+
+
+
+
+
+
+
+Branwen: ~Stop sharpening your steel on those harmless birds. There are much worthier enemies that deserve to taste your blade~
+Stivan: ~Well, it's up to you for those. Seeing you is enough to make them run.~
+Branwen: ~I beg your pardon?~
+Stivan: ~*Ahem* Don't misunderstand me. What I meant is that your looks, your gaze, your posture... Everything in you projects so much strength that our enemies know they've lost as soon as they see you.~
+Branwen: ~Never judge by appearances. Even the scariest of warriors might lose hold of his blade.~
+Stivan: ~You're still a woman to be feared. How can you be so brave?~
+Branwen: ~Courage might come from the gods, but courage from within is perhaps even better. My courage is born from toil and hardship, from a refusal to let fear dictate my actions. A courage that might be called grace under pressure.~
+Stivan: ~I'm feeling really inspired right now. I could raze a whole city and burn it to the ground!~
+Branwen: ~Very well. Save your memory of this moment and how to call upon it when you need it. You'll break your opponent with the might of a snow storm.~
+
+Stivan: ~I can't wait till we stop to eat. I'm so hungry... Is it your turn to cook, Branwen?~
+Branwen: ~So it would seem, but I still haven't thought about what I should prepare.~
+Stivan: ~Seagull breast, slowly roasted?~
+Branwen: ~I'd prefer more filling meat, but I'm afraid we'll have to make do.~
+Stivan: Any idea on how to garnish it? Mine always ends up tasteless.~
+Branwen: Ho con me alcune foglie di alloro. In genere le applico sulle ferite per facilitare il processo di rimarginazione, ma si prestano a tanti scopi. Potremmo anche aggiungerci qualche seme di finocchio. Li tengo sempre nello zaino per evitare il mal di gola causato dalle basse temperature, ma in questa regione non ne avrò bisogno.
+Stivan: (Gnam!) Ho già l’acquolina in bocca! Non sapevo te ne intendessi di cucina.
+Branwen: Perché non dovrei? Ho risposto alla chiamata di Tempus e abbracciato le armi, ma sono pur sempre una donna. E’ naturale che me ne intenda più di un maschietto su queste cose.
+Stivan: Heh. In effetti, ti vedo bene con un mattarello in una mano e un martello nell’altra.
+Branwen: (Sospira) Coraggio, dammi una mano a raccogliere un po’ di legna senza dire altre assurdità.
+
+Furthermore, I wrote Branwen, Alora and Garrick’s reactions when Stivan joins the party. They should be added after the last sentence of Stivan during that dialogue.
+
+Alora: Sììììì! Un amico halfling con cui rubare ninnoli preziosi! Oh, quest’avventura diventa sempre più emozionante!
+
+Garrick: Salve salvino! Il mio nome Garrick, Sir Garrick, e sono felice che un mendicante del tuo calibro si sia unito al mio gruppo. Grazie alla tua abilità nell'accattonaggio, ci riempiremo le tasche senza correre pericoli!
+Stivan: Ehm… Credevo fosse <CHARNAME> il capo. Ad ogni modo, i nobili del posto hanno il braccio corto, quindi non aspettarti grandi guadagni.
+Garrick: Non importa. Sarai senz’altro un’inesauribile fonte di piume per ME.
+
+Branwen: A giudicare dal modo in cui agita la sua lama, quest'halfling ha il potenziale per diventare un gran guerriero, ma il suo ferro è destinato a restar freddo senza un'adeguata dose di disciplina e di esercizio.
+
+Branwen, Alora and Garrick’s reactions when Stivan puts the urn in the crypt:
+
+Branwen: Perché mai dovremmo lasciare impunito quell’uomo? Io dico di non perdere altro tempo e di
+staccargli la testa dal resto del corpo!
+
+Alora: Ooohhh, che brutta situazione! Non vorrei essere nei tuoi peli, Stivan. Se quest’uomo ha qualche oggettino scintillante, potrei rubacchiarglielo per dispetto, ma non fargli del male. Non ha senso punire i cattivi facendo i cattivi.
+
+Garrick: Questa trama è troppo fitta per i miei gusti. Meglio i classici intrighi di un tempo, dove il malvagio di turno palesava le sue intenzioni senza troppi indugi.
+… Scusate, potreste ripetermi chi ha ingannato chi?
+
+Stivan thoughts about Branwen, Alora and Garrick should become available in the PIDs:
+
+Non ho mai visto una gambelunghe forte ed energica come lei! Mia mamma diceva sempre che le persone dall’aspetto possente nascondono in realtà un animo fragile, ma avrebbe di sicuro rimangiato le sue parole se avesse conosciuto Branwen.
+
+Il bardo? Oh, lui sì che è simpatico, mica come te. Oltre ad essere spiritoso, mi sta insegnando alcune cose sull’arte della recitazione. Peccato che il più delle volte cambi bruscamente argomento e inizi ad elogiare la propria persona a oltranza.
+
+Heh. Se l’avessi conosciuta prima, i miei anni sulle strade sarebbero stati molto più divertenti. E’ gentile, simpatica e brava a rubacchiare, anche se io resto sempre il migliore. Inoltre… (Arrossice) E’ anche carina.
+
+
+
+
