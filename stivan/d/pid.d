@@ -5,7 +5,9 @@ SAY @0
 IF ~~ THEN DO ~StartCutScene("tb#sfix")~ EXIT
 END
 
-IF ~IsGabber(Player1) OR (6)
+IF ~IsGabber(Player1)
+Alignment("tb#stiv",CHAOTIC_GOOD)
+OR (6)
 AreaCheck("AR2900")
 AreaCheck("AR2901")
 AreaCheck("AR2902")
