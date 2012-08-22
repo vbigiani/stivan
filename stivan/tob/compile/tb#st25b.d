@@ -1,4 +1,4 @@
-Primo dialogo tra Stivan e Imoen.
+/*Primo dialogo tra Stivan e Imoen.
 -----------------------------------------------
 Imoen: Continuare a ripetermi la stessa domanda non ti farà ottenere una risposta, Stivan.
 Stivan: Non puoi fingere di non essere coinvolta in tutto questo. Avanti, dimmi quali sono le tue intenzioni!
@@ -375,3 +375,4 @@ Stivan: Ma...
 Anomen: Fatti valere. Metti in riga quei borseggiatori di bassa lega e mostra loro ciò di cui sei capace. Soprattutto, tieni a mente i miei insegnamenti.
 Stivan: Perché non...
 Anomen: Dobbiamo proseguire, Stivan. Gli altri ci stanno aspettando. Approfondiremo la questione quando ci sarà tempo.
+*/

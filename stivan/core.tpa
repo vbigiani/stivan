@@ -492,6 +492,9 @@ END
 // Install ToB resources
 ACTION_IF GAME_IS ~BGT ToB~ THEN BEGIN
 
+	// copy static resources
+
+	COPY ~stivan/tob/copy~ ~override~
 
 	// Create PRO files
 
@@ -504,7 +507,7 @@ ACTION_IF GAME_IS ~BGT ToB~ THEN BEGIN
 	
 	// Copy ITM files
 	
-	COPY_EXISTING ~stivan/tob/itm/tb#spoo2.itm~ ~override~
+	COPY ~stivan/tob/itm/tb#spoo2.itm~ ~override~
 		SAY NAME1 @103
 		SAY NAME2 @103
 		SAY IDENTIFIED_DESC @104
@@ -521,7 +524,7 @@ ACTION_IF GAME_IS ~BGT ToB~ THEN BEGIN
 	
 	COPY ~stivan/tob/spl/tb#sal2.spl~ ~override~
 		SAY 0x9e @101
-		WRITE_SHORT	 0x09c ~tb#sal2~
+		WRITE_SHORT	 0x098 ~tb#sal2~
 		
 	
 	
