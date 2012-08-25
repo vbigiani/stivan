@@ -478,3 +478,364 @@ Valygar: Raggiungere la maggiore età non significa diventare maturi. Come vedi, 
 Stivan: (Snort!) Dannazione a te, ranger! Ti odio!!!
 Valygar: Lo vedi? Se fossi un uomo, capiresti che la sola persona con cui dovresti arrabbiarti sei te stesso. Và a sfogare la tua rabbia pestando la terra coi piedi. Da un bamboccio, non mi aspetto nulla di diverso. 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BEGIN TB#STIVB25
+
+IF ~InParty("tb#stiv25")
+InParty(Player1)
+!StateCheck("tb#stiv25",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Alignment("tb#stiv25",CHAOTIC_GOOD)
+Global("tb#StivanIsBecomeCG","GLOBAL",0)~ THEN StivanIsBecomeCG SAY 
+~*Ahem* Posso avere la tua attenzione per qualche istante, <CHARNAME>?~
+IF ~~ THEN REPLY ~Volentieri. Scambiare quattro chiacchiere potrebbe aiutarmi ad allentare la tensione.~ THEN DO ~SetGlobal("tb#StivanIsBecomeCG","GLOBAL",1)~ GOTO StivanIsBecomeCG1-3
+IF ~~ THEN REPLY ~Ti ascolto, ma sii rapido. Devo consultare gli anziani al più presto. Voglio capire cosa sta succedendo.~ THEN DO ~SetGlobal("tb#StivanIsBecomeCG","GLOBAL",1)~ GOTO StivanIsBecomeCG1-3
+IF ~~ THEN REPLY ~Anche tu sei perplesso all’idea di parlare con delle pietre? Spero non ci veda nessuno. Non voglio sembrare fuori di testa.~ THEN DO ~SetGlobal("tb#StivanIsBecomeCG","GLOBAL",1)~ GOTO StivanIsBecomeCG1-1
+IF ~~ THEN REPLY ~Magari più tardi. Questo non è un buon momento per parlare.~ THEN DO ~SetGlobal("tb#StivanIsBecomeCG","GLOBAL",1)~ GOTO StivanIsBecomeCG1-2
+END
+
+IF ~~ THEN StivanIsBecomeCG1-1
+SAY ~La regina degli elfi sostiene che siano portatori di grande saggezza. Sfortunatamente si esprimono per oracoli, quindi i loro avvertimenti vengono spesso compresi quando ormai è troppo tardi. Ad ogni modo, non è a questo che mi riferivo.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-3
+END
+
+IF ~~ THEN StivanIsBecomeCG1-2
+SAY ~Lo so, ma si tratta di un argomento che non posso proprio rimandare.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-3
+END
+
+IF ~~ THEN StivanIsBecomeCG1-3
+SAY ~Sono felice che tu abbia salvato tua sorella e recuperato la tua anima. Soprattutto, provo sollievo all’idea che lo stregone e quella bruttona di sua sorella non siano più una minaccia.~
+IF ~~ THEN REPLY ~Ancora stento a crederci. E’ avvenuto tutto così in fretta da non avere il tempo di elaborare questa esperienza.~ GOTO StivanIsBecomeCG1-8
+IF ~Gender(Player1,MALE)~ THEN REPLY ~Nonostante fosse una battaglia che non ti riguardava in prima persona, hai lottato al mio fianco, più o meno coraggiosamente. Ti sono debitore.~ GOTO StivanIsBecomeCG1-4
+IF ~Gender(Player1,FEMALE)~ THEN REPLY ~ Nonostante fosse una battaglia che non ti riguardava in prima persona, hai lottato al mio fianco, più o meno coraggiosamente. Ti sono debitrice.~ GOTO StivanIsBecomeCG1-4
+IF ~~ THEN REPLY ~E’ un bene avere eliminato quei due pazzi, ma ciò che più mi ha reso felice è stato il salvataggio di Imoen. Sarebbe stato un duro colpo perdere anche lei.~ GOTO StivanIsBecomeCG1-5
+IF ~~ THEN REPLY ~E’ un bene avere eliminato quei due pazzi, ma ciò che più mi ha reso felice è stato il salvataggio di Imoen. Sarebbe stato un duro colpo perdere anche lei.~ GOTO StivanIsBecomeCG1-6
+IF ~~ THEN REPLY ~Irenicus e Bodhi hanno avuto ciò che meritavano. Adesso è ora di voltare pagina.~ GOTO StivanIsBecomeCG1-7
+END
+
+IF ~~ THEN StivanIsBecomeCG1-4
+SAY ~No, sono *io* ad esserlo. Oltre ad avermi strappato dalla povertà, hai fatto sì che la mia strada si incrociasse con quella di Cernd. Te ne sono immensamente grato.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-8
+END
+
+IF ~~ THEN StivanIsBecomeCG1-5
+SAY ~Già. (Sospira) E’ un peccato che Yoshimo non sia stato altrettanto fortunato.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-8
+END
+
+IF ~~ THEN StivanIsBecomeCG1-6
+SAY ~Almeno in questo, la sorte ti ha sorriso.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-8
+END
+
+IF ~~ THEN StivanIsBecomeCG1-7
+SAY ~Non ci sono parole più appropriate di queste per descrivere ciò che sto per dirti.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-8
+END
+
+IF ~~ THEN StivanIsBecomeCG1-8
+SAY ~Da quando ci siamo risvegliati, mi rendo conto di aver trascorso poco tempo in tua compagnia. Ci tenevo a dirti che la mia assenza è dipesa dal fatto che ero completamente assorbito dalle lezioni del nostro amico druido.~
+IF ~~ THEN REPLY ~… Amico? E da quando? Soprattutto, *come*?~ GOTO StivanIsBecomeCG1-10
+IF ~~ THEN REPLY ~Sì, avevo notato che tu e Cernd eravate sempre indaffarati ora in un posto, ora in un altro.~ GOTO StivanIsBecomeCG1-10
+IF ~~ THEN REPLY ~Qui c’è qualcosa che non va. Forse non ti sei ancora ripreso da ciò che è successo in quel tetro Abisso. Sei sicuro di star bene?~ GOTO StivanIsBecomeCG1-9
+IF ~~ THEN REPLY ~E’ un sollievo. Credevo fossi arrabbiato con me per averti fatto finire negli Inferi. Non era nelle mie intenzioni, credimi.~ GOTO StivanIsBecomeCG1-9
+END
+
+IF ~~ THEN StivanIsBecomeCG1-9
+SAY ~Heh. Per quanto possa sembrare strano, devo ringraziarti anche di questo. Quell’orribile posto ha contribuito in una certa misura alla mia maturazione.~ IF ~~ THEN GOTO StivanIsBecomeCG1-10
+END
+
+IF ~~ THEN StivanIsBecomeCG1-10
+SAY ~Durante la nostra permanenza nell’aldilà, ho iniziato a capire alcune cose. Mi sono reso conto di essermi sbagliato in molti dei miei giudizi, il più grave dei quali riguardava i gabbiani.~
+= ~Non sono stati loro ad uccidere i miei familiari. Io… Ormai l’avevo capito da diverso tempo, ma ho continuato ugualmente a cacciarli. Lo sterminio di pennuti faceva parte della mia quotidianità da anni; se avessi smesso, non avrei più avrei saputo contro chi rivolgere la mia rabbia.~
+= ~Tu mi hai aiutato ad elaborare il lutto, mentre Cernd mi ha messo di fronte alle mie responsabilità. Questa è stata la parte più difficile e straziante. Nel momento in cui ho compreso appieno l’orrore e la sconsideratezza delle mie azioni, mi sono sentito atterrito.~
+= ~Cernd non ha voluto che annegassi nel senso di colpa. Mi ha spiegato che il riconoscimento dei propri sbagli serve proprio a fare ammenda. E’ così… Ha avuto inizio il mio addestramento.~
+IF ~Global("ViconiaRomanceActive","GLOBAL",2)~ THEN ~Mentre ti trastullavi con Viconia, ho imparato a poco a poco un sacco di cose interessanti sulla natura. Non sapevo che da piante e fiori si potessero trarre innumerevoli rimedi medicinali. Con il mio passato di mercante di vini, li avevo sempre considerati utili per generare profitto, non salute.~
+IF ~Global("JaheiraRomanceActive","GLOBAL",2)~ THEN Mentre ti trastullavi con Jaheira, ho imparato a poco a poco un sacco di cose interessanti sulla natura. Non sapevo che da piante e fiori si potessero trarre innumerevoli rimedi medicinali. Con il mio passato di mercante di vini, li avevo sempre considerati utili per generare profitto, non salute.~
+IF ~Global("AerieRomanceActive","GLOBAL",2)~ THEN Mentre ti trastullavi con Aerie, ho imparato a poco a poco un sacco di cose interessanti sulla natura. Non sapevo che da piante e fiori si potessero trarre innumerevoli rimedi medicinali. Con il mio passato di mercante di vini, li avevo sempre considerati utili per generare profitto, non salute.~
+IF ~Global("AnomenRomanceActive","GLOBAL",2)~ THEN Mentre ti trastullavi con Anomen, ho imparato a poco a poco un sacco di cose interessanti sulla natura. Non sapevo che da piante e fiori si potessero trarre innumerevoli rimedi medicinali. Con il mio passato di mercante di vini, li avevo sempre considerati utili per generare profitto, non salute.~
+IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN Mentre ti trastullavi con Edwin, ho imparato a poco a poco un sacco di cose interessanti sulla natura. Non sapevo che da piante e fiori si potessero trarre innumerevoli rimedi medicinali. Con il mio passato di mercante di vini, li avevo sempre considerati utili per generare profitto, non salute.~
+IF ~!Global("ViconiaRomanceActive","GLOBAL",2) !Global("JaheiraRomanceActive","GLOBAL",2) !Global("AerieRomanceActive","GLOBAL",2)
+!Global("AnomenRomanceActive","GLOBAL",2)
+!Global("EdwinRomanceActive","GLOBAL",2)~ THEN A poco a poco, ho imparato un sacco di cose interessanti sulla natura. Non sapevo che da piante e fiori si potessero trarre innumerevoli rimedi medicinali. Con il mio passato di mercante di vini, li avevo sempre considerati utili per generare profitto, non salute.~
+= ~Dopodiché abbiamo studiato argomenti un po’ complicati sui quali mi sto ancora applicando. Le discussioni sull’Equilibrio e sulle conseguenze prodotte dalle nostre azioni sembrano non finire mai.~
+IF ~~ THEN REPLY ~Stai dicendo che non caccerai più gabbiani? Che smetterai di accumulare piume e cacca nei nostri zaini?~ GOTO StivanIsBecomeCG1-11
+IF ~~ THEN REPLY ~Questa è l’ennesima dimostrazione della grande saggezza di Cernd. E’ davvero un prezioso componente di questo gruppo. Più tardi mi congratulerò personalmente con lui.~ GOTO StivanIsBecomeCG1-12
+IF ~~ THEN REPLY ~Tutto questo è orribile! Cosa diavolo sei diventato? L’ennesimo druido pacifista? Rivoglio indietro il caro vecchio Stivan!~ GOTO StivanIsBecomeCG1-13
+IF ~~ THEN REPLY ~Buon per te. Se non hai altro da aggiungere, ci sono alcuni massi che mi stanno aspettando.~ GOTO StivanIsBecomeCG1-14
+END
+
+IF ~~ THEN StivanIsBecomeCG1-11
+SAY ~No. Ho buttato tutto quanto.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-15
+END
+
+IF ~~ THEN StivanIsBecomeCG1-12
+SAY ~Heh. E pensare che all’inizio non lo sopportavo!~
+IF ~~ THEN GOTO StivanIsBecomeCG1-15
+END
+
+IF ~~ THEN StivanIsBecomeCG1-13
+SAY ~Sul serio, <CHARNAME>? Il “caro vecchio Stivan” ammazzava uccelli che credeva essere assassini, ne strappava le piume e conservava la cacca. Dovresti essere felice che mi sia lasciato alle spalle tutto questo.~
+= ~Posso capire che ti fossi abituato a vedermi in un certo modo, ma le persone cambiano. Io sono cambiato. Col tempo vedrai che non sono uno sciocco e che posso dare molto.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-15
+END
+
+IF ~~ THEN StivanIsBecomeCG1-14
+SAY ~Ancora un’ultima cosa prima di andare.~
+IF ~~ THEN GOTO StivanIsBecomeCG1-15
+END
+
+IF ~~ THEN StivanIsBecomeCG1-15
+SAY ~ Qualche giorno fa ho ricevuto in dono da Cernd un compagno animale. E’ un cucciolo di gabbiano che ho chiamato Peep. Ti piace?~
+IF ~~ THEN REPLY ~Decisamente sì. A Candlekeep ne ho visti molti, visto che quelle quattro mura si affacciavano sul mare.~ GOTO StivanIsBecomeCG1-16
+IF ~~ THEN REPLY ~Mi piacciono sia il nome sia la scelta. Prenditene cura.~ GOTO StivanIsBecomeCG1-17
+IF ~~ THEN REPLY ~E’ un po’ bruttino, ma molti animali lo sono nei primi mesi di vita.~ GOTO StivanIsBecomeCG1-18
+IF ~~ THEN REPLY ~Uhm… Non credo sia stata una buona idea. Correrà grandi rischi viaggiando con noi, lo sai?~ GOTO StivanIsBecomeCG1-19
+END
+
+IF ~~ THEN StivanIsBecomeCG1-16
+SAY ~Heh. Dopo l’iniziale ritrosia, è stato amore a prima vista. Sono contento che piaccia anche a te.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanIsBecomeCG1-17
+SAY ~Puoi scommetterci!~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanIsBecomeCG1-18
+SAY ~Beh, poco importa. Ho imparato a non giudicare un libro dalla copertina.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanIsBecomeCG1-19
+SAY ~Lo so, ma sono pronto a dare la mia vita pur di proteggerlo. Credimi, non darà alcun fastidio. Né a te né agli altri.~
+IF ~~ THEN EXIT
+END
+
+
+IF ~InParty("tb#stiv25")
+InParty(Player1)
+!StateCheck("tb#stiv25",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanBirthday","GLOBAL",0)~ THEN StivanBirthday SAY
+~Mi rendo conto che ci troviamo in una situazione disperata, ma forse sapere che oggi è il mio compleanno potrebbe tirarti su il morale.~
+IF ~~ THEN REPLY ~Ti ringrazio per il pensiero. Dopo tutto questo trambusto, un barlume di pacata quotidianità era proprio ciò di cui avevo bisogno.~ THEN DO ~SetGlobal("tb#StivanBirthday","GLOBAL",1)~ GOTO StivanBirthday1-1
+IF ~~ THEN REPLY ~Perché non me l’hai detto prima? Auguri!~ THEN DO ~SetGlobal("tb#StivanBirthday","GLOBAL",1)~ GOTO StivanBirthday1-2
+IF ~~ THEN REPLY ~Buon compleanno, Stivan. Quanti anni compi?~ THEN DO ~SetGlobal("tb#StivanBirthday","GLOBAL",1)~ GOTO StivanBirthday1-5
+IF ~~ THEN REPLY ~E così stai invecchiando anche tu, eh?~ THEN DO ~SetGlobal("tb#StivanBirthday","GLOBAL",1)~ GOTO StivanBirthday1-3
+IF ~~ THEN REPLY ~Non abbiamo tempo per festeggiare simili ricorrenze. Devo cercare di liberare questa città dalla morsa in cui è stretta.~ THEN DO ~SetGlobal("tb#StivanBirthday","GLOBAL",1)~ GOTO StivanBirthday1-4
+END
+
+IF ~~ THEN StivanBirthday1-1
+SAY ~Lo immaginavo. E’ per questo che te l’ho detto.~
+IF ~~ THEN GOTO StivanBirthday1-5
+END
+
+IF ~~ THEN StivanBirthday1-2
+SAY ~Non volevo disturbare. Stavi chiaramente riflettendo sulle parole della maghetta, quindi ho aspettato che si presentasse un momento più adatto.~
+IF ~~ THEN GOTO StivanBirthday1-5
+END
+
+IF ~~ THEN StivanBirthday1-3
+SAY ~Heh. “Invecchiare” è una parola un po’ eccessiva.~
+IF ~~ THEN GOTO StivanBirthday1-5
+END
+
+IF ~~ THEN StivanBirthday1-4
+SAY ~Credevo che con un attimo di distrazione avresti potuto prendere un po’ di respiro, ma vedo che vuoi dedicarti al tuo compito con grande impegno. Come non detto.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanBirthday1-5
+SAY ~Da oggi, sono a tutti gli effetti un ometto. Finalmente ho raggiunto i trent’anni, quindi la gente dovrà smetterla di chiamarmi mezzopelo o bambino.~
+IF ~~ THEN GOTO StivanBirthday1-6
+END
+
+IF ~~ THEN StivanBirthday1-6
+SAY ~Ricordi ciò che ti avevo detto a proposito di questo traguardo? La tradizione halfling vuole che ciascuna madre realizzi una fionda per il proprio figlio prima che questi lasci casa alla ricerca di avventura. Così facendo dimostriamo di non aver paura del mondo circostante e di essere diventati responsabili.~
+= ~Direi che ho preceduto i miei coetanei di un bel po’. Dubito che qualcuno possa vantare un’esperienza più emozionante di quella che sto vivendo al tuo fianco. A pensarci bene, in certi momenti lo è stata anche troppo. Heh.~
+IF ~~ THEN REPLY ~Non avrei mai pensato che al di là delle mura di Candlekeep potessero esserci città, creature e luoghi così straordinari. E’ un bene che anche tu abbia conosciuto la ricchezza di Faerun.~ GOTO StivanBirthday1-7
+IF ~~ THEN REPLY ~Pensavo che gli anni trascorsi all’insegna della povertà ti avessero insegnato a non dare importanza alle cose materiali.~ GOTO StivanBirthday1-8
+IF ~~ THEN REPLY ~Poco male. Abbiamo armi di fattura decisamente migliore. Di certo non ti avrei fatto usare uno straccetto realizzato in casa.~ GOTO StivanBirthday1-8
+IF ~~ THEN REPLY ~I miei viaggi mi hanno insegnato molto, ma spesso il prezzo da pagare è stato davvero alto. A volte mi chiedo se non sia meglio starsene rinchiusi nella propria casa, all’oscuro del male e della sofferenza che ci circondano.~ GOTO StivanBirthday1-9
+END
+
+IF ~~ THEN StivanBirthday1-7
+SAY ~Avevo già visitato molti posti grazie all’attività mercantile di famiglia, ma era tutta un’altra cosa. Percorrevamo tratte sicure, in modo da non imbatterci in pericoli. Inoltre non ho mai conosciuto a fondo i luoghi in cui sono stato: ci fermavamo soltanto una notte o due, il tempo necessario a vendere la nostra merce.~ 
+IF ~~ THEN GOTO StivanBirthday1-10
+END
+
+IF ~~ THEN StivanBirthday1-8
+SAY ~Non è una questione di utilità in battaglia o di attaccamento agli oggetti materiali. E’ un dono simbolico e ricco di significato.~
+IF ~~ THEN GOTO StivanBirthday1-10
+END
+
+IF ~~ THEN StivanBirthday1-9
+SAY ~Ci credi se ti dico che anch’io ho pensato la stessa cosa? Eppure il dolore può colpire anche il proprio focolare, esattamente com’è successo a me. Forse non ha senso cercare di isolarsi dal mondo, visto che alla fine è il mondo a venire a cercarti.~
+IF ~~ THEN GOTO StivanBirthday1-10
+END
+
+IF ~~ THEN StivanBirthday1-10
+SAY ~*Ahem* Che ne dici di approfittare di questa breve sosta per festeggiare?~
+IF ~Alignment("tb#stiv25",CHAOTIC_GOOD)~ THEN REPLY ~Ci penso io. Beviamo qualcosa?~ THEN DO ~SetGlobal("tb#StivanDrink","GLOBAL",1)~ GOTO StivanBirthday1-11
+IF ~!Alignment("tb#stiv25",CHAOTIC_GOOD)~ THEN REPLY ~Ci penso io. Beviamo qualcosa?~ THEN DO ~SetGlobal("tb#StivanDrink","GLOBAL",1)~ GOTO StivanBirthday1-12
+IF ~~ THEN REPLY ~Mangerei con piacere una fetta di torta, ma non credo che qui abbiano qualcosa.~ THEN DO ~SetGlobal("tb#StivanCake","GLOBAL",1)~ GOTO StivanBirthday1-13
+IF ~~ THEN REPLY ~Devo ancora prendere familiarità con il mio piano extradimensionale, ma più tardi potremmo organizzare una piccola festa. Pensaci: quando ti capiterà nuovamente l’occasione di brindare su suolo divino?~ THEN DO ~SetGlobal("tb#StivanPocketPlanetParty","GLOBAL",1)~ GOTO StivanBirthday1-14
+IF ~~ THEN REPLY ~Direi che l’attuale situazione non lascia tempo e spazio per grandi festeggiamenti. Forse, un giorno…~ GOTO StivanBirthday1-4
+IF ~~ THEN REPLY ~Non è davvero il momento adatto. Questa città è sotto assedio, ricordi?~ GOTO StivanBirthday1-4
+END
+
+IF ~~ THEN StivanBirthday1-11
+SAY ~Con piacere. E’ da un sacco che non bevo un bicchiere di vino. Gli elfi di Suldanesselar continuavano a dire che l’acqua è il più pregiato dei nettari, ma su questo hanno decisamente torto.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanBirthday1-12
+SAY ~Con piacere. A Suldanesselar non ho fatto altro che bere acqua. Probabilmente i gambelunghe non sanno nemmeno cosa sia il vino.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanBirthday1-13
+SAY ~Beh, provare non costa nulla.~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN StivanBirthday1-14
+SAY ~Heh. L’ambiente è un po’ inquietante, ma in effetti nessuno potrebbe vantare una simile esperienza. Così sia!~
+IF ~~ THEN EXIT
+END
+
+IF ~InParty("tb#stiv25")
+InParty(Player1)
+!StateCheck("tb#stiv25",CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+CombatCounter(0)
+Global("tb#StivanLastDialogue","GLOBAL",0)~ THEN StivanLastDialogue SAY 
+
+~Vedo che tutti si stanno preparando per la battaglia che ci attende. Siamo sicuri di potercela fare? La maghetta traditrice ha accumulato un potere davvero grande. Così tante essenze di Bhaal concentrate in una sola persona… Fanno paura.~
+IF ~~ THEN REPLY ~Tu hai *sempre* paura.~ THEN DO ~SetGlobal("tb#StivanLastDialogue","GLOBAL",1)~ GOTO StivanLastDialogue1-5
+IF ~~ THEN REPLY ~Mellissan… O Amelyssan, che dir si voglia, ha commesso l’errore di sottovalutarmi, ma presto scoprirà ciò di cui può essere capace una sola progenie di Bhaal.~ THEN DO ~SetGlobal("tb#StivanLastDialogue","GLOBAL",1)~ GOTO StivanLastDialogue1-1
+IF ~~ THEN REPLY ~Vedila semplicemente come una delle tante minacce che abbiamo affrontato. Questa volta però scriverò la parola fine a questa lunga e interminabile storia.~ THEN DO ~SetGlobal("tb#StivanLastDialogue","GLOBAL",1)~ GOTO StivanLastDialogue1-2
+IF ~~ THEN REPLY ~Ciò che mi preoccupa di più la vostra sorte. Non voglio che vi succeda nulla di male.~ THEN DO ~SetGlobal("tb#StivanLastDialogue","GLOBAL",1)~ GOTO StivanLastDialogue1-4
+IF ~~ THEN REPLY ~Dovresti seguire l’esempio degli altri e non perdere tempo in chiacchiere.~ THEN DO ~SetGlobal("tb#StivanLastDialogue","GLOBAL",1)~ GOTO StivanLastDialogue1-5
+END
+
+IF ~~ THEN StivanLastDialogue1-1
+SAY ~Questo è vero. Ancora ricordo la prima volta che hai assunto le sembianze dell’Uccisore. Eravamo tutti sbigottiti e terrorizzati.~
+IF ~~ THEN GOTO StivanLastDialogue1-5
+END
+
+IF ~~ THEN StivanLastDialogue1-2
+SAY ~Immagino che convivere con la corruzione di tuo padre non sia stato facile. I sogni che agitavano le tue notti o gli istinti di rabbia che provavi all’improvviso devono averti messo a dura prova.~
+IF ~~ THEN GOTO StivanLastDialogue1-5
+END
+
+IF ~~ THEN StivanLastDialogue1-3
+SAY ~Sì, in effetti corriamo un rischio non indifferente, ma tu ci hai dato molto. Non potremmo mai abbandonarti in un momento così delicato.~
+IF ~~ THEN GOTO StivanLastDialogue1-5
+END
+
+IF ~~ THEN StivanLastDialogue1-4
+SAY ~Lo farò tra qualche attimo. Adesso dobbiamo assolutamente parlare, visto che in seguito non avremo questa possibilità.~
+IF ~~ THEN GOTO StivanLastDialogue1-5
+END
+
+IF ~~ THEN StivanLastDialogue1-5
+SAY ~Sarei un bugiardo se negassi di essere spaventato. Eppure, la cosa che più di tutto mi paralizza è l’idea di rimanere da solo. Di nuovo.~
+= ~Ormai ho capito che ciascuno di noi, sopravvivenza permettendo, seguirà la propria strada. Io… Non me l’aspettavo. Credevo che saremmo stati insieme per molto altro tempo, diventando una di quelle compagnie ricordate dalle canzoni dei bardi o descritte dai libri.~
+= ~Non sono pronto a rinunciare a tutto questo. Non ancora, almeno. Se riuscissimo a sconfiggere la maghetta, non potremmo continuare a viaggiare? Ci sono così tante avventure che ci aspettano. Ci limiteremmo a scegliere quelle meno pericolose. Heh.~
+IF ~~ THEN REPLY ~Non posso imporre agli altri di restare al mio fianco. Una volta risolta la questione di Bhaal, è giusto che ognuno torni alla propria vita.~ GOTO StivanLastDialogue1-7
+IF ~~ THEN REPLY ~Intendo reclamare il Trono di mio padre, quindi è inevitabile che il gruppo sia destinato a sciogliersi.~ GOTO StivanLastDialogue1-8
+IF ~~ THEN REPLY ~Voglio rimanere mortale, ma mi guarderò bene dal continuare a viaggiare. Sono state le circostanze a gettarmi nell’avventura; io non l’ho mai cercata.~ GOTO StivanLastDialogue1-8
+IF ~~ THEN REPLY ~La fine di un’esperienza può essere l’inizio di un’altra. Non essere giù di morale.~ GOTO StivanLastDialogue1-7
+IF ~~ THEN REPLY ~Anche a me dispiace molto separarmi dagli altri. L’affiatamento che ci contraddistingue è impareggiabile, ma non posso far nulla perchè le cose vadano diversamente.~ GOTO StivanLastDialogue1-7
+END
+
+IF ~~ THEN StivanLastDialogue1-7
+SAY ~Capisco ciò che dici, ma tra noi tutti si è creato un legame. Nel bene e nel male, nella simpatia e nell’antipatia. Siamo come una grande famiglia. Non possiamo dividerci.~
+IF ~~ THEN GOTO StivanLastDialogue1-9
+END
+
+IF ~~ THEN StivanLastDialogue1-8
+SAY ~Questo non è un motivo sufficiente perché gli altri si dividano. Non posso accettare l’idea che il gruppo sia rimasto unito soltanto grazie a te. Significherebbe che la nostra convivenza era forzata e dettata dalle necessità.~
+IF ~~ THEN GOTO StivanLastDialogue1-9
+END
+
+
+IF ~~ THEN StivanLastDialogue1-9
+SAY ~Tu cosa ne pensi?~
+IF ~Global("ViconiaRomanceActive","GLOBAL",2)~ THEN REPLY ~Penso che andrò dove mi porterà Viconia. Una fiamma nera, una puledra che sono riuscito a domare... Non potrei mai rinunciare a lei.~ GOTO StivanLastDialogue1-10
+IF ~ Global("JaheiraRomanceActive","GLOBAL",2)~ THEN REPLY ~Resterò al fianco di Jaheira. Voglio condividere il mio futuro con lei. Non c’è persona a cui tenga di più.~ GOTO StivanLastDialogue1-10
+IF ~ Global("AerieRomanceActive","GLOBAL",2)~ THEN REPLY ~Beh... Adesso ho una famiglia a cui badare. Conto di sistemarmi al più presto per dare un po’ di stabilità ad Aerie e al nostro bambino.~ GOTO StivanLastDialogue1-10
+IF ~Global("AnomenRomanceActive","GLOBAL",2)~ THEN REPLY ~Mi viene in mente un solo nome: Anomen. E’ la mia sorgente, il mio punto di forza. Quando tutto questo sarà finito, finalmente potremo sposarci.~ GOTO StivanLastDialogue1-10
+IF ~Global("EdwinRomanceActive","GLOBAL",2)~ THEN REPLY ~Mi solletica l’idea di costruire un futuro con Edwin. Sì, lo so che tra voi due non scorre buon sangue, ma posso assicurarti che con me è una persona completamente diversa.~ GOTO StivanLastDialogue1-10
+IF ~~ THEN REPLY ~Non ci perderemo di vista. Una volta ogni tanto faremo in modo di ritrovarci per stare un po’ di tempo insieme. Te lo prometto.~ GOTO StivanLastDialogue1-10
+IF ~~ THEN REPLY ~L’ultima volta che Bhaal ha camminato su Faerun gli è andata decisamente male. Dubito che commetterò lo stesso errore di aggirarmi tra i mortali, quindi… Temo che non ci rivedremo più.~ GOTO StivanLastDialogue1-10
+IF ~~ THEN REPLY ~E’ inutile porsi simili domande. Non sappiamo nemmeno se sopravvivremo alla battaglia contro Amelyssan.~ GOTO StivanLastDialogue1-10
+END
+
+IF ~~ THEN StivanLastDialogue1-10
+SAY ~… Capisco. A questo punto, non mi resta che salutare gli altri.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Sono felice di averti conosciuto, Jaheira. Sei una donna davvero forte, quasi quanto mia mamma.~
+== JAHEI25J IF ~IsValidForPartyDialog("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Addio, Stivan. Qualsiasi cosa ti riservi il futuro, sii umile di cuore, grave nelle parole, prudente nelle risoluzioni.~
+== MINSC25J IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~(Sniff) Boo non vuole farsi vedere mentre piange, ma Minsc pensa che i veri guerrieri non debbano vergognarsi a mostrare le loro emozioni! Criceto e ranger sentiranno la tua mancanza, piccolo halfling, anche se all’inizio eri un minuscolo concentrato di cattiveria.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN ~Heh.  Vi auguro un buon ritorno in patria.~
+== IMOEN25J IF ~IsValidForPartyDialog("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Quando aprirò un’Accademia di Magia, sarai il primo a saperlo. Conto di averti tra i miei studenti.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Wow! Non vedo l’ora!~
+== IMOEN25J IF ~IsValidForPartyDialog("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Ovviamente scherzavo. Rabbrividisco all’idea di diventare insegnante.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN ~Heh. Mi hai fregato ancora una volta.~
+== EDWIN25J IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Visto che le tue probabilità di dipartita sono significativamente alte, gradirei la restituzione delle mie componenti alchemiche. (O forse dovrei lasciare che l’imbecille si diletti a distillare pozioni? Magari potrebbe mescolare ingredienti sbagliati e morire in un’esplosione… Hai appena concepito un piano più che eccellente Edwin).~
+== TB#STIV25J IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Ho già rimesso tutto nel tuo zaino. Ero soltanto incuriosito dall’ampolla con su scritto “Distillato di dabbenaggine”. Lo bevi ogni giorno?~
+== EDWIN25J IF ~IsValidForPartyDialog("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~(Mantieni la calma, Edwin. Potrebbe ancora tornarti utile come scudo umano).~
+== TB#STIV25J IF ~IsValidForPartyDialog("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN ~*Ahem* Mi spiace che il nostro rapporto sia cambiato, ma spero che tu abbia capito quanto sia importante la costante attenzione delle persone, non la loro occasionale ammirazione.~
+== VICON25J IF ~IsValidForPartyDialog("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN ~Non permetterti di farmi la morale, iblith. Non sempre lo sguardo disinfettante dell’intelligenza protegge dalle purulenze che ci circondano.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Sarevok") !StateCheck("Sarevok",CD_STATE_NOTVALID)~ THEN ~Noi due non abbiamo avuto molto tempo per conoscerci, ma è stato comunque un piacere viaggiare con te.~
+== SAREV25J IF ~IsValidForPartyDialog("Sarevok") !StateCheck("Sarevok",CD_STATE_NOTVALID)~ THEN ~Menti.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Sarevok") !StateCheck("Sarevok",CD_STATE_NOTVALID)~ THEN ~Heh. Non sapevo cos’altro dirti se non una frase di circostanza.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN ~Voi… Voi vi pentirete di avermi snobbato. Non troverete nessun’altro devoto quanto me.~
+== NALIA25J IF ~IsValidForPartyDialog("nalia") !StateCheck("nalia",CD_STATE_NOTVALID)~ THEN ~Per fortuna, oserei dire. I progetti che intendo realizzare richiedono persone di tutt’altra pasta.~
+== HAERDA25J IF ~IsValidForPartyDialog("Haerdalis") !StateCheck("Haerdalis",CD_STATE_NOTVALID)~ THEN ~E’ stato interessante conoscere una creatura simpatica come te. Peccato che negli ultimi tempi tu sia diventato abbastanza noioso e petulante. ~
+== TB#STIV25J IF ~IsValidForPartyDialog("Haerdalis") !StateCheck("Haerdalis",CD_STATE_NOTVALID)~ THEN ~Ti lascio crogiolare nel tuo brodo di auto-esaltazione. Attenzione a non evaporare.~
+== JAN25J IF ~IsValidForPartyDialog("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Mi raccomando, Stivvy: attenderò fiducioso il tuo contributo per la stesura del mio prossimo libro.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Di cosa parlerà il tuo testo? Hai già deciso quale titolo dargli?~
+== JANJ IF ~IsValidForPartyDialog("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN ~Testo? Titolo? Di cosa stai parlando?~
+== TB#STIV25J IF ~IsValidForPartyDialog("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN …~
+== TB#STIV25J IF ~IsValidForPartyDialog("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Tu cosa hai intenzione di fare? Tornare ad Athkatla?~
+== VALYG25J IF ~IsValidForPartyDialog("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Una cosa alla volta. Adesso cercherò di sopravvivere. Se dovessi farcela, deciderò cosa fare.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN ~Te l’ho chiesto per semplice curiosità. Puoi andare dove ti pare.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Immagino che a te assegneranno altri incarichi da bravo paladino. Non ti stancherai mai di lottare per il tuo Ordine?~
+== KELDO25J IF ~IsValidForPartyDialog("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~La causa del bene non è mai perorata abbastanza. C’è sempre molto da fare.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Se lo dici tu. Divertiti, nonno.~
+== KORGANJ IF ~IsValidForPartyDialog("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN ~Puah! Detesto questi addii schifosamente melensi. Meglio che tu tenga il becco chiuso con me.~
+== MAZZY25J IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Cerca di essere meno molesto e più collaborativo. Dietro quello sguardo birbante, c’è un halfling buono come un pezzo di pane.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Heh. Io sono collaborativo… quando voglio. Stammi bene, Mazzy.~
+== AERIE25J IF ~IsValidForPartyDialog("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~Almeno nella battaglia, cerchiamo di essere uniti. La causa di <CHARNAME> è più importante delle nostre incomprensioni.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN ~Sono d’accordo. La pelle prima di tutto.~
+== ANOME25J IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~Stranezze a parte, sei stato un valido amico. Uno dei pochi che abbia mai avuto.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN ~… Anche tu. Fa attenzione e sii cauto.~
+== CERND25J IF ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Abbi cura di te, Stivan. Qualora il tuo animo dovesse vacillare, ripensa alla nostra amicizia come ad un’erba spontanea, non una pianta da giardino. L’incanto della natura e il mistero da cui è avvolta sono l’unica chiave di cui disponi per aprire la porta che ti separa dalla verità.~
+== TB#STIV25J IF ~IsValidForPartyDialog("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN ~Io non mi arrendo. Nel caso gli eventi ci separassero, io ti ritroverò. Servirò la causa della natura, ma non mi farò manovrare come un burattino.~
+IF ~~ THEN ~(Sniff) Sono pronto, <CHARNAME>. Qualunque cosa ci aspetti… L’affronterò!~
+IF ~~ THEN EXIT
+END
